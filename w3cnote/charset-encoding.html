@@ -60,9 +60,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <div class="row">
 <div class="col right-list">
-<button class="btn btn-responsive-nav btn-inverse" id="pull">
-<i class="fa fa-navicon"></i>
-</button>
 </div>
 <div class="col search search-desktop last">
 <div class="search-input">
@@ -139,68 +136,68 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p style="text-align: center; margin-left: 24pt;">Figura 4 Estructura general de codificación GB18030</p>
 <p>El borrador inicial de esta especificación fue elaborado por el Instituto de Estandarización de la Industria Electrónica del Ministerio de Industria de la Información de la República Popular China y publicado por la Administración Nacional de Supervisión de Calidad y Tecnología el 17 de marzo de 2000. La versión actual fue publicada por la Administración General de Supervisión de Calidad, Inspección y Cuarentena y la Administración Nacional de Normalización de China el 8 de noviembre de 2005, e implementada el 1 de mayo de 2006. Esta especificación es obligatoria para todos los productos de software dentro del territorio de China.</p>
 <h3>2.3. Conjunto de caracteres y codificación BIG5</h3>
-<p>对外发表。Unicode 还不断在扩增，每个新版本插入更多新的字符。直至目前为止的第六版，Unicode 就已经包含了超过十万个字符（在2005年，Unicode 的第十万个字符被采纳且认可成为标准之一）、一组可用以作为视觉参考的代码图表、一套编码方法与一组标准字符编码、一套包含了上标字、下标字等字符特性的枚举等。Unicode 组织（The Unicode Consortium）是由一个非营利性的机构所运作，并主导 Unicode 的后续发展，其目标在于：将既有的字符编码方案以Unicode 编码方案来加以取代，特别是既有的方案在多语环境下，皆仅有有限的空间以及不兼容的问题。</p>
-<p>Big5码是一套双字节字符集，采用了双八码存储方法，以两个字节来存放一个字。第一个字节称为“高位字节”，第二个字节称为“低位字节”。“高位字节”使用了0x81-0xFE，“低位字节”使用了0x40-0x7E，以及0xA1-0xFE。在Big5的分区中：</p>
+<p>Publicación externa. Unicode no deja de ampliarse; cada nueva versión incorpora más caracteres nuevos. Hasta la sexta versión actual, Unicode ya incluye más de cien mil caracteres (en 2005, el carácter número cien mil de Unicode fue adoptado y reconocido como parte del estándar), un conjunto de tablas de códigos que sirven como referencia visual, un método de codificación y un conjunto de codificaciones de caracteres estándar, una enumeración que incluye propiedades de caracteres como superíndices, subíndices, etc. La organización Unicode (The Unicode Consortium) es gestionada por una entidad sin fines de lucro y lidera el desarrollo posterior de Unicode; su objetivo es: reemplazar los esquemas de codificación de caracteres existentes con el esquema de codificación Unicode, especialmente porque los esquemas existentes, en entornos multilingües, solo tienen espacio limitado y problemas de incompatibilidad.</p>
+<p>El código Big5 es un conjunto de caracteres de doble byte, que utiliza un método de almacenamiento de doble octeto, almacenando un carácter en dos bytes. El primer byte se denomina "byte alto" y el segundo byte se denomina "byte bajo". El "byte alto" utiliza 0x81-0xFE, y el "byte bajo" utiliza 0x40-0x7E, así como 0xA1-0xFE. En la partición de Big5:</p>
 <table class="reference notranslate">
 <colgroup><col style="width: 170px;"/><col style="width: 486px;"/></colgroup>
 <tbody valign="top">
 <tr>
 <td>0x8140-0xA0FE</td>
-<td>保留给用户自定义字符（造字区）。</td>
+<td>Reservado para caracteres definidos por el usuario (zona de creación de caracteres).</td>
 </tr>
 <tr>
 <td>0xA140-0xA3BF</td>
 <td>
-<p>标点符号、希腊字母及特殊符号，包括在0xA259-0xA261，安放了九个计量用汉字：兙兛兞兝兡兣嗧瓩糎。</p></td>
+<p>Signos de puntuación, letras griegas y símbolos especiales, incluidos en 0xA259-0xA261, donde se colocan nueve caracteres chinos de medida: 兙兛兞兝兡兣嗧瓩糎.</p></td>
 </tr>
 <tr>
 <td>0xA3C0-0xA3FE</td>
-<td>保留。此区没有开放用作造字区。</td>
+<td>Reservado. Esta zona no está abierta para su uso como zona de creación de caracteres.</td>
 </tr>
 <tr>
 <td>0xA440-0xC67E</td>
-<td>常用汉字，先按笔画再按部首排序。</td>
+<td>Caracteres chinos de uso común, ordenados primero por trazos y luego por radicales.</td>
 </tr>
 <tr>
 <td>0xC6A1-0xC8FE</td>
-<td>保留给用户自定义字符（造字区）。</td>
+<td>Reservado para caracteres definidos por el usuario (zona de creación de caracteres).</td>
 </tr>
 <tr>
 <td>0xC940-0xF9D5</td>
-<td>次常用汉字，亦是先按笔画再按部首排序。</td>
+<td>Caracteres chinos de uso secundario, también ordenados primero por trazos y luego por radicales.</td>
 </tr>
 <tr>
 <td>0xF9D6-0xFEFE</td>
-<td>保留给用户自定义字符（造字区）。</td>
+<td>Reservado para caracteres definidos por el usuario (zona de creación de caracteres).</td>
 </tr>
 </tbody>
 </table>
 <h2>3. Conjunto de caracteres Unicode y codificación UTF</h2>
-<p>伟大的创想Unicode<em>——不得不单独说Unicode</em></p>
-<p>像天朝一样，当计算机传到世界各个国家时，为了适应当地语言和字符，设计和实现了类似GB232/GBK/GB18030/BIG5的编码方案。这样各搞一套，在本地使用没有问题，一旦出现在网络中，由于不兼容，互相访问就出现了乱码现象。</p>
-<p>为了解决这个问题，一个伟大的创想产生了——Unicode。Unicode编码系统为表达任意语言的任意字符而设计。它使用4字节的数字来表达每个字母、符号，或者表意文字(ideograph)。每个数字代表唯一的、至少在某种语言中使用的符号。（并不是所有的数字都用上了，但是总数已经超过了65535，所以2个字节的数字是不够用的。）被几种语言共用的字符通常使用相同的数字来编码，除非存在一个正当的语源学(etymological)理由使不这样做。不考虑这种情况的话，每个字符对应一个数字，每个数字对应一个字符。即不存在二义性。不再需要记录“模式”了。U+0041总是代表'A'，即使这种语言没有'A'这个字符。</p>
-<p>在计算机科学领域中，Unicode（统一码、万国码、单一码、标准万国码）是业界的一种标准，它可以使电脑得以体现世界上数十种文字的系统。Unicode 是基于通用字符集（Universal Character Set）的标准来发展，并且同时也以书本的形式</p>
-<p>（<strong>可以这样理解：Unicode是字符集，UTF-32/ UTF-16/ UTF-8是三种字符编码方案。</strong>）
+<p>El gran concepto Unicode<em>——Es necesario hablar de Unicode por separado.</em></p>
+<p>Al igual que en el Imperio Celestial, cuando las computadoras llegaron a los distintos países del mundo, para adaptarse a los idiomas y caracteres locales, se diseñaron e implementaron esquemas de codificación similares a GB232/GBK/GB18030/BIG5. Así, cada uno hizo lo suyo; su uso local no presenta problemas, pero una vez que aparecen en la red, debido a la incompatibilidad, al acceder entre sí se producen caracteres ilegibles (mojibake).</p>
+<p>Para resolver este problema, surgió una gran idea: Unicode. El sistema de codificación Unicode está diseñado para expresar cualquier carácter de cualquier idioma. Utiliza números de 4 bytes para representar cada letra, símbolo o ideograma (ideograph). Cada número representa un símbolo único que se utiliza al menos en algún idioma. (No todos los números se utilizan, pero el total ya supera los 65535, por lo que los números de 2 bytes no son suficientes). Los caracteres compartidos por varios idiomas suelen codificarse con el mismo número, a menos que exista una razón etimológica (etymological) legítima para no hacerlo. Sin tener en cuenta este caso, cada carácter corresponde a un número y cada número corresponde a un carácter. Es decir, no existe ambigüedad. Ya no es necesario registrar "modos". U+0041 siempre representa 'A', incluso si ese idioma no tiene el carácter 'A'.</p>
+<p>En el campo de la informática, Unicode (código unificado, código universal, código único, código universal estándar) es un estándar de la industria que permite a las computadoras representar los sistemas de decenas de escrituras del mundo. Unicode se desarrolla sobre la base del estándar del Conjunto Universal de Caracteres (Universal Character Set) y también en forma de libro</p>
+<p>（<strong>Se puede entender así: Unicode es un conjunto de caracteres; UTF-32/UTF-16/UTF-8 son tres esquemas de codificación de caracteres.</strong>）
 </p>
 <h3>3.1.UCS &amp; UNICODE</h3>
-<p><strong>通用字符集</strong>（Universal Character Set，<strong>UCS</strong>）是由ISO制定的<strong>ISO 10646</strong>（或称<strong>ISO/IEC 10646</strong>）标准所定义的标准字符集。历史上存在两个独立的尝试创立单一字符集的组织，即国际标准化组织（ISO）和多语言软件制造商组成的统一码联盟。前者开发的 ISO/IEC 10646 项目，后者开发的统一码项目。因此最初制定了不同的标准。</p>
-<p>1991年前后，两个项目的参与者都认识到，世界不需要两个不兼容的字符集。于是，它们开始合并双方的工作成果，并为创立一个单一编码表而协同工作。从Unicode 2.0开始，Unicode采用了与ISO 10646-1相同的字库和字码；ISO也承诺，ISO 10646将不会替超出U+10FFFF的UCS-4编码赋值，以使得两者保持一致。两个项目仍都存在，并独立地公布各自的标准。但统一码联盟和ISO/IEC JTC1/SC2都同意保持两者标准的码表兼容，并紧密地共同调整任何未来的扩展。在发布的时候，Unicode一般都会采用有关字码最常见的字形，但ISO 10646一般都尽可能采用Century字形。</p>
+<p><strong>通用字符集</strong>（Universal Character Set，<strong>UCS</strong>) es establecido por ISO<strong>ISO 10646</strong>（或称<strong>ISO/IEC 10646</strong>) el conjunto de caracteres estándar definido por la norma. Históricamente existieron dos organizaciones que intentaron de manera independiente crear un único conjunto de caracteres: la Organización Internacional de Normalización (ISO) y el Consorcio Unicode, formado por fabricantes de software multilingüe. La primera desarrolló el proyecto ISO/IEC 10646; la segunda desarrolló el proyecto Unicode. Por lo tanto, inicialmente se establecieron normas diferentes.</p>
+<p>Alrededor de 1991, los participantes de ambos proyectos reconocieron que el mundo no necesitaba dos conjuntos de caracteres incompatibles. Así pues, comenzaron a fusionar los resultados de sus trabajos y a colaborar para crear una única tabla de codificación. A partir de Unicode 2.0, Unicode adoptó el mismo repertorio de caracteres y códigos que ISO 10646-1; ISO también se comprometió a que ISO 10646 no asignaría valores a codificaciones UCS-4 más allá de U+10FFFF, a fin de mantener la coherencia entre ambos. Ambos proyectos siguen existiendo y publican sus estándares de forma independiente. Sin embargo, el Consorcio Unicode y el ISO/IEC JTC1/SC2 acordaron mantener la compatibilidad de las tablas de códigos de ambos estándares y ajustar conjuntamente cualquier extensión futura. En el momento de la publicación, Unicode generalmente adopta la forma glífica más común para los códigos correspondientes, mientras que ISO 10646, por lo general, procura utilizar glifos de estilo Century.</p>
 <h3>3.2.UTF-32</h3>
-<p>上述使用4字节的数字来表达每个字母、符号，或者表意文字(ideograph)，每个数字代表唯一的至少在某种语言中使用的符号的编码方案，称为UTF-32。UTF-32又称<strong>UCS-4</strong>是一种将Unicode字符编码的协定，对每个字符都使用4字节。就空间而言，是非常没有效率的。</p>
-<p>这种方法有其优点，最重要的一点就是可以在常数时间内定位字符串里的第N个字符，因为第N个字符从第4×Nth个字节开始。虽然每一个码位使用固定长度的字节看似方便，它并不如其它Unicode编码使用得广泛。</p>
+<p>El esquema de codificación mencionado anteriormente, que utiliza números de 4 bytes para representar cada letra, símbolo o ideograma (ideograph), donde cada número representa un símbolo único utilizado al menos en algún idioma, se denomina UTF-32. UTF-32 también se conoce como<strong>UCS-4</strong>Es un acuerdo para codificar caracteres Unicode que utiliza 4 bytes para cada carácter. En términos de espacio, es muy ineficiente.</p>
+<p>Este método tiene sus ventajas; la más importante es que se puede localizar el enésimo carácter de una cadena en tiempo constante, porque el enésimo carácter comienza en el byte 4×N. Aunque usar un número fijo de bytes para cada punto de código parece conveniente, no se utiliza tan ampliamente como otras codificaciones Unicode.</p>
 <h3>3.3.UTF-16</h3>
-<p>尽管Unicode字符非常多，但是实际上大多数人不会用到超过前65535个以外的字符。因此，就有了另外一种Unicode编码方式，叫做UTF-16(因为16位 = 2字节)。UTF-16将0–65535范围内的字符编码成2个字节，如果真的需要表达那些很少使用的“星芒层(astral plane)”内超过这65535范围的Unicode字符，则需要使用一些特殊的技巧来实现。UTF-16编码最明显的优点是它在空间效率上比UTF-32高两倍，因为每个字符只需要2个字节来存储（除去65535范围以外的），而不是UTF-32中的4个字节。并且，如果我们假设某个字符串不包含任何星芒层中的字符，那么我们依然可以在常数时间内找到其中的第N个字符，直到它不成立为止这总是一个不错的推断。其编码方法是：</p>
+<p>Aunque los caracteres Unicode son muchísimos, en realidad la mayoría de las personas no llegan a usar caracteres más allá de los primeros 65535. Por lo tanto, existe otra forma de codificación Unicode, llamada UTF-16 (porque 16 bits = 2 bytes). UTF-16 codifica los caracteres en el rango de 0 a 65535 en 2 bytes; si realmente se necesita expresar esos caracteres Unicode poco utilizados dentro del "plano astral" (astral plane), más allá del rango de 65535, se requieren algunas técnicas especiales. La ventaja más obvia de la codificación UTF-16 es que es el doble de eficiente en espacio que UTF-32, porque cada carácter solo necesita 2 bytes para almacenarse (excepto fuera del rango de 65535), en lugar de los 4 bytes de UTF-32. Además, si suponemos que una cadena no contiene ningún carácter del plano astral, podemos seguir encontrando el enésimo carácter en tiempo constante; hasta que esa suposición deje de cumplirse, siempre es una buena inferencia. Su método de codificación es:</p>
 <ul>
-<li>如果字符编码U小于0x10000，也就是十进制的0到65535之内，则直接使用两字节表示；</li>
-<li>如果字符编码U大于0x10000，由于UNICODE编码范围最大为0x10FFFF，从0x10000到0x10FFFF之间共有0xFFFFF个编码，也就是需要20个bit就可以标示这些编码。用U'表示从0-0xFFFFF之间的值，将其前10 bit作为高位和16 bit的数值0xD800进行逻辑or操作，将后10 bit作为低位和0xDC00做逻辑or操作，这样组成的4个byte就构成了U的编码。</li>
+<li>Si el código de carácter U es menor que 0x10000, es decir, dentro del rango decimal de 0 a 65535, se representa directamente con dos bytes;</li>
+<li>Si el código de carácter U es mayor que 0x10000, dado que el rango máximo de codificación Unicode es 0x10FFFF, entre 0x10000 y 0x10FFFF hay un total de 0xFFFFF códigos, es decir, se necesitan 20 bits para representar estos códigos. Sea U' el valor entre 0 y 0xFFFFF; se toman sus primeros 10 bits como parte alta y se realiza una operación lógica OR con el valor de 16 bits 0xD800; se toman los últimos 10 bits como parte baja y se realiza una operación lógica OR con 0xDC00; los 4 bytes así formados constituyen la codificación de U.</li>
 </ul>
-<p>对于UTF-32和UTF-16编码方式还有一些其他不明显的缺点。不同的计算机系统会以不同的顺序保存字节。这意味着字符U+4E2D在UTF-16编码方式下可能被保存为4E 2D或者2D 4E，这取决于该系统使用的是大尾端(big-endian)还是小尾端(little-endian)。<span style="text-decoration: line-through;">（对于UTF-32编码方式，则有更多种可能的字节排列。）</span>只要文档没有离开你的计算机，它还是安全的——同一台电脑上的不同程序使用相同的字节顺序(byte order)。但是当我们需要在系统之间传输这个文档的时候，也许在万维网中，我们就需要一种方法来指示当前我们的字节是怎样存储的。不然的话，接收文档的计算机就无法知道这两个字节4E 2D表达的到底是U+4E2D还是U+2D4E。</p>
-<p>为了解决这个问题，多字节的Unicode编码方式定义了一个“字节顺序标记(Byte Order Mark)”，它是一个特殊的非打印字符，你可以把它包含在文档的开头来指示你所使用的字节顺序。对于UTF-16，字节顺序标记是U+FEFF。如果收到一个以字节FF FE开头的UTF-16编码的文档，你就能确定它的字节顺序是单向的(one way)的了；如果它以FE FF开头，则可以确定字节顺序反向了。</p>
+<p>Las codificaciones UTF-32 y UTF-16 tienen otras desventajas no tan evidentes. Los diferentes sistemas informáticos guardan los bytes en órdenes distintos. Esto significa que el carácter U+4E2D en codificación UTF-16 puede guardarse como 4E 2D o 2D 4E, dependiendo de si el sistema utiliza big-endian (extremo grande) o little-endian (extremo pequeño).<span style="text-decoration: line-through;">（对于UTF-32编码方式，则有更多种可能的字节排列。）</span>Mientras el documento no salga de tu computadora, sigue siendo seguro: los diferentes programas de la misma máquina usan el mismo orden de bytes (byte order). Pero cuando necesitamos transferir este documento entre sistemas, quizás en la World Wide Web, necesitamos un método para indicar cómo están almacenados nuestros bytes actualmente. De lo contrario, la computadora que recibe el documento no podrá saber si esos dos bytes 4E 2D representan U+4E2D o U+2D4E.</p>
+<p>Para resolver este problema, las codificaciones Unicode multibyte definen una "marca de orden de bytes" (Byte Order Mark), un carácter especial no imprimible que puedes incluir al principio del documento para indicar el orden de bytes que estás utilizando. Para UTF-16, la marca de orden de bytes es U+FEFF. Si recibes un documento codificado en UTF-16 que comienza con los bytes FF FE, puedes determinar que su orden de bytes es en un sentido (one way); si comienza con FE FF, puedes determinar que el orden de bytes está invertido.</p>
 <h3>3.4.UTF-8</h3>
-<p>UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长度字符编码（定长码），也是一种前缀码。它可以用来表示Unicode标准中的任何字符，且其编码中的第一个字节仍与ASCII兼容，这使得原来处理ASCII字符的软件无须或只须做少部分修改，即可继续使用。因此，它逐渐成为电子邮件、网页及其他存储或传送文字的应用中，优先采用的编码。互联网工程工作小组（IETF）要求所有互联网协议都必须支持UTF-8编码。</p>
-<p>UTF-8使用一至四个字节为每个字符编码：</p>
+<p>UTF-8 (formato de transformación Unicode de 8 bits) es una codificación de caracteres de longitud variable (código de longitud fija) para Unicode, y también es un código de prefijo. Puede utilizarse para representar cualquier carácter del estándar Unicode, y el primer byte de su codificación sigue siendo compatible con ASCII, lo que permite que el software que originalmente procesaba caracteres ASCII pueda seguir usándose sin modificaciones o con solo unas pocas modificaciones. Por lo tanto, se ha convertido gradualmente en la codificación preferida en el correo electrónico, las páginas web y otras aplicaciones que almacenan o transmiten texto. El Grupo de Trabajo de Ingeniería de Internet (IETF) exige que todos los protocolos de Internet sean compatibles con la codificación UTF-8.</p>
+<p>UTF-8 utiliza de uno a cuatro bytes para codificar cada carácter:</p>
 <ol>
-<li>128个US-ASCII字符只需一个字节编码（Unicode范围由U+0000至U+007F）。</li>
+<li>128 caracteres US-ASCII solo necesitan un byte de codificación (rango Unicode de U+0000 a U+007F).</li>
 <li>2. El latín con diacríticos, el griego, el cirílico, el armenio, el hebreo, el árabe, el siríaco y el alfabeto thaana requieren codificación de dos bytes (rango Unicode de U+0080 a U+07FF).</li>
 <li>Otros caracteres del plano básico multilingüe (BMP) (que incluye la mayoría de los caracteres comunes) se codifican con tres bytes.</li>
 <li>Otros caracteres de los planos suplementarios de Unicode, que se usan muy raramente, se codifican con cuatro bytes.</li>
@@ -604,181 +601,6 @@ var aid = 11948;
 
 </div>
 -->
-<div class="sidebar-box cate-list" style="display:none;">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">热门文章</a>
-</div>
-<div class="membership">
-<ul class="membership">
-<li><a href="https://mp.weixin.qq.com/s/ZaP6YNgKTCHYy3r2WPBBaw" target="_blank" title="2024 年 04 月 JavaScript 框架排行榜">2024 年 04 月 JavaScript 框架排行榜</a></li>
-<li><a href="https://mp.weixin.qq.com/s/JBR2twC0t6krjjuxqvhsEQ" target="_blank" title="免费、开源、好用的 SQL 客户端合集">免费、开源、好用的 SQL 客户端合集</a></li>
-<li><a href="https://mp.weixin.qq.com/s/TwV3YQjA1glyaW7TiHvhlA" target="_blank" title="优雅的代码规范，提升代码质量">优雅的代码规范，提升代码质量</a></li>
-<li><a href="https://mp.weixin.qq.com/s/CnUJ-2OHPbBKlnVpjDzavA" target="_blank" title="命令行中的趣味世界，牛也能说话，有趣又好玩">命令行中的趣味世界，牛也能说话，有趣又好玩</a></li>
-<li><a href="https://mp.weixin.qq.com/s/7NKl-mD7N8CeSNQlbKDEWA" target="_blank" title="2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？">2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？</a></li>
-<li><a href="https://mp.weixin.qq.com/s/yWlSVDKobtDhThnhirVRpw" target="_blank" title="免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端">免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端</a></li>
-</ul>
-</div>
-</div>
-<div class="sidebar-box cate-list">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">教程列表</a>
-</div>
-<div class="cate-items">
-<a href="../ado.html">ADO 教程</a>
-<a href="../ai-agent.html">AI Agent 教程</a>
-<a href="../ai.html">AI 入门教程</a>
-<a href="../ai-math.html">AI 数学基础</a>
-<a href="../ajax.html">Ajax 教程</a>
-<a href="../android.html">Android 教程</a>
-<a href="../angularjs2.html">Angular2 教程</a>
-<a href="../angularjs.html">AngularJS 教程</a>
-<a href="../appml.html">AppML 教程</a>
-<a href="../asp.html">ASP 教程</a>
-<a href="../aspnet.html">ASP.NET 教程</a>
-<a href="../bootstrap.html">Bootstrap 教程</a>
-<a href="../bootstrap4.html">Bootstrap4 教程</a>
-<a href="../bootstrap5.html">Bootstrap5 教程</a>
-<a href="../cprogramming.html">C 教程</a>
-<a href="../c-dsa.html">C 语言数据结构与算法</a>
-<a href="../csharp.html">C# 教程</a>
-<a href="../cplusplus.html">C++ 教程</a>
-<a href="../chartjs.html">Chart.js 教程</a>
-<a href="../claude-code.html">Claude Code 教程</a>
-<a href="../cmake.html">CMake 教程</a>
-<a href="../codex.html">Codex 教程</a>
-<a href="../cssref.html">CSS 参考手册</a>
-<a href="../css.html">CSS 教程</a>
-<a href="../css3.html">CSS3 教程</a>
-<a href="../cursor.html">Cursor 教程</a>
-<a href="../dart.html">Dart 教程</a>
-<a href="../dash.html">Dash 教程</a>
-<a href="../deepseek-harness.html">DeepSeek Harness</a>
-<a href="../django.html">Django 教程</a>
-<a href="../docker.html">Docker 教程</a>
-<a href="../dtd.html">DTD 教程</a>
-<a href="../echarts.html">ECharts 教程</a>
-<a href="../eclipse.html">Eclipse 教程</a>
-<a href="../electron.html">Electron 教程</a>
-<a href="../fastapi.html">FastAPI 教程</a>
-<a href="../firebug.html">Firebug 教程</a>
-<a href="../flask.html">Flask 教程</a>
-<a href="../flutter.html">Flutter 教程</a>
-<a href="../font-awesome.html">Font Awesome 图标</a>
-<a href="../foundation.html">Foundation 教程</a>
-<a href="../git.html">Git 教程</a>
-<a href="../go.html">Go 语言教程</a>
-<a href="../googleapi.html">Google 地图 API 教程</a>
-<a href="../hermes-agent.html">Hermes Agent</a>
-<a href="../highcharts.html">Highcharts 教程</a>
-<a href="../htmldom.html">HTML DOM 教程</a>
-<a href="../tags.html">HTML 参考手册</a>
-<a href="../charsets.html">HTML 字符集</a>
-<a href="../html.html">HTML 教程</a>
-<a href="../http.html">HTTP 教程</a>
-<a href="../ionic.html">ionic 教程</a>
-<a href="../ios.html">iOS 教程</a>
-<a href="../java.html">Java 教程</a>
-<a href="../jsref.html">JavaScript 参考手册</a>
-<a href="../js.html">Javascript 教程</a>
-<a href="../jeasyui.html">jQuery EasyUI 教程</a>
-<a href="../jquerymobile.html">jQuery Mobile 教程</a>
-<a href="../jqueryui.html">jQuery UI 教程</a>
-<a href="../jquery.html">jQuery 教程</a>
-<a href="../json.html">JSON 教程</a>
-<a href="../jsp.html">JSP 教程</a>
-<a href="../julia.html">Julia 教程</a>
-<a href="../jupyter-notebook.html">Jupyter Notebook 教程</a>
-<a href="../kotlin.html">Kotlin 教程</a>
-<a href="../langchain.html">LangChain 教程</a>
-<a href="../latex.html">LaTeX 教程</a>
-<a href="../linux.html">Linux 教程</a>
-<a href="../lua.html">Lua 教程</a>
-<a href="../markdown.html">Markdown 教程</a>
-<a href="../matplotlib.html">Matplotlib 教程</a>
-<a href="../maven.html">Maven 教程</a>
-<a href="../memcached.html">Memcached 教程</a>
-<a href="../mongodb.html">MongoDB 教程</a>
-<a href="../mysql.html">MySQL 教程</a>
-<a href="../nextjs.html">Next.js 教程</a>
-<a href="../nlp.html">NLP 教程</a>
-<a href="../nodejs.html">Node.js 教程</a>
-<a href="../numpy.html">NumPy 教程</a>
-<a href="../obsidian.html">Obsidian 教程</a>
-<a href="../ollama.html">Ollama 教程</a>
-<a href="../opencode.html">OpenCode 教程</a>
-<a href="../opencv.html">OpenCV 教程</a>
-<a href="../pandas.html">Pandas 教程</a>
-<a href="../perl.html">Perl 教程</a>
-<a href="../php.html">PHP 教程</a>
-<a href="../pi-agent.html">Pi Agent</a>
-<a href="../pillow.html">Pillow 教程</a>
-<a href="../playwright.html">Playwright 教程</a>
-<a href="../postgresql.html">PostgreSQL 教程</a>
-<a href="../powershell.html">PowerShell</a>
-<a href="../pycharm.html">Pycharm 教程</a>
-<a href="../python3.html">Python 3 教程</a>
-<a href="../python.html">Python 基础教程</a>
-<a href="../python-design-pattern.html">Python 设计模式</a>
-<a href="../python-qt.html">Python 量化交易</a>
-<a href="../pytorch.html">PyTorch 教程</a>
-<a href="../r.html">R 教程</a>
-<a href="../rdf.html">RDF 教程</a>
-<a href="../react.html">React 教程</a>
-<a href="../redis.html">Redis 教程</a>
-<a href="../restfulapi.html">RESTful API</a>
-<a href="../rss.html">RSS 教程</a>
-<a href="../ruby.html">Ruby 教程</a>
-<a href="../rust.html">Rust 教程</a>
-<a href="../sass.html">Sass 教程</a>
-<a href="../scala.html">Scala 教程</a>
-<a href="../scipy.html">SciPy 教程</a>
-<a href="../selenium.html">Selenium 教程</a>
-<a href="../servlet.html">Servlet 教程</a>
-<a href="../skills.html">Skills 教程</a>
-<a href="../sklearn.html">Sklearn 教程</a>
-<a href="../soap.html">SOAP 教程</a>
-<a href="../sql.html">SQL 教程</a>
-<a href="../sqlite.html">SQLite 教程</a>
-<a href="../svg.html">SVG 教程</a>
-<a href="../svn.html">SVN 教程</a>
-<a href="../swagger.html">Swagger 教程</a>
-<a href="../swift.html">Swift 教程</a>
-<a href="../tailwindcss.html">Tailwind CSS 教程</a>
-<a href="../tcpip.html">TCP/IP 教程</a>
-<a href="../tensorflow.html">TensorFlow 教程</a>
-<a href="../typescript.html">TypeScript 教程</a>
-<a href="../uniapp.html">uni-app 教程</a>
-<a href="../vbscript.html">VBScript 教程</a>
-<a href="../vibe-coding.html">Vibe Coding 教程</a>
-<a href="../vscode.html">VSCode 教程</a>
-<a href="../vue2.html">Vue.js 教程</a>
-<a href="../vue3.html">Vue3 教程</a>
-<a href="../w3c.html">W3C 教程</a>
-<a href="../webservices.html">Web Service 教程</a>
-<a href="../wsdl.html">WSDL 教程</a>
-<a href="../xlink.html">XLink 教程</a>
-<a href="../dom.html">XML DOM 教程</a>
-<a href="../schema.html">XML Schema 教程</a>
-<a href="../xml.html">XML 教程</a>
-<a href="../xpath.html">XPath 教程</a>
-<a href="../xquery.html">XQuery 教程</a>
-<a href="../xslfo.html">XSLFO 教程</a>
-<a href="../xsl.html">XSLT 教程</a>
-<a href="../zig.html">Zig 教程</a>
-<a href="../data-structures.html">数据结构</a>
-<a href="../ml.html">机器学习</a>
-<a href="../regexp.html">正则表达式</a>
-<a href="../assembly.html">汇编语言</a>
-<a href="../quiz.html">测验</a>
-<a href="../browsers.html">浏览器</a>
-<a href="../quality.html">网站品质</a>
-<a href="../web.html">网站建设指南</a>
-<a href="../hosting.html">网站服务器教程</a>
-<a href="../np.html">网络协议</a>
-<a href="../computer-organization.html">计算机组成原理</a>
-<a href="../design-pattern.html">设计模式</a>
-</div>
-</div>
 </div>
 </div>
 </div>

@@ -60,9 +60,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <div class="row">
 <div class="col right-list">
-<button class="btn btn-responsive-nav btn-inverse" id="pull">
-<i class="fa fa-navicon"></i>
-</button>
 </div>
 <div class="col search search-desktop last">
 <div class="search-input">
@@ -85,12 +82,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-intro">
 <!-- ad start-->
 <!-- ad end-->
-<p>Python 提供了两种常见的模块导入方式：<code>import</code> 和 <code>from ... import</code>。这两种方式在使用方式、命名空间管理、可读性和潜在问题方面都有显著区别。下面将详细说明这些方面。</p>
-<h3>1. 使用方式</h3>
+<p>Python ofrece dos formas comunes de importar módulos:<code>import</code> 和 <code>from ... import</code>Estos dos métodos difieren significativamente en cuanto a uso, gestión del espacio de nombres, legibilidad y problemas potenciales. A continuación se detallan estos aspectos.</p>
+<h3>1. Forma de uso</h3>
 <p><strong><code>import module</code></strong>：</p>
 <ul>
-<li>导入整个模块。</li>
-<li>使用时需通过模块名访问模块中的对象。</li>
+<li>Importar todo el módulo.</li>
+<li>Al usarlo, se debe acceder a los objetos del módulo mediante el nombre del módulo.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">math</span><br/>
@@ -100,8 +97,8 @@ result <span style="color: Gray;">=</span> <span style="color: #05a;">math</span
 </div></div>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
-<li>从模块中导入特定的对象（函数、类、变量等）。</li>
-<li>使用时直接引用导入的对象，不需模块名前缀。</li>
+<li>Importa objetos específicos (funciones, clases, variables, etc.) desde un módulo.</li>
+<li>Al usarlos, se hace referencia directa a los objetos importados, sin necesidad del prefijo del nombre del módulo.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> sqrt<br/>
@@ -109,16 +106,16 @@ result <span style="color: Gray;">=</span> <span style="color: #05a;">math</span
 result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span><span style="color: Maroon;">16</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出 4.0</span><br/>
 </div></div>
-<h3>2. 命名空间管理</h3>
+<h3>2. Gestión de espacios de nombres</h3>
 <p><strong><code>import module</code></strong>：</p>
 <ul>
-<li>将整个模块作为一个对象导入到当前命名空间中。</li>
-<li>模块中的对象通过<code>module.name</code>访问，不会与当前命名空间中的其他对象冲突。</li>
+<li>Importa el módulo completo como un objeto en el espacio de nombres actual.</li>
+<li>Los objetos en el módulo a través de<code>module.name</code>El acceso no entra en conflicto con otros objetos del espacio de nombres actual.</li>
 </ul>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
-<li>直接将模块中的对象导入到当前命名空间中。</li>
-<li>可能会与当前命名空间中的其他对象发生命名冲突。</li>
+<li>Importa directamente los objetos del módulo al espacio de nombres actual.</li>
+<li>Puede provocar conflictos de nombres con otros objetos del espacio de nombres actual.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> sqrt<br/>
@@ -127,11 +124,11 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 可能会混淆使用的 sqrt 函数</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 </div></div>
-<h3>3. 可读性和维护性</h3>
+<h3>3. Legibilidad y mantenibilidad</h3>
 <p><strong><code>import module</code></strong>：</p>
 <ul>
-<li>代码中明确知道哪些对象来自哪个模块，因为总是使用模块名前缀。</li>
-<li>提高代码可读性和可维护性。</li>
+<li>En el código se sabe claramente qué objetos provienen de qué módulo, porque siempre se usa el prefijo del nombre del módulo.</li>
+<li>Mejorar la legibilidad y mantenibilidad del código.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">os</span><br/>
@@ -141,8 +138,8 @@ current_directory <span style="color: Gray;">=</span> <span style="color: #05a;"
 </div></div>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
-<li>代码中直接使用对象名，可能难以看出这些对象来自哪个模块。</li>
-<li>需要对代码进行更多注释或文档说明，以保持清晰。</li>
+<li>En el código se usan directamente los nombres de los objetos, por lo que puede ser difícil saber de qué módulo provienen.</li>
+<li>Se necesita añadir más comentarios o documentación al código para mantener la claridad.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">os</span> <span style="color: Green;font-weight:bold;">import</span> getcwd<br/>
@@ -150,16 +147,16 @@ current_directory <span style="color: Gray;">=</span> <span style="color: #05a;"
 current_directory <span style="color: Gray;">=</span> getcwd<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_directory<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出当前工作目录</span><br/>
 </div></div>
-<h3>4. 选择性导入和内存使用</h3>
+<h3>4. Importación selectiva y uso de memoria</h3>
 <p><strong><code>import module</code></strong>：</p>
 <ul>
-<li>导入整个模块，模块中的所有对象都可用。</li>
-<li>适用于需要使用模块中多个对象的情况。</li>
+<li>Importa el módulo completo, por lo que todos los objetos del módulo están disponibles.</li>
+<li>Adecuado cuando se necesitan usar varios objetos del módulo.</li>
 </ul>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
-<li>仅导入模块中的特定对象，节省内存。</li>
-<li>适用于只需要使用模块中少量对象的情况。</li>
+<li>Importa solo objetos específicos del módulo, ahorrando memoria.</li>
+<li>Adecuado cuando solo se necesitan usar unos pocos objetos del módulo.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: #a50"># 只需使用 datetime 中的 date 对象</span><br/>
@@ -168,11 +165,11 @@ current_directory <span style="color: Gray;">=</span> getcwd<span style="color: 
 today <span style="color: Gray;">=</span> date.<span style="color: #05a;">today</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>today<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出当前日期</span><br/>
 </div></div>
-<h4>5. 导入所有对象</h4>
+<h4>5. Importar todos los objetos</h4>
 <p><strong><code>from module import *</code></strong>：</p>
 <ul>
-<li>导入模块中的所有对象到当前命名空间。</li>
-<li>可能导致命名冲突，降低代码可读性，不推荐使用。</li>
+<li>Importa todos los objetos del módulo al espacio de nombres actual.</li>
+<li>Puede causar conflictos de nombres, reducir la legibilidad del código y no se recomienda su uso.</li>
 </ul>
 <div class="example"><h2 class="example">实例</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> *<br/>
@@ -188,11 +185,11 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 </div></div><h3>总结</h3>
 <ul>
-<li><strong><code>import module</code></strong>：适用于需要使用整个模块，避免命名冲突，提高代码可读性。</li>
-<li><strong><code>from module import name</code></strong>：适用于只需要模块中部分对象的情况，简化代码，但需注意命名冲突。</li>
-<li><strong><code>from module import *</code></strong>：尽量避免使用，可能导致命名冲突和代码混淆。</li>
+<li><strong><code>import module</code></strong>: Adecuado cuando se necesita usar todo el módulo, evita conflictos de nombres y mejora la legibilidad del código.</li>
+<li><strong><code>from module import name</code></strong>: Adecuado cuando solo se necesitan algunos objetos del módulo, simplifica el código, pero hay que tener cuidado con los conflictos de nombres.</li>
+<li><strong><code>from module import *</code></strong>: Evitar su uso en la medida de lo posible, ya que puede provocar conflictos de nombres y confusión en el código.</li>
 </ul>
-<p>选择适合的导入方式取决于具体的使用场景和需求，通常推荐在需要避免命名冲突和保持代码清晰时使用<code>import</code>语句，在需要简化代码和使用特定对象时使用<code>from ... import</code>语句。</p>
+<p>Elegir el método de importación adecuado depende del escenario de uso y las necesidades específicas; generalmente se recomienda utilizarlo cuando se necesitan evitar conflictos de nombres y mantener el código claro.<code>import</code>Sentencia, utilizada cuando se necesita simplificar el código y usar objetos específicos.<code>from ... import</code>语句。</p>
 </div>
 </div>
 <div class="previous-next-links">
@@ -302,7 +299,7 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>点我分享笔记</h3>
+<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic en mí para compartir notas</h3>
 &lt;p style="font-size:14px;"&gt;¡La nota debe ser una extensión del contenido de este artículo!&lt;/p&gt;&lt;br&gt;
 	&lt;p style="font-size:12px;"&gt;&lt;a href="../tougao.html" target="_blank"&gt;Envío de artículos, haz clic aquí&lt;/a&gt;&lt;/p&gt;
 	&lt;p style="font-size:14px;"&gt;&lt;a href="./runoob-user-test-intro.html" target="_blank"&gt;Cómo obtener el código de invitación de registro&lt;/a&gt;&lt;/p&gt;
@@ -551,181 +548,6 @@ var aid = 25681;
 
 </div>
 -->
-<div class="sidebar-box cate-list" style="display:none;">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">热门文章</a>
-</div>
-<div class="membership">
-<ul class="membership">
-<li><a href="https://mp.weixin.qq.com/s/ZaP6YNgKTCHYy3r2WPBBaw" target="_blank" title="2024 年 04 月 JavaScript 框架排行榜">2024 年 04 月 JavaScript 框架排行榜</a></li>
-<li><a href="https://mp.weixin.qq.com/s/JBR2twC0t6krjjuxqvhsEQ" target="_blank" title="免费、开源、好用的 SQL 客户端合集">免费、开源、好用的 SQL 客户端合集</a></li>
-<li><a href="https://mp.weixin.qq.com/s/TwV3YQjA1glyaW7TiHvhlA" target="_blank" title="优雅的代码规范，提升代码质量">优雅的代码规范，提升代码质量</a></li>
-<li><a href="https://mp.weixin.qq.com/s/CnUJ-2OHPbBKlnVpjDzavA" target="_blank" title="命令行中的趣味世界，牛也能说话，有趣又好玩">命令行中的趣味世界，牛也能说话，有趣又好玩</a></li>
-<li><a href="https://mp.weixin.qq.com/s/7NKl-mD7N8CeSNQlbKDEWA" target="_blank" title="2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？">2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？</a></li>
-<li><a href="https://mp.weixin.qq.com/s/yWlSVDKobtDhThnhirVRpw" target="_blank" title="免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端">免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端</a></li>
-</ul>
-</div>
-</div>
-<div class="sidebar-box cate-list">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">教程列表</a>
-</div>
-<div class="cate-items">
-<a href="../ado.html">ADO 教程</a>
-<a href="../ai-agent.html">AI Agent 教程</a>
-<a href="../ai.html">AI 入门教程</a>
-<a href="../ai-math.html">AI 数学基础</a>
-<a href="../ajax.html">Ajax 教程</a>
-<a href="../android.html">Android 教程</a>
-<a href="../angularjs2.html">Angular2 教程</a>
-<a href="../angularjs.html">AngularJS 教程</a>
-<a href="../appml.html">AppML 教程</a>
-<a href="../asp.html">ASP 教程</a>
-<a href="../aspnet.html">ASP.NET 教程</a>
-<a href="../bootstrap.html">Bootstrap 教程</a>
-<a href="../bootstrap4.html">Bootstrap4 教程</a>
-<a href="../bootstrap5.html">Bootstrap5 教程</a>
-<a href="../cprogramming.html">C 教程</a>
-<a href="../c-dsa.html">C 语言数据结构与算法</a>
-<a href="../csharp.html">C# 教程</a>
-<a href="../cplusplus.html">C++ 教程</a>
-<a href="../chartjs.html">Chart.js 教程</a>
-<a href="../claude-code.html">Claude Code 教程</a>
-<a href="../cmake.html">CMake 教程</a>
-<a href="../codex.html">Codex 教程</a>
-<a href="../cssref.html">CSS 参考手册</a>
-<a href="../css.html">CSS 教程</a>
-<a href="../css3.html">CSS3 教程</a>
-<a href="../cursor.html">Cursor 教程</a>
-<a href="../dart.html">Dart 教程</a>
-<a href="../dash.html">Dash 教程</a>
-<a href="../deepseek-harness.html">DeepSeek Harness</a>
-<a href="../django.html">Django 教程</a>
-<a href="../docker.html">Docker 教程</a>
-<a href="../dtd.html">DTD 教程</a>
-<a href="../echarts.html">ECharts 教程</a>
-<a href="../eclipse.html">Eclipse 教程</a>
-<a href="../electron.html">Electron 教程</a>
-<a href="../fastapi.html">FastAPI 教程</a>
-<a href="../firebug.html">Firebug 教程</a>
-<a href="../flask.html">Flask 教程</a>
-<a href="../flutter.html">Flutter 教程</a>
-<a href="../font-awesome.html">Font Awesome 图标</a>
-<a href="../foundation.html">Foundation 教程</a>
-<a href="../git.html">Git 教程</a>
-<a href="../go.html">Go 语言教程</a>
-<a href="../googleapi.html">Google 地图 API 教程</a>
-<a href="../hermes-agent.html">Hermes Agent</a>
-<a href="../highcharts.html">Highcharts 教程</a>
-<a href="../htmldom.html">HTML DOM 教程</a>
-<a href="../tags.html">HTML 参考手册</a>
-<a href="../charsets.html">HTML 字符集</a>
-<a href="../html.html">HTML 教程</a>
-<a href="../http.html">HTTP 教程</a>
-<a href="../ionic.html">ionic 教程</a>
-<a href="../ios.html">iOS 教程</a>
-<a href="../java.html">Java 教程</a>
-<a href="../jsref.html">JavaScript 参考手册</a>
-<a href="../js.html">Javascript 教程</a>
-<a href="../jeasyui.html">jQuery EasyUI 教程</a>
-<a href="../jquerymobile.html">jQuery Mobile 教程</a>
-<a href="../jqueryui.html">jQuery UI 教程</a>
-<a href="../jquery.html">jQuery 教程</a>
-<a href="../json.html">JSON 教程</a>
-<a href="../jsp.html">JSP 教程</a>
-<a href="../julia.html">Julia 教程</a>
-<a href="../jupyter-notebook.html">Jupyter Notebook 教程</a>
-<a href="../kotlin.html">Kotlin 教程</a>
-<a href="../langchain.html">LangChain 教程</a>
-<a href="../latex.html">LaTeX 教程</a>
-<a href="../linux.html">Linux 教程</a>
-<a href="../lua.html">Lua 教程</a>
-<a href="../markdown.html">Markdown 教程</a>
-<a href="../matplotlib.html">Matplotlib 教程</a>
-<a href="../maven.html">Maven 教程</a>
-<a href="../memcached.html">Memcached 教程</a>
-<a href="../mongodb.html">MongoDB 教程</a>
-<a href="../mysql.html">MySQL 教程</a>
-<a href="../nextjs.html">Next.js 教程</a>
-<a href="../nlp.html">NLP 教程</a>
-<a href="../nodejs.html">Node.js 教程</a>
-<a href="../numpy.html">NumPy 教程</a>
-<a href="../obsidian.html">Obsidian 教程</a>
-<a href="../ollama.html">Ollama 教程</a>
-<a href="../opencode.html">OpenCode 教程</a>
-<a href="../opencv.html">OpenCV 教程</a>
-<a href="../pandas.html">Pandas 教程</a>
-<a href="../perl.html">Perl 教程</a>
-<a href="../php.html">PHP 教程</a>
-<a href="../pi-agent.html">Pi Agent</a>
-<a href="../pillow.html">Pillow 教程</a>
-<a href="../playwright.html">Playwright 教程</a>
-<a href="../postgresql.html">PostgreSQL 教程</a>
-<a href="../powershell.html">PowerShell</a>
-<a href="../pycharm.html">Pycharm 教程</a>
-<a href="../python3.html">Python 3 教程</a>
-<a href="../python.html">Python 基础教程</a>
-<a href="../python-design-pattern.html">Python 设计模式</a>
-<a href="../python-qt.html">Python 量化交易</a>
-<a href="../pytorch.html">PyTorch 教程</a>
-<a href="../r.html">R 教程</a>
-<a href="../rdf.html">RDF 教程</a>
-<a href="../react.html">React 教程</a>
-<a href="../redis.html">Redis 教程</a>
-<a href="../restfulapi.html">RESTful API</a>
-<a href="../rss.html">RSS 教程</a>
-<a href="../ruby.html">Ruby 教程</a>
-<a href="../rust.html">Rust 教程</a>
-<a href="../sass.html">Sass 教程</a>
-<a href="../scala.html">Scala 教程</a>
-<a href="../scipy.html">SciPy 教程</a>
-<a href="../selenium.html">Selenium 教程</a>
-<a href="../servlet.html">Servlet 教程</a>
-<a href="../skills.html">Skills 教程</a>
-<a href="../sklearn.html">Sklearn 教程</a>
-<a href="../soap.html">SOAP 教程</a>
-<a href="../sql.html">SQL 教程</a>
-<a href="../sqlite.html">SQLite 教程</a>
-<a href="../svg.html">SVG 教程</a>
-<a href="../svn.html">SVN 教程</a>
-<a href="../swagger.html">Swagger 教程</a>
-<a href="../swift.html">Swift 教程</a>
-<a href="../tailwindcss.html">Tailwind CSS 教程</a>
-<a href="../tcpip.html">TCP/IP 教程</a>
-<a href="../tensorflow.html">TensorFlow 教程</a>
-<a href="../typescript.html">TypeScript 教程</a>
-<a href="../uniapp.html">uni-app 教程</a>
-<a href="../vbscript.html">VBScript 教程</a>
-<a href="../vibe-coding.html">Vibe Coding 教程</a>
-<a href="../vscode.html">VSCode 教程</a>
-<a href="../vue2.html">Vue.js 教程</a>
-<a href="../vue3.html">Vue3 教程</a>
-<a href="../w3c.html">W3C 教程</a>
-<a href="../webservices.html">Web Service 教程</a>
-<a href="../wsdl.html">WSDL 教程</a>
-<a href="../xlink.html">XLink 教程</a>
-<a href="../dom.html">XML DOM 教程</a>
-<a href="../schema.html">XML Schema 教程</a>
-<a href="../xml.html">XML 教程</a>
-<a href="../xpath.html">XPath 教程</a>
-<a href="../xquery.html">XQuery 教程</a>
-<a href="../xslfo.html">XSLFO 教程</a>
-<a href="../xsl.html">XSLT 教程</a>
-<a href="../zig.html">Zig 教程</a>
-<a href="../data-structures.html">数据结构</a>
-<a href="../ml.html">机器学习</a>
-<a href="../regexp.html">正则表达式</a>
-<a href="../assembly.html">汇编语言</a>
-<a href="../quiz.html">测验</a>
-<a href="../browsers.html">浏览器</a>
-<a href="../quality.html">网站品质</a>
-<a href="../web.html">网站建设指南</a>
-<a href="../hosting.html">网站服务器教程</a>
-<a href="../np.html">网络协议</a>
-<a href="../computer-organization.html">计算机组成原理</a>
-<a href="../design-pattern.html">设计模式</a>
-</div>
-</div>
 </div>
 </div>
 </div>

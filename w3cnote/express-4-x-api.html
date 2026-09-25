@@ -60,9 +60,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <div class="row">
 <div class="col right-list">
-<button class="btn btn-responsive-nav btn-inverse" id="pull">
-<i class="fa fa-navicon"></i>
-</button>
 </div>
 <div class="col search search-desktop last">
 <div class="search-input">
@@ -1446,18 +1443,18 @@ res.redirect('../login');
 </pre><p>La redirección también puede ser una URL completa, para redirigir a un sitio diferente.</p>
 <pre>res.redirect('http://google.com');&lt;/p&gt;&lt;p&gt;
 重定向也可以相对于主机的根路径。比如，如果程序的路径为&lt;strong&gt;http://example.com/admin/post/new&lt;/strong&gt;，那么下面将重定向到&lt;strong&gt;http://example.com/admim&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;res.redirect('/admin');</pre><p>La redirección también puede ser relativa a la URL actual. Por ejemplo, viniendo de<strong>http://example.com/blog/admin/</strong>(ten en cuenta la<strong>/</strong>final), lo siguiente redirigirá a<strong>http://example.com/blog/admin/post/new</strong>。</p><pre>res.redirect('post/new');</pre><p>Si vienes de<strong>http://example.com/blog/admin</strong>（没有尾部<strong>/</strong>），重定向<strong>post/new</strong>，将重定向到<strong>http://example.com/blog/post/new</strong>。如果你觉得上面很混乱，可以把路径段认为目录(有'/')或者文件，这样是可以的。相对路径的重定向也是可以的。如果你当前的路径为<strong>http://example.com/admin/post/new</strong>，下面的操作将重定向到<strong>http://example.com/admin/post</strong>：</p>
+&lt;pre&gt;res.redirect('/admin');</pre><p>La redirección también puede ser relativa a la URL actual. Por ejemplo, viniendo de<strong>http://example.com/blog/admin/</strong>(ten en cuenta la<strong>/</strong>final), lo siguiente redirigirá a<strong>http://example.com/blog/admin/post/new</strong>。</p><pre>res.redirect('post/new');</pre><p>Si vienes de<strong>http://example.com/blog/admin</strong>（没有尾部<strong>/</strong>），重定向<strong>post/new</strong>，se redirigirá a<strong>http://example.com/blog/post/new</strong>. Si crees que lo anterior es confuso, puedes considerar los segmentos de ruta como directorios (con '/') o archivos, y eso es válido. La redirección a rutas relativas también es válida. Si tu ruta actual es<strong>http://example.com/admin/post/new</strong>, la siguiente operación redirigirá a<strong>http://example.com/admin/post</strong>：</p>
 <pre>res.redirect('..');</pre><p>
-<strong>back</strong>将重定向请求到<a href="http://en.wikipedia.org/wiki/HTTP_referer" target="_blank">referer</a>，当没有<strong>referer</strong>的时候，默认为<strong>/</strong>。</p>
+<strong>back</strong>redirigirá la solicitud a<a href="http://en.wikipedia.org/wiki/HTTP_referer" target="_blank">referer</a>，当没有<strong>referer</strong>cuando..., por defecto es<strong>/</strong>。</p>
 <pre>res.redirect('back');</pre>
 <h4 id="toc_66">res.render(view [, locals] [, callback])</h4>
-<p>渲染一个视图，然后将渲染得到的HTML文档发送给客户端。可选的参数为:</p>
+<p>Renderizar una vista y luego enviar el documento HTML renderizado al cliente. Los parámetros opcionales son:</p>
 <ul>
-<li><strong>locals</strong>，定义了视图本地参数属性的一个对象。</li>
-<li><strong>callback</strong>，一个回调方法。如果提供了这个参数，<strong>render</strong>方法将返回错误和渲染之后的模板，并且不自动发送响应。当有错误发生时，可以在这个回调内部，调用<strong>next(err)</strong>方法。</li>
+<li><strong>locals</strong>, un objeto que define las propiedades de las variables locales de la vista.</li>
+<li><strong>callback</strong>, un método de callback. Si se proporciona este parámetro,<strong>render</strong>el método devolverá el error y la plantilla renderizada, y no enviará la respuesta automáticamente. Cuando se produce un error, se puede llamar dentro de este callback,<strong>next(err)</strong>方法。</li>
 </ul>
 <blockquote>
-<p>本地变量缓存使能视图缓存。在开发环境中缓存视图，需要手动设置为true；视图缓存在生产环境中默认开启。</p>
+<p>La caché de variables locales habilita el almacenamiento en caché de vistas. En el entorno de desarrollo, para almacenar en caché las vistas, se debe establecer manualmente en true; el almacenamiento en caché de vistas está habilitado de forma predeterminada en el entorno de producción.</p>
 </blockquote>
 <pre>
 // send the rendered view to the client
@@ -1472,28 +1469,28 @@ res.render('user', {name:'Tobi'}, function(err, html) {
 });
 </pre>
 <h4 id="toc_67">res.send([body])</h4>
-<p>发送HTTP响应。</p><p>
-<strong>body</strong>参数可以是一个<strong>Buffer</strong>对象，一个字符串，一个对象，或者一个数组。比如：</p>
+<p>enviar la respuesta HTTP.</p><p>
+<strong>body</strong>el parámetro puede ser un<strong>Buffer</strong>objeto, una cadena, un objeto o un arreglo. Por ejemplo:</p>
 <pre>
 res.send(new Buffer('whoop'));
 res.send({some:'json'});
 res.send('&lt;p&gt;some html&lt;/p&gt;');
 res.status(404).send('Sorry, we cannot find that!');
 res.status(500).send({ error: 'something blew up' });
-</pre><p>对于一般的非流请求，这个方法可以执行许多有用的的任务：比如，它自动给Content-LengthHTTP响应头赋值(除非先前定义)，也支持自动的HEAD和HTTP缓存更新。</p><p>当参数是一个Buffer对象，这个方法设置Content-Type响应头为application/octet-stream，除非事先提供，如下所示:</p>
+</pre><p>Para solicitudes no transmitidas en flujo, este método puede realizar muchas tareas útiles: por ejemplo, asigna automáticamente el valor del encabezado de respuesta HTTP Content-Length (a menos que se haya definido previamente), y también admite actualizaciones automáticas de HEAD y caché HTTP.</p><p>Cuando el parámetro es un objeto Buffer, este método establece el encabezado de respuesta Content-Type a application/octet-stream, a menos que se haya proporcionado previamente, como se muestra a continuación:</p>
 <pre>
 res.set('Content-Type', 'text/html');
 res.send(new Buffer('&lt;p&gt;some html&lt;/p&gt;'));
-</pre><p>当参数是一个字符串，这个方法设置Content-Type响应头为text/html：</p>
+</pre><p>Cuando el parámetro es una cadena, este método establece el encabezado de respuesta Content-Type a text/html:</p>
 <pre>res.send('&lt;p&gt;some html&lt;/p&gt;');</pre>
-<p>当参数是一个对象或者数组，Express使用JSON格式来表示：</p>
+<p>Cuando el parámetro es un objeto o un arreglo, Express utiliza el formato JSON para representarlo:</p>
 <pre>res.send({user:'tobi'});
 res.send([1, 2, 3]);</pre>
 <h4 id="toc_68">res.sendFile(path [, options] [, fn])</h4>
 <blockquote>
 <p><strong>res.sendFile()</strong>从<strong>Express v4.8.0</strong>开始支持。</p>
 </blockquote>
-<p>传输<strong>path</strong>指定的文件。根据文件的扩展名设置<strong>Content-Type</strong>HTTP头部。除非在<strong>options</strong>中有关于<strong>root</strong>的设置，<strong>path</strong>一定是关于文件的绝对路径。<strong>options</strong>参数的细节:</p>
+<p>传输<strong>path</strong>el archivo especificado. Según la extensión del archivo, establece<strong>Content-Type</strong>encabezados HTTP. A menos que en<strong>options</strong>中有关于<strong>root</strong>的设置，<strong>path</strong>debe ser una ruta absoluta relacionada con el archivo.<strong>options</strong>detalles del parámetro:</p>
 <table class="reference">
 <thead>
 <tr>
@@ -1506,37 +1503,37 @@ res.send([1, 2, 3]);</pre>
 <tbody>
 <tr>
 <td style="text-align: center">maxAge</td>
-<td style="text-align: center">设置<strong>Cache-Control</strong>的<strong>max-age</strong>属性，格式为毫秒数，或者是<a href="https://www.npmjs.org/package/ms" target="_blank">ms format</a>的一串字符串</td>
+<td style="text-align: center">设置<strong>Cache-Control</strong>的<strong>max-age</strong>propiedad, en formato de milisegundos, o<a href="https://www.npmjs.org/package/ms" target="_blank">ms format</a>una cadena de caracteres</td>
 <td style="text-align: center">0</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td style="text-align: center">root</td>
-<td style="text-align: center">相对文件名的根目录</td>
+<td style="text-align: center">el directorio raíz relativo al nombre de archivo</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td style="text-align: center">lastModified</td>
-<td style="text-align: center">设置<strong>Last-Modified</strong>头部为此文件在系统中的最后一次修改时间。设置<strong>false</strong>来禁用它</td>
+<td style="text-align: center">设置<strong>Last-Modified</strong>el encabezado como la última hora de modificación de este archivo en el sistema. Establece<strong>false</strong>来禁用它</td>
 <td style="text-align: center">Enable</td>
 <td style="text-align: center">4.9.0+</td>
 </tr>
 <tr>
 <td style="text-align: center">headers</td>
-<td style="text-align: center">一个对象，包含了文件相关的HTTP头部。</td>
+<td style="text-align: center">un objeto que contiene los encabezados HTTP relacionados con el archivo.</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td style="text-align: center">dotfiles</td>
-<td style="text-align: center">是否支持点开头文件名的选项。可选的值"allow","deny","ignore"</td>
+<td style="text-align: center">la opción de si se admiten nombres de archivo que comienzan con punto. Los valores posibles son "allow", "deny", "ignore"</td>
 <td style="text-align: center">"ignore"</td>
 <td style="text-align: center"> </td>
 </tr>
 </tbody>
 </table>
-<p>当传输完成或者发生了什么错误，这个方法调用<strong>fn</strong>回调方法。如果这个回调参数指定了和一个错误发生，回调方法必须明确地通过结束请求-响应循环或者传递控制到下个路由来处理响应过程。</p><p>下面是使用了所有参数的使用<strong>res.sendFile()</strong>的例子：</p>
+<p>Cuando la transferencia se completa u ocurre algún error, este método llama<strong>fn</strong>al método de callback. Si se especifica este parámetro de callback y ocurre un error, el método de callback debe manejar explícitamente el proceso de respuesta finalizando el ciclo de solicitud-respuesta o pasando el control a la siguiente ruta.</p><p>A continuación se muestra el uso con todos los parámetros.<strong>res.sendFile()</strong>的例子：</p>
 <pre>
 app.get('/file/:name', function(req, res, next) {
     var options = {
@@ -1559,7 +1556,7 @@ app.get('/file/:name', function(req, res, next) {
     });
 });
 </pre>
-<p>res.sendFile提供了文件服务的细粒度支持，如下例子说明：</p>
+<p>res.sendFile proporciona soporte de grano fino para el servicio de archivos, como se ilustra en el siguiente ejemplo:</p>
 <pre>
 app.get('/user/:uid/photos/:file', function(req, res) {
     var uid = req.params.uid
@@ -1574,20 +1571,20 @@ app.get('/user/:uid/photos/:file', function(req, res) {
     });
 })
 </pre>
-<p>获取更多信息，或者你有问题或者关注，可以查阅<a href="https://github.com/pillarjs/send" target="_blank">send</a>。</p>
+<p>Para obtener más información, o si tienes preguntas o inquietudes, puedes consultar<a href="https://github.com/pillarjs/send" target="_blank">send</a>。</p>
 <h4 id="toc_69">res.sendStatus(statusCode)</h4>
-<p>设置响应对象的<strong>HTTP status code</strong>为<strong>statusCode</strong>并且发送<strong>statusCode</strong>的相应的字符串形式作为响应的Body。</p>
+<p>establecer el objeto de respuesta<strong>HTTP status code</strong>为<strong>statusCode</strong>并且发送<strong>statusCode</strong>la forma de cadena correspondiente del código como el Body de la respuesta.</p>
 <pre>
 res.sendStatus(200); // equivalent to res.status(200).send('OK');
 res.sendStatus(403); // equivalent to res.status(403).send('Forbidden');
 res.sendStatus(404); // equivalent to res.status(404).send('Not Found');
 res.sendStatus(500); // equivalent to res.status(500).send('Internal Server Error')
-</pre><p>如果一个不支持的状态被指定，这个HTTP status依然被设置为<strong>statusCode</strong>并且用这个code的字符串作为Body。</p>
+</pre><p>Si se especifica un estado no admitido, el estado HTTP se establece de todos modos como<strong>statusCode</strong>y se utiliza la cadena de este code como Body.</p>
 <pre>res.sendStatus(2000); // equivalent to res.status(2000).send('2000');</pre><p>
 <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">More about HTTP Status Codes</a></p>
 </p>
 <h4 id="toc_70">res.set(field [, value])</h4>
-<p>设置响应对象的HTTP头部<strong>field</strong>为<strong>value</strong>。为了一次设置多个值，那么可以传递一个对象为参数。</p>
+<p>Establece los encabezados HTTP del objeto de respuesta.<strong>field</strong>为<strong>value</strong>. Para establecer varios valores a la vez, se puede pasar un objeto como parámetro.</p>
 <pre>
 res.set('Content-Type', 'text/plain');
 res.set({
@@ -1597,14 +1594,14 @@ res.set({
 })
 </pre><p>其和res.header(field [,value])效果一致。</p>
 <h4 id="toc_71">res.status(code)</h4>
-<p>使用这个方法设置响应对象的HTTP status。其是Node中<a href="http://nodejs.org/api/http.html#http_response_statuscode" target="_blank">response.statusCode</a>的一个连贯性的别名。</p>
+<p>Use este método para establecer el estado HTTP del objeto de respuesta. Es el<a href="http://nodejs.org/api/http.html#http_response_statuscode" target="_blank">response.statusCode</a>un alias coherente de.</p>
 <pre>
 res.status(403).end();
 res.status(400).send('Bad Request');
 res.status(404).sendFile('/absolute/path/to/404.png');
 </pre>
 <h4 id="toc_72">res.type(type)</h4>
-<p>程序将设置<strong>Content-Type</strong>HTTP头部的MIME type，如果这个设置的<strong>type</strong>能够被<a href="https://github.com/broofa/node-mime" target="_blank">mime.lookup</a>解析成正确的<strong>Content-Type</strong>。如果<strong>type</strong>中包含了<strong>/</strong>字符，那么程序会直接设置<strong>Content-Type</strong>为<strong>type</strong>。</p>
+<p>程序将设置<strong>Content-Type</strong>MIME type del encabezado HTTP, si esta configuración<strong>type</strong>能够被<a href="https://github.com/broofa/node-mime" target="_blank">mime.lookup</a>analizar en el correcto<strong>Content-Type</strong>。如果<strong>type</strong>中包含了<strong>/</strong>carácter, entonces el programa establecerá directamente<strong>Content-Type</strong>为<strong>type</strong>。</p>
 <pre>
 res.type('.html');              // =&gt; 'text/html'
 res.type('html');               // =&gt; 'text/html'
@@ -1613,19 +1610,19 @@ res.type('application/json');   // =&gt; 'application/json'
 res.type('png');                // =&gt; image/png:
 </pre>
 <h4 id="toc_73">res.vary(field)</h4>
-<p>在没有Vary应答头部时增加Vary应答头部。</p>
+<p>Agrega el encabezado Vary cuando no hay un encabezado Vary.</p>
 <blockquote>
-<p>ps：vary的意义在于告诉代理服务器/缓存/CDN，如何判断请求是否一样，vary中的组合就是服务器/缓存/CDN判断的依据，比如Vary中有User-Agent，那么即使相同的请求，如果用户使用IE打开了一个页面，再用Firefox打开这个页面的时候，CDN/代理会认为是不同的页面，如果Vary中没有User-Agent，那么CDN/代理会认为是相同的页面，直接给用户返回缓存的页面，而不会再去web服务器请求相应的页面。通俗的说就相当于<strong>field</strong>作为了一个缓存的key来判断是否命中缓存</p>
+<p>Nota: el propósito de vary es decirle al servidor proxy/caché/CDN cómo determinar si las solicitudes son iguales. La combinación en vary es la base para que el servidor/caché/CDN juzgue. Por ejemplo, si Vary contiene User-Agent, entonces, incluso si la solicitud es la misma, cuando un usuario abre una página con IE y luego la abre con Firefox, el CDN/proxy considerará que son páginas diferentes. Si Vary no contiene User-Agent, el CDN/proxy considerará que son la misma página y devolverá directamente la página en caché al usuario, sin volver a solicitar la página correspondiente al servidor web. En términos sencillos, es equivalente a<strong>field</strong>usarlo como una clave de caché para determinar si se acierta en el caché.</p>
 </blockquote>
 <pre>res.vary('User-Agent').render('docs');</pre>
 <h2 id="toc_74">Router</h2>
 <blockquote>
-<p>一个<strong>router</strong>对象是一个单独的实例关于中间件和路由。你可以认为其是一个"mini-application"（迷你程序），其具有操作中间件和路由方法的能力。每个<strong>Express</strong>程序有一个内建的app路由。<strong>app.use()</strong>方法的一个参数或者作为另一个路由的<strong>use()</strong>的参数。<strong>express</strong>对象有一个<strong>Router()</strong>方法，你可以使用<strong>Router()</strong>来创建一个新的<strong>router</strong>对象。</p></blockquote>
+<p>一个<strong>router</strong>objeto es una instancia separada de middleware y enrutamiento. Puedes considerarlo como una "mini-application" (mini programa), que tiene la capacidad de manejar middleware y métodos de enrutamiento. Cada<strong>Express</strong>programa tiene una ruta de app integrada.<strong>app.use()</strong>un parámetro del método o como el de otra ruta.<strong>use()</strong>的参数。<strong>express</strong>对象有一个<strong>Router()</strong>método, puedes usar<strong>Router()</strong>para crear un nuevo<strong>router</strong>对象。</p></blockquote>
 <pre>res.vary('User-Agent').render('docs');</pre>
 <h4 id="toc_75">Router([options])</h4>
-<p>如下，可以创建一个路由：</p>
+<p>de la siguiente manera, puedes crear una ruta:</p>
 <pre>var router = express.Router([options]);</pre><p>
-<strong>options</strong>参数可以指定路由的行为，其有下列选择：</p>
+<strong>options</strong>El parámetro puede especificar el comportamiento de la ruta, y tiene las siguientes opciones:</p>
 <table class="reference">
 <thead>
 <tr>
@@ -1638,25 +1635,25 @@ res.type('png');                // =&gt; image/png:
 <tbody>
 <tr>
 <td style="text-align: center">caseSensitive</td>
-<td style="text-align: center">是否区分大小写</td>
-<td style="text-align: center">默认不启用。对待<strong>/Foo</strong>和<strong>/foo</strong>一样。</td>
+<td style="text-align: center">si distingue entre mayúsculas y minúsculas</td>
+<td style="text-align: center">No está habilitado de forma predeterminada. Trata<strong>/Foo</strong>和<strong>/foo</strong>一样。</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td style="text-align: center">mergeParams</td>
-<td style="text-align: center">保存父路由的<strong>res.params</strong>。如果父路由参数和子路由参数冲突，子路由参数优先。</td>
+<td style="text-align: center">guardar la de la ruta principal<strong>res.params</strong>. Si el parámetro de la ruta padre entra en conflicto con el parámetro de la ruta hija, el parámetro de la ruta hija tiene prioridad.</td>
 <td style="text-align: center">false</td>
 <td style="text-align: center">4.5.0+</td>
 </tr>
 <tr>
 <td style="text-align: center">strict</td>
-<td style="text-align: center">使能严格路由。</td>
-<td style="text-align: center">默认不启用，<strong>/foo</strong>和<strong>/foo/</strong>被路由一样对待处理</td>
+<td style="text-align: center">Habilitar el enrutamiento estricto.</td>
+<td style="text-align: center">No está habilitado por defecto,<strong>/foo</strong>和<strong>/foo/</strong>de la misma manera que se maneja una ruta.</td>
 <td style="text-align: center"> </td>
 </tr>
 </tbody>
 </table>
-<p>你可以将<strong>router</strong>当作一个程序，可以在其上添加中间件和HTTP路由方法(例如<strong>get</strong>，<strong>put</strong>，<strong>post</strong>等等)。</p>
+<p>你可以将<strong>router</strong>trátalo como un programa, sobre el cual se pueden agregar middleware y métodos de enrutamiento HTTP (por ejemplo<strong>get</strong>，<strong>put</strong>，<strong>post</strong>等等)。</p>
 <pre>
 // invoked for any requests passed to this router
 router.use(function(req, res, next) {
@@ -1669,28 +1666,28 @@ router.get('/events', function(req, res, next) {
   // ..
 });
 </pre>
-<p>你可以在一个特别的根URL上挂载一个路由，这样你就以将你的各个路由放到不同的文件中或者甚至是mini的程序。</p>
+<p>Puedes montar una ruta en una URL raíz especial, de modo que puedas colocar tus distintas rutas en diferentes archivos o incluso en mini programas.</p>
 <pre>
 // only requests to /calendar/* will be sent to our "router"
 app.use('/calendar', router);
 </pre>
 <h3 id="toc_76">Methods</h3>
 <h4 id="toc_77">router.all(path, [callback, ...] callback)</h4>
-<p>这个方法和<strong>router.METHOD()</strong>方法一样，除了这个方法会匹配所有的HTTP动作。</p><p>这个方法对想映射全局的逻辑处理到特殊的路径前缀或者任意匹配是十分有用的。比如，如果你放置下面所示的这个路由在其他路由的前面，那么其将要求从这个点开始的所有的路由进行验证操作和自动加载用户信息。记住，这些全局的逻辑操作，不需要结束请求响应周期：<strong>loaduser</strong>可以执行一个任务，然后调用<strong>next()</strong>来将执行流程移交到随后的路由。</p>
-<pre>router.all('*', requireAuthentication, loadUser);</pre><p>相等的形式:</p>
+<p>这个方法和<strong>router.METHOD()</strong>igual que el método, excepto que este método coincide con todos los verbos HTTP.</p><p>Este método es muy útil para mapear el procesamiento lógico global a prefijos de ruta especiales o coincidencias arbitrarias. Por ejemplo, si colocas la ruta que se muestra a continuación delante de otras rutas, se requerirá que todas las rutas desde ese punto realicen operaciones de validación y carguen automáticamente la información del usuario. Recuerda que estas operaciones lógicas globales no necesitan finalizar el ciclo de solicitud-respuesta:<strong>loaduser</strong>puede ejecutar una tarea y luego llamar a<strong>next()</strong>para transferir el flujo de ejecución a la ruta siguiente.</p>
+<pre>router.all('*', requireAuthentication, loadUser);</pre><p>la forma equivalente:</p>
 <pre>
 router.all('*', requireAuthentication)
 router.all('*', loadUser);
-</pre><p>这是一个白名单全局功能的例子。这个例子很像前面的，不过其仅仅作用于以<strong>/api</strong>开头的路径:</p>
+</pre><p>Este es un ejemplo de funcionalidad global de lista blanca. Este ejemplo es muy similar al anterior, excepto que solo actúa sobre rutas que comienzan con<strong>/api</strong>la ruta que comienza con:</p>
 <pre>router.all('/api/*', requireAuthentication);</pre>
 <h4 id="toc_78">router.METHOD(path, [callback, ...] callback)</h4>
-<p><strong>router.METHOD()</strong>方法提供了路由方法在<strong>Express</strong>中，这里的<strong>METHOD</strong>是HTTP方法中的一个，比如<strong>GET</strong>，<strong>PUT</strong>，<strong>POST</strong>等等，但<strong>router</strong>中的METHOD是小写的。所以，实际的方法是<strong>router.get()</strong>，<strong>router.put()</strong>，<strong>router.post()</strong>等等。</p><p>你可以提供多个回调函数，它们的行为和中间件一样，除了这些回调可以通过调用<strong>next('router')</strong>来绕过剩余的路由回调。你可以使用这个机制来为一个路由设置一些前提条件，如果请求没有满足当前路由的处理条件，那么传递控制到随后的路由。</p><p>下面的片段可能说明了最简单的路由定义。Experss转换path字符串为正则表达式，用于内部匹配传入的请求。在匹配的时候，是不考虑<strong>Query strings</strong>，例如，"GET /"将匹配下面的路由，"GET /?name=tobi"也是一样的。</p>
+<p><strong>router.METHOD()</strong>El método proporciona métodos de enrutamiento en<strong>Express</strong>中，这里的<strong>METHOD</strong>es uno de los métodos HTTP, por ejemplo<strong>GET</strong>，<strong>PUT</strong>，<strong>POST</strong>等等，但<strong>router</strong>el METHOD dentro está en minúsculas. Por lo tanto, el método real es<strong>router.get()</strong>，<strong>router.put()</strong>，<strong>router.post()</strong>等等。</p><p>Puedes proporcionar múltiples funciones de callback, que se comportan igual que el middleware, excepto que estos callbacks pueden omitir los callbacks de ruta restantes al llamar a<strong>next('router')</strong>para omitir los callbacks de ruta restantes. Puedes usar este mecanismo para establecer algunas condiciones previas para una ruta. Si la solicitud no cumple las condiciones de manejo de la ruta actual, entonces se pasa el control a la ruta siguiente.</p><p>El siguiente fragmento probablemente ilustra la definición de ruta más simple. Express convierte la cadena path en una expresión regular para coincidir internamente con las solicitudes entrantes. Al coincidir, no se tienen en cuenta<strong>Query strings</strong>Por ejemplo, "GET /" coincidirá con la siguiente ruta, y "GET /?name=tobi" también.</p>
 <pre>
 router.get('/', function(req, res) {
     res.send('Hello World');
 });
 </pre>
-<p>如果你对匹配的path有特殊的限制，你可以使用正则表达式，例如，下面的可以匹配"GET /commits/71dbb9c"和"GET /commits/71bb92..4c084f9"。</p>
+<p>Si tienes restricciones especiales sobre el path a coincidir, puedes usar expresiones regulares. Por ejemplo, lo siguiente puede coincidir con "GET /commits/71dbb9c" y "GET /commits/71bb92..4c084f9".</p>
 <pre>
 router.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/, function(req, res) {
     var from = req.params[0];
@@ -1699,11 +1696,11 @@ router.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/, function(req, res) {
 });
 </pre>
 <h4 id="toc_79">router.param(name, callback)</h4>
-<p>给路由参数添加回调触发器，这里的<strong>name</strong>是参数名，<strong>function</strong>是回调方法。回调方法的参数按序是请求对象，响应对象，下个中间件，参数值和参数名。虽然<strong>name</strong>在技术上是可选的，但是自Express V4.11.0之后版本不推荐使用(见下面)。</p>
+<p>Agregar un desencadenador de callback al parámetro de ruta, donde<strong>name</strong>是参数名，<strong>function</strong>es el método de callback. Los parámetros del método de callback son, en orden, el objeto de solicitud, el objeto de respuesta, el siguiente middleware, el valor del parámetro y el nombre del parámetro. Aunque<strong>name</strong>técnicamente es opcional, pero está en desuso desde Express V4.11.0 (ver abajo).</p>
 <blockquote>
-<p>不像<strong>app.param()</strong>，<strong>router.param()</strong>不接受一个数组作为路由参数。</p>
+<p>不像<strong>app.param()</strong>，<strong>router.param()</strong>No acepta un array como parámetro de ruta.</p>
 </blockquote>
-<p>例如，当<strong>:user</strong>出现在路由路径中，你可以映射用户加载的逻辑处理来自动提供<strong>req.user</strong>给这个路由，或者对输入的参数进行验证。</p>
+<p>例如，当<strong>:user</strong>aparece en el path de la ruta, puedes mapear el procesamiento lógico de la carga del usuario para proporcionar automáticamente<strong>req.user</strong>para esta ruta, o para validar los parámetros de entrada.</p>
 <pre>
 router.param('user', function(req, res, next, id) {
     User.find(id, function(error, user) {
@@ -1717,7 +1714,7 @@ router.param('user', function(req, res, next, id) {
         }
     });
 });
-</pre><p>对于<strong>Param</strong>的回调定义的路由来说，他们是局部的。它们不会被挂载的app或者路由继承。所以，定义在<strong>router</strong>上的<strong>param</strong>回调只有是在<strong>router</strong>solo tiene efecto cuando las rutas correspondientes tienen este parámetro de ruta.</p><p>En las rutas donde se define<strong>param</strong>el parámetro de ruta,<strong>param</strong>los callbacks son los primeros en ser invocados; se invocan una vez y solo una vez dentro de un ciclo de solicitud-respuesta, incluso si varias rutas coinciden, como se muestra en el siguiente ejemplo:</p><pre>
+</pre><p>对于<strong>Param</strong>En cuanto a las rutas definidas con callbacks, son locales. No serán heredadas por la app o el router montados. Por lo tanto, definidas en<strong>router</strong>上的<strong>param</strong>la devolución de llamada solo es cuando<strong>router</strong>solo tiene efecto cuando las rutas correspondientes tienen este parámetro de ruta.</p><p>En las rutas donde se define<strong>param</strong>el parámetro de ruta,<strong>param</strong>los callbacks son los primeros en ser invocados; se invocan una vez y solo una vez dentro de un ciclo de solicitud-respuesta, incluso si varias rutas coinciden, como se muestra en el siguiente ejemplo:</p><pre>
 router.param('id', function(req, res, next, id) {
     console.log('CALLED ONLY ONCE');
     next();
@@ -1916,181 +1913,6 @@ var aid = 18584;
 
 </div>
 -->
-<div class="sidebar-box cate-list" style="display:none;">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">热门文章</a>
-</div>
-<div class="membership">
-<ul class="membership">
-<li><a href="https://mp.weixin.qq.com/s/ZaP6YNgKTCHYy3r2WPBBaw" target="_blank" title="2024 年 04 月 JavaScript 框架排行榜">2024 年 04 月 JavaScript 框架排行榜</a></li>
-<li><a href="https://mp.weixin.qq.com/s/JBR2twC0t6krjjuxqvhsEQ" target="_blank" title="免费、开源、好用的 SQL 客户端合集">免费、开源、好用的 SQL 客户端合集</a></li>
-<li><a href="https://mp.weixin.qq.com/s/TwV3YQjA1glyaW7TiHvhlA" target="_blank" title="优雅的代码规范，提升代码质量">优雅的代码规范，提升代码质量</a></li>
-<li><a href="https://mp.weixin.qq.com/s/CnUJ-2OHPbBKlnVpjDzavA" target="_blank" title="命令行中的趣味世界，牛也能说话，有趣又好玩">命令行中的趣味世界，牛也能说话，有趣又好玩</a></li>
-<li><a href="https://mp.weixin.qq.com/s/7NKl-mD7N8CeSNQlbKDEWA" target="_blank" title="2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？">2024 年 05 月编程语言排行榜，Fortran 进入前 10 名，发生了什么？</a></li>
-<li><a href="https://mp.weixin.qq.com/s/yWlSVDKobtDhThnhirVRpw" target="_blank" title="免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端">免费开源的 IDE、数据库管理工具、SSH客户端和FTP客户端</a></li>
-</ul>
-</div>
-</div>
-<div class="sidebar-box cate-list">
-<div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">教程列表</a>
-</div>
-<div class="cate-items">
-<a href="../ado.html">ADO 教程</a>
-<a href="../ai-agent.html">AI Agent 教程</a>
-<a href="../ai.html">AI 入门教程</a>
-<a href="../ai-math.html">AI 数学基础</a>
-<a href="../ajax.html">Ajax 教程</a>
-<a href="../android.html">Android 教程</a>
-<a href="../angularjs2.html">Angular2 教程</a>
-<a href="../angularjs.html">AngularJS 教程</a>
-<a href="../appml.html">AppML 教程</a>
-<a href="../asp.html">ASP 教程</a>
-<a href="../aspnet.html">ASP.NET 教程</a>
-<a href="../bootstrap.html">Bootstrap 教程</a>
-<a href="../bootstrap4.html">Bootstrap4 教程</a>
-<a href="../bootstrap5.html">Bootstrap5 教程</a>
-<a href="../cprogramming.html">C 教程</a>
-<a href="../c-dsa.html">C 语言数据结构与算法</a>
-<a href="../csharp.html">C# 教程</a>
-<a href="../cplusplus.html">C++ 教程</a>
-<a href="../chartjs.html">Chart.js 教程</a>
-<a href="../claude-code.html">Claude Code 教程</a>
-<a href="../cmake.html">CMake 教程</a>
-<a href="../codex.html">Codex 教程</a>
-<a href="../cssref.html">CSS 参考手册</a>
-<a href="../css.html">CSS 教程</a>
-<a href="../css3.html">CSS3 教程</a>
-<a href="../cursor.html">Cursor 教程</a>
-<a href="../dart.html">Dart 教程</a>
-<a href="../dash.html">Dash 教程</a>
-<a href="../deepseek-harness.html">DeepSeek Harness</a>
-<a href="../django.html">Django 教程</a>
-<a href="../docker.html">Docker 教程</a>
-<a href="../dtd.html">DTD 教程</a>
-<a href="../echarts.html">ECharts 教程</a>
-<a href="../eclipse.html">Eclipse 教程</a>
-<a href="../electron.html">Electron 教程</a>
-<a href="../fastapi.html">FastAPI 教程</a>
-<a href="../firebug.html">Firebug 教程</a>
-<a href="../flask.html">Flask 教程</a>
-<a href="../flutter.html">Flutter 教程</a>
-<a href="../font-awesome.html">Font Awesome 图标</a>
-<a href="../foundation.html">Foundation 教程</a>
-<a href="../git.html">Git 教程</a>
-<a href="../go.html">Go 语言教程</a>
-<a href="../googleapi.html">Google 地图 API 教程</a>
-<a href="../hermes-agent.html">Hermes Agent</a>
-<a href="../highcharts.html">Highcharts 教程</a>
-<a href="../htmldom.html">HTML DOM 教程</a>
-<a href="../tags.html">HTML 参考手册</a>
-<a href="../charsets.html">HTML 字符集</a>
-<a href="../html.html">HTML 教程</a>
-<a href="../http.html">HTTP 教程</a>
-<a href="../ionic.html">ionic 教程</a>
-<a href="../ios.html">iOS 教程</a>
-<a href="../java.html">Java 教程</a>
-<a href="../jsref.html">JavaScript 参考手册</a>
-<a href="../js.html">Javascript 教程</a>
-<a href="../jeasyui.html">jQuery EasyUI 教程</a>
-<a href="../jquerymobile.html">jQuery Mobile 教程</a>
-<a href="../jqueryui.html">jQuery UI 教程</a>
-<a href="../jquery.html">jQuery 教程</a>
-<a href="../json.html">JSON 教程</a>
-<a href="../jsp.html">JSP 教程</a>
-<a href="../julia.html">Julia 教程</a>
-<a href="../jupyter-notebook.html">Jupyter Notebook 教程</a>
-<a href="../kotlin.html">Kotlin 教程</a>
-<a href="../langchain.html">LangChain 教程</a>
-<a href="../latex.html">LaTeX 教程</a>
-<a href="../linux.html">Linux 教程</a>
-<a href="../lua.html">Lua 教程</a>
-<a href="../markdown.html">Markdown 教程</a>
-<a href="../matplotlib.html">Matplotlib 教程</a>
-<a href="../maven.html">Maven 教程</a>
-<a href="../memcached.html">Memcached 教程</a>
-<a href="../mongodb.html">MongoDB 教程</a>
-<a href="../mysql.html">MySQL 教程</a>
-<a href="../nextjs.html">Next.js 教程</a>
-<a href="../nlp.html">NLP 教程</a>
-<a href="../nodejs.html">Node.js 教程</a>
-<a href="../numpy.html">NumPy 教程</a>
-<a href="../obsidian.html">Obsidian 教程</a>
-<a href="../ollama.html">Ollama 教程</a>
-<a href="../opencode.html">OpenCode 教程</a>
-<a href="../opencv.html">OpenCV 教程</a>
-<a href="../pandas.html">Pandas 教程</a>
-<a href="../perl.html">Perl 教程</a>
-<a href="../php.html">PHP 教程</a>
-<a href="../pi-agent.html">Pi Agent</a>
-<a href="../pillow.html">Pillow 教程</a>
-<a href="../playwright.html">Playwright 教程</a>
-<a href="../postgresql.html">PostgreSQL 教程</a>
-<a href="../powershell.html">PowerShell</a>
-<a href="../pycharm.html">Pycharm 教程</a>
-<a href="../python3.html">Python 3 教程</a>
-<a href="../python.html">Python 基础教程</a>
-<a href="../python-design-pattern.html">Python 设计模式</a>
-<a href="../python-qt.html">Python 量化交易</a>
-<a href="../pytorch.html">PyTorch 教程</a>
-<a href="../r.html">R 教程</a>
-<a href="../rdf.html">RDF 教程</a>
-<a href="../react.html">React 教程</a>
-<a href="../redis.html">Redis 教程</a>
-<a href="../restfulapi.html">RESTful API</a>
-<a href="../rss.html">RSS 教程</a>
-<a href="../ruby.html">Ruby 教程</a>
-<a href="../rust.html">Rust 教程</a>
-<a href="../sass.html">Sass 教程</a>
-<a href="../scala.html">Scala 教程</a>
-<a href="../scipy.html">SciPy 教程</a>
-<a href="../selenium.html">Selenium 教程</a>
-<a href="../servlet.html">Servlet 教程</a>
-<a href="../skills.html">Skills 教程</a>
-<a href="../sklearn.html">Sklearn 教程</a>
-<a href="../soap.html">SOAP 教程</a>
-<a href="../sql.html">SQL 教程</a>
-<a href="../sqlite.html">SQLite 教程</a>
-<a href="../svg.html">SVG 教程</a>
-<a href="../svn.html">SVN 教程</a>
-<a href="../swagger.html">Swagger 教程</a>
-<a href="../swift.html">Swift 教程</a>
-<a href="../tailwindcss.html">Tailwind CSS 教程</a>
-<a href="../tcpip.html">TCP/IP 教程</a>
-<a href="../tensorflow.html">TensorFlow 教程</a>
-<a href="../typescript.html">TypeScript 教程</a>
-<a href="../uniapp.html">uni-app 教程</a>
-<a href="../vbscript.html">VBScript 教程</a>
-<a href="../vibe-coding.html">Vibe Coding 教程</a>
-<a href="../vscode.html">VSCode 教程</a>
-<a href="../vue2.html">Vue.js 教程</a>
-<a href="../vue3.html">Vue3 教程</a>
-<a href="../w3c.html">W3C 教程</a>
-<a href="../webservices.html">Web Service 教程</a>
-<a href="../wsdl.html">WSDL 教程</a>
-<a href="../xlink.html">XLink 教程</a>
-<a href="../dom.html">XML DOM 教程</a>
-<a href="../schema.html">XML Schema 教程</a>
-<a href="../xml.html">XML 教程</a>
-<a href="../xpath.html">XPath 教程</a>
-<a href="../xquery.html">XQuery 教程</a>
-<a href="../xslfo.html">XSLFO 教程</a>
-<a href="../xsl.html">XSLT 教程</a>
-<a href="../zig.html">Zig 教程</a>
-<a href="../data-structures.html">数据结构</a>
-<a href="../ml.html">机器学习</a>
-<a href="../regexp.html">正则表达式</a>
-<a href="../assembly.html">汇编语言</a>
-<a href="../quiz.html">测验</a>
-<a href="../browsers.html">浏览器</a>
-<a href="../quality.html">网站品质</a>
-<a href="../web.html">网站建设指南</a>
-<a href="../hosting.html">网站服务器教程</a>
-<a href="../np.html">网络协议</a>
-<a href="../computer-organization.html">计算机组成原理</a>
-<a href="../design-pattern.html">设计模式</a>
-</div>
-</div>
 </div>
 </div>
 </div>

@@ -441,8 +441,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Las siguientes son funciones importantes de C/C++ relacionadas con la fecha y la hora. Todas estas funciones son parte de la biblioteca estándar de C/C++. Puede consultar los detalles de cada función en la biblioteca estándar de C++.</p>
 <table class="reference notranslate">
 <tr><th width="5%">N.º</th><th>Función y descripción</th></tr>
-<tr><td>1</td><td><a href="c-function-time.html"><b>time_t time(time_t *time);</b></a><br/>Esta función devuelve la hora de calendario actual del sistema, como el número de segundos transcurridos desde el 1 de enero de 1970. Si el sistema no tiene hora, devuelve -1.</td> </tr>
-<tr><td>2</td><td><a href="c-function-ctime.html"><b>char *ctime(const time_t *time);</b></a><br/>Devuelve un puntero a una cadena cuyo contenido representa la hora local, con el formato:<pre>Www Mmm dd hh:mm:ss yyyy\n\0</pre>
+<tr><td>1</td><td><a href="../cprogramming/c-function-time.html"><b>time_t time(time_t *time);</b></a><br/>Esta función devuelve la hora de calendario actual del sistema, como el número de segundos transcurridos desde el 1 de enero de 1970. Si el sistema no tiene hora, devuelve -1.</td> </tr>
+<tr><td>2</td><td><a href="../cprogramming/c-function-ctime.html"><b>char *ctime(const time_t *time);</b></a><br/>Devuelve un puntero a una cadena cuyo contenido representa la hora local, con el formato:<pre>Www Mmm dd hh:mm:ss yyyy\n\0</pre>
 <p>donde:</p>
 <ul>
 <li><code>Www</code>Día de la semana (p. ej., Tue)</li>
@@ -455,13 +455,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Ejemplo de valor de retorno:</p>
 <pre>"Tue Jul 29 19:12:15 2025\n\0"</pre>
 </td> </tr>
-<tr><td>3</td><td><a href="c-function-localtime.html"><b>struct tm *localtime(const time_t *time);</b></a><br/>Esta función devuelve un puntero a la estructura<b>tm</b>que representa la hora local.</td> </tr>
-<tr><td>4</td><td><a href="c-function-clock.html"><b>clock_t clock(void);</b></a><br/>Esta función devuelve el tiempo de reloj del procesador utilizado desde el inicio de la ejecución del programa (generalmente el inicio del programa). Si el tiempo no está disponible, devuelve -1.</td> </tr>
-<tr><td>5</td><td><a href="c-function-asctime.html"><b>char * asctime ( const struct tm * time );</b></a><br/>Esta función devuelve un puntero a una cadena que contiene la información almacenada en la estructura a la que apunta time. El formato de retorno es: day month date hours:minutes:seconds year\n\0.</td> </tr>
-<tr><td>6</td><td><a href="c-function-gmtime.html"><b>struct tm *gmtime(const time_t *time);</b></a><br/>Esta función devuelve un puntero a time, siendo time una estructura tm, expresado en Tiempo Universal Coordinado (UTC), también conocido como Hora Media de Greenwich (GMT).</td></tr>
-<tr><td>7</td><td><a href="c-function-mktime.html"><b>time_t mktime(struct tm *time);</b></a><br/>Esta función devuelve la hora de calendario equivalente a la hora almacenada en la estructura a la que apunta time.</td> </tr>
-<tr><td>8</td><td><a href="c-function-difftime.html"><b>double difftime ( time_t time2, time_t time1 );</b></a><br/>Esta función devuelve el número de segundos de diferencia entre time1 y time2.</td> </tr>
-<tr><td>9</td><td><a href="c-function-strftime.html"><b>size_t strftime();</b></a><br/>Esta función se puede utilizar para formatear la fecha y la hora en el formato especificado.</td> </tr>
+<tr><td>3</td><td><a href="../cprogramming/c-function-localtime.html"><b>struct tm *localtime(const time_t *time);</b></a><br/>Esta función devuelve un puntero a la estructura<b>tm</b>que representa la hora local.</td> </tr>
+<tr><td>4</td><td><a href="../cprogramming/c-function-clock.html"><b>clock_t clock(void);</b></a><br/>Esta función devuelve el tiempo de reloj del procesador utilizado desde el inicio de la ejecución del programa (generalmente el inicio del programa). Si el tiempo no está disponible, devuelve -1.</td> </tr>
+<tr><td>5</td><td><a href="../cprogramming/c-function-asctime.html"><b>char * asctime ( const struct tm * time );</b></a><br/>Esta función devuelve un puntero a una cadena que contiene la información almacenada en la estructura a la que apunta time. El formato de retorno es: day month date hours:minutes:seconds year\n\0.</td> </tr>
+<tr><td>6</td><td><a href="../cprogramming/c-function-gmtime.html"><b>struct tm *gmtime(const time_t *time);</b></a><br/>Esta función devuelve un puntero a time, siendo time una estructura tm, expresado en Tiempo Universal Coordinado (UTC), también conocido como Hora Media de Greenwich (GMT).</td></tr>
+<tr><td>7</td><td><a href="../cprogramming/c-function-mktime.html"><b>time_t mktime(struct tm *time);</b></a><br/>Esta función devuelve la hora de calendario equivalente a la hora almacenada en la estructura a la que apunta time.</td> </tr>
+<tr><td>8</td><td><a href="../cprogramming/c-function-difftime.html"><b>double difftime ( time_t time2, time_t time1 );</b></a><br/>Esta función devuelve el número de segundos de diferencia entre time1 y time2.</td> </tr>
+<tr><td>9</td><td><a href="../cprogramming/c-function-strftime.html"><b>size_t strftime();</b></a><br/>Esta función se puede utilizar para formatear la fecha y la hora en el formato especificado.</td> </tr>
 </table>
 <h2 class="tutheader">Fecha y hora actuales</h2>
 <p>El siguiente ejemplo obtiene la fecha y la hora actuales del sistema, incluyendo la hora local y el Tiempo Universal Coordinado (UTC).</p>

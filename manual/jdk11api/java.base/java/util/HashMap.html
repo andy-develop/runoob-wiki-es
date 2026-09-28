@@ -70,11 +70,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <div class="header">
 <div class="subTitle">
-<span class="moduleLabelInType">模块</span>  
+<span class="moduleLabelInType">módulo</span>  
      <a href="../../module-summary.html">java.base</a>
 </div>
 <div class="subTitle">
-<span class="packageLabelInType">软件包</span>  
+<span class="packageLabelInType">paquete</span>  
      <a href="package-summary.html">java.util</a>
 </div>
 <h2 class="title" title="Class HashMap">Class HashMap&lt;K,​V&gt;</h2>
@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 <li class="blockList">
 <dl>
 <dt>
-<span class="paramLabel">参数类型</span>
+<span class="paramLabel">tipo de parámetro</span>
 </dt>
 <dd>
 <code>K</code>- Tipo de claves mantenidas por este mapa</dd>
@@ -122,29 +122,29 @@ loadScripts(document, 'script');</script>
 extends <a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;K,​V&gt;
 implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&gt;, <a href="../lang/Cloneable.html" title="interface in java.lang">Cloneable</a>, <a href="../io/Serializable.html" title="interface in java.io">Serializable</a></pre>
 <div class="block">
-<span>基于哈希表的<code>Map</code>接口的实现。</span>
-<span>此实现提供了所有可选的映射操作，并允许<code>null</code>值和<code>null</code>键。</span>
-<span>（ <code>HashMap</code>类大致相当于<code>Hashtable</code> ，除了它是不同步的并且允许空值。）此类不保证地图的顺序;</span>
-<span>特别是，它不保证订单会随着时间的推移保持不变。</span>
-<p> <span>该实现为基本操作（ <code>get</code>和<code>put</code> ）提供了恒定时间性能，假设散列函数在桶之间正确地分散元素。</span> <span>对集合视图的迭代需要与<code>HashMap</code>实例的“容量”（桶数）加上其大小（键值映射的数量）成比例的时间。</span> <span>因此，如果迭代性能很重要，则不要将初始容量设置得太高（或负载因子太低）非常重要。</span> </p>
-<p> <span><code>HashMap</code>的实例有两个影响其性能的参数： <i>初始容量</i>和<i>负载因子</i> 。</span> <span><i>容量</i>是哈希表中的桶数，初始容量只是创建哈希表时的容量。</span> <span><i>加载因子</i>是在自动增加容量之前允许哈希表获取的完整程度的度量。</span> <span>当哈希表中的条目数超过加载因子和当前容量的乘积时，哈希表将被<i>重新</i>哈希（即，重建内部数据结构），以便哈希表具有大约两倍的桶数。</span> </p>
-<p> <span>作为一般规则，默认加载因子（.75）在时间和空间成本之间提供了良好的折衷。</span> <span>较高的值会减少空间开销，但会增加查找成本（反映在<code>HashMap</code>类的大多数操作中，包括<code>get</code>和<code>put</code> ）。</span> <span>在设置其初始容量时，应考虑映射中的预期条目数及其负载因子，以便最小化重新散列操作的数量。</span> <span>如果初始容量大于最大条目数除以加载因子，则不会发生重新加载操作。</span> </p>
-<p> <span>如果要将多个映射存储在<code>HashMap</code>实例中，则使用足够大的容量创建映射将允许映射更有效地存储，而不是根据需要执行自动重新散列来扩展表。</span> <span>请注意，使用具有相同<code>hashCode()</code>许多键是减慢任何哈希表性能的可靠方法。</span> <span>为了改善影响，当键为<a href="../lang/Comparable.html" title="java.lang中的接口"><code>Comparable</code>时</a> ，此类可以使用键之间的比较顺序来帮助打破关系。</span> </p>
-<p> <span><strong>Tenga en cuenta que esta implementación no está sincronizada.</strong></span> <span>如果多个线程同时访问哈希映射，并且至少有一个线程在结构上修改了映射，则<i>必须</i>在外部进行同步。</span> <span>（结构修改是添加或删除一个或多个映射的任何操作;仅更改与实例已包含的键关联的值不是结构修改。）这通常通过同步自然封装映射的某个对象来完成。 。</span> <span>如果不存在此类对象，则应使用<a href="Collections.html#synchronizedMap(java.util.Map)"><code>Collections.synchronizedMap</code></a>方法“包装”地图。</span> <span>这最好在创建时完成，以防止意外地不同步访问地图：</span> </p>
+<span>basada en la tabla hash<code>Map</code>Implementación de la interfaz.</span>
+<span>Esta implementación proporciona todas las operaciones de mapeo opcionales y permite<code>null</code>valores y<code>null</code>la clave.</span>
+<span>（ <code>HashMap</code>La clase equivale aproximadamente a<code>Hashtable</code>, excepto que no está sincronizada y permite valores nulos.) Esta clase no garantiza el orden del mapa;</span>
+<span>En particular, no garantiza que el orden permanezca constante con el tiempo.</span>
+<p> <span>Esta implementación, para las operaciones básicas (<code>get</code>y<code>put</code>) proporciona un rendimiento de tiempo constante, suponiendo que la función hash dispersa los elementos correctamente entre los cubos.</span> <span>La iteración sobre las vistas de colección requiere tiempo proporcional a<code>HashMap</code>la 'capacidad' de la instancia (número de cubos) más su tamaño (número de asignaciones de clave-valor).</span> <span>Por lo tanto, si el rendimiento de la iteración es importante, es muy importante no establecer la capacidad inicial demasiado alta (o el factor de carga demasiado bajo).</span> </p>
+<p> <span><code>HashMap</code>La instancia tiene dos parámetros que afectan su rendimiento:<i>capacidad inicial</i>y<i>factor de carga</i> 。</span> <span><i>capacidad</i>es el número de cubos en la tabla hash, y la capacidad inicial es simplemente la capacidad al momento de crear la tabla hash.</span> <span><i>factor de carga</i>es una medida del grado de ocupación que se permite que alcance la tabla hash antes de aumentar automáticamente su capacidad.</span> <span>Cuando el número de entradas en la tabla hash supera el producto del factor de carga y la capacidad actual, la tabla hash será<i>re-</i>hasheada (es decir, se reconstruyen las estructuras de datos internas), de modo que la tabla hash tenga aproximadamente el doble de cubos.</span> </p>
+<p> <span>Como regla general, el factor de carga predeterminado (.75) ofrece un buen equilibrio entre los costos de tiempo y espacio.</span> <span>Los valores más altos reducen la sobrecarga de espacio, pero aumentan el costo de búsqueda (reflejado en<code>HashMap</code>la mayoría de las operaciones de la clase, incluyendo<code>get</code>y<code>put</code> ）。</span> <span>Al establecer la capacidad inicial, se debe tener en cuenta el número esperado de entradas en el mapa y su factor de carga, para minimizar la cantidad de operaciones de re-hash.</span> <span>Si la capacidad inicial es mayor que el número máximo de entradas dividido por el factor de carga, no se realizará ninguna operación de re-hash.</span> </p>
+<p> <span>Si se van a almacenar varias asignaciones en<code>HashMap</code>una instancia, crear el mapa con una capacidad suficientemente grande permitirá que las asignaciones se almacenen de manera más eficiente, en lugar de expandir la tabla mediante re-hash automático según sea necesario.</span> <span>Tenga en cuenta que el uso de muchas claves con el mismo<code>hashCode()</code>código hash es una forma segura de ralentizar el rendimiento de cualquier tabla hash.</span> <span>Para mejorar el impacto, cuando las claves sean<a href="../lang/Comparable.html" title="java.lang中的接口"><code>Comparable</code>Cuando</a>comparables, esta clase puede utilizar el orden de comparación entre las claves para ayudar a romper empates.</span> </p>
+<p> <span><strong>Tenga en cuenta que esta implementación no está sincronizada.</strong></span> <span>Si varios hilos acceden simultáneamente al mapa hash, y al menos uno de ellos modifica el mapa estructuralmente, entonces<i>debe</i>sincronizarse externamente.</span> <span>(Una modificación estructural es cualquier operación que añade o elimina una o más asignaciones; cambiar únicamente el valor asociado a una clave que la instancia ya contiene no es una modificación estructural.) Normalmente esto se logra sincronizando sobre algún objeto que encapsule naturalmente el mapa. .</span> <span>Si no existe tal objeto, entonces se debe usar<a href="Collections.html#synchronizedMap(java.util.Map)"><code>Collections.synchronizedMap</code></a>El método “envuelve” el mapa.</span> <span>Esto se hace mejor en el momento de la creación, para evitar el acceso no sincronizado accidental al mapa:</span> </p>
 <pre>  <span>Map m = Collections.synchronizedMap(new HashMap(...));</span> </pre>
-<p> <span>所有这个类的“集合视图方法”返回的迭代器都是<i>快速失败的</i> ：如果在创建迭代器之后的任何时候对映射进行结构修改，除了通过迭代器自己的<code>remove</code>方法之外，迭代器将抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> <span>因此，在并发修改的情况下，迭代器快速而干净地失败，而不是在未来的未确定时间冒任意，非确定性行为的风险。</span> </p>
-<p> <span>请注意，迭代器的快速失败行为无法得到保证，因为一般来说，在存在不同步的并发修改时，不可能做出任何硬性保证。</span> <span>失败快速迭代器以尽力而为的方式抛出<code>ConcurrentModificationException</code> 。</span> <span>因此，编写依赖于此异常的程序以确保其正确性是错误的： <i>迭代器的快速失败行为应该仅用于检测错误。</i></span> </p>
-<p> <span>此类是<a href="../../../java.base/java/util/package-summary.html#CollectionsFramework">Java Collections Framework</a>的成员。</span> </p>
+<p> <span>Los iteradores devueltos por todos los 'métodos de vista de colección' de esta clase son<i>de fallo rápido</i>: si el mapa se modifica estructuralmente en cualquier momento después de la creación del iterador, excepto a través de sus propios<code>remove</code>métodos de Iterator, el iterador lanzará<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> <span>Por lo tanto, en caso de modificación concurrente, el iterador falla rápida y limpiamente, en lugar de arriesgarse a un comportamiento arbitrario, no determinista, en un momento futuro incierto.</span> </p>
+<p> <span>Tenga en cuenta que el comportamiento de fallo rápido de los iteradores no puede garantizarse, ya que, en general, no es posible hacer ninguna garantía estricta en presencia de modificaciones concurrentes no sincronizadas.</span> <span>Los iteradores de fallo rápido lanzan excepciones de mejor esfuerzo.<code>ConcurrentModificationException</code> 。</span> <span>Por lo tanto, es incorrecto escribir programas que dependan de esta excepción para garantizar su corrección:<i>El comportamiento de fallo rápido de los iteradores debe utilizarse solo para detectar errores.</i></span> </p>
+<p> <span>Esta clase es<a href="../../../java.base/java/util/package-summary.html#CollectionsFramework">Java Collections Framework</a>miembro de.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
           1.2 
         </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="../lang/Object.html#hashCode()"><code>Object.hashCode()</code></a> ， <a href="Collection.html" title="java.util中的接口"><code>Collection</code></a> ， <a href="Map.html" title="java.util中的接口"><code>Map</code></a> ， <a href="TreeMap.html" title="java.util中的类"><code>TreeMap</code></a> ， <a href="Hashtable.html" title="java.util中的类"><code>Hashtable</code></a> ， <a href="../../../serialized-form.html#java.util.HashMap">Serialized Form</a></span>
@@ -177,46 +177,36 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a> <h3>Resumen de constructores</h3>
 <table class="memberSummary">
 <caption>
-<span>构造方法</span>
+<span>Método constructor</span>
 <span class="tabEnd"> </span>
 </caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">构造器</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">HashMap</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                使用默认初始容量（16）和默认加载因子（0.75）构造一个空 
-               <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial predeterminada (16) y el factor de carga predeterminado (0.75).<code>HashMap</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int)">HashMap</a></span>​(int initialCapacity)</code></th>
 <td class="colLast">
-<div class="block">
-                使用指定的初始容量和默认加载因子（0.75）构造一个空 
-               <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial especificada y el factor de carga predeterminado (0.75).<code>HashMap</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,float)">HashMap</a></span>​(int initialCapacity, float loadFactor)</code></th>
 <td class="colLast">
-<div class="block">
-                使用指定的初始容量和加载因子构造一个空 
-               <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial y el factor de carga especificados.<code>HashMap</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Map)">HashMap</a></span>​(<a href="Map.html" title="interface in java.util">Map</a>&lt;? extends <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; m)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>HashMap</code> ，其映射与指定的 
-               <code>Map</code>相同。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>HashMap</code>, cuyas asignaciones y las del especificado<code>Map</code>son las mismas.</div> </td>
 </tr>
 </tbody>
 </table> </li>
@@ -229,76 +219,60 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a> <h3>Resumen de métodos</h3>
 <table class="memberSummary">
 <caption>
-<span class="activeTableTab" id="t0"><span>所有方法</span><span class="tabEnd"> </span>
+<span class="activeTableTab" id="t0"><span>Todos los métodos</span><span class="tabEnd"> </span>
 <span class="tableTab" id="t2"><span><a href="javascript:show(2);">Método de instancia</a> </span></span>
 <span class="tableTab" id="t4"><span><a href="javascript:show(8);">Método específico</a></span><span class="tabEnd"> </span></span>
 </span></caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">变量和类型</th>
-<th class="colSecond" scope="col">方法</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Variables y tipos</th>
+<th class="colSecond" scope="col">Método</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear()">clear</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此映射中删除所有映射。 
-              </div> </td>
+<div class="block">Elimina todas las asignaciones de este mapa.</div> </td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="../lang/Object.html" title="class in java.lang">Object</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clone()">clone</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此 
-               <code>HashMap</code>实例的浅表副本：未克隆键和值本身。 
-              </div> </td>
+<div class="block">Devuelve este<code>HashMap</code>Copia superficial de la instancia: las claves y los valores en sí mismos no se clonan.</div> </td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#compute(K,java.util.function.BiFunction)">compute</a></span>​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key, <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</code></th>
 <td class="colLast">
-<div class="block">
-                尝试计算指定键及其当前映射值的映射（如果没有当前映射， 
-               <code>null</code> ）。 
+<div class="block">Intenta calcular una asignación para la clave especificada y su valor asignado actual (si no hay asignación actual,<code>null</code> ）。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeIfAbsent(K,java.util.function.Function)">computeIfAbsent</a></span>​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key, <a href="function/Function.html" title="interface in java.util.function">Function</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; mappingFunction)</code></th>
 <td class="colLast">
-<div class="block">
-                如果指定的键尚未与值关联（或映射到 
-               <code>null</code> ），则尝试使用给定的映射函数计算其值并将其输入此映射，除非 
-               <code>null</code> 。 
+<div class="block">Si la clave especificada no está asociada a un valor (o está asignada a<code>null</code>), entonces intenta calcular su valor utilizando la función de asignación dada e insertarlo en este mapa, a menos que<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#computeIfPresent(K,java.util.function.BiFunction)">computeIfPresent</a></span>​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key, <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</code></th>
 <td class="colLast">
-<div class="block">
-                如果指定键的值存在且为非null，则尝试在给定键及其当前映射值的情况下计算新映射。 
-              </div> </td>
+<div class="block">Si el valor de la clave especificada está presente y no es nulo, intenta calcular una nueva asignación dada la clave y su valor asignado actual.</div> </td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsKey(java.lang.Object)">containsKey</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此映射包含指定键的映射，则返回 
-               <code>true</code> 。 
+<div class="block">Si este mapa contiene una asignación para la clave especificada, devuelve<code>true</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#containsValue(java.lang.Object)">containsValue</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> value)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此映射将一个或多个键映射到指定值，则返回 
-               <code>true</code> 。 
+<div class="block">Si este mapa asigna una o más claves al valor especificado, devuelve<code>true</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i7">
@@ -306,25 +280,21 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#entrySet()">entrySet</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>返回此映射中包含的映射的<a href="Set.html" title="java.util中的接口"><code>Set</code></a>视图。</span>
+<span>Devuelve una<a href="Set.html" title="java.util中的接口"><code>Set</code></a>vista de las asignaciones contenidas en este mapa.</span>
 </div> </td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(java.lang.Object)">get</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定键映射到的值，如果此映射不包含键的映射，则返回 
-               <code>null</code> 。 
+<div class="block">Devuelve el valor al que está asignada la clave especificada, o null si este mapa no contiene ninguna asignación para la clave.<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEmpty()">isEmpty</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果此映射不包含键 - 值映射，则返回 
-               <code>true</code> 。 
+<div class="block">Si este mapa no contiene ninguna asignación de clave-valor, devuelve<code>true</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i10">
@@ -332,55 +302,45 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#keySet()">keySet</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>返回此映射中包含的键的<a href="Set.html" title="java.util中的接口"><code>Set</code></a>视图。</span>
+<span>Devuelve las claves contenidas en este mapa<a href="Set.html" title="java.util中的接口"><code>Set</code></a>vista de las asignaciones contenidas en este mapa.</span>
 </div> </td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#merge(K,V,java.util.function.BiFunction)">merge</a></span>​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key, <a href="HashMap.html" title="type parameter in HashMap">V</a> value, <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</code></th>
 <td class="colLast">
-<div class="block">
-                如果指定的键尚未与值关联或与null关联，则将其与给定的非空值关联。 
-              </div> </td>
+<div class="block">Si la clave especificada aún no está asociada con un valor o está asociada con null, la asocia con el valor no nulo dado.</div> </td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#put(K,V)">put</a></span>​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key, <a href="HashMap.html" title="type parameter in HashMap">V</a> value)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的值与此映射中的指定键相关联。 
-              </div> </td>
+<div class="block">Asocia el valor especificado con la clave especificada en este mapa.</div> </td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#putAll(java.util.Map)">putAll</a></span>​(<a href="Map.html" title="interface in java.util">Map</a>&lt;? extends <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; m)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定映射中的所有映射复制到此映射。 
-              </div> </td>
+<div class="block">Copia todas las asignaciones del mapa especificado a este mapa.</div> </td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code><a href="HashMap.html" title="type parameter in HashMap">V</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove(java.lang.Object)">remove</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</code></th>
 <td class="colLast">
-<div class="block">
-                从此映射中删除指定键的映射（如果存在）。 
-              </div> </td>
+<div class="block">Elimina la asignación de la clave especificada de este mapa, si existe.</div> </td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此映射中键 - 值映射的数量。 
-              </div> </td>
+<div class="block">Devuelve el número de asignaciones de clave-valor de este mapa.</div> </td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#values()">values</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>返回此映射中包含的值的<a href="Collection.html" title="java.util中的接口"><code>Collection</code></a>视图。</span>
+<span>Devuelve los valores contenidos en este mapa<a href="Collection.html" title="java.util中的接口"><code>Collection</code></a>vista de las asignaciones contenidas en este mapa.</span>
 </div> </td>
 </tr>
 </tbody>
@@ -413,20 +373,18 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>HashMap</h4> <pre>public HashMap​(int initialCapacity,
                float loadFactor)</pre>
-<div class="block">
-              使用指定的初始容量和加载因子构造一个空 
-             <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial y el factor de carga especificados.<code>HashMap</code> 。 
             </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>initialCapacity</code>- Capacidad inicial</dd>
 <dd>
 <code>loadFactor</code>- Factor de carga</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>- Si la capacidad inicial es negativa o el factor de carga no es positivo</dd>
@@ -435,18 +393,16 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>HashMap</h4> <pre>public HashMap​(int initialCapacity)</pre>
-<div class="block">
-              使用指定的初始容量和默认加载因子（0.75）构造一个空 
-             <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial especificada y el factor de carga predeterminado (0.75).<code>HashMap</code> 。 
             </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>initialCapacity</code>- Capacidad inicial.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>- Si la capacidad inicial es negativa.</dd>
@@ -455,27 +411,25 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>HashMap</h4> <pre>public HashMap()</pre>
-<div class="block">
-              使用默认初始容量（16）和默认加载因子（0.75）构造一个空 
-             <code>HashMap</code> 。 
+<div class="block">Construye un mapa vacío con la capacidad inicial predeterminada (16) y el factor de carga predeterminado (0.75).<code>HashMap</code> 。 
             </div> </li>
 </ul> <a id="&lt;init&gt;(java.util.Map)">
 <!-- --> </a>
 <ul class="blockListLast">
 <li class="blockList"> <h4>HashMap</h4> <pre>public HashMap​(<a href="Map.html" title="interface in java.util">Map</a>&lt;? extends <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; m)</pre>
 <div class="block">
-<span>构造一个新的<code>HashMap</code> ，其映射与指定的<code>Map</code>相同。</span>
-<span><code>HashMap</code>创建时使用默认加载因子（0.75）和足以保存指定<code>Map</code>映射的初始容量。</span>
+<span>Construye un nuevo<code>HashMap</code>, cuyas asignaciones y las del especificado<code>Map</code>son las mismas.</span>
+<span><code>HashMap</code>Al crearlo, se usa el factor de carga predeterminado (0,75) y una capacidad inicial suficiente para contener lo especificado<code>Map</code>la capacidad inicial de las asignaciones.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>m</code> - 
               <code>m</code>Asignaciones que se van a colocar en este mapa</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si el mapa especificado es null</dd>
@@ -491,26 +445,22 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>size</h4> <pre class="methodSignature">public int size()</pre>
-<div class="block">
-              返回此映射中键 - 值映射的数量。 
-            </div>
+<div class="block">Devuelve el número de asignaciones de clave-valor de este mapa.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#size()">size</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#size()">size</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#size()">size</a></code>类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#size()">size</a></code>Clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Número de asignaciones de clave-valor en este mapa</dd>
 </dl> </li>
@@ -518,27 +468,23 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>isEmpty</h4> <pre class="methodSignature">public boolean isEmpty()</pre>
-<div class="block">
-              如果此映射不包含键 - 值映射，则返回 
-             <code>true</code> 。 
+<div class="block">Si este mapa no contiene ninguna asignación de clave-valor, devuelve<code>true</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#isEmpty()">isEmpty</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#isEmpty()">isEmpty</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#isEmpty()">isEmpty</a></code>类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#isEmpty()">isEmpty</a></code>Clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si este mapa no contiene una asignación clave-valor</dd>
@@ -548,37 +494,35 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>get</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> get​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</pre>
 <div class="block">
-<span>返回指定键映射到的值，如果此映射不包含键的映射，则返回<code>null</code> 。</span>
-<p> <span>更正式地说，如果此映射包含从键<code>k</code>到值<code>v</code>的映射，使得<code>(key==null ? k==null : key.equals(k))</code> ，则此方法返回<code>v</code> ;</span> <span>否则返回<code>null</code> 。</span> <span>（最多可以有一个这样的映射。）</span> </p>
-<p> <span>返回值<code>null</code> <i>不一定</i>表示映射不包含键的映射;</span> <span>地图也可能将密钥显式映射到<code>null</code> 。</span> <span>可以使用<a href="#containsKey(java.lang.Object)"><code>containsKey</code></a>操作来区分这两种情况。</span> </p>
+<span>Devuelve el valor al que está asignada la clave especificada, o null si este mapa no contiene ninguna asignación para la clave.<code>null</code> 。</span>
+<p> <span>Más formalmente, si este mapa contiene una asignación desde la clave<code>k</code>al valor<code>v</code>tal que<code>(key==null ? k==null : key.equals(k))</code>, entonces este método devuelve<code>v</code> ;</span> <span>de lo contrario, devuelve<code>null</code> 。</span> <span>(puede haber como máximo una asignación de este tipo).</span> </p>
+<p> <span>Valor de retorno<code>null</code> <i>no necesariamente</i>indica que el mapa no contiene una asignación para la clave;</span> <span>el mapa también puede asignar explícitamente la clave a<code>null</code> 。</span> <span>se puede utilizar<a href="#containsKey(java.lang.Object)"><code>containsKey</code></a>la operación para distinguir estos dos casos.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#get(java.lang.Object)">get</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#get(java.lang.Object)">get</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#get(java.lang.Object)">get</a></code>类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#get(java.lang.Object)">get</a></code>Clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave cuyo valor asociado se va a devolver</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El valor al que se asigna la clave especificada, si este mapa no contiene una asignación para la clave,<code>null</code>
 </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="#put(K,V)"><code>put(Object, Object)</code></a>
@@ -588,32 +532,28 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>containsKey</h4> <pre class="methodSignature">public boolean containsKey​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</pre>
-<div class="block">
-              如果此映射包含指定键的映射，则返回 
-             <code>true</code> 。 
+<div class="block">Si este mapa contiene una asignación para la clave especificada, devuelve<code>true</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#containsKey(java.lang.Object)">containsKey</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#containsKey(java.lang.Object)">containsKey</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#containsKey(java.lang.Object)">containsKey</a></code>在类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#containsKey(java.lang.Object)">containsKey</a></code>En la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave cuya presencia en este mapa se va a probar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si este mapa contiene una asignación para la clave especificada.</dd>
@@ -625,37 +565,35 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <li class="blockList"> <h4>put</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> put​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key,
              <a href="HashMap.html" title="type parameter in HashMap">V</a> value)</pre>
 <div class="block">
-<span>将指定的值与此映射中的指定键相关联。</span>
-<span>如果映射先前包含键的映射，则替换旧值。</span>
+<span>Asocia el valor especificado con la clave especificada en este mapa.</span>
+<span>Si el mapa contenía previamente una asignación para la clave, se reemplaza el valor anterior.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#put(K,V)">put</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#put(K,V)">put</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#put(K,V)">put</a></code>在课堂上 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#put(K,V)">put</a></code>en la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave asociada con el valor especificado</dd>
 <dd>
 <code>value</code>- El valor asociado con la clave especificada</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<span>先前的值相关联的<code>key</code> ，或<code>null</code>如果没有映射<code>key</code> 。</span>
-<span>（A <code>null</code>返回也可以表示该映射以前关联<code>null</code>与<code>key</code> ）。</span>
+<span>el valor anterior asociado<code>key</code>, o<code>null</code>si no hay ninguna asignación<code>key</code> 。</span>
+<span>（A <code>null</code>el valor devuelto también puede indicar que el mapa asoció previamente<code>null</code>y<code>key</code> ）。</span>
 </dd>
 </dl> </li>
 </ul> <a id="putAll(java.util.Map)">
@@ -663,31 +601,29 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>putAll</h4> <pre class="methodSignature">public void putAll​(<a href="Map.html" title="interface in java.util">Map</a>&lt;? extends <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; m)</pre>
 <div class="block">
-<span>将指定映射中的所有映射复制到此映射。</span>
-<span>这些映射将替换此映射对当前位于指定映射中的任何键的任何映射。</span>
+<span>Copia todas las asignaciones del mapa especificado a este mapa.</span>
+<span>Estas asignaciones reemplazarán cualquier asignación que este mapa tenga para cualquier clave actualmente presente en el mapa especificado.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#putAll(java.util.Map)">putAll</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#putAll(java.util.Map)">putAll</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#putAll(java.util.Map)">putAll</a></code>在类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#putAll(java.util.Map)">putAll</a></code>En la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>m</code>- Asignaciones que se van a almacenar en este mapa</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si el mapa especificado es null</dd>
@@ -696,35 +632,31 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>remove</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> remove​(<a href="../lang/Object.html" title="class in java.lang">Object</a> key)</pre>
-<div class="block">
-              从此映射中删除指定键的映射（如果存在）。 
-            </div>
+<div class="block">Elimina la asignación de la clave especificada de este mapa, si existe.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#remove(java.lang.Object)">remove</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#remove(java.lang.Object)">remove</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#remove(java.lang.Object)">remove</a></code>在类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#remove(java.lang.Object)">remove</a></code>En la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave cuya asignación se va a eliminar del mapa</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<span>如果没有<code>key</code>映射，则与<code>key</code>或<code>null</code>关联的先前值。</span>
-<span>（A <code>null</code>返回也可以表示该映射以前关联<code>null</code>与<code>key</code> ）。</span>
+<span>si no hay<code>key</code>asignación, entonces con<code>key</code>o<code>null</code>el valor anterior asociado.</span>
+<span>（A <code>null</code>el valor devuelto también puede indicar que el mapa asoció previamente<code>null</code>y<code>key</code> ）。</span>
 </dd>
 </dl> </li>
 </ul> <a id="clear()">
@@ -732,55 +664,49 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>clear</h4> <pre class="methodSignature">public void clear()</pre>
 <div class="block">
-<span>从此映射中删除所有映射。</span>
-<span>此调用返回后，映射将为空。</span>
+<span>Elimina todas las asignaciones de este mapa.</span>
+<span>Después de que esta llamada regrese, el mapa estará vacío.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#clear()">clear</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#clear()">clear</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#clear()">clear</a></code>在课程 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#clear()">clear</a></code>En el curso.<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 </dl> </li>
 </ul> <a id="containsValue(java.lang.Object)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>containsValue</h4> <pre class="methodSignature">public boolean containsValue​(<a href="../lang/Object.html" title="class in java.lang">Object</a> value)</pre>
-<div class="block">
-              如果此映射将一个或多个键映射到指定值，则返回 
-             <code>true</code> 。 
+<div class="block">Si este mapa asigna una o más claves al valor especificado, devuelve<code>true</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#containsValue(java.lang.Object)">containsValue</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#containsValue(java.lang.Object)">containsValue</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#containsValue(java.lang.Object)">containsValue</a></code>类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#containsValue(java.lang.Object)">containsValue</a></code>Clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>value</code>- El valor cuya presencia en este mapa se va a probar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si este mapa asigna una o más claves al valor especificado</dd>
@@ -790,29 +716,27 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>keySet</h4> <pre class="methodSignature">public <a href="Set.html" title="interface in java.util">Set</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>&gt; keySet()</pre>
 <div class="block">
-<span>返回此映射中包含的键的<a href="Set.html" title="java.util中的接口"><code>Set</code></a>视图。</span>
-<span>该集由地图支持，因此对地图的更改将反映在集中，反之亦然。</span>
-<span>如果在对集合进行迭代时修改了映射（除了通过迭代器自己的<code>remove</code>操作），迭代的结果是未定义的。</span>
-<span>该组支持元件移除，即从映射中相应的映射，经由<code>Iterator.remove</code> ， <code>Set.remove</code> ， <code>removeAll</code> ， <code>retainAll</code> ，和<code>clear</code>操作。</span>
-<span>它不支持<code>add</code>或<code>addAll</code>操作。</span>
+<span>Devuelve las claves contenidas en este mapa<a href="Set.html" title="java.util中的接口"><code>Set</code></a>vista de las asignaciones contenidas en este mapa.</span>
+<span>El conjunto está respaldado por el mapa, por lo que los cambios en el mapa se reflejan en el conjunto, y viceversa.</span>
+<span>Si el mapa se modifica mientras se itera sobre el conjunto (excepto a través de la propia<code>remove</code>operación), los resultados de la iteración no están definidos.</span>
+<span>El conjunto admite la eliminación de elementos, que elimina la asignación correspondiente del mapa, a través de<code>Iterator.remove</code> ， <code>Set.remove</code> ， <code>removeAll</code> ， <code>retainAll</code>, y<code>clear</code>operaciones.</span>
+<span>No admite<code>add</code>o<code>addAll</code>operaciones.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#keySet()">keySet</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#keySet()">keySet</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#keySet()">keySet</a></code>在类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#keySet()">keySet</a></code>En la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Vista de conjunto de las claves contenidas en este mapa</dd>
 </dl> </li>
@@ -821,29 +745,27 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>values</h4> <pre class="methodSignature">public <a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; values()</pre>
 <div class="block">
-<span>返回此映射中包含的值的<a href="Collection.html" title="java.util中的接口"><code>Collection</code></a>视图。</span>
-<span>该集合由地图支持，因此对地图的更改将反映在集合中，反之亦然。</span>
-<span>如果在对集合进行迭代时修改了映射（除了通过迭代器自己的<code>remove</code>操作），迭代的结果是未定义的。</span>
-<span>该collection支持元素移除，即从映射中相应的映射，经由<code>Iterator.remove</code> ， <code>Collection.remove</code> ， <code>removeAll</code> ， <code>retainAll</code>和<code>clear</code>操作。</span>
-<span>它不支持<code>add</code>或<code>addAll</code>操作。</span>
+<span>Devuelve los valores contenidos en este mapa<a href="Collection.html" title="java.util中的接口"><code>Collection</code></a>vista de las asignaciones contenidas en este mapa.</span>
+<span>La colección está respaldada por el mapa, por lo que los cambios en el mapa se reflejan en la colección, y viceversa.</span>
+<span>Si el mapa se modifica mientras se itera sobre el conjunto (excepto a través de la propia<code>remove</code>operación), los resultados de la iteración no están definidos.</span>
+<span>La colección admite la eliminación de elementos, que elimina la asignación correspondiente del mapa, a través de<code>Iterator.remove</code> ， <code>Collection.remove</code> ， <code>removeAll</code> ， <code>retainAll</code>y<code>clear</code>operaciones.</span>
+<span>No admite<code>add</code>o<code>addAll</code>operaciones.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#values()">values</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#values()">values</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#values()">values</a></code>在课堂上 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#values()">values</a></code>en la clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Vista de los valores contenidos en este mapa</dd>
 </dl> </li>
@@ -852,22 +774,21 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <ul class="blockList">
 <li class="blockList"> <h4>entrySet</h4> <pre class="methodSignature">public <a href="Set.html" title="interface in java.util">Set</a>&lt;<a href="Map.Entry.html" title="interface in java.util">Map.Entry</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;&gt; entrySet()</pre>
 <div class="block">
-<span>返回此映射中包含的映射的<a href="Set.html" title="java.util中的接口"><code>Set</code></a>视图。</span>
-<span>该集由地图支持，因此对地图的更改将反映在集中，反之亦然。</span>
-<span>如果在对集合进行迭代时修改了映射（除了通过迭代器自己的<code>remove</code>操作，或者通过迭代器返回的映射条目上的<code>setValue</code>操作），迭代的结果是未定义的。</span>
-<span>该组支持元件移除，即从映射中相应的映射，经由<code>Iterator.remove</code> ， <code>Set.remove</code> ， <code>removeAll</code> ， <code>retainAll</code>和<code>clear</code>操作。</span>
-<span>它不支持<code>add</code>或<code>addAll</code>操作。</span>
+<span>Devuelve una<a href="Set.html" title="java.util中的接口"><code>Set</code></a>vista de las asignaciones contenidas en este mapa.</span>
+<span>El conjunto está respaldado por el mapa, por lo que los cambios en el mapa se reflejan en el conjunto, y viceversa.</span>
+<span>Si el mapa se modifica mientras se itera sobre el conjunto (excepto a través de la propia<code>remove</code>operación, o a través de la entrada del mapa devuelta por el iterador<code>setValue</code>operación), los resultados de la iteración no están definidos.</span>
+<span>El conjunto admite la eliminación de elementos, que elimina la asignación correspondiente del mapa, a través de<code>Iterator.remove</code> ， <code>Set.remove</code> ， <code>removeAll</code> ， <code>retainAll</code>y<code>clear</code>operaciones.</span>
+<span>No admite<code>add</code>o<code>addAll</code>operaciones.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#entrySet()">entrySet</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#entrySet()">entrySet</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una vista de conjunto de las asignaciones contenidas en este mapa</dd>
 </dl> </li>
@@ -878,35 +799,34 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <li class="blockList"> <h4>computeIfAbsent</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> computeIfAbsent​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key,
                          <a href="function/Function.html" title="interface in java.util.function">Function</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; mappingFunction)</pre>
 <div class="block">
-<span>如果指定的键尚未与值关联（或映射到<code>null</code> ），则尝试使用给定的映射函数计算其值，并将其输入此映射，除非<code>null</code> 。</span>
-<p> <span>如果映射函数返回<code>null</code> ，则不记录映射。</span> <span>如果映射函数本身抛出（未经检查的）异常，则重新抛出异常，并且不记录映射。</span> <span>最常见的用法是构造一个新对象，用作初始映射值或记忆结果，如：</span> </p>
+<span>Si la clave especificada no está asociada a un valor (o está asignada a<code>null</code>), entonces intenta calcular su valor usando la función de asignación dada y lo introduce en este mapa, a menos que<code>null</code> 。</span>
+<p> <span>Si la función de asignación devuelve<code>null</code>, no se registra ninguna asignación.</span> <span>Si la propia función de asignación lanza una excepción (no comprobada), se relanza la excepción y no se registra ninguna asignación.</span> <span>El uso más común es construir un nuevo objeto que sirva como valor de asignación inicial o resultado memorizado, como:</span> </p>
 <pre>  <span><code> map.computeIfAbsent(key, k -&gt; new Value(f(k))); </code></span> </pre>
-<p> <span>或者实现一个多值映射<code>Map&lt;K,Collection&lt;V&gt;&gt;</code> ，每个键支持多个值：</span> </p>
+<p> <span>o implementar un mapa multivalor<code>Map&lt;K,Collection&lt;V&gt;&gt;</code>, donde cada clave admite múltiples valores:</span> </p>
 <pre>  <span><code> map.computeIfAbsent(key, k -&gt; new HashSet&lt;V&gt;()).add(v); </code></span> </pre>
-<p> <span>映射函数不应在计算期间修改此映射。</span> </p>
-<p> <span>如果检测到映射函数在计算期间修改了该映射，则该方法将在尽力而为的基础上抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<p> <span>La función de asignación no debe modificar este mapa durante el cálculo.</span> </p>
+<p> <span>Si se detecta que la función de asignación modificó este mapa durante el cálculo, el método lanzará, sobre una base de mejor esfuerzo,<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#computeIfAbsent(K,java.util.function.Function)">computeIfAbsent</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#computeIfAbsent(K,java.util.function.Function)">computeIfAbsent</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave asociada con el valor especificado</dd>
 <dd>
 <code>mappingFunction</code>- Función de asignación utilizada para calcular el valor</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El valor actual (existente o calculado) asociado con la clave especificada, o null si el valor calculado es null</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="ConcurrentModificationException.html" title="class in java.util">ConcurrentModificationException</a></code>- Si se detecta que la función de asignación modificó este mapa</dd>
@@ -918,32 +838,31 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <li class="blockList"> <h4>computeIfPresent</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> computeIfPresent​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key,
                           <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</pre>
 <div class="block">
-<span>如果指定键的值存在且为非null，则尝试在给定键及其当前映射值的情况下计算新映射。</span>
-<p> <span>如果重映射函数返回<code>null</code> ，则删除映射。</span> <span>如果重映射函数本身抛出（未经检查的）异常，则重新抛出异常，并保持当前映射不变。</span> </p>
-<p> <span>重映射功能不应在计算期间修改此映射。</span> </p>
-<p> <span>如果检测到重映射函数在计算期间修改了该映射，则该方法将在尽力而为的基础上抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<span>Si el valor de la clave especificada está presente y no es nulo, intenta calcular una nueva asignación dada la clave y su valor asignado actual.</span>
+<p> <span>Si la función de reasignación devuelve<code>null</code>, se elimina la asignación.</span> <span>Si la función de reasignación en sí misma lanza una excepción (no comprobada), la excepción se vuelve a lanzar y la asignación actual permanece sin cambios.</span> </p>
+<p> <span>La función de reasignación no debe modificar este mapa durante el cálculo.</span> </p>
+<p> <span>Si se detecta que la función de reasignación modifica este mapa durante el cálculo, el método lanzará, sobre una base de mejor esfuerzo,<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#computeIfPresent(K,java.util.function.BiFunction)">computeIfPresent</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#computeIfPresent(K,java.util.function.BiFunction)">computeIfPresent</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave asociada con el valor especificado</dd>
 <dd>
 <code>remappingFunction</code>- Función de reasignación utilizada para calcular el valor</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El nuevo valor asociado con la clave especificada, o null si no hay ninguno</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="ConcurrentModificationException.html" title="class in java.util">ConcurrentModificationException</a></code>- Si se detecta que la función de reasignación modificó este mapa</dd>
@@ -955,35 +874,34 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <li class="blockList"> <h4>compute</h4> <pre class="methodSignature">public <a href="HashMap.html" title="type parameter in HashMap">V</a> compute​(<a href="HashMap.html" title="type parameter in HashMap">K</a> key,
                  <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">K</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</pre>
 <div class="block">
-<span>尝试计算指定键及其当前映射值的映射（如果没有当前映射， <code>null</code> ）。</span>
-<span>例如，要创建或附加<code>String</code>消息到值映射：</span>
+<span>Intenta calcular una asignación para la clave especificada y su valor asignado actual (si no hay asignación actual,<code>null</code> ）。</span>
+<span>Por ejemplo, para crear o añadir<code>String</code>una asignación de mensajes a valores:</span>
 <pre>  <span><code> map.compute(key, (k, v) -&gt; (v == null) ? msg : v.concat(msg))</code></span> </pre>
-<span>（方法<a href="Map.html#merge(K,V,java.util.function.BiFunction)"><code>merge()</code></a>通常更易于用于此类目的。）</span>
-<p> <span>如果重映射函数返回<code>null</code> ，则删除映射（或者如果最初不存在则保持不存在）。</span> <span>如果重映射函数本身抛出（未经检查的）异常，则重新抛出异常，并保持当前映射不变。</span> </p>
-<p> <span>重映射功能不应在计算期间修改此映射。</span> </p>
-<p> <span>如果检测到重映射函数在计算期间修改该映射，则该方法将尽力地抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<span>(el método<a href="Map.html#merge(K,V,java.util.function.BiFunction)"><code>merge()</code></a>es generalmente más fácil de usar para este tipo de fines.)</span>
+<p> <span>Si la función de reasignación devuelve<code>null</code>, entonces se elimina la asignación (o permanece ausente si no existía inicialmente).</span> <span>Si la función de reasignación en sí misma lanza una excepción (no comprobada), la excepción se vuelve a lanzar y la asignación actual permanece sin cambios.</span> </p>
+<p> <span>La función de reasignación no debe modificar este mapa durante el cálculo.</span> </p>
+<p> <span>Si se detecta que la función de reasignación modifica la asignación durante el cálculo, el método lanzará en la medida de lo posible<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#compute(K,java.util.function.BiFunction)">compute</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#compute(K,java.util.function.BiFunction)">compute</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- La clave asociada con el valor especificado</dd>
 <dd>
 <code>remappingFunction</code>- Función de reasignación utilizada para calcular el valor</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El nuevo valor asociado con la clave especificada, o null si no hay ninguno</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="ConcurrentModificationException.html" title="class in java.util">ConcurrentModificationException</a></code>- Si se detecta que la función de reasignación modificó este mapa</dd>
@@ -996,25 +914,24 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
                <a href="HashMap.html" title="type parameter in HashMap">V</a> value,
                <a href="function/BiFunction.html" title="interface in java.util.function">BiFunction</a>&lt;? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? super <a href="HashMap.html" title="type parameter in HashMap">V</a>,​? extends <a href="HashMap.html" title="type parameter in HashMap">V</a>&gt; remappingFunction)</pre>
 <div class="block">
-<span>如果指定的键尚未与值关联或与null关联，则将其与给定的非空值关联。</span>
-<span>否则，将相关值替换为给定重映射函数的结果，或者如果结果为<code>null</code>则将其删除。</span>
-<span>当组合密钥的多个映射值时，该方法可以是有用的。</span>
-<span>例如，要创建或附加<code>String msg</code>到值映射：</span>
+<span>Si la clave especificada aún no está asociada con un valor o está asociada con null, la asocia con el valor no nulo dado.</span>
+<span>de lo contrario, reemplaza el valor asignado por el resultado de la función de reasignación dada, o si el resultado es<code>null</code>entonces se elimina.</span>
+<span>Cuando se combinan múltiples valores asignados de una clave, este método puede resultar útil.</span>
+<span>Por ejemplo, para crear o añadir<code>String msg</code>a una asignación de valores:</span>
 <pre>  <span><code> map.merge(key, msg, String::concat) </code></span> </pre>
-<p> <span>如果重映射函数返回<code>null</code> ，则删除映射。</span> <span>如果重映射函数本身抛出（未经检查的）异常，则重新抛出异常，并保持当前映射不变。</span> </p>
-<p> <span>重映射功能不应在计算期间修改此映射。</span> </p>
-<p> <span>如果检测到重映射函数在计算期间修改了该映射，则该方法将在尽力而为的基础上抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<p> <span>Si la función de reasignación devuelve<code>null</code>, se elimina la asignación.</span> <span>Si la función de reasignación en sí misma lanza una excepción (no comprobada), la excepción se vuelve a lanzar y la asignación actual permanece sin cambios.</span> </p>
+<p> <span>La función de reasignación no debe modificar este mapa durante el cálculo.</span> </p>
+<p> <span>Si se detecta que la función de reasignación modifica este mapa durante el cálculo, el método lanzará, sobre una base de mejor esfuerzo,<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Map.html#merge(K,V,java.util.function.BiFunction)">merge</a></code>在界面 
-              <code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="Map.html#merge(K,V,java.util.function.BiFunction)">merge</a></code>En la interfaz<code><a href="Map.html" title="interface in java.util">Map</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>key</code>- Clave asociada al valor resultante</dd>
@@ -1023,11 +940,11 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <dd>
 <code>remappingFunction</code>- La función de reasignación para volver a calcular un valor, si está presente</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El nuevo valor asociado con la clave especificada, o null si no hay ningún valor asociado con la clave</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="ConcurrentModificationException.html" title="class in java.util">ConcurrentModificationException</a></code>- Si se detecta que la función de reasignación modificó este mapa</dd>
@@ -1036,24 +953,20 @@ implements <a href="Map.html" title="interface in java.util">Map</a>&lt;K,​V&g
 <!-- --> </a>
 <ul class="blockListLast">
 <li class="blockList"> <h4>clone</h4> <pre class="methodSignature">public <a href="../lang/Object.html" title="class in java.lang">Object</a> clone()</pre>
-<div class="block">
-              返回此 
-             <code>HashMap</code>实例的浅表副本：未克隆键和值本身。 
-            </div>
+<div class="block">Devuelve este<code>HashMap</code>Copia superficial de la instancia: las claves y los valores en sí mismos no se clonan.</div>
 <dl>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractMap.html#clone()">clone</a></code>类 
-              <code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
+<code><a href="AbstractMap.html#clone()">clone</a></code>Clase<code><a href="AbstractMap.html" title="class in java.util">AbstractMap</a>&lt;<a href="HashMap.html" title="type parameter in HashMap">K</a>,​<a href="HashMap.html" title="type parameter in HashMap">V</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Copia superficial de este mapa</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="../lang/Cloneable.html" title="java.lang中的接口"><code>Cloneable</code></a></span>

@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Node.js模块系统 Node.js 模块系统是其核心功能之一，它允许开发者将代码组织成小的、可重用的单元，这些单元被称为模块。 模块是一个封装了特定功能的独立文件，可以在其他文件中引入和使用。  Node.js 的模块系统是构建 Node.js 应用程序的重要基础，使开发者能够将代码拆分成可重用、可维护的小块。 每个模块都是一个单独的 JavaScript 文件，包含一组相关的函数、对象或变量，通过这种方式，Node.js 提供了一.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -313,7 +313,7 @@ console.<span style="color: #660066;">log</span><span style="color: #009900;">(<
 </div></div>
 <hr/>
 <h2>Exportación e importación de módulos personalizados (módulos CommonJS)</h2>
-<p><strong>1. Exportar el módulo:</strong>Usar<span class="marked">module.exports</span> 或 <span class="marked">exports</span>para exportar funciones, objetos o variables.</p>
+<p><strong>1. Exportar el módulo:</strong>Usar<span class="marked">module.exports</span>o<span class="marked">exports</span>para exportar funciones, objetos o variables.</p>
 <p><strong>2. Importar el módulo:</strong>Usar<span class="marked">require()</span>para importar el módulo.</p>
 <h3>Importar módulos</h3>
 <p>En Node.js, importar un módulo es muy sencillo. A continuación, creamos un<strong>main.js</strong>archivo e importamos el módulo hello. El código es el siguiente:</p>
@@ -359,10 +359,10 @@ hello.<span style="color: #660066;">setName</span><span style="color: #009900;">
 hello.<span style="color: #660066;">sayHello</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <br/>
 </div></div>
 <p>El único cambio en la interfaz del módulo es el uso de<span class="marked">module.exports = Hello</span>en lugar de<span class="marked">exports.world = function(){}</span>. Cuando se referencia este módulo desde el exterior, el objeto de su interfaz es el propio objeto Hello que se exporta, no el exports original.</p>
-<p><strong>Diferencia entre module.exports y exports:</strong></p><ul><li><code>module.exports</code>Es la referencia real al objeto exportado.</li><li><code>exports</code> 是 <code>module.exports</code>Es un atajo de module.exports. No se puede asignar directamente<code>exports = ...</code>, de lo contrario se romperá la referencia.</li></ul>
+<p><strong>Diferencia entre module.exports y exports:</strong></p><ul><li><code>module.exports</code>Es la referencia real al objeto exportado.</li><li><code>exports</code>Sí<code>module.exports</code>Es un atajo de module.exports. No se puede asignar directamente<code>exports = ...</code>, de lo contrario se romperá la referencia.</li></ul>
 <hr/>
-<h2>Exportación e importación de módulos personalizados (módulos ES)</h2><p>Los módulos ES utilizan<span class="marked">import</span> 和 <span class="marked">export</span>, que es el estándar de módulos del JavaScript moderno.</p>
-<ul><li>Los módulos ES usan<code>import</code> 和 <code>export</code>como palabra clave; la extensión del archivo debe configurarse como<code>.mjs</code>, o en<code>package.json</code>declararlo en<code>"type": "module"</code>。</li><li>Los módulos ES admiten importación estática (<code>import ... from ...</code>) e importación dinámica (<code>import()</code>）。</li></ul>
+<h2>Exportación e importación de módulos personalizados (módulos ES)</h2><p>Los módulos ES utilizan<span class="marked">import</span>y<span class="marked">export</span>, que es el estándar de módulos del JavaScript moderno.</p>
+<ul><li>Los módulos ES usan<code>import</code>y<code>export</code>como palabra clave; la extensión del archivo debe configurarse como<code>.mjs</code>, o en<code>package.json</code>declararlo en<code>"type": "module"</code>。</li><li>Los módulos ES admiten importación estática (<code>import ... from ...</code>) e importación dinámica (<code>import()</code>）。</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #006600; font-style: italic;">// myModule.mjs</span><br/>
 <span style="color: #FF0000;">export</span> <span style="color: #000066; font-weight: bold;">function</span> greet<span style="color: #009900;">(</span>name<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
@@ -378,7 +378,7 @@ console.<span style="color: #660066;">log</span><span style="color: #009900;">(<
 <strong>1. Módulos del núcleo:</strong>Como http y fs, se incluyen durante la instalación de Node.js y se pueden cargar directamente.</p>
 <pre>
 const http = require('http');</pre><p>
-<strong>2. Módulos de archivos locales:</strong>Se cargan mediante rutas relativas o absolutas; se debe especificar<span class="marked">./</span> 或 <span class="marked">/</span>。</p>
+<strong>2. Módulos de archivos locales:</strong>Se cargan mediante rutas relativas o absolutas; se debe especificar<span class="marked">./</span>o<span class="marked">/</span>。</p>
 <pre>
 const myModule = require('./myModule');</pre><p>
 <strong>3. Módulos de terceros:</strong>Se encuentran en<strong>node_modules</strong>el directorio; basta con escribir el nombre del módulo para cargarlo.</p>
@@ -640,11 +640,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Debe <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir notas!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Debe <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir notas!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -842,7 +842,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -944,7 +944,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

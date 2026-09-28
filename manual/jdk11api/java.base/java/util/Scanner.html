@@ -87,11 +87,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <div class="header">
 <div class="subTitle">
-<span class="moduleLabelInType">模块</span>  
+<span class="moduleLabelInType">módulo</span>  
      <a href="../../module-summary.html">java.base</a>
 </div>
 <div class="subTitle">
-<span class="packageLabelInType">软件包</span>  
+<span class="packageLabelInType">paquete</span>  
      <a href="package-summary.html">java.util</a>
 </div>
 <h2 class="title" title="Class Scanner">Class Scanner</h2>
@@ -119,16 +119,16 @@ loadScripts(document, 'script');</script>
 extends <a href="../lang/Object.html" title="class in java.lang">Object</a>
 implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;, <a href="../io/Closeable.html" title="interface in java.io">Closeable</a></pre>
 <div class="block">
-<span>一个简单的文本扫描程序，可以使用正则表达式解析基本类型和字符串。</span>
-<p> <span><code>Scanner</code>使用分隔符模式将其输入分解为标记，该分隔符模式默认匹配空格。</span> <span>将得到的令牌可以然后被转换成使用各种不同类型的值<code>next</code>方法。</span> </p>
-<p> <span>例如，此代码允许用户从<code>System.in</code>读取数字：</span> </p>
+<span>Un escáner de texto simple que puede utilizar expresiones regulares para analizar tipos primitivos y cadenas.</span>
+<p> <span><code>Scanner</code>Utiliza un patrón de delimitadores para dividir su entrada en tokens; dicho patrón coincide con espacios en blanco de forma predeterminada.</span> <span>Los tokens resultantes pueden luego convertirse en valores de varios tipos diferentes usando<code>next</code>método.</span> </p>
+<p> <span>Por ejemplo, este código permite al usuario desde<code>System.in</code>leer números:</span> </p>
 <blockquote>
 <span><pre><code>
      Scanner sc = new Scanner(System.in);
      int i = sc.nextInt();
  </code></pre></span>
 </blockquote>
-<p> <span>作为另一个示例，此代码允许从文件<code>myNumbers</code>条目分配<code>long</code>类型：</span> </p>
+<p> <span>Como otro ejemplo, este código permite desde archivo<code>myNumbers</code>asignación de entradas<code>long</code>tipo:</span> </p>
 <blockquote>
 <span><pre><code>
       Scanner sc = new Scanner(new File("myNumbers"));
@@ -137,7 +137,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
       }
  </code></pre></span>
 </blockquote>
-<p> <span>扫描仪还可以使用除空白之外的分隔符。</span> <span>此示例从字符串中读取几个项目：</span> </p>
+<p> <span>El escáner también puede usar delimitadores distintos de los espacios en blanco.</span> <span>Este ejemplo lee varios elementos de una cadena:</span> </p>
 <blockquote>
 <span><pre><code>
      String input = "1 fish 2 fish red fish blue fish";
@@ -149,7 +149,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
      s.close();
  </code></pre></span>
 </blockquote>
-<p> <span>打印以下输出：</span> </p>
+<p> <span>Imprime la siguiente salida:</span> </p>
 <blockquote>
 <span><pre><code>
      1
@@ -158,7 +158,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
      blue
  </code></pre></span>
 </blockquote>
-<p> <span>使用此代码可以生成相同的输出，该代码使用正则表达式一次解析所有四个标记：</span> </p>
+<p> <span>Mediante este código se puede generar la misma salida; dicho código utiliza una expresión regular para analizar los cuatro tokens de una sola vez:</span> </p>
 <blockquote>
 <span><pre><code>
      String input = "1 fish 2 fish red fish blue fish";
@@ -170,20 +170,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
      s.close();
  </code></pre></span>
 </blockquote>
-<p> <span><a id="default-delimiter">4502201395911</a>识别扫描仪使用的<a href="../lang/Character.html#isWhitespace(char)">default whitespace delimiter</a> 。</span> <span><a href="#reset()"><code>reset()</code></a>方法将扫描仪分隔符的值重置为默认的空白分隔符，无论它是否先前已更改。</span> </p>
-<p> <span>扫描操作可能阻止等待输入。</span> </p>
-<p> <span><a href="#next()"><code>next()</code></a>和<a href="#hasNext()"><code>hasNext()</code></a>方法及其伴随方法（例如<a href="#nextInt()"><code>nextInt()</code></a>和<a href="#hasNextInt()"><code>hasNextInt()</code></a> ）首先跳过与分隔符模式匹配的任何输入，然后尝试返回下一个标记。</span> <span><code>hasNext()</code>和<code>next()</code>方法都可能阻止等待进一步输入。</span> <span><code>hasNext()</code>方法块是否与其关联的<code>next()</code>方法是否将阻止<code>next()</code> 。</span> <span><a href="#tokens()"><code>tokens()</code></a>方法还可以阻止等待输入。</span> </p>
-<p> <span>的<a href="#findInLine(java.lang.String)"><code>findInLine()</code></a> ， <a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a> ， <a href="#skip(java.util.regex.Pattern)"><code>skip()</code></a> ，和<a href="#findAll(java.util.regex.Pattern)"><code>findAll()</code></a>方法定界符模式的独立操作。</span> <span>这些方法将尝试匹配指定的模式而不考虑输入中的分隔符，因此可以在分隔符不相关的特殊情况下使用。</span> <span>这些方法可能会阻止等待更多输入。</span> </p>
-<p> <span>当扫描程序抛出<a href="InputMismatchException.html" title="java.util中的类"><code>InputMismatchException</code>时</a> ，扫描程序将不会传递导致异常的令牌，因此可以通过其他方法检索或跳过它。</span> </p>
-<p> <span>根据分隔模式的类型，可以返回空标记。</span> <span>例如，模式<code>"\\s+"</code>将不返回空标记，因为它匹配分隔符的多个实例。</span> <span><code>"\\s"</code>模式<code>"\\s"</code>可以返回空标记，因为它一次只通过一个空格。</span> </p>
-<p> <span>扫描程序可以从任何实现<a href="../lang/Readable.html" title="java.lang中的接口"><code>Readable</code></a>接口的对象读取文本。</span> <span>如果对底层可读<a href="../lang/Readable.html#read(java.nio.CharBuffer)"><code>read()</code></a>方法的调用抛出<a href="../io/IOException.html" title="java.io中的类"><code>IOException</code>，</a>则扫描程序会假定已到达输入的结尾。</span> <span>可以通过<a href="#ioException()"><code>ioException()</code></a>方法检索由底层可读引发的最新<code>IOException</code> 。</span> </p>
-<p> <span>当<code>Scanner</code>关闭时，如果源实现<a href="../io/Closeable.html" title="java.io中的接口"><code>Closeable</code></a>接口，它将关闭其输入源。</span> </p>
-<p> <span><code>Scanner</code>对于没有外部同步的多线程使用是不安全的。</span> </p>
-<p> <span>除非另有说明，否则将<code>null</code>参数传递给<code>null</code>任何方法<code>Scanner</code>将导致抛出<code>NullPointerException</code> 。</span> </p>
-<p> <span>除非使用<a href="#useRadix(int)"><code>useRadix(int)</code></a>方法设置了不同的基数，否则扫描仪将默认将数字解释为十进制。</span> <span>无论先前是否更改过扫描仪， <a href="#reset()"><code>reset()</code></a>方法都会将扫描仪基数的值重置为<code>10</code> 。</span> </p>
+<p> <span><a id="default-delimiter">4502201395911</a>Identifica lo que usa el escáner<a href="../lang/Character.html#isWhitespace(char)">default whitespace delimiter</a> 。</span> <span><a href="#reset()"><code>reset()</code></a>El método restablece el valor del delimitador del escáner al delimitador de espacio en blanco predeterminado, sin importar si se modificó anteriormente.</span> </p>
+<p> <span>Las operaciones de escaneo pueden bloquearse esperando entrada.</span> </p>
+<p> <span><a href="#next()"><code>next()</code></a>y<a href="#hasNext()"><code>hasNext()</code></a>El método y su método acompañante (por ejemplo,<a href="#nextInt()"><code>nextInt()</code></a>y<a href="#hasNextInt()"><code>hasNextInt()</code></a>) primero saltan cualquier entrada que coincida con el patrón delimitador y luego intentan devolver el siguiente token.</span> <span><code>hasNext()</code>y<code>next()</code>Ambos métodos pueden bloquearse esperando más entrada.</span> <span><code>hasNext()</code>Si el bloque del método está con su asociado<code>next()</code>si el método va a bloquear<code>next()</code> 。</span> <span><a href="#tokens()"><code>tokens()</code></a>El método también puede bloquearse esperando entrada.</span> </p>
+<p> <span>de<a href="#findInLine(java.lang.String)"><code>findInLine()</code></a> ， <a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a> ， <a href="#skip(java.util.regex.Pattern)"><code>skip()</code></a>, y<a href="#findAll(java.util.regex.Pattern)"><code>findAll()</code></a>Operación independiente del patrón delimitador del método.</span> <span>Estos métodos intentarán coincidir con el patrón especificado sin tener en cuenta los delimitadores en la entrada, por lo que se pueden usar en casos especiales en los que los delimitadores no son relevantes.</span> <span>Estos métodos pueden bloquearse esperando más entrada.</span> </p>
+<p> <span>Cuando el escáner lanza<a href="InputMismatchException.html" title="java.util中的类"><code>InputMismatchException</code>Cuando</a>, el escáner no pasará el token que causó la excepción, por lo que se puede recuperar u omitir mediante otros métodos.</span> </p>
+<p> <span>Según el tipo de patrón delimitador, se pueden devolver tokens vacíos.</span> <span>Por ejemplo, el patrón<code>"\\s+"</code>no devolverá tokens vacíos, porque coincide con múltiples instancias del delimitador.</span> <span><code>"\\s"</code>El patrón<code>"\\s"</code>puede devolver tokens vacíos, porque solo pasa un espacio a la vez.</span> </p>
+<p> <span>El escáner puede desde cualquier implementación<a href="../lang/Readable.html" title="java.lang中的接口"><code>Readable</code></a>El objeto de la interfaz lee texto.</span> <span>Si sobre el Readable subyacente<a href="../lang/Readable.html#read(java.nio.CharBuffer)"><code>read()</code></a>la invocación del método lanza<a href="../io/IOException.html" title="java.io中的类"><code>IOException</code>，</a>entonces el escáner asumirá que se ha llegado al final de la entrada.</span> <span>Se puede<a href="#ioException()"><code>ioException()</code></a>recuperar mediante el método la última excepción lanzada por el Readable subyacente.<code>IOException</code> 。</span> </p>
+<p> <span>Cuando<code>Scanner</code>Al cerrar, si la fuente implementa<a href="../io/Closeable.html" title="java.io中的接口"><code>Closeable</code></a>la interfaz, cerrará su fuente de entrada.</span> </p>
+<p> <span><code>Scanner</code>No es seguro para uso multihilo sin sincronización externa.</span> </p>
+<p> <span>A menos que se indique lo contrario,<code>null</code>pasar el parámetro a<code>null</code>cualquier método<code>Scanner</code>hará que se lance<code>NullPointerException</code> 。</span> </p>
+<p> <span>a menos que se utilice el método<a href="#useRadix(int)"><code>useRadix(int)</code></a>que establece una base diferente; de lo contrario, el escáner interpretará los números como decimales por defecto.</span> <span>Independientemente de si el escáner se ha modificado anteriormente,<a href="#reset()"><code>reset()</code></a>el método restablecerá el valor de la base del escáner a<code>10</code> 。</span> </p>
 <h3> <span><a id="localized-numbers">Localized numbers</a></span> </h3>
-<p> <span>此类的实例能够扫描标准格式的数字以及扫描程序的语言环境的格式。</span> <span>扫描仪<a id="initial-locale">initial locale</a>是<a href="Locale.html#getDefault(java.util.Locale.Category)"><code>Locale.getDefault(Locale.Category.FORMAT)</code></a>方法返回的值;</span> <span>它可以通过<a href="#useLocale(java.util.Locale)"><code>useLocale()</code></a>方法更改。</span> <span><a href="#reset()"><code>reset()</code></a>方法将扫描程序的语言环境的值重置为初始语言环境，无论它是否先前已更改。</span> </p>
-<p> <span>本地化格式是根据以下参数定义的，对于特定区域设置，这些参数取自该区域设置的<a href="../text/DecimalFormat.html" title="java.text中的类"><code>DecimalFormat</code></a>对象<code>df</code>及其<a href="../text/DecimalFormatSymbols.html" title="java.text中的类"><code>DecimalFormatSymbols</code></a>对象<code>dfs</code> 。</span> </p>
+<p> <span>Las instancias de esta clase pueden escanear números en el formato estándar y en el formato de la configuración regional del escáner.</span> <span>el escáner<a id="initial-locale">initial locale</a>Sí<a href="Locale.html#getDefault(java.util.Locale.Category)"><code>Locale.getDefault(Locale.Category.FORMAT)</code></a>el valor devuelto por el método;</span> <span>puede ser cambiado<a href="#useLocale(java.util.Locale)"><code>useLocale()</code></a>por el método.</span> <span><a href="#reset()"><code>reset()</code></a>El método restablecerá el valor de la configuración regional del escáner a la configuración regional inicial, haya sido modificada previamente o no.</span> </p>
+<p> <span>El formato localizado se define según los siguientes parámetros, que para una configuración regional particular se toman de dicha configuración regional<a href="../text/DecimalFormat.html" title="java.text中的类"><code>DecimalFormat</code></a>objeto<code>df</code>y su<a href="../text/DecimalFormatSymbols.html" title="java.text中的类"><code>DecimalFormatSymbols</code></a>objeto<code>dfs</code> 。</span> </p>
 <blockquote>
 <span>
 <dl>
@@ -262,13 +262,13 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 </dl></span>
 </blockquote>
 <h4> <span><a id="number-syntax">Number syntax</a></span> </h4>
-<p> <span>可以通过以下正则表达式语法来指定可由该类的实例解析为数字的字符串，其中Rmax是所使用的基数中的最高位（例如，基数10中的Rmax是9）。</span> </p>
+<p> <span>Una cadena que puede ser analizada como un número por una instancia de esta clase se puede especificar mediante la siguiente sintaxis de expresión regular, donde Rmax es el dígito más alto de la base utilizada (por ejemplo, Rmax es 9 en base 10).</span> </p>
 <dl>
 <dt>
 <span><i>NonAsciiDigit</i> ：</span>
 </dt>
 <dd>
-<span>非ASCII字符c， <a href="../lang/Character.html#isDigit(char)"><code>Character.isDigit</code></a> <code>(c)</code>返回true</span>
+<span>Un carácter no ASCII c,<a href="../lang/Character.html#isDigit(char)"><code>Character.isDigit</code></a> <code>(c)</code>devuelve true</span>
 </dd>
 <dt>
 <span><i>Non0Digit</i> ：</span>
@@ -277,7 +277,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <span><code>[1-</code> <i>Rmax</i> <code>] |</code> <i>NonASCIIDigit</i></span>
 </dd>
 <dt>
-<span><i>数字</i> ：</span>
+<span><i>dígito</i> ：</span>
 </dt>
 <dd>
 <span><code>[0-</code> <i>Rmax</i> <code>] |</code> <i>NonASCIIDigit</i></span>
@@ -289,49 +289,49 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <span><code>( </code> <i>Non0Digit</i> <i>Digit</i> <code>?</code> <i>Digit</i> <code>?</code></span>
 </dd>
 <dd>
-<span><code>( </code> <i>LocalGroupSeparator</i> <i>数字</i> <i>位</i> <i>数字</i> <code>)+ )</code></span>
+<span><code>( </code> <i>LocalGroupSeparator</i> <i>dígito</i> <i>Posición</i> <i>dígito</i> <code>)+ )</code></span>
 </dd>
 <dt>
-<span><i>数字</i> ：</span>
+<span><i>dígito</i> ：</span>
 </dt>
 <dd>
-<span><code>( (</code> <i>数字</i> <code>+ ) |</code> <i>GroupedNumeral</i> <code>)</code></span>
+<span><code>( (</code> <i>dígito</i> <code>+ ) |</code> <i>GroupedNumeral</i> <code>)</code></span>
 </dd>
 <dt>
 <span><a id="Integer-regex"><i>Integer</i>:</a></span>
 </dt>
 <dd>
-<span><code>( [-+]? (</code> <i>数字</i> <code>) )</code></span>
+<span><code>( [-+]? (</code> <i>dígito</i> <code>) )</code></span>
 </dd>
 <dd>
-<span><code>|</code> <i>LocalPositivePrefix</i> <i>数字</i> <i>LocalPositiveSuffix</i></span>
+<span><code>|</code> <i>LocalPositivePrefix</i> <i>dígito</i> <i>LocalPositiveSuffix</i></span>
 </dd>
 <dd>
-<span><code>|</code> <i>LocalNegativePrefix</i> <i>数字</i> <i>LocalNegativeSuffix</i></span>
-</dd>
-<dt>
-<span><i>十进制数</i> ：</span>
-</dt>
-<dd>
-<span><i>数字</i></span>
-</dd>
-<dd>
-<span><code>|</code> <i>数字</i> <i>LocalDecimalSeparator</i> <i>数字</i> <code>*</code></span>
-</dd>
-<dd>
-<span><code>|</code> <i>LocalDecimalSeparator</i> <i>数字</i> <code>+</code></span>
+<span><code>|</code> <i>LocalNegativePrefix</i> <i>dígito</i> <i>LocalNegativeSuffix</i></span>
 </dd>
 <dt>
-<span><i>指数</i> ：</span>
+<span><i>Número decimal</i> ：</span>
 </dt>
 <dd>
-<span><code>( [eE] [+-]?</code> <i>数字</i> <code>+ )</code></span>
+<span><i>dígito</i></span>
+</dd>
+<dd>
+<span><code>|</code> <i>dígito</i> <i>LocalDecimalSeparator</i> <i>dígito</i> <code>*</code></span>
+</dd>
+<dd>
+<span><code>|</code> <i>LocalDecimalSeparator</i> <i>dígito</i> <code>+</code></span>
+</dd>
+<dt>
+<span><i>Exponente</i> ：</span>
+</dt>
+<dd>
+<span><code>( [eE] [+-]?</code> <i>dígito</i> <code>+ )</code></span>
 </dd>
 <dt>
 <span><a id="Decimal-regex"><i>Decimal</i>:</a></span>
 </dt>
 <dd>
-<span><code>( [-+]?</code> <i>DecimalNumeral</i> <i>指数</i> <code>? )</code></span>
+<span><code>( [-+]?</code> <i>DecimalNumeral</i> <i>Exponente</i> <code>? )</code></span>
 </dd>
 <dd>
 <span><code>|</code> <i>LocalPositivePrefix</i> <i>DecimalNumeral</i> <i>LocalPositiveSuffix</i> <i>Exponent</i> <code>?</code></span>
@@ -346,7 +346,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <code>[-+]? 0[xX][0-9a-fA-F]*\.[0-9a-fA-F]+ ([pP][-+]?[0-9]+)?</code>
 </dd>
 <dt>
-<span><i>非数字</i> ：</span>
+<span><i>No numérico</i> ：</span>
 </dt>
 <dd>
 <span><code>NaN |</code> <i>LocalNan</i> <code>| Infinity |</code> <i>LocalInfinity</i></span>
@@ -367,14 +367,14 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <span><a id="Float-regex"><i>Float</i></a> ：</span>
 </dt>
 <dd>
-<span><i>十进制</i> <code>|</code> <i>HexFloat</i> <code>|</code> <i>SignedNonNumber</i></span>
+<span><i>Decimal</i> <code>|</code> <i>HexFloat</i> <code>|</code> <i>SignedNonNumber</i></span>
 </dd>
 </dl>
-<p> <span>在上述正则表达式中，空格并不重要。</span> </p>
+<p> <span>En la expresión regular anterior, los espacios no son importantes.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
           1.5 
@@ -392,125 +392,83 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a> <h3>Resumen de constructores</h3>
 <table class="memberSummary">
 <caption>
-<span>构造方法</span>
+<span>Método constructor</span>
 <span class="tabEnd"> </span>
 </caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">构造器</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File)">Scanner</a></span>​(<a href="../io/File.html" title="class in java.io">File</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File,java.lang.String)">Scanner</a></span>​(<a href="../io/File.html" title="class in java.io">File</a> source, <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File,java.nio.charset.Charset)">Scanner</a></span>​(<a href="../io/File.html" title="class in java.io">File</a> source, <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream)">Scanner</a></span>​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定输入流扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream,java.lang.String)">Scanner</a></span>​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source, <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定输入流扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream,java.nio.charset.Charset)">Scanner</a></span>​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source, <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定输入流扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.Readable)">Scanner</a></span>​(<a href="../lang/Readable.html" title="interface in java.lang">Readable</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定源扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados de la fuente especificada.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">Scanner</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定字符串扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados de la cadena especificada.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.channels.ReadableByteChannel)">Scanner</a></span>​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它可以生成从指定通道扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.channels.ReadableByteChannel,java.lang.String)">Scanner</a></span>​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source, <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它可以生成从指定通道扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.channels.ReadableByteChannel,java.nio.charset.Charset)">Scanner</a></span>​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source, <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它可以生成从指定通道扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path)">Scanner</a></span>​(<a href="../nio/file/Path.html" title="interface in java.nio.file">Path</a> source)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path,java.lang.String)">Scanner</a></span>​(<a href="../nio/file/Path.html" title="interface in java.nio.file">Path</a> source, <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path,java.nio.charset.Charset)">Scanner</a></span>​(<a href="../nio/file/Path.html" title="interface in java.nio.file">Path</a> source, <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个新的 
-               <code>Scanner</code> ，它生成从指定文件扫描的值。 
-              </div> </td>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</div> </td>
 </tr>
 </tbody>
 </table> </li>
@@ -523,299 +481,215 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a> <h3>Resumen de métodos</h3>
 <table class="memberSummary">
 <caption>
-<span class="activeTableTab" id="t0"><span>所有方法</span><span class="tabEnd"> </span>
+<span class="activeTableTab" id="t0"><span>Todos los métodos</span><span class="tabEnd"> </span>
 <span class="tableTab" id="t2"><span><a href="javascript:show(2);">Método de instancia</a> </span></span>
 <span class="tableTab" id="t4"><span><a href="javascript:show(8);">Método específico</a></span><span class="tabEnd"> </span></span>
 </span></caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">变量和类型</th>
-<th class="colSecond" scope="col">方法</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Variables y tipos</th>
+<th class="colSecond" scope="col">Método</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#close()">close</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                关闭此扫描仪。 
-              </div> </td>
+<div class="block">Cierra este escáner.</div> </td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#delimiter()">delimiter</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回 
-               <code>Pattern</code>这 
-               <code>Scanner</code>目前用于匹配分隔符。 
-              </div> </td>
+<div class="block">Devuelve<code>Pattern</code>esto<code>Scanner</code>Actualmente se utiliza para hacer coincidir los delimitadores.</div> </td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findAll(java.lang.String)">findAll</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> patString)</code></th>
 <td class="colLast">
-<div class="block">
-                返回与提供的模式字符串匹配的匹配结果流。 
-              </div> </td>
+<div class="block">Devuelve un flujo de resultados de coincidencia que coinciden con la cadena de patrón proporcionada.</div> </td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findAll(java.util.regex.Pattern)">findAll</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此扫描程序的匹配结果流。 
-              </div> </td>
+<div class="block">Devuelve el flujo de resultados de coincidencia de este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findInLine(java.lang.String)">findInLine</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                尝试查找从指定字符串构造的下一个模式，忽略分隔符。 
-              </div> </td>
+<div class="block">Intenta encontrar el siguiente patrón construido a partir de la cadena especificada, ignorando los delimitadores.</div> </td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findInLine(java.util.regex.Pattern)">findInLine</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                尝试查找指定模式的下一个匹配项，忽略分隔符。 
-              </div> </td>
+<div class="block">Intenta encontrar la siguiente coincidencia del patrón especificado, ignorando los delimitadores.</div> </td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findWithinHorizon(java.lang.String,int)">findWithinHorizon</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern, int horizon)</code></th>
 <td class="colLast">
-<div class="block">
-                尝试查找从指定字符串构造的下一个模式，忽略分隔符。 
-              </div> </td>
+<div class="block">Intenta encontrar el siguiente patrón construido a partir de la cadena especificada, ignorando los delimitadores.</div> </td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findWithinHorizon(java.util.regex.Pattern,int)">findWithinHorizon</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern, int horizon)</code></th>
 <td class="colLast">
-<div class="block">
-                尝试查找指定模式的下一个匹配项。 
-              </div> </td>
+<div class="block">Intenta encontrar la siguiente coincidencia del patrón especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNext()">hasNext</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器的输入中有另一个标记，则返回true。 
-              </div> </td>
+<div class="block">Devuelve true si hay otro token en la entrada de este escáner.</div> </td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNext(java.lang.String)">hasNext</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                如果下一个标记与从指定字符串构造的模式匹配，则返回true。 
-              </div> </td>
+<div class="block">Devuelve true si el siguiente token coincide con el patrón construido a partir de la cadena especificada.</div> </td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNext(java.util.regex.Pattern)">hasNext</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                如果下一个完整标记与指定模式匹配，则返回true。 
-              </div> </td>
+<div class="block">Devuelve true si el siguiente token completo coincide con el patrón especificado.</div> </td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextBigDecimal()">hasNextBigDecimal</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器输入中的下一个标记可以使用 
-               <a href="#nextBigDecimal()"><code>nextBigDecimal()</code></a>方法解释为 
-               <code>BigDecimal</code>则返回true。 
-              </div> </td>
+<div class="block">Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextBigDecimal()"><code>nextBigDecimal()</code></a>método interpretado como<code>BigDecimal</code>entonces devuelve true.</div> </td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextBigInteger()">hasNextBigInteger</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器输入中的下一个标记可以使用 
-               <a href="#nextBigInteger()"><code>nextBigInteger()</code></a>方法在默认基数中解释为 
-               <code>BigInteger</code> ，则返回true。 
-              </div> </td>
+<div class="block">Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>método en la base predeterminada interpretado como<code>BigInteger</code>, entonces devuelve true.</div> </td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextBigInteger(int)">hasNextBigInteger</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器输入中的下一个标记可以使用 
-               <a href="#nextBigInteger()"><code>nextBigInteger()</code></a>方法在指定的基数中解释为 
-               <code>BigInteger</code> ，则返回true。 
-              </div> </td>
+<div class="block">Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>método en la base especificada interpretado como<code>BigInteger</code>, entonces devuelve true.</div> </td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextBoolean()">hasNextBoolean</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用从字符串“true | false”创建的不区分大小写的模式，可以将此扫描器输入中的下一个标记解释为布尔值，则返回true。 
-              </div> </td>
+<div class="block">Devuelve true si, utilizando un patrón que no distingue mayúsculas de minúsculas creado a partir de la cadena "true | false", el siguiente token de la entrada de este escáner puede interpretarse como un valor booleano.</div> </td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextByte()">hasNextByte</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextByte()"><code>nextByte()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的字节值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextByte()"><code>nextByte()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor byte en la base predeterminada.</div> </td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextByte(int)">hasNextByte</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextByte()"><code>nextByte()</code></a>方法将此扫描器输入中的下一个标记解释为指定基数中的字节值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextByte()"><code>nextByte()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor byte en la base especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextDouble()">hasNextDouble</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextDouble()"><code>nextDouble()</code></a>方法将此扫描仪输入中的下一个标记解释为double值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextDouble()"><code>nextDouble()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor double.</div> </td>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextFloat()">hasNextFloat</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextFloat()"><code>nextFloat()</code></a>方法将此扫描器输入中的下一个标记解释为浮点值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextFloat()"><code>nextFloat()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor de punto flotante.</div> </td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextInt()">hasNextInt</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextInt()"><code>nextInt()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的int值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextInt()"><code>nextInt()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor int en la base predeterminada.</div> </td>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextInt(int)">hasNextInt</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器输入中的下一个标记可以使用 
-               <a href="#nextInt()"><code>nextInt()</code></a>方法解释为指定基数中的int值，则返回true。 
-              </div> </td>
+<div class="block">Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextInt()"><code>nextInt()</code></a>Devuelve true si el método interpreta el siguiente token como un valor int en la base especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextLine()">hasNextLine</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器的输入中有另一行，则返回true。 
-              </div> </td>
+<div class="block">Devuelve true si hay otra línea en la entrada de este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i22">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextLong()">hasNextLong</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextLong()"><code>nextLong()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的长值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextLong()"><code>nextLong()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor long en la base predeterminada.</div> </td>
 </tr>
 <tr class="rowColor" id="i23">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextLong(int)">hasNextLong</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextLong()"><code>nextLong()</code></a>方法可以将此扫描器输入中的下一个标记解释为指定基数中的长值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextLong()"><code>nextLong()</code></a>Devuelve true si el método puede interpretar el siguiente token de la entrada de este escáner como un valor long en la base especificada.</div> </td>
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextShort()">hasNextShort</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                如果使用 
-               <a href="#nextShort()"><code>nextShort()</code></a>方法可以将此扫描器输入中的下一个标记解释为默认基数中的短值，则返回true。 
-              </div> </td>
+<div class="block">Si se utiliza<a href="#nextShort()"><code>nextShort()</code></a>Devuelve true si el método puede interpretar el siguiente token de la entrada de este escáner como un valor short en la base predeterminada.</div> </td>
 </tr>
 <tr class="rowColor" id="i25">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasNextShort(int)">hasNextShort</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此扫描器输入中的下一个标记可以使用 
-               <a href="#nextShort()"><code>nextShort()</code></a>方法解释为指定基数中的短值，则返回true。 
-              </div> </td>
+<div class="block">Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextShort()"><code>nextShort()</code></a>Devuelve true si el método interpreta el siguiente token como un valor short en la base especificada.</div> </td>
 </tr>
 <tr class="altColor" id="i26">
 <td class="colFirst"><code><a href="../io/IOException.html" title="class in java.io">IOException</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ioException()">ioException</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回 
-               <code>IOException</code>最后通过此抛出 
-               <code>Scanner</code>的基本 
-               <code>Readable</code> 。 
+<div class="block">Devuelve<code>IOException</code>Finalmente lanzado a través de este.<code>Scanner</code>lo básico de<code>Readable</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i27">
 <td class="colFirst"><code><a href="Locale.html" title="class in java.util">Locale</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locale()">locale</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此扫描程序的语言环境。 
-              </div> </td>
+<div class="block">Devuelve la configuración regional de este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code><a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#match()">match</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此扫描程序执行的上次扫描操作的匹配结果。 
-              </div> </td>
+<div class="block">Devuelve el resultado de coincidencia de la última operación de escaneo realizada por este escáner.</div> </td>
 </tr>
 <tr class="rowColor" id="i29">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#next()">next</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此扫描仪查找并返回下一个完整令牌。 
-              </div> </td>
+<div class="block">Busca y devuelve el siguiente token completo de este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i30">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#next(java.lang.String)">next</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                如果它与从指定字符串构造的模式匹配，则返回下一个标记。 
-              </div> </td>
+<div class="block">Devuelve el siguiente token si coincide con el patrón construido a partir de la cadena especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i31">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#next(java.util.regex.Pattern)">next</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                如果匹配指定的模式，则返回下一个标记。 
-              </div> </td>
+<div class="block">Devuelve el siguiente token si coincide con el patrón especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i32">
 <td class="colFirst"><code><a href="../math/BigDecimal.html" title="class in java.math">BigDecimal</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextBigDecimal()">nextBigDecimal</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigDecimal.html" title="java.math中的类"><code>BigDecimal</code></a> 。</span>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigDecimal.html" title="java.math中的类"><code>BigDecimal</code></a> 。</span>
 </div> </td>
 </tr>
 <tr class="rowColor" id="i33">
@@ -823,7 +697,7 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextBigInteger()">nextBigInteger</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
 </div> </td>
 </tr>
 <tr class="altColor" id="i34">
@@ -831,205 +705,158 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextBigInteger(int)">nextBigInteger</a></span>​(int radix)</code></th>
 <td class="colLast">
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
 </div> </td>
 </tr>
 <tr class="rowColor" id="i35">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextBoolean()">nextBoolean</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为布尔值并返回该值。 
-              </div> </td>
+<div class="block">Escanea el siguiente token de la entrada como un valor booleano y devuelve ese valor.</div> </td>
 </tr>
 <tr class="altColor" id="i36">
 <td class="colFirst"><code>byte</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextByte()">nextByte</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>byte</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>byte</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code>byte</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextByte(int)">nextByte</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>byte</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>byte</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i38">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextDouble()">nextDouble</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>double</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>double</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i39">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextFloat()">nextFloat</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>float</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>float</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i40">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextInt()">nextInt</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>int</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>int</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i41">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextInt(int)">nextInt</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>int</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>int</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i42">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextLine()">nextLine</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                使此扫描器前进超过当前行并返回跳过的输入。 
-              </div> </td>
+<div class="block">Avanza este escáner más allá de la línea actual y devuelve la entrada omitida.</div> </td>
 </tr>
 <tr class="rowColor" id="i43">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextLong()">nextLong</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>long</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>long</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i44">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextLong(int)">nextLong</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>long</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>long</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i45">
 <td class="colFirst"><code>short</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextShort()">nextShort</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>short</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>short</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i46">
 <td class="colFirst"><code>short</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nextShort(int)">nextShort</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                将输入的下一个标记扫描为 
-               <code>short</code> 。 
+<div class="block">Escanea el siguiente token de la entrada como<code>short</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i47">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#radix()">radix</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此扫描器的默认基数。 
-              </div> </td>
+<div class="block">Devuelve la base predeterminada de este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i48">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove()">remove</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<code>Iterator</code>的此实现不支持删除操作。 
-              </div> </td>
+<code>Iterator</code>Esta implementación no admite la operación de eliminación.</div> </td>
 </tr>
 <tr class="rowColor" id="i49">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reset()">reset</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                重置此扫描仪。 
-              </div> </td>
+<div class="block">Restablece este escáner.</div> </td>
 </tr>
 <tr class="altColor" id="i50">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skip(java.lang.String)">skip</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                跳过与指定字符串构造的模式匹配的输入。 
-              </div> </td>
+<div class="block">Omite la entrada que coincide con el patrón construido a partir de la cadena especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i51">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skip(java.util.regex.Pattern)">skip</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                跳过与指定模式匹配的输入，忽略分隔符。 
-              </div> </td>
+<div class="block">Omite la entrada que coincide con el patrón especificado, ignorando los delimitadores.</div> </td>
 </tr>
 <tr class="altColor" id="i52">
 <td class="colFirst"><code><a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tokens()">tokens</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此扫描程序返回分隔符分隔的标记流。 
-              </div> </td>
+<div class="block">Devuelve un flujo de tokens separados por delimitadores de este escáner.</div> </td>
 </tr>
 <tr class="rowColor" id="i53">
 <td class="colFirst"><code><a href="../lang/String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此 
-               <code>Scanner</code>的字符串表示 
-               <code>Scanner</code> 。 
+<div class="block">Devuelve este<code>Scanner</code>la representación de cadena de<code>Scanner</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i54">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#useDelimiter(java.lang.String)">useDelimiter</a></span>​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                将此扫描仪的分隔模式设置为从指定的 
-               <code>String</code>构造的模式。 
-              </div> </td>
+<div class="block">Establece el patrón delimitador de este escáner al construido a partir de la especificada.<code>String</code>el patrón construido.</div> </td>
 </tr>
 <tr class="rowColor" id="i55">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#useDelimiter(java.util.regex.Pattern)">useDelimiter</a></span>​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</code></th>
 <td class="colLast">
-<div class="block">
-                将此扫描仪的分隔模式设置为指定的模式。 
-              </div> </td>
+<div class="block">Establece el patrón delimitador de este escáner al patrón especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i56">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#useLocale(java.util.Locale)">useLocale</a></span>​(<a href="Locale.html" title="class in java.util">Locale</a> locale)</code></th>
 <td class="colLast">
-<div class="block">
-                将此扫描程序的语言环境设置为指定的语言环境。 
-              </div> </td>
+<div class="block">Establece la configuración regional de este escáner a la configuración regional especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i57">
 <td class="colFirst"><code><a href="Scanner.html" title="class in java.util">Scanner</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#useRadix(int)">useRadix</a></span>​(int radix)</code></th>
 <td class="colLast">
-<div class="block">
-                将此扫描仪的默认基数设置为指定的基数。 
-              </div> </td>
+<div class="block">Establece la base predeterminada de este escáner a la base especificada.</div> </td>
 </tr>
 </tbody>
 </table>
@@ -1056,16 +883,13 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../lang/Readable.html" title="interface in java.lang">Readable</a> source)</pre>
-<div class="block">
-              构造一个新的 
-             <code>Scanner</code> ，它可以生成从指定源扫描的值。 
-            </div>
+<div class="block">Construye un nuevo<code>Scanner</code>, puede generar valores escaneados desde una fuente especificada.</div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<span><code>source</code> - 实现<a href="../lang/Readable.html" title="java.lang中的接口"><code>Readable</code></a>接口的字符源</span>
+<span><code>source</code>- Implementa<a href="../lang/Readable.html" title="java.lang中的接口"><code>Readable</code></a>la fuente de caracteres de la interfaz</span>
 </dd>
 </dl> </li>
 </ul> <a id="&lt;init&gt;(java.io.InputStream)">
@@ -1073,12 +897,12 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定输入流扫描的值。</span>
-<span>使用底层平台<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>将流中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</span>
+<span>usando la plataforma subyacente<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>Convierte bytes de un flujo en caracteres.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El flujo de entrada a escanear</dd>
@@ -1089,19 +913,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source,
                <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定输入流扫描的值。</span>
-<span>使用指定的字符集将流中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</span>
+<span>Convierte bytes de un flujo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El flujo de entrada a escanear</dd>
 <dd>
 <code>charsetName</code>- Tipo de codificación utilizado para convertir bytes del flujo en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>Si el conjunto de caracteres especificado no existe</dd>
@@ -1112,19 +936,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../io/InputStream.html" title="class in java.io">InputStream</a> source,
                <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定输入流扫描的值。</span>
-<span>使用指定的字符集将流中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del flujo de entrada especificado.</span>
+<span>Convierte bytes de un flujo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El flujo de entrada a escanear</dd>
 <dd>
 <code>charset</code>- Conjunto de caracteres utilizado para convertir bytes del archivo en caracteres a escanear.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                10 
@@ -1136,17 +960,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../io/File.html" title="class in java.io">File</a> source)
         throws <a href="../io/FileNotFoundException.html" title="class in java.io">FileNotFoundException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用底层平台<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>usando la plataforma subyacente<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>Convierte bytes de un archivo en caracteres.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El archivo a escanear</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/FileNotFoundException.html" title="class in java.io">FileNotFoundException</a></code>Si no se encuentra la fuente</dd>
@@ -1158,19 +982,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
                <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)
         throws <a href="../io/FileNotFoundException.html" title="class in java.io">FileNotFoundException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用指定的字符集将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>Convierte bytes de un archivo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El archivo a escanear</dd>
 <dd>
 <code>charsetName</code>- Tipo de codificación utilizado para convertir bytes del archivo en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/FileNotFoundException.html" title="class in java.io">FileNotFoundException</a></code>Si no se encuentra la fuente</dd>
@@ -1184,24 +1008,24 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
                <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)
         throws <a href="../io/IOException.html" title="class in java.io">IOException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用指定的字符集将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>Convierte bytes de un archivo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El archivo a escanear</dd>
 <dd>
 <code>charset</code>- Conjunto de caracteres utilizado para convertir bytes del archivo en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/IOException.html" title="class in java.io">IOException</a></code>- Si se produce un error de E/S al abrir el origen.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                10 
@@ -1213,22 +1037,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../nio/file/Path.html" title="interface in java.nio.file">Path</a> source)
         throws <a href="../io/IOException.html" title="class in java.io">IOException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用底层平台<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>usando la plataforma subyacente<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>Convierte bytes de un archivo en caracteres.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>La ruta del archivo a escanear</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/IOException.html" title="class in java.io">IOException</a></code>- Si se produce un error de E/S al abrir el origen.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.7 
@@ -1241,26 +1065,26 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
                <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)
         throws <a href="../io/IOException.html" title="class in java.io">IOException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用指定的字符集将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>Convierte bytes de un archivo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>La ruta del archivo a escanear</dd>
 <dd>
 <code>charsetName</code>- Tipo de codificación utilizado para convertir bytes del archivo en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/IOException.html" title="class in java.io">IOException</a></code>- Si se produce un error de E/S al abrir el origen.</dd>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>Si no se encuentra la codificación especificada</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.7 
@@ -1273,24 +1097,24 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
                <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)
         throws <a href="../io/IOException.html" title="class in java.io">IOException</a></pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它生成从指定文件扫描的值。</span>
-<span>使用指定的字符集将文件中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que genera valores escaneados del archivo especificado.</span>
+<span>Convierte bytes de un archivo en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>La ruta del archivo a escanear</dd>
 <dd>
 <code>charset</code>- Conjunto de caracteres utilizado para convertir bytes del archivo en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../io/IOException.html" title="class in java.io">IOException</a></code>- Si se produce un error de E/S al abrir el origen.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                10 
@@ -1300,13 +1124,10 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../lang/String.html" title="class in java.lang">String</a> source)</pre>
-<div class="block">
-              构造一个新的 
-             <code>Scanner</code> ，它生成从指定字符串扫描的值。 
-            </div>
+<div class="block">Construye un nuevo<code>Scanner</code>, que genera valores escaneados de la cadena especificada.</div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>La cadena a escanear</dd>
@@ -1316,12 +1137,12 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它可以生成从指定通道扫描的值。</span>
-<span>使用底层平台<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>将来自源的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</span>
+<span>usando la plataforma subyacente<a href="../nio/charset/Charset.html#defaultCharset()">default charset</a>Convierte bytes de la fuente en caracteres.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El canal a escanear</dd>
@@ -1332,19 +1153,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source,
                <a href="../lang/String.html" title="class in java.lang">String</a> charsetName)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它可以生成从指定通道扫描的值。</span>
-<span>使用指定的字符集将源中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</span>
+<span>Convierte bytes de la fuente en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El canal a escanear</dd>
 <dd>
 <code>charsetName</code>- Tipo de codificación utilizado para convertir bytes del canal en caracteres a escanear.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>Si el conjunto de caracteres especificado no existe</dd>
@@ -1355,19 +1176,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>Scanner</h4> <pre>public Scanner​(<a href="../nio/channels/ReadableByteChannel.html" title="interface in java.nio.channels">ReadableByteChannel</a> source,
                <a href="../nio/charset/Charset.html" title="class in java.nio.charset">Charset</a> charset)</pre>
 <div class="block">
-<span>构造一个新的<code>Scanner</code> ，它可以生成从指定通道扫描的值。</span>
-<span>使用指定的字符集将源中的字节转换为字符。</span>
+<span>Construye un nuevo<code>Scanner</code>, que puede generar valores escaneados del canal especificado.</span>
+<span>Convierte bytes de la fuente en caracteres usando el juego de caracteres especificado.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>source</code>El canal a escanear</dd>
 <dd>
 <code>charset</code>- Tipo de codificación utilizado para convertir bytes del canal en caracteres a escanear.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                10 
@@ -1385,24 +1206,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>close</h4> <pre class="methodSignature">public void close()</pre>
 <div class="block">
-<span>关闭此扫描仪。</span>
-<p> <span>如果此扫描程序尚未关闭，那么如果其底层<a href="../lang/Readable.html" title="java.lang中的接口">readable</a>也实现了<a href="../io/Closeable.html" title="java.io中的接口"><code>Closeable</code></a>接口，则将调用可读的<code>close</code>方法。</span> <span>如果此扫描仪已关闭，则调用此方法将不起作用。</span> </p>
-<p> <span>扫描仪关闭后尝试执行搜索操作将导致<a href="../lang/IllegalStateException.html" title="java.lang中的类"><code>IllegalStateException</code></a> 。</span> </p>
+<span>Cierra este escáner.</span>
+<p> <span>Si este escáner aún no se ha cerrado, entonces si su subyacente<a href="../lang/Readable.html" title="java.lang中的接口">readable</a>también implementa<a href="../io/Closeable.html" title="java.io中的接口"><code>Closeable</code></a>interfaz, se invocará el método close del legible<code>close</code>método.</span> <span>Si este escáner ya está cerrado, invocar este método no tendrá efecto.</span> </p>
+<p> <span>Después de que el escáner se haya cerrado, intentar realizar operaciones de búsqueda provocará<a href="../lang/IllegalStateException.html" title="java.lang中的类"><code>IllegalStateException</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="../lang/AutoCloseable.html#close()">close</a></code>在界面 
-              <code><a href="../lang/AutoCloseable.html" title="interface in java.lang">AutoCloseable</a></code>
+<code><a href="../lang/AutoCloseable.html#close()">close</a></code>En la interfaz<code><a href="../lang/AutoCloseable.html" title="interface in java.lang">AutoCloseable</a></code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="../io/Closeable.html#close()">close</a></code>在界面 
-              <code><a href="../io/Closeable.html" title="interface in java.io">Closeable</a></code>
+<code><a href="../io/Closeable.html#close()">close</a></code>En la interfaz<code><a href="../io/Closeable.html" title="interface in java.io">Closeable</a></code>
 </dd>
 </dl> </li>
 </ul> <a id="ioException()">
@@ -1410,12 +1229,12 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>ioException</h4> <pre class="methodSignature">public <a href="../io/IOException.html" title="class in java.io">IOException</a> ioException()</pre>
 <div class="block">
-<span>返回<code>IOException</code>最后通过此抛出<code>Scanner</code>的基本<code>Readable</code> 。</span>
-<span>如果不存在此类异常，则此方法返回<code>null</code> 。</span>
+<span>Devuelve<code>IOException</code>Finalmente lanzado a través de este.<code>Scanner</code>lo básico de<code>Readable</code> 。</span>
+<span>Si no existe tal excepción, este método devuelve<code>null</code> 。</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La última excepción del Readable de este escáner</dd>
 </dl> </li>
@@ -1423,14 +1242,10 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>delimiter</h4> <pre class="methodSignature">public <a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> delimiter()</pre>
-<div class="block">
-              返回 
-             <code>Pattern</code>此 
-             <code>Scanner</code>目前用于匹配分隔符。 
-            </div>
+<div class="block">Devuelve<code>Pattern</code>Este<code>Scanner</code>Actualmente se utiliza para hacer coincidir los delimitadores.</div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El patrón de delimitación de este escáner.</dd>
 </dl> </li>
@@ -1438,57 +1253,50 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>useDelimiter</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> useDelimiter​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
-<div class="block">
-              将此扫描仪的分隔模式设置为指定的模式。 
-            </div>
+<div class="block">Establece el patrón delimitador de este escáner al patrón especificado.</div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code> - 
-              <code>pattern</code>模式 
-             </dd>
+              <code>pattern</code>El patrón</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 </dl> </li>
 </ul> <a id="useDelimiter(java.lang.String)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>useDelimiter</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> useDelimiter​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</pre>
 <div class="block">
-<span>将此扫描仪的分隔模式设置为从指定的<code>String</code>构造的模式。</span>
-<p> <span>调用<code>useDelimiter(pattern)</code>形式的此方法的行为与调用<code>useDelimiter(Pattern.compile(pattern))</code> 。</span> </p>
-<p> <span>调用<a href="#reset()"><code>reset()</code></a>方法会将扫描仪的分隔符设置为<a href="#default-delimiter">default</a> 。</span> </p>
+<span>Establece el patrón delimitador de este escáner al construido a partir de la especificada.<code>String</code>el patrón construido.</span>
+<p> <span>La llamada<code>useDelimiter(pattern)</code>el comportamiento y la invocación de este método de la forma<code>useDelimiter(Pattern.compile(pattern))</code> 。</span> </p>
+<p> <span>La llamada<a href="#reset()"><code>reset()</code></a>el método establecerá el delimitador del escáner en<a href="#default-delimiter">default</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>La cadena que especifica el patrón de delimitación</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 </dl> </li>
 </ul> <a id="locale()">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>locale</h4> <pre class="methodSignature">public <a href="Locale.html" title="class in java.util">Locale</a> locale()</pre>
 <div class="block">
-<span>返回此扫描程序的语言环境。</span>
-<p> <span>扫描程序的语言环境会影响与正则表达式匹配的默认基元的许多元素;</span> <span>见上面的<a href="#localized-numbers">localized numbers</a> 。</span> </p>
+<span>Devuelve la configuración regional de este escáner.</span>
+<p> <span>La configuración regional del escáner afecta a muchos de los elementos de los primitivos predeterminados que coinciden con expresiones regulares;</span> <span>véase el anterior<a href="#localized-numbers">localized numbers</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La configuración regional de este escáner</dd>
 </dl> </li>
@@ -1497,34 +1305,32 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>useLocale</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> useLocale​(<a href="Locale.html" title="class in java.util">Locale</a> locale)</pre>
 <div class="block">
-<span>将此扫描程序的语言环境设置为指定的语言环境。</span>
-<p> <span>扫描程序的语言环境会影响与正则表达式匹配的默认基元的许多元素;</span> <span>见上面的<a href="#localized-numbers">localized numbers</a> 。</span> </p>
-<p> <span>调用<a href="#reset()"><code>reset()</code></a>方法会将扫描仪的语言环境设置为<a href="#initial-locale">initial locale</a> 。</span> </p>
+<span>Establece la configuración regional de este escáner a la configuración regional especificada.</span>
+<p> <span>La configuración regional del escáner afecta a muchos de los elementos de los primitivos predeterminados que coinciden con expresiones regulares;</span> <span>véase el anterior<a href="#localized-numbers">localized numbers</a> 。</span> </p>
+<p> <span>La llamada<a href="#reset()"><code>reset()</code></a>el método establecerá la configuración regional del escáner en<a href="#initial-locale">initial locale</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>locale</code>- Cadena que especifica la configuración regional a utilizar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 </dl> </li>
 </ul> <a id="radix()">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>radix</h4> <pre class="methodSignature">public int radix()</pre>
 <div class="block">
-<span>返回此扫描器的默认基数。</span>
-<p> <span>扫描仪的基数会影响与正则表达式匹配的默认数字元素;</span> <span>见上面的<a href="#localized-numbers">localized numbers</a> 。</span> </p>
+<span>Devuelve la base predeterminada de este escáner.</span>
+<p> <span>La base del escáner afecta a los elementos numéricos predeterminados que coinciden con expresiones regulares;</span> <span>véase el anterior<a href="#localized-numbers">localized numbers</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La base predeterminada de este escáner</dd>
 </dl> </li>
@@ -1533,25 +1339,23 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>useRadix</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> useRadix​(int radix)</pre>
 <div class="block">
-<span>将此扫描仪的默认基数设置为指定的基数。</span>
-<p> <span>扫描仪的基数会影响与正则表达式匹配的默认数字元素;</span> <span>见上面的<a href="#localized-numbers">localized numbers</a> 。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
-<p> <span>调用<a href="#reset()"><code>reset()</code></a>方法会将扫描仪的基数设置为<code>10</code> 。</span> </p>
+<span>Establece la base predeterminada de este escáner a la base especificada.</span>
+<p> <span>La base del escáner afecta a los elementos numéricos predeterminados que coinciden con expresiones regulares;</span> <span>véase el anterior<a href="#localized-numbers">localized numbers</a> 。</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
+<p> <span>La llamada<a href="#reset()"><code>reset()</code></a>el método establecerá la base del escáner en<code>10</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>La base utilizada al escanear números</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalArgumentException.html" title="class in java.lang">IllegalArgumentException</a></code>Si la base está fuera de rango</dd>
@@ -1561,17 +1365,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>match</h4> <pre class="methodSignature">public <a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a> match()</pre>
 <div class="block">
-<span>返回此扫描程序执行的上次扫描操作的匹配结果。</span>
-<span>如果未执行匹配，或者最后一次匹配<code>IllegalStateException</code>则此方法抛出<code>IllegalStateException</code> 。</span>
-<p> <span>各种<code>next</code>的方法<code>Scanner</code>使，如果他们完成未抛出异常的比赛结果可用。</span> <span>例如，在调用返回int的<a href="#nextInt()"><code>nextInt()</code></a>方法之后，此方法返回<code>MatchResult</code>以搜索上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式。</span> <span>同样， <a href="#findInLine(java.lang.String)"><code>findInLine()</code></a> ， <a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>和<a href="#skip(java.util.regex.Pattern)"><code>skip()</code></a>方法将一个匹配结果，如果他们取得成功。</span> </p>
+<span>Devuelve el resultado de coincidencia de la última operación de escaneo realizada por este escáner.</span>
+<span>si no se realizó ninguna coincidencia, o la última coincidencia<code>IllegalStateException</code>entonces este método lanza<code>IllegalStateException</code> 。</span>
+<p> <span>varios<code>next</code>de los métodos<code>Scanner</code>hace disponible el resultado de la coincidencia si terminan sin lanzar una excepción.</span> <span>Por ejemplo, al llamar al que devuelve int<a href="#nextInt()"><code>nextInt()</code></a>después del método, este método devuelve<code>MatchResult</code>para buscar el definido anteriormente<a href="#Integer-regex"><i>Integer</i></a>expresión regular.</span> <span>Del mismo modo,<a href="#findInLine(java.lang.String)"><code>findInLine()</code></a> ， <a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>y<a href="#skip(java.util.regex.Pattern)"><code>skip()</code></a>el método devolverá un resultado de coincidencia, si tienen éxito.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Resultado de la última operación de coincidencia</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>- Si no hay ningún resultado de coincidencia disponible</dd>
@@ -1581,18 +1385,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>toString</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> toString()</pre>
 <div class="block">
-<p> <span>返回此<code>Scanner</code>的字符串表示<code>Scanner</code> 。</span> <span><code>Scanner</code>的字符串表示<code>Scanner</code>包含可能对调试有用的信息。</span> <span>具体格式未指定。</span> </p>
+<p> <span>Devuelve este<code>Scanner</code>la representación de cadena de<code>Scanner</code> 。</span> <span><code>Scanner</code>la representación de cadena de<code>Scanner</code>Contiene información que puede ser útil para la depuración.</span> <span>El formato específico no está especificado.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="../lang/Object.html#toString()">toString</a></code>课程类别 
-              <code><a href="../lang/Object.html" title="class in java.lang">Object</a></code>
+<code><a href="../lang/Object.html#toString()">toString</a></code>Categoría de curso<code><a href="../lang/Object.html" title="class in java.lang">Object</a></code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La representación de cadena de este escáner</dd>
 </dl> </li>
@@ -1601,29 +1404,28 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNext</h4> <pre class="methodSignature">public boolean hasNext()</pre>
 <div class="block">
-<span>如果此扫描器的输入中有另一个标记，则返回true。</span>
-<span>在等待输入扫描时，此方法可能会阻塞。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Devuelve true si hay otro token en la entrada de este escáner.</span>
+<span>Mientras espera la exploración de la entrada, este método puede bloquearse.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Iterator.html#hasNext()">hasNext</a></code> ，界面 
-              <code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
+<code><a href="Iterator.html#hasNext()">hasNext</a></code>, la interfaz<code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si este escáner tiene otro token.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="Iterator.html" title="java.util中的接口"><code>Iterator</code></a></span>
@@ -1634,33 +1436,30 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>next</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> next()</pre>
 <div class="block">
-<span>从此扫描仪查找并返回下一个完整令牌。</span>
-<span>在完成令牌之前和之后是与分隔符模式匹配的输入。</span>
-<span>即使先前调用<a href="#hasNext()"><code>hasNext()</code></a>返回<code>true</code> ，此方法也可能在等待输入扫描时<code>true</code> 。</span>
+<span>Busca y devuelve el siguiente token completo de este escáner.</span>
+<span>La entrada antes y después de completar el token es la que coincide con el patrón delimitador.</span>
+<span>Incluso si se ha llamado previamente<a href="#hasNext()"><code>hasNext()</code></a>Devuelve<code>true</code>, este método también puede, mientras espera la exploración de la entrada<code>true</code> 。</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Iterator.html#next()">next</a></code>接口 
-              <code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
+<code><a href="Iterator.html#next()">next</a></code>Interfaz<code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               下一个标记 
-             </dd>
+<dd>siguiente token</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si no hay más tokens disponibles</dd>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="Iterator.html" title="java.util中的接口"><code>Iterator</code></a></span>
@@ -1671,23 +1470,21 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>remove</h4> <pre class="methodSignature">public void remove()</pre>
 <div class="block">
-<code>Iterator</code>的此实现不支持删除操作。 
-            </div>
+<code>Iterator</code>Esta implementación no admite la operación de eliminación.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Iterator.html#remove()">remove</a></code>在界面 
-              <code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
+<code><a href="Iterator.html#remove()">remove</a></code>En la interfaz<code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt;</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/UnsupportedOperationException.html" title="class in java.lang">UnsupportedOperationException</a></code>Si se invoca este método.</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="Iterator.html" title="java.util中的接口"><code>Iterator</code></a></span>
@@ -1698,22 +1495,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNext</h4> <pre class="methodSignature">public boolean hasNext​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</pre>
 <div class="block">
-<span>如果下一个标记与从指定字符串构造的模式匹配，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>调用<code>hasNext(pattern)</code>形式的此方法的行为与调用<code>hasNext(Pattern.compile(pattern))</code> 。</span> </p>
+<span>Devuelve true si el siguiente token coincide con el patrón construido a partir de la cadena especificada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>La llamada<code>hasNext(pattern)</code>el comportamiento y la invocación de este método de la forma<code>hasNext(Pattern.compile(pattern))</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>La cadena que especifica el patrón a escanear</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si este escáner tiene otro token que coincide con el patrón especificado.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1723,24 +1520,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>next</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> next​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</pre>
 <div class="block">
-<span>如果它与从指定字符串构造的模式匹配，则返回下一个标记。</span>
-<span>如果匹配成功，扫描仪将超过与模式匹配的输入。</span>
-<p> <span>调用<code>next(pattern)</code>形式的此方法的行为与调用<code>next(Pattern.compile(pattern))</code>方式<code>next(Pattern.compile(pattern))</code> 。</span> </p>
+<span>Devuelve el siguiente token si coincide con el patrón construido a partir de la cadena especificada.</span>
+<span>Si la coincidencia tiene éxito, el escáner avanzará más allá de la entrada que coincide con el patrón.</span>
+<p> <span>La llamada<code>next(pattern)</code>el comportamiento y la invocación de este método de la forma<code>next(Pattern.compile(pattern))</code>manera<code>next(Pattern.compile(pattern))</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>La cadena que especifica el patrón a escanear</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               下一个标记 
-             </dd>
+<dd>siguiente token</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si no hay ningún token de este tipo disponible</dd>
@@ -1752,23 +1547,23 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNext</h4> <pre class="methodSignature">public boolean hasNext​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
 <div class="block">
-<span>如果下一个完整标记与指定模式匹配，则返回true。</span>
-<span>一个完整的标记是前缀，后缀是与分隔符模式匹配的输入。</span>
-<span>此方法可能在等待输入时阻塞。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Devuelve true si el siguiente token completo coincide con el patrón especificado.</span>
+<span>Un token completo va precedido y seguido de la entrada que coincide con el patrón delimitador.</span>
+<span>Este método puede bloquearse mientras espera la entrada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>El patrón a escanear</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si este escáner tiene otro token que coincide con el patrón especificado.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1778,24 +1573,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>next</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> next​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
 <div class="block">
-<span>如果匹配指定的模式，则返回下一个标记。</span>
-<span>即使先前调用<a href="#hasNext(java.util.regex.Pattern)"><code>hasNext(Pattern)</code></a>返回<code>true</code> ，此方法也可能在等待输入扫描时<code>true</code> 。</span>
-<span>如果匹配成功，扫描仪将超过与模式匹配的输入。</span>
+<span>Devuelve el siguiente token si coincide con el patrón especificado.</span>
+<span>Incluso si se ha llamado previamente<a href="#hasNext(java.util.regex.Pattern)"><code>hasNext(Pattern)</code></a>Devuelve<code>true</code>, este método también puede, mientras espera la exploración de la entrada<code>true</code> 。</span>
+<span>Si la coincidencia tiene éxito, el escáner avanzará más allá de la entrada que coincide con el patrón.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>El patrón a escanear</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               下一个标记 
-             </dd>
+<dd>siguiente token</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si no hay más tokens disponibles</dd>
@@ -1807,17 +1600,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextLine</h4> <pre class="methodSignature">public boolean hasNextLine()</pre>
 <div class="block">
-<span>如果此扫描器的输入中有另一行，则返回true。</span>
-<span>此方法可能在等待输入时阻塞。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Devuelve true si hay otra línea en la entrada de este escáner.</span>
+<span>Este método puede bloquearse mientras espera la entrada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si este escáner tiene otra línea de entrada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1827,20 +1620,18 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextLine</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> nextLine()</pre>
 <div class="block">
-<span>使此扫描器前进超过当前行并返回跳过的输入。</span>
-<span>此方法返回当前行的其余部分，不包括末尾的任何行分隔符。</span>
-<span>该位置设置为下一行的开头。</span>
-<p> <span>由于此方法继续搜索输入以查找行分隔符，因此如果不存在行分隔符，则可以缓冲搜索要跳过的行的所有输入。</span> </p>
+<span>Avanza este escáner más allá de la línea actual y devuelve la entrada omitida.</span>
+<span>Este método devuelve el resto de la línea actual, excluyendo cualquier separador de línea al final.</span>
+<span>La posición se establece al inicio de la siguiente línea.</span>
+<p> <span>Dado que este método continúa buscando un separador de línea en la entrada, si no existe ningún separador de línea, puede almacenar en búfer toda la entrada de la línea que se va a omitir.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               跳过的行 
-             </dd>
+<dd>línea omitida</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si no se encuentra ninguna línea</dd>
@@ -1852,21 +1643,21 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>findInLine</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> findInLine​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</pre>
 <div class="block">
-<span>尝试查找从指定字符串构造的下一个模式，忽略分隔符。</span>
-<p> <span>调用<code>findInLine(pattern)</code>形式的此方法的行为与调用<code>findInLine(Pattern.compile(pattern))</code> 。</span> </p>
+<span>Intenta encontrar el siguiente patrón construido a partir de la cadena especificada, ignorando los delimitadores.</span>
+<p> <span>La llamada<code>findInLine(pattern)</code>el comportamiento y la invocación de este método de la forma<code>findInLine(Pattern.compile(pattern))</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>- Cadena que especifica el patrón a buscar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El texto que coincide con el patrón especificado</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1876,24 +1667,24 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>findInLine</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> findInLine​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
 <div class="block">
-<span>尝试查找指定模式的下一个匹配项，忽略分隔符。</span>
-<span>如果在下一行分隔符之前找到该模式，则扫描程序将超过匹配的输入并返回与该模式匹配的字符串。</span>
-<span>如果在直到下一行分隔符的输入中未检测到此类模式，则返回<code>null</code>并且扫描仪的位置保持不变。</span>
-<span>此方法可能会阻止等待与模式匹配的输入。</span>
-<p> <span>由于此方法继续搜索输入以查找指定的模式，因此如果不存在行分隔符，它可以缓冲搜索所需标记的所有输入。</span> </p>
+<span>Intenta encontrar la siguiente coincidencia del patrón especificado, ignorando los delimitadores.</span>
+<span>Si se encuentra el patrón antes del siguiente separador de línea, el escáner avanzará más allá de la entrada que coincide y devolverá la cadena que coincide con el patrón.</span>
+<span>Si no se detecta dicho patrón en la entrada hasta el siguiente separador de línea, entonces devuelve<code>null</code>Y la posición del escáner permanece sin cambios.</span>
+<span>Este método puede bloquearse a la espera de una entrada que coincida con el patrón.</span>
+<p> <span>Debido a que este método continúa buscando en la entrada el patrón especificado, si no existe ningún separador de línea, puede almacenar en el búfer toda la entrada necesaria para buscar el token requerido.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>El patrón a escanear</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El texto que coincide con el patrón especificado</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1904,23 +1695,23 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>findWithinHorizon</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> findWithinHorizon​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern,
                                 int horizon)</pre>
 <div class="block">
-<span>尝试查找从指定字符串构造的下一个模式，忽略分隔符。</span>
-<p> <span>调用<code>findWithinHorizon(pattern)</code>形式的此方法的行为与调用<code>findWithinHorizon(Pattern.compile(pattern), horizon)</code> 。</span> </p>
+<span>Intenta encontrar el siguiente patrón construido a partir de la cadena especificada, ignorando los delimitadores.</span>
+<p> <span>La llamada<code>findWithinHorizon(pattern)</code>el comportamiento y la invocación de este método de la forma<code>findWithinHorizon(Pattern.compile(pattern), horizon)</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>- Cadena que especifica el patrón a buscar</dd>
 <dd>
 <code>horizon</code>- Rango de búsqueda</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El texto que coincide con el patrón especificado</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1933,26 +1724,26 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <li class="blockList"> <h4>findWithinHorizon</h4> <pre class="methodSignature">public <a href="../lang/String.html" title="class in java.lang">String</a> findWithinHorizon​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern,
                                 int horizon)</pre>
 <div class="block">
-<span>尝试查找指定模式的下一个匹配项。</span>
-<p> <span>此方法搜索输入到指定的搜索范围，忽略分隔符。</span> <span>如果找到模式，扫描仪将超过匹配的输入并返回与模式匹配的字符串。</span> <span>如果未检测到此类模式，则返回null并且扫描仪的位置保持不变。</span> <span>此方法可能会阻止等待与模式匹配的输入。</span> </p>
-<p> <span>扫描仪永远不会搜索超过其当前位置的<code>horizon</code>代码点。</span> <span>请注意，匹配可能会被地平线限制;</span> <span>也就是说，如果地平线较大，任意匹配结果可能会有所不同。</span> <span>扫描仪将地平线视为透明的非锚定边界（参见<a href="regex/Matcher.html#useTransparentBounds(boolean)"><code>Matcher.useTransparentBounds(boolean)</code></a>和<a href="regex/Matcher.html#useAnchoringBounds(boolean)"><code>Matcher.useAnchoringBounds(boolean)</code></a> ）。</span> </p>
-<p> <span>如果horizon是<code>0</code> ，则忽略horizon，此方法继续搜索输入，查找指定的模式而不绑定。</span> <span>在这种情况下，它可以缓冲搜索模式的所有输入。</span> </p>
-<p> <span>如果horizon是负数，则抛出IllegalArgumentException。</span> </p>
+<span>Intenta encontrar la siguiente coincidencia del patrón especificado.</span>
+<p> <span>Este método busca en la entrada hasta el horizonte de búsqueda especificado, ignorando los delimitadores.</span> <span>Si se encuentra el patrón, el escáner avanzará más allá de la entrada coincidente y devolverá la cadena que coincide con el patrón.</span> <span>Si no se detecta dicho patrón, devuelve null y la posición del escáner permanece sin cambios.</span> <span>Este método puede bloquearse a la espera de una entrada que coincida con el patrón.</span> </p>
+<p> <span>El escáner nunca buscará más allá de su posición actual<code>horizon</code>puntos de código.</span> <span>Tenga en cuenta que una coincidencia puede estar limitada por el horizonte;</span> <span>Es decir, si el horizonte es más grande, un resultado de coincidencia arbitrario puede ser diferente.</span> <span>El escáner trata el horizonte como un límite transparente no anclado (véase<a href="regex/Matcher.html#useTransparentBounds(boolean)"><code>Matcher.useTransparentBounds(boolean)</code></a>y<a href="regex/Matcher.html#useAnchoringBounds(boolean)"><code>Matcher.useAnchoringBounds(boolean)</code></a> ）。</span> </p>
+<p> <span>Si horizon es<code>0</code>entonces se ignora horizon y este método continúa buscando en la entrada el patrón especificado sin límite.</span> <span>En este caso, puede almacenar en el búfer toda la entrada mientras busca el patrón.</span> </p>
+<p> <span>Si horizon es negativo, se lanza IllegalArgumentException.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>El patrón a escanear</dd>
 <dd>
 <code>horizon</code>- Rango de búsqueda</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El texto que coincide con el patrón especificado</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -1964,26 +1755,24 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>skip</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> skip​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
 <div class="block">
-<span>跳过与指定模式匹配的输入，忽略分隔符。</span>
-<span>如果指定模式的锚定匹配成功，则此方法将跳过输入。</span>
-<p> <span>如果在当前位置找不到与指定模式的匹配，则不跳过任何输入并抛出<code>NoSuchElementException</code> 。</span> </p>
-<p> <span>由于此方法试图匹配从扫描仪当前位置开始的指定模式，因此可以匹配大量输入的模式（例如“。*”）可能会导致扫描程序缓冲大量输入。</span> </p>
-<p> <span>请注意，可以通过使用无法匹配的模式（例如， <code>sc.skip("[ \t]*")</code>跳过某些内容而不会冒<code>NoSuchElementException</code>的风险。</span> </p>
+<span>Omite la entrada que coincide con el patrón especificado, ignorando los delimitadores.</span>
+<span>Si la coincidencia anclada del patrón especificado tiene éxito, este método omitirá la entrada.</span>
+<p> <span>Si no se encuentra una coincidencia con el patrón especificado en la posición actual, no se omite ninguna entrada y se lanza<code>NoSuchElementException</code> 。</span> </p>
+<p> <span>Dado que este método intenta hacer coincidir el patrón especificado comenzando en la posición actual del escáner, los patrones que pueden coincidir con una gran cantidad de entrada (por ejemplo, «.*») pueden hacer que el escáner almacene en búfer una gran cantidad de entrada.</span> </p>
+<p> <span>Tenga en cuenta que es posible, mediante el uso de un patrón que no puede coincidir (por ejemplo,<code>sc.skip("[ \t]*")</code>omitir algún contenido sin correr<code>NoSuchElementException</code>el riesgo de.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>La cadena que especifica el patrón a omitir</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si no se encuentra el patrón especificado</dd>
@@ -1995,23 +1784,21 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>skip</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> skip​(<a href="../lang/String.html" title="class in java.lang">String</a> pattern)</pre>
 <div class="block">
-<span>跳过与指定字符串构造的模式匹配的输入。</span>
-<p> <span>调用<code>skip(pattern)</code>形式的此方法的行为与调用<code>skip(Pattern.compile(pattern))</code>方式<code>skip(Pattern.compile(pattern))</code> 。</span> </p>
+<span>Omite la entrada que coincide con el patrón construido a partir de la cadena especificada.</span>
+<p> <span>La llamada<code>skip(pattern)</code>el comportamiento y la invocación de este método de la forma<code>skip(Pattern.compile(pattern))</code>manera<code>skip(Pattern.compile(pattern))</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>La cadena que especifica el patrón a omitir</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2021,16 +1808,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextBoolean</h4> <pre class="methodSignature">public boolean hasNextBoolean()</pre>
 <div class="block">
-<span>如果使用从字符串“true | false”创建的不区分大小写的模式，可以将此扫描器输入中的下一个标记解释为布尔值，则返回true。</span>
-<span>扫描仪不会超过匹配的输入。</span>
+<span>Devuelve true si, utilizando un patrón que no distingue mayúsculas de minúsculas creado a partir de la cadena "true | false", el siguiente token de la entrada de este escáner puede interpretarse como un valor booleano.</span>
+<span>El escáner no avanzará más allá de la entrada coincidente.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si el siguiente token de este escáner es un valor booleano válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2040,17 +1827,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextBoolean</h4> <pre class="methodSignature">public boolean nextBoolean()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为布尔值并返回该值。</span>
-<span>如果下一个标记无法转换为有效的布尔值，则此方法将抛出<code>InputMismatchException</code> 。</span>
-<span>如果匹配成功，扫描仪将超过匹配的输入。</span>
+<span>Escanea el siguiente token de la entrada como un valor booleano y devuelve ese valor.</span>
+<span>Si el siguiente token no se puede convertir a un valor booleano válido, este método lanzará<code>InputMismatchException</code> 。</span>
+<span>Si la coincidencia es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El valor booleano escaneado de la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>- Si el siguiente token no es un valor booleano válido.</dd>
@@ -2064,16 +1851,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextByte</h4> <pre class="methodSignature">public boolean hasNextByte()</pre>
 <div class="block">
-<span>如果使用<a href="#nextByte()"><code>nextByte()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的字节值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextByte()"><code>nextByte()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor byte en la base predeterminada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor de byte válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2083,22 +1870,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextByte</h4> <pre class="methodSignature">public boolean hasNextByte​(int radix)</pre>
 <div class="block">
-<span>如果使用<a href="#nextByte()"><code>nextByte()</code></a>方法将此扫描器输入中的下一个标记解释为指定基数中的字节值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Si se utiliza<a href="#nextByte()"><code>nextByte()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor byte en la base especificada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor de byte.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor de byte válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2110,21 +1897,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextByte</h4> <pre class="methodSignature">public byte nextByte()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>byte</code> 。</span>
-<p> <span>调用<code>nextByte()</code>形式的此方法的行为与调用<code>nextByte(radix)</code> ，其中<code>radix</code>是此扫描程序的默认基数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>byte</code> 。</span>
+<p> <span>La llamada<code>nextByte()</code>el comportamiento y la invocación de este método de la forma<code>nextByte(radix)</code>, donde<code>radix</code>es la base predeterminada de este escáner.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>byte</code>从输入扫描 
-             </dd>
+<code>byte</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2135,30 +1921,28 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextByte</h4> <pre class="methodSignature">public byte nextByte​(int radix)</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>byte</code> 。</span>
-<span>如果下一个令牌无法转换为有效字节值，则此方法将抛出<code>InputMismatchException</code> ，如下所述。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式匹配，则标记将转换为<code>byte</code>值，就像删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀一样，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射为ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则将负号（ - ）传递给具有指定基数的<a href="../lang/Byte.html#parseByte(java.lang.String,int)"><code>Byte.parseByte</code></a> 。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>byte</code> 。</span>
+<span>Si el siguiente token no se puede convertir a un valor de byte válido, este método lanzará<code>InputMismatchException</code>, como se describe a continuación.</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Integer-regex"><i>Integer</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>byte</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego mediante<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>la asignación de dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>si están presentes el prefijo y el sufijo negativos específicos de la configuración regional, entonces se pasa el signo negativo (-) al que tiene la base especificada<a href="../lang/Byte.html#parseByte(java.lang.String,int)"><code>Byte.parseByte</code></a> 。</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor de byte.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>byte</code>
+<dd>Escanea desde la entrada<code>byte</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2171,16 +1955,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextShort</h4> <pre class="methodSignature">public boolean hasNextShort()</pre>
 <div class="block">
-<span>如果使用<a href="#nextShort()"><code>nextShort()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的短值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextShort()"><code>nextShort()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor short en la base predeterminada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor short válido en la base predeterminada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2190,22 +1974,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextShort</h4> <pre class="methodSignature">public boolean hasNextShort​(int radix)</pre>
 <div class="block">
-<span>如果使用<a href="#nextShort()"><code>nextShort()</code></a>方法将此扫描器输入中的下一个标记解释为指定基数中的短值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Si se utiliza<a href="#nextShort()"><code>nextShort()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor short en la base especificada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor short.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor short válido en la base especificada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2217,22 +2001,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextShort</h4> <pre class="methodSignature">public short nextShort()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>short</code> 。</span>
-<p> <span>调用<code>nextShort()</code>形式的此方法的行为与调用<a href="#nextShort(int)"><code>nextShort(radix)</code>完全相同</a> ，其中<code>radix</code>是此扫描程序的默认基数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>short</code> 。</span>
+<p> <span>La llamada<code>nextShort()</code>el comportamiento y la invocación de este método de la forma<a href="#nextShort(int)"><code>nextShort(radix)</code>Exactamente igual</a>, donde<code>radix</code>es la base predeterminada de este escáner.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>short</code>
+<dd>Escanea desde la entrada<code>short</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se agota</dd>
 <dd>
@@ -2243,29 +2025,28 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextShort</h4> <pre class="methodSignature">public short nextShort​(int radix)</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>short</code> 。</span>
-<span>如果下一个令牌无法转换为有效的短值，则此方法将抛出<code>InputMismatchException</code> ，如下所述。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式匹配，则标记将转换为<code>short</code>值，就好像通过删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射到ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则将负号（ - ）传递给具有指定基数的<a href="../lang/Short.html#parseShort(java.lang.String,int)"><code>Short.parseShort</code></a> 。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>short</code> 。</span>
+<span>Si el siguiente token no se puede convertir en un valor short válido, este método lanzará<code>InputMismatchException</code>, como se describe a continuación.</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Integer-regex"><i>Integer</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>short</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapeando los dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>si están presentes el prefijo y el sufijo negativos específicos de la configuración regional, entonces se pasa el signo negativo (-) al que tiene la base especificada<a href="../lang/Short.html#parseShort(java.lang.String,int)"><code>Short.parseShort</code></a> 。</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor short.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>short</code>从输入扫描 
-             </dd>
+<code>short</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2278,16 +2059,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextInt</h4> <pre class="methodSignature">public boolean hasNextInt()</pre>
 <div class="block">
-<span>如果此扫描器输入中的下一个标记可以使用<a href="#nextInt()"><code>nextInt()</code></a>方法解释为默认基数中的int值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextInt()"><code>nextInt()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor int en la base predeterminada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si el siguiente token de este escáner es un valor int válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2297,22 +2078,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextInt</h4> <pre class="methodSignature">public boolean hasNextInt​(int radix)</pre>
 <div class="block">
-<span>如果此扫描器输入中的下一个标记可以使用<a href="#nextInt()"><code>nextInt()</code></a>方法解释为指定基数中的int值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextInt()"><code>nextInt()</code></a>Devuelve true si el método interpreta el siguiente token como un valor int en la base especificada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor int.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si el siguiente token de este escáner es un valor int válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2324,21 +2105,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextInt</h4> <pre class="methodSignature">public int nextInt()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>int</code> 。</span>
-<p> <span>调用<code>nextInt()</code>形式的此方法的行为与调用<code>nextInt(radix)</code> ，其中<code>radix</code>是此扫描程序的默认基数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>int</code> 。</span>
+<p> <span>La llamada<code>nextInt()</code>el comportamiento y la invocación de este método de la forma<code>nextInt(radix)</code>, donde<code>radix</code>es la base predeterminada de este escáner.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>int</code>从输入扫描 
-             </dd>
+<code>int</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2349,29 +2129,28 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextInt</h4> <pre class="methodSignature">public int nextInt​(int radix)</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>int</code> 。</span>
-<span>如果下一个令牌无法转换为有效的int值，则此方法将抛出<code>InputMismatchException</code> ，如下所述。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式匹配，则标记将转换为<code>int</code>值，就好像通过删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射到ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则使用负号（ - ），并将结果字符串传递给具有指定基数的<a href="../lang/Integer.html#parseInt(java.lang.String,int)"><code>Integer.parseInt</code></a> 。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>int</code> 。</span>
+<span>Si el siguiente token no se puede convertir en un valor int válido, este método lanzará<code>InputMismatchException</code>, como se describe a continuación.</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Integer-regex"><i>Integer</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>int</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapeando los dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>Si existen un prefijo y un sufijo negativos específicos de la configuración regional, se utiliza el signo menos (-) y la cadena resultante se pasa a ... con la base especificada.<a href="../lang/Integer.html#parseInt(java.lang.String,int)"><code>Integer.parseInt</code></a> 。</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor int.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>int</code>从输入扫描 
-             </dd>
+<code>int</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2384,16 +2163,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextLong</h4> <pre class="methodSignature">public boolean hasNextLong()</pre>
 <div class="block">
-<span>如果使用<a href="#nextLong()"><code>nextLong()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的long值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextLong()"><code>nextLong()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor long en la base predeterminada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor long válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2403,22 +2182,22 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextLong</h4> <pre class="methodSignature">public boolean hasNextLong​(int radix)</pre>
 <div class="block">
-<span>如果此扫描器输入中的下一个标记可以使用<a href="#nextLong()"><code>nextLong()</code></a>方法解释为指定基数中的长值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextLong()"><code>nextLong()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor long en la base especificada.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor long.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor long válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2430,21 +2209,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextLong</h4> <pre class="methodSignature">public long nextLong()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>long</code> 。</span>
-<p> <span>调用<code>nextLong()</code>形式的此方法的行为与调用<code>nextLong(radix)</code> ，其中<code>radix</code>是此扫描程序的默认基数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>long</code> 。</span>
+<p> <span>La llamada<code>nextLong()</code>el comportamiento y la invocación de este método de la forma<code>nextLong(radix)</code>, donde<code>radix</code>es la base predeterminada de este escáner.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>long</code>从输入扫描 
-             </dd>
+<code>long</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2455,30 +2233,28 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextLong</h4> <pre class="methodSignature">public long nextLong​(int radix)</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>long</code> 。</span>
-<span>如果下一个令牌无法转换为有效的长值，则此方法将抛出<code>InputMismatchException</code> ，如下所述。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式匹配， <a href="#Integer-regex">则将</a>标记转换为<code>long</code>值，就好像通过删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射到ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则使用负号（ - ），并将结果字符串传递给具有指定基数的<a href="../lang/Long.html#parseLong(java.lang.String,int)"><code>Long.parseLong</code></a> 。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>long</code> 。</span>
+<span>Si el siguiente token no se puede convertir en un valor long válido, este método lanzará<code>InputMismatchException</code>, como se describe a continuación.</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Integer-regex"><i>Integer</i></a>coincide con la expresión regular,<a href="#Integer-regex">entonces</a>el token se convierte en<code>long</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapeando los dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>Si existen un prefijo y un sufijo negativos específicos de la configuración regional, se utiliza el signo menos (-) y la cadena resultante se pasa a ... con la base especificada.<a href="../lang/Long.html#parseLong(java.lang.String,int)"><code>Long.parseLong</code></a> 。</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un valor int.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>long</code>
+<dd>Escanea desde la entrada<code>long</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2491,16 +2267,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextFloat</h4> <pre class="methodSignature">public boolean hasNextFloat()</pre>
 <div class="block">
-<span>如果使用<a href="#nextFloat()"><code>nextFloat()</code></a>方法可以将此扫描器输入中的下一个标记解释为浮点值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextFloat()"><code>nextFloat()</code></a>Devuelve true si el método puede interpretar el siguiente token en la entrada de este escáner como un valor float.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si el siguiente token de este escáner es un valor de punto flotante válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2510,21 +2286,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextFloat</h4> <pre class="methodSignature">public float nextFloat()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>float</code> 。</span>
-<span>如果下一个令牌无法转换为有效的浮点值，则此方法将抛出<code>InputMismatchException</code> ，如下所述。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Float-regex"><i>Float</i></a>正则表达式匹配， <a href="#Float-regex">则将</a>标记转换为<code>float</code>值，就好像通过删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射到ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则为负号（ - ），并将结果字符串传递给<a href="../lang/Float.html#parseFloat(java.lang.String)"><code>Float.parseFloat</code></a> 。</span> <span>如果令牌与本地化的NaN或无穷大字符串匹配，则“Nan”或“Infinity”将根据需要传递给<a href="../lang/Float.html#parseFloat(java.lang.String)"><code>Float.parseFloat</code></a> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>float</code> 。</span>
+<span>Si el siguiente token no puede convertirse en un valor de punto flotante válido, este método lanzará<code>InputMismatchException</code>, como se describe a continuación.</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Float-regex"><i>Float</i></a>coincide con la expresión regular,<a href="#Float-regex">entonces</a>el token se convierte en<code>float</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapeando los dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>Si existen prefijos y sufijos negativos específicos de la configuración regional, se utiliza el signo menos ( - ) y la cadena resultante se pasa a<a href="../lang/Float.html#parseFloat(java.lang.String)"><code>Float.parseFloat</code></a> 。</span> <span>Si el token coincide con la cadena NaN o Infinity localizada, se pasa "NaN" o "Infinity" según corresponda a<a href="../lang/Float.html#parseFloat(java.lang.String)"><code>Float.parseFloat</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>float</code>
+<dd>Escanea desde la entrada<code>float</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>Float</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
@@ -2538,16 +2312,16 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextDouble</h4> <pre class="methodSignature">public boolean hasNextDouble()</pre>
 <div class="block">
-<span>如果使用<a href="#nextDouble()"><code>nextDouble()</code></a>方法将此扫描仪输入中的下一个标记解释为double值，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextDouble()"><code>nextDouble()</code></a>Devuelve true si el método interpreta el siguiente token de la entrada de este escáner como un valor double.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es un valor double válido.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2557,21 +2331,19 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextDouble</h4> <pre class="methodSignature">public double nextDouble()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<code>double</code> 。</span>
-<span>如果下一个标记无法转换为有效的double值，则此方法将抛出<code>InputMismatchException</code> 。</span>
-<span>如果翻译成功，扫描仪将超过匹配的输入。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Float-regex"><i>Float</i></a>正则表达式匹配，则标记将转换为<code>double</code>值，就好像通过删除所有特定于区域设置的前缀，组分隔符和特定于区域设置的后缀，然后通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射到ASCII数字， <a href="../lang/Character.html#digit(char,int)">前置</a>如果存在特定于区域设置的负前缀和后缀，则将负号（ - ）传递给<a href="../lang/Double.html#parseDouble(java.lang.String)"><code>Double.parseDouble</code></a> 。</span> <span>如果令牌与本地化的NaN或无穷大字符串匹配，则“Nan”或“Infinity”将根据需要传递给<a href="../lang/Double.html#parseDouble(java.lang.String)"><code>Double.parseDouble</code></a> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<code>double</code> 。</span>
+<span>Si el siguiente token no puede convertirse en un valor double válido, este método lanzará<code>InputMismatchException</code> 。</span>
+<span>Si la conversión es exitosa, el escáner avanzará más allá de la entrada coincidente.</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Float-regex"><i>Float</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>double</code>valor, como si se eliminaran todos los prefijos específicos de la configuración regional, los separadores de grupo y los sufijos específicos de la configuración regional, y luego<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapeando los dígitos no ASCII a dígitos ASCII,<a href="../lang/Character.html#digit(char,int)">anteponiendo</a>Si existen prefijos y sufijos negativos específicos de la configuración regional, el signo menos ( - ) se pasa a<a href="../lang/Double.html#parseDouble(java.lang.String)"><code>Double.parseDouble</code></a> 。</span> <span>Si el token coincide con la cadena NaN o Infinity localizada, se pasa "NaN" o "Infinity" según corresponda a<a href="../lang/Double.html#parseDouble(java.lang.String)"><code>Double.parseDouble</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>double</code>
+<dd>Escanea desde la entrada<code>double</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>Float</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
@@ -2585,17 +2357,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextBigInteger</h4> <pre class="methodSignature">public boolean hasNextBigInteger()</pre>
 <div class="block">
-<span>如果使用<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>方法将此扫描器输入中的下一个标记解释为默认基数中的<code>BigInteger</code> ，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si se utiliza<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>El método interpreta el siguiente token de la entrada de este escáner como un valor en la base predeterminada<code>BigInteger</code>, entonces devuelve true.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es válido.<code>BigInteger</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2605,23 +2377,23 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextBigInteger</h4> <pre class="methodSignature">public boolean hasNextBigInteger​(int radix)</pre>
 <div class="block">
-<span>如果此扫描器输入中的下一个标记可以使用<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>方法在指定的基数中解释为<code>BigInteger</code> ，则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextBigInteger()"><code>nextBigInteger()</code></a>método en la base especificada interpretado como<code>BigInteger</code>, entonces devuelve true.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>- La base utilizada para interpretar el token como un entero.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Devuelve true si y solo si el siguiente token de este escáner es válido.<code>BigInteger</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2633,21 +2405,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextBigInteger</h4> <pre class="methodSignature">public <a href="../math/BigInteger.html" title="class in java.math">BigInteger</a> nextBigInteger()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
-<p> <span>调用<code>nextBigInteger()</code>形式的此方法的行为与调用<code>nextBigInteger(radix)</code> ，其中<code>radix</code>是此扫描程序的默认基数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
+<p> <span>La llamada<code>nextBigInteger()</code>el comportamiento y la invocación de este método de la forma<code>nextBigInteger(radix)</code>, donde<code>radix</code>es la base predeterminada de este escáner.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>BigInteger</code>从输入扫描 
-             </dd>
+<code>BigInteger</code>Escanea desde la entrada</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2658,28 +2429,26 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextBigInteger</h4> <pre class="methodSignature">public <a href="../math/BigInteger.html" title="class in java.math">BigInteger</a> nextBigInteger​(int radix)</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Integer-regex"><i>Integer</i></a>正则表达式匹配，则标记将转换为<code>BigInteger</code>值，就好像通过删除所有组分隔符，通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射为ASCII数字，并将结果字符串传递给<a href="../math/BigInteger.html#%3Cinit%3E(java.lang.String)"><code>BigInteger(String, int)</code></a>构造函数指定的基数。</span> </p>
-<p> <span>如果基数小于<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>或大于<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a> ，则抛出<code>IllegalArgumentException</code> 。</span> </p>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigInteger.html" title="java.math中的类"><code>BigInteger</code></a> 。</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Integer-regex"><i>Integer</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>BigInteger</code>valor, como si se eliminaran todos los separadores de grupo, mediante<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapear los dígitos no ASCII a dígitos ASCII, y pasar la cadena resultante a<a href="../math/BigInteger.html#%3Cinit%3E(java.lang.String)"><code>BigInteger(String, int)</code></a>la base especificada por el constructor.</span> </p>
+<p> <span>si la base es menor que<a href="../lang/Character.html#MIN_RADIX"><code>Character.MIN_RADIX</code></a>o mayor que<a href="../lang/Character.html#MAX_RADIX"><code>Character.MAX_RADIX</code></a>, se lanza<code>IllegalArgumentException</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>radix</code>La base utilizada para interpretar los tokens</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>BigInteger</code>
+<dd>Escanea desde la entrada<code>BigInteger</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>整数</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>entero</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2692,17 +2461,17 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>hasNextBigDecimal</h4> <pre class="methodSignature">public boolean hasNextBigDecimal()</pre>
 <div class="block">
-<span>如果此扫描器输入中的下一个标记可以使用<a href="#nextBigDecimal()"><code>nextBigDecimal()</code></a>方法解释为<code>BigDecimal</code>则返回true。</span>
-<span>扫描仪不会超过任何输入。</span>
+<span>Si el siguiente token en la entrada de este escáner puede interpretarse<a href="#nextBigDecimal()"><code>nextBigDecimal()</code></a>método interpretado como<code>BigDecimal</code>entonces devuelve true.</span>
+<span>El escáner no avanzará más allá de ninguna entrada.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Es verdadero si y solo si el siguiente token de este escáner es válido.<code>BigDecimal</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
@@ -2712,22 +2481,20 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>nextBigDecimal</h4> <pre class="methodSignature">public <a href="../math/BigDecimal.html" title="class in java.math">BigDecimal</a> nextBigDecimal()</pre>
 <div class="block">
-<span>将输入的下一个标记扫描为<a href="../math/BigDecimal.html" title="java.math中的类"><code>BigDecimal</code></a> 。</span>
-<p> <span>如果下一个标记与上面定义的<a href="#Decimal-regex"><i>Decimal</i></a>正则表达式匹配，则标记将转换为<code>BigDecimal</code>值，就好像通过删除所有组分隔符，通过<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>将非ASCII数字映射为ASCII数字，并将结果字符串传递给<a href="../math/BigDecimal.html#%3Cinit%3E(java.lang.String)"><code>BigDecimal(String)</code></a>构造函数。</span> </p>
+<span>Escanea el siguiente token de la entrada como<a href="../math/BigDecimal.html" title="java.math中的类"><code>BigDecimal</code></a> 。</span>
+<p> <span>Si el siguiente token coincide con la<a href="#Decimal-regex"><i>Decimal</i></a>expresión regular definida anteriormente, entonces el token se convertirá a<code>BigDecimal</code>valor, como si se eliminaran todos los separadores de grupo, mediante<a href="../lang/Character.html#digit(char,int)"><code>Character.digit</code></a>mapear los dígitos no ASCII a dígitos ASCII, y pasar la cadena resultante a<a href="../math/BigDecimal.html#%3Cinit%3E(java.lang.String)"><code>BigDecimal(String)</code></a>constructor.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               从输入扫描 
-              <code>BigDecimal</code>
+<dd>Escanea desde la entrada<code>BigDecimal</code>
 </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>十进制</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
+<code><a href="InputMismatchException.html" title="class in java.util">InputMismatchException</a></code>Si el siguiente token no coincide<i>Decimal</i>La expresión regular no coincide o el valor está fuera de rango.</dd>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>Si la entrada se ha agotado</dd>
 <dd>
@@ -2738,9 +2505,9 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>reset</h4> <pre class="methodSignature">public <a href="Scanner.html" title="class in java.util">Scanner</a> reset()</pre>
 <div class="block">
-<span>重置此扫描仪。</span>
-<p> <span>重置扫描器会丢弃所有可能已经通过调用改变了明确的状态信息<a href="#useDelimiter(java.util.regex.Pattern)"><code>useDelimiter()</code></a> ， <a href="#useLocale(java.util.Locale)"><code>useLocale()</code></a> ，或<a href="#useRadix(int)"><code>useRadix()</code></a> 。</span> </p>
-<p> <span>调用<code>scanner.reset()</code>形式的此方法的行为与调用的方式完全相同</span> </p>
+<span>Restablece este escáner.</span>
+<p> <span>Restablecer el escáner descarta toda la información de estado explícita que pueda haber sido modificada mediante llamadas a<a href="#useDelimiter(java.util.regex.Pattern)"><code>useDelimiter()</code></a> ， <a href="#useLocale(java.util.Locale)"><code>useLocale()</code></a>, o<a href="#useRadix(int)"><code>useRadix()</code></a> 。</span> </p>
+<p> <span>La llamada<code>scanner.reset()</code>El comportamiento de este método en esta forma es exactamente el mismo que el de invocar</span> </p>
 <blockquote>
 <span><pre><code>
    scanner.useDelimiter("\\p{javaWhitespace}+")
@@ -2751,13 +2518,11 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个扫描仪 
-             </dd>
+<dd>este escáner</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -2768,34 +2533,34 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>tokens</h4> <pre class="methodSignature">public <a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="../lang/String.html" title="class in java.lang">String</a>&gt; tokens()</pre>
 <div class="block">
-<span>从此扫描程序返回分隔符分隔的标记流。</span>
-<span>该流包含将从此扫描器的当前状态开始返回的相同标记，方法是重复调用<a href="#next()"><code>next()</code></a>方法，直到<a href="#hasNext()"><code>hasNext()</code></a>方法返回false。</span>
-<p> <span>生成的流是顺序的并且是有序的。</span> <span>所有流元素都是非null。</span> </p>
-<p> <span>使用该扫描仪的当前状态，在启动终端流操作时开始扫描。</span> <span>对<a href="#close()"><code>close()</code></a>和<a href="#ioException()"><code>ioException()</code></a>以外的此扫描仪上的任何方法的后续调用可能会返回未定义的结果，或者可能会对返回的流造成不确定的影响。</span> <span>返回流的源<code>Spliterator</code>是<em>快速失败的</em> ， <a href="ConcurrentModificationException.html" title="java.util中的类">并且</a>如果在流管道执行期间检测到任何此类调用，则将尽最大努力抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
-<p> <span>流管道执行完成后，此扫描程序将处于不确定状态，无法重复使用。</span> </p>
-<p> <span>如果此扫描程序包含必须释放的资源，则应通过调用其<a href="#close()"><code>close()</code></a>方法或关闭返回的流来关闭此扫描程序。</span> <span>关闭流将关闭底层扫描程序。</span> <span>如果在调用此方法时扫描程序已关闭，或者在流管道执行期间关闭此扫描程序，则抛出<code>IllegalStateException</code> 。</span> </p>
-<p> <span>此方法可能会阻止等待更多输入。</span> </p>
+<span>Devuelve un flujo de tokens separados por delimitadores de este escáner.</span>
+<span>El flujo contiene los mismos tokens que se devolverían a partir del estado actual de este escáner, llamando repetidamente a<a href="#next()"><code>next()</code></a>método, hasta que<a href="#hasNext()"><code>hasNext()</code></a>el método devuelve false.</span>
+<p> <span>El flujo resultante es secuencial y ordenado.</span> <span>Todos los elementos del flujo no son null.</span> </p>
+<p> <span>Comienza a escanear utilizando el estado actual de este escáner cuando se invoca la operación de flujo terminal.</span> <span>Sobre<a href="#close()"><code>close()</code></a>y<a href="#ioException()"><code>ioException()</code></a>Las llamadas posteriores a cualquier método de este escáner, salvo la fuente del flujo devuelto, pueden devolver resultados indefinidos o pueden tener efectos indeterminados sobre el flujo devuelto.</span> <span>La fuente del flujo devuelto.<code>Spliterator</code>Sí<em>de fallo rápido</em> ， <a href="ConcurrentModificationException.html" title="java.util中的类">y</a>Si se detecta cualquier llamada de este tipo durante la ejecución del pipeline de flujo, se lanzará una excepción en la medida de lo posible.<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<p> <span>Una vez completada la ejecución del pipeline de flujo, este escáner quedará en un estado indeterminado y no podrá reutilizarse.</span> </p>
+<p> <span>Si este escáner contiene un recurso que debe liberarse, debe cerrarse llamando a su<a href="#close()"><code>close()</code></a>método o cerrando el flujo devuelto para cerrar este escáner.</span> <span>Cerrar el flujo cerrará el escáner subyacente.</span> <span>Si el escáner ya está cerrado cuando se invoca este método, o si este escáner se cierra durante la ejecución del pipeline de flujo, se lanzará una excepción.<code>IllegalStateException</code> 。</span> </p>
+<p> <span>Este método puede bloquearse a la espera de más entrada.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="simpleTagLabel">API Note:</span>
 </dt>
 <dd>
-<span>例如，以下代码将从字符串创建逗号分隔的标记列表：</span>
+<span>Por ejemplo, el siguiente código creará una lista de tokens separados por comas a partir de una cadena:</span>
 <pre>  <span><code> List&lt;String&gt; result = new Scanner("abc,def,,ghi") .useDelimiter(",") .tokens() .collect(Collectors.toList()); </code></span> </pre>
-<p> <span>结果列表将包含<code>"abc"</code> ， <code>"def"</code> ，空字符串，和<code>"ghi"</code> 。</span> </p>
+<p> <span>La lista resultante contendrá<code>"abc"</code> ， <code>"def"</code>, la cadena vacía y<code>"ghi"</code> 。</span> </p>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Flujo continuo de cadenas de tokens</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                9 
@@ -2806,41 +2571,40 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockList">
 <li class="blockList"> <h4>findAll</h4> <pre class="methodSignature">public <a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a>&gt; findAll​(<a href="regex/Pattern.html" title="class in java.util.regex">Pattern</a> pattern)</pre>
 <div class="block">
-<span>返回此扫描程序的匹配结果流。</span>
-<span>只要<a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>找到匹配项，流就会以相同的顺序包含相同的结果，通过调用<code>findWithinHorizon(pattern, 0)</code>和<a href="#match()"><code>match()</code></a>返回。</span>
-<p> <span>生成的流是顺序的并且是有序的。</span> <span>所有流元素都是非null。</span> </p>
-<p> <span>使用该扫描仪的当前状态，在启动终端流操作时开始扫描。</span> <span>对<a href="#close()"><code>close()</code></a>和<a href="#ioException()"><code>ioException()</code></a>以外的此扫描仪上的任何方法的后续调用可能会返回未定义的结果，或者可能会对返回的流造成未定义的影响。</span> <span>返回的流的源<code>Spliterator</code>是<em>快速失败的</em> ，如果在流管道执行期间检测到任何此类调用，则将尽最大努力抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
-<p> <span>流管道执行完成后，此扫描程序将处于不确定状态，无法重复使用。</span> </p>
-<p> <span>如果此扫描程序包含必须释放的资源，则应通过调用其<a href="#close()"><code>close()</code></a>方法或关闭返回的流来关闭此扫描程序。</span> <span>关闭流将关闭底层扫描程序。</span> <span>如果在调用此方法时扫描程序已关闭，或者在流管道执行期间关闭此扫描程序，则抛出<code>IllegalStateException</code> 。</span> </p>
-<p> <span>与<a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>方法一样，此方法可能会阻止等待其他输入，并且可能会缓冲搜索匹配的无限量输入。</span> </p>
+<span>Devuelve el flujo de resultados de coincidencia de este escáner.</span>
+<span>siempre que<a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>Cuando se encuentre una coincidencia, el flujo contendrá los mismos resultados en el mismo orden, mediante la llamada a<code>findWithinHorizon(pattern, 0)</code>y<a href="#match()"><code>match()</code></a>devueltos.</span>
+<p> <span>El flujo resultante es secuencial y ordenado.</span> <span>Todos los elementos del flujo no son null.</span> </p>
+<p> <span>Comienza a escanear utilizando el estado actual de este escáner cuando se invoca la operación de flujo terminal.</span> <span>Sobre<a href="#close()"><code>close()</code></a>y<a href="#ioException()"><code>ioException()</code></a>Las llamadas posteriores a cualquier método de este escáner, salvo la fuente del flujo devuelto, pueden devolver resultados indefinidos o pueden causar efectos indefinidos en el flujo devuelto.</span> <span>La fuente del flujo devuelto.<code>Spliterator</code>Sí<em>de fallo rápido</em>, si se detecta cualquier llamada de este tipo durante la ejecución de la canalización de flujo, se lanzará en la medida de lo posible.<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> </p>
+<p> <span>Una vez completada la ejecución del pipeline de flujo, este escáner quedará en un estado indeterminado y no podrá reutilizarse.</span> </p>
+<p> <span>Si este escáner contiene un recurso que debe liberarse, debe cerrarse llamando a su<a href="#close()"><code>close()</code></a>método o cerrando el flujo devuelto para cerrar este escáner.</span> <span>Cerrar el flujo cerrará el escáner subyacente.</span> <span>Si el escáner ya está cerrado cuando se invoca este método, o si este escáner se cierra durante la ejecución del pipeline de flujo, se lanzará una excepción.<code>IllegalStateException</code> 。</span> </p>
+<p> <span>y<a href="#findWithinHorizon(java.lang.String,int)"><code>findWithinHorizon()</code></a>Al igual que el método, este método puede bloquearse esperando otra entrada, y puede almacenar en búfer una cantidad ilimitada de entrada mientras busca una coincidencia.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="simpleTagLabel">API Note:</span>
 </dt>
 <dd>
-<span>例如，以下代码将读取文件并返回由七个或更多拉丁大写字母组成的所有字符序列的列表：</span>
+<span>Por ejemplo, el siguiente código leerá un archivo y devolverá una lista de todas las secuencias de caracteres compuestas por siete o más letras mayúsculas latinas:</span>
 <pre>  <span><code> try (Scanner sc = new Scanner(Path.of("input.txt"))) { Pattern pat = Pattern.compile("[A-Z]{7,}"); List&lt;String&gt; capWords = sc.findAll(pat) .map(MatchResult::group) .collect(Collectors.toList()); } </code></span> </pre>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>pattern</code>El patrón con el que debe coincidir</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Flujo continuo de resultados de coincidencia</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code> - 如果pattern为null 
-             </dd>
+<code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si pattern es null</dd>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                9 
@@ -2851,38 +2615,37 @@ implements <a href="Iterator.html" title="interface in java.util">Iterator</a>&l
 <ul class="blockListLast">
 <li class="blockList"> <h4>findAll</h4> <pre class="methodSignature">public <a href="stream/Stream.html" title="interface in java.util.stream">Stream</a>&lt;<a href="regex/MatchResult.html" title="interface in java.util.regex">MatchResult</a>&gt; findAll​(<a href="../lang/String.html" title="class in java.lang">String</a> patString)</pre>
 <div class="block">
-<span>返回与提供的模式字符串匹配的匹配结果流。</span>
-<span>效果等同于以下代码：</span>
+<span>Devuelve un flujo de resultados de coincidencia que coinciden con la cadena de patrón proporcionada.</span>
+<span>El efecto es equivalente al siguiente código:</span>
 <pre>  <span><code> scanner.findAll(Pattern.compile(patString)) </code></span> </pre>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>patString</code>- Cadena de patrón</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Flujo continuo de resultados de coincidencia</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code> - 如果patString为null 
-             </dd>
+<code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si patString es null</dd>
 <dd>
 <code><a href="../lang/IllegalStateException.html" title="class in java.lang">IllegalStateException</a></code>Si este escáner está cerrado</dd>
 <dd>
 <code><a href="regex/PatternSyntaxException.html" title="class in java.util.regex">PatternSyntaxException</a></code>Si la sintaxis de la expresión regular no es válida</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                9 
              </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="regex/Pattern.html" title="java.util.regex中的类"><code>Pattern</code></a></span>

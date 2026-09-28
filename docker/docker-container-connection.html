@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Docker 容器连接 前面我们实现了通过网络端口来访问运行在 docker 容器内的服务。 容器中可以运行一些网络应用，要让外部也可以访问这些应用，可以通过 -P 或 -p 参数来指定端口映射。 下面我们来实现通过端口连接到一个 docker 容器。  网络端口映射 我们创建了一个 python 应用的容器。  runoob@runoob:~$ docker run -d -P training/webapp python app.p.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -274,7 +274,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-intro" id="content">
 <h1>Conexión de contenedores Docker</h1>
 <p>Anteriormente implementamos el acceso a servicios que se ejecutan dentro de contenedores docker a través de puertos de red.</p>
-<p>En los contenedores se pueden ejecutar algunas aplicaciones de red. Para permitir que el exterior también acceda a estas aplicaciones, puede hacerlo mediante<span class="marked">-P</span> 或 <span class="marked">-p</span>el parámetro para especificar el mapeo de puertos.</p>
+<p>En los contenedores se pueden ejecutar algunas aplicaciones de red. Para permitir que el exterior también acceda a estas aplicaciones, puede hacerlo mediante<span class="marked">-P</span>o<span class="marked">-p</span>el parámetro para especificar el mapeo de puertos.</p>
 <p>A continuación, implementaremos la conexión a un contenedor docker a través de puertos.</p>
 <hr/>
 <h2>Mapeo de puertos de red</h2>
@@ -392,12 +392,12 @@ apt install iputils-ping</pre>
 </pre>
 <p>Descripción de parámetros:</p>
 <p><strong>--rm</strong>: limpia automáticamente el sistema de archivos dentro del contenedor cuando este sale.</p>
-<p><strong>-h HOSTNAME 或者 --hostname=HOSTNAME</strong>: establece el nombre de host del contenedor, que se escribirá en /etc/hostname y /etc/hosts dentro del contenedor.</p>
+<p><strong>-h HOSTNAME o --hostname=HOSTNAME</strong>: establece el nombre de host del contenedor, que se escribirá en /etc/hostname y /etc/hosts dentro del contenedor.</p>
 <p><strong>--dns=IP_ADDRESS</strong>: agrega un servidor DNS al archivo /etc/resolv.conf del contenedor, para que el contenedor use este servidor para resolver todos los nombres de host que no estén en /etc/hosts.</p>
 <p><strong>--dns-search=DOMAIN</strong>: establece el dominio de búsqueda del contenedor. Cuando el dominio de búsqueda se establece en .example.com, al buscar un host llamado host, el DNS no solo busca host, sino también host.example.com.</p>
 <p>Haga clic en la imagen para verla en grande:</p>
 <a href="../wp-content/uploads/2016/05/docker-net6.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2016/05/docker-net6.png"/></a>
-<p>Si no se especifica al iniciar el contenedor<strong>--dns</strong> 和 <strong>--dns-search</strong>, Docker usará por defecto el /etc/resolv.conf del host para configurar el DNS del contenedor.</p> Otras extensiones
+<p>Si no se especifica al iniciar el contenedor<strong>--dns</strong>y<strong>--dns-search</strong>, Docker usará por defecto el /etc/resolv.conf del host para configurar el DNS del contenedor.</p> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
@@ -551,11 +551,11 @@ On Windows (and OS X), the docker daemon, and your containers cannot run nativel
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -753,7 +753,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -855,7 +855,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

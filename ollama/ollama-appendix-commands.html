@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Ollama 命令完整手册 本章节介绍 Ollama 相关执行命令，内容覆盖安装、模型管理、运行参数、Modelfile、REST API、环境变量与常见排障，均基于 Ollama 0.17.x 整理。   安装与启动 三平台各有标准安装方式，安装完成后 Ollama 会自动作为后台服务运行，监听 127.0.0.1:11434。   平台安装方式说明   macOSbrew install ollama也可从官网下载 dmg 安装包 .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -375,15 +375,15 @@ curl <span style="color: #660033;">-X</span> DELETE http:<span style="color: #00
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #a50"># 文件路径：openai_compat.py</span><br/>
+<span style="color: #a50"># Ruta del archivo: openai_compat.py</span><br/>
 <span style="color: Green;font-weight:bold;">from</span> openai <span style="color: Green;font-weight:bold;">import</span> OpenAI<br/>
 <br/>
-<span style="color: #a50"># base_url 指向本地 Ollama；api_key 任意非空字符串即可</span><br/>
+<span style="color: #a50"># base_url apunta a Ollama local; api_key puede ser cualquier cadena no vacía</span><br/>
 client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</span>base_url<span style="color: Gray;">=</span><span style="color: #a11;">"http://localhost:11434/v1"</span><span style="color: Gray;">,</span> api_key<span style="color: Gray;">=</span><span style="color: #a11;">"ollama"</span><span style="color: Olive;">)</span><br/>
 <br/>
 resp <span style="color: Gray;">=</span> client.<span style="color: #05a;">chat</span>.<span style="color: #05a;">completions</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
-    model<span style="color: Gray;">=</span><span style="color: #a11;">"qwen3.5"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 本地已下载的模型名</span><br/>
-    messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"你好，请介绍一下 runoob"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    model<span style="color: Gray;">=</span><span style="color: #a11;">"qwen3.5"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Nombre del modelo descargado localmente</span><br/>
+    messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Hola, por favor cuéntame sobre runoob"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>resp.<span style="color: #05a;">choices</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span>.<span style="color: #05a;">message</span>.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
 </div>
@@ -397,23 +397,23 @@ $ python3 openai_compat.py
 <p>Las variables de entorno son la forma principal de configurar el comportamiento del servicio Ollama. Después de cambiarlas, es necesario reiniciar el servicio para que surtan efecto.</p>
 <table class="reference">
 <thead>
-<tr><th>变量</th><th>说明</th><th>默认值</th></tr>
+<tr><th>Variable</th><th>Descripción</th><th>valor por defecto</th></tr>
 </thead>
 <tbody>
 <tr><td>OLLAMA_HOST</td><td>Dirección de escucha del servicio; 0.0.0.0 indica que se permite el acceso desde la red de área local.</td><td>127.0.0.1:11434</td></tr>
 <tr><td>OLLAMA_MODELS</td><td>Ruta de almacenamiento de modelos, útil al cambiar a un disco más grande.</td><td>~/.ollama/models</td></tr>
-<tr><td>OLLAMA_NUM_GPU</td><td>Número de capas del modelo que se colocan en la GPU; 999 significa todas.</td><td>自动</td></tr>
-<tr><td>OLLAMA_NUM_PARALLEL</td><td>Número de solicitudes concurrentes para el mismo modelo.</td><td>自动</td></tr>
-<tr><td>OLLAMA_MAX_LOADED_MODELS</td><td>Número máximo de modelos que permanecen en memoria al mismo tiempo.</td><td>自动</td></tr>
-<tr><td>OLLAMA_FLASH_ATTENTION</td><td>Habilitar Flash Attention; se recomienda activarlo para contextos largos.</td><td>关闭</td></tr>
+<tr><td>OLLAMA_NUM_GPU</td><td>Número de capas del modelo que se colocan en la GPU; 999 significa todas.</td><td>automático</td></tr>
+<tr><td>OLLAMA_NUM_PARALLEL</td><td>Número de solicitudes concurrentes para el mismo modelo.</td><td>automático</td></tr>
+<tr><td>OLLAMA_MAX_LOADED_MODELS</td><td>Número máximo de modelos que permanecen en memoria al mismo tiempo.</td><td>automático</td></tr>
+<tr><td>OLLAMA_FLASH_ATTENTION</td><td>Habilitar Flash Attention; se recomienda activarlo para contextos largos.</td><td>Cerrar</td></tr>
 <tr><td>OLLAMA_KEEP_ALIVE</td><td>Tiempo de inactividad del modelo antes de descargarlo de la memoria.</td><td>5m</td></tr>
-<tr><td>OLLAMA_DEBUG</td><td>Activar registros de depuración para mostrar información de ejecución más detallada.</td><td>关闭</td></tr>
+<tr><td>OLLAMA_DEBUG</td><td>Activar registros de depuración para mostrar información de ejecución más detallada.</td><td>Cerrar</td></tr>
 </tbody>
 </table>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #666666; font-style: italic;"># 允许局域网访问 + 模型挪到数据盘</span><br/>
+<span style="color: #666666; font-style: italic;"># Permitir acceso a la red local + mover el modelo al disco de datos</span><br/>
 <span style="color: #7A0874; font-weight: bold;">export</span> <span style="color: #007800;">OLLAMA_HOST</span>=0.0.0.0:<span style="color: #000000;">11434</span><br/>
 <span style="color: #7A0874; font-weight: bold;">export</span> <span style="color: #007800;">OLLAMA_MODELS</span>=<span style="color: #000000; font-weight: bold;">/</span>data<span style="color: #000000; font-weight: bold;">/</span>ollama-models<br/>
 ollama serve<br/>
@@ -425,13 +425,13 @@ ollama serve<br/>
 <p>Cuando encuentre una anomalía, primero consulte la siguiente tabla para identificarla. La mayoría de los problemas pertenecen a tres categorías: "nombre del modelo incorrecto, servicio no iniciado, recursos insuficientes".</p>
 <table class="reference">
 <thead>
-<tr><th>问题</th><th>排查思路</th></tr>
+<tr><th>problema</th><th>Ideas de solución de problemas</th></tr>
 </thead>
 <tbody>
 <tr><td>VRAM / RAM insuficiente (OOM).</td><td>Cambie a una especificación de modelo más pequeña o a una precisión de cuantización más baja, por ejemplo, use 4b en lugar de 9b.</td></tr>
-<tr><td>提示 model not found</td><td>Verifique que el nombre del modelo y la etiqueta sean correctos. La etiqueta se separa con dos puntos, como qwen3.5:4b en lugar de qwen3.5-4b.</td></tr>
+<tr><td>Aviso: model not found</td><td>Verifique que el nombre del modelo y la etiqueta sean correctos. La etiqueta se separa con dos puntos, como qwen3.5:4b en lugar de qwen3.5-4b.</td></tr>
 <tr><td>connection refused</td><td>Confirmar si el servicio está en ejecución y comprobar si el puerto 11434 está ocupado.</td></tr>
-<tr><td>响应速度慢</td><td>Usa `ollama ps` para revisar la columna PROCESSOR y confirma si el modelo realmente se ejecuta en la GPU; reduce adecuadamente el valor de num_ctx.</td></tr>
+<tr><td>Velocidad de respuesta lenta</td><td>Usa `ollama ps` para revisar la columna PROCESSOR y confirma si el modelo realmente se ejecuta en la GPU; reduce adecuadamente el valor de num_ctx.</td></tr>
 <tr><td>Ofuscación de modelos de múltiples versiones</td><td>Si no se especifica el tag, se elegirá la versión "más reciente" según las reglas internas; se recomienda indicar siempre explícitamente el tag completo.</td></tr>
 </tbody>
 </table>
@@ -440,37 +440,32 @@ ollama serve<br/>
 <p>Finalmente, se condensan los comandos de mayor frecuencia en una tabla, lista para copiar y usar.</p>
 <table class="reference">
 <thead>
-<tr><th>命令</th><th>功能</th></tr>
+<tr><th>comando</th><th>función</th></tr>
 </thead>
 <tbody>
-<tr><td>ollama pull &lt;model&gt;</td><td>下载模型</td></tr>
+<tr><td>ollama pull &lt;model&gt;</td><td>Descargar modelo</td></tr>
 <tr><td>ollama run &lt;model&gt;</td><td>Ejecutar modelo / Entrar en diálogo interactivo</td></tr>
 <tr><td>ollama list</td><td>Ver los modelos descargados.</td></tr>
 <tr><td>ollama show &lt;model&gt;</td><td>Ver detalles del modelo</td></tr>
 <tr><td>ollama ps</td><td>Ver modelos en ejecución</td></tr>
 <tr><td>ollama stop &lt;model&gt;</td><td>Detener y desinstalar el modelo</td></tr>
-<tr><td>ollama rm &lt;model&gt;</td><td>删除模型</td></tr>
+<tr><td>ollama rm &lt;model&gt;</td><td>Eliminar modelo</td></tr>
 <tr><td>ollama cp &lt;old&gt; &lt;new&gt;</td><td>Copiar / Renombrar modelo</td></tr>
 <tr><td>ollama create &lt;name&gt; -f Modelfile</td><td>Utilice Modelfile para crear modelos personalizados.</td></tr>
-<tr><td>ollama serve</td><td>启动服务</td></tr>
+<tr><td>ollama serve</td><td>Iniciar servicio</td></tr>
 </tbody>
 </table>
-<blockquote><p>Ollama se actualiza rápidamente; algunos parámetros y comportamientos de comandos pueden variar según la versión. Antes de actuar, consulte `ollama --help` y la documentación oficial.</p></blockquote>
-其他扩展
-</div>
+<blockquote><p>Ollama se actualiza rápidamente; algunos parámetros y comportamientos de comandos pueden variar según la versión. Antes de actuar, consulte `ollama --help` y la documentación oficial.</p></blockquote>Otras extensiones</div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
 <div class="archive-list-item">
-<div class="post-intro" id="ai-info" style="width: 100%;">AI 思考中...</div>
+<div class="post-intro" id="ai-info" style="width: 100%;">AI pensando...</div>
 </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ollama/ollama-upgrade-migration.html" rel="prev">Ollama 版本升级与迁移</a> </div>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ollama/ollama-upgrade-migration.html" rel="prev">Actualización y migración de la versión de Ollama</a> </div>
 <div class="next-design-link"></div>
-</div>
-
-笔记列表
-<style>
+</div>Lista de notas<style>
 .wrapper {
   /*text-transform: uppercase; */
   background: #ececec;
@@ -574,16 +569,16 @@ ollama serve<br/>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">文章投稿，可点击这里</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href=";.html" class="runoob-pop">登录</a>！</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i>Obligatorio antes de compartir notas<a class="runoob-pop" href=";.html">Iniciar sesión</a>！</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -591,14 +586,14 @@ ollama serve<br/>
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="32138"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -776,7 +771,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -867,7 +862,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

@@ -73,11 +73,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <div class="header">
 <div class="subTitle">
-<span class="moduleLabelInType">模块</span>  
+<span class="moduleLabelInType">módulo</span>  
      <a href="../../module-summary.html">java.base</a>
 </div>
 <div class="subTitle">
-<span class="packageLabelInType">软件包</span>  
+<span class="packageLabelInType">paquete</span>  
      <a href="package-summary.html">java.lang</a>
 </div>
 <h2 class="title" title="Class StringBuffer">Class StringBuffer</h2>
@@ -106,36 +106,36 @@ loadScripts(document, 'script');</script>
 extends <a href="Object.html" title="class in java.lang">Object</a>
 implements <a href="../io/Serializable.html" title="interface in java.io">Serializable</a>, <a href="Comparable.html" title="interface in java.lang">Comparable</a>&lt;<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a>&gt;, <a href="CharSequence.html" title="interface in java.lang">CharSequence</a></pre>
 <div class="block">
-<span>线程安全，可变的字符序列。</span>
-<span>字符串缓冲区类似于<a href="String.html" title="java.lang中的类"><code>String</code></a> ，但可以进行修改。</span>
-<span>在任何时间点它都包含一些特定的字符序列，但序列的长度和内容可以通过某些方法调用来改变。</span>
-<p> <span>字符串缓冲区可供多个线程使用。</span> <span>这些方法在必要时进行同步，以便任何特定实例上的所有操作都表现得好像它们以某个串行顺序出现，这与所涉及的每个单独线程所进行的方法调用的顺序一致。</span> </p>
-<p> <span><code>StringBuffer</code>上的主要操作是<code>append</code>和<code>insert</code>方法，它们被重载以接受任何类型的数据。</span> <span>每个都有效地将给定的数据转换为字符串，然后将该字符串的字符追加或插入字符串缓冲区。</span> <span><code>append</code>方法总是在缓冲区的末尾添加这些字符;</span> <span><code>insert</code>方法在指定点添加字符。</span> </p>
-<p> <span>例如，如果<code>z</code>引用其当前内容为<code>"start"</code>的字符串缓冲区对象，则方法调用<code>z.append("le")</code>将导致字符串缓冲区包含<code>"startle"</code> ，而<code>z.insert(4, "le")</code>将更改字符串缓冲区以包含<code>"starlet"</code> 。</span> </p>
-<p> <span>一般情况下，如果某人是指的一个实例<code>StringBuffer</code> ，然后<code>sb.append(x)</code>具有相同的效果<code>sb.insert(sb.length(), x)</code> 。</span> </p>
-<p> <span>每当涉及源序列的操作发生时（例如从源序列追加或插入），此类仅在执行操作的字符串缓冲区上同步，而不在源上同步。</span> <span>请注意，虽然<code>StringBuffer</code>设计为可以安全地从多个线程同时使用，但如果构造函数或<code>append</code>或<code>insert</code>操作传递了跨线程共享的源序列，则调用代码必须确保操作具有一致且不变的视图操作持续时间的源序列。</span> <span>这可以通过在操作调用期间持有锁的调用者，通过使用不可变的源序列，或者不跨线程共享源序列来满足。</span> </p>
-<p> <span>每个字符串缓冲区都有容量。</span> <span>只要字符串缓冲区中包含的字符序列的长度不超过容量，就不必分配新的内部缓冲区数组。</span> <span>如果内部缓冲区溢出，它会自动变大。</span> </p>
-<p> <span>除非另有说明，否则将<code>null</code>参数传递给<code>null</code>中的构造函数或方法将导致抛出<a href="NullPointerException.html" title="java.lang中的类"><code>NullPointerException</code></a> 。</span> </p>
-<p> <span>从JDK 5版本开始，这个类已经补充了一个设计用于单个线程的等效类， <a href="StringBuilder.html" title="java.lang中的类"><code>StringBuilder</code></a> 。</span> <span>通常应优先使用<code>StringBuilder</code>类，因为它支持所有相同的操作，但速度更快，因为它不执行同步。</span> </p>
+<span>Seguro para hilos, secuencia de caracteres mutable.</span>
+<span>El búfer de cadenas es similar a<a href="String.html" title="java.lang中的类"><code>String</code></a>, pero se puede modificar.</span>
+<span>En cualquier momento contiene una secuencia de caracteres específica, pero la longitud y el contenido de la secuencia pueden cambiarse mediante ciertas llamadas a métodos.</span>
+<p> <span>El búfer de cadenas puede ser utilizado por varios hilos.</span> <span>Estos métodos se sincronizan cuando es necesario, de modo que todas las operaciones sobre cualquier instancia particular se comportan como si ocurrieran en un orden serial, lo cual es coherente con el orden de las llamadas a métodos realizadas por cada hilo individual involucrado.</span> </p>
+<p> <span><code>StringBuffer</code>: sus operaciones principales son<code>append</code>y<code>insert</code>Métodos, que están sobrecargados para aceptar cualquier tipo de datos.</span> <span>Cada uno convierte efectivamente los datos proporcionados en una cadena y luego añade o inserta los caracteres de esa cadena en el búfer de cadenas.</span> <span><code>append</code>El método siempre añade estos caracteres al final del búfer;</span> <span><code>insert</code>El método agrega caracteres en el punto especificado.</span> </p>
+<p> <span>Por ejemplo, si<code>z</code>refiriéndose a su contenido actual como<code>"start"</code>el objeto búfer de cadenas, entonces la llamada al método<code>z.append("le")</code>hará que el búfer de cadenas contenga<code>"startle"</code>, mientras que<code>z.insert(4, "le")</code>cambiará el búfer de cadenas para que contenga<code>"starlet"</code> 。</span> </p>
+<p> <span>En general, si alguien se refiere a una instancia<code>StringBuffer</code>, entonces<code>sb.append(x)</code>tiene el mismo efecto<code>sb.insert(sb.length(), x)</code> 。</span> </p>
+<p> <span>Cada vez que se produce una operación que involucra una secuencia de origen (por ejemplo, agregar o insertar desde una secuencia de origen), esta clase se sincroniza solo en el búfer de cadenas en el que se ejecuta la operación, no en el origen.</span> <span>Tenga en cuenta que, aunque<code>StringBuffer</code>está diseñado para ser usado de manera segura por varios hilos al mismo tiempo, pero si el constructor o<code>append</code>o<code>insert</code>Si la operación pasa una secuencia de origen compartida entre hilos, el código de llamada debe garantizar que la operación tenga una vista coherente e inmutable de la secuencia de origen durante la duración de la operación.</span> <span>Esto puede satisfacerse mediante el llamante que mantiene un bloqueo durante la llamada a la operación, mediante el uso de una secuencia de origen inmutable, o no compartiendo la secuencia de origen entre hilos.</span> </p>
+<p> <span>Cada búfer de cadenas tiene una capacidad.</span> <span>Siempre que la longitud de la secuencia de caracteres contenida en el búfer de cadenas no exceda la capacidad, no es necesario asignar una nueva matriz de búfer interna.</span> <span>Si el búfer interno se desborda, se agranda automáticamente.</span> </p>
+<p> <span>A menos que se indique lo contrario,<code>null</code>pasar el parámetro a<code>null</code>sus constructores o métodos provocarán el lanzamiento<a href="NullPointerException.html" title="java.lang中的类"><code>NullPointerException</code></a> 。</span> </p>
+<p> <span>A partir de la versión JDK 5, esta clase ha sido complementada con una clase equivalente diseñada para un solo hilo,<a href="StringBuilder.html" title="java.lang中的类"><code>StringBuilder</code></a> 。</span> <span>Por lo general, se debe preferir<code>StringBuilder</code>clase, porque admite todas las mismas operaciones, pero es más rápida porque no realiza sincronización.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="simpleTagLabel">API Note:</span>
 </dt>
 <dd>
-<span><code>StringBuffer</code>实现<code>Comparable</code>但不覆盖<a href="Object.html#equals(java.lang.Object)"><code>equals</code></a> 。</span>
-<span>因此， <code>StringBuffer</code>的自然顺序与equals不一致。</span>
-<span>如果<code>StringBuffer</code>对象用作<code>StringBuffer</code>中的键或<code>SortedMap</code>元素， <code>SortedSet</code> 。</span>
-<span>见<a href="Comparable.html" title="java.lang中的接口"><code>Comparable</code></a> ， <a href="../util/SortedMap.html" title="java.util中的接口"><code>SortedMap</code></a> ，或<a href="../util/SortedSet.html" title="java.util中的接口"><code>SortedSet</code></a>获取更多信息。</span>
+<span><code>StringBuffer</code>implementa<code>Comparable</code>pero no sobrescribe<a href="Object.html#equals(java.lang.Object)"><code>equals</code></a> 。</span>
+<span>Por lo tanto,<code>StringBuffer</code>su orden natural no es consistente con equals.</span>
+<span>Si<code>StringBuffer</code>Los objetos se utilizan como<code>StringBuffer</code>claves de este o<code>SortedMap</code>elementos,<code>SortedSet</code> 。</span>
+<span>véase<a href="Comparable.html" title="java.lang中的接口"><code>Comparable</code></a> ， <a href="../util/SortedMap.html" title="java.util中的接口"><code>SortedMap</code></a>, o<a href="../util/SortedSet.html" title="java.util中的接口"><code>SortedSet</code></a>para obtener más información.</span>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
           1.0 
         </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="StringBuilder.html" title="java.lang中的类"><code>StringBuilder</code></a> ， <a href="String.html" title="java.lang中的类"><code>String</code></a> ， <a href="../../../serialized-form.html#java.lang.StringBuffer">Serialized Form</a></span>
@@ -153,42 +153,33 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <!-- --> </a> <h3>Resumen de constructores</h3>
 <table class="memberSummary">
 <caption>
-<span>构造方法</span>
+<span>Método constructor</span>
 <span class="tabEnd"> </span>
 </caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">构造器</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">StringBuffer</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个字符串缓冲区，其中没有字符，初始容量为16个字符。 
-              </div> </td>
+<div class="block">Construye un búfer de cadenas sin caracteres, con una capacidad inicial de 16 caracteres.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int)">StringBuffer</a></span>​(int capacity)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个字符串缓冲区，其中没有字符和指定的初始容量。 
-              </div> </td>
+<div class="block">Construye un búfer de cadenas sin caracteres y con la capacidad inicial especificada.</div> </td>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.CharSequence)">StringBuffer</a></span>​(<a href="CharSequence.html" title="interface in java.lang">CharSequence</a> seq)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个字符串缓冲区，其中包含与指定的 
-               <code>CharSequence</code>相同的字符。 
-              </div> </td>
+<div class="block">Construye un búfer de cadenas que contiene los mismos caracteres que el especificado.<code>CharSequence</code>Los mismos caracteres.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">StringBuffer</a></span>​(<a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个初始化为指定字符串内容的字符串缓冲区。 
-              </div> </td>
+<div class="block">Construye un búfer de cadenas inicializado con el contenido de la cadena especificada.</div> </td>
 </tr>
 </tbody>
 </table> </li>
@@ -201,459 +192,325 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <!-- --> </a> <h3>Resumen de métodos</h3>
 <table class="memberSummary">
 <caption>
-<span class="activeTableTab" id="t0"><span>所有方法</span><span class="tabEnd"> </span>
+<span class="activeTableTab" id="t0"><span>Todos los métodos</span><span class="tabEnd"> </span>
 <span class="tableTab" id="t2"><span><a href="javascript:show(2);">Método de instancia</a> </span></span>
 <span class="tableTab" id="t4"><span><a href="javascript:show(8);">Método específico</a></span><span class="tabEnd"> </span></span>
 </span></caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">变量和类型</th>
-<th class="colSecond" scope="col">方法</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Variables y tipos</th>
+<th class="colSecond" scope="col">Método</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(boolean)">append</a></span>​(boolean b)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>boolean</code>参数的字符串表示形式追加到序列中。 
-              </div> </td>
+<div class="block">va a<code>boolean</code>La representación de cadena del argumento se añade a la secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(char)">append</a></span>​(char c)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>char</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>char</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(char%5B%5D)">append</a></span>​(char[] str)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>char</code>数组参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>char</code>La representación de cadena del argumento array se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(char%5B%5D,int,int)">append</a></span>​(char[] str, int offset, int len)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>char</code>数组参数的子数组的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>char</code>La representación de cadena del subarray del argumento array se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(double)">append</a></span>​(double d)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>double</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>double</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(float)">append</a></span>​(float f)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>float</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>float</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(int)">append</a></span>​(int i)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>int</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>int</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(long)">append</a></span>​(long lng)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>long</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>long</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(java.lang.CharSequence)">append</a></span>​(<a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的 
-               <code>CharSequence</code>追加到此序列。 
-              </div> </td>
+<div class="block">La especificada<code>CharSequence</code>Añade a esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(java.lang.CharSequence,int,int)">append</a></span>​(<a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s, int start, int end)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的 
-               <code>CharSequence</code>序列附加到此序列。 
-              </div> </td>
+<div class="block">La especificada<code>CharSequence</code>Se añade la secuencia a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(java.lang.Object)">append</a></span>​(<a href="Object.html" title="class in java.lang">Object</a> obj)</code></th>
 <td class="colLast">
-<div class="block">
-                追加 
-               <code>Object</code>参数的字符串表示形式。 
-              </div> </td>
+<div class="block">Añade<code>Object</code>La representación de cadena del argumento.</div> </td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(java.lang.String)">append</a></span>​(<a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的字符串追加到此字符序列。 
-              </div> </td>
+<div class="block">Añade la cadena especificada a esta secuencia de caracteres.</div> </td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#append(java.lang.StringBuffer)">append</a></span>​(<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> sb)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的 
-               <code>StringBuffer</code>追加到此序列。 
-              </div> </td>
+<div class="block">La especificada<code>StringBuffer</code>Añade a esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appendCodePoint(int)">appendCodePoint</a></span>​(int codePoint)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>codePoint</code>参数的字符串表示形式追加到此序列。 
-              </div> </td>
+<div class="block">va a<code>codePoint</code>La representación de cadena del argumento se añade a esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#capacity()">capacity</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回当前容量。 
-              </div> </td>
+<div class="block">Devuelve la capacidad actual.</div> </td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>char</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#charAt(int)">charAt</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定索引处的此序列中的 
-               <code>char</code>值。 
-              </div> </td>
+<div class="block">Devuelve el de esta secuencia en el índice especificado.<code>char</code>valores.</div> </td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="../util/stream/IntStream.html" title="interface in java.util.stream">IntStream</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#chars()">chars</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回 
-               <code>int</code>的流，对此序列中的 
-               <code>char</code>值进行零扩展。 
-              </div> </td>
+<div class="block">Devuelve<code>int</code>El flujo de, para los de esta secuencia<code>char</code>Los valores se extienden con ceros.</div> </td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#codePointAt(int)">codePointAt</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定索引处的字符（Unicode代码点）。 
-              </div> </td>
+<div class="block">Devuelve el carácter (punto de código Unicode) en el índice especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#codePointBefore(int)">codePointBefore</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定索引之前的字符（Unicode代码点）。 
-              </div> </td>
+<div class="block">Devuelve el carácter (punto de código Unicode) antes del índice especificado.</div> </td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#codePointCount(int,int)">codePointCount</a></span>​(int beginIndex, int endIndex)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此序列的指定文本范围内的Unicode代码点数。 
-              </div> </td>
+<div class="block">Devuelve el número de puntos de código Unicode en el rango de texto especificado de esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code><a href="../util/stream/IntStream.html" title="interface in java.util.stream">IntStream</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#codePoints()">codePoints</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此序列中的代码点值流。 
-              </div> </td>
+<div class="block">Devuelve un flujo de valores de puntos de código de esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#compareTo(java.lang.StringBuffer)">compareTo</a></span>​(<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> another)</code></th>
 <td class="colLast">
 <div class="block">
-<code>StringBuffer</code>字典顺序比较两个 
-               <code>StringBuffer</code>实例。 
-              </div> </td>
+<code>StringBuffer</code>Compara dos lexicográficamente<code>StringBuffer</code>instancia.</div> </td>
 </tr>
 <tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#delete(int,int)">delete</a></span>​(int start, int end)</code></th>
 <td class="colLast">
-<div class="block">
-                删除此序列的子字符串中的字符。 
-              </div> </td>
+<div class="block">Elimina los caracteres en una subcadena de esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i23">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteCharAt(int)">deleteCharAt</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                按此顺序删除指定位置的 
-               <code>char</code> 。 
+<div class="block">Elimina el de la posición especificada en este orden<code>char</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ensureCapacity(int)">ensureCapacity</a></span>​(int minimumCapacity)</code></th>
 <td class="colLast">
-<div class="block">
-                确保容量至少等于指定的最小值。 
-              </div> </td>
+<div class="block">Asegura que la capacidad sea al menos igual al mínimo especificado.</div> </td>
 </tr>
 <tr class="rowColor" id="i25">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChars(int,int,char%5B%5D,int)">getChars</a></span>​(int srcBegin, int srcEnd, char[] dst, int dstBegin)</code></th>
 <td class="colLast">
-<div class="block">
-                将字符从此序列复制到目标字符数组 
-               <code>dst</code> 。 
+<div class="block">Copia los caracteres de esta secuencia a la matriz de caracteres de destino<code>dst</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i26">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#indexOf(java.lang.String)">indexOf</a></span>​(<a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定子字符串第一次出现的字符串中的索引。 
-              </div> </td>
+<div class="block">Devuelve el índice en la cadena de la primera aparición de la subcadena especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i27">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#indexOf(java.lang.String,int)">indexOf</a></span>​(<a href="String.html" title="class in java.lang">String</a> str, int fromIndex)</code></th>
 <td class="colLast">
-<div class="block">
-                从指定的索引处开始，返回指定子字符串第一次出现的字符串中的索引。 
-              </div> </td>
+<div class="block">Devuelve el índice en la cadena de la primera aparición de la subcadena especificada, comenzando en el índice especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,boolean)">insert</a></span>​(int offset, boolean b)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>boolean</code>参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>boolean</code>Inserta la representación de cadena del argumento en esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i29">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,char)">insert</a></span>​(int offset, char c)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>char</code>参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>char</code>Inserta la representación de cadena del argumento en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i30">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,char%5B%5D)">insert</a></span>​(int offset, char[] str)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>char</code>数组参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>char</code>Inserta la representación de cadena del argumento de matriz en esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i31">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,char%5B%5D,int,int)">insert</a></span>​(int index, char[] str, int offset, int len)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>str</code>数组参数的子数组的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>str</code>Inserta la representación de cadena de la submatriz del argumento de matriz en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i32">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,double)">insert</a></span>​(int offset, double d)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>double</code>参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>double</code>Inserta la representación de cadena del argumento en esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i33">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,float)">insert</a></span>​(int offset, float f)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>float</code>参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>float</code>Inserta la representación de cadena del argumento en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i34">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,int)">insert</a></span>​(int offset, int i)</code></th>
 <td class="colLast">
-<div class="block">
-                将第二个 
-               <code>int</code>参数的字符串表示形式插入到此序列中。 
-              </div> </td>
+<div class="block">El segundo<code>int</code>La representación de cadena del argumento se inserta en esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i35">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,long)">insert</a></span>​(int offset, long l)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>long</code>参数的字符串表示形式插入此序列中。 
-              </div> </td>
+<div class="block">va a<code>long</code>Inserta la representación de cadena del argumento en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i36">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,java.lang.CharSequence)">insert</a></span>​(int dstOffset, <a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的 
-               <code>CharSequence</code>插入此序列。 
-              </div> </td>
+<div class="block">La especificada<code>CharSequence</code>Inserta en esta secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,java.lang.CharSequence,int,int)">insert</a></span>​(int dstOffset, <a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s, int start, int end)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的 
-               <code>CharSequence</code>序列插入此序列。 
-              </div> </td>
+<div class="block">La especificada<code>CharSequence</code>La secuencia se inserta en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i38">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,java.lang.Object)">insert</a></span>​(int offset, <a href="Object.html" title="class in java.lang">Object</a> obj)</code></th>
 <td class="colLast">
-<div class="block">
-                将 
-               <code>Object</code>参数的字符串表示形式插入此字符序列。 
-              </div> </td>
+<div class="block">va a<code>Object</code>La representación de cadena del argumento se inserta en esta secuencia de caracteres.</div> </td>
 </tr>
 <tr class="rowColor" id="i39">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insert(int,java.lang.String)">insert</a></span>​(int offset, <a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                将字符串插入此字符序列。 
-              </div> </td>
+<div class="block">Inserta la cadena en esta secuencia de caracteres.</div> </td>
 </tr>
 <tr class="altColor" id="i40">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastIndexOf(java.lang.String)">lastIndexOf</a></span>​(<a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定子字符串最后一次出现的字符串中的索引。 
-              </div> </td>
+<div class="block">Devuelve el índice en la cadena de la última aparición de la subcadena especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i41">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastIndexOf(java.lang.String,int)">lastIndexOf</a></span>​(<a href="String.html" title="class in java.lang">String</a> str, int fromIndex)</code></th>
 <td class="colLast">
-<div class="block">
-                返回指定子字符串最后一次出现的字符串中的索引，从指定索引开始向后搜索。 
-              </div> </td>
+<div class="block">Devuelve el índice en la cadena de la última aparición de la subcadena especificada, buscando hacia atrás desde el índice especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i42">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offsetByCodePoints(int,int)">offsetByCodePoints</a></span>​(int index, int codePointOffset)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此序列中的索引，该索引从给定的 
-               <code>index</code>偏移 
-               <code>codePointOffset</code>代码点。 
-              </div> </td>
+<div class="block">Devuelve el índice en esta secuencia que comienza en el<code>index</code>desplazamiento<code>codePointOffset</code>puntos de código.</div> </td>
 </tr>
 <tr class="rowColor" id="i43">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replace(int,int,java.lang.String)">replace</a></span>​(int start, int end, <a href="String.html" title="class in java.lang">String</a> str)</code></th>
 <td class="colLast">
-<div class="block">
-                使用指定的 
-               <code>String</code>的字符替换此序列的子字符串中的字符。 
-              </div> </td>
+<div class="block">Usando la especificada<code>String</code>Los caracteres de la especificada reemplazan los caracteres de una subcadena de esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i44">
 <td class="colFirst"><code><a href="StringBuffer.html" title="class in java.lang">StringBuffer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reverse()">reverse</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                导致此字符序列被序列的反向替换。 
-              </div> </td>
+<div class="block">Hace que esta secuencia de caracteres sea reemplazada por la inversa de la secuencia.</div> </td>
 </tr>
 <tr class="rowColor" id="i45">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCharAt(int,char)">setCharAt</a></span>​(int index, char ch)</code></th>
 <td class="colLast">
-<div class="block">
-                指定索引处的字符设置为 
-               <code>ch</code> 。 
+<div class="block">El carácter en el índice especificado se establece a<code>ch</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i46">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLength(int)">setLength</a></span>​(int newLength)</code></th>
 <td class="colLast">
-<div class="block">
-                设置字符序列的长度。 
-              </div> </td>
+<div class="block">Establece la longitud de la secuencia de caracteres.</div> </td>
 </tr>
 <tr class="rowColor" id="i47">
 <td class="colFirst"><code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#subSequence(int,int)">subSequence</a></span>​(int start, int end)</code></th>
 <td class="colLast">
-<div class="block">
-                返回一个新的字符序列，它是该序列的子序列。 
-              </div> </td>
+<div class="block">Devuelve una nueva secuencia de caracteres que es una subsecuencia de esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i48">
 <td class="colFirst"><code><a href="String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#substring(int)">substring</a></span>​(int start)</code></th>
 <td class="colLast">
-<div class="block">
-                返回一个新的 
-               <code>String</code> ，其中包含此字符序列中当前包含的字符的子序列。 
-              </div> </td>
+<div class="block">Devuelve una nueva<code>String</code>, que contiene una subsecuencia de los caracteres actualmente contenidos en esta secuencia de caracteres.</div> </td>
 </tr>
 <tr class="rowColor" id="i49">
 <td class="colFirst"><code><a href="String.html" title="class in java.lang">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#substring(int,int)">substring</a></span>​(int start, int end)</code></th>
 <td class="colLast">
-<div class="block">
-                返回一个新的 
-               <code>String</code> ，其中包含当前包含在此序列中的字符的子序列。 
-              </div> </td>
+<div class="block">Devuelve una nueva<code>String</code>, que contiene una subsecuencia de los caracteres actualmente contenidos en esta secuencia.</div> </td>
 </tr>
 <tr class="altColor" id="i50">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#trimToSize()">trimToSize</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                尝试减少用于字符序列的存储空间。 
-              </div> </td>
+<div class="block">Intenta reducir el espacio de almacenamiento utilizado para la secuencia de caracteres.</div> </td>
 </tr>
 </tbody>
 </table>
@@ -680,29 +537,23 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>StringBuffer</h4> <pre>public StringBuffer()</pre>
-<div class="block">
-              构造一个字符串缓冲区，其中没有字符，初始容量为16个字符。 
-            </div> </li>
+<div class="block">Construye un búfer de cadenas sin caracteres, con una capacidad inicial de 16 caracteres.</div> </li>
 </ul> <a id="&lt;init&gt;(int)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>StringBuffer</h4> <pre>public StringBuffer​(int capacity)</pre>
-<div class="block">
-              构造一个字符串缓冲区，其中没有字符和指定的初始容量。 
-            </div>
+<div class="block">Construye un búfer de cadenas sin caracteres y con la capacidad inicial especificada.</div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>capacity</code>- Capacidad inicial.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="NegativeArraySizeException.html" title="class in java.lang">NegativeArraySizeException</a></code> - 如果 
-              <code>capacity</code>参数小于 
-              <code>0</code> 。 
+<code><a href="NegativeArraySizeException.html" title="class in java.lang">NegativeArraySizeException</a></code>- si<code>capacity</code>el parámetro es menor que<code>0</code> 。 
              </dd>
 </dl> </li>
 </ul> <a id="&lt;init&gt;(java.lang.String)">
@@ -710,12 +561,12 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>StringBuffer</h4> <pre>public StringBuffer​(<a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>构造一个初始化为指定字符串内容的字符串缓冲区。</span>
-<span>字符串缓冲区的初始容量是<code>16</code>加上字符串参数的长度。</span>
+<span>Construye un búfer de cadenas inicializado con el contenido de la cadena especificada.</span>
+<span>La capacidad inicial del búfer de cadenas es<code>16</code>más la longitud del parámetro de cadena.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- El contenido inicial del búfer.</dd>
@@ -725,18 +576,18 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockListLast">
 <li class="blockList"> <h4>StringBuffer</h4> <pre>public StringBuffer​(<a href="CharSequence.html" title="interface in java.lang">CharSequence</a> seq)</pre>
 <div class="block">
-<span>构造一个字符串缓冲区，其中包含与指定的<code>CharSequence</code>相同的字符。</span>
-<span>字符串缓冲区的初始容量为<code>16</code>加上<code>CharSequence</code>参数的长度。</span>
-<p> <span>如果指定的<code>CharSequence</code>的长度小于或等于零，则返回容量为<code>16</code>的空缓冲区。</span> </p>
+<span>Construye un búfer de cadenas que contiene los mismos caracteres que el especificado.<code>CharSequence</code>Los mismos caracteres.</span>
+<span>La capacidad inicial del búfer de cadenas es<code>16</code>más<code>CharSequence</code>la longitud del parámetro.</span>
+<p> <span>Si el especificado<code>CharSequence</code>si la longitud es menor o igual que cero, devuelve la capacidad de<code>16</code>un búfer vacío.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>seq</code>- La secuencia a copiar.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -754,44 +605,38 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>compareTo</h4> <pre class="methodSignature">public int compareTo​(<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> another)</pre>
 <div class="block">
-<span><code>StringBuffer</code>字典顺序比较两个<code>StringBuffer</code>实例。</span>
-<span>该方法遵循<a href="CharSequence.html#compare(java.lang.CharSequence,java.lang.CharSequence)">CharSequence.compare(this, another)</a>方法中定义的词典比较的相同规则。</span>
-<p> <span>有关细粒度，区域设置敏感的String比较，请参阅<a href="../text/Collator.html" title="java.text中的类"><code>Collator</code></a> 。</span> </p>
+<span><code>StringBuffer</code>Compara dos lexicográficamente<code>StringBuffer</code>instancia.</span>
+<span>Este método sigue<a href="CharSequence.html#compare(java.lang.CharSequence,java.lang.CharSequence)">CharSequence.compare(this, another)</a>las mismas reglas de comparación lexicográfica definidas en el método.</span>
+<p> <span>Para comparaciones de String sensibles a la configuración regional y de grano fino, consulte<a href="../text/Collator.html" title="java.text中的类"><code>Collator</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Comparable.html#compareTo(T)">compareTo</a></code> ，界面 
-              <code><a href="Comparable.html" title="interface in java.lang">Comparable</a>&lt;<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a>&gt;</code>
+<code><a href="Comparable.html#compareTo(T)">compareTo</a></code>, la interfaz<code><a href="Comparable.html" title="interface in java.lang">Comparable</a>&lt;<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a>&gt;</code>
 </dd>
 <dt>
 <span class="simpleTagLabel">Implementation Note:</span>
 </dt>
-<dd>
-               此方法在 
-              <code>this</code>Sincronizado en (el objeto actual), pero no con<code>this StringBuffer</code>Realizar la sincronización, y<code>StringBuffer another</code>与 
-              <code>this StringBuffer</code>进行比较。 
-             </dd>
+<dd>Este método en<code>this</code>Sincronizado en (el objeto actual), pero no con<code>this StringBuffer</code>Realizar la sincronización, y<code>StringBuffer another</code>y<code>this StringBuffer</code>realiza la comparación.</dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>another</code> - 
-              <code>StringBuffer</code>比较的 
-              <code>StringBuffer</code>
+              <code>StringBuffer</code>la comparación<code>StringBuffer</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<span>值<code>0</code>如果此<code>StringBuffer</code>包含与参数<code>StringBuffer</code>相同的字符序列;</span>
-<span>如果此<code>StringBuffer</code>在字典上小于<code>StringBuffer</code>参数， <code>StringBuffer</code>负整数;</span>
-<span>如果此<code>StringBuffer</code>在字典上大于<code>StringBuffer</code>参数， <code>StringBuffer</code>正整数。</span>
+<span>Valor<code>0</code>Si el<code>StringBuffer</code>contiene con el parámetro<code>StringBuffer</code>la misma secuencia de caracteres;</span>
+<span>Si el<code>StringBuffer</code>lexicográficamente menor que<code>StringBuffer</code>el parámetro,<code>StringBuffer</code>entero negativo;</span>
+<span>Si el<code>StringBuffer</code>lexicográficamente mayor que<code>StringBuffer</code>el parámetro,<code>StringBuffer</code>entero positivo.</span>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                11 
@@ -802,35 +647,33 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>capacity</h4> <pre class="methodSignature">public int capacity()</pre>
 <div class="block">
-<span>返回当前容量。</span>
-<span>容量是新插入字符可用的存储量，超出该容量将进行分配。</span>
+<span>Devuelve la capacidad actual.</span>
+<span>La capacidad es la cantidad de almacenamiento disponible para los caracteres recién insertados; si se excede dicha capacidad, se realizará una asignación.</span>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               目前的能力 
-             </dd>
+<dd>La capacidad actual.</dd>
 </dl> </li>
 </ul> <a id="ensureCapacity(int)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>ensureCapacity</h4> <pre class="methodSignature">public void ensureCapacity​(int minimumCapacity)</pre>
 <div class="block">
-<span>确保容量至少等于指定的最小值。</span>
-<span>如果当前容量小于参数，则分配具有更大容量的新内部阵列。</span>
-<span>新容量是更大的：</span>
+<span>Asegura que la capacidad sea al menos igual al mínimo especificado.</span>
+<span>Si la capacidad actual es menor que el parámetro, se asigna una nueva matriz interna con mayor capacidad.</span>
+<span>La nueva capacidad es la mayor de:</span>
 <ul>
-<li> <span><code>minimumCapacity</code>论点。</span> </li>
-<li> <span>旧容量的两倍，再加上<code>2</code> 。</span> </li>
+<li> <span><code>minimumCapacity</code>argumento.</span> </li>
+<li> <span>el doble de la capacidad anterior, más<code>2</code> 。</span> </li>
 </ul>
-<span>如果<code>minimumCapacity</code>参数为非正数，则此方法不执行任何操作，只返回。</span>
-<span>请注意，对此对象的后续操作可以将实际容量降低到此处请求的容量以下。</span>
+<span>Si<code>minimumCapacity</code>Si el parámetro no es positivo, este método no realiza ninguna operación y simplemente regresa.</span>
+<span>Tenga en cuenta que las operaciones posteriores sobre este objeto pueden reducir la capacidad real por debajo de la capacidad solicitada aquí.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>minimumCapacity</code>- La capacidad mínima requerida.</dd>
@@ -840,13 +683,13 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>trimToSize</h4> <pre class="methodSignature">public void trimToSize()</pre>
 <div class="block">
-<span>尝试减少用于字符序列的存储空间。</span>
-<span>如果缓冲区大于保持其当前字符序列所需的缓冲区，则可以调整其大小以使空间效率更高。</span>
-<span>调用此方法可能（但不是必须）影响后续调用<a href="#capacity()"><code>capacity()</code></a>方法返回的值。</span>
+<span>Intenta reducir el espacio de almacenamiento utilizado para la secuencia de caracteres.</span>
+<span>Si el búfer es más grande de lo necesario para contener su secuencia de caracteres actual, se puede ajustar su tamaño para que sea más eficiente en espacio.</span>
+<span>Llamar a este método puede (pero no necesariamente) afectar a llamadas posteriores<a href="#capacity()"><code>capacity()</code></a>El valor devuelto por el método.</span>
 </div>
 <dl>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -857,29 +700,27 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>setLength</h4> <pre class="methodSignature">public void setLength​(int newLength)</pre>
 <div class="block">
-<span>设置字符序列的长度。</span>
-<span>序列更改为新的字符序列，其长度由参数指定。</span>
-<span>对于小于每非负索引<i>k</i> <code>newLength</code> ，在新的字符序列的索引<i>k</i>处的字符是相同的在旧序列索引<i>k</i>如果<i>k</i>小于原字符序列的长度的字符;</span>
-<span>否则，它是空字符<code>'\u0000'</code> 。</span>
-<span>换句话说，如果<code>newLength</code>参数小于当前长度，则长度将更改为指定的长度。</span>
-<p> <span>如果<code>newLength</code>参数大于或等于当前长度，则会附加足够的空字符（ <code>'\u0000'</code> ），以便length成为<code>newLength</code>参数。</span> </p>
-<p> <span><code>newLength</code>参数必须大于或等于<code>0</code> 。</span> </p>
+<span>Establece la longitud de la secuencia de caracteres.</span>
+<span>La secuencia se cambia a una nueva secuencia de caracteres cuya longitud está especificada por el parámetro.</span>
+<span>Para cada índice no negativo menor que<i>k</i> <code>newLength</code>, en el índice de la nueva secuencia de caracteres<i>k</i>el carácter en esa posición es el mismo que en el índice de la secuencia antigua<i>k</i>Si<i>k</i>menor que la longitud de la secuencia de caracteres original;</span>
+<span>de lo contrario, es un carácter nulo<code>'\u0000'</code> 。</span>
+<span>En otras palabras, si<code>newLength</code>Si el parámetro es menor que la longitud actual, la longitud se cambiará a la longitud especificada.</span>
+<p> <span>Si<code>newLength</code>Si el parámetro es mayor o igual que la longitud actual, se añadirán suficientes caracteres nulos (<code>'\u0000'</code>), de modo que length sea<code>newLength</code>el parámetro.</span> </p>
+<p> <span><code>newLength</code>El parámetro debe ser mayor o igual a<code>0</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>newLength</code> - 新长度 
-             </dd>
+<code>newLength</code>- nueva longitud</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>newLength</code>El parámetro es negativo.</dd>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>newLength</code>El parámetro es negativo.</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="CharSequence.html#length()"><code>CharSequence.length()</code></a>
@@ -890,40 +731,35 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>charAt</h4> <pre class="methodSignature">public char charAt​(int index)</pre>
 <div class="block">
-<span>返回指定索引处的此序列中的<code>char</code>值。</span>
-<span>第一个<code>char</code>值位于索引<code>0</code> ，下一个位于索引<code>1</code> ，依此类推，如数组索引中所示。</span>
-<p> <span>index参数必须大于或等于<code>0</code> ，并且小于此序列的长度。</span> </p>
-<p> <span>如果索引指定的<code>char</code>值为<a href="Character.html#unicode">surrogate</a> ，则返回代理值。</span> </p>
+<span>Devuelve el de esta secuencia en el índice especificado.<code>char</code>valores.</span>
+<span>El primer<code>char</code>valor en el índice<code>0</code>, el siguiente en el índice<code>1</code>, y así sucesivamente, como se muestra en la indexación de matrices.</span>
+<p> <span>El parámetro index debe ser mayor o igual que<code>0</code>, y menor que la longitud de esta secuencia.</span> </p>
+<p> <span>Si el valor especificado por el índice<code>char</code>es<a href="Character.html#unicode">surrogate</a>, se devuelve el valor sustituto.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="CharSequence.html#charAt(int)">charAt</a></code>在界面 
-              <code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
+<code><a href="CharSequence.html#charAt(int)">charAt</a></code>En la interfaz<code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>index</code> - 所需 
-              <code>char</code>值的索引。 
-             </dd>
+<code>index</code>- el índice del<code>char</code>valor deseado.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>En el índice especificado<code>char</code>值。 
-             </dd>
+<dd>En el índice especificado<code>char</code>valores.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
              </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="CharSequence.html#length()"><code>CharSequence.length()</code></a>
@@ -934,31 +770,29 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>codePointAt</h4> <pre class="methodSignature">public int codePointAt​(int index)</pre>
 <div class="block">
-<span>返回指定索引处的字符（Unicode代码点）。</span>
-<span>索引引用<code>char</code>值（Unicode代码单位），范围从<code>0</code>到<a href="CharSequence.html#length()"><code>CharSequence.length()</code></a> <code>- 1</code> 。</span>
-<p> <span>如果在给定索引处指定的<code>char</code>值处于高代理范围内，则以下索引小于此序列的长度，并且以下索引处的<code>char</code>值处于低代理范围，然后是补充代码点对应于此代理项对返回。</span> <span>否则，返回给定索引处的<code>char</code>值。</span> </p>
+<span>Devuelve el carácter (punto de código Unicode) en el índice especificado.</span>
+<span>El índice hace referencia a<code>char</code>valor (unidad de código Unicode), en el rango desde<code>0</code>llegar<a href="CharSequence.html#length()"><code>CharSequence.length()</code></a> <code>- 1</code> 。</span>
+<p> <span>Si el valor especificado en el índice dado<code>char</code>está en el rango de sustituto alto, y el índice siguiente es menor que la longitud de esta secuencia, y el<code>char</code>valor está en el rango de sustituto bajo, entonces se devuelve el punto de código complementario correspondiente a este par de sustitutos.</span> <span>De lo contrario, se devuelve el<code>char</code>valores.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code> - 
-              <code>char</code>值的索引 
-             </dd>
+              <code>char</code>índice del valor.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>index</code>el valor del punto de código del carácter en</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>El parámetro es negativo o no menor que la longitud de esta secuencia.</dd>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>index</code>El parámetro es negativo o no menor que la longitud de esta secuencia.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -969,28 +803,27 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>codePointBefore</h4> <pre class="methodSignature">public int codePointBefore​(int index)</pre>
 <div class="block">
-<span>返回指定索引之前的字符（Unicode代码点）。</span>
-<span>索引引用<code>char</code>值（Unicode代码单位），范围从<code>1</code>到<a href="CharSequence.html#length()"><code>CharSequence.length()</code></a> 。</span>
-<p> <span>如果<code>char</code>在值<code>(index - 1)</code>处于低代理项范围， <code>(index - 2)</code>不为负，并且<code>char</code>在值<code>(index - 2)</code>处于高代理项范围，则返回代理对的补充代码点值。</span> <span>如果<code>char</code>在值<code>index - 1</code>是未配对的低代理或一个高代理，则返回所述替代值。</span> </p>
+<span>Devuelve el carácter (punto de código Unicode) antes del índice especificado.</span>
+<span>El índice hace referencia a<code>char</code>valor (unidad de código Unicode), en el rango desde<code>1</code>llegar<a href="CharSequence.html#length()"><code>CharSequence.length()</code></a> 。</span>
+<p> <span>Si<code>char</code>Si el valor<code>(index - 1)</code>está en el rango de sustituto bajo,<code>(index - 2)</code>no es negativo, y<code>char</code>Si el valor<code>(index - 2)</code>está en el rango de sustituto alto, entonces se devuelve el valor de punto de código complementario del par de sustitutos.</span> <span>Si<code>char</code>Si el valor<code>index - 1</code>Si es un sustituto bajo no emparejado o un sustituto alto, se devuelve el valor sustituto mencionado.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice después del punto de código que se debe devolver</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El valor del punto de código Unicode anterior al índice dado.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>El parámetro es menor que 1 o mayor que la longitud de esta secuencia.</dd>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>index</code>El parámetro es menor que 1 o mayor que la longitud de esta secuencia.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1002,34 +835,31 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>codePointCount</h4> <pre class="methodSignature">public int codePointCount​(int beginIndex,
                           int endIndex)</pre>
 <div class="block">
-<span>返回此序列的指定文本范围内的Unicode代码点数。</span>
-<span>文本范围开始在指定的<code>beginIndex</code> ，并延伸到<code>char</code>在索引<code>endIndex - 1</code> 。</span>
-<span>因此，文本范围的长度（在<code>char</code> s中）是<code>endIndex-beginIndex</code> 。</span>
-<span>此序列中的未配对代理计为每个代码点。</span>
+<span>Devuelve el número de puntos de código Unicode en el rango de texto especificado de esta secuencia.</span>
+<span>El rango de texto comienza en el especificado<code>beginIndex</code>, y se extiende hasta el carácter<code>char</code>en el índice<code>endIndex - 1</code> 。</span>
+<span>Por lo tanto, la longitud del rango de texto (en<code>char</code>caracteres) es<code>endIndex-beginIndex</code> 。</span>
+<span>Los sustitutos no emparejados en esta secuencia se cuentan como un punto de código cada uno.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>beginIndex</code>- El primero del rango de texto<code>char</code>的索引。 
-             </dd>
+<code>beginIndex</code>- El primero del rango de texto<code>char</code>el índice.</dd>
 <dd>
 <code>endIndex</code>- El último del rango de texto<code>char</code>El índice posterior.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El número de puntos de código Unicode en el rango de texto especificado.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>beginIndex</code>es negativo, o<code>endIndex</code>mayor que la longitud de esta secuencia, o<code>beginIndex</code>大于 
-              <code>endIndex</code> 。 
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>beginIndex</code>es negativo, o<code>endIndex</code>mayor que la longitud de esta secuencia, o<code>beginIndex</code>mayor que<code>endIndex</code> 。 
              </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1041,36 +871,28 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>offsetByCodePoints</h4> <pre class="methodSignature">public int offsetByCodePoints​(int index,
                               int codePointOffset)</pre>
 <div class="block">
-<span>返回此序列中的索引，该索引从给定的<code>index</code>偏移<code>codePointOffset</code>代码点。</span>
-<span><code>index</code>和<code>codePointOffset</code>给出的文本范围内的未配对代理计为每个代码点。</span>
+<span>Devuelve el índice en esta secuencia que comienza en el<code>index</code>desplazamiento<code>codePointOffset</code>puntos de código.</span>
+<span><code>index</code>y<code>codePointOffset</code>Los sustitutos no emparejados en el rango de texto dado se cuentan como un punto de código cada uno.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice a desplazar</dd>
 <dd>
 <code>codePointOffset</code>- El desplazamiento en puntos de código</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El índice en esta secuencia</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>es negativo o mayor que la longitud de esta secuencia, o si<code>codePointOffset</code>为正且从 
-              <code>index</code>开始的子 
-              <code>codePointOffset</code>代码点少于 
-              <code>codePointOffset</code> ，或者 
-              <code>codePointOffset</code>为负且 
-              <code>index</code>之前的子 
-              <code>index</code>menor que el valor absoluto del valor absoluto de<code>codePointOffset</code>代码点。 
-             </dd>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>index</code>es negativo o mayor que la longitud de esta secuencia, o si<code>codePointOffset</code>es positivo y desde<code>index</code>la subcadena que comienza en<code>codePointOffset</code>punto de código menor que<code>codePointOffset</code>, o<code>codePointOffset</code>es negativo y<code>index</code>la subcadena anterior<code>index</code>menor que el valor absoluto del valor absoluto de<code>codePointOffset</code>puntos de código.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1084,16 +906,16 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                      char[] dst,
                      int dstBegin)</pre>
 <div class="block">
-<span>将字符从此序列复制到目标字符数组<code>dst</code> 。</span>
-<span>要复制的第一个字符是索引<code>srcBegin</code> ;</span>
-<span>要复制的最后一个字符位于索引<code>srcEnd-1</code> 。</span>
-<span>要复制的字符总数为<code>srcEnd-srcBegin</code> 。</span>
-<span>字符被复制到<code>dst</code>的子阵列中，从索引<code>dstBegin</code>开始并以索引结束：</span>
+<span>Copia los caracteres de esta secuencia a la matriz de caracteres de destino<code>dst</code> 。</span>
+<span>El primer carácter a copiar es el índice<code>srcBegin</code> ;</span>
+<span>El último carácter a copiar está en el índice<code>srcEnd-1</code> 。</span>
+<span>El número total de caracteres a copiar es<code>srcEnd-srcBegin</code> 。</span>
+<span>Los caracteres se copian a<code>dst</code>de la submatriz, desde el índice<code>dstBegin</code>comienza y termina en el índice:</span>
 <pre>  <span><code> dstbegin + (srcEnd-srcBegin) - 1 </code></span> </pre>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>srcBegin</code>- Comenzar la copia en este desplazamiento.</dd>
@@ -1102,20 +924,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <dd>
 <code>dst</code>- El array al que se copiarán los datos.</dd>
 <dd>
-<code>dstBegin</code> - 抵消到 
-              <code>dst</code> 。 
+<code>dstBegin</code>- offset a<code>dst</code> 。 
              </dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<span><code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果满足以下任何条件：</span>
+<span><code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si se cumple cualquiera de las siguientes condiciones:</span>
 <ul>
-<li> <span><code>srcBegin</code>是否定的</span> </li>
-<li> <span><code>dstBegin</code>是否定的</span> </li>
-<li> <span><code>srcBegin</code>参数大于<code>srcEnd</code>参数。</span> </li>
-<li> <span><code>srcEnd</code>大于<code>this.length()</code> 。</span> </li>
-<li> <span><code>dstBegin+srcEnd-srcBegin</code>大于<code>dst.length</code></span> </li>
+<li> <span><code>srcBegin</code>es negativo</span> </li>
+<li> <span><code>dstBegin</code>es negativo</span> </li>
+<li> <span><code>srcBegin</code>el parámetro es mayor que<code>srcEnd</code>el parámetro.</span> </li>
+<li> <span><code>srcEnd</code>mayor que<code>this.length()</code> 。</span> </li>
+<li> <span><code>dstBegin+srcEnd-srcBegin</code>mayor que<code>dst.length</code></span> </li>
 </ul>
 </dd>
 </dl> </li>
@@ -1125,27 +946,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>setCharAt</h4> <pre class="methodSignature">public void setCharAt​(int index,
                       char ch)</pre>
 <div class="block">
-<span>指定索引处的字符设置为<code>ch</code> 。</span>
-<span>该序列被改变以表示一个新的字符序列，其是相同的原字符序列，不同之处在于它包含字符<code>ch</code>在位置<code>index</code> 。</span>
-<p> <span>index参数必须大于或等于<code>0</code> ，并且小于此序列的长度。</span> </p>
+<span>El carácter en el índice especificado se establece a<code>ch</code> 。</span>
+<span>la secuencia se modifica para representar una nueva secuencia de caracteres, que es la misma que la secuencia de caracteres original, excepto que contiene el carácter<code>ch</code>en la posición<code>index</code> 。</span>
+<p> <span>El parámetro index debe ser mayor o igual que<code>0</code>, y menor que la longitud de esta secuencia.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice del carácter a modificar.</dd>
 <dd>
 <code>ch</code>- Nuevo carácter.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
              </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="CharSequence.html#length()"><code>CharSequence.length()</code></a>
@@ -1156,19 +976,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(<a href="Object.html" title="class in java.lang">Object</a> obj)</pre>
 <div class="block">
-<span>追加<code>Object</code>参数的字符串表示形式。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(java.lang.Object)"><code>String.valueOf(Object)</code></a>将参数转换为字符串<a href="String.html#valueOf(java.lang.Object)">完全相同</a> ，并且该字符串的字符随后是<a href="#append(java.lang.String)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>Añade<code>Object</code>La representación de cadena del argumento.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(java.lang.Object)"><code>String.valueOf(Object)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(java.lang.Object)">Exactamente igual</a>, y los caracteres de esta cadena se añaden luego<a href="#append(java.lang.String)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>obj</code> - 
               <code>Object</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1177,18 +997,18 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(<a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>将指定的字符串追加到此字符序列。</span>
-<p> <span><code>String</code>参数的字符按顺序附加，按参数的长度增加此序列的长度。</span> <span>如果<code>str</code>是<code>null</code> ，则附加四个字符<code>"null"</code> 。</span> </p>
-<p> <span>设<i>n</i>是执行<code>append</code>方法之前的该字符序列的长度。</span> <span>如果<i>k</i>小于<i>n</i> ，则新字符序列中索引<i>k</i>处的字符等于旧字符序列中索引<i>k</i>处的字符;</span> <span>否则，它等于参数<code>str</code>中索引<i>kn</i>处的字符。</span> </p>
+<span>Añade la cadena especificada a esta secuencia de caracteres.</span>
+<p> <span><code>String</code>los caracteres del argumento se añaden en orden, aumentando la longitud de esta secuencia en la longitud del argumento.</span> <span>Si<code>str</code>Sí<code>null</code>，entonces se añaden cuatro caracteres<code>"null"</code> 。</span> </p>
+<p> <span>Sea<i>n</i>es ejecutar<code>append</code>la longitud de esta secuencia de caracteres antes del método.</span> <span>Si<i>k</i>menor que<i>n</i>，entonces el índice en la nueva secuencia de caracteres<i>k</i>el carácter en la posición es igual al índice en la antigua secuencia de caracteres<i>k</i>el carácter en la posición;</span> <span>de lo contrario, es igual al parámetro<code>str</code>el índice en<i>kn</i>el carácter en la posición.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- Una cadena.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1197,24 +1017,24 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(<a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> sb)</pre>
 <div class="block">
-<span>将指定的<code>StringBuffer</code>追加到此序列。</span>
-<p> <span>所述的字符<code>StringBuffer</code>参数附加，为了，该内容<code>StringBuffer</code> ，增加该的长度<code>StringBuffer</code>由参数的长度。</span> <span>如果<code>sb</code>是<code>null</code> ，则四个字符<code>"null"</code>将附加到此<code>StringBuffer</code> 。</span> </p>
-<p> <span>令<i>n</i>为旧字符序列的长度，即在执行<code>append</code>方法之前<code>StringBuffer</code>包含的字符序列的长度。</span> <span>如果<i>k</i>小于<i>n</i> ，则新字符序列中索引<i>k</i>处的字符等于旧字符序列中索引<i>k</i>处的字符;</span> <span>否则，它等于参数<code>sb</code>中索引<i>kn</i>处的字符。</span> </p>
-<p> <span>此方法在目标对象<code>this</code>同步，但不在源上同步（ <code>sb</code> ）。</span> </p>
+<span>La especificada<code>StringBuffer</code>Añade a esta secuencia.</span>
+<p> <span>los caracteres del<code>StringBuffer</code>argumento se añaden, en orden, al contenido de esta<code>StringBuffer</code>, aumentando la longitud de esta<code>StringBuffer</code>por la longitud del argumento.</span> <span>Si<code>sb</code>Sí<code>null</code>, entonces los cuatro caracteres<code>"null"</code>se añadirá a esta<code>StringBuffer</code> 。</span> </p>
+<p> <span>Sea<i>n</i>la longitud de la secuencia de caracteres anterior, es decir, antes de ejecutar<code>append</code>el método<code>StringBuffer</code>la longitud de la secuencia de caracteres contenida.</span> <span>Si<i>k</i>menor que<i>n</i>，entonces el índice en la nueva secuencia de caracteres<i>k</i>el carácter en la posición es igual al índice en la antigua secuencia de caracteres<i>k</i>el carácter en la posición;</span> <span>de lo contrario, es igual al parámetro<code>sb</code>el índice en<i>kn</i>el carácter en la posición.</span> </p>
+<p> <span>Este método, en el objeto de destino,<code>this</code>se sincroniza, pero no en el origen (<code>sb</code> ）。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>sb</code>- A añadir<code>StringBuffer</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -1225,32 +1045,31 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(<a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s)</pre>
 <div class="block">
-<span>将指定的<code>CharSequence</code>追加到此序列。</span>
-<p> <span><code>CharSequence</code>参数的字符按顺序附加，按参数的长度增加此序列的长度。</span> </p>
-<p> <span>这个方法的结果与调用this.append（s，0，s.length（））完全相同;</span> </p>
-<p> <span>此方法在目标对象<code>this</code>同步，但不在源上同步（ <code>s</code> ）。</span> </p>
-<p> <span>如果<code>s</code>是<code>null</code> ，则附加四个字符<code>"null"</code> 。</span> </p>
+<span>La especificada<code>CharSequence</code>Añade a esta secuencia.</span>
+<p> <span><code>CharSequence</code>los caracteres del argumento se añaden en orden, aumentando la longitud de esta secuencia en la longitud del argumento.</span> </p>
+<p> <span>el resultado de este método es exactamente el mismo que el de llamar a this.append(s, 0, s.length());</span> </p>
+<p> <span>Este método, en el objeto de destino,<code>this</code>se sincroniza, pero no en el origen (<code>s</code> ）。</span> </p>
+<p> <span>Si<code>s</code>Sí<code>null</code>，entonces se añaden cuatro caracteres<code>"null"</code> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Appendable.html#append(java.lang.CharSequence)">append</a></code>接口 
-              <code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
+<code><a href="Appendable.html#append(java.lang.CharSequence)">append</a></code>Interfaz<code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>s</code>- A añadir<code>CharSequence</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1263,21 +1082,20 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                            int start,
                            int end)</pre>
 <div class="block">
-<span>将指定的<code>CharSequence</code>序列追加到此序列。</span>
-<p> <span>从索引<code>start</code>开始的参数<code>s</code>字符按顺序附加到该序列的内容，直到（不包括）索引<code>end</code> 。</span> <span>该序列的长度增加了<code>end - start</code>的值。</span> </p>
-<p> <span>设<i>n</i>是执行<code>append</code>方法之前的该字符序列的长度。</span> <span>然后，如果<i>k</i>小于<i>n</i> ，则该字符序列中索引<i>k处</i>的字符变为等于该序列中索引<i>k</i>处的字符;</span> <span>否则，它等于参数<code>s</code>中索引<i>k + start-n</i>处的<code>s</code> 。</span> </p>
-<p> <span>如果<code>s</code>是<code>null</code> ，则此方法附加字符，就好像s参数是包含四个字符<code>"null"</code>的序列<code>"null"</code> 。</span> </p>
+<span>La especificada<code>CharSequence</code>La secuencia se añade a esta secuencia.</span>
+<p> <span>desde el índice<code>start</code>el parámetro que comienza<code>s</code>los caracteres se añaden en orden al contenido de esta secuencia, hasta el índice (sin incluirlo)<code>end</code> 。</span> <span>la longitud de esta secuencia aumenta en<code>end - start</code>el valor de.</span> </p>
+<p> <span>Sea<i>n</i>es ejecutar<code>append</code>la longitud de esta secuencia de caracteres antes del método.</span> <span>entonces, si<i>k</i>menor que<i>n</i>, entonces el índice en dicha secuencia de caracteres<i>en la posición k</i>el carácter se vuelve igual al índice en esta secuencia<i>k</i>el carácter en la posición;</span> <span>de lo contrario, es igual al parámetro<code>s</code>el índice en<i>k + start-n</i>en la posición<code>s</code> 。</span> </p>
+<p> <span>Si<code>s</code>Sí<code>null</code>, entonces este método añade los caracteres como si el parámetro s fuera una cadena que contiene cuatro caracteres<code>"null"</code>la secuencia<code>"null"</code> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Appendable.html#append(java.lang.CharSequence,int,int)">append</a></code>在接口 
-              <code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
+<code><a href="Appendable.html#append(java.lang.CharSequence,int,int)">append</a></code>En la interfaz<code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>s</code>- La secuencia a agregar.</dd>
@@ -1286,22 +1104,17 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <dd>
 <code>end</code>- El índice final de la subsecuencia a añadir.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>为负数，或 
-              <code>start</code>大于 
-              <code>end</code>或 
-              <code>end</code>大于 
-              <code>s.length()</code>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>start</code>es negativo, o<code>start</code>mayor que<code>end</code>o<code>end</code>mayor que<code>s.length()</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1312,18 +1125,18 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(char[] str)</pre>
 <div class="block">
-<span>将<code>char</code>数组参数的字符串表示形式追加到此序列。</span>
-<p> <span>数组参数的字符按顺序附加到此序列的内容中。</span> <span>该序列的长度增加了参数的长度。</span> </p>
-<p> <span>整体效果就像通过方法<a href="String.html#valueOf(char%5B%5D)"><code>String.valueOf(char[])</code></a>将参数转换为字符串<a href="String.html#valueOf(char%5B%5D)">一样</a> ，并且该字符串的字符随后是<a href="#append(java.lang.String)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>va a<code>char</code>La representación de cadena del argumento array se añade a esta secuencia.</span>
+<p> <span>Los caracteres del parámetro de matriz se añaden en orden al contenido de esta secuencia.</span> <span>La longitud de esta secuencia aumenta en la longitud del parámetro.</span> </p>
+<p> <span>El efecto general es como si mediante el método<a href="String.html#valueOf(char%5B%5D)"><code>String.valueOf(char[])</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(char%5B%5D)">de la misma manera</a>, y los caracteres de esta cadena se añaden luego<a href="#append(java.lang.String)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- El carácter a agregar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1334,34 +1147,29 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                            int offset,
                            int len)</pre>
 <div class="block">
-<span>将<code>char</code>数组参数的子数组的字符串表示形式追加到此序列。</span>
-<p> <span>从索引<code>offset</code>开始的<code>char</code>阵列<code>str</code>字符按顺序附加到该序列的内容。</span> <span>此序列的长度增加值<code>len</code> 。</span> </p>
-<p> <span>整体效果就像通过方法<a href="String.html#valueOf(char%5B%5D,int,int)"><code>String.valueOf(char[],int,int)</code></a>将参数转换为字符串<a href="String.html#valueOf(char%5B%5D,int,int)">一样</a> ，并且该字符串的字符随后是<a href="#append(java.lang.String)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>va a<code>char</code>La representación de cadena del subarray del argumento array se añade a esta secuencia.</span>
+<p> <span>desde el índice<code>offset</code>inicial<code>char</code>matriz<code>str</code>Los caracteres se añaden en orden al contenido de esta secuencia.</span> <span>La longitud de esta secuencia se incrementa en el valor<code>len</code> 。</span> </p>
+<p> <span>El efecto general es como si mediante el método<a href="String.html#valueOf(char%5B%5D,int,int)"><code>String.valueOf(char[],int,int)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(char%5B%5D,int,int)">de la misma manera</a>, y los caracteres de esta cadena se añaden luego<a href="#append(java.lang.String)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- El carácter a agregar.</dd>
 <dd>
-<code>offset</code>- El primero a agregar<code>char</code>的索引。 
-             </dd>
+<code>offset</code>- El primero a agregar<code>char</code>el índice.</dd>
 <dd>
-<code>len</code>- A añadir<code>char</code> s的数量。 
-             </dd>
+<code>len</code>- A añadir<code>char</code>El número de s.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果是 
-              <code>offset &lt; 0</code>或 
-              <code>len &lt; 0</code>或 
-              <code>offset+len &gt; str.length</code>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si es<code>offset &lt; 0</code>o<code>len &lt; 0</code>o<code>offset+len &gt; str.length</code>
 </dd>
 </dl> </li>
 </ul> <a id="append(boolean)">
@@ -1369,19 +1177,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(boolean b)</pre>
 <div class="block">
-<span>将<code>boolean</code>参数的字符串表示形式追加到序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(boolean)"><code>String.valueOf(boolean)</code></a>将参数转换为字符串<a href="String.html#valueOf(boolean)">完全相同</a> ，并且该字符串的字符随后是<a href="#append(java.lang.String)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>va a<code>boolean</code>La representación de cadena del argumento se añade a la secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(boolean)"><code>String.valueOf(boolean)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(boolean)">Exactamente igual</a>, y los caracteres de esta cadena se añaden luego<a href="#append(java.lang.String)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>b</code> - a 
               <code>boolean</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1390,27 +1198,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(char c)</pre>
 <div class="block">
-<span>将<code>char</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>该参数附加到此序列的内容中。</span> <span>此序列的长度增加<code>1</code> 。</span> </p>
-<p> <span>整体效果与方法<a href="String.html#valueOf(char)"><code>String.valueOf(char)</code></a>将参数转换为字符串<a href="String.html#valueOf(char)">完全相同</a> ，然后该字符串中的字符为<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
+<span>va a<code>char</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>el parámetro se añade al contenido de esta secuencia.</span> <span>la longitud de esta secuencia aumenta en<code>1</code> 。</span> </p>
+<p> <span>El efecto general es el mismo que si el método<a href="String.html#valueOf(char)"><code>String.valueOf(char)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(char)">Exactamente igual</a>, y luego los caracteres de esta cadena son<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Appendable.html#append(char)">append</a></code>在接口 
-              <code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
+<code><a href="Appendable.html#append(char)">append</a></code>En la interfaz<code><a href="Appendable.html" title="interface in java.lang">Appendable</a></code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>c</code> - a 
               <code>char</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1419,19 +1226,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(int i)</pre>
 <div class="block">
-<span>将<code>int</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>整体效果就像通过方法<a href="String.html#valueOf(int)"><code>String.valueOf(int)</code></a>将参数转换为字符串<a href="String.html#valueOf(int)">一样</a> ，并且该字符串的字符随后是<a href="#append(java.lang.String)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>va a<code>int</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>El efecto general es como si mediante el método<a href="String.html#valueOf(int)"><code>String.valueOf(int)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(int)">de la misma manera</a>, y los caracteres de esta cadena se añaden luego<a href="#append(java.lang.String)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>i</code> - 
               <code>int</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1440,22 +1247,22 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>appendCodePoint</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> appendCodePoint​(int codePoint)</pre>
 <div class="block">
-<span>将<code>codePoint</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>该参数附加到此序列的内容中。</span> <span>该序列的长度增加<a href="Character.html#charCount(int)"><code>Character.charCount(codePoint)</code></a> 。</span> </p>
-<p> <span>整体效果与通过方法<a href="Character.html#toChars(int)"><code>Character.toChars(int)</code></a>将参数转换为<code>char</code>数组<a href="Character.html#toChars(int)">完全相同，</a>并且该数组中的字符随后是<a href="#append(char%5B%5D)"><code>appended</code></a>到此字符序列。</span> </p>
+<span>va a<code>codePoint</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>el parámetro se añade al contenido de esta secuencia.</span> <span>la longitud de esta secuencia aumenta<a href="Character.html#charCount(int)"><code>Character.charCount(codePoint)</code></a> 。</span> </p>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="Character.html#toChars(int)"><code>Character.toChars(int)</code></a>convertir el parámetro como si fuera<code>char</code>matriz.<a href="Character.html#toChars(int)">Exactamente igual,</a>y los caracteres de esa matriz son a continuación<a href="#append(char%5B%5D)"><code>appended</code></a>a esta secuencia de caracteres.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>codePoint</code>- Punto de código Unicode</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1466,19 +1273,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(long lng)</pre>
 <div class="block">
-<span>将<code>long</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(long)"><code>String.valueOf(long)</code></a>将参数转换为字符串<a href="String.html#valueOf(long)">完全相同</a> ，然后该字符串的字符为该字符序列的<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
+<span>va a<code>long</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(long)"><code>String.valueOf(long)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(long)">Exactamente igual</a>, y los caracteres de esta cadena son los de esa secuencia de caracteres<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>lng</code> - a 
               <code>long</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1487,19 +1294,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(float f)</pre>
 <div class="block">
-<span>将<code>float</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(float)"><code>String.valueOf(float)</code></a>将参数转换为字符串<a href="String.html#valueOf(float)">完全相同</a> ，然后该字符串的字符为该字符序列的<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
+<span>va a<code>float</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(float)"><code>String.valueOf(float)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(float)">Exactamente igual</a>, y los caracteres de esta cadena son los de esa secuencia de caracteres<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>f</code> - a 
               <code>float</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1508,19 +1315,19 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>append</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> append​(double d)</pre>
 <div class="block">
-<span>将<code>double</code>参数的字符串表示形式追加到此序列。</span>
-<p> <span>整体效果与方法<a href="String.html#valueOf(double)"><code>String.valueOf(double)</code></a>将参数转换为字符串<a href="String.html#valueOf(double)">完全相同</a> ，然后该字符串的字符为<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
+<span>va a<code>double</code>La representación de cadena del argumento se añade a esta secuencia.</span>
+<p> <span>El efecto general es el mismo que si el método<a href="String.html#valueOf(double)"><code>String.valueOf(double)</code></a>convirtiera el parámetro en una cadena<a href="String.html#valueOf(double)">Exactamente igual</a>，entonces los caracteres de esta cadena son<a href="#append(java.lang.String)"><code>appended</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>d</code> - a 
               <code>double</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 </dl> </li>
@@ -1530,34 +1337,30 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>delete</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> delete​(int start,
                            int end)</pre>
 <div class="block">
-<span>删除此序列的子字符串中的字符。</span>
-<span>子字符串从指定的<code>start</code>开始，如果不存在这样的字符，则扩展到索引<code>end - 1</code>处的字符或序列的末尾。</span>
-<span>如果<code>start</code>等于<code>end</code> ，则不进行任何更改。</span>
+<span>Elimina los caracteres en una subcadena de esta secuencia.</span>
+<span>la subcadena desde el especificado<code>start</code>Comienza; si no existe tal carácter, se extiende hasta el índice<code>end - 1</code>en el carácter o al final de la secuencia.</span>
+<span>Si<code>start</code>igual a<code>end</code>，no se realiza ningún cambio.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>start</code>- El índice inicial, inclusive.</dd>
 <dd>
 <code>end</code>- El índice final, exclusivo.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
+</dt>
+<dd>este objeto.</dd>
+<dt>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-               这个对象。 
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>start</code>es negativo, mayor que<code>length()</code>，o mayor que<code>end</code> 。 
              </dd>
 <dt>
-<span class="throwsLabel">异常</span>
-</dt>
-<dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>es negativo, mayor que<code>length()</code> ，或大于 
-              <code>end</code> 。 
-             </dd>
-<dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1568,32 +1371,29 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>deleteCharAt</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> deleteCharAt​(int index)</pre>
 <div class="block">
-<span>按此顺序删除指定位置的<code>char</code> 。</span>
-<span>此序列由一个<code>char</code>缩短。</span>
-<p> <span>注意：如果给定索引处的字符是补充字符，则此方法不会删除整个字符。</span> <span>如果需要的准确处理增补字符，确定数量<code>char</code>通过调用删除<code>Character.charCount(thisSequence.codePointAt(index))</code> ，其中<code>thisSequence</code>为这个序列。</span> </p>
+<span>Elimina el de la posición especificada en este orden<code>char</code> 。</span>
+<span>Esta secuencia consta de un<code>char</code>se acorta.</span>
+<p> <span>Nota: si el carácter en el índice dado es un carácter suplementario, este método no elimina el carácter completo.</span> <span>Si se requiere un procesamiento exacto de los caracteres suplementarios, determine la cantidad<code>char</code>mediante la llamada a delete<code>Character.charCount(thisSequence.codePointAt(index))</code>, donde<code>thisSequence</code>para esta secuencia.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El número de índice a eliminar<code>char</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
+</dt>
+<dd>este objeto.</dd>
+<dt>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-               这个对象。 
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
              </dd>
 <dt>
-<span class="throwsLabel">异常</span>
-</dt>
-<dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>es negativo o mayor o igual que<code>length()</code> 。 
-             </dd>
-<dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1606,14 +1406,14 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                             int end,
                             <a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>使用指定的<code>String</code>的字符替换此序列的子字符串中的字符。</span>
-<span>子字符串从指定的<code>start</code>开始，并且如果不存在这样的字符，则扩展到索引<code>end - 1</code>处的字符或序列的末尾。</span>
-<span>首先删除子字符串中的字符，然后在<code>String</code>插入指定的<code>start</code> 。</span>
-<span>（如果需要，将延长此序列以容纳指定的字符串。）</span>
+<span>Usando la especificada<code>String</code>Los caracteres de la especificada reemplazan los caracteres de una subcadena de esta secuencia.</span>
+<span>la subcadena desde el especificado<code>start</code>comienza, y si no existe tal carácter, se extiende hasta el índice<code>end - 1</code>en el carácter o al final de la secuencia.</span>
+<span>Primero se eliminan los caracteres de la subcadena, y luego en<code>String</code>insertar lo especificado<code>start</code> 。</span>
+<span>(Si es necesario, se ampliará esta secuencia para acomodar la cadena especificada).</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>start</code>- El índice inicial, inclusive.</dd>
@@ -1622,21 +1422,17 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <dd>
 <code>str</code>- La cadena que reemplazará el contenido anterior.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
+</dt>
+<dd>este objeto.</dd>
+<dt>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-               这个对象。 
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>start</code>es negativo, mayor que<code>length()</code>，o mayor que<code>end</code> 。 
              </dd>
 <dt>
-<span class="throwsLabel">异常</span>
-</dt>
-<dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>es negativo, mayor que<code>length()</code> ，或大于 
-              <code>end</code> 。 
-             </dd>
-<dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1647,27 +1443,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>substring</h4> <pre class="methodSignature">public <a href="String.html" title="class in java.lang">String</a> substring​(int start)</pre>
 <div class="block">
-<span>返回一个新的<code>String</code> ，其中包含此字符序列中当前包含的字符的子序列。</span>
-<span>子字符串从指定的索引开始并延伸到此序列的末尾。</span>
+<span>Devuelve una nueva<code>String</code>, que contiene una subsecuencia de los caracteres actualmente contenidos en esta secuencia de caracteres.</span>
+<span>La subcadena comienza en el índice especificado y se extiende hasta el final de esta secuencia.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>start</code>- El índice inicial, inclusive.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Nueva cadena.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>menor que cero, o mayor que la longitud de este objeto.</dd>
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>start</code>menor que cero, o mayor que la longitud de este objeto.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1679,45 +1474,39 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>subSequence</h4> <pre class="methodSignature">public <a href="CharSequence.html" title="interface in java.lang">CharSequence</a> subSequence​(int start,
                                 int end)</pre>
 <div class="block">
-<span>返回一个新的字符序列，它是该序列的子序列。</span>
-<p> <span>调用此方法的形式</span> </p>
+<span>Devuelve una nueva secuencia de caracteres que es una subsecuencia de esta secuencia.</span>
+<p> <span>La forma de llamar a este método</span> </p>
 <pre>  <span><code> sb.subSequence(begin,&amp;nbsp;end)</code></span> </pre>
-<span>行为与调用完全相同</span>
+<span>el comportamiento es exactamente el mismo que llamar a</span>
 <pre>  <span><code> sb.substring(begin,&amp;nbsp;end)</code></span> </pre>
-<span>提供此方法是为了使该类可以实现<a href="CharSequence.html" title="java.lang中的接口"><code>CharSequence</code></a>接口。</span>
+<span>Este método se proporciona para que esta clase pueda implementar<a href="CharSequence.html" title="java.lang中的接口"><code>CharSequence</code></a>la interfaz.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="CharSequence.html#subSequence(int,int)">subSequence</a></code> ，界面 
-              <code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
+<code><a href="CharSequence.html#subSequence(int,int)">subSequence</a></code>, la interfaz<code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>start</code>- El índice inicial, inclusive.</dd>
 <dd>
 <code>end</code>- El índice final, exclusivo.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La subsecuencia especificada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>或 
-              <code>end</code>es negativo, si<code>end</code>大于 
-              <code>length()</code> ，或者 
-              <code>start</code>大于 
-              <code>end</code>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>start</code>o<code>end</code>es negativo, si<code>end</code>mayor que<code>length()</code>, o<code>start</code>mayor que<code>end</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -1729,33 +1518,29 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>substring</h4> <pre class="methodSignature">public <a href="String.html" title="class in java.lang">String</a> substring​(int start,
                         int end)</pre>
 <div class="block">
-<span>返回一个新的<code>String</code> ，其中包含当前包含在此序列中的字符的子序列。</span>
-<span>子字符串从指定的<code>start</code>开始，并扩展到索引<code>end - 1</code>处的字符。</span>
+<span>Devuelve una nueva<code>String</code>, que contiene una subsecuencia de los caracteres actualmente contenidos en esta secuencia.</span>
+<span>la subcadena desde el especificado<code>start</code>comienza y se extiende al índice<code>end - 1</code>el carácter en la posición.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>start</code>- El índice inicial, inclusive.</dd>
 <dd>
 <code>end</code>- El índice final, exclusivo.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Nueva cadena.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>start</code>或 
-              <code>end</code>es negativo o mayor que<code>length()</code> ，或 
-              <code>start</code>大于 
-              <code>end</code> 。 
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>start</code>o<code>end</code>es negativo o mayor que<code>length()</code>, o<code>start</code>mayor que<code>end</code> 。 
              </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1769,46 +1554,36 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                            int offset,
                            int len)</pre>
 <div class="block">
-<span>将<code>str</code>数组参数的子数组的字符串表示形式插入到此序列中。</span>
-<span>该子阵列从指定的<code>offset</code>开始，并扩展到<code>len</code> <code>char</code> s。</span>
-<span>子阵列的字符在<code>index</code>指示的位置插入该序列中。</span>
-<span>该序列的长度增加<code>len</code> <code>char</code> s。</span>
+<span>va a<code>str</code>inserta la representación de cadena de la submatriz del argumento de matriz en esta secuencia.</span>
+<span>La submatriz a partir del especificado<code>offset</code>comienza, y se extiende hasta<code>len</code> <code>char</code> s。</span>
+<span>los caracteres del subarreglo en<code>index</code>se inserta en esta secuencia en la posición indicada.</span>
+<span>la longitud de esta secuencia aumenta<code>len</code> <code>char</code> s。</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- La posición donde se inserta la submatriz.</dd>
 <dd>
 <code>str</code> - A 
-              <code>char</code>阵列。 
-             </dd>
+              <code>char</code>Arreglo.</dd>
 <dd>
-<code>offset</code>- El primero en la submatriz a insertar<code>char</code>的索引。 
-             </dd>
+<code>offset</code>- El primero en la submatriz a insertar<code>char</code>el índice.</dd>
 <dd>
-<code>len</code>- En la submatriz a insertar<code>char</code> s的数量。 
-             </dd>
+<code>len</code>- En la submatriz a insertar<code>char</code>El número de s.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
+</dt>
+<dd>Este objeto</dd>
+<dt>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-               这个对象 
+<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- si<code>index</code>es negativo o mayor que<code>length()</code>, o<code>offset</code>o<code>len</code>es negativo, o<code>(offset+len)</code>mayor que<code>str.length</code> 。 
              </dd>
 <dt>
-<span class="throwsLabel">异常</span>
-</dt>
-<dd>
-<code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code> - 如果 
-              <code>index</code>es negativo o mayor que<code>length()</code> ，或 
-              <code>offset</code>或 
-              <code>len</code>为负数，或 
-              <code>(offset+len)</code>大于 
-              <code>str.length</code> 。 
-             </dd>
-<dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.2 
@@ -1820,13 +1595,13 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            <a href="Object.html" title="class in java.lang">Object</a> obj)</pre>
 <div class="block">
-<span>将<code>Object</code>参数的字符串表示形式插入此字符序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(java.lang.Object)"><code>String.valueOf(Object)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(java.lang.Object)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>Object</code>Inserta la representación de cadena del argumento en esta secuencia de caracteres.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(java.lang.Object)"><code>String.valueOf(Object)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(java.lang.Object)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
@@ -1835,11 +1610,11 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
               <code>Object</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -1850,30 +1625,30 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            <a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>将字符串插入此字符序列。</span>
-<p> <span><code>String</code>参数的字符按顺序插入到指定偏移量的此序列中，向上移动最初位于该位置上方的任何字符，并将该序列的长度增加参数的长度。</span> <span>如果<code>str</code>是<code>null</code> ，则将四个字符<code>"null"</code>插入到该序列中。</span> </p>
-<p> <span>新字符序列中索引<i>k</i>处的字符等于：</span> </p>
+<span>Inserta la cadena en esta secuencia de caracteres.</span>
+<p> <span><code>String</code>Los caracteres del argumento se insertan en orden en esta secuencia en el desplazamiento especificado, desplazando hacia arriba cualquier carácter que estuviera originalmente por encima de esa posición y aumentando la longitud de esta secuencia en la longitud del argumento.</span> <span>Si<code>str</code>Sí<code>null</code>, entonces los cuatro caracteres<code>"null"</code>Insertado en esta secuencia.</span> </p>
+<p> <span>el índice en la nueva secuencia de caracteres<i>k</i>el carácter en la posición es igual a:</span> </p>
 <ul>
-<li> <span>如果<i>k</i>小于<code>offset</code> ，则旧字符序列中索引<i>k</i>处的字符</span> </li>
-<li> <span>参数<code>str</code>中索引为<i>k</i> <code>-offset</code>的字符，如果<i>k</i>不小于<code>offset</code>但小于<code>offset+str.length()</code></span> </li>
-<li> <span>旧字符序列中索引为<i>k</i> <code>-str.length()</code>的字符，如果<i>k</i>不小于<code>offset+str.length()</code></span> </li>
+<li> <span>Si<i>k</i>menor que<code>offset</code>, entonces el índice en la antigua secuencia de caracteres<i>k</i>el carácter en la posición</span> </li>
+<li> <span>Parámetros<code>str</code>cuyo índice es<i>k</i> <code>-offset</code>el carácter, si<i>k</i>no es menor que<code>offset</code>pero menor que<code>offset+str.length()</code></span> </li>
+<li> <span>el índice en la antigua secuencia de caracteres es<i>k</i> <code>-str.length()</code>el carácter, si<i>k</i>no es menor que<code>offset+str.length()</code></span> </li>
 </ul>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
 <dd>
 <code>str</code>- Una cadena.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -1884,25 +1659,25 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            char[] str)</pre>
 <div class="block">
-<span>将<code>char</code>数组参数的字符串表示形式插入此序列中。</span>
-<p> <span>数组参数的字符在<code>offset</code>指示的位置插入该序列的内容中。</span> <span>该序列的长度增加了参数的长度。</span> </p>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(char%5B%5D)"><code>String.valueOf(char[])</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(char%5B%5D)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>char</code>Inserta la representación de cadena del argumento de matriz en esta secuencia.</span>
+<p> <span>Los caracteres del argumento de matriz en<code>offset</code>la posición indicada se insertan en el contenido de esta secuencia.</span> <span>La longitud de esta secuencia aumenta en la longitud del parámetro.</span> </p>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(char%5B%5D)"><code>String.valueOf(char[])</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(char%5B%5D)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
 <dd>
 <code>str</code>- Array de caracteres.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -1913,30 +1688,30 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int dstOffset,
                            <a href="CharSequence.html" title="interface in java.lang">CharSequence</a> s)</pre>
 <div class="block">
-<span>将指定的<code>CharSequence</code>插入此序列。</span>
-<p> <span><code>CharSequence</code>参数的字符按顺序插入到指定偏移量的此序列中，向上移动最初位于该位置上方的任何字符，并将该序列的长度增加参数s的长度。</span> </p>
-<p> <span>此方法的结果与调用此对象的<a href="#insert(int,java.lang.CharSequence,int,int)"><code>insert</code></a> （dstOffset，s，0，s.length（））方法<a href="#insert(int,java.lang.CharSequence,int,int)">完全相同</a> 。</span> </p>
-<p> <span>如果<code>s</code>是<code>null</code> ，则将四个字符<code>"null"</code>插入到该序列中。</span> </p>
+<span>La especificada<code>CharSequence</code>Inserta en esta secuencia.</span>
+<p> <span><code>CharSequence</code>Los caracteres del argumento s se insertan en orden en esta secuencia en el desplazamiento especificado, desplazando hacia arriba cualquier carácter que estuviera originalmente por encima de esa posición y aumentando la longitud de esta secuencia en la longitud del argumento s.</span> </p>
+<p> <span>El resultado de este método es el mismo que el de invocar el método<a href="#insert(int,java.lang.CharSequence,int,int)"><code>insert</code></a>(dstOffset, s, 0, s.length())<a href="#insert(int,java.lang.CharSequence,int,int)">Exactamente igual</a> 。</span> </p>
+<p> <span>Si<code>s</code>Sí<code>null</code>, entonces los cuatro caracteres<code>"null"</code>Insertado en esta secuencia.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>dstOffset</code>- Desplazamiento.</dd>
 <dd>
 <code>s</code>- La secuencia a insertar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1950,22 +1725,22 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
                            int start,
                            int end)</pre>
 <div class="block">
-<span>将指定的<code>CharSequence</code>序列插入此序列。</span>
-<p> <span>参数的子序列<code>s</code>通过指定<code>start</code>和<code>end</code>被插入，以便成在指定的目的地偏移该序列中，该位置上述最初向上运动的任何字符。</span> <span>该序列的长度增加了<code>end - start</code> 。</span> </p>
-<p> <span>此序列中索引<i>k</i>处的字符变为等于：</span> </p>
+<span>La especificada<code>CharSequence</code>La secuencia se inserta en esta secuencia.</span>
+<p> <span>la subsecuencia del argumento<code>s</code>a través de lo especificado<code>start</code>y<code>end</code>se inserta, de modo que en el desplazamiento de destino especificado de esta secuencia, cualquier carácter que estuviera originalmente por encima de esa posición se desplaza hacia arriba.</span> <span>la longitud de esta secuencia aumenta en<code>end - start</code> 。</span> </p>
+<p> <span>el índice en esta secuencia<i>k</i>el carácter en la posición se convierte en igual a:</span> </p>
 <ul>
-<li> <span>如果<i>k</i>小于<code>dstOffset</code> ，则此序列中索引<i>k</i>处的字符</span> </li>
-<li> <span>参数<code>s</code>中索引为<i>k</i> <code>+start-dstOffset</code>的字符，如果<i>k</i>大于或等于<code>dstOffset</code>但小于<code>dstOffset+end-start</code></span> </li>
-<li> <span>如果<i>k</i>大于或等于<code>dstOffset+end-start</code> ，则此序列中索引为<i>k</i> <code>-(end-start)</code>的字符</span> </li>
+<li> <span>Si<i>k</i>menor que<code>dstOffset</code>, entonces el índice en esta secuencia<i>k</i>el carácter en la posición</span> </li>
+<li> <span>Parámetros<code>s</code>cuyo índice es<i>k</i> <code>+start-dstOffset</code>el carácter, si<i>k</i>es mayor o igual que<code>dstOffset</code>pero menor que<code>dstOffset+end-start</code></span> </li>
+<li> <span>Si<i>k</i>es mayor o igual que<code>dstOffset+end-start</code>, entonces el índice en esta secuencia es<i>k</i> <code>-(end-start)</code>el carácter</span> </li>
 </ul>
-<p> <span><code>dstOffset</code>参数必须大于或等于<code>0</code> ，且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
-<p> <span>start参数必须是非负的，且不大于<code>end</code> 。</span> </p>
-<p> <span>结束参数必须大于或等于<code>start</code> ，并且小于或等于s的长度。</span> </p>
-<p> <span>如果<code>s</code>是<code>null</code> ，则此方法插入字符，就好像s参数是包含四个字符<code>"null"</code>的序列<code>"null"</code> 。</span> </p>
+<p> <span><code>dstOffset</code>El parámetro debe ser mayor o igual a<code>0</code>, y menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<p> <span>El parámetro start debe ser no negativo y no mayor que<code>end</code> 。</span> </p>
+<p> <span>El parámetro final debe ser mayor o igual que<code>start</code>, y menor o igual que la longitud de s.</span> </p>
+<p> <span>Si<code>s</code>Sí<code>null</code>, entonces este método inserta caracteres, como si el parámetro s contuviera cuatro caracteres<code>"null"</code>la secuencia<code>"null"</code> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>dstOffset</code>- El desplazamiento en esta secuencia.</dd>
@@ -1976,24 +1751,17 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <dd>
 <code>end</code>- El índice final de la subsecuencia a insertar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
-<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code> - 如果 
-              <code>dstOffset</code>es negativo o mayor que<code>this.length()</code> ，或 
-              <code>start</code>或 
-              <code>end</code>为负数，或 
-              <code>start</code>大于 
-              <code>end</code>或 
-              <code>end</code>大于 
-              <code>s.length()</code>
+<code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- si<code>dstOffset</code>es negativo o mayor que<code>this.length()</code>, o<code>start</code>o<code>end</code>es negativo, o<code>start</code>mayor que<code>end</code>o<code>end</code>mayor que<code>s.length()</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -2005,13 +1773,13 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            boolean b)</pre>
 <div class="block">
-<span>将<code>boolean</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(boolean)"><code>String.valueOf(boolean)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(boolean)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>boolean</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(boolean)"><code>String.valueOf(boolean)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(boolean)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
@@ -2020,11 +1788,11 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
               <code>boolean</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2035,27 +1803,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            char c)</pre>
 <div class="block">
-<span>将<code>char</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(char)"><code>String.valueOf(char)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(char)">完全相同</a> ，然后该字符串中的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>char</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(char)"><code>String.valueOf(char)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(char)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>offset</code> - 抵消。 
-             </dd>
+<code>offset</code>- desplazamiento.</dd>
 <dd>
 <code>c</code> - a 
               <code>char</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2066,13 +1833,13 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            int i)</pre>
 <div class="block">
-<span>将第二个<code>int</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(int)"><code>String.valueOf(int)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(int)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>El segundo<code>int</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(int)"><code>String.valueOf(int)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(int)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
@@ -2081,11 +1848,11 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
               <code>int</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2096,27 +1863,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            long l)</pre>
 <div class="block">
-<span>将<code>long</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(long)"><code>String.valueOf(long)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(long)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>long</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(long)"><code>String.valueOf(long)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(long)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>offset</code> - 抵消。 
-             </dd>
+<code>offset</code>- desplazamiento.</dd>
 <dd>
 <code>l</code> - a 
               <code>long</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2127,13 +1893,13 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            float f)</pre>
 <div class="block">
-<span>将<code>float</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(float)"><code>String.valueOf(float)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(float)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>float</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(float)"><code>String.valueOf(float)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(float)">Exactamente igual</a>, y luego los caracteres de esta cadena se insertan en la secuencia de caracteres en el desplazamiento especificado<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>offset</code>- Desplazamiento.</dd>
@@ -2142,11 +1908,11 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
               <code>float</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2157,27 +1923,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>insert</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> insert​(int offset,
                            double d)</pre>
 <div class="block">
-<span>将<code>double</code>参数的字符串表示形式插入此序列中。</span>
-<p> <span>整体效果与通过方法<a href="String.html#valueOf(double)"><code>String.valueOf(double)</code></a>将第二个参数转换为字符串<a href="String.html#valueOf(double)">完全相同</a> ，然后该字符串的字符在指定的偏移量处进入该字符序列的<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
-<p> <span><code>offset</code>参数必须大于或等于<code>0</code> ，并且小于或等于此序列的<a href="CharSequence.html#length()">length</a> 。</span> </p>
+<span>va a<code>double</code>Inserta la representación de cadena del argumento en esta secuencia.</span>
+<p> <span>El efecto general es el mismo que mediante el método de<a href="String.html#valueOf(double)"><code>String.valueOf(double)</code></a>convertir el segundo parámetro en una cadena<a href="String.html#valueOf(double)">Exactamente igual</a>, y los caracteres de esta cadena se insertan en el desplazamiento especificado de la secuencia de caracteres<a href="#insert(int,java.lang.String)"><code>inserted</code></a> 。</span> </p>
+<p> <span><code>offset</code>El parámetro debe ser mayor o igual a<code>0</code>, y es menor o igual que la de esta secuencia<a href="CharSequence.html#length()">length</a> 。</span> </p>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<code>offset</code> - 抵消。 
-             </dd>
+<code>offset</code>- desplazamiento.</dd>
 <dd>
 <code>d</code> - a 
               <code>double</code> 。 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="StringIndexOutOfBoundsException.html" title="class in java.lang">StringIndexOutOfBoundsException</a></code>- Si el desplazamiento no es válido.</dd>
@@ -2187,24 +1952,24 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>indexOf</h4> <pre class="methodSignature">public int indexOf​(<a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>返回指定子字符串第一次出现的字符串中的索引。</span>
-<p> <span>返回的索引是最小值<code>k</code> ，其中：</span> </p>
+<span>Devuelve el índice en la cadena de la primera aparición de la subcadena especificada.</span>
+<p> <span>El índice devuelto es el valor mínimo<code>k</code>, donde:</span> </p>
 <pre>  <span><code> this.toString().startsWith(str, k) </code></span> </pre>
-<span>如果没有这样的价值<code>k</code>存在，那么<code>-1</code>返回。</span>
+<span>Si no existe tal valor<code>k</code>, entonces<code>-1</code>devueltos.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- La subcadena a buscar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El índice de la primera aparición de la subcadena especificada, si no hay tal caso,<code>-1</code> 。 
              </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -2216,26 +1981,26 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>indexOf</h4> <pre class="methodSignature">public int indexOf​(<a href="String.html" title="class in java.lang">String</a> str,
                    int fromIndex)</pre>
 <div class="block">
-<span>从指定的索引处开始，返回指定子字符串第一次出现的字符串中的索引。</span>
-<p> <span>返回的索引是最小值<code>k</code> ，其中：</span> </p>
+<span>Devuelve el índice en la cadena de la primera aparición de la subcadena especificada, comenzando en el índice especificado.</span>
+<p> <span>El índice devuelto es el valor mínimo<code>k</code>, donde:</span> </p>
 <pre>  <span><code> k &gt;= Math.min(fromIndex, this.length()) &amp;&amp; this.toString().startsWith(str, k) </code></span> </pre>
-<span>如果没有这样的价值<code>k</code>存在，那么<code>-1</code>返回。</span>
+<span>Si no existe tal valor<code>k</code>, entonces<code>-1</code>devueltos.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- La subcadena a buscar.</dd>
 <dd>
 <code>fromIndex</code>- El índice desde el que iniciar la búsqueda.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El índice de la primera aparición de la subcadena especificada a partir del índice especificado, si no hay tal caso<code>-1</code> 。 
              </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -2246,25 +2011,25 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>lastIndexOf</h4> <pre class="methodSignature">public int lastIndexOf​(<a href="String.html" title="class in java.lang">String</a> str)</pre>
 <div class="block">
-<span>返回指定子字符串最后一次出现的字符串中的索引。</span>
-<span>最后出现的空字符串“”被认为发生在索引值<code>this.length()</code> 。</span>
-<p> <span>返回的索引是最大值<code>k</code> ，其中：</span> </p>
+<span>Devuelve el índice en la cadena de la última aparición de la subcadena especificada.</span>
+<span>la última aparición de la cadena vacía "" se considera que ocurre en el valor de índice<code>this.length()</code> 。</span>
+<p> <span>El índice devuelto es el valor máximo<code>k</code>, donde:</span> </p>
 <pre>  <span><code> this.toString().startsWith(str, k) </code></span> </pre>
-<span>如果没有这样的价值<code>k</code>存在，那么<code>-1</code>返回。</span>
+<span>Si no existe tal valor<code>k</code>, entonces<code>-1</code>devueltos.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- La subcadena a buscar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El índice de la última aparición de la subcadena especificada, si no hay tal caso,<code>-1</code> 。 
              </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -2276,26 +2041,25 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <li class="blockList"> <h4>lastIndexOf</h4> <pre class="methodSignature">public int lastIndexOf​(<a href="String.html" title="class in java.lang">String</a> str,
                        int fromIndex)</pre>
 <div class="block">
-<span>返回指定子字符串最后一次出现的字符串中的索引，从指定索引开始向后搜索。</span>
-<p> <span>返回的索引是最大值<code>k</code> ，其中：</span> </p>
+<span>Devuelve el índice en la cadena de la última aparición de la subcadena especificada, buscando hacia atrás desde el índice especificado.</span>
+<p> <span>El índice devuelto es el valor máximo<code>k</code>, donde:</span> </p>
 <pre>  <span><code> k &lt;= Math.min(fromIndex, this.length()) &amp;&amp; this.toString().startsWith(str, k) </code></span> </pre>
-<span>如果没有这样的价值<code>k</code>存在，那么<code>-1</code>返回。</span>
+<span>Si no existe tal valor<code>k</code>, entonces<code>-1</code>devueltos.</span>
 </div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>str</code>- La subcadena a buscar.</dd>
 <dd>
 <code>fromIndex</code>- El índice desde el que iniciar la búsqueda.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>El índice de la última aparición de la subcadena especificada, buscando hacia atrás desde el índice especificado, si no existe tal caso<code>-1</code>搜索。 
-             </dd>
+<dd>El índice de la última aparición de la subcadena especificada, buscando hacia atrás desde el índice especificado, si no existe tal caso<code>-1</code>búsqueda.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.4 
@@ -2306,20 +2070,20 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>reverse</h4> <pre class="methodSignature">public <a href="StringBuffer.html" title="class in java.lang">StringBuffer</a> reverse()</pre>
 <div class="block">
-<span>导致此字符序列被序列的反向替换。</span>
-<span>如果序列中包含任何代理对，则将这些代理对视为反向操作的单个字符。</span>
-<span>因此，高低代理人的顺序永远不会逆转。</span>
-<span>设<i>n</i>是执行<code>reverse</code>方法之前的该字符序列的字符长度（不是<code>char</code>值中的长度）。</span>
-<span>然后，新字符序列中索引<i>k</i>处的字符等于旧字符序列中索引<i>nk-1</i>处的字符。</span>
-<p> <span>请注意，反向操作可能导致产生代理对，这些代理对在操作之前是不成对的低代理和高代理。</span> <span>例如，反转“\ uDC00 \ uD800”会生成“\ uD800 \ uDC00”，这是一个有效的代理项对。</span> </p>
+<span>Hace que esta secuencia de caracteres sea reemplazada por la inversa de la secuencia.</span>
+<span>Si la secuencia contiene algún par de sustitutos, estos pares de sustitutos se tratan como un único carácter para la operación inversa.</span>
+<span>Por lo tanto, el orden de los sustitutos altos y bajos nunca se invierte.</span>
+<span>Sea<i>n</i>es ejecutar<code>reverse</code>La longitud en caracteres de dicha secuencia de caracteres antes del método (no<code>char</code>la longitud en valores).</span>
+<span>Luego, el índice en la nueva secuencia de caracteres<i>k</i>el carácter en la posición es igual al índice en la antigua secuencia de caracteres<i>nk-1</i>el carácter en la posición.</span>
+<p> <span>Tenga en cuenta que la operación inversa puede producir pares de sustitutos que, antes de la operación, eran sustitutos bajos y altos no emparejados.</span> <span>Por ejemplo, invertir “\ uDC00 \ uD800” genera “\ uD800 \ uDC00”, que es un par de sustitutos válido.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una referencia a este objeto.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.0.2 
@@ -2330,24 +2094,23 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockList">
 <li class="blockList"> <h4>chars</h4> <pre class="methodSignature">public <a href="../util/stream/IntStream.html" title="interface in java.util.stream">IntStream</a> chars()</pre>
 <div class="block">
-<span>返回<code>int</code>的流，对此序列中的<code>char</code>值进行零扩展。</span>
-<span>映射到<a href="../../../java.base/java/lang/Character.html#unicode">surrogate code point的</a>任何字符都是未解释的。</span>
-<p> <span>当终端流操作开始时，流绑定到该序列（具体地，对于可变序列，流的<a href="../util/Spliterator.html#binding">分裂器</a>是<a href="../util/Spliterator.html#binding"><em>late-binding</em></a> ）。</span> <span>如果在该操作期间修改了序列，则结果是未定义的。</span> </p>
+<span>Devuelve<code>int</code>El flujo de, para los de esta secuencia<code>char</code>Los valores se extienden con ceros.</span>
+<span>se asigna a<a href="../../../java.base/java/lang/Character.html#unicode">del punto de código suplente</a>Todos los caracteres están sin interpretar.</span>
+<p> <span>Cuando comienza la operación de flujo terminal, el flujo se vincula a esta secuencia (específicamente, para secuencias mutables, el<a href="../util/Spliterator.html#binding">spliterator</a>Sí<a href="../util/Spliterator.html#binding"><em>late-binding</em></a> ）。</span> <span>Si la secuencia se modifica durante esa operación, el resultado no está definido.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="CharSequence.html#chars()">chars</a></code>在接口 
-              <code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
+<code><a href="CharSequence.html#chars()">chars</a></code>En la interfaz<code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>IntStream de valores char de esta secuencia.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                9 
@@ -2358,25 +2121,24 @@ implements <a href="../io/Serializable.html" title="interface in java.io">Serial
 <ul class="blockListLast">
 <li class="blockList"> <h4>codePoints</h4> <pre class="methodSignature">public <a href="../util/stream/IntStream.html" title="interface in java.util.stream">IntStream</a> codePoints()</pre>
 <div class="block">
-<span>返回此序列中的代码点值流。</span>
-<span>序列中遇到的任何代理对被组合，就像<a href="Character.html#toCodePoint(char,char)">Character.toCodePoint一样</a> ，结果传递给流。</span>
-<span>任何其他代码单元（包括普通BMP字符，未配对代理项和未定义代码单元）将零扩展为<code>int</code>值，然后传递给流。</span>
-<p> <span>当终端流操作开始时，流与该序列结合（具体地，对于可变序列，流的<a href="../util/Spliterator.html#binding">分裂器</a>是<a href="../util/Spliterator.html#binding"><em>late-binding</em></a> ）。</span> <span>如果在该操作期间修改了序列，则结果是未定义的。</span> </p>
+<span>Devuelve un flujo de valores de puntos de código de esta secuencia.</span>
+<span>Cualquier par de sustitutos encontrado en la secuencia se combina, igual que<a href="Character.html#toCodePoint(char,char)">Character.toCodePoint</a>, y el resultado se pasa al flujo.</span>
+<span>Cualquier otra unidad de código (incluidos los caracteres BMP ordinarios, los suplentes no emparejados y las unidades de código no definidas) se extiende con ceros a<code>int</code>valor, y luego se pasa al flujo.</span>
+<p> <span>Cuando comienza la operación de flujo terminal, el flujo se combina con esta secuencia (concretamente, para secuencias mutables, del flujo<a href="../util/Spliterator.html#binding">spliterator</a>Sí<a href="../util/Spliterator.html#binding"><em>late-binding</em></a> ）。</span> <span>Si la secuencia se modifica durante esa operación, el resultado no está definido.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="CharSequence.html#codePoints()">codePoints</a></code>在 
-              <code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
+<code><a href="CharSequence.html#codePoints()">codePoints</a></code>En<code><a href="CharSequence.html" title="interface in java.lang">CharSequence</a></code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El IntStream de códigos Unicode apunta a esta secuencia</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                9 

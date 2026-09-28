@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PostgreSQL UNION 操作符 | 菜鸟教程</title>
+<title>Operador UNION de PostgreSQL | Tutorial para novatos</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="PostgreSQL UNION 操作符  PostgreSQL UNION 操作符合并两个或多个 SELECT 语句的结果。 UNION 操作符用于合并两个或多个 SELECT 语句的结果集。  请注意，UNION 内部的每个 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 SELECT 语句中的列的顺序必须相同。   语法 UNIONS 基础语法如下： SELECT column1 [, column.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -158,16 +158,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div> <div class="col middle-column">
 <div class="article">
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../postgresql/postgresql-join.html" rel="prev">PostgreSQL 连接(JOIN)</a> </div>
-<div class="next-design-link"><a href="../postgresql/postgresql-null.html" rel="next">PostgreSQL NULL 值</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../postgresql/postgresql-join.html" rel="prev">PostgreSQL JOIN</a> </div>
+<div class="next-design-link"><a href="../postgresql/postgresql-null.html" rel="next">Valor NULL en PostgreSQL</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
 </div>
 <div class="article-body">
 <div class="article-intro" id="content">
-<h1>PostgreSQL UNION 操作符</h1>
+<h1>Operador UNION en PostgreSQL</h1>
 <p>El operador UNION de PostgreSQL combina los resultados de dos o más sentencias SELECT.</p>
 <p>El operador UNION se utiliza para combinar los conjuntos de resultados de dos o más sentencias SELECT.</p>
 <p>Tenga en cuenta que cada declaración SELECT dentro de UNION debe tener el mismo número de columnas. Las columnas también deben tener tipos de datos similares. Además, el orden de las columnas en cada declaración SELECT debe ser el mismo.</p>
-<h3>语法</h3>
+<h3>Sintaxis</h3>
 <p>La sintaxis básica de UNIONS es la siguiente:</p>
 <pre>SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
@@ -179,8 +179,8 @@ SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]</pre>
 <p>La cláusula de condición aquí puede configurarse como cualquier expresión según sus necesidades.</p>
-<h3>实例</h3>
-<p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">下载 COMPANY SQL 文件</a>), los datos son los siguientes:</p>
+<h3>Ejemplos</h3>
+<p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
 <pre>runoobdb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
@@ -192,7 +192,7 @@ FROM table1 [, table2 ]
   6 | Kim   |  22 | South-Hall|  45000
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
-<p>创建 DEPARTMENT 表（<a href="https://static.jyshare.com/download/department.sql">下载 DEPARTMENT SQL 文件</a>), los datos son los siguientes:</p>
+<p>Crear la tabla DEPARTMENT (<a href="https://static.jyshare.com/download/department.sql">Descargar el archivo SQL de DEPARTMENT</a>), los datos son los siguientes:</p>
 <pre>
 runoobdb=# SELECT * from DEPARTMENT;
  id | dept        | emp_id
@@ -223,9 +223,9 @@ SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT
       7 | James | Finance
 (7 rows)</pre>
 <hr/>
-<h2>UNION ALL 子句</h2>
+<h2>Cláusula UNION ALL</h2>
 <p>El operador UNION ALL puede unir dos declaraciones SELECT que tengan filas duplicadas. De forma predeterminada, el operador UNION selecciona valores distintos. Si se permiten valores duplicados, use UNION ALL.</p>
-<h3>语法</h3>
+<h3>Sintaxis</h3>
 <p>La sintaxis básica de la cláusula UINON ALL es la siguiente:</p>
 <pre>SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
@@ -237,7 +237,7 @@ SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]</pre>
 <p>La cláusula de condición aquí puede configurarse como cualquier expresión según sus necesidades.</p>
-<h3>实例</h3>
+<h3>Ejemplos</h3>
 <p>Ahora, unamos las dos tablas mencionadas anteriormente usando la declaración SELECT junto con la cláusula UNION ALL:</p>
 <pre>SELECT EMP_ID, NAME, DEPT FROM COMPANY INNER JOIN DEPARTMENT
    ON COMPANY.ID = DEPARTMENT.EMP_ID
@@ -261,22 +261,17 @@ SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT
       4 | Mark  | Finance
       5 | David | Engineering
       6 | Kim   | Finance
-(14 rows)</pre>
-其他扩展
-</div>
+(14 rows)</pre>Otras extensiones</div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
 <div class="archive-list-item">
-<div class="post-intro" id="ai-info" style="width: 100%;">AI 思考中...</div>
+<div class="post-intro" id="ai-info" style="width: 100%;">AI pensando...</div>
 </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../postgresql/postgresql-join.html" rel="prev">PostgreSQL 连接(JOIN)</a> </div>
-<div class="next-design-link"><a href="../postgresql/postgresql-null.html" rel="next">PostgreSQL NULL 值</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
-</div>
-
-笔记列表
-<style>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../postgresql/postgresql-join.html" rel="prev">PostgreSQL JOIN</a> </div>
+<div class="next-design-link"><a href="../postgresql/postgresql-null.html" rel="next">Valor NULL en PostgreSQL</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+</div>Lista de notas<style>
 .wrapper {
   /*text-transform: uppercase; */
   background: #ececec;
@@ -380,16 +375,16 @@ SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debe <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debe <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -397,14 +392,14 @@ SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="21720"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -582,7 +577,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -673,7 +668,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

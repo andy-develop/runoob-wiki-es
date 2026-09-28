@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Node.js Domain 模块 Node.js 内置模块  Domain 模块是 Node.js 中用于简化异步代码错误处理的工具。它允许你将多个异步操作分组到一个&amp;quot;域&amp;quot;中，并在该域内统一捕获和处理错误。 简单来说，Domain 就像是一个错误处理的&amp;quot;容器&amp;quot;，你可以将相关的异步操作放入这个容器中，然后统一管理这些操作可能产生的错误。 domain 模块的使用在 .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -514,7 +514,7 @@ emitter.<span style="color: #660066;">on</span><span style="color: #009900;">(</
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 emitter.<span style="color: #660066;">emit</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'data'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-</div></div><p>Cuando el evento data lanza un error, el domain capturará este error sin causar que el programa se bloquee.</p><h3>Consideraciones y limitaciones de domain</h3><ul><li><strong>Impacto en el rendimiento</strong>：<code>domain</code>Puede tener cierto impacto en el rendimiento, especialmente en escenarios de alta concurrencia, por lo que no se recomienda usarlo con frecuencia.</li><li><strong>No se recomienda su uso en proyectos nuevos</strong>: desde Node.js 4.0,<code>domain</code>fue marcado como módulo obsoleto. Para proyectos nuevos, se recomienda usar métodos más modernos de manejo de errores, como<code>async/await</code>、<code>try/catch</code>y escucha de eventos, entre otros.</li><li><strong>No es adecuado para todos los escenarios</strong>：<code>domain</code>No puede capturar todos los tipos de errores (como errores de sintaxis); solo es adecuado para manejar errores en tiempo de ejecución en operaciones asíncronas y funciones de callback.</li></ul><h3>Alternativas</h3><p>Dado que<code>domain</code>ha quedado obsoleto, se recomienda usar las siguientes formas para manejar errores en operaciones asíncronas:</p><ul><li><strong>Usar<code>async/await</code> 和 <code>try/catch</code></strong>: para funciones que admiten async/await, puede usar<code>try/catch</code>para la captura de errores.</li><li><strong>Manejo global de errores</strong>: puede usar<code>process.on('uncaughtException')</code> 和 <code>process.on('unhandledRejection')</code>para escuchar excepciones no capturadas y rechazos de Promise no manejados.</li><li><strong>Manejo de errores en listeners de eventos</strong>: para el evento de cada EventEmitter<code>error</code>agregue un listener.</li></ul><p>Aunque<code>domain</code>El módulo proporciona una forma sencilla de capturar errores en operaciones asíncronas, pero debido a sus problemas de rendimiento y fiabilidad, Node.js no lo recomienda oficialmente para nuevos proyectos. Para el manejo de excepciones, se recomienda usar soluciones más modernas como<code>async/await</code>y los listeners de eventos, asegurando que los errores puedan manejarse eficazmente en la aplicación.</p>
+</div></div><p>Cuando el evento data lanza un error, el domain capturará este error sin causar que el programa se bloquee.</p><h3>Consideraciones y limitaciones de domain</h3><ul><li><strong>Impacto en el rendimiento</strong>：<code>domain</code>Puede tener cierto impacto en el rendimiento, especialmente en escenarios de alta concurrencia, por lo que no se recomienda usarlo con frecuencia.</li><li><strong>No se recomienda su uso en proyectos nuevos</strong>: desde Node.js 4.0,<code>domain</code>fue marcado como módulo obsoleto. Para proyectos nuevos, se recomienda usar métodos más modernos de manejo de errores, como<code>async/await</code>、<code>try/catch</code>y escucha de eventos, entre otros.</li><li><strong>No es adecuado para todos los escenarios</strong>：<code>domain</code>No puede capturar todos los tipos de errores (como errores de sintaxis); solo es adecuado para manejar errores en tiempo de ejecución en operaciones asíncronas y funciones de callback.</li></ul><h3>Alternativas</h3><p>Dado que<code>domain</code>ha quedado obsoleto, se recomienda usar las siguientes formas para manejar errores en operaciones asíncronas:</p><ul><li><strong>Usar<code>async/await</code>y<code>try/catch</code></strong>: para funciones que admiten async/await, puede usar<code>try/catch</code>para la captura de errores.</li><li><strong>Manejo global de errores</strong>: puede usar<code>process.on('uncaughtException')</code>y<code>process.on('unhandledRejection')</code>para escuchar excepciones no capturadas y rechazos de Promise no manejados.</li><li><strong>Manejo de errores en listeners de eventos</strong>: para el evento de cada EventEmitter<code>error</code>agregue un listener.</li></ul><p>Aunque<code>domain</code>El módulo proporciona una forma sencilla de capturar errores en operaciones asíncronas, pero debido a sus problemas de rendimiento y fiabilidad, Node.js no lo recomienda oficialmente para nuevos proyectos. Para el manejo de excepciones, se recomienda usar soluciones más modernas como<code>async/await</code>y los listeners de eventos, asegurando que los errores puedan manejarse eficazmente en la aplicación.</p>
 <p><a href="../nodejs/nodejs-buildin-modules.html"><img alt="Java File" class="navup" decoding="async" src="../images/up.gif"/>Módulos integrados de Node.js</a></p> Otras extensiones
 </div>
 </div>
@@ -634,11 +634,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Debe <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir notas.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Debe <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir notas.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -836,7 +836,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -938,7 +938,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

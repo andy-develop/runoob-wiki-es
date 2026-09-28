@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="1. 安装nginx 1.1 选择稳定版本 我们编译安装nginx来定制自己的模块，机器CentOS 6.2 x86_64。首先安装缺少的依赖包： # yum -y install gcc gcc-c++ make libtool zlib zlib-devel openssl openssl-devel pcre pcre-devel 这些软件包如果yum上没有的话可以下载源码来编译安装，只是要注意编译时默认安装的目录，确保下面在安装.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -91,7 +91,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre># yum -y install gcc gcc-c++ make libtool zlib zlib-devel openssl openssl-devel pcre pcre-devel</pre>
 <p>Si estos paquetes no están disponibles en yum, se puede descargar el código fuente y compilarlo para instalarlo. Solo hay que tener en cuenta el directorio de instalación predeterminado al compilar, para asegurarse de que al instalar nginx se puedan encontrar esos archivos de bibliotecas dinámicas (ldconfig).</p>
 <p><img alt="nginx 服务器安装及配置文件详解" decoding="async" fetchpriority="high" height="266" src="../wp-content/uploads/2015/07/151329vtoxmfhwxhih1glz.jpg" width="700"/></p>
-<p>从 <a href="http://nginx.org/en/download.html" rel="external noopener noreferrer" target="_blank">http://nginx.org/en/download.html</a>Descargue la versión estable nginx-1.6.3.tar.gz y descomprímala en /usr/local/src.</p>
+<p>desde<a href="http://nginx.org/en/download.html" rel="external noopener noreferrer" target="_blank">http://nginx.org/en/download.html</a>Descargue la versión estable nginx-1.6.3.tar.gz y descomprímala en /usr/local/src.</p>
 <p>Para preparaciones posteriores, descargamos también 2 módulos de complementos:<a href="https://github.com/yaoweibin/nginx_upstream_check_module/releases" rel="external noopener noreferrer" target="_blank">nginx_upstream_check_module-0.3.0.tar.gz</a>— Comprobar el estado del servidor backend,<a href="https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/downloads" rel="external noopener noreferrer" target="_blank">nginx-goodies-nginx-sticky-module-ng-bd312d586752.tar.gz</a>(Se recomienda renombrar el directorio a nginx-sticky-module-ng-1.2.5 después de descomprimir en /usr/local/src) — para el backend hacer<span class="wp_keywordlink"><a href="http://www.codeceo.com/article/balanced-algorithm.html" rel="noopener noreferrer" target="_blank" title="负载均衡">balanceo de carga</a></span>Resolver el problema de sesión sticky (para usarlo junto con el módulo upstream_check se necesita aplicar un parche adicional, consulte<a href="http://seanlook.com/2015/06/02/nginx-cache-check/" rel="external noopener noreferrer" target="_blank">Práctica de configuración de balanceo de carga con nginx</a>）。</p>
 <p>Tenga en cuenta la compatibilidad de versiones entre los complementos y nginx. Por lo general, cuanto más nuevos sean los complementos, mejor; no es necesario perseguir las últimas versiones de nginx, la estabilidad es lo primero. La combinación nginx-1.4.7, nginx-sticky-module-1.1 y nginx_upstream_check_module-0.2.0 tampoco presenta problemas. sticky-1.1 con nginx-1.6 dio errores de compilación porque las actualizaciones no siguieron el ritmo. (Se puede usar directamente Tengine, que incluye estos módulos por defecto).</p>
 <pre>
@@ -290,7 +290,7 @@ http {
 <ul>
 <li>proxy_connect_timeout 60<br/>Tiempo de espera de conexión entre nginx y el servidor backend (tiempo de espera de conexión del proxy)</li>
 <li>proxy_read_timeout 60<br/>Después de una conexión exitosa, el tiempo de espera entre dos operaciones de respuesta exitosas con el servidor backend (tiempo de espera de recepción del proxy)</li>
-<li>proxy_buffer_size 4k<br/>Configura, para que el servidor proxy (nginx) lea y guarde desde el realserver backend, el<strong>头</strong>tamaño del búfer de la información del usuario; el valor predeterminado es el mismo que el tamaño de proxy_buffers; de hecho, este valor de directiva se puede establecer un poco más pequeño.</li>
+<li>proxy_buffer_size 4k<br/>Configura, para que el servidor proxy (nginx) lea y guarde desde el realserver backend, el<strong>Cabeza</strong>tamaño del búfer de la información del usuario; el valor predeterminado es el mismo que el tamaño de proxy_buffers; de hecho, este valor de directiva se puede establecer un poco más pequeño.</li>
 <li>proxy_buffers 4 32k<br/>El búfer proxy_buffers: nginx, para una única conexión, almacena en caché las<strong>respuestas del realserver backend</strong>; si las páginas web tienen un tamaño promedio inferior a 32k, se configura así.</li>
 <li>proxy_busy_buffers_size 64k<br/>Tamaño del búfer en condiciones de alta carga (proxy_buffers*2)</li>
 <li>proxy_max_temp_file_size<br/>Cuando proxy_buffers no puede contener el contenido de la respuesta del servidor backend, una parte se guardará en un archivo temporal en el disco duro. Este valor se utiliza para establecer el tamaño máximo del archivo temporal; el valor predeterminado es 1024M, y no tiene relación con proxy_cache. Si supera este valor, se transmitirá desde el servidor upstream. Establecerlo en 0 lo desactiva.</li>
@@ -484,11 +484,11 @@ location /images {
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Debe <a href=".." class="runoob-pop">iniciar sesión</a> antes de compartir notas!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Debe <a class="runoob-pop" href="..">iniciar sesión</a> antes de compartir notas!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

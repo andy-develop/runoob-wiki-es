@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="生命周期与数据请求  本章你将学会 Vue3 的生命周期钩子，并在合适的时机用 fetch 从 JSON 文件加载博客数据。   什么是生命周期？ 每个 Vue 组件从创建到销毁，会经历一系列阶段，这些阶段称为「生命周期」。 Vue 在每个阶段提供对应的 钩子函数，让你在特定的时间点执行代码。  比如：你想在组件加载完成后去请求数据，就需要用到 onMounted 这个钩子。   Vue3 生命周期钩子总览    钩子函数执行时机常用场.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -354,9 +354,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span> setup&gt;</span><br/>
 import { ref, onMounted } from 'vue'<br/>
-<br/>const message = ref('加载中...')<br/>
-<br/>// onMounted 在组件挂载到页面后执行<br/>
-onMounted(() =&gt; {<br/>// 此时 DOM 已经渲染完成，可以安全地操作 DOM 或发请求<br/>console.log('组件已挂载，可以开始加载数据了')<br/>message.value = '数据加载完成！'<br/>
+<br/>const message = ref('Cargando...')<br/>
+<br/>// onMounted se ejecuta después de que el componente se monta en la página<br/>
+onMounted(() =&gt; {<br/>// En este punto el DOM ya se ha renderizado, se puede manipular el DOM o hacer solicitudes de forma segura<br/>console.log('El componente se ha montado, ya se puede empezar a cargar los datos')<br/>message.value = '¡Carga de datos completada!'<br/>
 })<br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
@@ -372,20 +372,20 @@ onMounted(() =&gt; {<br/>// 此时 DOM 已经渲染完成，可以安全地操�
 <h3>Paso 1: Crear el archivo de datos</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
-<div class="example_code">// 文件路径：public/posts.json<br/>
+<div class="example_code">// Ruta del archivo: public/posts.json<br/>
 [<br/>
   {<br/>
-    "id": 1,<br/>"title": "Vue3 入门完全指南",<br/>"summary": "从零开始学习 Vue3 组合式 API，涵盖 ref、reactive、computed 等核心概念。",<br/>"content": "&lt;h2&gt;为什么学 Vue3？&lt;/h2&gt;&lt;p&gt;Vue3 是目前最流行的前端框架之一...&lt;/p&gt;",<br/>
+    "id": 1,<br/>"title": "Guía completa de introducción a Vue3",<br/>"summary": "Aprende desde cero la API de composición de Vue3, que cubre conceptos clave como ref, reactive, computed, etc.",<br/>"content": "&lt;h2&gt;¿Por qué aprender Vue3?&lt;/h2&gt;&lt;p&gt;Vue3 es actualmente uno de los frameworks frontend más populares...&lt;/p&gt;",<br/>
     "category": "Vue",<br/>
     "date": "2024-05-10"<br/>
   },<br/>
   {<br/>
-    "id": 2,<br/>"title": "JavaScript 异步编程详解",<br/>"summary": "一文搞懂 Promise、async/await、事件循环与微任务队列。",<br/>"content": "&lt;h2&gt;什么是异步？&lt;/h2&gt;&lt;p&gt;JS 是单线程的...&lt;/p&gt;",<br/>
+    "id": 2,<br/>"title": "Explicación detallada de la programación asíncrona en JavaScript",<br/>"summary": "Entiende de una vez Promise, async/await, el bucle de eventos y la cola de microtareas.",<br/>&lt;h2&gt;¿Qué es asíncrono?&lt;/h2&gt;&lt;p&gt;JS es de un solo hilo...&lt;/p&gt;<br/>
     "category": "JavaScript",<br/>
     "date": "2024-05-08"<br/>
   },<br/>
   {<br/>
-    "id": 3,<br/>"title": "CSS Grid 布局实战",<br/>"summary": "用 CSS Grid 轻松实现复杂的响应式布局。",<br/>"content": "&lt;h2&gt;Grid 入门&lt;/h2&gt;&lt;p&gt;Grid 是二维布局系统...&lt;/p&gt;",<br/>
+    "id": 3,<br/>Práctica de CSS Grid Layout<br/>Implementa fácilmente diseños receptivos complejos con CSS Grid.<br/>&lt;h2&gt;Introducción a Grid&lt;/h2&gt;&lt;p&gt;Grid es un sistema de maquetación bidimensional...&lt;/p&gt;<br/>
     "category": "CSS",<br/>
     "date": "2024-05-05"<br/>
   }<br/>
@@ -397,29 +397,29 @@ onMounted(() =&gt; {<br/>// 此时 DOM 已经渲染完成，可以安全地操�
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #808080; font-style: italic;">&lt;!-- 文件路径：src/views/HomeView.vue --&gt;</span><br/>
+<span style="color: #808080; font-style: italic;">&lt;!-- Ruta de archivo: src/views/HomeView.vue --&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span> setup&gt;</span><br/>
 import { ref, onMounted } from 'vue'<br/>
 import BlogCard from '../components/BlogCard.vue'<br/>
 import CategoryFilter from '../components/CategoryFilter.vue'<br/>
-<br/>const articles = ref([])        // 初始空数组<br/>const isLoading = ref(true)     // 加载状态<br/>const error = ref(null)         // 错误信息<br/>
-<br/>// 异步加载文章数据<br/>
+<br/>const articles = ref([])        // array vacío inicial<br/>const isLoading = ref(true)     // estado de carga<br/>const error = ref(null)         // mensaje de error<br/>
+<br/>// Cargar datos de artículos de forma asíncrona<br/>
 async function fetchPosts() {<br/>
   isLoading.value = true<br/>
   error.value = null<br/>
   try {<br/>
-    const response = await fetch('/posts.json')<br/>// 检查响应是否成功（404 或 500 时抛出错误）<br/>
-    if (!response.ok) {<br/>throw new Error(`加载失败：HTTP ${response.status}`)<br/>
+    const response = await fetch('/posts.json')<br/>// Comprobar si la respuesta fue exitosa (lanzar un error en 404 o 500)<br/>
+    if (!response.ok) {<br/>throw new Error(`Carga fallida: HTTP ${response.status}`)<br/>
     }<br/>
     const data = await response.json()<br/>
     articles.value = data<br/>
   } catch (err) {<br/>
-    error.value = err.message<br/>console.error('文章数据加载失败：', err)<br/>
+    error.value = err.message<br/>console.error('Error al cargar los datos de los artículos:', err)<br/>
   } finally {<br/>
     isLoading.value = false<br/>
   }<br/>
 }<br/>
-<br/>// 组件挂载后立即加载数据<br/>
+<br/>// Cargar los datos inmediatamente después del montaje del componente<br/>
 onMounted(() =&gt; {<br/>
   fetchPosts()<br/>
 })<br/>
@@ -429,19 +429,19 @@ onMounted(() =&gt; {<br/>
   <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"home"</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
 <br/>
-    <span style="color: #808080; font-style: italic;">&lt;!-- 加载中状态 --&gt;</span><br/>
+    <span style="color: #808080; font-style: italic;">&lt;!-- Estado de carga --&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"isLoading"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"status-msg"</span>&gt;</span>Cargando, por favor espera...<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
 <br/>
-    <span style="color: #808080; font-style: italic;">&lt;!-- 错误状态 --&gt;</span><br/>
+    <span style="color: #808080; font-style: italic;">&lt;!-- Estado de error --&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"error"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"status-msg error"</span>&gt;</span><br/>Error al cargar: {{ error }}<br/>
       <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"fetchPosts"</span>&gt;</span>Reintentar<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
 <br/>
-    <span style="color: #808080; font-style: italic;">&lt;!-- 空数据状态 --&gt;</span><br/>
+    <span style="color: #808080; font-style: italic;">&lt;!-- Estado de datos vacíos --&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"articles.length === 0"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"status-msg"</span>&gt;</span><br/>Aún no hay artículos, estad atentos.<br/>
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
 <br/>
-    <span style="color: #808080; font-style: italic;">&lt;!-- 正常数据展示 --&gt;</span><br/>
+    <span style="color: #808080; font-style: italic;">&lt;!-- Visualización normal de datos --&gt;</span><br/>
     <span style="color: #170;">&lt;template v-else&gt;</span><br/>
       <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article-grid"</span>&gt;</span><br/>
         <span style="color: #170;">&lt;BlogCard</span><br/>
@@ -493,25 +493,25 @@ onMounted(() =&gt; {<br/>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #808080; font-style: italic;">&lt;!-- 文件路径：src/views/PostView.vue --&gt;</span><br/>
+<span style="color: #808080; font-style: italic;">&lt;!-- Ruta del archivo: src/views/PostView.vue --&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span> setup&gt;</span><br/>
 import { ref, computed, onMounted } from 'vue'<br/>
 import { useRoute, RouterLink } from 'vue-router'<br/>
 <br/>
 const route = useRoute()<br/>
 const id = Number(route.params.id)<br/>
-<br/>const posts = ref([])           // 所有文章<br/>
+<br/>const posts = ref([])           // todos los artículos<br/>
 const isLoading = ref(true)<br/>
 const error = ref(null)<br/>
-<br/>// 根据 ID 查找当前文章<br/>
+<br/>// Buscar el artículo actual por ID<br/>
 const article = computed(() =&gt; {<br/>
   return posts.value.find(p =&gt; p.id === id)<br/>
 })<br/>
-<br/>// 加载所有文章数据<br/>
+<br/>// Cargar los datos de todos los artículos<br/>
 async function fetchPosts() {<br/>
   isLoading.value = true<br/>
   try {<br/>
-    const res = await fetch('/posts.json')<br/>if (!res.ok) throw new Error('加载失败')<br/>
+    const res = await fetch('/posts.json')<br/>if (!res.ok) throw new Error('Carga fallida')<br/>
     posts.value = await res.json()<br/>
   } catch (err) {<br/>
     error.value = err.message<br/>
@@ -667,11 +667,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -869,7 +869,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -971,7 +971,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

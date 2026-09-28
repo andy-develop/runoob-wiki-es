@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="C 文件读写   上一章我们讲解了 C 语言处理的标准输入和输出设备。本章我们将介绍 C 程序员如何创建、打开、关闭文本文件或二进制文件。 一个文件，无论它是文本文件还是二进制文件，都是代表了一系列的字节。C 语言不仅提供了访问顶层的函数，也提供了底层（OS）调用来处理存储设备上的文件。本章将讲解文件管理的重要调用。   打开文件 您可以使用 fopen( ) 函数来创建一个新的文件或者打开一个已有的文件，这个调用会初始化类型 FILE.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -442,7 +442,7 @@ char *fgets( char *buf, int n, FILE *fp );
 <pre>
 size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
 size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
-<p><span class="mark">fread</span> 和 <span class="mark">fwrite</span>Son funciones centrales de la biblioteca estándar de C para la lectura y escritura por bloques de archivos binarios. Operan directamente sobre bloques de datos en memoria, evitando la sobrecarga de conversión de formato de texto, y son especialmente adecuadas para manejar archivos grandes y la lectura/escritura por lotes de datos estructurados.</p>
+<p><span class="mark">fread</span>y<span class="mark">fwrite</span>Son funciones centrales de la biblioteca estándar de C para la lectura y escritura por bloques de archivos binarios. Operan directamente sobre bloques de datos en memoria, evitando la sobrecarga de conversión de formato de texto, y son especialmente adecuadas para manejar archivos grandes y la lectura/escritura por lotes de datos estructurados.</p>
 <h3>Descripción de parámetros</h3>
 <p>Los cuatro parámetros tienen el mismo significado en ambas funciones, pero el flujo de datos es opuesto:</p>
 <table class="reference">
@@ -519,8 +519,8 @@ size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
 </tr>
 <tr>
 <td>Rendimiento</td>
-<td><span class="tag1 green">快</span>Sin sobrecarga de conversión</td>
-<td><span class="tag1">慢</span>Requiere analizar la cadena de formato</td>
+<td><span class="tag1 green">Rápido</span>Sin sobrecarga de conversión</td>
+<td><span class="tag1">Lento</span>Requiere analizar la cadena de formato</td>
 </tr>
 <tr>
 <td>Precisión</td>
@@ -1105,7 +1105,7 @@ int main(){
 }</pre>
 <p>Después de la ejecución, abre el archivo test.txt:</p>
 <pre>This is teAting for fprintf...</pre>
-<p><strong>Nota:</strong>Solo usando el modo<span class="marked">r+</span>para abrir el archivo se puede insertar contenido,<span class="marked">w</span> 或 <span class="marked">w+</span>los modos borrarán el contenido original del archivo antes de escribir,<span class="marked">a</span> 或 <span class="marked">a+</span>el modo siempre agregará contenido al final del archivo, incluso si se usa fseek() para mover la posición del puntero de archivo.</p><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">GGLLCC</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>   GGLLCC</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  122***26@qq.com</p></div></span>Hace 9 años (2017-08-22)</div></div></li><!-- #comment-## -->
+<p><strong>Nota:</strong>Solo usando el modo<span class="marked">r+</span>para abrir el archivo se puede insertar contenido,<span class="marked">w</span>o<span class="marked">w+</span>los modos borrarán el contenido original del archivo antes de escribir,<span class="marked">a</span>o<span class="marked">a+</span>el modo siempre agregará contenido al final del archivo, incluso si se usa fseek() para mover la posición del puntero de archivo.</p><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">GGLLCC</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>   GGLLCC</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  122***26@qq.com</p></div></span>Hace 9 años (2017-08-22)</div></div></li><!-- #comment-## -->
 <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-40380"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>   Kazin</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  785***462@qq.com</p></div><div class="upvotejs" data-commid="40380" id="runoobvote-id-40380"><a class="upvote"></a> <span class="count">66</span></div></div><div class="comt-main" id="div-comment-40380"><p>Al ejecutar el siguiente código en el entorno de desarrollo de Visual Studio 2015, se mostrará una advertencia de que la función fopen no es segura:</p>
 <pre>#include &lt;stdio.h&gt;
 int main() {
@@ -1156,11 +1156,11 @@ int main()
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic aquí para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-	<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir la nota, debes <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-	<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir la nota, debes <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1358,7 +1358,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1460,7 +1460,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

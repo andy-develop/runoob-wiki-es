@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="MySQL 索引 MySQL 索引是一种数据结构，用于加快数据库查询的速度和性能。 MySQL 索引的建立对于 MySQL 的高效运行是很重要的，索引可以大大提高 MySQL 的检索速度。   MySQL 索引类似于书籍的索引，通过存储指向数据行的指针，可以快速定位和访问表中的特定数据。 打个比方，如果合理的设计且使用索引的 MySQL 是一辆兰博基尼的话，那么没有设计和使用索引的 MySQL 就是一个人力三轮车。 拿汉语字典的目录页（.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -319,7 +319,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>
 CREATE INDEX index_name
 ON table_name (column1 [ASC|DESC], column2 [ASC|DESC], ...);
-</pre><ul><li><code>CREATE INDEX</code>: La palabra clave para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>table_name</code>: Especifica en qué tabla se va a crear el índice.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>和<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul>
+</pre><ul><li><code>CREATE INDEX</code>: La palabra clave para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>table_name</code>: Especifica en qué tabla se va a crear el índice.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>y<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul>
 <p>El siguiente ejemplo supone que tenemos una tabla llamada students que contiene las columnas id, name y age; crearemos un índice normal en la columna name.</p><pre>CREATE INDEX idx_name ON students (name);</pre>
 <p>La declaración anterior creará un índice normal llamado idx_name en la columna name de la tabla students, lo que ayudará a mejorar el rendimiento de las consultas realizadas por nombre.</p><p>Cabe señalar que si la cantidad de datos en la tabla es grande, la creación del índice puede llevar algún tiempo, pero una vez creado, el rendimiento de las consultas mejorará significativamente.</p>
 <h3>Modificar la estructura de la tabla (agregar índice)</h3>
@@ -328,7 +328,7 @@ ON table_name (column1 [ASC|DESC], column2 [ASC|DESC], ...);
 <pre>
 ALTER TABLE table_name
 ADD INDEX index_name (column1 [ASC|DESC], column2 [ASC|DESC], ...);
-</pre><ul><li><code>ALTER TABLE</code>: La palabra clave para modificar la estructura de la tabla.</li><li><code>table_name</code>: Especifica el nombre de la tabla a modificar.</li><li><code>ADD INDEX</code>: La cláusula para agregar un índice.<code>ADD INDEX</code>Se utiliza para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>和<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo: crearemos un índice normal en la tabla existente llamada employees:</p>
+</pre><ul><li><code>ALTER TABLE</code>: La palabra clave para modificar la estructura de la tabla.</li><li><code>table_name</code>: Especifica el nombre de la tabla a modificar.</li><li><code>ADD INDEX</code>: La cláusula para agregar un índice.<code>ADD INDEX</code>Se utiliza para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>y<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo: crearemos un índice normal en la tabla existente llamada employees:</p>
 <pre>ALTER TABLE employees
 ADD INDEX idx_age (age);</pre><p>La declaración anterior creará un índice normal llamado idx_age en la columna age de la tabla employees.</p>
 <h3>Especificar directamente al crear la tabla</h3><p>Podemos al crear la tabla; tú puedes<strong>CREATE TABLE</strong>En la declaración, especificar directamente el índice, para crear la combinación de tabla e índice.</p>
@@ -340,7 +340,7 @@ CREATE TABLE table_name (
   INDEX index_name (column1 [ASC|DESC], column2 [ASC|DESC], ...)
 );
 </pre><ul><li><code>CREATE TABLE</code>: La palabra clave para crear una nueva tabla.</li><li><code>table_name</code>: Especifica el nombre de la tabla que se va a crear.</li>
-<li><code>(column1 data_type, column2 data_type, ...)</code>: Define los nombres de las columnas y los tipos de datos de la tabla. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>INDEX</code>: La palabra clave para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>和<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo: vamos a crear una tabla llamada students y crearemos un índice normal en la columna age.</p>
+<li><code>(column1 data_type, column2 data_type, ...)</code>: Define los nombres de las columnas y los tipos de datos de la tabla. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>INDEX</code>: La palabra clave para crear un índice normal.</li><li><code>index_name</code>: Especifica el nombre del índice que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>y<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo: vamos a crear una tabla llamada students y crearemos un índice normal en la columna age.</p>
 <pre>CREATE TABLE students (
   id INT PRIMARY KEY,
   name VARCHAR(50),
@@ -369,7 +369,7 @@ DROP INDEX idx_age;</pre><p>Ambos comandos eliminarán el índice llamado idx_ag
 CREATE UNIQUE INDEX index_name
 ON table_name (column1 [ASC|DESC], column2 [ASC|DESC], ...);
 </pre>
-<ul><li><code>CREATE UNIQUE INDEX</code>: La combinación de palabras clave para crear un índice único.</li><li><code>index_name</code>: Especifica el nombre del índice único que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>table_name</code>: Especifica en qué tabla se va a crear el índice único.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>和<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo de creación de un índice único: supongamos que tenemos una tabla llamada employees que contiene las columnas id y email; ahora queremos crear un índice único en la columna email para asegurar que la dirección de correo electrónico de cada empleado sea única.</p>
+<ul><li><code>CREATE UNIQUE INDEX</code>: La combinación de palabras clave para crear un índice único.</li><li><code>index_name</code>: Especifica el nombre del índice único que se va a crear. El nombre del índice debe ser único en la tabla.</li><li><code>table_name</code>: Especifica en qué tabla se va a crear el índice único.</li><li><code>(column1, column2, ...)</code>: Especifica los nombres de las columnas de la tabla a indexar. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, textuales o de fecha.</li><li><code>ASC</code>y<code>DESC</code>(Opcional): Se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul><p>A continuación se muestra un ejemplo de creación de un índice único: supongamos que tenemos una tabla llamada employees que contiene las columnas id y email; ahora queremos crear un índice único en la columna email para asegurar que la dirección de correo electrónico de cada empleado sea única.</p>
 <pre>CREATE UNIQUE INDEX idx_email ON employees (email);</pre>
 <p>El ejemplo anterior creará un índice único llamado idx_email en la columna email de la tabla employees.</p>
 <h3>Modificar la estructura de la tabla para agregar índice</h3>
@@ -393,7 +393,7 @@ CREATE TABLE table_name (
   ...,
   CONSTRAINT index_name UNIQUE (column1 [ASC|DESC], column2 [ASC|DESC], ...)
 );
-</pre><ul><li><code>CREATE TABLE</code>: la palabra clave para crear una nueva tabla.</li><li><code>table_name</code>: especifica el nombre de la tabla a crear.</li><li><code>(column1 data_type, column2 data_type, ...)</code>: define los nombres de las columnas y los tipos de datos de la tabla. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, texto o fecha.</li><li><code>CONSTRAINT</code>: la palabra clave para agregar restricciones.</li><li><code>index_name</code>: especifica el nombre del índice único a crear. El nombre de la restricción debe ser único en la tabla.</li><li><code>UNIQUE (column1, column2, ...)</code>: especifica el nombre de la columna de la tabla a indexar.</li><li><code>ASC</code>和<code>DESC</code>(Opcional): se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul>
+</pre><ul><li><code>CREATE TABLE</code>: la palabra clave para crear una nueva tabla.</li><li><code>table_name</code>: especifica el nombre de la tabla a crear.</li><li><code>(column1 data_type, column2 data_type, ...)</code>: define los nombres de las columnas y los tipos de datos de la tabla. Puedes especificar una o más columnas como combinación del índice. Los tipos de datos de estas columnas suelen ser numéricos, texto o fecha.</li><li><code>CONSTRAINT</code>: la palabra clave para agregar restricciones.</li><li><code>index_name</code>: especifica el nombre del índice único a crear. El nombre de la restricción debe ser único en la tabla.</li><li><code>UNIQUE (column1, column2, ...)</code>: especifica el nombre de la columna de la tabla a indexar.</li><li><code>ASC</code>y<code>DESC</code>(Opcional): se utiliza para especificar el orden de clasificación del índice. De forma predeterminada, el índice se ordena en orden ascendente (ASC).</li></ul>
 <p>El siguiente es un ejemplo de creación de un índice único al crear la tabla: supongamos que queremos crear una tabla llamada employees, que contenga las columnas id, name y email, y esperamos que los valores de la columna email sean únicos, por lo tanto, queremos definir un índice único al crear la tabla.</p>
 <pre>CREATE TABLE employees (
   id INT PRIMARY KEY,
@@ -558,11 +558,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debes <a href=";.html" class="runoob-pop">Iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debes <a class="runoob-pop" href=";.html">Iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -760,7 +760,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -862,7 +862,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Vue3 自定义指令 除了默认设置的核心指令( v-model 和 v-show ), Vue 也允许注册自定义指令。 下面我们注册一个全局指令 v-focus, 该指令的功能是在页面加载时，元素获得焦点：   实例  [mycode3 type='html']      页面载入时，input 元素自动获取焦点：         const app = Vue.createApp({}) // 注册一个全局自定义指.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -335,11 +335,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">v-focus</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">const app = Vue.createApp({})
-// 注册一个全局自定义指令 `v-focus`
+// Registrar una directiva personalizada global `v-focus`
 app.directive('focus', {
-  // 当被绑定的元素挂载到 DOM 中时……
+  // Cuando el elemento vinculado se monta en el DOM...
   mounted(el) {
-    // 聚焦元素
+    // Enfocar el elemento
     el.focus()
   }
 })
@@ -363,7 +363,7 @@ app.mount('#app')</span><span class="hl-brackets">&lt;/</span><span class="hl-re
    },
    directives: {
       focus: {
-         // 指令的定义
+         // Definición de la directiva
          mounted(el) {
             el.focus()
          }
@@ -428,7 +428,7 @@ Vue.createApp(app).mount('#app')</span></div>
 <p><span class="marked">el</span>El elemento al que está vinculada la directiva. Esto se puede usar para manipular directamente el DOM.</p>
 <p><strong>binding</strong></p>
 <p>binding es un objeto que contiene las siguientes propiedades:</p>
-<ul><li><code>instance</code>: La instancia del componente que usa la directiva.</li> <li><code>value</code>: El valor pasado a la directiva. Por ejemplo, en<code>v-my-directive="1 + 1"</code>en ..., el valor es<code>2</code>。</li> <li><code>oldValue</code>: El valor anterior, solo disponible en<code>beforeUpdate</code> 和 <code>updated</code>está disponible en .... Está disponible tanto si el valor ha cambiado como si no.</li> <li><code>arg</code>: El argumento pasado a la directiva (si lo hay). Por ejemplo, en<code>v-my-directive:foo</code>en ..., arg es<code>"foo"</code>。</li> <li><code>modifiers</code>: El objeto que contiene los modificadores (si los hay). Por ejemplo, en<code>v-my-directive.foo.bar</code>en ..., el objeto de modificadores es<code>{foo: true，bar: true}</code>。</li> <li><code>dir</code>: Un objeto que se pasa como argumento al registrar la directiva. Por ejemplo, en la siguiente directiva:</li></ul>
+<ul><li><code>instance</code>: La instancia del componente que usa la directiva.</li> <li><code>value</code>: El valor pasado a la directiva. Por ejemplo, en<code>v-my-directive="1 + 1"</code>en ..., el valor es<code>2</code>。</li> <li><code>oldValue</code>: El valor anterior, solo disponible en<code>beforeUpdate</code>y<code>updated</code>está disponible en .... Está disponible tanto si el valor ha cambiado como si no.</li> <li><code>arg</code>: El argumento pasado a la directiva (si lo hay). Por ejemplo, en<code>v-my-directive:foo</code>en ..., arg es<code>"foo"</code>。</li> <li><code>modifiers</code>: El objeto que contiene los modificadores (si los hay). Por ejemplo, en<code>v-my-directive.foo.bar</code>en ..., el objeto de modificadores es<code>{foo: true，bar: true}</code>。</li> <li><code>dir</code>: Un objeto que se pasa como argumento al registrar la directiva. Por ejemplo, en la siguiente directiva:</li></ul>
 <pre>app.directive('focus', {
   mounted(el) {
     el.focus()
@@ -448,12 +448,12 @@ prevNode</strong></p><p>El nodo virtual anterior, solo disponible en los ganchos
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">app</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">v-runoob</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{ name: '菜鸟教程', url: 'www.runoob.com' }</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">v-runoob</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{ name: 'Tutorial para novatos', url: 'www.runoob.com' }</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 ​
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">const app = Vue.createApp({})
 app.directive('runoob', (el, binding, vnode) =&gt; {
-console.log(binding.value.name) // =&gt; "菜鸟教程"
+console.log(binding.value.name) // =&gt; "Tutorial para novatos"
 console.log(binding.value.url) // =&gt; "www.runoob.com"
 var s = JSON.stringify
 el.innerHTML = s(binding.value)
@@ -475,10 +475,10 @@ Vue.directive('runoob', function (el, binding) {
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">app</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">v-runoob</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{ color: 'green', text: '菜鸟教程!' }</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">v-runoob</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{ color: 'green', text: '¡Tutorial para novatos!' }</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">Vue.directive('runoob', function (el, binding) {
-    // 简写方式设置文本及背景颜色
+    // Forma abreviada de establecer el texto y el color de fondo
     el.innerHTML = binding.value.text
     el.style.backgroundColor = binding.value.color
 })
@@ -608,11 +608,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para contribuir con un artículo, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para contribuir con un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -632,7 +632,7 @@ Lista de notas
 <ul id="comment-author-info">
 <li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
 <li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
-<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -810,7 +810,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -912,7 +912,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

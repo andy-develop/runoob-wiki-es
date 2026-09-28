@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="朴素贝叶斯  想象一下，你正在网上书店浏览，系统根据你之前购买过《三体》和《流浪地球》，向你推荐了《球状闪电》。这个猜你喜欢的功能背后，很可能就用到了我们今天要讲的 朴素贝叶斯（Naive Bayes） 算法。 朴素贝叶斯是一种基于 贝叶斯定理 的简单而高效的 概率分类算法。 朴素贝叶斯的核心思想是：通过已知的某些特征（比如你买过的书），来计算某个事件（比如你会喜欢另一本书）发生的概率，并选择概率最高的类别作为预测结果。 它的朴素（Na.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -390,18 +390,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>IV. Práctica: implementación de clasificación de spam en Python</h2>
 <p>Usemos un ejemplo simplificado para implementar manualmente un clasificador de spam basado en Naive Bayes multinomial.</p>
 <h3>1. Escenario y preparación de datos</h3>
-<p>Tenemos algunos correos de texto ya etiquetados (<code>spam</code> 或 <code>ham</code>correos normales).</p>
+<p>Tenemos algunos correos de texto ya etiquetados (<code>spam</code>o<code>ham</code>correos normales).</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #a50"># 示例训练数据：每行是一条邮件内容，后面是标签（'spam' 或 'ham'）</span><br/>
+<span style="color: #a50"># Ejemplo de datos de entrenamiento: cada línea es un contenido de correo electrónico, seguido de la etiqueta ('spam' o 'ham')</span><br/>
 train_data <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"免费获取 iPhone 大奖！点击链接"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"老板，下午三点开会，请准时参加"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"恭喜您中奖了！立即领取您的奖金"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"项目报告已发到您的邮箱，请查收"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"限时特价，全场五折，仅限今天"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"周末聚餐定在晚上七点，老地方"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">¡Obtén un iPhone gratis! Haz clic en el enlace</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">Jefe, la reunión es a las 3 de la tarde, por favor asista puntualmente.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">¡Felicidades, ha ganado un premio! Reclame su premio inmediatamente.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">El informe del proyecto se ha enviado a su correo electrónico, por favor revíselo.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">Oferta por tiempo limitado, 50% de descuento en todo, solo por hoy</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">La cena de fin de semana está programada para las siete de la noche, en el lugar de siempre</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Olive;">]</span><br/>
 </div>
 </div>
@@ -409,50 +409,50 @@ train_data <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #a50"># 导入必要的库</span><br/>
+<span style="color: #a50"># Importar las bibliotecas necesarias</span><br/>
 <span style="color: Green;font-weight:bold;">from</span> sklearn.<span style="color: #05a;">feature_extraction</span>.<span style="color: #05a;">text</span> <span style="color: Green;font-weight:bold;">import</span> CountVectorizer<br/>
 <span style="color: Green;font-weight:bold;">from</span> sklearn.<span style="color: #05a;">naive_bayes</span> <span style="color: Green;font-weight:bold;">import</span> MultinomialNB<br/>
 <span style="color: Green;font-weight:bold;">from</span> sklearn.<span style="color: #05a;">pipeline</span> <span style="color: Green;font-weight:bold;">import</span> make_pipeline<br/>
 <span style="color: Green;font-weight:bold;">import</span> numpy <span style="color: Green;font-weight:bold;">as</span> np<br/>
 <br/>
-<span style="color: #a50"># 示例训练数据：每行是一条邮件内容，后面是标签（'spam' 或 'ham'）</span><br/>
+<span style="color: #a50"># Ejemplo de datos de entrenamiento: cada línea es un contenido de correo electrónico, seguido de la etiqueta ('spam' o 'ham')</span><br/>
 train_data <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"免费获取 iPhone 大奖！点击链接"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"老板，下午三点开会，请准时参加"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"恭喜您中奖了！立即领取您的奖金"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"项目报告已发到您的邮箱，请查收"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"限时特价，全场五折，仅限今天"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">(</span><span style="color: #a11;">"周末聚餐定在晚上七点，老地方"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">¡Obtén un iPhone gratis! Haz clic en el enlace</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">Jefe, la reunión es a las 3 de la tarde, por favor asista puntualmente.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">¡Felicidades, ha ganado un premio! Reclame su premio inmediatamente.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">El informe del proyecto se ha enviado a su correo electrónico, por favor revíselo.</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">Oferta por tiempo limitado, 50% de descuento en todo, solo por hoy</span><span style="color: Gray;">,</span> <span style="color: #a11;">"spam"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">(</span><span style="color: #a11;">La cena de fin de semana está programada para las siete de la noche, en el lugar de siempre</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ham"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
-<span style="color: #a50"># 1. 准备数据：将文本和标签分开</span><br/>
-texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>data<span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span> <span style="color: Green;font-weight:bold;">for</span> data <span style="color: Green;font-weight:bold;">in</span> train_data<span style="color: Olive;">]</span>  <span style="color: #a50"># 邮件文本列表</span><br/>
-labels <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>data<span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Olive;">]</span> <span style="color: Green;font-weight:bold;">for</span> data <span style="color: Green;font-weight:bold;">in</span> train_data<span style="color: Olive;">]</span> <span style="color: #a50"># 对应标签列表</span><br/>
+<span style="color: #a50"># 1. Preparar datos: separar el texto y las etiquetas</span><br/>
+texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>data<span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span> <span style="color: Green;font-weight:bold;">for</span> data <span style="color: Green;font-weight:bold;">in</span> train_data<span style="color: Olive;">]</span>  <span style="color: #a50"># Lista de textos de correo electrónico</span><br/>
+labels <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>data<span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Olive;">]</span> <span style="color: Green;font-weight:bold;">for</span> data <span style="color: Green;font-weight:bold;">in</span> train_data<span style="color: Olive;">]</span> <span style="color: #a50"># Lista de etiquetas correspondientes</span><br/>
 <br/>
-<span style="color: #a50"># 2. 创建并训练模型管道</span><br/>
+<span style="color: #a50"># 2. Crear y entrenar el pipeline del modelo</span><br/>
 model <span style="color: Gray;">=</span> make_pipeline<span style="color: Olive;">(</span>CountVectorizer<span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> MultinomialNB<span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 model.<span style="color: #05a;">fit</span><span style="color: Olive;">(</span>texts<span style="color: Gray;">,</span> labels<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 3. 准备新邮件进行预测</span><br/>
+<span style="color: #a50"># 3. Preparar un nuevo correo electrónico para la predicción</span><br/>
 new_emails <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"免费领取优惠券，机会难得！"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 预期为 spam</span><br/>
-    <span style="color: #a11;">"明天上午十点电话会议讨论预算"</span>   <span style="color: #a50"># 预期为 ham</span><br/>
+    <span style="color: #a11;">"¡Consigue cupones gratis, una oportunidad única!"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Se espera que sea spam</span><br/>
+    <span style="color: #a11;">Mañana a las diez de la mañana habrá una conferencia telefónica para discutir el presupuesto</span>   <span style="color: #a50"># Esperado: ham</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
-<span style="color: #a50"># 4. 进行预测</span><br/>
+<span style="color: #a50"># 4. Hacer predicciones</span><br/>
 predictions <span style="color: Gray;">=</span> model.<span style="color: #05a;">predict</span><span style="color: Olive;">(</span>new_emails<span style="color: Olive;">)</span><br/>
-prediction_proba <span style="color: Gray;">=</span> model.<span style="color: #05a;">predict_proba</span><span style="color: Olive;">(</span>new_emails<span style="color: Olive;">)</span> <span style="color: #a50"># 获取预测概率</span><br/>
+prediction_proba <span style="color: Gray;">=</span> model.<span style="color: #05a;">predict_proba</span><span style="color: Olive;">(</span>new_emails<span style="color: Olive;">)</span> <span style="color: #a50"># Obtener las probabilidades de predicción</span><br/>
 <br/>
-<span style="color: #a50"># 5. 输出结果（修复引号问题 + 动态匹配概率标签）</span><br/>
-<span style="color: #a50"># 获取模型的类别顺序（避免硬编码索引）</span><br/>
+<span style="color: #a50"># 5. Resultado de salida (corrección del problema de comillas + etiqueta de probabilidad de coincidencia dinámica)</span><br/>
+<span style="color: #a50"># Obtener el orden de clases del modelo (evitar índices codificados)</span><br/>
 class_names <span style="color: Gray;">=</span> model.<span style="color: #05a;">classes_</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> <span style="color: #05a;">email</span><span style="color: Gray;">,</span> pred<span style="color: Gray;">,</span> proba <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">zip</span><span style="color: Olive;">(</span>new_emails<span style="color: Gray;">,</span> predictions<span style="color: Gray;">,</span> prediction_proba<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a50"># 修复引号嵌套问题：内层改用单引号，或外层用单引号</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">'邮件内容: "{email}"'</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  预测类别: {pred}"</span><span style="color: Olive;">)</span><br/>
-    <span style="color: #a50"># 动态输出每个类别的概率（更健壮）</span><br/>
+    <span style="color: #a50"># Corregir el problema de anidamiento de comillas: usar comillas simples para el nivel interno, o comillas simples para el externo</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Contenido del correo: "{email}"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Clase predicha: {pred}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: #a50"># Salida dinámica de probabilidades para cada categoría (más robusto)</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> cls<span style="color: Gray;">,</span> prob <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">zip</span><span style="color: Olive;">(</span>class_names<span style="color: Gray;">,</span> proba<span style="color: Olive;">)</span>:<br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  属于'{cls}'的概率: {prob:.4f}"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Probabilidad de pertenecer a '{cls}': {prob:.4f}</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"-"</span> * <span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -464,8 +464,8 @@ class_names <span style="color: Gray;">=</span> model.<span style="color: #05a;"
 <li><code>make_pipeline()</code>Concatena automáticamente estos dos pasos: al entrenar, primero transforma y luego clasifica; al predecir, también.</li>
 </ul>
 <p><strong>Entrenamiento del modelo</strong>：<code>model.fit(texts, labels)</code>Es el proceso de entrenamiento central. Aquí el algoritmo calcula:</p><ul>
-<li>Probabilidad previa<code>P(ham)</code> 和 <code>P(spam)</code>。</li>
-<li>Cada palabra en<code>ham</code> 和 <code>spam</code>la probabilidad condicional en la categoría<code>P(单词 | ham)</code> 和 <code>P(单词 | spam)</code>。</li>
+<li>Probabilidad previa<code>P(ham)</code>y<code>P(spam)</code>。</li>
+<li>Cada palabra en<code>ham</code>y<code>spam</code>la probabilidad condicional en la categoría<code>P(单词 | ham)</code>y<code>P(单词 | spam)</code>。</li>
 </ul>
 <p><strong>Predicción y salida</strong>: Para correos nuevos, el modelo primero lo convierte en un vector de características, luego calcula la probabilidad de que pertenezca a cada categoría mediante la fórmula de Bayes y, finalmente, genera la categoría con mayor probabilidad.</p>
 <p>Salida:</p>
@@ -620,11 +620,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas, debes <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas, debes <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -822,7 +822,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -924,7 +924,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

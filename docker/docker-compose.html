@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Docker Compose  Compose 简介 Compose 是用于定义和运行多容器 Docker 应用程序的工具。通过 Compose，您可以使用 YML 文件来配置应用程序需要的所有服务。然后，使用一个命令，就可以从 YML 文件配置中创建并启动所有服务。 如果你还不了解 YML 文件配置，可以先阅读 YAML 入门教程。 Compose 使用的三个步骤：         使用 Dockerfile 定义应用程序的环境。  .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -404,54 +404,34 @@ endpoint_mode: dnsrr
 <p><strong>resources</strong>: Configura los límites de uso de recursos del servidor. Por ejemplo, en el caso anterior, configura el porcentaje de CPU y la ocupación de memoria necesarios para que el clúster redis se ejecute. Evita que el uso excesivo de recursos cause anomalías.</p>
 <p><strong>restart_policy</strong>: Configura cómo reiniciar el contenedor cuando este sale.</p>
 <ul><li>condition: puede ser none, on-failure o any (valor predeterminado: any).</li><li>delay: establece cuánto tiempo después se reinicia (valor predeterminado: 0).</li><li>max_attempts: número de intentos de reiniciar el contenedor; si se supera, ya no se intenta (valor predeterminado: reintentar siempre).</li><li>window: establece el tiempo de espera para reiniciar el contenedor (valor predeterminado: 0).</li></ul>
-<p><strong>rollback_config</strong>：配置在更新失败的情况下应如何回滚服务。
-→ ": Configura cómo debe realizarse el rollback del servicio en caso de que la actualización falle."</p>
-<ul><li>parallelism：一次要回滚的容器数。如果设置为0，则所有容器将同时回滚。
-→ "parallelism: número de contenedores a revertir a la vez. Si se establece en 0, todos los contenedores se revertirán simultáneamente."</li><li>delay：每个容器组回滚之间等待的时间（默认为0s）。
-→ "delay: tiempo de espera entre cada grupo de contenedores durante el rollback (por defecto 0s)."</li><li>failure_action：如果回滚失败，该怎么办。其中一个 continue 或者 pause（默认pause）。
-→ "failure_action: qué hacer si falla el rollback. Uno de continue o pause (por defecto pause)."</li><li>monitor：每个容器更新后，持续观察是否失败了的时间 (ns|us|ms|s|m|h)（默认为0s）。
-→ "monitor: tiempo durante el cual se observa continuamente si hay fallos después de cada actualización de contenedor (ns|us|ms|s|m|h) (por defecto 0s)."</li><li>max_failure_ratio：在回滚期间可以容忍的故障率（默认为0）。
-→ "max_failure_ratio: proporción de fallos tolerable durante el rollback (por defecto 0)."</li><li>order：回滚期间的操作顺序。其中一个 stop-first（串行回滚），或者 start-first（并行回滚）（默认 stop-first ）。
-→ "order: orden de operaciones durante el rollback. Uno de stop-first (rollback en serie) o start-first (rollback en paralelo) (por defecto stop-first)."</li></ul>
-<p><strong>update_config</strong>：配置应如何更新服务，对于配置滚动更新很有用。
-→ ": Configura cómo debe actualizarse el servicio, útil para actualizaciones progresivas (rolling updates)."</p>
-<ul><li>parallelism：一次更新的容器数。
-→ "parallelism: número de contenedores a actualizar a la vez."</li><li>delay：在更新一组容器之间等待的时间。
-→ "delay: tiempo de espera entre la actualización de un grupo de contenedores."</li><li>failure_action：如果更新失败，该怎么办。其中一个 continue，rollback 或者pause （默认：pause）。
-→ "failure_action: qué hacer si falla la actualización. Uno de continue, rollback o pause (por defecto: pause)."</li><li>monitor：每个容器更新后，持续观察是否失败了的时间 (ns|us|ms|s|m|h)（默认为0s）。
-→ "monitor: tiempo durante el cual se observa continuamente si hay fallos después de cada actualización de contenedor (ns|us|ms|s|m|h) (por defecto 0s)."</li><li>max_failure_ratio：在更新过程中可以容忍的故障率。
-→ "max_failure_ratio: proporción de fallos tolerable durante el proceso de actualización."</li><li>order：回滚期间的操作顺序。其中一个 stop-first（串行回滚），或者 start-first（并行回滚）（默认stop-first）。
-→ "order: orden de operaciones durante el rollback. Uno de stop-first (rollback en serie) o start-first (rollback en paralelo) (por defecto stop-first)."</li></ul>
-<p><strong>注</strong>：仅支持 V3.4 及更高版本。
-→ ": Solo compatible con V3.4 y versiones posteriores."</p>
+<p><strong>rollback_config</strong>: Configura cómo debe realizarse el rollback del servicio en caso de que la actualización falle.</p>
+<ul><li>parallelism: número de contenedores a revertir a la vez. Si se establece en 0, todos los contenedores se revertirán simultáneamente.</li><li>delay: tiempo de espera entre cada grupo de contenedores durante el rollback (por defecto 0s).</li><li>failure_action: qué hacer si falla el rollback. Uno de continue o pause (por defecto pause).</li><li>monitor: tiempo durante el cual se observa continuamente si hay fallos después de cada actualización de contenedor (ns|us|ms|s|m|h) (por defecto 0s).</li><li>max_failure_ratio: proporción de fallos tolerable durante el rollback (por defecto 0).</li><li>order: orden de operaciones durante el rollback. Uno de stop-first (rollback en serie) o start-first (rollback en paralelo) (por defecto stop-first).</li></ul>
+<p><strong>update_config</strong>: Configura cómo debe actualizarse el servicio, útil para actualizaciones progresivas (rolling updates).</p>
+<ul><li>parallelism: número de contenedores a actualizar a la vez.</li><li>delay: tiempo de espera entre la actualización de un grupo de contenedores.</li><li>failure_action: qué hacer si falla la actualización. Uno de continue, rollback o pause (por defecto: pause).</li><li>monitor: tiempo durante el cual se observa continuamente si hay fallos después de cada actualización de contenedor (ns|us|ms|s|m|h) (por defecto 0s).</li><li>max_failure_ratio: proporción de fallos tolerable durante el proceso de actualización.</li><li>order: orden de operaciones durante el rollback. Uno de stop-first (rollback en serie) o start-first (rollback en paralelo) (por defecto stop-first).</li></ul>
+<p><strong>Nota.</strong>: Solo compatible con V3.4 y versiones posteriores.</p>
 <h3>devices</h3>
-<p>指定设备映射列表。
-→ "Especifica la lista de asignación de dispositivos."</p>
+<p>Especifica la lista de asignación de dispositivos.</p>
 <pre>devices:
   - "/dev/ttyUSB0:/dev/ttyUSB0"
 </pre>
 <h3>dns</h3>
-<p>自定义 DNS 服务器，可以是单个值或列表的多个值。
-→ "Servidores DNS personalizados, pueden ser un único valor o una lista de varios valores."</p>
+<p>Servidores DNS personalizados, pueden ser un único valor o una lista de varios valores.</p>
 <pre>dns: 8.8.8.8
 
 dns:
   - 8.8.8.8
   - 9.9.9.9</pre>
 <h3>dns_search</h3>
-<p>自定义 DNS 搜索域。可以是单个值或列表。
-→ "Dominios de búsqueda DNS personalizados. Pueden ser un único valor o una lista."</p>
+<p>Dominios de búsqueda DNS personalizados. Pueden ser un único valor o una lista.</p>
 <pre>dns_search: example.com
 
 dns_search:
   - dc1.example.com
   - dc2.example.com</pre>
 <h3>entrypoint</h3>
-<p>覆盖容器默认的 entrypoint。
-→ "Sobrescribe el entrypoint predeterminado del contenedor."</p>
+<p>Sobrescribe el entrypoint predeterminado del contenedor.</p>
 <pre>entrypoint: /code/entrypoint.sh</pre>
-<p>也可以是以下格式：
-→ "También puede tener el siguiente formato:"</p>
+<p>También puede tener el siguiente formato:</p>
 <pre>entrypoint:
     - php
     - -d
@@ -460,42 +440,34 @@ dns_search:
     - memory_limit=-1
     - vendor/bin/phpunit</pre>
 <h3>env_file</h3>
-<p>从文件添加环境变量。可以是单个值或列表的多个值。
-→ "Añadir variables de entorno desde un archivo. Puede ser un único valor o una lista de varios valores."</p>
+<p>Añadir variables de entorno desde un archivo. Puede ser un único valor o una lista de varios valores.</p>
 <pre>env_file: .env</pre>
-<p>也可以是列表格式：
-→ "También puede estar en formato de lista:"</p>
+<p>También puede estar en formato de lista:</p>
 <pre>env_file:
   - ./common.env
   - ./apps/web.env
   - /opt/secrets.env</pre>
 <h3>environment</h3>
-<p>添加环境变量。您可以使用数组或字典、任何布尔值，布尔值需要用引号引起来，以确保 YML 解析器不会将其转换为 True 或 False。
-→ "Añadir variables de entorno. Puede usar arrays o diccionarios; cualquier valor booleano debe ir entre comillas para asegurar que el analizador YML no lo convierta en True o False."</p>
+<p>Añadir variables de entorno. Puede usar arrays o diccionarios; cualquier valor booleano debe ir entre comillas para asegurar que el analizador YML no lo convierta en True o False.</p>
 <pre>environment:
   RACK_ENV: development
   SHOW: 'true'</pre>
 <h3>expose</h3>
-<p>暴露端口，但不映射到宿主机，只被连接的服务访问。
-→ "Expone puertos, pero no los mapea al host; solo son accesibles por los servicios conectados."</p>
-<p>仅可以指定内部端口为参数：
-→ "Solo se puede especificar el puerto interno como parámetro:"</p>
+<p>Expone puertos, pero no los mapea al host; solo son accesibles por los servicios conectados.</p>
+<p>Solo se puede especificar el puerto interno como parámetro:</p>
 <pre>expose:
  - "3000"
  - "8000"</pre>
 <h3>extra_hosts</h3>
-<p>添加主机名映射。类似 docker client --add-host。
-→ "Añadir asignaciones de nombre de host. Similar a docker client --add-host."</p>
+<p>Añadir asignaciones de nombre de host. Similar a docker client --add-host.</p>
 <pre>extra_hosts:
  - "somehost:162.242.195.82"
  - "otherhost:50.31.209.229"</pre>
-<p>以上会在此服务的内部容器中 /etc/hosts 创建一个具有 ip 地址和主机名的映射关系：
-→ "Lo anterior creará una asignación con dirección IP y nombre de host en /etc/hosts dentro del contenedor de este servicio:"</p>
+<p>Lo anterior creará una asignación con dirección IP y nombre de host en /etc/hosts dentro del contenedor de este servicio:</p>
 <pre>162.242.195.82  somehost
 50.31.209.229   otherhost</pre>
 <h3>healthcheck</h3>
-<p>用于检测 docker 服务是否健康运行。
-→ "Se utiliza para detectar si el servicio de Docker se está ejecutando de forma saludable."</p>
+<p>Se utiliza para detectar si el servicio de Docker se está ejecutando de forma saludable.</p>
 <pre>healthcheck:
   test: ["CMD", "curl", "-f", "http://localhost"] # 设置检测程序
   interval: 1m30s # 设置检测间隔
@@ -503,47 +475,39 @@ dns_search:
   retries: 3 # 设置重试次数
   start_period: 40s # 启动后，多少秒开始启动检测程序</pre>
 <h3>image</h3>
-<p>指定容器运行的镜像。以下格式都可以：
-→ "Especifica la imagen que ejecuta el contenedor. Los siguientes formatos son válidos:"</p>
+<p>Especifica la imagen que ejecuta el contenedor. Los siguientes formatos son válidos:</p>
 <pre>image: redis
 image: ubuntu:14.04
 image: tutum/influxdb
 image: example-registry.com:4000/postgresql
 image: a4bc65fd # 镜像id</pre>
 <h3>logging</h3>
-<p>服务的日志记录配置。
-→ "Configuración del registro de logs del servicio."</p>
-<p>driver：指定服务容器的日志记录驱动程序，默认值为json-file。有以下三个选项
-→ "driver: especifica el controlador de registro para los contenedores del servicio, el valor predeterminado es json-file. Hay las siguientes tres opciones:"</p>
+<p>Configuración del registro de logs del servicio.</p>
+<p>driver: especifica el controlador de registro para los contenedores del servicio, el valor predeterminado es json-file. Hay las siguientes tres opciones:</p>
 <pre>driver: "json-file"
 driver: "syslog"
 driver: "none"</pre>
-<p>仅在 json-file 驱动程序下，可以使用以下参数，限制日志得数量和大小。
-→ "Solo con el controlador json-file se pueden usar los siguientes parámetros para limitar la cantidad y el tamaño de los logs."</p>
+<p>Solo con el controlador json-file se pueden usar los siguientes parámetros para limitar la cantidad y el tamaño de los logs.</p>
 <pre>logging:
   driver: json-file
   options:
     max-size: "200k" # 单个文件大小为200k
     max-file: "10" # 最多10个文件</pre>
-<p>当达到文件限制上限，会自动删除旧的文件。
-→ "Cuando se alcanza el límite máximo de archivos, los archivos antiguos se eliminan automáticamente."</p>
-<p>syslog 驱动程序下，可以使用 syslog-address 指定日志接收地址。
-→ "Con el controlador syslog, se puede usar syslog-address para especificar la dirección de recepción de logs."</p>
+<p>Cuando se alcanza el límite máximo de archivos, los archivos antiguos se eliminan automáticamente.</p>
+<p>Con el controlador syslog, se puede usar syslog-address para especificar la dirección de recepción de logs.</p>
 <pre>logging:
   driver: syslog
   options:
     syslog-address: "tcp://192.168.0.42:123"</pre>
 <h3>network_mode</h3>
-<p>设置网络模式。
-→ "Establece el modo de red."</p>
+<p>Establece el modo de red.</p>
 <pre>network_mode: "bridge"
 network_mode: "host"
 network_mode: "none"
 network_mode: "service:[service name]"
 network_mode: "container:[container name/id]"</pre>
 <p>networks</p>
-<p>配置容器连接的网络，引用顶级 networks 下的条目 。
-→ "Configura las redes a las que se conecta el contenedor, haciendo referencia a las entradas bajo networks de nivel superior."</p>
+<p>Configura las redes a las que se conecta el contenedor, haciendo referencia a las entradas bajo networks de nivel superior.</p>
 <pre>services:
   some-service:
     networks:
@@ -560,23 +524,16 @@ networks:
   other-network:
     # Use a custom driver which takes special options
     driver: custom-driver-2</pre>
-<p><strong>aliases</strong>：同一网络上的其他容器可以使用服务名称或此别名来连接到对应容器的服务。
-→ ": Otros contenedores en la misma red pueden usar el nombre del servicio o este alias para conectarse al servicio del contenedor correspondiente."</p>
+<p><strong>aliases</strong>: Otros contenedores en la misma red pueden usar el nombre del servicio o este alias para conectarse al servicio del contenedor correspondiente.</p>
 <h3>restart</h3>
-<ul><li>no：是默认的重启策略，在任何情况下都不会重启容器。
-→ "no: es la política de reinicio predeterminada, no reinicia el contenedor en ningún caso."</li><li>always：容器总是重新启动。
-→ "always: el contenedor se reinicia siempre."</li><li>on-failure：在容器非正常退出时（退出状态非0），才会重启容器。
-→ "on-failure: solo reinicia el contenedor cuando este sale de forma anormal (código de salida distinto de 0)."</li><li>unless-stopped：在容器退出时总是重启容器，但是不考虑在Docker守护进程启动时就已经停止了的容器
-→ "unless-stopped: reinicia siempre el contenedor cuando sale, pero no tiene en cuenta los contenedores que ya estaban detenidos cuando se inició el demonio de Docker."</li></ul>
+<ul><li>no: es la política de reinicio predeterminada, no reinicia el contenedor en ningún caso.</li><li>always: el contenedor se reinicia siempre.</li><li>on-failure: solo reinicia el contenedor cuando este sale de forma anormal (código de salida distinto de 0).</li><li>unless-stopped: reinicia siempre el contenedor cuando sale, pero no tiene en cuenta los contenedores que ya estaban detenidos cuando se inició el demonio de Docker.</li></ul>
 <pre>restart: "no"
 restart: always
 restart: on-failure
 restart: unless-stopped</pre>
-<p>注：swarm 集群模式，请改用 restart_policy。
-→ "Nota: en modo de clúster swarm, use restart_policy en su lugar."</p>
+<p>Nota: en modo de clúster swarm, use restart_policy en su lugar.</p>
 <h3>secrets</h3>
-<p>存储敏感数据，例如密码：
-→ "Almacenar datos sensibles, como contraseñas:"</p>
+<p>Almacenar datos sensibles, como contraseñas:</p>
 <pre>version: "3.1"
 services:
 
@@ -591,29 +548,23 @@ secrets:
   my_secret:
     file: ./my_secret.txt</pre>
 <h3>security_opt</h3>
-<p>修改容器默认的 schema 标签。
-→ "Modifica la etiqueta de esquema predeterminada del contenedor."</p>
+<p>Modifica la etiqueta de esquema predeterminada del contenedor.</p>
 <pre>security-opt：
   - label:user:USER   # 设置容器的用户标签
   - label:role:ROLE   # 设置容器的角色标签
   - label:type:TYPE   # 设置容器的安全策略标签
   - label:level:LEVEL  # 设置容器的安全等级标签</pre>
 <h3>stop_grace_period</h3>
-<p>指定在容器无法处理 SIGTERM (或者任何 stop_signal 的信号)，等待多久后发送 SIGKILL 信号关闭容器。
-→ "Especifica cuánto tiempo esperar antes de enviar la señal SIGKILL para cerrar el contenedor si este no puede manejar SIGTERM (o cualquier señal de stop_signal)."</p>
+<p>Especifica cuánto tiempo esperar antes de enviar la señal SIGKILL para cerrar el contenedor si este no puede manejar SIGTERM (o cualquier señal de stop_signal).</p>
 <pre>stop_grace_period: 1s # 等待 1 秒
 stop_grace_period: 1m30s # 等待 1 分 30 秒 </pre>
-<p>默认的等待时间是 10 秒。
-→ "El tiempo de espera predeterminado es de 10 segundos."</p>
+<p>El tiempo de espera predeterminado es de 10 segundos.</p>
 <h3>stop_signal</h3>
-<p>设置停止容器的替代信号。默认情况下使用 SIGTERM 。
-→ "Establece una señal alternativa para detener el contenedor. Por defecto se usa SIGTERM."</p>
-<p>以下示例，使用 SIGUSR1 替代信号 SIGTERM 来停止容器。
-→ "El siguiente ejemplo usa SIGUSR1 en lugar de SIGTERM para detener el contenedor."</p>
+<p>Establece una señal alternativa para detener el contenedor. Por defecto se usa SIGTERM.</p>
+<p>El siguiente ejemplo usa SIGUSR1 en lugar de SIGTERM para detener el contenedor.</p>
 <pre>stop_signal: SIGUSR1</pre>
 <h3>sysctls</h3>
-<p>设置容器中的内核参数，可以使用数组或字典格式。
-→ "Establece parámetros del kernel en el contenedor; se pueden usar formatos de array o diccionario."</p>
+<p>Establece parámetros del kernel en el contenedor; se pueden usar formatos de array o diccionario.</p>
 <pre>sysctls:
   net.core.somaxconn: 1024
   net.ipv4.tcp_syncookies: 0
@@ -622,16 +573,14 @@ sysctls:
   - net.core.somaxconn=1024
   - net.ipv4.tcp_syncookies=0</pre>
 <h3>tmpfs</h3>
-<p>在容器内安装一个临时文件系统。可以是单个值或列表的多个值。
-→ "Monta un sistema de archivos temporal dentro del contenedor. Puede ser un único valor o una lista de varios valores."</p>
+<p>Monta un sistema de archivos temporal dentro del contenedor. Puede ser un único valor o una lista de varios valores.</p>
 <pre>tmpfs: /run
 
 tmpfs:
   - /run
   - /tmp</pre>
 <h3>ulimits</h3>
-<p>覆盖容器默认的 ulimit。
-→ "Sobrescribe el ulimit predeterminado del contenedor."</p>
+<p>Sobrescribe el ulimit predeterminado del contenedor.</p>
 <pre>ulimits:
   nproc: 65535
   nofile:
@@ -645,25 +594,17 @@ services:
     image: postgres:latest
     volumes:
       - "/localhost/postgres.sock:/var/run/postgres/postgres.sock"
-      - "/localhost/data:/var/lib/postgresql/data"</pre>
-其他扩展
-→ "Otras extensiones."
-</div>
+      - "/localhost/data:/var/lib/postgresql/data"</pre>Otras extensiones.</div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
 <div class="archive-list-item">
-<div class="post-intro" id="ai-info" style="width: 100%;">AI 思考中...
-→ "AI pensando..."</div>
+<div class="post-intro" id="ai-info" style="width: 100%;">AI pensando...</div>
 </div>
 </div>
 <div class="previous-next-links">
 <div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../docker/docker-dockerfile.html" rel="prev"> Docker Dockerfile</a> </div>
 <div class="next-design-link"><a href="../docker/docker-machine.html" rel="next"> Docker Machine</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
-</div>
-
-笔记列表
-→ "Lista de notas."
-<style>
+</div>Lista de notas.<style>
 .wrapper {
   /*text-transform: uppercase; */
   background: #ececec;
@@ -767,22 +708,21 @@ services:
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">文章投稿，可点击这里</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href=";.html" class="runoob-pop">登录</a>！</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-→ "<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir una nota, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>"
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i>Obligatorio antes de compartir notas<a class="runoob-pop" href=";.html">Iniciar sesión</a>！</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+→ "<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir una nota, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>"
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">取消
-→ "Cancelar"</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -790,21 +730,14 @@ services:
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="22041"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记
-→ "Compartir nota"</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir nota</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称
-→ "Apodo"</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)
-→ "Apodo (obligatorio)"</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱
-→ "Correo electrónico"</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)
-→ "Correo electrónico (obligatorio)"</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址
-→ "Dirección de referencia"</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址
-→ "Dirección de referencia"</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -982,7 +915,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1073,7 +1006,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

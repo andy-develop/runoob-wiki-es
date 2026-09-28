@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="C 库宏 - va_start()   C 标准库 - &amp;lt;stdarg.h&amp;gt;  描述 va_start 宏是 C 标准库 &amp;lt;stdarg.h&amp;gt; 头文件中的一个宏，用于初始化一个 va_list 变量，以便在可变参数函数中访问可变数量的参数。 C 库宏 void va_start(va_list ap, last_arg) 初始化 ap 变量，它与 va_arg 和 va_end 宏.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -339,8 +339,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><a href="c-standard-library-stdarg-h.html"><img alt="C 标准库 - &lt;stdarg.h&gt;" class="navup" decoding="async" src="../images/up.gif"/>Biblioteca estándar de C - &lt;stdarg.h&gt;</a></p>
 <h3>Descripción</h3>
 <p><code>va_start</code>La macro es de la biblioteca estándar de C<code>&lt;stdarg.h&gt;</code>una macro en el archivo de cabecera, utilizada para inicializar un<code>va_list</code>variable, para acceder a un número variable de argumentos en una función de argumentos variables.</p>
-<p>Macro de la biblioteca C<b>void va_start(va_list ap, last_arg)</b>inicializa<b>ap</b>la variable, y<b>va_arg</b> 和 <b>va_end</b>se usa junto con la macro.<b>last_arg</b>Es el último parámetro fijo conocido pasado a la función, es decir, el parámetro antes de los puntos suspensivos.</p>
-<p>Esta macro debe ser llamada antes de<b>va_arg</b> 和 <b>va_end</b>usarse.</p>
+<p>Macro de la biblioteca C<b>void va_start(va_list ap, last_arg)</b>inicializa<b>ap</b>la variable, y<b>va_arg</b>y<b>va_end</b>se usa junto con la macro.<b>last_arg</b>Es el último parámetro fijo conocido pasado a la función, es decir, el parámetro antes de los puntos suspensivos.</p>
+<p>Esta macro debe ser llamada antes de<b>va_arg</b>y<b>va_end</b>usarse.</p>
 <h3>Declaración</h3>
 <p>La siguiente es la declaración de la macro va_start().</p>
 <pre>
@@ -390,7 +390,7 @@ Sum of 4, 5, 6, 7: 22
 </pre><h3>Análisis</h3>
 <ul><li><code>va_list args;</code>variable de tipo<code>va_list</code>, utilizada para almacenar la información de la lista de argumentos variables.<code>args</code>: Inicialice</li><li><code>va_start(args, count);</code>para acceder a los<code>args</code>argumentos variables que comienzan después.<code>count</code>: Utilice</li><li><code>total += va_arg(args, int);</code>la macro para obtener el siguiente argumento variable, aquí se asume que todos son<code>va_arg</code>de tipo, y se acumula a<code>int</code>la variable.<code>total</code>: Limpie</li><li><code>va_end(args);</code>, para liberar recursos y evitar comportamientos indefinidos.<code>args</code>Precauciones</li></ul>
 <h3>Notas</h3>
-<ul><li><code>va_start</code>conjuntamente.<code>va_list</code>、<code>va_arg</code> 和 <code>va_end</code>Al llamar a</li><li>después, debe llamar a<code>va_start</code>para finalizar el procesamiento de los argumentos variables.<code>va_end</code>Antes de llamar a</li><li>debe asegurarse de que la lista de parámetros de la función tenga al menos un parámetro fijo.<code>va_start</code>El parámetro es el último parámetro fijo antes de la lista de argumentos variables, que se utiliza para determinar desde dónde comenzar a procesar los argumentos variables.</li><li><code>last</code>Biblioteca estándar de C - &lt;stdarg.h&gt;</li></ul>
+<ul><li><code>va_start</code>conjuntamente.<code>va_list</code>、<code>va_arg</code>y<code>va_end</code>Al llamar a</li><li>después, debe llamar a<code>va_start</code>para finalizar el procesamiento de los argumentos variables.<code>va_end</code>Antes de llamar a</li><li>debe asegurarse de que la lista de parámetros de la función tenga al menos un parámetro fijo.<code>va_start</code>El parámetro es el último parámetro fijo antes de la lista de argumentos variables, que se utiliza para determinar desde dónde comenzar a procesar los argumentos variables.</li><li><code>last</code>Biblioteca estándar de C - &lt;stdarg.h&gt;</li></ul>
 <p><a href="c-standard-library-stdarg-h.html"><img alt="C 标准库 - &lt;stdarg.h&gt;" class="navup" decoding="async" src="../images/up.gif"/>Otras extensiones</a></p> IA pensando...
 </div>
 </div>
@@ -530,7 +530,7 @@ Cancelar
 <ul id="comment-author-info">
 <li class="form-inline"><label class="hide" for="author">Apodo (obligatorio)</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Correo electrónico</span></li>
 <li class="form-inline"><label class="hide" for="email">Correo electrónico (obligatorio)</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
-<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -708,7 +708,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -810,7 +810,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

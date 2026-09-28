@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Pandas groupby.agg() 函数  Pandas 常用函数  groupby.agg() 是 Pandas 中功能最强大的聚合函数之一，它允许你对分组后的数据同时应用多个不同的聚合函数。 与 sum()、mean() 等单一聚合函数不同，agg() 可以一次性计算多个统计指标，比如同时计算每个分组的总和、平均值、最大值、最小值等。 在数据分析中，经常需要对数据同时进行多种统计分析，agg() 函数可以让这一过程变得简洁高效.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -166,7 +166,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>Pandas groupby.agg() función</h1>
 <p><a href="../pandas/pandas-general-functions.html">Funciones comunes de Pandas</a></p><hr/>
 <p><code>groupby.agg()</code>Es una de las funciones de agregación más potentes de Pandas, que permite aplicar simultáneamente múltiples funciones de agregación diferentes a los datos agrupados.</p>
-<p>与 <code>sum()</code>、<code>mean()</code>A diferencia de las funciones de agregación individuales,<code>agg()</code>puede calcular varios indicadores estadísticos de una sola vez, por ejemplo, calcular simultáneamente la suma, el promedio, el máximo, el mínimo de cada grupo, etc.</p>
+<p>y<code>sum()</code>、<code>mean()</code>A diferencia de las funciones de agregación individuales,<code>agg()</code>puede calcular varios indicadores estadísticos de una sola vez, por ejemplo, calcular simultáneamente la suma, el promedio, el máximo, el mínimo de cada grupo, etc.</p>
 <p>En el análisis de datos, a menudo es necesario realizar múltiples análisis estadísticos sobre los datos al mismo tiempo,<code>agg()</code>la función puede hacer que este proceso sea conciso y eficiente.</p>
 <hr/>
 <h2>Sintaxis básica y parámetros</h2>
@@ -220,7 +220,7 @@ GroupBy.agg(func=None, axis=0, *args, engine=None, engine_kwargs=None, **kwargs)
 </table>
 <h3>Valor de retorno</h3>
 <ul>
-<li><strong>Tipo de retorno</strong>：<code>Series</code> 或 <code>DataFrame</code></li>
+<li><strong>Tipo de retorno</strong>：<code>Series</code>o<code>DataFrame</code></li>
 <li><strong>Descripción</strong>: Devuelve el resultado de la agregación por grupos; la estructura del resultado depende del parámetro func y de la forma de agrupación.</li>
 </ul>
 <hr/>
@@ -233,34 +233,34 @@ GroupBy.agg(func=None, axis=0, *args, engine=None, engine_kwargs=None, **kwargs)
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
-<span style="color: #a50"># 创建销售数据 DataFrame</span><br/>
+<span style="color: #a50"># Crear un DataFrame de datos de ventas</span><br/>
 data <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'地区'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华南'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华南'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'产品'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'销售额'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">1000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1800</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1600</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2100</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'数量'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">10</span><span style="color: Gray;">,</span> <span style="color: Maroon;">20</span><span style="color: Gray;">,</span> <span style="color: Maroon;">15</span><span style="color: Gray;">,</span> <span style="color: Maroon;">18</span><span style="color: Gray;">,</span> <span style="color: Maroon;">22</span><span style="color: Gray;">,</span> <span style="color: Maroon;">16</span><span style="color: Gray;">,</span> <span style="color: Maroon;">12</span><span style="color: Gray;">,</span> <span style="color: Maroon;">21</span><span style="color: Olive;">]</span><br/>
+    <span style="color: #a11;">'Región'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Sur de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Sur de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Producto'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Ventas'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">1000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1800</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1600</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2100</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Cantidad'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">10</span><span style="color: Gray;">,</span> <span style="color: Maroon;">20</span><span style="color: Gray;">,</span> <span style="color: Maroon;">15</span><span style="color: Gray;">,</span> <span style="color: Maroon;">18</span><span style="color: Gray;">,</span> <span style="color: Maroon;">22</span><span style="color: Gray;">,</span> <span style="color: Maroon;">16</span><span style="color: Gray;">,</span> <span style="color: Maroon;">12</span><span style="color: Gray;">,</span> <span style="color: Maroon;">21</span><span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><br/>
 df <span style="color: Gray;">=</span> pd.<span style="color: #05a;">DataFrame</span><span style="color: Olive;">(</span>data<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"原始销售数据："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Datos de ventas originales:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>df<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 按"地区"分组，对"销售额"列同时应用多个聚合函数</span><br/>
-<span style="color: #a50"># 使用字符串列表指定多个聚合函数</span><br/>
-result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'地区'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">'销售额'</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'count'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+<span style="color: #a50"># Agrupar por 'Región' y aplicar múltiples funciones de agregación a la columna 'Ventas'</span><br/>
+<span style="color: #a50"># Usar una lista de cadenas para especificar múltiples funciones de agregación</span><br/>
+result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Región'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">'Ventas'</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'count'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"每个地区销售额的汇总统计："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Estadísticas resumidas de ventas por región:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 同时对"销售额"和"数量"列进行聚合</span><br/>
-result_all <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'地区'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'销售额'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'数量'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">]</span><br/>
+<span style="color: #a50"># Agregar también las columnas "Ventas" y "Cantidad"</span><br/>
+result_all <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Región'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
+    <span style="color: #a11;">'Ventas'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Cantidad'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"各地区销售和数量的综合统计："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Estadísticas integrales de ventas y cantidades por región:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result_all<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -306,42 +306,42 @@ result_all <span style="color: Gray;">=</span> df.<span style="color: #05a;">gro
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <span style="color: Green;font-weight:bold;">import</span> numpy <span style="color: Green;font-weight:bold;">as</span> np<br/>
 <br/>
-<span style="color: #a50"># 创建学生成绩数据</span><br/>
+<span style="color: #a50"># Crear datos de calificaciones de estudiantes</span><br/>
 data <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'班级'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'姓名'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'张三'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'李四'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'王五'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'赵六'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'孙七'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'周八'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'吴九'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'郑十'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'语文'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">92</span><span style="color: Gray;">,</span> <span style="color: Maroon;">78</span><span style="color: Gray;">,</span> <span style="color: Maroon;">88</span><span style="color: Gray;">,</span> <span style="color: Maroon;">95</span><span style="color: Gray;">,</span> <span style="color: Maroon;">82</span><span style="color: Gray;">,</span> <span style="color: Maroon;">90</span><span style="color: Gray;">,</span> <span style="color: Maroon;">87</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'数学'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">90</span><span style="color: Gray;">,</span> <span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">92</span><span style="color: Gray;">,</span> <span style="color: Maroon;">78</span><span style="color: Gray;">,</span> <span style="color: Maroon;">88</span><span style="color: Gray;">,</span> <span style="color: Maroon;">91</span><span style="color: Gray;">,</span> <span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">89</span><span style="color: Olive;">]</span><br/>
+    <span style="color: #a11;">'Clase'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Nombre'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'Zhang San'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Li Si'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Wang Wu'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Zhao Liu'</span><span style="color: Gray;">,</span> <span style="color: #a11;">Sun Qi</span><span style="color: Gray;">,</span> <span style="color: #a11;">Zhou Ba</span><span style="color: Gray;">,</span> <span style="color: #a11;">Wu Jiu</span><span style="color: Gray;">,</span> <span style="color: #a11;">Zheng Shi</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Lengua china</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">92</span><span style="color: Gray;">,</span> <span style="color: Maroon;">78</span><span style="color: Gray;">,</span> <span style="color: Maroon;">88</span><span style="color: Gray;">,</span> <span style="color: Maroon;">95</span><span style="color: Gray;">,</span> <span style="color: Maroon;">82</span><span style="color: Gray;">,</span> <span style="color: Maroon;">90</span><span style="color: Gray;">,</span> <span style="color: Maroon;">87</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Matemáticas</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">90</span><span style="color: Gray;">,</span> <span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">92</span><span style="color: Gray;">,</span> <span style="color: Maroon;">78</span><span style="color: Gray;">,</span> <span style="color: Maroon;">88</span><span style="color: Gray;">,</span> <span style="color: Maroon;">91</span><span style="color: Gray;">,</span> <span style="color: Maroon;">85</span><span style="color: Gray;">,</span> <span style="color: Maroon;">89</span><span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><br/>
 df <span style="color: Gray;">=</span> pd.<span style="color: #05a;">DataFrame</span><span style="color: Olive;">(</span>data<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"学生成绩数据："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Datos de calificaciones de estudiantes:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>df<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 定义自定义聚合函数</span><br/>
+<span style="color: #a50"># Define una función de agregación personalizada</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> range_func<span style="color: Olive;">(</span>x<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""计算最大值与最小值的差（极差）"""</span><br/>
+    <span style="color: #a11;">"""Calcular la diferencia entre el valor máximo y el mínimo (rango)"""</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> x.<span style="color: Teal;">max</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> - x.<span style="color: Teal;">min</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> coefficient_of_variation<span style="color: Olive;">(</span>x<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""计算变异系数（标准差/平均值）"""</span><br/>
+    <span style="color: #a11;">"""Calcular el coeficiente de variación (desviación estándar / media)"""</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> x.<span style="color: #05a;">std</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> / x.<span style="color: #05a;">mean</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">100</span><br/>
 <br/>
-<span style="color: #a50"># 使用自定义函数进行聚合</span><br/>
-<span style="color: #a50"># 可以使用函数名（字符串）或直接传入函数对象</span><br/>
-result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'班级'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'语文'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> range_func<span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 对语文：总和、平均值、极差</span><br/>
-    <span style="color: #a11;">'数学'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> coefficient_of_variation<span style="color: Olive;">]</span>  <span style="color: #a50"># 对数学：总和、平均值、变异系数</span><br/>
+<span style="color: #a50"># Usar una función personalizada para la agregación</span><br/>
+<span style="color: #a50"># Puedes usar el nombre de la función (cadena) o pasar directamente el objeto función</span><br/>
+result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Clase'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
+    <span style="color: #a11;">Lengua china</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> range_func<span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Para Lengua: suma, media y rango</span><br/>
+    <span style="color: #a11;">Matemáticas</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> coefficient_of_variation<span style="color: Olive;">]</span>  <span style="color: #a50"># Matemáticas: suma, promedio, coeficiente de variación</span><br/>
 <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"各班级的自定义统计："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Estadísticas personalizadas de cada clase:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 也可以直接在列表中使用自定义函数</span><br/>
-result2 <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'班级'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">'数学'</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> range_func<span style="color: Gray;">,</span> <span style="color: #a11;">'std'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"各班级数学成绩的统计（包含自定义极差和标准差）："</span><span style="color: Olive;">)</span><br/>
+<span style="color: #a50"># También se pueden usar funciones personalizadas directamente en la lista</span><br/>
+result2 <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Clase'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">Matemáticas</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span> range_func<span style="color: Gray;">,</span> <span style="color: #a11;">'std'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Estadísticas de los puntajes de matemáticas por clase (incluye rango personalizado y desviación estándar):</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result2<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -384,44 +384,44 @@ B    85.50  13.0  6.0
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
-<span style="color: #a50"># 创建员工工资数据</span><br/>
+<span style="color: #a50"># Crear datos de salario de los empleados</span><br/>
 data <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'部门'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'销售'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'销售'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'技术'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'技术'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'行政'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'行政'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'销售'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'技术'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'岗位'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'专员'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'经理'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'专员'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'经理'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'专员'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'经理'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'专员'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'经理'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'工资'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">5000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">8000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">7000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">12000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">4500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">9000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">11000</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'工龄'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5</span><span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Gray;">,</span> <span style="color: Maroon;">8</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">6</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">7</span><span style="color: Olive;">]</span><br/>
+    <span style="color: #a11;">'Departamento'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">Ventas</span><span style="color: Gray;">,</span> <span style="color: #a11;">Ventas</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Tecnología'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Tecnología'</span><span style="color: Gray;">,</span> <span style="color: #a11;">Administración</span><span style="color: Gray;">,</span> <span style="color: #a11;">Administración</span><span style="color: Gray;">,</span> <span style="color: #a11;">Ventas</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Tecnología'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Puesto</span>: <span style="color: Olive;">[</span><span style="color: #a11;">Especialista</span><span style="color: Gray;">,</span> <span style="color: #a11;">Gerente</span><span style="color: Gray;">,</span> <span style="color: #a11;">Especialista</span><span style="color: Gray;">,</span> <span style="color: #a11;">Gerente</span><span style="color: Gray;">,</span> <span style="color: #a11;">Especialista</span><span style="color: Gray;">,</span> <span style="color: #a11;">Gerente</span><span style="color: Gray;">,</span> <span style="color: #a11;">Especialista</span><span style="color: Gray;">,</span> <span style="color: #a11;">Gerente</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Salario'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">5000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">8000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">7000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">12000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">4500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">9000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">11000</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Antigüedad</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5</span><span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Gray;">,</span> <span style="color: Maroon;">8</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">6</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">7</span><span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><br/>
 df <span style="color: Gray;">=</span> pd.<span style="color: #05a;">DataFrame</span><span style="color: Olive;">(</span>data<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"员工工资数据："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Datos de salarios de empleados:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>df<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 使用 lambda 函数进行灵活的自定义计算</span><br/>
-<span style="color: #a50"># 计算每个部门工资的中位数与平均值的差异</span><br/>
-result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'部门'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'工资'</span>: <span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'平均工资'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 给聚合结果起别名</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'最高工资'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'最低工资'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'工资极差'</span><span style="color: Gray;">,</span> <span style="color: Green;font-weight:bold;">lambda</span> x: x.<span style="color: Teal;">max</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> - x.<span style="color: Teal;">min</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
+<span style="color: #a50"># Uso de la función lambda para cálculos personalizados flexibles</span><br/>
+<span style="color: #a50"># Calcular la diferencia entre la mediana y la media de los salarios de cada departamento</span><br/>
+result <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Departamento'</span><span style="color: Olive;">)</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
+    <span style="color: #a11;">'Salario'</span>: <span style="color: Olive;">[</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Salario promedio'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Asignar un alias al resultado de agregación</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Salario máximo'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Salario mínimo'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Rango salarial'</span><span style="color: Gray;">,</span> <span style="color: Green;font-weight:bold;">lambda</span> x: x.<span style="color: Teal;">max</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> - x.<span style="color: Teal;">min</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
     <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'工龄'</span>: <span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'平均工龄'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'最高工龄'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">(</span><span style="color: #a11;">'最低工龄'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Olive;">)</span><br/>
+    <span style="color: #a11;">Antigüedad</span>: <span style="color: Olive;">[</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Antigüedad promedio'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'mean'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Antigüedad máxima'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'max'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">(</span><span style="color: #a11;">'Antigüedad mínima'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'min'</span><span style="color: Olive;">)</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"各部门工资和工龄的综合统计："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Estadísticas integrales de salarios y antigüedad por departamento:</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 使用 agg 的简写形式</span><br/>
-result2 <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'部门'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">'工资'</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><br/>平均<span style="color: Gray;">=</span><span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span><br/>总和<span style="color: Gray;">=</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span><br/>人数<span style="color: Gray;">=</span><span style="color: #a11;">'count'</span><br/>
+<span style="color: #a50"># Usar la forma abreviada de agg</span><br/>
+result2 <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupby</span><span style="color: Olive;">(</span><span style="color: #a11;">'Departamento'</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: #a11;">'Salario'</span><span style="color: Olive;">]</span>.<span style="color: #05a;">agg</span><span style="color: Olive;">(</span><br/>promedio<span style="color: Gray;">=</span><span style="color: #a11;">'mean'</span><span style="color: Gray;">,</span><br/>suma total<span style="color: Gray;">=</span><span style="color: #a11;">'sum'</span><span style="color: Gray;">,</span><br/>número de personas<span style="color: Gray;">=</span><span style="color: #a11;">'count'</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"使用命名参数形式的聚合结果："</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Resultado de la agregación usando parámetros con nombre:"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result2<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -466,11 +466,11 @@ result2 <span style="color: Gray;">=</span> df.<span style="color: #05a;">groupb
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
-<span style="color: #a50"># 创建销售数据</span><br/>
+<span style="color: #a50"># Crear datos de ventas</span><br/>
 data <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
-    <span style="color: #a11;">'地区'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华南'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华南'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华北'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华东'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'华南'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'产品'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">'销售额'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">1000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1800</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1600</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2100</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1700</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Región'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Sur de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Sur de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Norte de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Este de China'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Sur de China'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Producto'</span>: <span style="color: Olive;">[</span><span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'A'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'B'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'C'</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">'Ventas'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">1000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2000</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1500</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1800</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1600</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2100</span><span style="color: Gray;">,</span> <span style="color: Maroon;">1700</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">'Beneficio'</span>: <span style="color: Olive;">[</span><span style="color: Maroon;">200</span><span style="color: Gray;">,</span> <span style="color: Maroon;">400</span><span style="color: Gray;">,</span> <span style="color: Maroon;">300</span><span style="color: Gray;">,</span> <span style="color: Maroon;">360</span><span style="color: Gray;">,</span> <span style="color: Maroon;">440</span><span style="color: Gray;">,</span> <span style="color: Maroon;">320</span><span style="color: Gray;">,</span> <span style="color: Maroon;">240</span><span style="color: Gray;">,</span> <span style="color: Maroon;">420</span><span style="color: Gray;">,</span> <span style="color: Maroon;">340</span><span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">}</span><br/>
 df <span style="color: Gray;">=</span> pd.<span style="color: #05a;">DataFrame</span><span style="color: Olive;">(</span>data<span style="color: Olive;">)</span><br/>
@@ -662,11 +662,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -864,7 +864,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -955,7 +955,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

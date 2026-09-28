@@ -83,11 +83,11 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <div class="header">
 <div class="subTitle">
-<span class="moduleLabelInType">模块</span>  
+<span class="moduleLabelInType">módulo</span>  
      <a href="../../module-summary.html">java.base</a>
 </div>
 <div class="subTitle">
-<span class="packageLabelInType">软件包</span>  
+<span class="packageLabelInType">paquete</span>  
      <a href="package-summary.html">java.util</a>
 </div>
 <h2 class="title" title="Class LinkedList">Class LinkedList&lt;E&gt;</h2>
@@ -117,7 +117,7 @@ loadScripts(document, 'script');</script>
 <li class="blockList">
 <dl>
 <dt>
-<span class="paramLabel">参数类型</span>
+<span class="paramLabel">tipo de parámetro</span>
 </dt>
 <dd>
 <code>E</code>- El tipo de elementos retenidos en esta colección.</dd>
@@ -138,24 +138,24 @@ loadScripts(document, 'script');</script>
 extends <a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;E&gt;
 implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;, <a href="Deque.html" title="interface in java.util">Deque</a>&lt;E&gt;, <a href="../lang/Cloneable.html" title="interface in java.lang">Cloneable</a>, <a href="../io/Serializable.html" title="interface in java.io">Serializable</a></pre>
 <div class="block">
-<span>双链表实现了<code>List</code>和<code>Deque</code>接口。</span>
-<span>实现所有可选列表操作，并允许所有元素（包括<code>null</code> ）。</span>
-<p> <span>对于双向链表，所有操作都可以预期。</span> <span>索引到列表中的操作将从开头或结尾遍历列表，以较接近指定索引为准。</span> </p>
-<p> <span><strong>Tenga en cuenta que esta implementación no está sincronizada.</strong></span> <span>如果多个线程同时访问链表，并且至少有一个线程在结构上修改了列表，则<i>必须</i>在外部进行同步。</span> <span>（结构修改是添加或删除一个或多个元素的任何操作;仅设置元素的值不是结构修改。）这通常通过同步自然封装列表的某个对象来完成。</span> <span>如果不存在此类对象，则应使用<a href="Collections.html#synchronizedList(java.util.List)"><code>Collections.synchronizedList</code></a>方法“包装”该列表。</span> <span>这最好在创建时完成，以防止意外地不同步访问列表：</span> </p>
+<span>La lista doblemente enlazada implementa<code>List</code>y<code>Deque</code>la interfaz.</span>
+<span>Implementa todas las operaciones de lista opcionales y permite todos los elementos (incluyendo<code>null</code> ）。</span>
+<p> <span>Para una lista doblemente enlazada, todas las operaciones pueden esperarse.</span> <span>Las operaciones que indexan en la lista recorrerán la lista desde el principio o desde el final, el que esté más cerca del índice especificado.</span> </p>
+<p> <span><strong>Tenga en cuenta que esta implementación no está sincronizada.</strong></span> <span>Si varios hilos acceden a la lista enlazada simultáneamente, y al menos uno de ellos modifica estructuralmente la lista, entonces<i>debe</i>sincronizarse externamente.</span> <span>(Una modificación estructural es cualquier operación que agregue o elimine uno o más elementos; simplemente establecer el valor de un elemento no es una modificación estructural.) Esto normalmente se logra sincronizando algún objeto que encapsule naturalmente la lista.</span> <span>Si no existe tal objeto, entonces se debe usar<a href="Collections.html#synchronizedList(java.util.List)"><code>Collections.synchronizedList</code></a>el método que “envuelve” la lista.</span> <span>Es mejor hacerlo en el momento de la creación, para evitar el acceso no sincronizado accidental a la lista:</span> </p>
 <pre>  <span>List list = Collections.synchronizedList(new LinkedList(...));</span> </pre>
-<p> <span>此类的<code>iterator</code>和<code>listIterator</code>方法返回的迭代器是<i>快速失败的</i> ：如果在创建迭代器之后的任何时候对列表进行结构修改，除了通过Iterator自己的<code>remove</code>或<code>add</code>方法之外，迭代器将抛出<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> <span>因此，在并发修改的情况下，迭代器快速而干净地失败，而不是在未来的未确定时间冒任意，非确定性行为的风险。</span> </p>
-<p> <span>请注意，迭代器的快速失败行为无法得到保证，因为一般来说，在存在不同步的并发修改时，不可能做出任何硬性保证。</span> <span>失败快速迭代器以尽力而为的方式抛出<code>ConcurrentModificationException</code> 。</span> <span>因此，编写依赖于此异常的程序以确保其正确性是错误的： <i>迭代器的快速失败行为应该仅用于检测错误。</i></span> </p>
-<p> <span>此类是<a href="../../../java.base/java/util/package-summary.html#CollectionsFramework">Java Collections Framework</a>的成员。</span> </p>
+<p> <span>de esta clase<code>iterator</code>y<code>listIterator</code>Los iteradores devueltos por los métodos son<i>de fallo rápido</i>: si en cualquier momento después de la creación del iterador, la lista se modifica estructuralmente, excepto a través de los propios<code>remove</code>o<code>add</code>métodos de Iterator, el iterador lanzará<a href="ConcurrentModificationException.html" title="java.util中的类"><code>ConcurrentModificationException</code></a> 。</span> <span>Por lo tanto, en caso de modificación concurrente, el iterador falla rápida y limpiamente, en lugar de arriesgarse a un comportamiento arbitrario, no determinista, en un momento futuro incierto.</span> </p>
+<p> <span>Tenga en cuenta que el comportamiento de fallo rápido de los iteradores no puede garantizarse, ya que, en general, no es posible hacer ninguna garantía estricta en presencia de modificaciones concurrentes no sincronizadas.</span> <span>Los iteradores de fallo rápido lanzan excepciones de mejor esfuerzo.<code>ConcurrentModificationException</code> 。</span> <span>Por lo tanto, es incorrecto escribir programas que dependan de esta excepción para garantizar su corrección:<i>El comportamiento de fallo rápido de los iteradores debe utilizarse solo para detectar errores.</i></span> </p>
+<p> <span>Esta clase es<a href="../../../java.base/java/util/package-summary.html#CollectionsFramework">Java Collections Framework</a>miembro de.</span> </p>
 </div>
 <dl>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
           1.2 
         </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="List.html" title="java.util中的接口"><code>List</code></a> ， <a href="ArrayList.html" title="java.util中的类"><code>ArrayList</code></a> ， <a href="../../../serialized-form.html#java.util.LinkedList">Serialized Form</a></span>
@@ -184,27 +184,23 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a> <h3>Resumen de constructores</h3>
 <table class="memberSummary">
 <caption>
-<span>构造方法</span>
+<span>Método constructor</span>
 <span class="tabEnd"> </span>
 </caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">构造器</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Constructor</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">LinkedList</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                构造一个空列表。 
-              </div> </td>
+<div class="block">Construye una lista vacía.</div> </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Collection)">LinkedList</a></span>​(<a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</code></th>
 <td class="colLast">
-<div class="block">
-                按照集合的迭代器返回的顺序构造一个包含指定集合元素的列表。 
-              </div> </td>
+<div class="block">Construye una lista que contiene los elementos de la colección especificada, en el orden en que son devueltos por el iterador de la colección.</div> </td>
 </tr>
 </tbody>
 </table> </li>
@@ -217,341 +213,264 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a> <h3>Resumen de métodos</h3>
 <table class="memberSummary">
 <caption>
-<span class="activeTableTab" id="t0"><span>所有方法</span><span class="tabEnd"> </span>
+<span class="activeTableTab" id="t0"><span>Todos los métodos</span><span class="tabEnd"> </span>
 <span class="tableTab" id="t2"><span><a href="javascript:show(2);">Método de instancia</a> </span></span>
 <span class="tableTab" id="t4"><span><a href="javascript:show(8);">Método específico</a></span><span class="tabEnd"> </span></span>
 </span></caption>
 <tbody>
 <tr>
-<th class="colFirst" scope="col">变量和类型</th>
-<th class="colSecond" scope="col">方法</th>
-<th class="colLast" scope="col">描述</th>
+<th class="colFirst" scope="col">Variables y tipos</th>
+<th class="colSecond" scope="col">Método</th>
+<th class="colLast" scope="col">Descripción</th>
 </tr>
 <tr class="altColor" id="i0">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(int,E)">add</a></span>​(int index, <a href="LinkedList.html" title="type parameter in LinkedList">E</a> element)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定元素插入此列表中的指定位置。 
-              </div> </td>
+<div class="block">Inserta el elemento especificado en la posición especificada de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i1">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(E)">add</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的元素追加到此列表的末尾。 
-              </div> </td>
+<div class="block">Agrega el elemento especificado al final de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i2">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addAll(int,java.util.Collection)">addAll</a></span>​(int index, <a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</code></th>
 <td class="colLast">
-<div class="block">
-                从指定位置开始，将指定集合中的所有元素插入此列表。 
-              </div> </td>
+<div class="block">Inserta todos los elementos de la colección especificada en esta lista, comenzando en la posición especificada.</div> </td>
 </tr>
 <tr class="rowColor" id="i3">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addAll(java.util.Collection)">addAll</a></span>​(<a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定集合中的所有元素按指定集合的迭代器返回的顺序附加到此列表的末尾。 
-              </div> </td>
+<div class="block">Agrega todos los elementos de la colección especificada al final de esta lista, en el orden en que son devueltos por el iterador de la colección especificada.</div> </td>
 </tr>
 <tr class="altColor" id="i4">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addFirst(E)">addFirst</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                在此列表的开头插入指定的元素。 
-              </div> </td>
+<div class="block">Inserta el elemento especificado al comienzo de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i5">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addLast(E)">addLast</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的元素追加到此列表的末尾。 
-              </div> </td>
+<div class="block">Agrega el elemento especificado al final de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i6">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clear()">clear</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此列表中删除所有元素。 
-              </div> </td>
+<div class="block">Elimina todos los elementos de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i7">
 <td class="colFirst"><code><a href="../lang/Object.html" title="class in java.lang">Object</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clone()">clone</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此 
-               <code>LinkedList</code>的浅表副本。 
-              </div> </td>
+<div class="block">Devuelve este<code>LinkedList</code>copia superficial de.</div> </td>
 </tr>
 <tr class="altColor" id="i8">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#contains(java.lang.Object)">contains</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                如果此列表包含指定的元素，则返回 
-               <code>true</code> 。 
+<div class="block">Si esta lista contiene el elemento especificado, entonces devuelve<code>true</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i9">
 <td class="colFirst"><code><a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#descendingIterator()">descendingIterator</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                以相反的顺序返回此双端队列中元素的迭代器。 
-              </div> </td>
+<div class="block">Devuelve un iterador de los elementos de esta deque en orden inverso.</div> </td>
 </tr>
 <tr class="altColor" id="i10">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#element()">element</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索但不删除此列表的头部（第一个元素）。 
-              </div> </td>
+<div class="block">Recupera, pero no elimina, la cabeza (primer elemento) de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i11">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(int)">get</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中指定位置的元素。 
-              </div> </td>
+<div class="block">Devuelve el elemento de esta lista en la posición especificada.</div> </td>
 </tr>
 <tr class="altColor" id="i12">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFirst()">getFirst</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中的第一个元素。 
-              </div> </td>
+<div class="block">Devuelve el primer elemento de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i13">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLast()">getLast</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中的最后一个元素。 
-              </div> </td>
+<div class="block">Devuelve el último elemento de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i14">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#indexOf(java.lang.Object)">indexOf</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中第一次出现的指定元素的索引，如果此列表不包含该元素，则返回-1。 
-              </div> </td>
+<div class="block">Devuelve el índice de la primera aparición del elemento especificado en esta lista, o -1 si esta lista no contiene dicho elemento.</div> </td>
 </tr>
 <tr class="rowColor" id="i15">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#lastIndexOf(java.lang.Object)">lastIndexOf</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中指定元素最后一次出现的索引，如果此列表不包含该元素，则返回-1。 
-              </div> </td>
+<div class="block">Devuelve el índice de la última aparición del elemento especificado en esta lista, o -1 si esta lista no contiene dicho elemento.</div> </td>
 </tr>
 <tr class="altColor" id="i16">
 <td class="colFirst"><code><a href="ListIterator.html" title="interface in java.util">ListIterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#listIterator(int)">listIterator</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                从列表中的指定位置开始，返回此列表中元素的列表迭代器（按正确顺序）。 
-              </div> </td>
+<div class="block">Devuelve un iterador de lista sobre los elementos de esta lista, comenzando en la posición especificada (en el orden correcto).</div> </td>
 </tr>
 <tr class="rowColor" id="i17">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offer(E)">offer</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                将指定的元素添加为此列表的尾部（最后一个元素）。 
-              </div> </td>
+<div class="block">Agrega el elemento especificado al final (último elemento) de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i18">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offerFirst(E)">offerFirst</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                在此列表的前面插入指定的元素。 
-              </div> </td>
+<div class="block">Inserta el elemento especificado al principio de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i19">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#offerLast(E)">offerLast</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                在此列表的末尾插入指定的元素。 
-              </div> </td>
+<div class="block">Inserta el elemento especificado al final de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i20">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#peek()">peek</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索但不删除此列表的头部（第一个元素）。 
-              </div> </td>
+<div class="block">Recupera, pero no elimina, la cabeza (primer elemento) de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i21">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#peekFirst()">peekFirst</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索但不删除此列表的第一个元素，如果此列表为空，则返回 
-               <code>null</code> 。 
+<div class="block">Recupera, pero no elimina, el primer elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i22">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#peekLast()">peekLast</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索但不删除此列表的最后一个元素，如果此列表为空，则返回 
-               <code>null</code> 。 
+<div class="block">Recupera, pero no elimina, el último elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i23">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#poll()">poll</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索并删除此列表的头部（第一个元素）。 
-              </div> </td>
+<div class="block">Recupera y elimina la cabeza (primer elemento) de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i24">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pollFirst()">pollFirst</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索并删除此列表的第一个元素，如果此列表为空，则返回 
-               <code>null</code> 。 
+<div class="block">Recupera y elimina el primer elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="rowColor" id="i25">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pollLast()">pollLast</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索并删除此列表的最后一个元素，如果此列表为空，则返回 
-               <code>null</code> 。 
+<div class="block">Recupera y elimina el último elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
               </div> </td>
 </tr>
 <tr class="altColor" id="i26">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#pop()">pop</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                弹出此列表所代表的堆栈中的元素。 
-              </div> </td>
+<div class="block">Saca el elemento de la pila representada por esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i27">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#push(E)">push</a></span>​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</code></th>
 <td class="colLast">
-<div class="block">
-                将元素推送到此列表所表示的堆栈上。 
-              </div> </td>
+<div class="block">Inserta un elemento en la pila representada por esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i28">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove()">remove</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                检索并删除此列表的头部（第一个元素）。 
-              </div> </td>
+<div class="block">Recupera y elimina la cabeza (primer elemento) de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i29">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove(int)">remove</a></span>​(int index)</code></th>
 <td class="colLast">
-<div class="block">
-                删除此列表中指定位置的元素。 
-              </div> </td>
+<div class="block">Elimina el elemento en la posición especificada de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i30">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove(java.lang.Object)">remove</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                从该列表中删除指定元素的第一个匹配项（如果存在）。 
-              </div> </td>
+<div class="block">Elimina de esta lista la primera aparición del elemento especificado, si está presente.</div> </td>
 </tr>
 <tr class="rowColor" id="i31">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeFirst()">removeFirst</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此列表中删除并返回第一个元素。 
-              </div> </td>
+<div class="block">Elimina y devuelve el primer elemento de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i32">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeFirstOccurrence(java.lang.Object)">removeFirstOccurrence</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                删除此列表中第一次出现的指定元素（从头到尾遍历列表时）。 
-              </div> </td>
+<div class="block">Elimina la primera aparición del elemento especificado en esta lista (al recorrer la lista de principio a fin).</div> </td>
 </tr>
 <tr class="rowColor" id="i33">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeLast()">removeLast</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                从此列表中删除并返回最后一个元素。 
-              </div> </td>
+<div class="block">Elimina y devuelve el último elemento de esta lista.</div> </td>
 </tr>
 <tr class="altColor" id="i34">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeLastOccurrence(java.lang.Object)">removeLastOccurrence</a></span>​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</code></th>
 <td class="colLast">
-<div class="block">
-                删除此列表中最后一次出现的指定元素（从头到尾遍历列表时）。 
-              </div> </td>
+<div class="block">Elimina la última aparición del elemento especificado en esta lista (al recorrer la lista de principio a fin).</div> </td>
 </tr>
 <tr class="rowColor" id="i35">
 <td class="colFirst"><code><a href="LinkedList.html" title="type parameter in LinkedList">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(int,E)">set</a></span>​(int index, <a href="LinkedList.html" title="type parameter in LinkedList">E</a> element)</code></th>
 <td class="colLast">
-<div class="block">
-                用指定的元素替换此列表中指定位置的元素。 
-              </div> </td>
+<div class="block">Reemplaza el elemento en la posición especificada de esta lista con el elemento especificado.</div> </td>
 </tr>
 <tr class="altColor" id="i36">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                返回此列表中的元素数。 
-              </div> </td>
+<div class="block">Devuelve el número de elementos de esta lista.</div> </td>
 </tr>
 <tr class="rowColor" id="i37">
 <td class="colFirst"><code><a href="Spliterator.html" title="interface in java.util">Spliterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spliterator()">spliterator</a></span>()</code></th>
 <td class="colLast">
 <div class="block">
-<span>在此列表中的元素上创建<em><a href="Spliterator.html#binding">late-binding</a></em>和<em>故障快速</em> <a href="Spliterator.html" title="java.util中的接口"><code>Spliterator</code></a> 。</span>
+<span>Crea sobre los elementos de esta lista<em><a href="Spliterator.html#binding">late-binding</a></em>y<em>fallo rápido</em> <a href="Spliterator.html" title="java.util中的接口"><code>Spliterator</code></a> 。</span>
 </div> </td>
 </tr>
 <tr class="altColor" id="i38">
 <td class="colFirst"><code><a href="../lang/Object.html" title="class in java.lang">Object</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toArray()">toArray</a></span>()</code></th>
 <td class="colLast">
-<div class="block">
-                以适当的顺序（从第一个元素到最后一个元素）返回包含此列表中所有元素的数组。 
-              </div> </td>
+<div class="block">Devuelve una matriz que contiene todos los elementos de esta lista en el orden adecuado (del primer elemento al último elemento).</div> </td>
 </tr>
 <tr class="rowColor" id="i39">
 <td class="colFirst"><code>&lt;T&gt; T[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toArray(T%5B%5D)">toArray</a></span>​(T[] a)</code></th>
 <td class="colLast">
 <div class="block">
-<span>以适当的顺序返回包含此列表中所有元素的数组（从第一个元素到最后一个元素）;</span>
-<span>返回数组的运行时类型是指定数组的运行时类型。</span>
+<span>Devuelve una matriz que contiene todos los elementos de esta lista en el orden adecuado (del primer elemento al último elemento);</span>
+<span>El tipo en tiempo de ejecución de la matriz devuelta es el tipo en tiempo de ejecución de la matriz especificada.</span>
 </div> </td>
 </tr>
 </tbody>
@@ -603,25 +522,21 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>LinkedList</h4> <pre>public LinkedList()</pre>
-<div class="block">
-              构造一个空列表。 
-            </div> </li>
+<div class="block">Construye una lista vacía.</div> </li>
 </ul> <a id="&lt;init&gt;(java.util.Collection)">
 <!-- --> </a>
 <ul class="blockListLast">
 <li class="blockList"> <h4>LinkedList</h4> <pre>public LinkedList​(<a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</pre>
-<div class="block">
-              按照集合的迭代器返回的顺序构造一个包含指定集合元素的列表。 
-            </div>
+<div class="block">Construye una lista que contiene los elementos de la colección especificada, en el orden en que son devueltos por el iterador de la colección.</div>
 <dl>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>c</code> - 
               <code>c</code>La colección cuyos elementos se introducen en esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si la colección especificada es null.</dd>
@@ -637,23 +552,20 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>getFirst</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> getFirst()</pre>
-<div class="block">
-              返回此列表中的第一个元素。 
-            </div>
+<div class="block">Devuelve el primer elemento de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#getFirst()">getFirst</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#getFirst()">getFirst</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El primer elemento de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
@@ -662,23 +574,20 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>getLast</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> getLast()</pre>
-<div class="block">
-              返回此列表中的最后一个元素。 
-            </div>
+<div class="block">Devuelve el último elemento de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#getLast()">getLast</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#getLast()">getLast</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El último elemento de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
@@ -687,9 +596,7 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>removeFirst</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> removeFirst()</pre>
-<div class="block">
-              从此列表中删除并返回第一个元素。 
-            </div>
+<div class="block">Elimina y devuelve el primer elemento de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
@@ -699,11 +606,11 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El primer elemento de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
@@ -712,23 +619,20 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>removeLast</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> removeLast()</pre>
-<div class="block">
-              从此列表中删除并返回最后一个元素。 
-            </div>
+<div class="block">Elimina y devuelve el último elemento de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#removeLast()">removeLast</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#removeLast()">removeLast</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El último elemento de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
@@ -738,9 +642,7 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>addFirst</h4> <pre class="methodSignature">public void addFirst​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
-<div class="block">
-              在此列表的开头插入指定的元素。 
-            </div>
+<div class="block">Inserta el elemento especificado al comienzo de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
@@ -750,7 +652,7 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a añadir.</dd>
@@ -761,19 +663,18 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>addLast</h4> <pre class="methodSignature">public void addLast​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
 <div class="block">
-<span>将指定的元素追加到此列表的末尾。</span>
-<p> <span>此方法相当于<a href="#add(E)"><code>add(E)</code></a> 。</span> </p>
+<span>Agrega el elemento especificado al final de esta lista.</span>
+<p> <span>Este método equivale a<a href="#add(E)"><code>add(E)</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#addLast(E)">addLast</a></code>接口 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#addLast(E)">addLast</a></code>Interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a añadir.</dd>
@@ -783,8 +684,8 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>contains</h4> <pre class="methodSignature">public boolean contains​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>如果此列表包含指定的元素，则返回<code>true</code> 。</span>
-<span>更正式地说，返回<code>true</code>当且仅当此列表包含至少一个元素<code>e</code> ，使得<code>Objects.equals(o, e)</code> 。</span>
+<span>Si esta lista contiene el elemento especificado, entonces devuelve<code>true</code> 。</span>
+<span>Más formalmente, devuelve<code>true</code>Si y solo si esta lista contiene al menos un elemento<code>e</code>, tal que<code>Objects.equals(o, e)</code> 。</span>
 </div>
 <dl>
 <dt>
@@ -798,30 +699,27 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#contains(java.lang.Object)">contains</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#contains(java.lang.Object)">contains</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#contains(java.lang.Object)">contains</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#contains(java.lang.Object)">contains</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractCollection.html#contains(java.lang.Object)">contains</a></code>类 
-              <code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractCollection.html#contains(java.lang.Object)">contains</a></code>Clase<code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>- El elemento cuya presencia en esta lista se va a comprobar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si esta lista contiene el elemento especificado.</dd>
@@ -830,33 +728,28 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>size</h4> <pre class="methodSignature">public int size()</pre>
-<div class="block">
-              返回此列表中的元素数。 
-            </div>
+<div class="block">Devuelve el número de elementos de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#size()">size</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#size()">size</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#size()">size</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#size()">size</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#size()">size</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#size()">size</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El número de elementos de esta lista.</dd>
 </dl> </li>
@@ -866,8 +759,8 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>add</h4> <pre class="methodSignature">public boolean add​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
 <div class="block">
-<span>将指定的元素追加到此列表的末尾。</span>
-<p> <span>此方法相当于<a href="#addLast(E)"><code>addLast(E)</code></a> 。</span> </p>
+<span>Agrega el elemento especificado al final de esta lista.</span>
+<p> <span>Este método equivale a<a href="#addLast(E)"><code>addLast(E)</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
@@ -881,89 +774,79 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#add(E)">add</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#add(E)">add</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#add(E)">add</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#add(E)">add</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Queue.html#add(E)">add</a></code>在界面 
-              <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Queue.html#add(E)">add</a></code>En la interfaz<code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractList.html#add(E)">add</a></code>在类 
-              <code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractList.html#add(E)">add</a></code>En la clase<code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento que se va a agregar a esta lista.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>true</code> （由 
-              <a href="Collection.html#add(E)"><code>Collection.add(E)</code></a>指定） 
-             </dd>
+<code>true</code>(por<a href="Collection.html#add(E)"><code>Collection.add(E)</code></a>especificado)</dd>
 </dl> </li>
 </ul> <a id="remove(java.lang.Object)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>remove</h4> <pre class="methodSignature">public boolean remove​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>从该列表中删除指定元素的第一个匹配项（如果存在）。</span>
-<span>如果此列表不包含该元素，则不会更改。</span>
-<span>更正式地，删除具有最低索引<code>i</code>的元素，使得<code>Objects.equals(o, get(i))</code> （如果存在这样的元素）。</span>
-<span>如果此列表包含指定的元素，则返回<code>true</code> （或等效地，如果此列表因调用而更改）。</span>
+<span>Elimina de esta lista la primera aparición del elemento especificado, si está presente.</span>
+<span>Si esta lista no contiene el elemento, no se modifica.</span>
+<span>Más formalmente, elimina el elemento con el índice más bajo<code>i</code>del elemento, tal que<code>Objects.equals(o, get(i))</code>(si existe tal elemento).</span>
+<span>Si esta lista contiene el elemento especificado, entonces devuelve<code>true</code>(o equivalentemente, si esta lista se modifica por la llamada).</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#remove(java.lang.Object)">remove</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#remove(java.lang.Object)">remove</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#remove(java.lang.Object)">remove</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#remove(java.lang.Object)">remove</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#remove(java.lang.Object)">remove</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#remove(java.lang.Object)">remove</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractCollection.html#remove(java.lang.Object)">remove</a></code>在类 
-              <code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractCollection.html#remove(java.lang.Object)">remove</a></code>En la clase<code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>Elemento a eliminar de esta lista, si está presente</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si esta lista contiene el elemento especificado.</dd>
@@ -973,56 +856,52 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>addAll</h4> <pre class="methodSignature">public boolean addAll​(<a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</pre>
 <div class="block">
-<span>将指定集合中的所有元素按指定集合的迭代器返回的顺序附加到此列表的末尾。</span>
-<span>如果在操作正在进行时修改了指定的集合，则此操作的行为是不确定的。</span>
-<span>（请注意，如果指定的集合是此列表，则会发生这种情况，并且它是非空的。）</span>
+<span>Agrega todos los elementos de la colección especificada al final de esta lista, en el orden en que son devueltos por el iterador de la colección especificada.</span>
+<span>Si la colección especificada se modifica mientras la operación está en curso, el comportamiento de esta operación no está definido.</span>
+<span>(Tenga en cuenta que esto ocurrirá si la colección especificada es esta lista y dicha colección no está vacía).</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#addAll(java.util.Collection)">addAll</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#addAll(java.util.Collection)">addAll</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#addAll(java.util.Collection)">addAll</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#addAll(java.util.Collection)">addAll</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#addAll(java.util.Collection)">addAll</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#addAll(java.util.Collection)">addAll</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractCollection.html#addAll(java.util.Collection)">addAll</a></code>在类 
-              <code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractCollection.html#addAll(java.util.Collection)">addAll</a></code>En la clase<code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>c</code>Colección que contiene elementos que se añadirán a esta lista</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si esta lista ha cambiado como resultado de la llamada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/NullPointerException.html" title="class in java.lang">NullPointerException</a></code>- Si la colección especificada es null.</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="AbstractCollection.html#add(E)"><code>AbstractCollection.add(Object)</code></a>
@@ -1034,9 +913,9 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <li class="blockList"> <h4>addAll</h4> <pre class="methodSignature">public boolean addAll​(int index,
                       <a href="Collection.html" title="interface in java.util">Collection</a>&lt;? extends <a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; c)</pre>
 <div class="block">
-<span>从指定位置开始，将指定集合中的所有元素插入此列表。</span>
-<span>将当前位置的元素（如果有）和任何后续元素向右移动（增加其索引）。</span>
-<span>新元素将按照指定集合的迭代器返回的顺序出现在列表中。</span>
+<span>Inserta todos los elementos de la colección especificada en esta lista, comenzando en la posición especificada.</span>
+<span>Desplaza hacia la derecha el elemento actualmente en esa posición (si existe) y cualquier elemento posterior (aumentando sus índices).</span>
+<span>Los nuevos elementos aparecerán en la lista en el orden en que los devuelva el iterador de la colección especificada.</span>
 </div>
 <dl>
 <dt>
@@ -1047,26 +926,25 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#addAll(int,java.util.Collection)">addAll</a></code>在类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#addAll(int,java.util.Collection)">addAll</a></code>En la clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>Índice en el que se inserta el primer elemento de la colección especificada</dd>
 <dd>
 <code>c</code>Colección que contiene elementos que se añadirán a esta lista</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si esta lista ha cambiado como resultado de la llamada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt; size()</code> ） 
@@ -1079,39 +957,34 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>clear</h4> <pre class="methodSignature">public void clear()</pre>
 <div class="block">
-<span>从此列表中删除所有元素。</span>
-<span>此调用返回后，列表将为空。</span>
+<span>Elimina todos los elementos de esta lista.</span>
+<span>Después de esta llamada, la lista quedará vacía.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#clear()">clear</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#clear()">clear</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#clear()">clear</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#clear()">clear</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractList.html#clear()">clear</a></code>类 
-              <code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractList.html#clear()">clear</a></code>Clase<code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 </dl> </li>
 </ul> <a id="get(int)">
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>get</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> get​(int index)</pre>
-<div class="block">
-              返回此列表中指定位置的元素。 
-            </div>
+<div class="block">Devuelve el elemento de esta lista en la posición especificada.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
@@ -1121,23 +994,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#get(int)">get</a></code>类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#get(int)">get</a></code>Clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice del elemento que se va a devolver.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El elemento en la posición especificada de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt;= size()</code> ） 
@@ -1149,9 +1021,7 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>set</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> set​(int index,
              <a href="LinkedList.html" title="type parameter in LinkedList">E</a> element)</pre>
-<div class="block">
-              用指定的元素替换此列表中指定位置的元素。 
-            </div>
+<div class="block">Reemplaza el elemento en la posición especificada de esta lista con el elemento especificado.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
@@ -1161,25 +1031,24 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#set(int,E)">set</a></code>在类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#set(int,E)">set</a></code>En la clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice del elemento que se va a reemplazar.</dd>
 <dd>
 <code>element</code>- El elemento que se va a almacenar en la posición especificada.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El elemento que estaba anteriormente en la posición especificada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt;= size()</code> ） 
@@ -1192,33 +1061,31 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <li class="blockList"> <h4>add</h4> <pre class="methodSignature">public void add​(int index,
                 <a href="LinkedList.html" title="type parameter in LinkedList">E</a> element)</pre>
 <div class="block">
-<span>将指定元素插入此列表中的指定位置。</span>
-<span>将当前位置的元素（如果有）和任何后续元素向右移动（将其添加到索引中）。</span>
+<span>Inserta el elemento especificado en la posición especificada de esta lista.</span>
+<span>Desplaza hacia la derecha el elemento actualmente en esa posición (si existe) y cualquier elemento posterior (incrementando sus índices en uno).</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#add(int,E)">add</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#add(int,E)">add</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#add(int,E)">add</a></code>类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#add(int,E)">add</a></code>Clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice en el que se va a insertar el elemento especificado.</dd>
 <dd>
 <code>element</code>- El elemento a insertar.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt; size()</code> ） 
@@ -1229,36 +1096,34 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>remove</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> remove​(int index)</pre>
 <div class="block">
-<span>删除此列表中指定位置的元素。</span>
-<span>将任何后续元素向左移位（从索引中减去一个元素）。</span>
-<span>返回从列表中删除的元素。</span>
+<span>Elimina el elemento en la posición especificada de esta lista.</span>
+<span>Desplaza cualquier elemento posterior hacia la izquierda (resta uno a sus índices).</span>
+<span>Devuelve el elemento eliminado de la lista.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#remove(int)">remove</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#remove(int)">remove</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#remove(int)">remove</a></code>在类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#remove(int)">remove</a></code>En la clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>- El índice del elemento que se va a eliminar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El elemento que estaba anteriormente en la posición especificada.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt;= size()</code> ） 
@@ -1269,31 +1134,29 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>indexOf</h4> <pre class="methodSignature">public int indexOf​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>返回此列表中第一次出现的指定元素的索引，如果此列表不包含该元素，则返回-1。</span>
-<span>更正式地，返回最低索引<code>i</code>如<code>Objects.equals(o, get(i))</code> ，如果没有这样的索引则返回-1。</span>
+<span>Devuelve el índice de la primera aparición del elemento especificado en esta lista, o -1 si esta lista no contiene dicho elemento.</span>
+<span>Más formalmente, devuelve el índice más bajo<code>i</code>Como<code>Objects.equals(o, get(i))</code>, o -1 si no existe tal índice.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#indexOf(java.lang.Object)">indexOf</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#indexOf(java.lang.Object)">indexOf</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractList.html#indexOf(java.lang.Object)">indexOf</a></code>在类 
-              <code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractList.html#indexOf(java.lang.Object)">indexOf</a></code>En la clase<code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>- El elemento a buscar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Índice de la primera aparición del elemento especificado en esta lista, o -1 si esta lista no contiene el elemento</dd>
 </dl> </li>
@@ -1302,31 +1165,29 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>lastIndexOf</h4> <pre class="methodSignature">public int lastIndexOf​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>返回此列表中指定元素最后一次出现的索引，如果此列表不包含该元素，则返回-1。</span>
-<span>更正式的是，返回最高指数<code>i</code>如<code>Objects.equals(o, get(i))</code> ，如果没有这样的指数则返回-1。</span>
+<span>Devuelve el índice de la última aparición del elemento especificado en esta lista, o -1 si esta lista no contiene dicho elemento.</span>
+<span>Más formalmente, devuelve el índice más alto<code>i</code>Como<code>Objects.equals(o, get(i))</code>, o -1 si no existe tal índice.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#lastIndexOf(java.lang.Object)">lastIndexOf</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#lastIndexOf(java.lang.Object)">lastIndexOf</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractList.html#lastIndexOf(java.lang.Object)">lastIndexOf</a></code>在类 
-              <code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractList.html#lastIndexOf(java.lang.Object)">lastIndexOf</a></code>En la clase<code><a href="AbstractList.html" title="class in java.util">AbstractList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>- El elemento a buscar</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Índice de la última aparición del elemento especificado en esta lista, o -1 si esta lista no contiene el elemento</dd>
 </dl> </li>
@@ -1334,31 +1195,27 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>peek</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> peek()</pre>
-<div class="block">
-              检索但不删除此列表的头部（第一个元素）。 
-            </div>
+<div class="block">Recupera, pero no elimina, la cabeza (primer elemento) de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#peek()">peek</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#peek()">peek</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Queue.html#peek()">peek</a></code>在界面 
-              <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Queue.html#peek()">peek</a></code>En la interfaz<code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La cabeza de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1368,35 +1225,31 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>element</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> element()</pre>
-<div class="block">
-              检索但不删除此列表的头部（第一个元素）。 
-            </div>
+<div class="block">Recupera, pero no elimina, la cabeza (primer elemento) de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#element()">element</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#element()">element</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Queue.html#element()">element</a></code>在界面 
-              <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Queue.html#element()">element</a></code>En la interfaz<code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La cabeza de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1406,16 +1259,13 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>poll</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> poll()</pre>
-<div class="block">
-              检索并删除此列表的头部（第一个元素）。 
-            </div>
+<div class="block">Recupera y elimina la cabeza (primer elemento) de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#poll()">poll</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#poll()">poll</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
@@ -1425,12 +1275,12 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
               <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La cabeza de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1440,35 +1290,31 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>remove</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> remove()</pre>
-<div class="block">
-              检索并删除此列表的头部（第一个元素）。 
-            </div>
+<div class="block">Recupera y elimina la cabeza (primer elemento) de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#remove()">remove</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#remove()">remove</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Queue.html#remove()">remove</a></code>在界面 
-              <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Queue.html#remove()">remove</a></code>En la interfaz<code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>La cabeza de esta lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1479,38 +1325,32 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>offer</h4> <pre class="methodSignature">public boolean offer​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
-<div class="block">
-              将指定的元素添加为此列表的尾部（最后一个元素）。 
-            </div>
+<div class="block">Agrega el elemento especificado al final (último elemento) de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#offer(E)">offer</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#offer(E)">offer</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Queue.html#offer(E)">offer</a></code>在界面 
-              <code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Queue.html#offer(E)">offer</a></code>En la interfaz<code><a href="Queue.html" title="interface in java.util">Queue</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a añadir.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>true</code> （由 
-              <a href="Queue.html#offer(E)"><code>Queue.offer(E)</code></a>指定） 
-             </dd>
+<code>true</code>(por<a href="Queue.html#offer(E)"><code>Queue.offer(E)</code></a>especificado)</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.5 
@@ -1521,31 +1361,26 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>offerFirst</h4> <pre class="methodSignature">public boolean offerFirst​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
-<div class="block">
-              在此列表的前面插入指定的元素。 
-            </div>
+<div class="block">Inserta el elemento especificado al principio de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#offerFirst(E)">offerFirst</a></code>在接口 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#offerFirst(E)">offerFirst</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a insertar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>true</code> （由 
-              <a href="Deque.html#offerFirst(E)"><code>Deque.offerFirst(E)</code></a>指定） 
-             </dd>
+<code>true</code>(por<a href="Deque.html#offerFirst(E)"><code>Deque.offerFirst(E)</code></a>especificado)</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1556,31 +1391,26 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>offerLast</h4> <pre class="methodSignature">public boolean offerLast​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
-<div class="block">
-              在此列表的末尾插入指定的元素。 
-            </div>
+<div class="block">Inserta el elemento especificado al final de esta lista.</div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#offerLast(E)">offerLast</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#offerLast(E)">offerLast</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a insertar.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
-<code>true</code> （由 
-              <a href="Deque.html#offerLast(E)"><code>Deque.offerLast(E)</code></a>指定） 
-             </dd>
+<code>true</code>(por<a href="Deque.html#offerLast(E)"><code>Deque.offerLast(E)</code></a>especificado)</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1590,25 +1420,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>peekFirst</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> peekFirst()</pre>
-<div class="block">
-              检索但不删除此列表的第一个元素，如果此列表为空，则返回 
-             <code>null</code> 。 
+<div class="block">Recupera, pero no elimina, el primer elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#peekFirst()">peekFirst</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#peekFirst()">peekFirst</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El primer elemento de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1618,25 +1445,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>peekLast</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> peekLast()</pre>
-<div class="block">
-              检索但不删除此列表的最后一个元素，如果此列表为空，则返回 
-             <code>null</code> 。 
+<div class="block">Recupera, pero no elimina, el último elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#peekLast()">peekLast</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#peekLast()">peekLast</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El último elemento de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1646,25 +1470,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>pollFirst</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> pollFirst()</pre>
-<div class="block">
-              检索并删除此列表的第一个元素，如果此列表为空，则返回 
-             <code>null</code> 。 
+<div class="block">Recupera y elimina el primer elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#pollFirst()">pollFirst</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#pollFirst()">pollFirst</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El primer elemento de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1674,25 +1495,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <!-- --> </a>
 <ul class="blockList">
 <li class="blockList"> <h4>pollLast</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> pollLast()</pre>
-<div class="block">
-              检索并删除此列表的最后一个元素，如果此列表为空，则返回 
-             <code>null</code> 。 
+<div class="block">Recupera y elimina el último elemento de esta lista; si esta lista está vacía, devuelve<code>null</code> 。 
             </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#pollLast()">pollLast</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#pollLast()">pollLast</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El último elemento de esta lista, si esta lista está vacía,<code>null</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1704,25 +1522,24 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>push</h4> <pre class="methodSignature">public void push​(<a href="LinkedList.html" title="type parameter in LinkedList">E</a> e)</pre>
 <div class="block">
-<span>将元素推送到此列表所表示的堆栈上。</span>
-<span>换句话说，将元素插入此列表的前面。</span>
-<p> <span>此方法相当于<a href="#addFirst(E)"><code>addFirst(E)</code></a> 。</span> </p>
+<span>Inserta un elemento en la pila representada por esta lista.</span>
+<span>En otras palabras, inserta el elemento al principio de esta lista.</span>
+<p> <span>Este método equivale a<a href="#addFirst(E)"><code>addFirst(E)</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#push(E)">push</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#push(E)">push</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>e</code>- El elemento a empujar.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1733,29 +1550,28 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>pop</h4> <pre class="methodSignature">public <a href="LinkedList.html" title="type parameter in LinkedList">E</a> pop()</pre>
 <div class="block">
-<span>弹出此列表所代表的堆栈中的元素。</span>
-<span>换句话说，删除并返回此列表的第一个元素。</span>
-<p> <span>此方法相当于<a href="#removeFirst()"><code>removeFirst()</code></a> 。</span> </p>
+<span>Saca el elemento de la pila representada por esta lista.</span>
+<span>En otras palabras, elimina y devuelve el primer elemento de esta lista.</span>
+<p> <span>Este método equivale a<a href="#removeFirst()"><code>removeFirst()</code></a> 。</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#pop()">pop</a></code>在接口 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#pop()">pop</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El elemento al frente de esta lista (la cima de la pila que esta lista representa).</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="NoSuchElementException.html" title="class in java.util">NoSuchElementException</a></code>- Si esta lista está vacía.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1766,29 +1582,28 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>removeFirstOccurrence</h4> <pre class="methodSignature">public boolean removeFirstOccurrence​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>删除此列表中第一次出现的指定元素（从头到尾遍历列表时）。</span>
-<span>如果列表不包含该元素，则不会更改。</span>
+<span>Elimina la primera aparición del elemento especificado en esta lista (al recorrer la lista de principio a fin).</span>
+<span>Si la lista no contiene el elemento, no se modifica.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#removeFirstOccurrence(java.lang.Object)">removeFirstOccurrence</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#removeFirstOccurrence(java.lang.Object)">removeFirstOccurrence</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>Elemento a eliminar de esta lista, si está presente</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si la lista contiene el elemento especificado.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1799,29 +1614,28 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>removeLastOccurrence</h4> <pre class="methodSignature">public boolean removeLastOccurrence​(<a href="../lang/Object.html" title="class in java.lang">Object</a> o)</pre>
 <div class="block">
-<span>删除此列表中最后一次出现的指定元素（从头到尾遍历列表时）。</span>
-<span>如果列表不包含该元素，则不会更改。</span>
+<span>Elimina la última aparición del elemento especificado en esta lista (al recorrer la lista de principio a fin).</span>
+<span>Si la lista no contiene el elemento, no se modifica.</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#removeLastOccurrence(java.lang.Object)">removeLastOccurrence</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#removeLastOccurrence(java.lang.Object)">removeLastOccurrence</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>o</code>Elemento a eliminar de esta lista, si está presente</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>
 <code>true</code>Si la lista contiene el elemento especificado.</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1832,43 +1646,41 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>listIterator</h4> <pre class="methodSignature">public <a href="ListIterator.html" title="interface in java.util">ListIterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; listIterator​(int index)</pre>
 <div class="block">
-<span>从列表中的指定位置开始，返回此列表中元素的列表迭代器（按正确顺序）。</span>
-<span><code>List.listIterator(int)</code>的总合同为<code>List.listIterator(int)</code> 。</span>
-<p> <span>list-iterator是<i>快速失败的</i> ：如果在创建Iterator之后的任何时候对列表进行结构修改，除了通过list-iterator自己的<code>remove</code>或<code>add</code>方法之外，list-iterator将抛出<code>ConcurrentModificationException</code> 。</span> <span>因此，在并发修改的情况下，迭代器快速而干净地失败，而不是在未来的未确定时间冒任意，非确定性行为的风险。</span> </p>
+<span>Devuelve un iterador de lista sobre los elementos de esta lista, comenzando en la posición especificada (en el orden correcto).</span>
+<span><code>List.listIterator(int)</code>El contrato general es<code>List.listIterator(int)</code> 。</span>
+<p> <span>El iterador de lista es<i>de fallo rápido</i>: Si en cualquier momento después de crear el Iterator se modifica estructuralmente la lista, salvo mediante los propios métodos<code>remove</code>o<code>add</code>del list-iterator, el list-iterator lanzará<code>ConcurrentModificationException</code> 。</span> <span>Por lo tanto, en caso de modificación concurrente, el iterador falla rápida y limpiamente, en lugar de arriesgarse a un comportamiento arbitrario, no determinista, en un momento futuro incierto.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#listIterator(int)">listIterator</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#listIterator(int)">listIterator</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="AbstractSequentialList.html#listIterator(int)">listIterator</a></code>在类 
-              <code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractSequentialList.html#listIterator(int)">listIterator</a></code>En la clase<code><a href="AbstractSequentialList.html" title="class in java.util">AbstractSequentialList</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
 <code>index</code>El índice del primer elemento devuelto por el list-iterator (mediante la llamada a<code>next</code> ） 
              </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Un ListIterator de los elementos de esta lista (en el orden correcto), comenzando en la posición especificada de la lista</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/IndexOutOfBoundsException.html" title="class in java.lang">IndexOutOfBoundsException</a></code>- Si el índice está fuera de rango (<code>index &lt; 0 || index &gt; size()</code> ） 
              </dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="List.html#listIterator(int)"><code>List.listIterator(int)</code></a>
@@ -1879,26 +1691,25 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>descendingIterator</h4> <pre class="methodSignature">public <a href="Iterator.html" title="interface in java.util">Iterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; descendingIterator()</pre>
 <div class="block">
-<span class="descfrmTypeLabel">从界面复制的说明： <code><a href="Deque.html#descendingIterator()">Deque</a></code></span>
+<span class="descfrmTypeLabel">Descripción copiada de la interfaz:<code><a href="Deque.html#descendingIterator()">Deque</a></code></span>
 </div>
 <div class="block">
-<span>以相反的顺序返回此双端队列中元素的迭代器。</span>
-<span>元素将按从最后（尾部）到第一个（头部）的顺序返回。</span>
+<span>Devuelve un iterador de los elementos de esta deque en orden inverso.</span>
+<span>Los elementos se devolverán en orden desde el último (cola) hasta el primero (cabeza).</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Deque.html#descendingIterator()">descendingIterator</a></code>在界面 
-              <code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Deque.html#descendingIterator()">descendingIterator</a></code>En la interfaz<code><a href="Deque.html" title="interface in java.util">Deque</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Un iterador que recorre los elementos de esta deque en orden secuencial inverso</dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.6 
@@ -1909,25 +1720,22 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>clone</h4> <pre class="methodSignature">public <a href="../lang/Object.html" title="class in java.lang">Object</a> clone()</pre>
 <div class="block">
-<span>返回此<code>LinkedList</code>的浅表副本。</span>
-<span>（元素本身未被克隆。）</span>
+<span>Devuelve este<code>LinkedList</code>copia superficial de.</span>
+<span>（Los elementos en sí no se clonan.)</span>
 </div>
 <dl>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="../lang/Object.html#clone()">clone</a></code>类 
-              <code><a href="../lang/Object.html" title="class in java.lang">Object</a></code>
+<code><a href="../lang/Object.html#clone()">clone</a></code>Clase<code><a href="../lang/Object.html" title="class in java.lang">Object</a></code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
-<dd>
-               这个 
-              <code>LinkedList</code>Copia superficial de la instancia</dd>
+<dd>Este<code>LinkedList</code>Copia superficial de la instancia</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <span><a href="../lang/Cloneable.html" title="java.lang中的接口"><code>Cloneable</code></a></span>
@@ -1938,38 +1746,35 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>toArray</h4> <pre class="methodSignature">public <a href="../lang/Object.html" title="class in java.lang">Object</a>[] toArray()</pre>
 <div class="block">
-<span>以适当的顺序（从第一个元素到最后一个元素）返回包含此列表中所有元素的数组。</span>
-<p> <span>返回的数组将是“安全的”，因为此列表不会保留对它的引用。</span> <span>（换句话说，此方法必须分配一个新数组）。</span> <span>因此调用者可以自由修改返回的数组。</span> </p>
-<p> <span>此方法充当基于阵列和基于集合的API之间的桥梁。</span> </p>
+<span>Devuelve una matriz que contiene todos los elementos de esta lista en el orden adecuado (del primer elemento al último elemento).</span>
+<p> <span>array devuelto será "seguro", ya que esta lista no conservará ninguna referencia a él.</span> <span>（En otras palabras, este método debe asignar un nuevo array).</span> <span>Por lo tanto, el llamador puede modificar libremente el array devuelto.</span> </p>
+<p> <span>Este método actúa como puente entre la API basada en arrays y la API basada en colecciones.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#toArray()">toArray</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#toArray()">toArray</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#toArray()">toArray</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#toArray()">toArray</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractCollection.html#toArray()">toArray</a></code>在类 
-              <code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractCollection.html#toArray()">toArray</a></code>En la clase<code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Una matriz que contiene todos los elementos de esta lista en el orden adecuado</dd>
 <dt>
-<span class="seeLabel">另请参见：</span>
+<span class="seeLabel">Véase también:</span>
 </dt>
 <dd>
 <a href="Arrays.html#asList(T...)"><code>Arrays.asList(Object[])</code></a>
@@ -1981,56 +1786,53 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockList">
 <li class="blockList"> <h4>toArray</h4> <pre class="methodSignature">public &lt;T&gt; T[] toArray​(T[] a)</pre>
 <div class="block">
-<span>以适当的顺序返回包含此列表中所有元素的数组（从第一个元素到最后一个元素）;</span>
-<span>返回数组的运行时类型是指定数组的运行时类型。</span>
-<span>如果列表适合指定的数组，则返回其中。</span>
-<span>否则，将为新数组分配指定数组的运行时类型和此列表的大小。</span>
-<p> <span>如果列表适合指定的数组，并且有空余空间（即，数组的元素多于列表），则紧跟在列表末尾的数组中的元素将设置为<code>null</code> 。</span> <span>（ <i>仅</i>当调用者知道列表不包含任何null元素时，这在确定列表长度时很有用。）</span> </p>
-<p> <span>与<a href="#toArray()"><code>toArray()</code></a>方法一样，此方法充当基于阵列和基于集合的API之间的桥梁。</span> <span>此外，该方法允许精确控制输出阵列的运行时类型，并且在某些情况下可以用于节省分配成本。</span> </p>
-<p> <span>假设<code>x</code>是已知仅包含字符串的列表。</span> <span>以下代码可用于将列表转储到新分配的<code>String</code>数组中：</span> </p>
+<span>Devuelve una matriz que contiene todos los elementos de esta lista en el orden adecuado (del primer elemento al último elemento);</span>
+<span>El tipo en tiempo de ejecución de la matriz devuelta es el tipo en tiempo de ejecución de la matriz especificada.</span>
+<span>Si la lista cabe en el array especificado, se devuelve en él.</span>
+<span>De lo contrario, se asignará un nuevo array con el tipo de tiempo de ejecución del array especificado y el tamaño de esta lista.</span>
+<p> <span>Si la lista cabe en el array especificado y hay espacio libre (es decir, el array tiene más elementos que la lista), el elemento del array inmediatamente después del final de la lista se establecerá en<code>null</code> 。</span> <span>（ <i>solamente</i>Cuando el llamador sabe que la lista no contiene ningún elemento null, esto es útil para determinar la longitud de la lista.)</span> </p>
+<p> <span>y<a href="#toArray()"><code>toArray()</code></a>Al igual que el método, este método actúa como puente entre la API basada en arrays y la API basada en colecciones.</span> <span>Además, este método permite controlar con precisión el tipo en tiempo de ejecución del arreglo de salida y, en algunos casos, puede utilizarse para ahorrar costos de asignación.</span> </p>
+<p> <span>Suponga que<code>x</code>es una lista que se sabe que contiene solo cadenas.</span> <span>El siguiente código se puede utilizar para volcar la lista en un<code>String</code>arreglo recién asignado:</span> </p>
 <pre>  <span>String[] y = x.toArray(new String[0]);</span> </pre>
-<span>请注意， <code>toArray(new Object[0])</code>功能与<code>toArray()</code> 。</span>
+<span>Tenga en cuenta que<code>toArray(new Object[0])</code>la función es la misma que<code>toArray()</code> 。</span>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#toArray(T%5B%5D)">toArray</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#toArray(T%5B%5D)">toArray</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#toArray(T%5B%5D)">toArray</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#toArray(T%5B%5D)">toArray</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="overrideSpecifyLabel">重写：</span>
+<span class="overrideSpecifyLabel">Sobrescribe:</span>
 </dt>
 <dd>
-<code><a href="AbstractCollection.html#toArray(T%5B%5D)">toArray</a></code>在类 
-              <code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="AbstractCollection.html#toArray(T%5B%5D)">toArray</a></code>En la clase<code><a href="AbstractCollection.html" title="class in java.util">AbstractCollection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
-<span class="paramLabel">参数类型</span>
+<span class="paramLabel">tipo de parámetro</span>
 </dt>
 <dd>
 <code>T</code>- El tipo de componente del array que contiene la colección.</dd>
 <dt>
-<span class="paramLabel">参数</span>
+<span class="paramLabel">Parámetros</span>
 </dt>
 <dd>
-<span><code>a</code> - 列表元素要存储的数组，如果它足够大;</span>
-<span>否则，为此目的分配相同运行时类型的新数组。</span>
+<span><code>a</code>- el arreglo en el que se almacenarán los elementos de la lista, si es lo suficientemente grande;</span>
+<span>de lo contrario, se asigna un nuevo arreglo del mismo tipo en tiempo de ejecución para este propósito.</span>
 </dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>El array que contiene los elementos de la lista.</dd>
 <dt>
-<span class="throwsLabel">异常</span>
+<span class="throwsLabel">Excepciones</span>
 </dt>
 <dd>
 <code><a href="../lang/ArrayStoreException.html" title="class in java.lang">ArrayStoreException</a></code>- Si el tipo en tiempo de ejecución del array especificado no es un supertipo del tipo en tiempo de ejecución de cada elemento de esta lista.</dd>
@@ -2042,45 +1844,40 @@ implements <a href="List.html" title="interface in java.util">List</a>&lt;E&gt;,
 <ul class="blockListLast">
 <li class="blockList"> <h4>spliterator</h4> <pre class="methodSignature">public <a href="Spliterator.html" title="interface in java.util">Spliterator</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt; spliterator()</pre>
 <div class="block">
-<span>在此列表中的元素上创建<em><a href="Spliterator.html#binding">late-binding</a></em>和<em>故障快速</em> <a href="Spliterator.html" title="java.util中的接口"><code>Spliterator</code></a> 。</span>
-<p> <span><code>Spliterator</code>报告<a href="Spliterator.html#SIZED"><code>Spliterator.SIZED</code></a>和<a href="Spliterator.html#ORDERED"><code>Spliterator.ORDERED</code></a> 。</span> <span>覆盖实现应记录其他特征值的报告。</span> </p>
+<span>Crea sobre los elementos de esta lista<em><a href="Spliterator.html#binding">late-binding</a></em>y<em>fallo rápido</em> <a href="Spliterator.html" title="java.util中的接口"><code>Spliterator</code></a> 。</span>
+<p> <span><code>Spliterator</code>Informa<a href="Spliterator.html#SIZED"><code>Spliterator.SIZED</code></a>y<a href="Spliterator.html#ORDERED"><code>Spliterator.ORDERED</code></a> 。</span> <span>Las implementaciones que sobrescriban deben documentar los informes de otros valores de características.</span> </p>
 </div>
 <dl>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="Collection.html#spliterator()">spliterator</a></code>在界面 
-              <code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="Collection.html#spliterator()">spliterator</a></code>En la interfaz<code><a href="Collection.html" title="interface in java.util">Collection</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="../lang/Iterable.html#spliterator()">spliterator</a></code>在界面 
-              <code><a href="../lang/Iterable.html" title="interface in java.lang">Iterable</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="../lang/Iterable.html#spliterator()">spliterator</a></code>En la interfaz<code><a href="../lang/Iterable.html" title="interface in java.lang">Iterable</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="overrideSpecifyLabel">Specified by:</span>
 </dt>
 <dd>
-<code><a href="List.html#spliterator()">spliterator</a></code>在界面 
-              <code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
+<code><a href="List.html#spliterator()">spliterator</a></code>En la interfaz<code><a href="List.html" title="interface in java.util">List</a>&lt;<a href="LinkedList.html" title="type parameter in LinkedList">E</a>&gt;</code>
 </dd>
 <dt>
 <span class="simpleTagLabel">Implementation Note:</span>
 </dt>
 <dd>
-<code>Spliterator</code>另外报告 
-              <a href="Spliterator.html#SUBSIZED"><code>Spliterator.SUBSIZED</code></a>并实施 
-              <code>trySplit</code>Para permitir un paralelismo limitado.</dd>
+<code>Spliterator</code>Además informa<a href="Spliterator.html#SUBSIZED"><code>Spliterator.SUBSIZED</code></a>e implementa<code>trySplit</code>Para permitir un paralelismo limitado.</dd>
 <dt>
-<span class="returnLabel">结果</span>
+<span class="returnLabel">Resultado</span>
 </dt>
 <dd>Realizado sobre los elementos de esta lista.<code>Spliterator</code>
 </dd>
 <dt>
-<span class="simpleTagLabel">从以下版本开始：</span>
+<span class="simpleTagLabel">Desde la versión:</span>
 </dt>
 <dd>
                1.8 

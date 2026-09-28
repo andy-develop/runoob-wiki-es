@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="1. 什么是回调函数？ 回调函数，光听名字就比普通函数要高大上一些，那到底什么是回调函数呢？恕我读得书少，没有在那本书上看到关于回调函数的定义。我在百度上搜了一下，发现众说纷纭，有很大一部分都是使用类似这么一个场景来说明：A君去B君店里买东西，恰好缺货，A君留下号码给B君，有货时通知A君。感觉这个让人更容易想到的是异步操作，而不是回调。另外还有两句英文让我印象深刻：1) If you call me, I will call you b.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -87,7 +87,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <h2>1. ¿Qué es una función callback?</h2>
 <p>Las funciones callback, solo por el nombre, suenan más sofisticadas que las funciones normales. Entonces, ¿qué es exactamente una función callback? Perdón por mis escasas lecturas, no he visto una definición de función callback en ningún libro. Busqué en Baidu y encontré muchas opiniones diversas; una gran parte usa un escenario similar a este para explicarlo: A va a la tienda de B a comprar algo, justo falta stock, A deja su número a B, y cuando haya mercancía se lo notifica a A. Esto hace que uno piense más en operaciones asíncronas que en callbacks. Además, hay dos frases en inglés que me impresionaron: 1) If you call me, I will call you back; 2) Don't call me, I will call you. Parece tener mucho sentido, pero si lo piensas bien, ¿no pueden las funciones normales lograr también estas dos cosas? Por eso, creo que estas explicaciones no son muy adecuadas, porque no expresan las características de las funciones callback, es decir, no se ve en qué se diferencian de las funciones normales. Sin embargo, la explicación de Baidu Baike me parece bastante buena (aunque siempre critico la búsqueda de Baidu...): una función callback es una función que se invoca a través de un puntero a función. Si pasas el puntero (dirección) de una función como parámetro a otra función, y cuando ese puntero se usa para invocar la función a la que apunta, decimos que es una función callback.</p>
-<p>A continuación, primero daré mi opinión. Podemos descomponer el término literalmente. Para "función callback" (回调函数), en chino se puede entender de dos maneras: 1) la función que es llamada de vuelta; 2) la función que ejecuta la acción de llamar de vuelta. Entonces, ¿qué demonios es eso de llamar de vuelta?</p>
+<p>A continuación, primero daré mi opinión. Podemos descomponer el término literalmente. Para "función callback" (回调Función), en chino se puede entender de dos maneras: 1) la función que es llamada de vuelta; 2) la función que ejecuta la acción de llamar de vuelta. Entonces, ¿qué demonios es eso de llamar de vuelta?</p>
 <p><strong>Primero veamos el análisis de callback (Callback) de Wikipedia</strong>: In computer programming, a callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback. Es decir, pasar un fragmento de código ejecutable a otro código como si fuera un parámetro, y ese fragmento será invocado y ejecutado en algún momento; a esto se le llama callback. Si el código se ejecuta inmediatamente, se llama callback síncrono; si se ejecuta más tarde, se llama callback asíncrono. No discutiremos aquí sobre síncrono y asíncrono; por favor consulta la información relevante.</p>
 <p><strong>Veamos otra vez la expresión concisa y clara de un experto de Stack Overflow:</strong>A "callback" is any function that is called by another function which takes the first function as a parameter. Es decir, cuando la función F1 llama a la función F2, la función F1 pasa a la función F2, a través de un parámetro, un puntero a otra función F3. Durante la ejecución de la función F2, la función F2 llama a la función F3. Esta acción se llama callback, y la función F3 que primero se pasó como puntero y luego es llamada de vuelta es la función callback. ¿A estas alturas deberías entender la definición de función callback, verdad?</p>
 <h2>2. ¿Por qué usar funciones callback?</h2>
@@ -334,11 +334,11 @@ Leaving Main Function.</pre>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puede hacer clic aquí para enviar artículos</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puede hacer clic aquí para enviar artículos</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

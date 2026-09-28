@@ -13,10 +13,8 @@
 <div class="scrollblock block-title">
 <h1>git - Guía rápida</h1>
 <p>Una guía concisa para que te inicies en git, sin contenido profundo ;)</p>
-<p class="meta">
-            作者：<a href="http://www.twitter.com/rogerdudler">罗杰·杜德勒</a>
-<br/>感谢：<a href="http://www.twitter.com/tfnico">@tfnico</a>, <a href="http://www.twitter.com/fhd">@fhd</a> 和 <a href="http://www.namics.com">Namics</a><br/>Si hay algún error, por favor, en<a href="https://github.com/rogerdudler/git-guide/issues">github</a> 提报问题
-        </p>
+<p class="meta">Autor:<a href="http://www.twitter.com/rogerdudler">Roger Dudler</a>
+<br/>Agradecimientos:<a href="http://www.twitter.com/tfnico">@tfnico</a>, <a href="http://www.twitter.com/fhd">@fhd</a>y<a href="http://www.namics.com">Namics</a><br/>Si hay algún error, por favor, en<a href="https://github.com/rogerdudler/git-guide/issues">github</a>Reportar problemas</p>
 <img alt="" src="img/arrow.png"/>
 </div>
 <!-- setup -->
@@ -24,13 +22,13 @@
 <div class="scrollblock block-setup">
 <h2>Instalación</h2>
 <p>
-<a href="http://git-scm.com/download/mac">下载 git OSX 版</a>
+<a href="http://git-scm.com/download/mac">Descargar git para OSX</a>
 </p>
 <p>
-<a href="http://msysgit.github.io">下载 git Windows 版</a>
+<a href="http://msysgit.github.io">Descargar git para Windows</a>
 </p>
 <p>
-<a href="http://git-scm.com/download/linux">下载 git Linux 版</a>
+<a href="http://git-scm.com/download/linux">Descargar git para Linux</a>
 </p>
 </div>
 <a name="create"></a>
@@ -65,8 +63,7 @@
 <div class="scrollblock block-remote">
 <h2>Enviar cambios</h2>
 <p>Tus cambios ahora ya están en el ... del repositorio local<b>HEAD</b>¡Listo! Ejecuta el siguiente comando para enviar estos cambios al repositorio remoto:<br/>
-<code>git push origin master</code><br/>
-            可以把 <i>master</i>cámbialo por cualquier rama que quieras enviar.<br/><br/>Si aún no has clonado un repositorio existente y quieres conectar tu repositorio a un servidor remoto, puedes usar el siguiente comando para añadirlo:<br/>
+<code>git push origin master</code><br/>Se puede<i>master</i>cámbialo por cualquier rama que quieras enviar.<br/><br/>Si aún no has clonado un repositorio existente y quieres conectar tu repositorio a un servidor remoto, puedes usar el siguiente comando para añadirlo:<br/>
 <code>git remote add origin &lt;server&gt;</code><br/>Así podrás enviar tus cambios al servidor que has añadido.<br/>
 </p>
 </div>
@@ -78,7 +75,7 @@
 <p>Crea una rama llamada "feature_x" y cambia a ella:<br/>
 <code>git checkout -b feature_x</code><br/>Cambia de nuevo a la rama principal:<br/>
 <code>git checkout master</code><br/>Luego elimina la rama recién creada:<br/>
-<code>git branch -d feature_x</code><br/>A menos que envíes (push) la rama al repositorio remoto, esa rama será<i>不为他人所见的</i>：<br/>
+<code>git branch -d feature_x</code><br/>A menos que envíes (push) la rama al repositorio remoto, esa rama será<i>no visibles para otros</i>：<br/>
 <code>git push origin &lt;branch&gt;</code>
 </p>
 </div>
@@ -86,8 +83,8 @@
 <div class="scrollblock block-merging">
 <h2>Actualizar y fusionar</h2>
 <p>Para actualizar tu repositorio local a los últimos cambios, ejecuta:<br/>
-<code>git pull</code><br/>para estar en tu directorio de trabajo<i>获取（fetch）</i> 并 <i>合并（merge）</i>los cambios remotos.<br/>Para fusionar otra rama en tu rama actual (por ejemplo, master), ejecuta:<br/>
-<code>git merge &lt;branch&gt;</code><br/>En ambos casos, git intentará fusionar los cambios automáticamente. Lamentablemente, esto no siempre tiene éxito, y pueden aparecer<i>冲突（conflicts）</i>En ese momento tendrás que modificar estos archivos para resolver manualmente estos conflictos.<i>冲突（conflicts）</i>Después de modificarlos, ejecuta el siguiente comando para marcarlos como fusionados correctamente:<br/>
+<code>git pull</code><br/>para estar en tu directorio de trabajo<i>obtener (fetch)</i>unión<i>fusionar (merge)</i>los cambios remotos.<br/>Para fusionar otra rama en tu rama actual (por ejemplo, master), ejecuta:<br/>
+<code>git merge &lt;branch&gt;</code><br/>En ambos casos, git intentará fusionar los cambios automáticamente. Lamentablemente, esto no siempre tiene éxito, y pueden aparecer<i>conflictos (conflicts)</i>En ese momento tendrás que modificar estos archivos para resolver manualmente estos conflictos.<i>conflictos (conflicts)</i>Después de modificarlos, ejecuta el siguiente comando para marcarlos como fusionados correctamente:<br/>
 <code>git add &lt;filename&gt;</code><br/>Antes de fusionar los cambios, puedes usar el siguiente comando para previsualizar las diferencias:<br/>
 <code>git diff &lt;source_branch&gt; &lt;target_branch&gt;</code>
 </p>
@@ -95,7 +92,7 @@
 <a name="tagging"></a>
 <div class="scrollblock block-tagging">
 <h2>Etiquetas</h2>
-<p>Es recomendable crear etiquetas para los lanzamientos de software. Este concepto ya existía, y también existe en SVN. Puedes ejecutar el siguiente comando para crear una llamada<i>1.0.0</i> 的标签：<br/>
+<p>Es recomendable crear etiquetas para los lanzamientos de software. Este concepto ya existía, y también existe en SVN. Puedes ejecutar el siguiente comando para crear una llamada<i>1.0.0</i>etiquetas:<br/>
 <code>git tag 1.0.0 1b2e1d63ff</code><br/>
 <i>1b2e1d63ff</i>son los primeros 10 caracteres del ID de commit que quieres etiquetar. Puedes obtener el ID de commit con el siguiente comando:<br/>
 <code>git log</code><br/>También puedes usar menos caracteres del ID de commit, siempre que la referencia sea única.</p>
@@ -126,21 +123,21 @@
 <h3>Clientes gráficos</h3>
 <p>
 <ul>
-<li><a href="http://gitx.laullon.com/">GitX (L) (OSX, 开源软件)</a></li>
+<li><a href="http://gitx.laullon.com/">GitX (L) (OSX, software de código abierto)</a></li>
 <li><a href="http://www.git-tower.com/">Tower (OSX)</a></li>
-<li><a href="http://www.sourcetreeapp.com/">Source Tree (OSX, 免费)</a></li>
-<li><a href="http://mac.github.com/">GitHub for Mac (OSX, 免费)</a></li>
+<li><a href="http://www.sourcetreeapp.com/">Source Tree (OSX, gratuito)</a></li>
+<li><a href="http://mac.github.com/">GitHub para Mac (OSX, gratuito)</a></li>
 <li><a href="https://itunes.apple.com/gb/app/gitbox/id403388357?mt=12">GitBox (OSX, App Store)</a></li>
 </ul>
 </p>
 <h3>Guías y manuales</h3>
 <p>
 <ul>
-<li><a href="http://book.git-scm.com/">Git 社区参考书</a></li>
-<li><a href="http://progit.org/book/">专业 Git</a></li>
-<li><a href="http://think-like-a-git.net/">像 git 那样思考</a></li>
-<li><a href="http://help.github.com/">GitHub 帮助</a></li>
-<li><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解 Git</a></li>
+<li><a href="http://book.git-scm.com/">Libro de referencia de la comunidad Git</a></li>
+<li><a href="http://progit.org/book/">Git profesional</a></li>
+<li><a href="http://think-like-a-git.net/">Piensa como Git</a></li>
+<li><a href="http://help.github.com/">Ayuda de GitHub</a></li>
+<li><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">Git ilustrado</a></li>
 </ul>
 </p>
 </div>

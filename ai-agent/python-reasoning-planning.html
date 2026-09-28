@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Python 实现推理与规划 | 菜鸟教程</title>
+<title>Implementación de razonamiento y planificación en Python | Tutorial de Runoob</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Python 实现推理与规划  本章节介绍 AI Agent 的核心智能能力，即推理与规划能力。  不同于传统的指令执行模式，具备推理能力的 Agent 能够进行复杂的思考过程。  它能够将复杂任务分解为可执行的步骤，并基于上下文做出决策。    ReAct 框架  ReAct（Reasoning + Acting）是一种将推理与行动相结合的框架。  在 ReAct 模式中，Agent 会交替进行推理和行动，形成一个闭环。  推理指导行.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -158,8 +158,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div> <div class="col middle-column">
 <div class="article">
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/retrieval-augmented-generation.html" rel="prev">RAG 与知识检索</a> </div>
-<div class="next-design-link"><a href="../ai-agent/python-rag.html" rel="next">Python 实现 RAG 与知识检索</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/retrieval-augmented-generation.html" rel="prev">RAG y recuperación de conocimiento</a> </div>
+<div class="next-design-link"><a href="../ai-agent/python-rag.html" rel="next">Implementación de RAG y recuperación de conocimiento en Python</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
 </div>
 <div class="article-body">
 <div class="article-intro" id="content">
@@ -168,61 +168,61 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>A diferencia del modo tradicional de ejecución de instrucciones, un Agente con capacidad de razonamiento puede llevar a cabo procesos de pensamiento complejos.</p>
 <p>Es capaz de descomponer tareas complejas en pasos ejecutables y tomar decisiones basándose en el contexto.</p>
 <hr/>
-<h2>ReAct 框架</h2>
+<h2>framework ReAct</h2>
 <p>ReAct (Reasoning + Acting) es un marco que combina el razonamiento con la acción.</p>
 <p>En el modo ReAct, el Agente alterna entre razonamiento y acción, formando un ciclo cerrado.</p>
 <p>El razonamiento guía las acciones, y los resultados de estas retroalimentan el proceso de razonamiento, en un ciclo continuo.</p>
 <p>ReAct simula el proceso humano de resolución de problemas: pensar antes de actuar, observar los resultados después de actuar y luego continuar razonando con base en la nueva información.</p>
-<h3>工作原理</h3>
+<h3>Principio de funcionamiento</h3>
 <p>La idea central de ReAct puede resumirse como un ciclo de tres fases:</p>
 <p>Primer paso, fase de razonamiento. El Agente genera el pensamiento de acción para el siguiente paso basándose en el contexto actual.</p>
 <p>Segundo paso, fase de acción. El Agente ejecuta la herramienta o acción seleccionada.</p>
 <p>Tercer paso, fase de observación. El agente recibe el resultado de la acción, actualiza el contexto y regresa al primer paso para continuar el razonamiento.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <p>A continuación se muestra una implementación simplificada de un Agente ReAct:</p>
 <div class="example">
 <h2 class="example">Implementación básica del agente ReAct</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> ReActAgent:<br/>
-    <span style="color: #a11;">"""<br/>ReAct 框架的 Agent 实现<br/>核心机制：推理 -&gt; 行动 -&gt; 观察 -&gt; 推理（循环）<br/>
+    <span style="color: #a11;">"""<br/>Implementación del Agent en el marco ReAct<br/>Mecanismo central: razonamiento -&gt; acción -&gt; observación -&gt; razonamiento (bucle)<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> llm<span style="color: Gray;">,</span> tools<span style="color: Gray;">,</span> max_iterations<span style="color: Gray;">=</span><span style="color: Maroon;">5</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># LLM 实例，用于推理和生成</span><br/>
+        <span style="color: #a50"># Instancia de LLM, utilizada para inferencia y generación</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span> <span style="color: Gray;">=</span> llm<br/>
-        <span style="color: #a50"># 可用工具列表</span><br/>
+        <span style="color: #a50"># Lista de herramientas disponibles</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">tools</span> <span style="color: Gray;">=</span> tools<br/>
-        <span style="color: #a50"># 最大迭代次数，防止无限循环</span><br/>
+        <span style="color: #a50"># Número máximo de iteraciones para evitar bucles infinitos</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">max_iterations</span> <span style="color: Gray;">=</span> max_iterations<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> run<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>执行 ReAct 循环<br/>:param task: 用户任务描述<br/>:return: 执行结果<br/>
+        <span style="color: #a11;">"""<br/>Ejecutar el bucle ReAct<br/>:param task: Descripción de la tarea del usuario.<br/>:return: Resultado de la ejecución<br/>
         """</span><br/>
-        <span style="color: #a50"># 初始化上下文，包含任务和历史信息</span><br/>
+        <span style="color: #a50"># Inicializar el contexto, incluyendo la tarea y la información histórica</span><br/>
         context <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"task"</span>: task<span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"steps"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>      <span style="color: #a50"># 已执行步骤的记录</span><br/>
-            <span style="color: #a11;">"observations"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">]</span>  <span style="color: #a50"># 观察结果的记录</span><br/>
+            <span style="color: #a11;">"steps"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>      <span style="color: #a50"># Registro de pasos ejecutados</span><br/>
+            <span style="color: #a11;">"observations"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">]</span>  <span style="color: #a50"># Registro de observaciones</span><br/>
         <span style="color: Olive;">}</span><br/>
         <br/>
         <span style="color: Green;font-weight:bold;">for</span> i <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">max_iterations</span><span style="color: Olive;">)</span>:<br/>
-            <span style="color: #a50"># 阶段一：推理 - 基于当前上下文生成下一步行动</span><br/>
+            <span style="color: #a50"># Etapa 1: Razonamiento - Generar la siguiente acción basada en el contexto actual</span><br/>
             reasoning <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span>.<span style="color: #05a;">reason</span><span style="color: Olive;">(</span>context<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 判断是否需要执行工具，还是直接返回答案</span><br/>
+            <span style="color: #a50"># Determinar si es necesario ejecutar la herramienta o devolver la respuesta directamente</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> reasoning.<span style="color: #05a;">needs_action</span>:<br/>
-                <span style="color: #a50"># 选择要使用的工具</span><br/>
+                <span style="color: #a50"># Seleccionar la herramienta a utilizar</span><br/>
                 action <span style="color: Gray;">=</span> reasoning.<span style="color: #05a;">select_tool</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">tools</span><span style="color: Olive;">)</span><br/>
-                <span style="color: #a50"># 执行工具并获取观察结果</span><br/>
+                <span style="color: #a50"># Ejecutar la herramienta y obtener las observaciones</span><br/>
                 observation <span style="color: Gray;">=</span> action.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span>reasoning.<span style="color: #05a;">tool_input</span><span style="color: Olive;">)</span><br/>
-                <span style="color: #a50"># 将观察结果添加到上下文</span><br/>
+                <span style="color: #a50"># Agregar las observaciones al contexto</span><br/>
                 context<span style="color: Olive;">[</span><span style="color: #a11;">"observations"</span><span style="color: Olive;">]</span>.<span style="color: #05a;">append</span><span style="color: Olive;">(</span>observation<span style="color: Olive;">)</span><br/>
             <span style="color: Green;font-weight:bold;">else</span>:<br/>
-                <span style="color: #a50"># 不需要行动，直接返回推理得出的答案</span><br/>
+                <span style="color: #a50"># No se necesita acción, devolver directamente la respuesta obtenida por razonamiento.</span><br/>
                 <span style="color: Green;font-weight:bold;">return</span> reasoning.<span style="color: #05a;">answer</span><br/>
         <br/>
-        <span style="color: #a50"># 达到最大迭代次数仍未完成</span><br/>
-        <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"达到最大迭代次数限制"</span><br/>
+        <span style="color: #a50"># Se alcanzó el número máximo de iteraciones sin completar</span><br/>
+        <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">Se alcanzó el límite máximo de iteraciones</span><br/>
 </div>
 </div>
 <h3>Escenarios de aplicación típicos</h3>
@@ -233,7 +233,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Resolución de problemas complejos: el problema no puede resolverse en un solo paso y requiere múltiples pasos intermedios.</p>
 <blockquote><p>Nota: la ventaja del modo ReAct radica en su flexibilidad, ya que puede ajustar dinámicamente las acciones posteriores según el resultado de cada paso. Pero esto también significa que la ruta de ejecución puede ser inestable, y resulta adecuado para tareas que requieren exploración.</p></blockquote>
 <hr/>
-<h2>思维链（Chain of Thought, CoT）</h2>
+<h2>cadena de pensamiento (Chain of Thought, CoT)</h2>
 <p>La cadena de pensamiento es una técnica que impulsa al modelo a mostrar el proceso de razonamiento paso a paso.</p>
 <p>CoT no hace que el modelo dé la respuesta directamente, sino que lo guía para que primero muestre los pasos de razonamiento y luego llegue a la conclusión final.</p>
 <h3>¿Por qué es necesaria la cadena de pensamiento?</h3>
@@ -246,37 +246,37 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Zero-shot CoT es un método que puede estimular la capacidad de razonamiento paso a paso sin necesidad de ejemplos.</p>
 <p>Solo es necesario añadir al final del prompt una frase de activación como "pensemos paso a paso".</p>
 <div class="example">
-<h2 class="example">Zero-shot CoT 示例</h2>
+<h2 class="example">Ejemplo de Zero-shot CoT</h2>
 <div class="example_code">
-<span style="color: #a50"># Zero-shot CoT 的提示词模板</span><br/>
-prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>问题：小明有 5 个苹果，小红给了他 3 个，小明吃掉了 2 个，还剩多少个？<br/>让我们一步一步地思考：<br/>
+<span style="color: #a50"># Plantilla de prompt para Zero-shot CoT</span><br/>
+prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Problema: Xiaoming tiene 5 manzanas, Xiaohong le dio 3, Xiaoming se comió 2, ¿cuántas quedan?<br/>Pensemos paso a paso:<br/>
 """</span><br/>
 <br/>
-<span style="color: #a50"># 调用语言模型</span><br/>
+<span style="color: #a50"># Llamar al modelo de lenguaje</span><br/>
 response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 模型输出示例：</span><br/>
-<span style="color: #a50"># 第一步：计算小明收到苹果后的总数</span><br/>
-<span style="color: #a50"># 小明原来有 5 个苹果，小红给了他 3 个</span><br/>
-<span style="color: #a50"># 5 + 3 = 8 个</span><br/>
+<span style="color: #a50"># Ejemplo de salida del modelo:</span><br/>
+<span style="color: #a50"># Primer paso: calcular el total de manzanas que recibió Xiao Ming</span><br/>
+<span style="color: #a50"># Xiaoming tenía 5 manzanas, Xiaohong le dio 3.</span><br/>
+<span style="color: #a50"># 5 + 3 = 8</span><br/>
 <span style="color: #a50">#</span><br/>
-<span style="color: #a50"># 第二步：计算吃掉后的数量</span><br/>
-<span style="color: #a50"># 小明吃掉了 2 个</span><br/>
-<span style="color: #a50"># 8 - 2 = 6 个</span><br/>
+<span style="color: #a50"># Segundo paso: calcular la cantidad después de comer</span><br/>
+<span style="color: #a50"># Xiaoming se comió 2</span><br/>
+<span style="color: #a50"># 8 - 2 = 6 unidades</span><br/>
 <span style="color: #a50">#</span><br/>
-<span style="color: #a50"># 结论：还剩 6 个苹果</span><br/>
+<span style="color: #a50"># Conclusión: quedan 6 manzanas</span><br/>
 </div>
 </div>
 <h3>Few-shot CoT</h3>
 <p>El Few-shot CoT, al proporcionar ejemplos con procesos de razonamiento detallados, ayuda al modelo a aprender patrones de razonamiento específicos.</p>
 <p>Cuando el Zero-shot CoT no da buenos resultados, se puede probar con Few-shot CoT.</p>
 <div class="example">
-<h2 class="example">Few-shot CoT 示例</h2>
+<h2 class="example">Ejemplo de Few-shot CoT</h2>
 <div class="example_code">
-<span style="color: #a50"># Few-shot CoT 的提示词模板</span><br/>
-prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>示例 1：<br/>问题：小张有 10 元钱，买了 3 本书，每本 2 元，还剩多少？<br/>让我们一步一步地思考：<br/>- 小张原来有 10 元<br/>- 每本书 2 元，买了 3 本，花费 3 × 2 = 6 元<br/>- 10 - 6 = 4 元<br/>答案：还剩 4 元<br/>
-<br/>示例 2：<br/>问题：一只猫每小时抓 2 只老鼠，8 小时抓了多少只？<br/>让我们一步一步地思考：<br/>- 每小时抓 2 只老鼠<br/>- 8 小时抓了 8 × 2 = 16 只<br/>答案：抓了 16 只<br/>
-<br/>问题：{user_question}<br/>让我们一步一步地思考：<br/>
+<span style="color: #a50"># Plantilla de prompt de Few-shot CoT</span><br/>
+prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Ejemplo 1:<br/>Problema: Xiaozhang tiene 10 yuanes, compró 3 libros, cada uno a 2 yuanes, ¿cuánto le queda?<br/>Pensemos paso a paso:<br/>- Xiao Zhang tenía originalmente 10 yuanes<br/>- Cada libro cuesta 2 yuanes, se compran 3 libros, el gasto es 3 × 2 = 6 yuanes<br/>- 10 - 6 = 4 yuan<br/>Respuesta: quedan 4 yuanes<br/>
+<br/>Ejemplo 2:<br/>Problema: un gato atrapa 2 ratones por hora, ¿cuántos atrapa en 8 horas?<br/>Pensemos paso a paso:<br/>- Atrapa 2 ratones por hora<br/>- En 8 horas capturó 8 × 2 = 16<br/>Respuesta: atrapé 16<br/>
+<br/>Pregunta: {user_question}<br/>Pensemos paso a paso:<br/>
 """</span><br/>
 <br/>
 response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
@@ -295,63 +295,63 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <h3>Diferencias con la cadena de pensamiento</h3>
 <p>CoT adopta un razonamiento lineal, donde cada paso depende de la conclusión del paso anterior; es adecuado para problemas con una ruta clara.</p>
 <p>ToT adopta un razonamiento espacial, considerando simultáneamente múltiples ramas posibles; es adecuado para problemas que requieren exploración y planificación.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
 <h2 class="example">Implementación básica del agente ToT</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> ToTAgent:<br/>
-    <span style="color: #a11;">"""<br/>Tree of Thoughts Agent 实现<br/>核心机制：在每个节点生成多个候选分支，评估后选择最优继续<br/>
+    <span style="color: #a11;">"""<br/>Implementación del agente Tree of Thoughts<br/>Mecanismo central: generar múltiples ramas candidatas en cada nodo, evaluarlas y seleccionar la mejor para continuar<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> llm<span style="color: Gray;">,</span> max_depth<span style="color: Gray;">=</span><span style="color: Maroon;">4</span><span style="color: Gray;">,</span> beam_size<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># LLM 实例</span><br/>
+        <span style="color: #a50"># Instancia de LLM</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span> <span style="color: Gray;">=</span> llm<br/>
-        <span style="color: #a50"># 最大搜索深度</span><br/>
+        <span style="color: #a50"># Profundidad máxima de búsqueda</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">max_depth</span> <span style="color: Gray;">=</span> max_depth<br/>
-        <span style="color: #a50"># 每层保留的候选节点数量（beam width）</span><br/>
+        <span style="color: #a50"># Número de nodos candidatos retenidos por capa (beam width)</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">beam_size</span> <span style="color: Gray;">=</span> beam_size<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> solve<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> problem<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>使用 ToT 框架解决问题<br/>:param problem: 问题描述<br/>:return: 最优解<br/>
+        <span style="color: #a11;">"""<br/>Usar el marco ToT para resolver el problema<br/>:param problem: descripción del problema<br/>:return: la solución óptima<br/>
         """</span><br/>
-        <span style="color: #a50"># 创建根节点，包含问题作为初始状态</span><br/>
+        <span style="color: #a50"># Crear el nodo raíz, conteniendo la pregunta como estado inicial</span><br/>
         root <span style="color: Gray;">=</span> ThoughtNode<span style="color: Olive;">(</span>problem<span style="color: Gray;">,</span> depth<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><br/>
-        <span style="color: #a50"># 初始化前沿节点列表（待扩展的节点）</span><br/>
+        <span style="color: #a50"># Inicializar la lista de nodos frontera (nodos a expandir).</span><br/>
         frontier <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>root<span style="color: Olive;">]</span><br/>
         <br/>
-        <span style="color: #a50"># 逐层扩展</span><br/>
+        <span style="color: #a50"># Expandir por capas</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> depth <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">max_depth</span><span style="color: Olive;">)</span>:<br/>
-            <span style="color: #a50"># 存储所有候选节点</span><br/>
+            <span style="color: #a50"># Almacenar todos los nodos candidatos</span><br/>
             all_candidates <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
             <br/>
-            <span style="color: #a50"># 遍历所有前沿节点</span><br/>
+            <span style="color: #a50"># Recorrer todos los nodos frontera</span><br/>
             <span style="color: Green;font-weight:bold;">for</span> node <span style="color: Green;font-weight:bold;">in</span> frontier:<br/>
-                <span style="color: #a50"># 为当前节点生成多个候选下一步</span><br/>
+                <span style="color: #a50"># Generar múltiples candidatos para el siguiente paso del nodo actual</span><br/>
                 candidates <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span>.<span style="color: #05a;">generate_thoughts</span><span style="color: Olive;">(</span><br/>
-                    node.<span style="color: #05a;">content</span><span style="color: Gray;">,</span>    <span style="color: #a50"># 当前节点内容</span><br/>
-                    n<span style="color: Gray;">=</span><span style="color: Teal;">self</span>.<span style="color: #05a;">beam_size</span>  <span style="color: #a50"># 生成数量</span><br/>
+                    node.<span style="color: #05a;">content</span><span style="color: Gray;">,</span>    <span style="color: #a50"># Contenido del nodo actual</span><br/>
+                    n<span style="color: Gray;">=</span><span style="color: Teal;">self</span>.<span style="color: #05a;">beam_size</span>  <span style="color: #a50"># Generar cantidad</span><br/>
                 <span style="color: Olive;">)</span><br/>
-                <span style="color: #a50"># 创建新节点并加入候选列表</span><br/>
+                <span style="color: #a50"># Crear un nuevo nodo y agregarlo a la lista de candidatos</span><br/>
                 <span style="color: Green;font-weight:bold;">for</span> cand <span style="color: Green;font-weight:bold;">in</span> candidates:<br/>
                     all_candidates.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><br/>
                         ThoughtNode<span style="color: Olive;">(</span>cand<span style="color: Gray;">,</span> depth + <span style="color: Maroon;">1</span><span style="color: Gray;">,</span> parent<span style="color: Gray;">=</span>node<span style="color: Olive;">)</span><br/>
                     <span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 评估所有候选节点</span><br/>
+            <span style="color: #a50"># Evaluar todos los nodos candidatos</span><br/>
             evaluated <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">evaluator</span>.<span style="color: #05a;">rank</span><span style="color: Olive;">(</span>all_candidates<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 选择最优的 beam_size 个节点作为下一轮前沿</span><br/>
+            <span style="color: #a50"># Seleccionar los beam_size nodos óptimos como frontera de la siguiente ronda</span><br/>
             frontier <span style="color: Gray;">=</span> evaluated<span style="color: Olive;">[</span>:<span style="color: Teal;">self</span>.<span style="color: #05a;">beam_size</span><span style="color: Olive;">]</span><br/>
             <br/>
-            <span style="color: #a50"># 检查是否找到解决方案</span><br/>
+            <span style="color: #a50"># Verificar si se encontró una solución</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">is_solution</span><span style="color: Olive;">(</span>frontier<span style="color: Olive;">)</span>:<br/>
                 <span style="color: Green;font-weight:bold;">break</span><br/>
         <br/>
-        <span style="color: #a50"># 回溯找到最优解</span><br/>
+        <span style="color: #a50"># Retroceder para encontrar la solución óptima</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">backtrack_best</span><span style="color: Olive;">(</span>frontier<span style="color: Olive;">)</span><br/>
 </div>
 </div>
-<h3>应用场景</h3>
+<h3>Escenarios de aplicación</h3>
 <p>ToT es especialmente adecuado para escenarios que requieren tomar decisiones o planificar:</p>
 <p>Escritura creativa: genera múltiples direcciones de desarrollo para una historia, evalúa y selecciona la mejor.</p>
 <p>Planificación estratégica: evaluar los resultados potenciales de múltiples opciones de acción.</p>
@@ -360,7 +360,7 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <h2>Planificación de tareas y MCTS</h2>
 <p>La búsqueda en árbol de Monte Carlo (Monte Carlo Tree Search, MCTS) es un algoritmo de búsqueda heurística para problemas de decisión complejos.</p>
 <p>MCTS tiene una amplia aplicación en la planificación de agentes, especialmente adecuado para IA de juegos y planificación de tareas complejas.</p>
-<h3>核心思想</h3>
+<h3>Idea central</h3>
 <p>MCTS evalúa el valor potencial de cada nodo de decisión mediante la simulación de juegos aleatorios.</p>
 <p>No necesita evaluar todas las rutas posibles, sino que guía la dirección de la búsqueda mediante muestreo y estadísticas.</p>
 <h3>Los cuatro pasos del MCTS</h3>
@@ -369,43 +369,43 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <p>Segundo paso, expansión (Expansion): se añaden uno o más nodos hijos al nodo hoja.</p>
 <p>Tercer paso, simulación (Simulation): desde el nuevo nodo, se simula aleatoriamente el juego hasta el final.</p>
 <p>Cuarto paso, retropropagación (Backpropagation): actualizar la información estadística de todos los nodos en la trayectoria simulada.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
 <h2 class="example">Implementación del planificador MCTS</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">math</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> MCTSNode:<br/>
-    <span style="color: #a11;">"""<br/>MCTS 树节点<br/>存储节点状态、统计数据和子节点关系<br/>
+    <span style="color: #a11;">"""<br/>Nodo del árbol MCTS<br/>Almacena el estado del nodo, los datos estadísticos y las relaciones de nodos hijos<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> state<span style="color: Gray;">,</span> parent<span style="color: Gray;">=</span><span style="color: Teal;">None</span><span style="color: Gray;">,</span> action<span style="color: Gray;">=</span><span style="color: Teal;">None</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 当前状态</span><br/>
+        <span style="color: #a50"># Estado actual</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">state</span> <span style="color: Gray;">=</span> state<br/>
-        <span style="color: #a50"># 父节点引用</span><br/>
+        <span style="color: #a50">Referencia al nodo padre</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">parent</span> <span style="color: Gray;">=</span> parent<br/>
-        <span style="color: #a50"># 从父节点到达此节点的动作</span><br/>
+        <span style="color: #a50"># Acción para llegar a este nodo desde el nodo padre</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">action</span> <span style="color: Gray;">=</span> action<br/>
-        <span style="color: #a50"># 子节点列表</span><br/>
+        <span style="color: #a50">Lista de nodos hijos</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">children</span> <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
-        <span style="color: #a50"># 此节点的访问次数</span><br/>
+        <span style="color: #a50"># Número de visitas de este nodo</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">visit_count</span> <span style="color: Gray;">=</span> <span style="color: Maroon;">0</span><br/>
-        <span style="color: #a50"># 此节点的累计奖励值</span><br/>
+        <span style="color: #a50"># Valor de recompensa acumulada de este nodo</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">reward</span> <span style="color: Gray;">=</span> <span style="color: Maroon;">0.0</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> is_fully_expanded<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""检查是否已扩展所有可能的子节点"""</span><br/>
+        <span style="color: #a11;">"""Comprobar si se han expandido todos los posibles nodos hijos"""</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">len</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">children</span><span style="color: Olive;">)</span> <span style="color: Gray;">&gt;</span> <span style="color: Maroon;">0</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> is_terminal<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""检查是否为终止节点（游戏结束或目标达成）"""</span><br/>
+        <span style="color: #a11;">"""Comprueba si es un nodo terminal (juego terminado o objetivo alcanzado)"""</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">state</span>.<span style="color: #05a;">is_terminal</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> uct_child<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>使用 UCT 公式选择最优子节点<br/>
-        UCT = reward/visits + C * sqrt(ln(parent_visits)/visits)<br/>C 是探索常数，通常设为 sqrt(2)<br/>
+        <span style="color: #a11;">"""<br/>Seleccionar el subnodo óptimo utilizando la fórmula UCT<br/>
+        UCT = reward/visits + C * sqrt(ln(parent_visits)/visits)<br/>C es la constante de exploración, normalmente establecida en sqrt(2)<br/>
         """</span><br/>
-        <span style="color: #a50"># 探索常数，平衡探索与利用</span><br/>
+        <span style="color: #a50"># Constante de exploración, equilibrando exploración y explotación</span><br/>
         C <span style="color: Gray;">=</span> <span style="color: #05a;">math</span>.<span style="color: #05a;">sqrt</span><span style="color: Olive;">(</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span><br/>
         <br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">max</span><span style="color: Olive;">(</span><br/>
@@ -416,70 +416,70 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> MCTSPlanner:<br/>
-    <span style="color: #a11;">"""<br/>MCTS 规划器<br/>使用蒙特卡洛树搜索为 Agent 生成行动规划<br/>
+    <span style="color: #a11;">"""<br/>Planificador MCTS<br/>Usar la búsqueda de árbol de Monte Carlo para generar la planificación de acciones para el agente.<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> simulation_limit<span style="color: Gray;">=</span><span style="color: Maroon;">1000</span><span style="color: Gray;">,</span> exploration_constant<span style="color: Gray;">=</span><span style="color: Maroon;">1.41</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 最大模拟次数</span><br/>
+        <span style="color: #a50"># Número máximo de simulaciones</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">simulation_limit</span> <span style="color: Gray;">=</span> simulation_limit<br/>
-        <span style="color: #a50"># 探索常数</span><br/>
+        <span style="color: #a50"># Explorar constantes</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">exploration_constant</span> <span style="color: Gray;">=</span> exploration_constant<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> plan<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> initial_state<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>从初始状态开始规划<br/>:param initial_state: 初始状态<br/>:return: 最优动作<br/>
+        <span style="color: #a11;">"""<br/>Planificar desde el estado inicial<br/>:param initial_state: estado inicial<br/>:return: acción óptima<br/>
         """</span><br/>
-        <span style="color: #a50"># 创建根节点</span><br/>
+        <span style="color: #a50">Crear nodo raíz</span><br/>
         root <span style="color: Gray;">=</span> MCTSNode<span style="color: Olive;">(</span>initial_state<span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 执行多次模拟</span><br/>
+        <span style="color: #a50"># Ejecutar múltiples simulaciones</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> _ <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">simulation_limit</span><span style="color: Olive;">)</span>:<br/>
-            <span style="color: #a50"># 1. 选择：从根节点向下选择最优子节点直到叶节点</span><br/>
+            <span style="color: #a50"># 1. Selección: desde el nodo raíz, selecciona hacia abajo el mejor nodo hijo hasta el nodo hoja</span><br/>
             node <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>._selection<span style="color: Olive;">(</span>root<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 2. 扩展：如果不是终止节点，扩展一个新节点</span><br/>
+            <span style="color: #a50"># 2. Expansión: si no es un nodo terminal, expandir un nuevo nodo</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> node.<span style="color: #05a;">is_terminal</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
                 node <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>._expansion<span style="color: Olive;">(</span>node<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 3. 模拟：从新节点开始随机模拟到终止</span><br/>
+            <span style="color: #a50"># 3. Simulación: desde un nuevo nodo, simular aleatoriamente hasta la terminación</span><br/>
             reward <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>._simulation<span style="color: Olive;">(</span>node<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 4. 反向传播：更新路径上所有节点的统计</span><br/>
+            <span style="color: #a50"># 4. Retropropagación: actualizar las estadísticas de todos los nodos en la ruta</span><br/>
             <span style="color: Teal;">self</span>._backpropagation<span style="color: Olive;">(</span>node<span style="color: Gray;">,</span> reward<span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 返回根节点最优子节点对应的动作</span><br/>
+        <span style="color: #a50"># Devuelve la acción correspondiente al nodo hijo óptimo del nodo raíz</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> root.<span style="color: #05a;">best_child</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>.<span style="color: #05a;">action</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _selection<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> node<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""选择阶段：选择最优子节点"""</span><br/>
+        <span style="color: #a11;">"""Fase de selección: seleccionar el mejor subnodo"""</span><br/>
         <span style="color: Green;font-weight:bold;">while</span> node.<span style="color: #05a;">is_fully_expanded</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">and</span> <span style="color: Green;font-weight:bold;">not</span> node.<span style="color: #05a;">is_terminal</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
             node <span style="color: Gray;">=</span> node.<span style="color: #05a;">uct_child</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> node<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _expansion<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> node<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""扩展阶段：添加新子节点"""</span><br/>
-        <span style="color: #a50"># 生成所有可能的动作</span><br/>
+        <span style="color: #a11;">"""Fase de expansión: añadir nuevo nodo hijo"""</span><br/>
+        <span style="color: #a50"># Generar todas las acciones posibles</span><br/>
         possible_actions <span style="color: Gray;">=</span> node.<span style="color: #05a;">state</span>.<span style="color: #05a;">get_possible_actions</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-        <span style="color: #a50"># 为每个动作创建一个子节点</span><br/>
+        <span style="color: #a50"># Crear un nodo hijo para cada acción</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> action <span style="color: Green;font-weight:bold;">in</span> possible_actions:<br/>
             new_state <span style="color: Gray;">=</span> node.<span style="color: #05a;">state</span>.<span style="color: #05a;">apply_action</span><span style="color: Olive;">(</span>action<span style="color: Olive;">)</span><br/>
             child <span style="color: Gray;">=</span> MCTSNode<span style="color: Olive;">(</span>new_state<span style="color: Gray;">,</span> parent<span style="color: Gray;">=</span>node<span style="color: Gray;">,</span> action<span style="color: Gray;">=</span>action<span style="color: Olive;">)</span><br/>
             node.<span style="color: #05a;">children</span>.<span style="color: #05a;">append</span><span style="color: Olive;">(</span>child<span style="color: Olive;">)</span><br/>
-        <span style="color: #a50"># 返回随机一个子节点（也可使用确定性策略）</span><br/>
+        <span style="color: #a50"># Devolver un nodo hijo aleatorio (también se puede usar una estrategia determinista)</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> node.<span style="color: #05a;">children</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _simulation<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> node<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""模拟阶段：随机模拟到游戏结束"""</span><br/>
+        <span style="color: #a11;">"""Fase de simulación: simulación aleatoria hasta el final del juego"""</span><br/>
         state <span style="color: Gray;">=</span> node.<span style="color: #05a;">state</span><br/>
         <span style="color: Green;font-weight:bold;">while</span> <span style="color: Green;font-weight:bold;">not</span> state.<span style="color: #05a;">is_terminal</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-            <span style="color: #a50"># 随机选择动作</span><br/>
+            <span style="color: #a50"># Selección aleatoria de acciones</span><br/>
             actions <span style="color: Gray;">=</span> state.<span style="color: #05a;">get_possible_actions</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
             action <span style="color: Gray;">=</span> <span style="color: #05a;">random</span>.<span style="color: #05a;">choice</span><span style="color: Olive;">(</span>actions<span style="color: Olive;">)</span><br/>
             state <span style="color: Gray;">=</span> state.<span style="color: #05a;">apply_action</span><span style="color: Olive;">(</span>action<span style="color: Olive;">)</span><br/>
-        <span style="color: #a50"># 返回最终奖励</span><br/>
+        <span style="color: #a50"># Devolver la recompensa final</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> state.<span style="color: #05a;">get_reward</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _backpropagation<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> node<span style="color: Gray;">,</span> reward<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""反向传播：更新统计信息"""</span><br/>
+        <span style="color: #a11;">"""Retropropagación: actualizar las estadísticas"""</span><br/>
         <span style="color: Green;font-weight:bold;">while</span> node <span style="color: Green;font-weight:bold;">is</span> <span style="color: Green;font-weight:bold;">not</span> <span style="color: Teal;">None</span>:<br/>
             node.<span style="color: #05a;">visit_count</span> +<span style="color: Gray;">=</span> <span style="color: Maroon;">1</span><br/>
             node.<span style="color: #05a;">reward</span> +<span style="color: Gray;">=</span> reward<br/>
@@ -491,79 +491,79 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <h2>Reflexion (autorreflexión)</h2>
 <p>Reflexion es una técnica que dota al Agente de capacidad de autorreflexión.</p>
 <p>Al añadir un mecanismo de reflexión al Agente, este puede analizar las causas del error después de un fallo, ajustar la estrategia e intentarlo de nuevo.</p>
-<h3>核心思想</h3>
+<h3>Idea central</h3>
 <p>El agente no solo ejecuta acciones, sino que también observa los resultados y reflexiona: ¿por qué fallé? ¿cómo debería mejorar la próxima vez?</p>
 <p>Esta capacidad es crucial para el aprendizaje continuo y la automejora.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
-<h2 class="example">Reflexion Agent 实现</h2>
+<h2 class="example">Implementación del Agente Reflexion</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> ReflexionAgent:<br/>
-    <span style="color: #a11;">"""<br/>具有自我反思能力的 Agent<br/>核心机制：执行 -&gt; 评审 -&gt; 反思 -&gt; 重试<br/>
+    <span style="color: #a11;">"""<br/>Agente con capacidad de autorreflexión<br/>Mecanismo central: Ejecutar -&gt; Evaluar -&gt; Reflexionar -&gt; Reintentar<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> actor<span style="color: Gray;">,</span> reviewer<span style="color: Gray;">,</span> max_retries<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 执行器：负责执行具体任务</span><br/>
+        <span style="color: #a50"># Ejecutor: responsable de ejecutar tareas específicas</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">actor</span> <span style="color: Gray;">=</span> actor<br/>
-        <span style="color: #a50"># 评审器：负责评估执行结果</span><br/>
+        <span style="color: #a50"># Evaluador: responsable de evaluar los resultados de la ejecución</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">reviewer</span> <span style="color: Gray;">=</span> reviewer<br/>
-        <span style="color: #a50"># 最大重试次数</span><br/>
+        <span style="color: #a50"># Número máximo de reintentos</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">max_retries</span> <span style="color: Gray;">=</span> max_retries<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> run<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>执行带自我反思的任务<br/>:param task: 任务描述<br/>:return: 执行结果<br/>
+        <span style="color: #a11;">"""<br/>Ejecutar una tarea con autorreflexión<br/>:param task: descripción de la tarea<br/>:return: Resultado de la ejecución<br/>
         """</span><br/>
-        <span style="color: #a50"># 维护执行历史</span><br/>
+        <span style="color: #a50"># Mantener el historial de ejecución</span><br/>
         history <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
         <br/>
         <span style="color: Green;font-weight:bold;">for</span> attempt <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">max_retries</span><span style="color: Olive;">)</span>:<br/>
-            <span style="color: #a50"># 阶段一：尝试执行任务</span><br/>
+            <span style="color: #a50"># Fase 1: Intentar ejecutar la tarea</span><br/>
             result <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">actor</span>.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> history<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 记录本次尝试</span><br/>
+            <span style="color: #a50"># Registrar este intento</span><br/>
             history.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
                 <span style="color: #a11;">"attempt"</span>: attempt<span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"result"</span>: result<br/>
             <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 阶段二：评审结果</span><br/>
+            <span style="color: #a50"># Fase 2: Revisar resultados</span><br/>
             feedback <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">reviewer</span>.<span style="color: #05a;">evaluate</span><span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> result<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 阶段三：检查是否成功</span><br/>
+            <span style="color: #a50"># Fase 3: Verificar si se logró</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> feedback.<span style="color: #05a;">is_success</span>:<br/>
                 <span style="color: Green;font-weight:bold;">return</span> result<br/>
             <br/>
-            <span style="color: #a50"># 阶段四：反思失败原因</span><br/>
-            <span style="color: #a50"># 生成新的策略提示，指导下一次尝试</span><br/>
+            <span style="color: #a50"># Fase 4: Reflexionar sobre las causas del fracaso</span><br/>
+            <span style="color: #a50"># Generar una nueva indicación de estrategia para guiar el próximo intento</span><br/>
             reflection <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">reviewer</span>.<span style="color: #05a;">reflect</span><span style="color: Olive;">(</span><br/>
-                task<span style="color: Gray;">,</span>           <span style="color: #a50"># 原始任务</span><br/>
-                result<span style="color: Gray;">,</span>         <span style="color: #a50"># 失败结果</span><br/>
-                feedback        <span style="color: #a50"># 评审反馈</span><br/>
+                task<span style="color: Gray;">,</span>           <span style="color: #a50"># Tarea original</span><br/>
+                result<span style="color: Gray;">,</span>         <span style="color: #a50"># Resultado fallido</span><br/>
+                feedback        <span style="color: #a50"># Comentarios de revisión</span><br/>
             <span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 将反思结果添加到历史，供下次尝试参考</span><br/>
+            <span style="color: #a50"># Agregar el resultado de la reflexión al historial para referencia en el próximo intento</span><br/>
             history.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
                 <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"reflection"</span><span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"content"</span>: reflection<br/>
             <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 所有重试都失败，返回历史记录</span><br/>
+        <span style="color: #a50"># Si todos los reintentos fallan, devolver el historial</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> history<br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> Reviewer:<br/>
-    <span style="color: #a11;">"""评审器：评估执行结果并生成反思"""</span><br/>
+    <span style="color: #a11;">"""Evaluador: evalúa los resultados de la ejecución y genera reflexiones"""</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> evaluate<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Gray;">,</span> result<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>评估执行结果<br/>:return: 包含是否成功及详细反馈的对象<br/>
+        <span style="color: #a11;">"""<br/>Evaluar el resultado de ejecución<br/>:return: el objeto que contiene si fue exitoso y la retroalimentación detallada.<br/>
         """</span><br/>
-        <span style="color: #a50"># 检查结果是否满足任务要求</span><br/>
+        <span style="color: #a50"># Comprobar si el resultado cumple con los requisitos de la tarea</span><br/>
         is_success <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">check_success</span><span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> result<span style="color: Olive;">)</span><br/>
         <br/>
         <span style="color: Green;font-weight:bold;">if</span> is_success:<br/>
             <span style="color: Green;font-weight:bold;">return</span> EvaluationResult<span style="color: Olive;">(</span>is_success<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">else</span>:<br/>
-            <span style="color: #a50"># 生成失败原因分析</span><br/>
+            <span style="color: #a50"># Generar análisis de la causa del fallo</span><br/>
             failure_reasons <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">analyze_failures</span><span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> result<span style="color: Olive;">)</span><br/>
             <span style="color: Green;font-weight:bold;">return</span> EvaluationResult<span style="color: Olive;">(</span><br/>
                 is_success<span style="color: Gray;">=</span><span style="color: Teal;">False</span><span style="color: Gray;">,</span><br/>
@@ -571,15 +571,15 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
             <span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> reflect<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Gray;">,</span> result<span style="color: Gray;">,</span> feedback<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>生成反思内容<br/>帮助 Actor 理解失败原因并改进策略<br/>
+        <span style="color: #a11;">"""<br/>Generar contenido de reflexión<br/>Ayudar al Actor a entender las causas del fallo y mejorar la estrategia<br/>
         """</span><br/>
-        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>任务：{task}<br/>执行结果：{result}<br/>失败原因：{feedback.reasons}<br/>
-<br/>请分析失败原因，并给出改进建议。<br/>重点说明：<br/>1. 哪里出了问题？<br/>2. 下次应该如何避免？<br/>3. 需要改变什么策略？<br/>
+        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>Tarea: {task}<br/>Resultado de ejecución: {result}<br/>Motivo del fallo: {feedback.reasons}<br/>
+<br/>Analice las causas del fallo y proporcione sugerencias de mejora.<br/>Notas importantes:<br/>1. ¿Qué salió mal?<br/>2. ¿Cómo debería evitarse la próxima vez?<br/>3. ¿Qué estrategia se debe cambiar?<br/>
 """</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
 </div>
 </div>
-<h3>应用场景</h3>
+<h3>Escenarios de aplicación</h3>
 <p>Reflexion es especialmente adecuado para los siguientes escenarios:</p>
 <p>Tareas que requieren mejora continua, como sistemas de diálogo, generación de código, etc.</p>
 <p>Escenarios donde el costo del error es alto pero el costo de reintentar es bajo.</p>
@@ -594,19 +594,19 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <h2 class="example">Descomposición recursiva de tareas</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">def</span> decompose<span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> is_executable_fn<span style="color: Gray;">,</span> decompose_fn<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""<br/>递归分解任务<br/>:param task: 要分解的任务<br/>:param is_executable_fn: 判断任务是否可直接执行的函数<br/>:param decompose_fn: 分解任务的函数<br/>:return: 可执行任务列表<br/>
+    <span style="color: #a11;">"""<br/>Descomponer tareas recursivamente<br/>:param task: La tarea a descomponer.<br/>:param is_executable_fn: función que determina si la tarea se puede ejecutar directamente<br/>:param decompose_fn: función que descompone la tarea<br/>:return: lista de tareas ejecutables<br/>
     """</span><br/>
-    <span style="color: #a50"># 如果任务可以直接执行，直接返回</span><br/>
+    <span style="color: #a50"># Si la tarea puede ejecutarse directamente, retornar directamente</span><br/>
     <span style="color: Green;font-weight:bold;">if</span> is_executable_fn<span style="color: Olive;">(</span>task<span style="color: Olive;">)</span>:<br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">[</span>task<span style="color: Olive;">]</span><br/>
     <br/>
-    <span style="color: #a50"># 分解任务为子任务</span><br/>
+    <span style="color: #a50"># Descomponer la tarea en subtareas</span><br/>
     subtasks <span style="color: Gray;">=</span> decompose_fn<span style="color: Olive;">(</span>task<span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: #a50"># 递归分解每个子任务</span><br/>
+    <span style="color: #a50"># Descomponer recursivamente cada subtarea</span><br/>
     result <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> subtask <span style="color: Green;font-weight:bold;">in</span> subtasks:<br/>
-        <span style="color: #a50"># 对子任务递归调用分解函数</span><br/>
+        <span style="color: #a50"># Llamar recursivamente a la función de descomposición para las subtareas</span><br/>
         result.<span style="color: #05a;">extend</span><span style="color: Olive;">(</span><br/>
             decompose<span style="color: Olive;">(</span>subtask<span style="color: Gray;">,</span> is_executable_fn<span style="color: Gray;">,</span> decompose_fn<span style="color: Olive;">)</span><br/>
         <span style="color: Olive;">)</span><br/>
@@ -614,15 +614,15 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
     <span style="color: Green;font-weight:bold;">return</span> result<br/>
 <br/>
 <br/>
-<span style="color: #a50"># 示例：判断任务是否可执行</span><br/>
+<span style="color: #a50"># Ejemplo: determinar si la tarea es ejecutable</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> is_code_complete<span style="color: Olive;">(</span>task<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""检查任务是否可以直接执行代码"""</span><br/>
+    <span style="color: #a11;">Comprobar si la tarea puede ejecutar código directamente</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> task.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"type"</span><span style="color: Olive;">)</span> <span style="color: Gray;">==</span> <span style="color: #a11;">"code"</span> <span style="color: Green;font-weight:bold;">and</span> <span style="color: Teal;">len</span><span style="color: Olive;">(</span>task.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"dependencies"</span><span style="color: Gray;">,</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span> <span style="color: Gray;">==</span> <span style="color: Maroon;">0</span><br/>
 <br/>
 <br/>
-<span style="color: #a50"># 示例：分解复杂任务</span><br/>
+<span style="color: #a50"># Ejemplo: descomponer tareas complejas</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> decompose_programming_task<span style="color: Olive;">(</span>task<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""分解编程任务"""</span><br/>
+    <span style="color: #a11;">"""Descomponer la tarea de programación"""</span><br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"write_function"</span> <span style="color: Green;font-weight:bold;">in</span> task<span style="color: Olive;">[</span><span style="color: #a11;">"type"</span><span style="color: Olive;">]</span>:<br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">[</span><br/>
             <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"understand_requirements"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"task"</span>: task<span style="color: Olive;">[</span><span style="color: #a11;">"spec"</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
@@ -640,62 +640,62 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <p>Dividir las tareas en diferentes niveles de abstracción; las tareas de alto nivel invocan a las de bajo nivel, formando un árbol jerárquico de tareas.</p>
 <p>Adecuado para sistemas complejos que requieren múltiples niveles de abstracción.</p>
 <hr/>
-<h2>Plan-and-Execute 模式</h2>
+<h2>Modo Plan-and-Execute</h2>
 <p>Plan-and-Execute es un patrón arquitectónico que separa la planificación de la ejecución.</p>
 <p>El Agente primero planifica completamente todo el flujo de la tarea y luego ejecuta según el plan.</p>
 <h3>Diferencias con ReAct</h3>
 <p>ReAct razona y ejecuta simultáneamente; es más flexible pero la ruta puede ser inestable.</p>
 <p>Plan-and-Execute planifica primero y ejecuta después; es más estable pero carece de capacidad de ajuste dinámico.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
-<h2 class="example">Plan-and-Execute Agent 实现</h2>
+<h2 class="example">Implementación del agente Plan-and-Execute</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> PlanAndExecuteAgent:<br/>
-    <span style="color: #a11;">"""<br/>Plan-and-Execute 架构的 Agent<br/>核心机制：先完整规划，再按计划执行<br/>
+    <span style="color: #a11;">"""<br/>Agente de la arquitectura Plan-and-Execute<br/>Mecanismo central: primero planificar completamente y luego ejecutar según el plan<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> planner<span style="color: Gray;">,</span> executor<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 规划器：负责制定执行计划</span><br/>
+        <span style="color: #a50"># Planificador: responsable de elaborar el plan de ejecución</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">planner</span> <span style="color: Gray;">=</span> planner<br/>
-        <span style="color: #a50"># 执行器：负责执行具体步骤</span><br/>
+        <span style="color: #a50"># Ejecutor: responsable de ejecutar los pasos específicos</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">executor</span> <span style="color: Gray;">=</span> executor<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> run<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>执行任务<br/>分为规划阶段和执行阶段<br/>
+        <span style="color: #a11;">"""<br/>Ejecutar tareas<br/>Se divide en fase de planificación y fase de ejecución<br/>
         """</span><br/>
-        <span style="color: #a50"># ==================== 规划阶段 ====================</span><br/>
-        <span style="color: #a50"># 一次性生成完整的执行计划</span><br/>
+        <span style="color: #a50"># ==================== Fase de planificación ====================</span><br/>
+        <span style="color: #a50"># Generar el plan de ejecución completo de una sola vez</span><br/>
         plan <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">planner</span>.<span style="color: #05a;">create_plan</span><span style="color: Olive;">(</span>task<span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># ==================== 执行阶段 ====================</span><br/>
+        <span style="color: #a50"># ==================== Fase de ejecución ====================</span><br/>
         results <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
         <br/>
-        <span style="color: #a50"># 按计划顺序执行</span><br/>
+        <span style="color: #a50"># Ejecutar en el orden planificado</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> step <span style="color: Green;font-weight:bold;">in</span> plan.<span style="color: #05a;">steps</span>:<br/>
-            <span style="color: #a50"># 执行当前步骤</span><br/>
+            <span style="color: #a50"># Ejecutar el paso actual</span><br/>
             result <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">executor</span>.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span>step<span style="color: Olive;">)</span><br/>
             results.<span style="color: #05a;">append</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
             <br/>
-            <span style="color: #a50"># 检查是否需要重新规划</span><br/>
-            <span style="color: #a50"># 例如：执行结果与预期不符，或出现意外情况</span><br/>
+            <span style="color: #a50"># Verificar si se necesita replanificar</span><br/>
+            <span style="color: #a50"># Por ejemplo: el resultado de la ejecución no coincide con lo esperado, o se produce una situación inesperada</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">needs_replan</span><span style="color: Olive;">(</span>results<span style="color: Olive;">)</span>:<br/>
-                <span style="color: #a50"># 基于当前结果重新规划</span><br/>
+                <span style="color: #a50"># Replanificar basándose en los resultados actuales</span><br/>
                 plan <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">planner</span>.<span style="color: #05a;">replan</span><span style="color: Olive;">(</span>task<span style="color: Gray;">,</span> results<span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 整合所有结果</span><br/>
+        <span style="color: #a50"># Integrar todos los resultados</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">summarize</span><span style="color: Olive;">(</span>results<span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> needs_replan<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> results<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>判断是否需要重新规划<br/>检查执行结果是否符合预期<br/>
+        <span style="color: #a11;">"""<br/>Determinar si es necesario replanificar<br/>Verificar si el resultado de la ejecución cumple con lo esperado<br/>
         """</span><br/>
-        <span style="color: #a50"># 获取最后一个结果</span><br/>
+        <span style="color: #a50"># Obtener el último resultado</span><br/>
         last_result <span style="color: Gray;">=</span> results<span style="color: Olive;">[</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">]</span><br/>
         <br/>
-        <span style="color: #a50"># 如果结果明显不符合预期，需要重规划</span><br/>
+        <span style="color: #a50"># Si el resultado no cumple claramente lo esperado, se necesita replanificar.</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> last_result.<span style="color: #05a;">is_unexpected</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
             <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">True</span><br/>
         <br/>
-        <span style="color: #a50"># 如果结果导致后续步骤无法执行，需要重规划</span><br/>
+        <span style="color: #a50"># Si el resultado provoca que los pasos siguientes no se puedan ejecutar, es necesario replanificar</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> last_result.<span style="color: #05a;">blocks_future</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
             <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">True</span><br/>
         <br/>
@@ -703,38 +703,38 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> Planner:<br/>
-    <span style="color: #a11;">"""规划器：生成任务执行计划"""</span><br/>
+    <span style="color: #a11;">"""Planificador: generar el plan de ejecución de la tarea"""</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> create_plan<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""创建初始执行计划"""</span><br/>
-        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>任务：{task}<br/>
-<br/>请制定详细的执行计划，包括：<br/>1. 需要执行的步骤顺序<br/>2. 每个步骤的具体操作<br/>3. 步骤之间的依赖关系<br/>
-<br/>输出格式：<br/>步骤1: [操作描述]<br/>步骤2: [操作描述]<br/>
+        <span style="color: #a11;">"""Crear el plan de ejecución inicial"""</span><br/>
+        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>Tarea: {task}<br/>
+<br/>Por favor, elabore un plan de ejecución detallado, incluyendo:<br/>1. El orden de los pasos a ejecutar<br/>2. La operación específica de cada paso<br/>3. Dependencias entre pasos<br/>
+<br/>Formato de salida:<br/>Paso 1: [Descripción de la operación]<br/>Paso 2: [Descripción de la operación]<br/>
 ...<br/>
 """</span><br/>
         plan_text <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> Plan.<span style="color: #05a;">parse</span><span style="color: Olive;">(</span>plan_text<span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> replan<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> task<span style="color: Gray;">,</span> results<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""基于执行结果重新规划"""</span><br/>
-        <span style="color: #a50"># 分析已完成的结果</span><br/>
+        <span style="color: #a11;">"""Replanificar basado en los resultados de ejecución"""</span><br/>
+        <span style="color: #a50"># Analizar los resultados completados</span><br/>
         completed <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>r <span style="color: Green;font-weight:bold;">for</span> r <span style="color: Green;font-weight:bold;">in</span> results <span style="color: Green;font-weight:bold;">if</span> r.<span style="color: #05a;">is_success</span><span style="color: Olive;">]</span><br/>
         failed <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>r <span style="color: Green;font-weight:bold;">for</span> r <span style="color: Green;font-weight:bold;">in</span> results <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> r.<span style="color: #05a;">is_success</span><span style="color: Olive;">]</span><br/>
         <br/>
-        <span style="color: #a50"># 生成调整后的计划</span><br/>
-        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>原始任务：{task}<br/>已完成步骤：{completed}<br/>失败步骤：{failed}<br/>
-<br/>请制定调整后的执行计划：<br/>
+        <span style="color: #a50"># Generar el plan ajustado</span><br/>
+        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"""<br/>Tarea original: {task}<br/>Pasos completados: {completed}<br/>Paso fallido: {failed}<br/>
+<br/>Por favor, elabore el plan de ejecución ajustado:<br/>
 """</span><br/>
         plan_text <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">llm</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> Plan.<span style="color: #05a;">parse</span><span style="color: Olive;">(</span>plan_text<span style="color: Olive;">)</span><br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> Executor:<br/>
-    <span style="color: #a11;">"""执行器：执行具体的计划步骤"""</span><br/>
+    <span style="color: #a11;">"""Ejecutor: ejecuta los pasos concretos del plan."""</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> execute<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> step<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""执行单个步骤"""</span><br/>
-        <span style="color: #a50"># 根据步骤类型选择执行方式</span><br/>
+        <span style="color: #a11;">"""Ejecutar un solo paso"""</span><br/>
+        <span style="color: #a50"># Seleccionar el método de ejecución según el tipo de paso</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> step.<span style="color: Teal;">type</span> <span style="color: Gray;">==</span> <span style="color: #a11;">"tool_call"</span>:<br/>
             <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">execute_tool_call</span><span style="color: Olive;">(</span>step<span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">elif</span> step.<span style="color: Teal;">type</span> <span style="color: Gray;">==</span> <span style="color: #a11;">"code"</span>:<br/>
@@ -747,31 +747,26 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 </div>
 <blockquote><p>Nota: el patrón Plan-and-Execute es adecuado para escenarios donde la estructura de la tarea es relativamente estable y puede planificarse con antelación. Para entornos que requieren flexibilidad, el modo ReAct puede ser más adecuado.</p></blockquote>
 <hr/>
-<h2>章节小结</h2>
+<h2>Resumen del capítulo</h2>
 <p>Este capítulo presenta las capacidades centrales de razonamiento y planificación de los Agentes de IA.</p>
 <p><span class="marked">ReAct</span>El marco, mediante el ciclo de razonamiento y acción, permite al Agente ajustar su estrategia mientras ejecuta.</p>
-<p><span class="marked">思维链（CoT）</span>Al mostrar el proceso de razonamiento paso a paso, se mejora la precisión en la ejecución de tareas complejas.</p>
-<p><span class="marked">思维树（ToT）</span>Extiende la cadena de pensamiento, soportando exploración de múltiples rutas y retroceso.</p>
+<p><span class="marked">Cadena de pensamiento (CoT)</span>Al mostrar el proceso de razonamiento paso a paso, se mejora la precisión en la ejecución de tareas complejas.</p>
+<p><span class="marked">Árbol de pensamiento (ToT)</span>Extiende la cadena de pensamiento, soportando exploración de múltiples rutas y retroceso.</p>
 <p><span class="marked">MCTS</span>Es un algoritmo de búsqueda heurística, adecuado para problemas complejos de decisión y planificación.</p>
 <p><span class="marked">Reflexion</span>Dota al Agente de capacidad de autorreflexión para aprender de los fracasos y mejorar.</p>
-<p><span class="marked">任务分解策略</span>Es la base de la capacidad de planificación, incluyendo descomposición recursiva, descomposición paralela y descomposición jerárquica.</p>
+<p><span class="marked">Estrategia de descomposición de tareas</span>Es la base de la capacidad de planificación, incluyendo descomposición recursiva, descomposición paralela y descomposición jerárquica.</p>
 <p><span class="marked">Plan-and-Execute</span>Adopta el modo de planificar primero y ejecutar después, adecuado para tareas con estructura estable.</p>
-<p>Estas técnicas pueden usarse individualmente o combinarse para construir sistemas de Agentes más potentes.</p>
-其他扩展
-</div>
+<p>Estas técnicas pueden usarse individualmente o combinarse para construir sistemas de Agentes más potentes.</p>Otras extensiones</div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
 <div class="archive-list-item">
-<div class="post-intro" id="ai-info" style="width: 100%;">AI 思考中...</div>
+<div class="post-intro" id="ai-info" style="width: 100%;">AI pensando...</div>
 </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/retrieval-augmented-generation.html" rel="prev">RAG 与知识检索</a> </div>
-<div class="next-design-link"><a href="../ai-agent/python-rag.html" rel="next">Python 实现 RAG 与知识检索</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
-</div>
-
-笔记列表
-<style>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/retrieval-augmented-generation.html" rel="prev">RAG y recuperación de conocimiento</a> </div>
+<div class="next-design-link"><a href="../ai-agent/python-rag.html" rel="next">Implementación de RAG y recuperación de conocimiento en Python</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+</div>Lista de notas<style>
 .wrapper {
   /*text-transform: uppercase; */
   background: #ececec;
@@ -875,16 +870,16 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">文章投稿，可点击这里</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href=";.html" class="runoob-pop">登录</a>！</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i>Obligatorio antes de compartir notas<a class="runoob-pop" href=";.html">Iniciar sesión</a>！</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -892,14 +887,14 @@ response <span style="color: Gray;">=</span> llm.<span style="color: #05a;">gene
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="30007"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -1077,7 +1072,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1168,7 +1163,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Pi Agent 事件系统 事件系统是扩展的核心机制。 通过监听生命周期事件，你可以在 AI 工作的各个阶段插入自定义逻辑。   生命周期全景 以下是 Pi Agent 从启动到退出过程中触发的所有事件：    每个 turn 内部，context、provider、tool 三类事件按序触发，有工具调用时循环多轮。 虚线部分表示该阶段可被多个事件多次触发。 input、before_agent_start、resources_disc.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -354,31 +354,31 @@ pi.<span style="color: #660066;">on</span><span style="color: #009900;">(</span>
 <p>En el diagrama ASCII de la sección anterior también aparecen muchos eventos; aquí se enumeran de forma consolidada según el orden de activación para facilitar su consulta.</p>
 <table class="reference">
 <tr><th>Evento</th><th>Momento de activación</th><th>¿Modificable?</th><th>¿Bloqueable?</th></tr>
-<tr><td>project_trust</td><td>Antes de cargar los recursos del proyecto, se confirma si se confía en el proyecto actual</td><td>否</td><td>Sí (si se rechaza, no se cargan las extensiones del proyecto)</td></tr>
-<tr><td>session_start</td><td>Al iniciar o reanudar la sesión</td><td>否</td><td>否</td></tr>
-<tr><td>resources_discover</td><td>Se activa después de session_start (durante startup/reload)</td><td>Sí (solo se pueden añadir Skills, plantillas de prompts y rutas de temas; no se pueden añadir ni eliminar extensiones)</td><td>否</td></tr>
+<tr><td>project_trust</td><td>Antes de cargar los recursos del proyecto, se confirma si se confía en el proyecto actual</td><td>no</td><td>Sí (si se rechaza, no se cargan las extensiones del proyecto)</td></tr>
+<tr><td>session_start</td><td>Al iniciar o reanudar la sesión</td><td>no</td><td>no</td></tr>
+<tr><td>resources_discover</td><td>Se activa después de session_start (durante startup/reload)</td><td>Sí (solo se pueden añadir Skills, plantillas de prompts y rutas de temas; no se pueden añadir ni eliminar extensiones)</td><td>no</td></tr>
 <tr><td>input</td><td>Antes de que se procese la entrada del usuario</td><td>Sí (puede transformar la entrada)</td><td>Sí (handled se hace cargo)</td></tr>
-<tr><td>before_agent_start</td><td>Antes de que la IA comience a procesar la entrada del usuario</td><td>Sí (puede inyectar mensajes y modificar el prompt del sistema)</td><td>否</td></tr>
-<tr><td>agent_start</td><td>Al comienzo del bucle del agente</td><td>否</td><td>否</td></tr>
-<tr><td>message_start / message_update</td><td>Durante la generación de mensajes (message_update es el incremento de streaming del asistente)</td><td>否</td><td>否</td></tr>
-<tr><td>message_end</td><td>Cuando se finalizan los mensajes de usuario, asistente y toolResult</td><td>Sí (puede devolver { message } para reemplazar el mensaje final; role debe ser el mismo)</td><td>否</td></tr>
-<tr><td>turn_start</td><td>Al comienzo de cada turno</td><td>否</td><td>否</td></tr>
-<tr><td>context</td><td>Antes de cada llamada al LLM</td><td>Sí (puede filtrar mensajes)</td><td>否</td></tr>
-<tr><td>before_provider_headers</td><td>Antes de enviar los encabezados HTTP</td><td>Sí (puede añadir o modificar encabezados de solicitud)</td><td>否</td></tr>
-<tr><td>before_provider_request</td><td>Antes de enviar el cuerpo de la solicitud al modelo</td><td>Sí (devolver un valor distinto de undefined reemplaza todo el payload de la solicitud; no la aborta)</td><td>否</td></tr>
-<tr><td>after_provider_response</td><td>Después de recibir la respuesta HTTP, el body de streaming aún no se ha consumido</td><td>No (solo se pueden leer status/headers para observación)</td><td>否</td></tr>
-<tr><td>tool_execution_start</td><td>Cuando la herramienta comienza a ejecutarse</td><td>否</td><td>否</td></tr>
+<tr><td>before_agent_start</td><td>Antes de que la IA comience a procesar la entrada del usuario</td><td>Sí (puede inyectar mensajes y modificar el prompt del sistema)</td><td>no</td></tr>
+<tr><td>agent_start</td><td>Al comienzo del bucle del agente</td><td>no</td><td>no</td></tr>
+<tr><td>message_start / message_update</td><td>Durante la generación de mensajes (message_update es el incremento de streaming del asistente)</td><td>no</td><td>no</td></tr>
+<tr><td>message_end</td><td>Cuando se finalizan los mensajes de usuario, asistente y toolResult</td><td>Sí (puede devolver { message } para reemplazar el mensaje final; role debe ser el mismo)</td><td>no</td></tr>
+<tr><td>turn_start</td><td>Al comienzo de cada turno</td><td>no</td><td>no</td></tr>
+<tr><td>context</td><td>Antes de cada llamada al LLM</td><td>Sí (puede filtrar mensajes)</td><td>no</td></tr>
+<tr><td>before_provider_headers</td><td>Antes de enviar los encabezados HTTP</td><td>Sí (puede añadir o modificar encabezados de solicitud)</td><td>no</td></tr>
+<tr><td>before_provider_request</td><td>Antes de enviar el cuerpo de la solicitud al modelo</td><td>Sí (devolver un valor distinto de undefined reemplaza todo el payload de la solicitud; no la aborta)</td><td>no</td></tr>
+<tr><td>after_provider_response</td><td>Después de recibir la respuesta HTTP, el body de streaming aún no se ha consumido</td><td>No (solo se pueden leer status/headers para observación)</td><td>no</td></tr>
+<tr><td>tool_execution_start</td><td>Cuando la herramienta comienza a ejecutarse</td><td>no</td><td>no</td></tr>
 <tr><td>tool_call</td><td>Antes de la ejecución de la herramienta</td><td>Sí (event.input es modificable)</td><td>Sí (block: true)</td></tr>
-<tr><td>tool_execution_update</td><td>Cuando se genera progreso durante la ejecución de la herramienta</td><td>否</td><td>否</td></tr>
-<tr><td>tool_result</td><td>Después de que se complete la ejecución de la herramienta</td><td>Sí (el contenido de retorno se puede modificar)</td><td>否</td></tr>
-<tr><td>tool_execution_end</td><td>Cuando finaliza la ejecución de la herramienta</td><td>否</td><td>否</td></tr>
-<tr><td>turn_end</td><td>Al final de cada ronda</td><td>否</td><td>否</td></tr>
-<tr><td>agent_end</td><td>Cuando finaliza el bucle del agente</td><td>否</td><td>否</td></tr>
-<tr><td>agent_settled</td><td>Después de que una ronda de interacción se asiente por completo</td><td>否</td><td>否</td></tr>
-<tr><td>session_before_switch</td><td>Antes de que se ejecute /new o /resume</td><td>否</td><td>Sí (devuelve { cancel: true })</td></tr>
-<tr><td>session_before_fork</td><td>Antes de que se ejecute /fork o /clone</td><td>否</td><td>Sí (devuelve { cancel: true })</td></tr>
+<tr><td>tool_execution_update</td><td>Cuando se genera progreso durante la ejecución de la herramienta</td><td>no</td><td>no</td></tr>
+<tr><td>tool_result</td><td>Después de que se complete la ejecución de la herramienta</td><td>Sí (el contenido de retorno se puede modificar)</td><td>no</td></tr>
+<tr><td>tool_execution_end</td><td>Cuando finaliza la ejecución de la herramienta</td><td>no</td><td>no</td></tr>
+<tr><td>turn_end</td><td>Al final de cada ronda</td><td>no</td><td>no</td></tr>
+<tr><td>agent_end</td><td>Cuando finaliza el bucle del agente</td><td>no</td><td>no</td></tr>
+<tr><td>agent_settled</td><td>Después de que una ronda de interacción se asiente por completo</td><td>no</td><td>no</td></tr>
+<tr><td>session_before_switch</td><td>Antes de que se ejecute /new o /resume</td><td>no</td><td>Sí (devuelve { cancel: true })</td></tr>
+<tr><td>session_before_fork</td><td>Antes de que se ejecute /fork o /clone</td><td>no</td><td>Sí (devuelve { cancel: true })</td></tr>
 <tr><td>session_before_compact</td><td>Antes de que se ejecute la compactación (/compact manual, umbral, desbordamiento de contexto)</td><td>Sí (el resumen de compactación se puede personalizar)</td><td>Sí (devuelve { cancel: true })</td></tr>
-<tr><td>session_shutdown</td><td>Se activa antes de la destrucción de la sesión; salir, /new, /resume, /fork y /reload lo activan (reason es quit/reload/new/resume/fork)</td><td>否</td><td>否</td></tr>
+<tr><td>session_shutdown</td><td>Se activa antes de la destrucción de la sesión; salir, /new, /resume, /fork y /reload lo activan (reason es quit/reload/new/resume/fork)</td><td>no</td><td>no</td></tr>
 </table>
 <hr/>
 <h2>Puntos clave del manejo de eventos</h2>
@@ -390,8 +390,8 @@ pi.<span style="color: #660066;">on</span><span style="color: #009900;">(</span>
 <tr><td>Devuelve<span class="marked">{ cancel: true }</span></td><td>Cancela operaciones como el cambio de sesión</td></tr>
 <tr><td>Uso<span class="marked">ctx.signal</span></td><td>Responde a señales de cancelación en operaciones asíncronas; se aborta cuando el usuario presiona Escape</td></tr>
 <tr><td>Uso<span class="marked">ctx.ui</span>Métodos de la serie</td><td>Interactúa con el usuario, como notify, confirm, select, etc.</td></tr>
-<tr><td>用 <span class="marked">ctx.hasUI</span>Protege las llamadas de diálogo</td><td>En modo Print/JSON/RPC, los métodos de diálogo no están disponibles o son operaciones vacías; verifica antes de llamarlos</td></tr>
-<tr><td>用 <span class="marked">ctx.mode === "tui"</span>Protege las API exclusivas de TUI</td><td>custom(), las fábricas de componentes, la entrada de terminal, etc. solo son válidos en modo interactivo</td></tr>
+<tr><td>usar<span class="marked">ctx.hasUI</span>Protege las llamadas de diálogo</td><td>En modo Print/JSON/RPC, los métodos de diálogo no están disponibles o son operaciones vacías; verifica antes de llamarlos</td></tr>
+<tr><td>usar<span class="marked">ctx.mode === "tui"</span>Protege las API exclusivas de TUI</td><td>custom(), las fábricas de componentes, la entrada de terminal, etc. solo son válidos en modo interactivo</td></tr>
 </table>
 <blockquote><p>No inicies recursos en segundo plano (procesos, sockets, temporizadores, etc.) en la función de fábrica de la extensión.</p><p>Retrasa el inicio de recursos hasta el<span class="marked">session_start</span>evento, y<span class="marked">session_shutdown</span>limpia en él.</p></blockquote> Otras extensiones
 </div>
@@ -511,11 +511,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Debes <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir notas!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Debes <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir notas!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -713,7 +713,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -804,7 +804,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Python 代理模式 | 菜鸟教程</title>
+<title>Patrón Proxy en Python | Tutorial para novatos</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Python 代理模式  代理模式是一种结构型设计模式，它为另一个对象提供一个替身或占位符，以控制对这个对象的访问。简单来说，代理就是一个中间人，它在客户端和目标对象之间起到中介作用。 生活中的代理比喻 想象一下现实生活中的场景：  房产中介：你不需要直接与房主沟通，通过中介就能了解房源信息、安排看房 明星经纪人：厂商想要邀请明星代言，需要通过经纪人来洽谈合作细节 网络代理服务器：你的网络请求先经过代理服务器，再由代理服务器转发到目标网.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -158,8 +158,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div> <div class="col middle-column">
 <div class="article">
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../python-design-pattern/python-decorator.html" rel="prev">Python 装饰器模式</a> </div>
-<div class="next-design-link"><a href="../python-design-pattern/python-facade.html" rel="next">Python 外观模式</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../python-design-pattern/python-decorator.html" rel="prev">Patrón Decorador en Python</a> </div>
+<div class="next-design-link"><a href="../python-design-pattern/python-facade.html" rel="next">Patrón de Fachada en Python</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
 </div>
 <div class="article-body">
 <div class="article-intro" id="content">
@@ -168,8 +168,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Analogía del proxy en la vida real</h3>
 <p>Imagina un escenario de la vida real:</p>
 <ul>
-<li><strong>房产中介</strong>No necesitas comunicarte directamente con el propietario; a través del agente inmobiliario puedes conocer la información de la propiedad y programar visitas.</li>
-<li><strong>明星经纪人</strong>Si una empresa quiere invitar a una celebridad como embajadora de marca, necesita pasar por un agente para negociar los detalles de la cooperación.</li>
+<li><strong>Agente inmobiliario</strong>No necesitas comunicarte directamente con el propietario; a través del agente inmobiliario puedes conocer la información de la propiedad y programar visitas.</li>
+<li><strong>Agente de celebridades</strong>Si una empresa quiere invitar a una celebridad como embajadora de marca, necesita pasar por un agente para negociar los detalles de la cooperación.</li>
 <li><strong>Servidor proxy de red</strong>Tus solicitudes de red pasan primero por un servidor proxy, y luego el servidor proxy las reenvía al sitio web de destino.</li>
 </ul>
 <p>En estos ejemplos, el intermediario/agente es el proxy, y controlan el acceso al objeto real.</p>
@@ -178,21 +178,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El patrón Proxy generalmente incluye tres roles clave:</p>
 <h3>1. Sujeto abstracto (Subject)</h3>
 <p>Define una interfaz común entre el sujeto real y el sujeto proxy, de modo que el sujeto proxy pueda usarse en cualquier lugar donde se use el sujeto real.</p>
-<h3>2. 真实主题(Real Subject)</h3>
+<h3>2. Sujeto Real (Real Subject)</h3>
 <p>Define el objeto real que representa el proxy; es el objeto al que finalmente se hace referencia.</p>
-<h3>3. 代理(Proxy)</h3>
+<h3>3. Proxy</h3>
 <p>Mantiene una referencia que permite al proxy acceder a la entidad real, proporciona una interfaz idéntica a la del sujeto real y controla el acceso al sujeto real.</p>
 <p><img decoding="async" src="../wp-content/uploads/2025/11/python-proxy.png" style="max-height:550px"/></p>
 <hr/>
 <h2>Tipos de patrones de proxy</h2>
 <p>El patrón Proxy tiene múltiples variantes, y cada una tiene diferentes escenarios de aplicación:</p>
-<h3>1. 虚拟代理(Virtual Proxy)</h3>
+<h3>1. Proxy Virtual (Virtual Proxy)</h3>
 <p>Retrasa la creación de objetos de alto costo hasta que realmente se necesiten.</p>
-<h3>2. 保护代理(Protection Proxy)</h3>
+<h3>2. Proxy de Protección (Protection Proxy)</h3>
 <p>Controla el acceso al objeto original, utilizado cuando los objetos deben tener diferentes permisos de acceso.</p>
-<h3>3. 远程代理(Remote Proxy)</h3>
+<h3>3. Proxy Remoto (Remote Proxy)</h3>
 <p>Proporciona un representante local para un objeto que se encuentra en un espacio de direcciones diferente.</p>
-<h3>4. 智能引用代理(Smart Reference Proxy)</h3>
+<h3>4. Proxy de Referencia Inteligente (Smart Reference Proxy)</h3>
 <p>Ejecuta operaciones adicionales al acceder al objeto, como recuento de referencias, carga diferida, etc.</p>
 <hr/>
 <h2>Implementación del patrón Proxy en Python</h2>
@@ -200,94 +200,94 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Definición de interfaz base</h3>
 <p>Primero, definimos la interfaz de tema abstracto:</p>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> abc <span style="color: Green;font-weight:bold;">import</span> ABC<span style="color: Gray;">,</span> abstractmethod<br/>
 <span style="color: Green;font-weight:bold;">from</span> typing <span style="color: Green;font-weight:bold;">import</span> Any<br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> Subject<span style="color: Olive;">(</span>ABC<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""<br/>抽象主题接口，定义真实主题和代理的共同操作<br/>
+    <span style="color: #a11;">"""<br/>Interfaz de sujeto abstracto, define las operaciones comunes del sujeto real y el proxy.<br/>
     """</span><br/>
     <br/>
     <span style="color: Gray;">@</span>abstractmethod<br/>
     <span style="color: Green;font-weight:bold;">def</span> request<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> Any:<br/>
-        <span style="color: #a11;">"""执行请求的主要方法"""</span><br/>
+        <span style="color: #a11;">"""Método principal para ejecutar la solicitud"""</span><br/>
         <span style="color: Green;font-weight:bold;">pass</span><br/>
 </div>
 </div>
 <h3>Implementación del tema real</h3>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> RealSubject<span style="color: Olive;">(</span>Subject<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""<br/>真实主题类，包含核心业务逻辑<br/>通常创建和初始化成本较高<br/>
+    <span style="color: #a11;">"""<br/>Clase de sujeto real, que contiene la lógica central de negocio.<br/>Normalmente, la creación y la inicialización son costosas.<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> name: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">name</span> <span style="color: Gray;">=</span> name<br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"创建 RealSubject 实例: {self.name} (这是一个昂贵的操作)"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Creando instancia de RealSubject: {self.name} (esta es una operación costosa)"</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> request<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-        <span style="color: #a11;">"""执行真实请求"""</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"RealSubject: 处理请求 - {self.name}"</span><span style="color: Olive;">)</span><br/>
-        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"来自 {self.name} 的响应"</span><br/>
+        <span style="color: #a11;">"""Ejecutar la solicitud real"""</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"RealSubject: procesando solicitud - {self.name}"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Respuesta de {self.name}"</span><br/>
 </div>
 </div>
-<h3>代理类实现</h3>
+<h3>Implementación de la clase proxy</h3>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> Proxy<span style="color: Olive;">(</span>Subject<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""<br/>代理类，控制对真实主题的访问<br/>可以添加额外的功能，如懒加载、访问控制等<br/>
+    <span style="color: #a11;">"""<br/>Clase proxy, controla el acceso al sujeto real.<br/>Se pueden añadir funcionalidades adicionales, como carga diferida, control de acceso, etc.<br/>
     """</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> subject_name: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">subject_name</span> <span style="color: Gray;">=</span> subject_name<br/>
-        <span style="color: Teal;">self</span>._real_subject <span style="color: Gray;">=</span> <span style="color: Teal;">None</span>  <span style="color: #a50"># 延迟初始化</span><br/>
+        <span style="color: Teal;">self</span>._real_subject <span style="color: Gray;">=</span> <span style="color: Teal;">None</span>  <span style="color: #a50"># Inicialización diferida</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _lazy_init<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">None</span>:<br/>
-        <span style="color: #a11;">"""懒加载真实主题对象"""</span><br/>
+        <span style="color: #a11;">"""Carga diferida del objeto del sujeto real"""</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">self</span>._real_subject <span style="color: Green;font-weight:bold;">is</span> <span style="color: Teal;">None</span>:<br/>
             <span style="color: Teal;">self</span>._real_subject <span style="color: Gray;">=</span> RealSubject<span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">subject_name</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> request<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-        <span style="color: #a11;">"""代理的请求方法，可以添加额外逻辑"""</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proxy: 在调用真实对象前进行预处理"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: #a11;">"""Método de solicitud del proxy, se puede añadir lógica adicional"""</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proxy: realizar preprocesamiento antes de llamar al objeto real"</span><span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 懒加载真实对象</span><br/>
+        <span style="color: #a50"># Carga diferida del objeto real</span><br/>
         <span style="color: Teal;">self</span>._lazy_init<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: #a50"># 调用真实对象的方法</span><br/>
+        <span style="color: #a50"># Llamar al método del objeto real</span><br/>
         result <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>._real_subject.<span style="color: #05a;">request</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
         <br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proxy: 在调用真实对象后进行后处理"</span><span style="color: Olive;">)</span><br/>
-        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"代理增强的结果: {result}"</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proxy: realizar posprocesamiento después de llamar al objeto real"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Resultado mejorado por el proxy: {result}"</span><br/>
 </div>
 </div>
-<h3>客户端代码</h3>
+<h3>Código del cliente</h3>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">def</span> client_code<span style="color: Olive;">(</span>subject: Subject<span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">None</span>:<br/>
-    <span style="color: #a11;">"""<br/>客户端代码，通过抽象接口与主题交互<br/>不知道也不关心使用的是真实主题还是代理<br/>
+    <span style="color: #a11;">"""<br/>Código del cliente, que interactúa con el sujeto a través de la interfaz abstracta<br/>No sabe ni le importa si se usa el sujeto real o el proxy<br/>
     """</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"客户端: 开始执行操作"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Cliente: iniciando la operación"</span><span style="color: Olive;">)</span><br/>
     result <span style="color: Gray;">=</span> subject.<span style="color: #05a;">request</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"客户端: 收到结果 - {result}"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Cliente: resultado recibido - {result}"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 使用示例</span><br/>
+<span style="color: #a50"># Ejemplo de uso</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"直接使用真实主题:"</span><span style="color: Olive;">)</span><br/>
-    real_subject <span style="color: Gray;">=</span> RealSubject<span style="color: Olive;">(</span><span style="color: #a11;">"真实对象A"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Usando directamente el sujeto real:"</span><span style="color: Olive;">)</span><br/>
+    real_subject <span style="color: Gray;">=</span> RealSubject<span style="color: Olive;">(</span><span style="color: #a11;">"Objeto real A"</span><span style="color: Olive;">)</span><br/>
     client_code<span style="color: Olive;">(</span>real_subject<span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"使用代理:"</span><span style="color: Olive;">)</span><br/>
-    proxy <span style="color: Gray;">=</span> Proxy<span style="color: Olive;">(</span><span style="color: #a11;">"代理对象B"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Usando el proxy:"</span><span style="color: Olive;">)</span><br/>
+    proxy <span style="color: Gray;">=</span> Proxy<span style="color: Olive;">(</span><span style="color: #a11;">"Objeto proxy B"</span><span style="color: Olive;">)</span><br/>
     client_code<span style="color: Olive;">(</span>proxy<span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: #a50"># 再次使用同一个代理，观察懒加载效果</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"再次使用同一个代理:"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: #a50"># Usar el mismo proxy de nuevo para observar el efecto de carga diferida</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Usando el mismo proxy nuevamente:"</span><span style="color: Olive;">)</span><br/>
     client_code<span style="color: Olive;">(</span>proxy<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -318,57 +318,57 @@ Proxy: 在调用真实对象后进行后处理
 <p>Veamos un ejemplo más cercano a la realidad: el proxy virtual para la carga de imágenes.</p>
 <h3>Sistema de carga de imágenes</h3>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> pathlib <span style="color: Green;font-weight:bold;">import</span> Path<br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">time</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> Image:<br/>
-    <span style="color: #a11;">"""真实图片类，模拟加载大图片的昂贵操作"""</span><br/>
+    <span style="color: #a11;">"""Clase de imagen real que simula la costosa operación de cargar una imagen grande"""</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> filename: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">filename</span> <span style="color: Gray;">=</span> filename<br/>
         <span style="color: Teal;">self</span>._load_image<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> _load_image<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">None</span>:<br/>
-        <span style="color: #a11;">"""模拟加载大图片的昂贵操作"""</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"正在加载图片: {self.filename} (这可能需要几秒钟...)"</span><span style="color: Olive;">)</span><br/>
-        <span style="color: #05a;">time</span>.<span style="color: #05a;">sleep</span><span style="color: Olive;">(</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 模拟加载时间</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"图片 {self.filename} 加载完成!"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: #a11;">"""Simula la costosa operación de cargar una imagen grande"""</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Cargando imagen: {self.filename} (esto puede tardar unos segundos...)"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: #05a;">time</span>.<span style="color: #05a;">sleep</span><span style="color: Olive;">(</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Simular el tiempo de carga</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"¡Imagen {self.filename} cargada!"</span><span style="color: Olive;">)</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> display<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">None</span>:<br/>
-        <span style="color: #a11;">"""显示图片"""</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"显示图片: {self.filename}"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: #a11;">"""Muestra la imagen"""</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Mostrando imagen: {self.filename}"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> ImageProxy:<br/>
-    <span style="color: #a11;">"""图片代理，实现懒加载"""</span><br/>
+    <span style="color: #a11;">Proxy de imagen que implementa carga diferida</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> filename: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">filename</span> <span style="color: Gray;">=</span> filename<br/>
         <span style="color: Teal;">self</span>._image <span style="color: Gray;">=</span> <span style="color: Teal;">None</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> display<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">None</span>:<br/>
-        <span style="color: #a11;">"""显示图片，如果需要则先加载"""</span><br/>
+        <span style="color: #a11;">Muestra la imagen; si es necesario, cárgala antes</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">self</span>._image <span style="color: Green;font-weight:bold;">is</span> <span style="color: Teal;">None</span>:<br/>
-            <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"代理: 检测到图片未加载，开始懒加载..."</span><span style="color: Olive;">)</span><br/>
+            <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Proxy: se ha detectado que la imagen no está cargada; iniciando la carga diferida...</span><span style="color: Olive;">)</span><br/>
             <span style="color: Teal;">self</span>._image <span style="color: Gray;">=</span> Image<span style="color: Olive;">(</span><span style="color: Teal;">self</span>.<span style="color: #05a;">filename</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">else</span>:<br/>
-            <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"代理: 图片已加载，直接显示"</span><span style="color: Olive;">)</span><br/>
+            <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Proxy: la imagen ya está cargada; se muestra directamente</span><span style="color: Olive;">)</span><br/>
         <br/>
         <span style="color: Teal;">self</span>._image.<span style="color: #05a;">display</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 使用示例</span><br/>
+<span style="color: #a50"># Ejemplo de uso</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> demo_image_proxy<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"创建图片代理 (不会立即加载图片)"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Crear proxy de imagen (no cargará la imagen inmediatamente)</span><span style="color: Olive;">)</span><br/>
     proxy <span style="color: Gray;">=</span> ImageProxy<span style="color: Olive;">(</span><span style="color: #a11;">"large_photo.jpg"</span><span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>第一次调用 display() - 触发懒加载:"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Primera llamada a display() - se dispara la carga diferida:</span><span style="color: Olive;">)</span><br/>
     proxy.<span style="color: #05a;">display</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>第二次调用 display() - 直接使用已加载的图片:"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Segunda llamada a display() - se utiliza directamente la imagen ya cargada:</span><span style="color: Olive;">)</span><br/>
     proxy.<span style="color: #05a;">display</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 运行示例</span><br/>
+<span style="color: #a50"># Ejecutar el ejemplo</span><br/>
 demo_image_proxy<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -376,44 +376,44 @@ demo_image_proxy<span style="color: Olive;">(</span><span style="color: Olive;">
 <h2>Ejemplo de proxy de protección: control de acceso</h2>
 <p>El proxy de protección se utiliza para controlar el acceso a recursos sensibles.</p>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> SensitiveData:<br/>
-    <span style="color: #a11;">"""敏感数据类"""</span><br/>
+    <span style="color: #a11;">Clase de datos sensibles</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> data: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">data</span> <span style="color: Gray;">=</span> data<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> read_data<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-        <span style="color: #a11;">"""读取敏感数据"""</span><br/>
-        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"敏感数据: {self.data}"</span><br/>
+        <span style="color: #a11;">Leer datos sensibles</span><br/>
+        <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">Datos sensibles: {self.data}</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> ProtectionProxy:<br/>
-    <span style="color: #a11;">"""保护代理，实现访问控制"""</span><br/>
+    <span style="color: #a11;">Proxy de protección que implementa control de acceso</span><br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> sensitive_data: SensitiveData<span style="color: Gray;">,</span> user_role: <span style="color: Teal;">str</span><span style="color: Olive;">)</span>:<br/>
         <span style="color: Teal;">self</span>._sensitive_data <span style="color: Gray;">=</span> sensitive_data<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">user_role</span> <span style="color: Gray;">=</span> user_role<br/>
     <br/>
     <span style="color: Green;font-weight:bold;">def</span> read_data<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-        <span style="color: #a11;">"""读取数据，但进行权限检查"""</span><br/>
+        <span style="color: #a11;">Leer los datos, pero comprobar los permisos</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">user_role</span> <span style="color: Gray;">!=</span> <span style="color: #a11;">"admin"</span>:<br/>
-            <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"错误: 权限不足，只有管理员可以访问敏感数据"</span><br/>
+            <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">Error: permisos insuficientes, solo el administrador puede acceder a los datos sensibles</span><br/>
         <br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>._sensitive_data.<span style="color: #05a;">read_data</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 使用示例</span><br/>
+<span style="color: #a50"># Ejemplo de uso</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-    sensitive_data <span style="color: Gray;">=</span> SensitiveData<span style="color: Olive;">(</span><span style="color: #a11;">"机密信息: 项目预算为100万元"</span><span style="color: Olive;">)</span><br/>
+    sensitive_data <span style="color: Gray;">=</span> SensitiveData<span style="color: Olive;">(</span><span style="color: #a11;">Información confidencial: el presupuesto del proyecto es de 1 millón de yuanes</span><span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: #a50"># 普通用户尝试访问</span><br/>
+    <span style="color: #a50"># El usuario normal intenta acceder</span><br/>
     user_proxy <span style="color: Gray;">=</span> ProtectionProxy<span style="color: Olive;">(</span>sensitive_data<span style="color: Gray;">,</span> <span style="color: #a11;">"user"</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"普通用户尝试访问:"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">El usuario normal intenta acceder:</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>user_proxy.<span style="color: #05a;">read_data</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
     <br/>
-    <span style="color: #a50"># 管理员访问</span><br/>
+    <span style="color: #a50"># Acceso del administrador</span><br/>
     admin_proxy <span style="color: Gray;">=</span> ProtectionProxy<span style="color: Olive;">(</span>sensitive_data<span style="color: Gray;">,</span> <span style="color: #a11;">"admin"</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>管理员访问:"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Acceso del administrador:</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>admin_proxy.<span style="color: #05a;">read_data</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 <br/>
 demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -421,15 +421,15 @@ demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Oli
 </div>
 <hr/>
 <h2>Ventajas y desventajas del patrón Proxy</h2>
-<h3>优点</h3>
+<h3>Ventajas</h3>
 <ol>
 <li><strong>Control de acceso a objetos</strong>El proxy puede controlar cómo y cuándo el cliente accede al objeto real.</li>
-<li><strong>懒加载优化</strong>El proxy virtual puede retrasar la creación de objetos costosos, mejorando el rendimiento.</li>
+<li><strong>Optimización de carga diferida</strong>El proxy virtual puede retrasar la creación de objetos costosos, mejorando el rendimiento.</li>
 <li><strong>Mejorar la seguridad</strong>: El proxy de protección puede agregar lógica de control de acceso</li>
 <li><strong>Principio abierto/cerrado</strong>: Se pueden introducir nuevos proxies sin modificar el código del cliente</li>
 <li><strong>Separación de responsabilidades</strong>: El proxy puede manejar funciones auxiliares no relacionadas con la lógica de negocio principal</li>
 </ol>
-<h3>缺点</h3>
+<h3>Desventajas</h3>
 <ol>
 <li><strong>Aumenta la complejidad</strong>: Introduce una nueva capa de abstracción, haciendo la estructura del código más compleja</li>
 <li><strong>Latencia de respuesta</strong>: El proxy puede aumentar el tiempo de procesamiento de las solicitudes</li>
@@ -438,23 +438,23 @@ demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Oli
 <hr/>
 <h2>Escenarios de aplicación del patrón Proxy</h2>
 <p>El patrón Proxy es especialmente útil en los siguientes escenarios:</p>
-<h3>1. 懒加载(Lazy Loading)</h3>
+<h3>1. Carga diferida (Lazy Loading)</h3>
 <p>Cuando el costo de crear un objeto es alto, pero es posible que no se use de inmediato.</p>
-<h3>2. 访问控制(Access Control)</h3>
+<h3>2. Control de acceso (Access Control)</h3>
 <p>Cuando se necesita restringir los permisos de acceso a ciertos objetos.</p>
-<h3>3. 本地代表(Remote Representation)</h3>
+<h3>3. Representante local (Remote Representation)</h3>
 <p>Proporciona una interfaz local para objetos remotos, como llamadas RPC.</p>
 <h3>4. Registro de logs (Logging)</h3>
 <p>Agregar registro de logs antes y después de la llamada al método.</p>
-<h3>5. 缓存(Caching)</h3>
+<h3>5. Caché (Caching)</h3>
 <p>Proporcionar caché para los resultados de operaciones costosas.</p>
 <hr/>
-<h2>实践练习</h2>
+<h2>Práctica</h2>
 <p>Para consolidar la comprensión del patrón Proxy, intenta completar los siguientes ejercicios:</p>
 <h3>Ejercicio 1: proxy de caché</h3>
 <p>Crea un proxy de caché que agregue funcionalidad de caché a una función que calcula la secuencia de Fibonacci:</p>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> FibonacciCalculator:<br/>
     <span style="color: #a11;">"""Calcula la secuencia de Fibonacci"""</span><br/>
@@ -494,7 +494,7 @@ demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Oli
 <h3>Ejercicio 2: proxy de logs</h3>
 <p>Crea un proxy de registro que registre la información de las llamadas a métodos:</p>
 <div class="example">
-<h2 class="example">实例</h2>
+<h2 class="example">Ejemplos</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> DatabaseService:<br/>
     <span style="color: #a11;">"""Servicio de base de datos"""</span><br/>
@@ -522,9 +522,9 @@ demo_protection_proxy<span style="color: Olive;">(</span><span style="color: Oli
 </div>
 </div>
 <hr/>
-<h2>总结</h2>
+<h2>Resumen</h2>
 <p>El patrón Proxy es un patrón de diseño poderoso que controla el acceso a los objetos reales mediante la introducción de una capa intermedia. Implementar el patrón Proxy en Python es relativamente simple, gracias principalmente a las características dinámicas de Python.</p>
-<h3>关键要点</h3>
+<h3>Puntos clave</h3>
 <ol>
 <li><strong>El proxy es un intermediario</strong>: Actúa como intermediario entre el cliente y el objeto real</li>
 <li><strong>Interfaz consistente</strong>: El proxy y el objeto real implementan la misma interfaz</li>
@@ -649,11 +649,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debes <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debes <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -851,7 +851,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -942,7 +942,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

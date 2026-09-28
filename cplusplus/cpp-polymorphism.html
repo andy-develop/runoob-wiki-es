@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="C++ 多态  多态按字面的意思就是多种形态。当类之间存在层次结构，并且类之间是通过继承关联时，就会用到多态。 在 C++ 中，多态（Polymorphism）是面向对象编程的重要特性之一。  C++ 多态允许使用基类指针或引用来调用子类的重写方法，从而使得同一接口可以表现不同的行为。多态使得代码更加灵活和通用，程序可以通过基类指针或引用来操作不同类型的对象，而不需要显式区分对象类型。这样可以使代码更具扩展性，在增加新的形状类时不需要修.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -532,10 +532,10 @@ Animal destroyed</pre>
 <li><code>Animal</code>La clase define una función virtual<code>sound()</code>, es una función virtual (<code>virtual</code>), utilizada para representar el comportamiento de sonido de los animales.</li>
 <li><code>~Animal()</code>Es un destructor virtual, asegura que al liberar el objeto de la clase derivada apuntado por el puntero de la clase base se llame correctamente al destructor de la clase derivada, evitando fugas de memoria.</li>
 </ul>
-<p><strong>Clases derivadas<code>Dog</code> 和 <code>Cat</code></strong>：</p>
+<p><strong>Clases derivadas<code>Dog</code>y<code>Cat</code></strong>：</p>
 <ul>
-<li><code>Dog</code> 和 <code>Cat</code>Las clases derivan de<code>Animal</code>la clase, y cada una implementa<code>sound()</code>el método.</li>
-<li><code>Dog</code> 的 <code>sound()</code>Imprime "Dog barks";<code>Cat</code> 的 <code>sound()</code>Imprime "Cat meows". Esto hace que el mismo método (<code>sound()</code>) se comporte de manera diferente en distintas clases.</li>
+<li><code>Dog</code>y<code>Cat</code>Las clases derivan de<code>Animal</code>la clase, y cada una implementa<code>sound()</code>el método.</li>
+<li><code>Dog</code>de<code>sound()</code>Imprime "Dog barks";<code>Cat</code>de<code>sound()</code>Imprime "Cat meows". Esto hace que el mismo método (<code>sound()</code>) se comporte de manera diferente en distintas clases.</li>
 </ul>
 <p><strong>Función principal<code>main()</code></strong>：</p>
 <ul>
@@ -544,7 +544,7 @@ Animal destroyed</pre>
 <li>Al liberar<code>Dog</code>el objeto, primero se llama<code>Dog</code>al destructor de, y luego se llama<code>Animal</code>al destructor de.</li>
 <li>Usando<code>new Cat()</code>crear<code>Cat</code>un objeto y asignarlo a<code>animalPtr</code>, luego llamar a<code>animalPtr-&gt;sound()</code>, producirá "Cat meows", mostrando el comportamiento polimórfico.</li>
 </ul><h3>Conceptos clave</h3>
-<ul><li><p><strong>Función virtual</strong>: Al usar en la clase base<code>virtual</code>la palabra clave para declarar la función virtual, la clase derivada puede reescribir esta función, logrando así que en tiempo de ejecución se llame a la función correcta según el tipo de objeto.</p></li><li><p><strong>Enlace dinámico</strong>: El polimorfismo de C++ se implementa mediante enlace dinámico. En tiempo de ejecución, el puntero de la clase base<code>animalPtr</code>selecciona según el tipo de objeto al que apunta realmente (<code>Dog</code> 或 <code>Cat</code>) llamando al correspondiente<code>sound()</code>método.</p></li><li><p><strong>Destructor virtual</strong>: En una clase base con comportamiento polimórfico, el destructor debe declararse como<code>virtual</code>, para asegurar que al eliminar un objeto de la clase derivada se llame al destructor de la clase derivada, evitando fugas de recursos.</p></li></ul>
+<ul><li><p><strong>Función virtual</strong>: Al usar en la clase base<code>virtual</code>la palabra clave para declarar la función virtual, la clase derivada puede reescribir esta función, logrando así que en tiempo de ejecución se llame a la función correcta según el tipo de objeto.</p></li><li><p><strong>Enlace dinámico</strong>: El polimorfismo de C++ se implementa mediante enlace dinámico. En tiempo de ejecución, el puntero de la clase base<code>animalPtr</code>selecciona según el tipo de objeto al que apunta realmente (<code>Dog</code>o<code>Cat</code>) llamando al correspondiente<code>sound()</code>método.</p></li><li><p><strong>Destructor virtual</strong>: En una clase base con comportamiento polimórfico, el destructor debe declararse como<code>virtual</code>, para asegurar que al eliminar un objeto de la clase derivada se llame al destructor de la clase derivada, evitando fugas de recursos.</p></li></ul>
 <hr/><h2>Ejemplo 2</h2>
 <p>En el siguiente ejemplo, implementamos mediante polimorfismo una clase base genérica Shape y dos clases derivadas Rectangle y Triangle.</p>
 <p>Al llamar a métodos de diferentes clases derivadas a través de un puntero de la clase base, se muestra la característica de enlace dinámico del polimorfismo.</p>
@@ -618,7 +618,7 @@ Triangle Area: Triangle class area:
 25
 </pre>
 <h3>Análisis del código</h3><p>
-<strong>Definición de la clase Shape:</strong></p><ul><li><code>Shape</code>es una clase base abstracta que define una función virtual<code>area()</code>。<code>area()</code>es la función virtual para calcular el área, y se utiliza la<code>virtual</code>palabra clave, de modo que en la clase derivada se pueda reescribir esta función y así implementar el polimorfismo.</li><li><code>width</code> 和 <code>height</code> 是 <code>protected</code>atributos, solo se pueden<code>Shape</code>acceder en la clase y en sus clases derivadas.</li></ul>
+<strong>Definición de la clase Shape:</strong></p><ul><li><code>Shape</code>es una clase base abstracta que define una función virtual<code>area()</code>。<code>area()</code>es la función virtual para calcular el área, y se utiliza la<code>virtual</code>palabra clave, de modo que en la clase derivada se pueda reescribir esta función y así implementar el polimorfismo.</li><li><code>width</code>y<code>height</code>Sí<code>protected</code>atributos, solo se pueden<code>Shape</code>acceder en la clase y en sus clases derivadas.</li></ul>
 <pre>// 基类 Shape，表示形状
 class Shape {
    protected:
@@ -634,7 +634,7 @@ class Shape {
          return 0;
       }
 };</pre>
-<p><strong>Definición de la clase Rectangle:</strong></p><ul><li><code>Rectangle</code>hereda de<code>Shape</code>la clase, y reescribe<code>area()</code>el método, calculando el área del rectángulo.</li><li><code>area()</code>El método utiliza<code>override</code>la palabra clave, lo que indica que esto es una reescritura del<code>Shape</code> 的 <code>area()</code>método de la clase base.</li><li><code>Rectangle::area()</code>Devuelve<code>width * height</code>, es decir, el área del rectángulo.</li></ul>
+<p><strong>Definición de la clase Rectangle:</strong></p><ul><li><code>Rectangle</code>hereda de<code>Shape</code>la clase, y reescribe<code>area()</code>el método, calculando el área del rectángulo.</li><li><code>area()</code>El método utiliza<code>override</code>la palabra clave, lo que indica que esto es una reescritura del<code>Shape</code>de<code>area()</code>método de la clase base.</li><li><code>Rectangle::area()</code>Devuelve<code>width * height</code>, es decir, el área del rectángulo.</li></ul>
 <pre>// 派生类 Rectangle，表示矩形
 class Rectangle : public Shape {
    public:
@@ -678,7 +678,7 @@ int main() {
 
    return 0;
 }</pre>
-<h3>Conceptos clave</h3><ul><li><p><strong>Función virtual</strong>: En la clase base<code>Shape</code>se define la función virtual<code>area()</code>. La función virtual permite que la clase derivada pueda sobrescribir esta función y, en tiempo de ejecución, llamar a la implementación adecuada según el tipo real del objeto al que apunta el puntero.</p></li><li><p><strong>Enlace dinámico</strong>: Dado que<code>area()</code>es una función virtual,<code>shape-&gt;area()</code>al llamarla, en tiempo de ejecución, según<code>shape</code>el tipo real del objeto al que apunta (<code>Rectangle</code> 或 <code>Triangle</code>), se llama a la correspondiente<code>area()</code>implementación. Este mecanismo de decidir en tiempo de ejecución qué función llamar se denomina enlace dinámico, y es el núcleo del polimorfismo.</p></li><li><p><strong>Polimorfismo del puntero de clase base</strong>: El puntero de clase base<code>shape</code>puede apuntar a cualquier objeto derivado de<code>Shape</code>. Cuando<code>shape</code>apunta a diferentes objetos de clases derivadas, la llamada a<code>shape-&gt;area()</code>produce comportamientos diferentes, lo que refleja las características del polimorfismo.</p></li>
+<h3>Conceptos clave</h3><ul><li><p><strong>Función virtual</strong>: En la clase base<code>Shape</code>se define la función virtual<code>area()</code>. La función virtual permite que la clase derivada pueda sobrescribir esta función y, en tiempo de ejecución, llamar a la implementación adecuada según el tipo real del objeto al que apunta el puntero.</p></li><li><p><strong>Enlace dinámico</strong>: Dado que<code>area()</code>es una función virtual,<code>shape-&gt;area()</code>al llamarla, en tiempo de ejecución, según<code>shape</code>el tipo real del objeto al que apunta (<code>Rectangle</code>o<code>Triangle</code>), se llama a la correspondiente<code>area()</code>implementación. Este mecanismo de decidir en tiempo de ejecución qué función llamar se denomina enlace dinámico, y es el núcleo del polimorfismo.</p></li><li><p><strong>Polimorfismo del puntero de clase base</strong>: El puntero de clase base<code>shape</code>puede apuntar a cualquier objeto derivado de<code>Shape</code>. Cuando<code>shape</code>apunta a diferentes objetos de clases derivadas, la llamada a<code>shape-&gt;area()</code>produce comportamientos diferentes, lo que refleja las características del polimorfismo.</p></li>
 <h2 class="tutheader">Funciones virtuales</h2>
 <p><b>Una función virtual</b>es una función declarada en la clase base con la palabra clave<b>virtual</b>virtual.</p><p><b>La función virtual</b>permite que la subclase la sobrescriba, de modo que en tiempo de ejecución, a través de un puntero o referencia de la clase base, se llame a la versión sobrescrita de la subclase, logrando así el enlace dinámico.</p>
 <p>Lo que queremos es que en cualquier punto del programa se pueda elegir la función a llamar según el tipo de objeto al que se llama. Esta operación se conoce como<b>enlace dinámico</b>, o<b>enlace tardío.</b></p><p> <strong>Características:</strong></p>
@@ -902,7 +902,7 @@ public:
         cout &lt;&lt; "people" &lt;&lt; endl;
     };
 };</pre>
-<p>Entonces, en el método main, no podemos usar la línea de código `Base base;`; en este momento `tall` no está implementado, la referencia a la tabla de funciones (vtable) no está definida, por lo que no se puede ejecutar. Pero podemos usar `People people;` y luego<span class="marked">people.tall();</span> 或 <span class="marked">(&amp;people)-&gt;tall();</span>Porque People implementa o, digamos, reescribe y sobrescribe el método virtual puro `tall()` de Base, de modo que ahora tiene definición en la clase People, la tabla de funciones se ha enlazado, y por lo tanto puede crearse una instancia.</p>
+<p>Entonces, en el método main, no podemos usar la línea de código `Base base;`; en este momento `tall` no está implementado, la referencia a la tabla de funciones (vtable) no está definida, por lo que no se puede ejecutar. Pero podemos usar `People people;` y luego<span class="marked">people.tall();</span>o<span class="marked">(&amp;people)-&gt;tall();</span>Porque People implementa o, digamos, reescribe y sobrescribe el método virtual puro `tall()` de Base, de modo que ahora tiene definición en la clase People, la tabla de funciones se ha enlazado, y por lo tanto puede crearse una instancia.</p>
 <pre>int main() {
 //    Base base;//不可用
 
@@ -1060,11 +1060,11 @@ Hello, world!</pre><div class="comt-meta wrapper"><span class="comt-author"><a h
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, puedes hacer clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, puedes hacer clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1262,7 +1262,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1364,7 +1364,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="$(function() {    $('.math').each(function() {         renderMathInElement(this, {             delimiters: [                 { left: '\\(', right: '\\)', display: false },                 { .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -313,7 +313,7 @@ $(function() {
 });
 </script>
 <h1>PyTorch LSTM / GRU</h1>
-<p>Las redes neuronales recurrentes (RNN) enfrentan el problema del desvanecimiento del gradiente al procesar datos secuenciales, lo que dificulta el aprendizaje de dependencias de largo alcance.</p><p><span class="marked">Red de memoria a largo y corto plazo (Long Short-Term Memory, LSTM)</span>和<span class="marked">Unidad recurrente con compuerta (Gated Recurrent Unit, GRU)</span>Al resolver este problema mediante la introducción del mecanismo de compuerta, son modelos centrales para tareas secuenciales como series temporales, lenguaje natural, voz, etc.</p>
+<p>Las redes neuronales recurrentes (RNN) enfrentan el problema del desvanecimiento del gradiente al procesar datos secuenciales, lo que dificulta el aprendizaje de dependencias de largo alcance.</p><p><span class="marked">Red de memoria a largo y corto plazo (Long Short-Term Memory, LSTM)</span>y<span class="marked">Unidad recurrente con compuerta (Gated Recurrent Unit, GRU)</span>Al resolver este problema mediante la introducción del mecanismo de compuerta, son modelos centrales para tareas secuenciales como series temporales, lenguaje natural, voz, etc.</p>
 <hr/>
 <h2>1. Limitaciones de las RNN y el mecanismo de compuerta</h2>
 <p>La RNN estándar combina la entrada actual con el estado oculto del paso anterior en cada paso temporal para calcular el nuevo estado oculto:</p>
@@ -710,7 +710,7 @@ x <span style="color: Gray;">=</span> torch.<span style="color: #05a;">randn</sp
 </div>
 <hr/>
 <h2>7. Procesamiento de secuencias de longitud variable</h2>
-<p>En tareas reales, las longitudes de las secuencias dentro de un mismo batch suelen ser diferentes. PyTorch proporciona<code>pack_padded_sequence</code> 和 <code>pad_packed_sequence</code>para manejar este problema y evitar que LSTM realice cálculos ineficaces en las posiciones de relleno (padding).</p>
+<p>En tareas reales, las longitudes de las secuencias dentro de un mismo batch suelen ser diferentes. PyTorch proporciona<code>pack_padded_sequence</code>y<code>pad_packed_sequence</code>para manejar este problema y evitar que LSTM realice cálculos ineficaces en las posiciones de relleno (padding).</p>
 <h3>7.1 pack_padded_sequence</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -791,7 +791,7 @@ output<span style="color: Gray;">,</span> output_lengths <span style="color: Gra
         <span style="color: #a50"># Propagación hacia adelante de LSTM (omitiendo posiciones de relleno)</span><br/>
         packed_output<span style="color: Gray;">,</span> <span style="color: Olive;">(</span>h_n<span style="color: Gray;">,</span> c_n<span style="color: Olive;">)</span> <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">lstm</span><span style="color: Olive;">(</span>packed<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 方式一：使用最后一层的 h_n 作为序列表示</span><br/>
+        <span style="color: #a50"># Método 1: Usar h_n de la última capa como representación de secuencia</span><br/>
         last_hidden <span style="color: Gray;">=</span> h_n.<span style="color: #05a;">squeeze</span><span style="color: Olive;">(</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span>    <span style="color: #a50"># (batch_size, hidden_size)</span><br/>
 <br/>
         <span style="color: #a50"># Método 2: después de desempaquetar, tomar la salida de la última posición real de cada secuencia (equivalente al método 1)</span><br/>
@@ -1199,7 +1199,7 @@ optimizer <span style="color: Gray;">=</span> optim.<span style="color: #05a;">A
 <tr>
 <td>Error de dimensión de concatenación en LSTM bidireccional</td>
 <td>Comprensión incorrecta del índice de h_n</td>
-<td>用 <code>h_n[-2]</code>(hacia adelante) y<code>h_n[-1]</code>(hacia atrás)</td>
+<td>usar<code>h_n[-2]</code>(hacia adelante) y<code>h_n[-1]</code>(hacia atrás)</td>
 </tr>
 <tr>
 <td>Error de PackedSequence</td>
@@ -1331,11 +1331,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1533,7 +1533,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1635,7 +1635,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

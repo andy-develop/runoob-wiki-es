@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="C 标准库 - &amp;lt;signal.h&amp;gt;  简介 &amp;lt;signal.h&amp;gt; 是 C 标准库中的一个头文件，用于处理信号。 signal.h 头文件定义了一个变量类型 sig_atomic_t、两个函数调用和一些宏来处理程序执行期间报告的不同信号。 信号是一种异步通知机制，允许进程在特定事件发生时执行预定义的处理函数。  下面是一个简单的示例程序，演示如何使用 signal 函数来捕捉 SI.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -374,7 +374,7 @@ Running...
 Running...
 ^CCaught signal 2
 Exiting...</pre><p>Análisis del código:</p>
-<ul><li><code>volatile sig_atomic_t stop = 0;</code>Definir una variable global<code>stop</code>, utilizada para indicar si el programa debe salir. Usar<code>volatile</code>la palabra clave garantiza que el compilador no optimice el acceso a esta variable, porque puede ser modificada en el manejador de señales.<code>sig_atomic_t</code>El tipo garantiza que el acceso a esta variable sea atómico.</li><li>在 <code>handle_sigint</code>En la función de manejo de señales, se establece<code>stop</code>a 1, indicando que el programa debe salir.</li><li>En el bucle principal, se verifica<code>stop</code>el valor de la variable; si está establecida en 1, se sale del bucle y se termina el programa.</li></ul>
+<ul><li><code>volatile sig_atomic_t stop = 0;</code>Definir una variable global<code>stop</code>, utilizada para indicar si el programa debe salir. Usar<code>volatile</code>la palabra clave garantiza que el compilador no optimice el acceso a esta variable, porque puede ser modificada en el manejador de señales.<code>sig_atomic_t</code>El tipo garantiza que el acceso a esta variable sea atómico.</li><li>En<code>handle_sigint</code>En la función de manejo de señales, se establece<code>stop</code>a 1, indicando que el programa debe salir.</li><li>En el bucle principal, se verifica<code>stop</code>el valor de la variable; si está establecida en 1, se sale del bucle y se termina el programa.</li></ul>
 <h2>Variables de biblioteca</h2>
 <p>A continuación se muestran los tipos de variables definidos en el archivo de cabecera signal.h:</p>
 <table class="reference">
@@ -392,7 +392,7 @@ Exiting...</pre><p>Análisis del código:</p>
 </tbody></table>
 <p>Tipos de señal:</p>
 <table class="reference">
-<thead><tr><th>Constante</th><th>Descripción</th></tr></thead><tbody><tr><td><code>SIGABRT</code></td><td>由 <code>abort</code>Señal generada por la función, indica terminación anormal</td></tr><tr><td><code>SIGALRM</code></td><td>由 <code>alarm</code>Señal de vencimiento del temporizador establecido por la función</td></tr><tr><td><code>SIGBUS</code></td><td>Acceso a memoria no válido (por ejemplo, acceso a una dirección de memoria no alineada)</td></tr><tr><td><code>SIGCHLD</code></td><td>Cambio de estado de un proceso hijo (salida o detención)</td></tr><tr><td><code>SIGCONT</code></td><td>Continuar la ejecución de un proceso suspendido</td></tr><tr><td><code>SIGFPE</code></td><td>Error aritmético (por ejemplo, división por cero, excepción de punto flotante)</td></tr><tr><td><code>SIGHUP</code></td><td>Señal de cuelgue (generalmente utilizada para detectar la desconexión del terminal)</td></tr><tr><td><code>SIGILL</code></td><td>Instrucción ilegal</td></tr><tr><td><code>SIGINT</code></td><td>Señal de interrupción (generalmente generada por Ctrl+C)</td></tr><tr><td><code>SIGKILL</code></td><td>Señal de terminación inmediata (no puede ser capturada ni ignorada)</td></tr><tr><td><code>SIGPIPE</code></td><td>Escribir datos en una tubería sin proceso lector</td></tr><tr><td><code>SIGQUIT</code></td><td>Señal de salida del terminal (generalmente generada por Ctrl+\), genera un volcado de núcleo</td></tr><tr><td><code>SIGSEGV</code></td><td>Error de segmentación (acceso a memoria no válido)</td></tr><tr><td><code>SIGSTOP</code></td><td>Detener la ejecución del proceso (no puede ser capturada ni ignorada)</td></tr><tr><td><code>SIGTERM</code></td><td>Señal de terminación</td></tr><tr><td><code>SIGTSTP</code></td><td>Suspender el proceso (generalmente generado por Ctrl+Z)</td></tr><tr><td><code>SIGTTIN</code></td><td>Señal generada cuando un proceso en segundo plano lee datos desde el terminal</td></tr><tr><td><code>SIGTTOU</code></td><td>Señal generada cuando un proceso en segundo plano escribe datos en el terminal</td></tr><tr><td><code>SIGUSR1</code></td><td>Señal personalizada del usuario 1</td></tr><tr><td><code>SIGUSR2</code></td><td>Señal personalizada del usuario 2</td></tr><tr><td><code>SIGPOLL</code></td><td>Evento de E/S (reemplaza a SIGIO)</td></tr><tr><td><code>SIGPROF</code></td><td>Señal de vencimiento del temporizador (temporizador de perfilado<code>setitimer</code>establecido por)</td></tr><tr><td><code>SIGSYS</code></td><td>Llamada al sistema ilegal</td></tr><tr><td><code>SIGTRAP</code></td><td>Instrucción de punto de interrupción o trampa</td></tr><tr><td><code>SIGURG</code></td><td>Señal de condición urgente de socket</td></tr><tr><td><code>SIGVTALRM</code></td><td>Señal de vencimiento del temporizador de reloj virtual</td></tr><tr><td><code>SIGXCPU</code></td><td>Se excede el límite de tiempo de CPU</td></tr><tr><td><code>SIGXFSZ</code></td><td>Se excede el límite de tamaño de archivo</td></tr></tbody></table>
+<thead><tr><th>Constante</th><th>Descripción</th></tr></thead><tbody><tr><td><code>SIGABRT</code></td><td>Razón<code>abort</code>Señal generada por la función, indica terminación anormal</td></tr><tr><td><code>SIGALRM</code></td><td>Razón<code>alarm</code>Señal de vencimiento del temporizador establecido por la función</td></tr><tr><td><code>SIGBUS</code></td><td>Acceso a memoria no válido (por ejemplo, acceso a una dirección de memoria no alineada)</td></tr><tr><td><code>SIGCHLD</code></td><td>Cambio de estado de un proceso hijo (salida o detención)</td></tr><tr><td><code>SIGCONT</code></td><td>Continuar la ejecución de un proceso suspendido</td></tr><tr><td><code>SIGFPE</code></td><td>Error aritmético (por ejemplo, división por cero, excepción de punto flotante)</td></tr><tr><td><code>SIGHUP</code></td><td>Señal de cuelgue (generalmente utilizada para detectar la desconexión del terminal)</td></tr><tr><td><code>SIGILL</code></td><td>Instrucción ilegal</td></tr><tr><td><code>SIGINT</code></td><td>Señal de interrupción (generalmente generada por Ctrl+C)</td></tr><tr><td><code>SIGKILL</code></td><td>Señal de terminación inmediata (no puede ser capturada ni ignorada)</td></tr><tr><td><code>SIGPIPE</code></td><td>Escribir datos en una tubería sin proceso lector</td></tr><tr><td><code>SIGQUIT</code></td><td>Señal de salida del terminal (generalmente generada por Ctrl+\), genera un volcado de núcleo</td></tr><tr><td><code>SIGSEGV</code></td><td>Error de segmentación (acceso a memoria no válido)</td></tr><tr><td><code>SIGSTOP</code></td><td>Detener la ejecución del proceso (no puede ser capturada ni ignorada)</td></tr><tr><td><code>SIGTERM</code></td><td>Señal de terminación</td></tr><tr><td><code>SIGTSTP</code></td><td>Suspender el proceso (generalmente generado por Ctrl+Z)</td></tr><tr><td><code>SIGTTIN</code></td><td>Señal generada cuando un proceso en segundo plano lee datos desde el terminal</td></tr><tr><td><code>SIGTTOU</code></td><td>Señal generada cuando un proceso en segundo plano escribe datos en el terminal</td></tr><tr><td><code>SIGUSR1</code></td><td>Señal personalizada del usuario 1</td></tr><tr><td><code>SIGUSR2</code></td><td>Señal personalizada del usuario 2</td></tr><tr><td><code>SIGPOLL</code></td><td>Evento de E/S (reemplaza a SIGIO)</td></tr><tr><td><code>SIGPROF</code></td><td>Señal de vencimiento del temporizador (temporizador de perfilado<code>setitimer</code>establecido por)</td></tr><tr><td><code>SIGSYS</code></td><td>Llamada al sistema ilegal</td></tr><tr><td><code>SIGTRAP</code></td><td>Instrucción de punto de interrupción o trampa</td></tr><tr><td><code>SIGURG</code></td><td>Señal de condición urgente de socket</td></tr><tr><td><code>SIGVTALRM</code></td><td>Señal de vencimiento del temporizador de reloj virtual</td></tr><tr><td><code>SIGXCPU</code></td><td>Se excede el límite de tiempo de CPU</td></tr><tr><td><code>SIGXFSZ</code></td><td>Se excede el límite de tamaño de archivo</td></tr></tbody></table>
 <h2>Funciones de biblioteca</h2>
 <p>A continuación se muestran las funciones definidas en el archivo de cabecera signal.h:</p>
 <table class="reference">
@@ -595,11 +595,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía un artículo, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debes <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía un artículo, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debes <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -797,7 +797,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -899,7 +899,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

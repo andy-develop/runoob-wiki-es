@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Skills 输入/输出规范设计 | 菜鸟教程</title>
+<title>Skills diseño de especificaciones de entrada/salida | Tutorial de novatos</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Skills 输入/输出规范设计 一个优秀的 Skill，不仅能完成任务，还要清晰地定义'接受什么'和'产出什么'。 良好的输入输出规范，是 Skill 可靠运行的基础。   为什么要定义输入输出规范 Skills 面对的是真实的用户请求，输入格式千变万化。 没有明确规范的 Skill，Claude 会自行猜测输入意图，导致行为不稳定。  规范不是限制，而是给 Claude 明确的行动边界，减少歧.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -342,13 +342,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #666666; font-style: italic;">### Entradas obligatorias</span><br/>
 <br/>
-- <span style="color: #000000; font-weight: bold;">**</span>Archivo de datos<span style="color: #000000; font-weight: bold;">**</span>: el archivo subido por el<span style="color: #000000; font-weight: bold;">`</span>.csv<span style="color: #000000; font-weight: bold;">`</span> 或 <span style="color: #000000; font-weight: bold;">`</span>.xlsx<span style="color: #000000; font-weight: bold;">`</span>archivo<br/>- Codificación: UTF-<span style="color: #000000;">8</span>(CSV) o formato Excel estándar<br/>- La primera fila debe ser el título de las columnas<br/>- El tamaño del archivo no debe superar los 50 MB<br/>
+- <span style="color: #000000; font-weight: bold;">**</span>Archivo de datos<span style="color: #000000; font-weight: bold;">**</span>: el archivo subido por el<span style="color: #000000; font-weight: bold;">`</span>.csv<span style="color: #000000; font-weight: bold;">`</span>o<span style="color: #000000; font-weight: bold;">`</span>.xlsx<span style="color: #000000; font-weight: bold;">`</span>archivo<br/>- Codificación: UTF-<span style="color: #000000;">8</span>(CSV) o formato Excel estándar<br/>- La primera fila debe ser el título de las columnas<br/>- El tamaño del archivo no debe superar los 50 MB<br/>
 <br/>
 <span style="color: #666666; font-style: italic;">### Entradas opcionales</span><br/>
 <br/>
 - <span style="color: #000000; font-weight: bold;">**</span>Columna objetivo<span style="color: #000000; font-weight: bold;">**</span>: especifica qué columnas analizar; por defecto, analiza todas las columnas numéricas<br/>
 - <span style="color: #000000; font-weight: bold;">**</span>Formato de salida<span style="color: #000000; font-weight: bold;">**</span>：<span style="color: #000000; font-weight: bold;">`</span>table<span style="color: #000000; font-weight: bold;">`</span>(tabla) o<span style="color: #000000; font-weight: bold;">`</span>text<span style="color: #000000; font-weight: bold;">`</span>(resumen de texto), por defecto<span style="color: #000000; font-weight: bold;">`</span>table<span style="color: #000000; font-weight: bold;">`</span><br/>
-- <span style="color: #000000; font-weight: bold;">**</span>Precisión<span style="color: #000000; font-weight: bold;">**</span>: número de decimales a conservar, por defecto<span style="color: #000000;">2</span> 位<br/>
+- <span style="color: #000000; font-weight: bold;">**</span>Precisión<span style="color: #000000; font-weight: bold;">**</span>: número de decimales a conservar, por defecto<span style="color: #000000;">2</span>Posición<br/>
 <br/>
 <span style="color: #666666; font-style: italic;">### Manejo de entradas faltantes</span><br/>
 <br/>Si el archivo no se ha subido, informe al usuario:<span style="color: #a10;">"Por favor, suba el archivo CSV o Excel que desea analizar."</span><br/>Si el formato del archivo no es compatible, informe al usuario y enumere la lista de formatos compatibles.<br/>
@@ -627,11 +627,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Debes <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir notas!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Debes <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir notas!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -829,7 +829,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -931,7 +931,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

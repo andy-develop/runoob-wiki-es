@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Sklearn 自定义模型与功能自定义模型可以扩展 scikit-learn 的功能，以便满足特定应用场景下的需求。  在 scikit-learn 中，除了使用现成的模型和预处理功能外，用户还可以根据自己的需求创建自定义的模型、转换器和功能。 自定义模型和功能的实现通常涉及继承 scikit-learn 的基类，如 BaseEstimator 和 TransformerMixin，然后实现特定的 fit 和 predict 方法。 本.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -250,9 +250,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>Modelos y funciones personalizados de Sklearn</h1><p>Los modelos personalizados pueden extender la funcionalidad de scikit-learn para satisfacer las necesidades de escenarios de aplicación específicos.</p>
 <p>En scikit-learn, además de usar modelos y funciones de preprocesamiento ya disponibles, los usuarios también pueden crear modelos, transformadores y funciones personalizados según sus necesidades.</p><p>La implementación de modelos y funciones personalizados generalmente implica heredar de las clases base de scikit-learn, como BaseEstimator y TransformerMixin, y luego implementar los métodos específicos fit y predict.</p>
 <p>Este capítulo explicará en detalle los siguientes aspectos:</p>
-<ol><li><strong>Transformador personalizado (Transformer)</strong></li><li><strong>Estimador personalizado (Estimator)</strong></li><li><strong>Pasos de pipeline personalizados</strong></li><li><strong>Cómo mediante la herencia<code>BaseEstimator</code> 和 <code>TransformerMixin</code>implementar algoritmos personalizados</strong></li></ol>
+<ol><li><strong>Transformador personalizado (Transformer)</strong></li><li><strong>Estimador personalizado (Estimator)</strong></li><li><strong>Pasos de pipeline personalizados</strong></li><li><strong>Cómo mediante la herencia<code>BaseEstimator</code>y<code>TransformerMixin</code>implementar algoritmos personalizados</strong></li></ol>
 <h2>1. Transformador personalizado (Transformer)</h2>
-<p>Un transformador es un componente utilizado para transformar datos, por ejemplo, estandarización, selección de características, etc. Los transformadores personalizados pueden heredar de<code>TransformerMixin</code>, e implementar<code>fit</code> 和 <code>transform</code>los métodos.</p>
+<p>Un transformador es un componente utilizado para transformar datos, por ejemplo, estandarización, selección de características, etc. Los transformadores personalizados pueden heredar de<code>TransformerMixin</code>, e implementar<code>fit</code>y<code>transform</code>los métodos.</p>
 <p><strong>Pasos para un transformador personalizado:</strong></p>
 <ul>
 <li><strong><code>fit</code>Método</strong>: generalmente se utiliza para aprender las propiedades de los datos (como la media, la varianza, los criterios de selección de características, etc.).<code>fit</code>El método devuelve el propio transformador, lo que permite la llamada en cadena.</li>
@@ -409,7 +409,7 @@ y_pred <span style="color: Gray;">=</span> pipeline.<span style="color: #05a;">p
 <p><strong>Explicación:</strong></p>
 <p>Usamos CustomScaler y SimpleClassifier como pasos del pipeline, aprovechando que el pipeline ejecuta automáticamente el preprocesamiento de datos y el entrenamiento del modelo.</p><p>De esta manera, todo el flujo de trabajo del pipeline se puede completar con un solo método fit y predict, manteniendo eficiencia y simplicidad.</p>
 <hr/>
-<h2>Cómo implementar algoritmos personalizados heredando de BaseEstimator y TransformerMixin</h2><ul><li><strong><code>BaseEstimator</code></strong>: es la clase base de todos los estimadores de scikit-learn. Proporciona<code>get_params()</code> 和 <code>set_params()</code>métodos, lo que permite que los estimadores personalizados puedan<code>GridSearchCV</code>trabajar conjuntamente con herramientas como GridSearchCV, etc.</li><li><strong><code>TransformerMixin</code></strong>: es la clase base de todos los transformadores de scikit-learn. Proporciona<code>fit_transform()</code>método, lo que permite que los transformadores puedan<code>Pipeline</code>usarse conjuntamente.</li></ul>
+<h2>Cómo implementar algoritmos personalizados heredando de BaseEstimator y TransformerMixin</h2><ul><li><strong><code>BaseEstimator</code></strong>: es la clase base de todos los estimadores de scikit-learn. Proporciona<code>get_params()</code>y<code>set_params()</code>métodos, lo que permite que los estimadores personalizados puedan<code>GridSearchCV</code>trabajar conjuntamente con herramientas como GridSearchCV, etc.</li><li><strong><code>TransformerMixin</code></strong>: es la clase base de todos los transformadores de scikit-learn. Proporciona<code>fit_transform()</code>método, lo que permite que los transformadores puedan<code>Pipeline</code>usarse conjuntamente.</li></ul>
 <p>Al heredar de estas dos clases base, podemos crear fácilmente nuestros propios modelos y funciones personalizados, y podemos utilizar las herramientas de scikit-learn (como GridSearchCV y Pipeline) para la optimización y evaluación.</p>
 <p>Ejemplo completo de transformador y estimador personalizados:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -582,11 +582,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">Las notas deben ser una extensión del contenido de este artículo.</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">Las notas deben ser una extensión del contenido de este artículo.</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -784,7 +784,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -886,7 +886,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

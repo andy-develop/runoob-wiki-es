@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="路由系统 上一章节我们的任务管理逻辑已经通过 Pinia 实现了持久化，现在我们需要为应用注入灵魂——路由系统。 在企业级开发中，路由不只是切换页面，更承担了安全性（权限控制）和用户体验（动态标题）的重任。  安装与基础配置 首先安装 Vue Router： npm install vue-router 在 src 目录下创建 router 目录，并创建 router/index.js 文件。   我们将定义两个页面：工作台 (Dash.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -165,12 +165,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-intro" id="content">
 <h1>Sistema de enrutamiento</h1>
 <p>En el capítulo anterior, nuestra lógica de gestión de tareas ya se ha persistido mediante Pinia. Ahora necesitamos inyectar alma a la aplicación:<strong>Sistema de enrutamiento</strong>。</p>
-<p>En el desarrollo empresarial, el enrutamiento no solo cambia de página, sino que también asume<strong>Seguridad (control de permisos)</strong>和<strong>Experiencia de usuario (títulos dinámicos)</strong>la importante responsabilidad.</p>
+<p>En el desarrollo empresarial, el enrutamiento no solo cambia de página, sino que también asume<strong>Seguridad (control de permisos)</strong>y<strong>Experiencia de usuario (títulos dinámicos)</strong>la importante responsabilidad.</p>
 <hr/>
 <h2>Instalación y configuración básica</h2>
 <p>Primero, instala Vue Router:</p>
 <pre>npm install vue-router</pre>
-<p>在 <code>src</code>Crea un directorio router en el directorio y crea<code>router/index.js</code>el archivo.</p>
+<p>En<code>src</code>Crea un directorio router en el directorio y crea<code>router/index.js</code>el archivo.</p>
 <p><img decoding="async" src="../wp-content/uploads/2026/01/4472e1e9-8bf2-4eac-a637-7aa428c7f7fb.png"/></p>
 <p>Definiremos dos páginas: el panel de trabajo (Dashboard) y la página de inicio de sesión (Login).</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -203,7 +203,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #FF0000;">export</span> <span style="color: #000066; font-weight: bold;">default</span> router<br/>
 </div></div>
-<p>在 <code>src</code>Crea en<code>views</code>la carpeta y asigna las páginas.</p>
+<p>En<code>src</code>Crea en<code>views</code>la carpeta y asigna las páginas.</p>
 <ul>
 <li><strong><code>src/App.vue</code></strong>App.vue: contenedor raíz, solo coloca<code>&lt;router-view /&gt;</code>y la animación global.</li>
 <li><strong><code>src/views/Dashboard.vue</code></strong>Dashboard.vue: las funciones principales originales de TaskHub (lista de tareas, campo de entrada, etc.).</li>
@@ -363,7 +363,7 @@ router.<span style="color: #660066;">beforeEach</span><span style="color: #00990
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><br/>
 <span style="color: #FF0000;">export</span> <span style="color: #000066; font-weight: bold;">default</span> router<br/>
 </div></div>
-<h3>在 <code>main.js</code>Completar la última pieza del rompecabezas en</h3>
+<h3>En<code>main.js</code>Completar la última pieza del rompecabezas en</h3>
 <p>importa y monta el enrutador:<code>main.js</code>Ejemplo</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #FF0000;">import</span> <span style="color: #009900;">{</span> createApp <span style="color: #009900;">}</span> from <span style="color: #3366CC;">'vue'</span><br/>
@@ -389,8 +389,8 @@ app.<span style="color: #660066;">mount</span><span style="color: #009900;">(</s
 <h3>Explicación de los puntos clave</h3>
 <ol>
 <li><strong>se quedó vacío?<code>App.vue</code>En una aplicación de una sola página (SPA),</strong><br/>es el caparazón de toda la aplicación. Lo vaciamos para poder insertar dinámicamente diferentes páginas (Dashboard o Login) según los cambios de URL.<code>App.vue</code>La práctica</li>
-<li><strong><code>useRouter</code>En ella, mediante</strong>：<br/>在 <code>Dashboard.vue</code>se implementó la función de cerrar sesión. Nota:<code>router.push('/login')</code>Añadirá un nuevo registro al historial del navegador; al hacer clic en el botón de retroceso del navegador se puede volver atrás.<code>push</code>Herencia de diseño de Tailwind v4</li>
-<li><strong>Debido a que</strong>：<br/>agregamos en el contenedor global<code>App.vue</code>, todas las subpáginas (Dashboard, Login) heredarán por defecto este fondo gris claro, lo que garantiza la coherencia visual.<code>bg-slate-50</code> 和 <code>min-h-screen</code>Otras extensiones</li>
+<li><strong><code>useRouter</code>En ella, mediante</strong>：<br/>En<code>Dashboard.vue</code>se implementó la función de cerrar sesión. Nota:<code>router.push('/login')</code>Añadirá un nuevo registro al historial del navegador; al hacer clic en el botón de retroceso del navegador se puede volver atrás.<code>push</code>Herencia de diseño de Tailwind v4</li>
+<li><strong>Debido a que</strong>：<br/>agregamos en el contenedor global<code>App.vue</code>, todas las subpáginas (Dashboard, Login) heredarán por defecto este fondo gris claro, lo que garantiza la coherencia visual.<code>bg-slate-50</code>y<code>min-h-screen</code>Otras extensiones</li>
 </ol>
 AI pensando...
 </div>
@@ -530,7 +530,7 @@ Cancelar
 <ul id="comment-author-info">
 <li class="form-inline"><label class="hide" for="author">Apodo (obligatorio)</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Correo electrónico</span></li>
 <li class="form-inline"><label class="hide" for="email">Correo electrónico (obligatorio)</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -708,7 +708,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -799,7 +799,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

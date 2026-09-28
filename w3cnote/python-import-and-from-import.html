@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Python import 和 from … import 的主要区别 | 菜鸟教程</title>
+<title>La principal diferencia entre import y from ... import en Python | Tutorial para novatos</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Python 提供了两种常见的模块导入方式：import 和 from ... import。这两种方式在使用方式、命名空间管理、可读性和潜在问题方面都有显著区别。下面将详细说明这些方面。     1. 使用方式  import module：                              导入整个模块。                 使用时需通过模块名访问模块中的对象。              实例 [mycode4 .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -69,42 +69,42 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
-<h2>Python import 和 from … import 的主要区别</h2> <h3><em>分类</em> <a href="../w3cnote_genre/code.html" title="编程技术">编程技术</a> </h3>
+<h2>Principales diferencias entre import y from ... import en Python</h2> <h3><em>categoría</em> <a href="../w3cnote_genre/code.html" title="编程技术">Técnicas de programación</a> </h3>
 </div>
 <div class="article-body note-body">
 <div class="article-intro">
 <!-- ad start-->
 <!-- ad end-->
-<p>Python ofrece dos formas comunes de importar módulos:<code>import</code> 和 <code>from ... import</code>Estos dos métodos difieren significativamente en cuanto a uso, gestión del espacio de nombres, legibilidad y problemas potenciales. A continuación se detallan estos aspectos.</p>
+<p>Python ofrece dos formas comunes de importar módulos:<code>import</code>y<code>from ... import</code>Estos dos métodos difieren significativamente en cuanto a uso, gestión del espacio de nombres, legibilidad y problemas potenciales. A continuación se detallan estos aspectos.</p>
 <h3>1. Forma de uso</h3>
 <p><strong><code>import module</code></strong>：</p>
 <ul>
 <li>Importar todo el módulo.</li>
 <li>Al usarlo, se debe acceder a los objetos del módulo mediante el nombre del módulo.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">math</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> <span style="color: #05a;">math</span>.<span style="color: #05a;">sqrt</span><span style="color: Olive;">(</span><span style="color: Maroon;">16</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出 4.0</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span>  <span style="color: #a50"># Imprimir 4.0</span><br/>
 </div></div>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
 <li>Importa objetos específicos (funciones, clases, variables, etc.) desde un módulo.</li>
 <li>Al usarlos, se hace referencia directa a los objetos importados, sin necesidad del prefijo del nombre del módulo.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> sqrt<br/>
 <br/>
 result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span><span style="color: Maroon;">16</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出 4.0</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span>  <span style="color: #a50"># Imprimir 4.0</span><br/>
 </div></div>
 <h3>2. Gestión de espacios de nombres</h3>
 <p><strong><code>import module</code></strong>：</p>
@@ -117,11 +117,11 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <li>Importa directamente los objetos del módulo al espacio de nombres actual.</li>
 <li>Puede provocar conflictos de nombres con otros objetos del espacio de nombres actual.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> sqrt<br/>
-<span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">cmath</span> <span style="color: Green;font-weight:bold;">import</span> sqrt  <span style="color: #a50"># 复数的 sqrt</span><br/>
+<span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">cmath</span> <span style="color: Green;font-weight:bold;">import</span> sqrt  <span style="color: #a50"># sqrt de números complejos</span><br/>
 <br/>
-result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 可能会混淆使用的 sqrt 函数</span><br/>
+result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">)</span>  <span style="color: #a50"># La función sqrt que puede resultar confusa de usar</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
 </div></div>
 <h3>3. Legibilidad y mantenibilidad</h3>
@@ -130,22 +130,22 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <li>En el código se sabe claramente qué objetos provienen de qué módulo, porque siempre se usa el prefijo del nombre del módulo.</li>
 <li>Mejorar la legibilidad y mantenibilidad del código.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">os</span><br/>
 <br/>
 current_directory <span style="color: Gray;">=</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">getcwd</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_directory<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出当前工作目录</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_directory<span style="color: Olive;">)</span>  <span style="color: #a50"># Imprimir el directorio de trabajo actual</span><br/>
 </div></div>
 <p><strong><code>from module import name</code></strong>：</p>
 <ul>
 <li>En el código se usan directamente los nombres de los objetos, por lo que puede ser difícil saber de qué módulo provienen.</li>
 <li>Se necesita añadir más comentarios o documentación al código para mantener la claridad.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">os</span> <span style="color: Green;font-weight:bold;">import</span> getcwd<br/>
 <br/>
 current_directory <span style="color: Gray;">=</span> getcwd<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_directory<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出当前工作目录</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_directory<span style="color: Olive;">)</span>  <span style="color: #a50"># Imprimir el directorio de trabajo actual</span><br/>
 </div></div>
 <h3>4. Importación selectiva y uso de memoria</h3>
 <p><strong><code>import module</code></strong>：</p>
@@ -158,12 +158,12 @@ current_directory <span style="color: Gray;">=</span> getcwd<span style="color: 
 <li>Importa solo objetos específicos del módulo, ahorrando memoria.</li>
 <li>Adecuado cuando solo se necesitan usar unos pocos objetos del módulo.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
-<span style="color: #a50"># 只需使用 datetime 中的 date 对象</span><br/>
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
+<span style="color: #a50"># Solo es necesario usar el objeto date de datetime</span><br/>
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">datetime</span> <span style="color: Green;font-weight:bold;">import</span> date<br/>
 <br/>
 today <span style="color: Gray;">=</span> date.<span style="color: #05a;">today</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>today<span style="color: Olive;">)</span>  <span style="color: #a50"># 输出当前日期</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>today<span style="color: Olive;">)</span>  <span style="color: #a50"># Imprimir la fecha actual</span><br/>
 </div></div>
 <h4>5. Importar todos los objetos</h4>
 <p><strong><code>from module import *</code></strong>：</p>
@@ -171,30 +171,30 @@ today <span style="color: Gray;">=</span> date.<span style="color: #05a;">today<
 <li>Importa todos los objetos del módulo al espacio de nombres actual.</li>
 <li>Puede causar conflictos de nombres, reducir la legibilidad del código y no se recomienda su uso.</li>
 </ul>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> *<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>sqrt<span style="color: Olive;">(</span><span style="color: Maroon;">16</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 直接使用 sqrt 函数</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>sqrt<span style="color: Olive;">(</span><span style="color: Maroon;">16</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Usar directamente la función sqrt</span><br/>
 </div></div>
-<p>潜在问题：</p>
-<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<p>problemas potenciales:</p>
+<div class="example"><h2 class="example">Ejemplos</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">math</span> <span style="color: Green;font-weight:bold;">import</span> *<br/>
 <span style="color: Green;font-weight:bold;">from</span> <span style="color: #05a;">cmath</span> <span style="color: Green;font-weight:bold;">import</span> *<br/>
 <br/>
-result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 不明确使用哪个模块的 sqrt 函数</span><br/>
+result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">)</span>  <span style="color: #a50"># No está claro qué módulo usa la función sqrt</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result<span style="color: Olive;">)</span><br/>
-</div></div><h3>总结</h3>
+</div></div><h3>Resumen</h3>
 <ul>
 <li><strong><code>import module</code></strong>: Adecuado cuando se necesita usar todo el módulo, evita conflictos de nombres y mejora la legibilidad del código.</li>
 <li><strong><code>from module import name</code></strong>: Adecuado cuando solo se necesitan algunos objetos del módulo, simplifica el código, pero hay que tener cuidado con los conflictos de nombres.</li>
 <li><strong><code>from module import *</code></strong>: Evitar su uso en la medida de lo posible, ya que puede provocar conflictos de nombres y confusión en el código.</li>
 </ul>
-<p>Elegir el método de importación adecuado depende del escenario de uso y las necesidades específicas; generalmente se recomienda utilizarlo cuando se necesitan evitar conflictos de nombres y mantener el código claro.<code>import</code>Sentencia, utilizada cuando se necesita simplificar el código y usar objetos específicos.<code>from ... import</code>语句。</p>
+<p>Elegir el método de importación adecuado depende del escenario de uso y las necesidades específicas; generalmente se recomienda utilizarlo cuando se necesitan evitar conflictos de nombres y mantener el código claro.<code>import</code>Sentencia, utilizada cuando se necesita simplificar el código y usar objetos específicos.<code>from ... import</code>Sentencia.</p>
 </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link">← <a href="./python-equal-and-is.html" rel="prev">Python 中等于到底用 == 还是 is</a> </div>
-<div class="next-design-link"><a href="./sign-magnitude.html" rel="next">原码、反码、补码</a> →</div>
+<div class="previous-design-link">← <a href="./python-equal-and-is.html" rel="prev">En Python, ¿qué usar para la igualdad: == o is?</a> </div>
+<div class="next-design-link"><a href="./sign-magnitude.html" rel="next">Signo y magnitud, complemento a uno, complemento a dos</a> →</div>
 </div>
 <style>
 .wrapper {
@@ -300,16 +300,16 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic en mí para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas debes <a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas debes <a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=".." id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=".." id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -317,14 +317,14 @@ result <span style="color: Gray;">=</span> sqrt<span style="color: Olive;">(</sp
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="25681"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>

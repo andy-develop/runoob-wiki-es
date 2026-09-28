@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="./static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="./static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="./wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="./static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="./static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="HTML/CSS/JS 在线代码运行工具，主打代码快速测试，粘贴代码、一键运行，实时预览渲染效果，高效验证代码逻辑与页面样式。            .wce-wrap *, .wce-wrap *::before, .wce-wrap *::after { box-sizing: border-box; }  .wce-wrap {   border: 1px solid rgba(0,0,0,.12);   border-radiu.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="search.html" method="get"><input autocomplete="off" class="placeholder" name="q" placeholder="Buscar"/>
@@ -65,7 +65,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
+</div>Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -132,7 +132,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -186,10 +186,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="big-middle-column">
 <div class="article">
@@ -352,7 +352,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div></div></div></div></body>\n'
     + '</html>';
 
-  /* ── 初始化 Ace ── */
+  /* ── Inicializar Ace ── */
   ace.require('ace/ext/language_tools');
 
   var editor = ace.edit('wceAce', {
@@ -369,29 +369,29 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     scrollPastEnd:       0.3
   });
 
-  editor.setValue(EXAMPLE, -1); // -1 = 光标置于开头
+  editor.setValue(EXAMPLE, -1); // -1 = cursor al inicio
 
-  /* ── 状态栏 ── */
+  /* ── Barra de estado ── */
   editor.session.selection.on('changeCursor', updateStatus);
   editor.session.on('change', updateStatus);
 
   function updateStatus () {
     var cur = editor.getCursorPosition();
     document.getElementById('wceCursorPos').textContent =
-      '行 ' + (cur.row + 1) + '，列 ' + (cur.column + 1);
+      'Línea ' + (cur.row + 1) + ', columna ' + (cur.column + 1);
     document.getElementById('wceCharCount').textContent =
-      editor.getValue().length + ' \u5b57\u7b26';
+      editor.getValue().length + ' caracteres';
   }
   updateStatus();
 
-  /* ── Ctrl+Enter 运行 ── */
+  /* ── Ejecutar con Ctrl+Enter ── */
   editor.commands.addCommand({
     name: 'runCode',
     bindKey: { win: 'Ctrl-Enter', mac: 'Cmd-Enter' },
     exec: run
   });
 
-  /* ── 运行 ── */
+  /* ── Ejecutar ── */
   function run () {
     var win = window.open('', '_blank');
     if (win) {
@@ -399,52 +399,52 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       win.document.write(editor.getValue());
       win.document.close();
     } else {
-      showToast('fa-exclamation-triangle', '\u5f39\u7a97\u88ab\u62e6\u622a\uff0c\u8bf7\u5141\u8bb8\u672c\u7ad9\u5f39\u51fa\u7a97\u53e3');
+      showToast('fa-exclamation-triangle', 'Ventana emergente bloqueada. Por favor, permite que este sitio muestre ventanas emergentes');
     }
   }
   document.getElementById('wceRunBtn').addEventListener('click', run);
 
-  /* ── 格式化 ── */
+  /* ── Formatear ── */
   document.getElementById('wceFmtBtn').addEventListener('click', function () {
     editor.session.setValue(
       editor.getValue()
-        .replace(/&gt;\s*\n&lt;')   // 标签间换行
-        .replace(/^\s+|\s+$/g, '')   // 去首尾空白
+        .replace(/&gt;\s*\n&lt;')   // salto de línea entre etiquetas
+        .replace(/^\s+|\s+$/g, '')   // quitar espacios al inicio y al final
     );
-    showToast('fa-check', '\u5df2\u6574\u7406\u7f29\u8fdb');
+    showToast('fa-check', 'Sangría ajustada');
   });
 
-  /* ── 复制 ── */
+  /* ── Copiar ── */
   document.getElementById('wceCopyBtn').addEventListener('click', function () {
     var code = editor.getValue();
     if (navigator.clipboard) {
       navigator.clipboard.writeText(code).then(function () {
-        showToast('fa-clipboard', '\u5df2\u590d\u5236\u5230\u526a\u8d34\u677f');
+        showToast('fa-clipboard', 'Copiado al portapapeles');
       });
     } else {
       var ta = document.createElement('textarea');
       ta.value = code;
       document.body.appendChild(ta); ta.select();
       document.execCommand('copy'); document.body.removeChild(ta);
-      showToast('fa-clipboard', '\u5df2\u590d\u5236\u5230\u526a\u8d34\u677f');
+      showToast('fa-clipboard', 'Copiado al portapapeles');
     }
   });
 
-  /* ── 清空 ── */
+  /* ── Vaciar ── */
   document.getElementById('wceClearBtn').addEventListener('click', function () {
-    if (confirm('\u786e\u8ba4\u6e05\u7a7a\u7f16\u8f91\u5668\u5185\u5bb9\uff1f')) {
+    if (confirm('¿Confirmar que quieres vaciar el contenido del editor?')) {
       editor.setValue('', -1);
-      showToast('fa-trash-o', '\u5df2\u6e05\u7a7a');
+      showToast('fa-trash-o', 'Se ha vaciado');
     }
   });
 
-  /* ── 加载示例 ── */
+  /* ── Cargar ejemplo ── */
   document.getElementById('wceExampleBtn').addEventListener('click', function () {
     editor.setValue(EXAMPLE, -1);
-    showToast('fa-lightbulb-o', '\u5df2\u52a0\u8f7d\u793a\u4f8b\u4ee3\u7801');
+    showToast('fa-lightbulb-o', 'Código de ejemplo cargado');
   });
 
-  /* ── 字号 ── */
+  /* ── Tamaño de letra ── */
   var fontSize = 14;
   function applyFontSize (n) {
     fontSize = Math.min(22, Math.max(10, n));
@@ -465,19 +465,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2200);
   }
 
-})();
-
-<blockquote><p>Esta página es solo para pruebas; para funciones más avanzadas, puedes utilizar el IDE de IA:</p>
+})();<blockquote><p>Esta página es solo para pruebas; para funciones más avanzadas, puedes utilizar el IDE de IA:</p>
 <ul>
 <li><strong>Qoder de Alibaba:</strong><a href="https://qoder.cn/referral?utm_source=paid&amp;utm_medium=affiliate&amp;utm_campaign=cainiaojiaocheng" target="_blank">https://qoder.com/</a></li>
 <li>
 <strong>Trae de ByteDance:</strong><a href="https://www.trae.cn/sem/?utm_source=advertising&amp;utm_medium=runoob_ug_cpa&amp;utm_term=hw_trae_runoob" target="_blank">https://www.trae.cn/</a></li>
 </ul></blockquote>
-
-
-
-
-
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">
 <i class="fa fa-chevron-up"></i>
@@ -520,4 +513,3 @@ window.jsui={
 <script src="./wp-content/themes/runoob/assets/js/main.min.js"></script>
 <script src="./wp-content/themes/runoob/assets/js/bookmark.js"></script>
 <script src="./static.char123.com/assets/libs/marked.umd.js"></script>
-

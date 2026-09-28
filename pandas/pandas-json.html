@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Pandas JSON JSON（JavaScript Object Notation，JavaScript 对象表示法），是存储和交换文本信息的语法，类似 XML。 JSON 比 XML 更小、更快，更易解析，更多 JSON 内容可以参考 JSON 教程。  Pandas 提供了强大的方法来处理 JSON 格式的数据，支持从 JSON 文件或字符串中读取数据并将其转换为 DataFrame，以及将 DataFrame 转换回 JSON.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -343,7 +343,7 @@ df = pd.read_json(
     convert_dates=True,  # 是否将日期解析为日期类型
     keep_default_na=True # 是否保留默认的缺失值标记
 )</pre><p><strong>Descripción de parámetros:</strong></p><table class="reference"><thead><tr><th><strong>Parámetro</strong></th><th><strong>Descripción</strong></th><th><strong>Valor predeterminado</strong></th></tr></thead><tbody><tr><td><code>path_or_buffer</code></td><td>Ruta del archivo JSON, cadena JSON o URL</td><td>Parámetro obligatorio</td></tr><tr><td><code>orient</code></td><td>Define el método de formato de los datos JSON. Los valores comunes son:<code>split</code>、<code>records</code>、<code>index</code>、<code>columns</code>、<code>values</code>。</td><td><code>None</code>(inferido automáticamente del archivo)</td></tr><tr><td><code>dtype</code></td><td>Forzar la especificación del tipo de dato de las columnas</td><td><code>None</code></td></tr><tr><td><code>convert_axes</code></td><td>Si se convierten los ejes a tipos de datos apropiados</td><td><code>True</code></td></tr><tr><td><code>convert_dates</code></td><td>Si se analizan las fechas como tipo fecha</td><td><code>True</code></td></tr><tr><td><code>keep_default_na</code></td><td>Si se conservan los marcadores de valores faltantes predeterminados (como<code>NaN</code>）</td><td><code>True</code></td></tr></tbody></table><p><strong>Opciones comunes del parámetro orient:</strong></p>
-<table class="reference"><thead><tr><th><strong>Valor de orient</strong></th><th><strong>Ejemplo de formato JSON</strong></th><th><strong>Descripción</strong></th></tr></thead><tbody><tr><td><code>split</code></td><td><code>{"index":["a","b"],"columns":["A","B"],"data":[[1,2],[3,4]]}</code></td><td>Usar claves<code>index</code>、<code>columns</code> 和 <code>data</code>Estructura</td></tr><tr><td><code>records</code></td><td><code>[{"A":1,"B":2},{"A":3,"B":4}]</code></td><td>Cada registro es un diccionario, que representa una fila de datos</td></tr><tr><td><code>index</code></td><td><code>{"a":{"A":1,"B":2},"b":{"A":3,"B":4}}</code></td><td>Usa el índice como clave y el valor como diccionario</td></tr><tr><td><code>columns</code></td><td><code>{"A":{"a":1,"b":3},"B":{"a":2,"b":4}}</code></td><td>Usa los nombres de columnas como claves y los valores como diccionarios</td></tr><tr><td><code>values</code></td><td><code>[[1,2],[3,4]]</code></td><td>Devuelve solo los datos, sin incluir el índice ni los nombres de columnas</td></tr></tbody></table>
+<table class="reference"><thead><tr><th><strong>Valor de orient</strong></th><th><strong>Ejemplo de formato JSON</strong></th><th><strong>Descripción</strong></th></tr></thead><tbody><tr><td><code>split</code></td><td><code>{"index":["a","b"],"columns":["A","B"],"data":[[1,2],[3,4]]}</code></td><td>Usar claves<code>index</code>、<code>columns</code>y<code>data</code>Estructura</td></tr><tr><td><code>records</code></td><td><code>[{"A":1,"B":2},{"A":3,"B":4}]</code></td><td>Cada registro es un diccionario, que representa una fila de datos</td></tr><tr><td><code>index</code></td><td><code>{"a":{"A":1,"B":2},"b":{"A":3,"B":4}}</code></td><td>Usa el índice como clave y el valor como diccionario</td></tr><tr><td><code>columns</code></td><td><code>{"A":{"a":1,"b":3},"B":{"a":2,"b":4}}</code></td><td>Usa los nombres de columnas como claves y los valores como diccionarios</td></tr><tr><td><code>values</code></td><td><code>[[1,2],[3,4]]</code></td><td>Devuelve solo los datos, sin incluir el índice ni los nombres de columnas</td></tr></tbody></table>
 <p>Cargar datos desde un archivo JSON:</p><div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
@@ -685,7 +685,7 @@ df.to_json(
     default_handler=None,   # 自定义非标准类型的处理函数
     lines=False,            # 是否将每行数据作为一行（适用于 'records' 或 'split'）
     encoding='utf-8'        # 编码格式
-)</pre><p><strong>Descripción de parámetros:</strong></p><table class="reference"><thead><tr><th><strong>Parámetro</strong></th><th><strong>Descripción</strong></th><th><strong>Valor predeterminado</strong></th></tr></thead><tbody><tr><td><code>path_or_buffer</code></td><td>La ruta del archivo de salida o el objeto de archivo, si es<code>None</code>, entonces devuelve una cadena JSON</td><td><code>None</code></td></tr><tr><td><code>orient</code></td><td>Especifica la estructura del formato JSON, admite<code>split</code>、<code>records</code>、<code>index</code>、<code>columns</code>、<code>values</code></td><td><code>None</code>(el valor predeterminado es<code>columns</code>）</td></tr><tr><td><code>date_format</code></td><td>Formato de fecha, admite<code>'epoch'</code> 或 <code>'iso'</code>formato</td><td><code>None</code></td></tr><tr><td><code>default_handler</code></td><td>Manejador personalizado para tipos no estándar (como<code>datetime</code>etc.) función de procesamiento</td><td><code>None</code></td></tr><tr><td><code>lines</code></td><td>Si se debe generar cada fila de datos como una línea (aplicable a<code>records</code> 或 <code>split</code>）</td><td><code>False</code></td></tr><tr><td><code>encoding</code></td><td>Formato de codificación del archivo de salida</td><td><code>'utf-8'</code></td></tr></tbody></table>
+)</pre><p><strong>Descripción de parámetros:</strong></p><table class="reference"><thead><tr><th><strong>Parámetro</strong></th><th><strong>Descripción</strong></th><th><strong>Valor predeterminado</strong></th></tr></thead><tbody><tr><td><code>path_or_buffer</code></td><td>La ruta del archivo de salida o el objeto de archivo, si es<code>None</code>, entonces devuelve una cadena JSON</td><td><code>None</code></td></tr><tr><td><code>orient</code></td><td>Especifica la estructura del formato JSON, admite<code>split</code>、<code>records</code>、<code>index</code>、<code>columns</code>、<code>values</code></td><td><code>None</code>(el valor predeterminado es<code>columns</code>）</td></tr><tr><td><code>date_format</code></td><td>Formato de fecha, admite<code>'epoch'</code>o<code>'iso'</code>formato</td><td><code>None</code></td></tr><tr><td><code>default_handler</code></td><td>Manejador personalizado para tipos no estándar (como<code>datetime</code>etc.) función de procesamiento</td><td><code>None</code></td></tr><tr><td><code>lines</code></td><td>Si se debe generar cada fila de datos como una línea (aplicable a<code>records</code>o<code>split</code>）</td><td><code>False</code></td></tr><tr><td><code>encoding</code></td><td>Formato de codificación del archivo de salida</td><td><code>'utf-8'</code></td></tr></tbody></table>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
@@ -857,11 +857,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1059,7 +1059,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1161,7 +1161,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

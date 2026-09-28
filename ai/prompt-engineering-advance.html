@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Prompt 工程进阶   很多人用 AI 的方式是：想到什么就问什么，结果不好就换个问法，来回试几次不行就放弃了，这就像用傻瓜相机拍照——你只负责按快门，剩下的全看相机心情。  Prompt 工程是让你从傻瓜用户变成专业摄影师。  你不需要懂 AI 内部怎么工作，但你需要懂怎么给 AI 明确的指令、清晰的约束、有用的示例。  本模块讲的就是这些实用技术：思维链、少样本提示、系统提示词设计、ReAct 框架、结构化输出控制、调试方法、安.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -543,20 +543,20 @@ builder <span style="color: Gray;">=</span> FewShotPromptBuilder<span style="col
 <br/>
 <span style="color: #a50"># Agregar 3 ejemplos</span><br/>
 builder.<span style="color: #05a;">add_example</span><span style="color: Olive;">(</span><br/>
-    input_text<span style="color: Gray;">=</span><span style="color: #a11;">"张三，男，28 岁，程序员，在北京工作"</span><span style="color: Gray;">,</span><br/>
-    output_text<span style="color: Gray;">=</span><span style="color: #a11;">'{"name": "张三", "gender": "男", "age": 28, "job": "程序员", "city": "北京"}'</span><br/>
+    input_text<span style="color: Gray;">=</span><span style="color: #a11;">Zhang San, hombre, 28 años, programador, trabaja en Beijing</span><span style="color: Gray;">,</span><br/>
+    output_text<span style="color: Gray;">=</span><span style="color: #a11;">'{"name": "Zhang San", "gender": "hombre", "age": 28, "job": "programador", "city": "Beijing"}'</span><br/>
 <span style="color: Olive;">)</span><br/>
 builder.<span style="color: #05a;">add_example</span><span style="color: Olive;">(</span><br/>
-    input_text<span style="color: Gray;">=</span><span style="color: #a11;">"李四，女，35 岁，设计师，上海人"</span><span style="color: Gray;">,</span><br/>
-    output_text<span style="color: Gray;">=</span><span style="color: #a11;">'{"name": "李四", "gender": "女", "age": 35, "job": "设计师", "city": "上海"}'</span><br/>
+    input_text<span style="color: Gray;">=</span><span style="color: #a11;">Li Si, mujer, 35 años, diseñadora, de Shanghái</span><span style="color: Gray;">,</span><br/>
+    output_text<span style="color: Gray;">=</span><span style="color: #a11;">{"name": "Li Si", "gender": "femenino", "age": 35, "job": "diseñadora", "city": "Shanghái"}</span><br/>
 <span style="color: Olive;">)</span><br/>
 builder.<span style="color: #05a;">add_example</span><span style="color: Olive;">(</span><br/>
-    input_text<span style="color: Gray;">=</span><span style="color: #a11;">"王五，在 RUNOOB 工作，30 岁，产品经理，男，深圳"</span><span style="color: Gray;">,</span><br/>
-    output_text<span style="color: Gray;">=</span><span style="color: #a11;">'{"name": "王五", "gender": "男", "age": 30, "job": "产品经理", "city": "深圳"}'</span><br/>
+    input_text<span style="color: Gray;">=</span><span style="color: #a11;">Wang Wu, trabaja en RUNOOB, 30 años, gerente de producto, hombre, Shenzhen.</span><span style="color: Gray;">,</span><br/>
+    output_text<span style="color: Gray;">=</span><span style="color: #a11;">{"name": "Wang Wu", "gender": "Hombre", "age": 30, "job": "Gerente de producto", "city": "Shenzhen"}</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Construir el prompt final</span><br/>
-query <span style="color: Gray;">=</span> <span style="color: #a11;">"赵六，女，25 岁，数据分析师，杭州"</span><br/>
+query <span style="color: Gray;">=</span> <span style="color: #a11;">"Zhao Liu, mujer, 25 años, analista de datos, Hangzhou"</span><br/>
 final_prompt <span style="color: Gray;">=</span> builder.<span style="color: #05a;">build</span><span style="color: Olive;">(</span>query<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
@@ -568,7 +568,7 @@ final_prompt <span style="color: Gray;">=</span> builder.<span style="color: #05
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Salida esperada de la IA:"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"-"</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">'{"name": "赵六", "gender": "女", "age": 25, "job": "数据分析师", "city": "杭州"}'</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">'{"name": "Zhao Liu", "gender": "mujer", "age": 25, "job": "analista de datos", "city": "Hangzhou"}'</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <hr/>
@@ -1243,11 +1243,11 @@ tester.<span style="color: #05a;">print_report</span><span style="color: Olive;"
 <p>No existe una protección 100 % perfecta, pero se puede reducir considerablemente el riesgo:</p>
 <table class="reference">
 <tr><th>Método de protección</th><th>Descripción</th><th>Dificultad</th></tr>
-<tr><td>Filtrado de entrada</td><td>Comprueba si la entrada contiene palabras sensibles o instrucciones especiales</td><td>低</td></tr>
-<tr><td>Aislamiento de instrucciones</td><td>Separa la entrada del usuario y las instrucciones del sistema con delimitadores claros</td><td>中</td></tr>
-<tr><td>Validación de salida</td><td>Comprueba si la salida contiene contenido sensible</td><td>中</td></tr>
-<tr><td>Doble verificación</td><td>Usa otra IA para comprobar si la entrada y la salida son seguras</td><td>高</td></tr>
-<tr><td>Limitación de capacidades</td><td>No le des a la IA permiso para utilizar herramientas peligrosas</td><td>高</td></tr>
+<tr><td>Filtrado de entrada</td><td>Comprueba si la entrada contiene palabras sensibles o instrucciones especiales</td><td>bajo</td></tr>
+<tr><td>Aislamiento de instrucciones</td><td>Separa la entrada del usuario y las instrucciones del sistema con delimitadores claros</td><td>Medio</td></tr>
+<tr><td>Validación de salida</td><td>Comprueba si la salida contiene contenido sensible</td><td>Medio</td></tr>
+<tr><td>Doble verificación</td><td>Usa otra IA para comprobar si la entrada y la salida son seguras</td><td>Alto</td></tr>
+<tr><td>Limitación de capacidades</td><td>No le des a la IA permiso para utilizar herramientas peligrosas</td><td>Alto</td></tr>
 </table>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -1683,11 +1683,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una expansión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">Iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una expansión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">Iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1707,7 +1707,7 @@ Lista de notas
 <ul id="comment-author-info">
 <li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
 <li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
-<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -1885,7 +1885,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1987,7 +1987,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

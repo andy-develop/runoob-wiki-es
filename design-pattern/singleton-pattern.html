@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="单例模式  单例模式（Singleton Pattern）是 Java 中最简单的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。 这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。 单例模式是一种创建型设计模式，它确保一个类只有一个实例，并提供了一个全局访问点来访问该实例。 注意：  1、单例类只.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -230,9 +230,9 @@ Hello World!
 <h2 class="tutheader">Varias formas de implementar el patrón Singleton</h2>
 <p>Hay varias maneras de implementar el patrón Singleton, como se muestra a continuación:</p>
 <h3>1. Estilo perezoso, no seguro para hilos</h3>
-<p><b>¿Inicialización Lazy?:</b>是</p>
-<p><b>¿Es seguro para hilos?:</b>否</p>
-<p><b>Dificultad de implementación:</b>易</p>
+<p><b>¿Inicialización Lazy?:</b>Sí</p>
+<p><b>¿Es seguro para hilos?:</b>no</p>
+<p><b>Dificultad de implementación:</b>fácil</p>
 <p><b>Descripción:</b>Esta es la forma de implementación más básica. El mayor problema de esta implementación es que no admite múltiples hilos. Debido a que no se usa el bloqueo synchronized, en sentido estricto no se considera un patrón Singleton.<br/>En este enfoque, la carga diferida (lazy loading) es evidente; no se requiere seguridad para hilos y no puede funcionar correctamente en entornos multihilo.</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -250,9 +250,9 @@ Hello World!
 </div></div>
 <p><b>Las siguientes formas de implementación admiten múltiples hilos, pero difieren en rendimiento.</b></p>
 <h3>2. Estilo perezoso, seguro para hilos</h3>
-<p><b>¿Inicialización Lazy?:</b>是</p>
-<p><b>¿Es seguro para hilos?:</b>是</p>
-<p><b>Dificultad de implementación:</b>易</p>
+<p><b>¿Inicialización Lazy?:</b>Sí</p>
+<p><b>¿Es seguro para hilos?:</b>Sí</p>
+<p><b>Dificultad de implementación:</b>fácil</p>
 <p><b>Descripción:</b>Este enfoque tiene una muy buena carga diferida (lazy loading) y puede funcionar bien en entornos multihilo; sin embargo, la eficiencia es muy baja y en el 99% de los casos no se necesita sincronización.<br/>Ventaja: solo se inicializa en la primera llamada, evitando desperdicio de memoria.<br/>Desventaja: es necesario usar synchronized para garantizar el singleton, pero el bloqueo afecta la eficiencia.<br/>El rendimiento de getInstance() no es crítico para la aplicación (este método no se usa con mucha frecuencia).</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -269,9 +269,9 @@ Hello World!
 </span><span class="hl-brackets">}</span></div>
 </div></div>
 <h3>3. Estilo ansioso</h3>
-<p><b>¿Inicialización Lazy?:</b>否</p>
-<p><b>¿Es seguro para hilos?:</b>是</p>
-<p><b>Dificultad de implementación:</b>易</p>
+<p><b>¿Inicialización Lazy?:</b>no</p>
+<p><b>¿Es seguro para hilos?:</b>Sí</p>
+<p><b>Dificultad de implementación:</b>fácil</p>
 <p><b>Descripción:</b>Este enfoque es bastante común, pero es fácil que se generen objetos basura.<br/>Ventaja: no hay bloqueo, por lo que la eficiencia de ejecución mejora.<br/>Desventaja: se inicializa al cargar la clase, desperdiciando memoria.<br/>Se basa en el mecanismo del classloader para evitar el problema de sincronización de múltiples hilos. Sin embargo, instance se instancia en el momento de la carga de la clase. Aunque hay muchas causas que provocan la carga de la clase, en el patrón Singleton la mayoría se debe a la llamada al método getInstance(), pero no se puede descartar que existan otras formas (u otros métodos estáticos) que causen la carga de la clase. En ese caso, inicializar instance claramente no logra el efecto de lazy loading.</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -286,8 +286,8 @@ Hello World!
 </div></div>
 <h3>4. Doble verificación de bloqueo / Bloqueo de doble comprobación (DCL, es decir, double-checked locking)</h3>
 <p><b>Versión de JDK:</b>A partir de JDK 1.5</p>
-<p><b>¿Inicialización Lazy?:</b>是</p>
-<p><b>¿Es seguro para hilos?:</b>是</p>
+<p><b>¿Inicialización Lazy?:</b>Sí</p>
+<p><b>¿Es seguro para hilos?:</b>Sí</p>
 <p><b>Dificultad de implementación:</b>Relativamente compleja</p>
 <p><b>Descripción:</b>Este enfoque utiliza un mecanismo de doble bloqueo, es seguro y mantiene un alto rendimiento en entornos multihilo.<br/>El rendimiento de getInstance() es crítico para la aplicación.</p>
 <div class="example">
@@ -309,8 +309,8 @@ Hello World!
 </span><span class="hl-brackets">}</span></div>
 </div></div>
 <h3>5. Estilo de registro / clase interna estática</h3>
-<p><b>¿Inicialización Lazy?:</b>是</p>
-<p><b>¿Es seguro para hilos?:</b>是</p>
+<p><b>¿Inicialización Lazy?:</b>Sí</p>
+<p><b>¿Es seguro para hilos?:</b>Sí</p>
 <p><b>Dificultad de implementación:</b>General</p>
 <p><b>Descripción:</b>Este enfoque puede lograr el mismo efecto que el bloqueo de doble verificación, pero es más sencillo de implementar. Para la inicialización diferida de campos estáticos, se debe usar este enfoque en lugar del bloqueo de doble verificación. Este enfoque solo es adecuado para campos estáticos; el bloqueo de doble verificación se puede usar cuando se necesita inicialización diferida en campos de instancia.<br/>Este enfoque también utiliza el mecanismo del classloader para garantizar que solo haya un hilo al inicializar instance. La diferencia con el tercer enfoque es que, en el tercer enfoque, en cuanto la clase Singleton se carga, instance se instancia (no logra el efecto de lazy loading); en este enfoque, aunque la clase Singleton se cargue, instance no necesariamente se inicializa. Esto se debe a que la clase SingletonHolder no se usa activamente; solo cuando se llama explícitamente al método getInstance se carga explícitamente la clase SingletonHolder, y así se instancia instance. Imagina que instanciar instance consume muchos recursos, por lo que quieres que se cargue de forma diferida; por otro lado, no deseas instanciarlo cuando se carga la clase Singleton, porque no puedes asegurar que la clase Singleton no sea cargada por ser utilizada activamente en otros lugares; en ese momento, instanciar instance obviamente no es apropiado. Por tanto, este enfoque resulta más razonable que el tercero.</p>
 <div class="example">
@@ -328,9 +328,9 @@ Hello World!
 </div></div>
 <h3>6. Enumeración</h3>
 <p><b>Versión JDK:</b>Desde JDK1.5</p>
-<p><b>Inicialización Lazy:</b>否</p>
-<p><b>Seguridad de subprocesos:</b>是</p>
-<p><b>Dificultad de implementación:</b>易</p>
+<p><b>Inicialización Lazy:</b>no</p>
+<p><b>Seguridad de subprocesos:</b>Sí</p>
+<p><b>Dificultad de implementación:</b>fácil</p>
 <p><b>Descripción:</b>Esta implementación todavía no es ampliamente adoptada, pero es la mejor manera de implementar el patrón singleton. Es más concisa, admite automáticamente el mecanismo de serialización y previene absolutamente la múltiple instanciación.<br/>Este enfoque es el que propugna Josh Bloch, autor de Effective Java. No solo evita los problemas de sincronización entre múltiples hilos, sino que también admite automáticamente el mecanismo de serialización, evita que la deserialización cree nuevos objetos y previene absolutamente la múltiple instanciación. Sin embargo, dado que la característica enum solo se agregó después de JDK1.5, escribir de esta manera puede resultar poco familiar y en la práctica laboral se usa raramente.<br/>No se puede invocar el constructor privado mediante un ataque de reflexión (reflection attack).</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -469,7 +469,7 @@ Lista de notas
 <ol class="commentlist">
 <li class="comment even thread-even depth-1" id="comment-34897"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>Tan atontado que el mundo entero enloquece</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  197***4949@qq.com</p></div><div class="upvotejs" data-commid="34897" id="runoobvote-id-34897"><a class="upvote"></a> <span class="count">94</span></div></div><div class="comt-main" id="div-comment-34897"><p>La diferencia fundamental entre el modo perezoso y el modo ansioso radica en si se crea el propio objeto dentro de la clase, fuera de los métodos.</p>
 <p>Además, tanto la declaración del objeto como el constructor deben ser privados, de modo que el exterior no pueda acceder mediante la creación de objetos con new.</p>
-<p>En el modo ansioso se declara y se crea el objeto (porque tiene hambre); en el modo perezoso solo se declara el objeto, y solo se crea con new al llamar al método getinstance() de la clase.</p><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">呆的全世界疯狂</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>Tan atontado que el mundo entero enloquece</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  197***4949@qq.com</p></div></span>Hace 8 años (2018-09-10)</div></div></li><!-- #comment-## -->
+<p>En el modo ansioso se declara y se crea el objeto (porque tiene hambre); en el modo perezoso solo se declara el objeto, y solo se crea con new al llamar al método getinstance() de la clase.</p><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">El loco mundo de Dai</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>Tan atontado que el mundo entero enloquece</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  197***4949@qq.com</p></div></span>Hace 8 años (2018-09-10)</div></div></li><!-- #comment-## -->
 <li class="comment odd alt thread-odd thread-alt depth-1" id="comment-35477"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>   deed</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  jwd***@qq.com</p></div><div class="upvotejs" data-commid="35477" id="runoobvote-id-35477"><a class="upvote"></a> <span class="count">19</span></div></div><div class="comt-main" id="div-comment-35477"><p>Modo ansioso en el patrón singleton</p>
 <pre>class Singleton{
 public static String a = "11";
@@ -552,7 +552,7 @@ public static Singleton getInstance(){
   }
 }</pre>
 <div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">FingerTipDancer</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>   FingerTipDancer</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  usa***shington@qq.com</p></div></span>Hace 8 años (2018-11-26)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-37521"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>逆光影者</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  248***1388@qq.com</p></div><div class="upvotejs" data-commid="37521" id="runoobvote-id-37521"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-37521"><p>El patrón singleton registrado es un mantenimiento de un conjunto de patrones singleton; garantiza que los objetos en el map sean la misma instancia. Spring utiliza un patrón similar:</p>
+<li class="comment even thread-even depth-1" id="comment-37521"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>Sombra a contraluz</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  248***1388@qq.com</p></div><div class="upvotejs" data-commid="37521" id="runoobvote-id-37521"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-37521"><p>El patrón singleton registrado es un mantenimiento de un conjunto de patrones singleton; garantiza que los objetos en el map sean la misma instancia. Spring utiliza un patrón similar:</p>
 <pre>import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -582,8 +582,8 @@ public class RegisterSingleton {
         }
         return map.get(name);
     }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">逆光影者</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>逆光影者</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  248***1388@qq.com</p></div></span>Hace 8 años (2018-11-28)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-49880"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>卡卡</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  wuj***e1023@163.com</p></div><div class="upvotejs" data-commid="49880" id="runoobvote-id-49880"><a class="upvote"></a> <span class="count">17</span></div></div><div class="comt-main" id="div-comment-49880"><p>Crear el patrón singleton mediante enumeración:</p>
+}</pre><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">Sombra a contraluz</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>Sombra a contraluz</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  248***1388@qq.com</p></div></span>Hace 8 años (2018-11-28)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-49880"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>Kaka</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  wuj***e1023@163.com</p></div><div class="upvotejs" data-commid="49880" id="runoobvote-id-49880"><a class="upvote"></a> <span class="count">17</span></div></div><div class="comt-main" id="div-comment-49880"><p>Crear el patrón singleton mediante enumeración:</p>
 <pre>public enum  EnumSingleton {
     INSTANCE;
     public EnumSingleton getInstance(){
@@ -622,7 +622,7 @@ public class Test {
     }
 }
 
-// 结果为true</pre><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">卡卡</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>卡卡</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  wuj***e1023@163.com</p></div></span>Hace 7 años (2020-01-07)</div></div></li><!-- #comment-## -->
+// 结果为true</pre><div class="comt-meta wrapper"><span class="comt-author"><a href=";.html" target="_blank">Kaka</a><div class="tooltip tooltip1"><p><i aria-hidden="true" class="fa fa-user"></i>Kaka</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  wuj***e1023@163.com</p></div></span>Hace 7 años (2020-01-07)</div></div></li><!-- #comment-## -->
 <li class="comment even thread-even depth-1" id="comment-52277"><span class="comt-f">#0</span><div class="comt-avatar wrapper"><i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i><div class="tooltip"><p><i aria-hidden="true" class="fa fa-user"></i>   mcl</p><p><i aria-hidden="true" class="fa fa-envelope"></i>  979***991@qq.com</p></div><div class="upvotejs" data-commid="52277" id="runoobvote-id-52277"><a class="upvote"></a> <span class="count">4</span></div></div><div class="comt-main" id="div-comment-52277"><p>En realidad, también existe una variante del modo ansioso:</p>
 <pre>public class LazyModel {
     public final static LazyModel INSTANCE = new LazyModel();
@@ -684,11 +684,11 @@ public class Test {
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -886,7 +886,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -977,7 +977,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

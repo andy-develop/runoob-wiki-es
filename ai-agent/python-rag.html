@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Python 实现 RAG 与知识检索 | 菜鸟教程</title>
+<title>Implementación de RAG y recuperación de conocimiento en Python | Runoob</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Python 实现 RAG 与知识检索  本章节介绍检索增强生成（Retrieval-Augmented Generation，RAG）技术。  RAG 是构建知识密集型 Agent 的核心技术之一。  通过将向量检索与语言生成模型结合，RAG 让 Agent 具备了访问和利用外部知识的能力，而不再只能依赖模型参数中'记住'的内容。    RAG 基础原理  RAG 的核心思想是把'信息检索'和&amp;.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -158,8 +158,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div> <div class="col middle-column">
 <div class="article">
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/python-reasoning-planning.html" rel="prev">Python 实现推理与规划</a> </div>
-<div class="next-design-link"><a href="../ai-agent/multi-agent-system.html" rel="next">多智能体系统（Multi-Agent System）</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/python-reasoning-planning.html" rel="prev">Implementación de razonamiento y planificación en Python</a> </div>
+<div class="next-design-link"><a href="../ai-agent/multi-agent-system.html" rel="next">Sistema multiagente (Multi-Agent System)</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
 </div>
 <div class="article-body">
 <div class="article-intro" id="content">
@@ -177,75 +177,75 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Los parámetros del modelo son limitados; es imposible almacenar todo el conocimiento del mundo en ellos.</p>
 <p>Si se depende completamente de que el modelo "recuerde" conocimiento desde sus parámetros, cuando encuentra contenido que no recuerda con precisión o que nunca aprendió, tiende a inventar respuestas con total seriedad; esto es lo que se conoce como "alucinación" (hallucination).</p>
 <p>El enfoque de RAG consiste en hacer que el modelo consulte fuentes reales antes de responder, convirtiendo "responder de memoria" en "responder con el material abierto". Las fuentes de conocimiento también pueden actualizarse en cualquier momento sin necesidad de reentrenar el modelo.</p>
-<h3>核心架构</h3>
+<h3>Arquitectura central</h3>
 <p>Un sistema RAG completo generalmente incluye tres componentes centrales:</p>
-<p><span class="marked">检索器（Retriever）</span>: Se encarga de encontrar en la base de conocimiento los fragmentos de información más relevantes para la pregunta.</p>
-<p><span class="marked">向量数据库（Vector Store）</span>: almacena las representaciones vectoriales correspondientes al contenido de los documentos y admite búsqueda de similitud a gran escala y de baja latencia.</p>
-<p><span class="marked">生成器（Generator）</span>: genera la respuesta final en lenguaje natural basándose en el contenido recuperado y la pregunta original del usuario.</p>
+<p><span class="marked">Recuperador (Retriever)</span>: Se encarga de encontrar en la base de conocimiento los fragmentos de información más relevantes para la pregunta.</p>
+<p><span class="marked">Base de datos vectorial (Vector Store)</span>: almacena las representaciones vectoriales correspondientes al contenido de los documentos y admite búsqueda de similitud a gran escala y de baja latencia.</p>
+<p><span class="marked">Generador (Generator)</span>: genera la respuesta final en lenguaje natural basándose en el contenido recuperado y la pregunta original del usuario.</p>
 <p>La relación entre los tres puede entenderse así: el recuperador se encarga de "buscar información", la base de datos vectorial de "almacenar información y encontrar rápidamente información similar", y el generador de "organizar la respuesta a partir de la información".</p>
-<h3>工作流程</h3>
-<p>第一步，<b>索引阶段</b>. Se divide el documento original en varios fragmentos de texto (chunks), se vectorizan uno a uno y se almacenan en la base de datos vectorial; este paso suele realizarse de forma offline y anticipada.</p>
-<p>第二步，<b>检索阶段</b>. Cuando el usuario realiza una consulta, la consulta se vectoriza de la misma manera y se realiza una búsqueda por similitud en la base de datos vectorial para encontrar los bloques de texto más relevantes.</p>
-<p>第三步，<b>增强阶段</b>. Los bloques de texto relevantes recuperados se combinan con la pregunta original del usuario para construir un prompt más completo.</p>
-<p>第四步，<b>生成阶段</b>. El modelo de generación produce la respuesta final basándose en este contexto enriquecido.</p>
+<h3>Flujo de trabajo</h3>
+<p>Primer paso,<b>Etapa de indexación</b>. Se divide el documento original en varios fragmentos de texto (chunks), se vectorizan uno a uno y se almacenan en la base de datos vectorial; este paso suele realizarse de forma offline y anticipada.</p>
+<p>Segundo paso,<b>Etapa de recuperación</b>. Cuando el usuario realiza una consulta, la consulta se vectoriza de la misma manera y se realiza una búsqueda por similitud en la base de datos vectorial para encontrar los bloques de texto más relevantes.</p>
+<p>Tercer paso,<b>Etapa de aumento</b>. Los bloques de texto relevantes recuperados se combinan con la pregunta original del usuario para construir un prompt más completo.</p>
+<p>Cuarto paso,<b>Etapa de generación</b>. El modelo de generación produce la respuesta final basándose en este contexto enriquecido.</p>
 <p>De estos cuatro pasos, solo el primero es un preprocesamiento offline; los otros tres ocurren en tiempo real cuando el usuario pregunta. Por lo tanto, la velocidad y la calidad de la recuperación determinan directamente la velocidad de respuesta y la calidad de las respuestas de todo el sistema.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
 <h2 class="example">Implementación básica de RAG</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> SimpleRAG:<br/>
-    <span style="color: #a11;">"""<br/>简化版 RAG 系统实现<br/>包含三个核心组件：嵌入器、向量存储、生成器<br/>
+    <span style="color: #a11;">"""<br/>Implementación del sistema RAG simplificado<br/>Incluye tres componentes centrales: embedder, almacenamiento vectorial y generador.<br/>
     """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> embedder<span style="color: Gray;">,</span> vector_store<span style="color: Gray;">,</span> generator<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 嵌入器：负责把文本转换为向量</span><br/>
+        <span style="color: #a50"># Embedder: se encarga de convertir el texto en vectores</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span> <span style="color: Gray;">=</span> embedder<br/>
-        <span style="color: #a50"># 向量数据库：负责存储向量并支持相似度检索</span><br/>
+        <span style="color: #a50"># Base de datos de vectores: se encarga de almacenar vectores y soporta la búsqueda por similitud</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span> <span style="color: Gray;">=</span> vector_store<br/>
-        <span style="color: #a50"># 生成器：基于上下文生成回答</span><br/>
+        <span style="color: #a50"># Generador: genera respuestas basándose en el contexto</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span> <span style="color: Gray;">=</span> generator<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> add_documents<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> documents<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>将文档添加到知识库<br/>:param documents: 原始文档列表（每个元素是一段完整文本）<br/>
+        <span style="color: #a11;">"""<br/>Agregar el documento a la base de conocimiento<br/>:param documents: lista de documentos originales (cada elemento es un fragmento de texto completo)<br/>
         """</span><br/>
-        <span style="color: #a50"># 第一步：把长文档切分为较小的文本块，便于精确检索</span><br/>
+        <span style="color: #a50"># Primer paso: dividir el documento largo en fragmentos de texto más pequeños para facilitar la recuperación precisa</span><br/>
         chunks <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">chunk_documents</span><span style="color: Olive;">(</span>documents<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 第二步：将所有文本块转换为向量</span><br/>
+        <span style="color: #a50"># Paso 2: Convertir todos los fragmentos de texto en vectores</span><br/>
         embeddings <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span>.<span style="color: #05a;">embed</span><span style="color: Olive;">(</span>chunks<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 第三步：把向量与对应的原文一起存入向量数据库</span><br/>
+        <span style="color: #a50"># Paso 3: guardar el vector junto con el texto original correspondiente en la base de datos vectorial</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span>.<span style="color: #05a;">add</span><span style="color: Olive;">(</span>embeddings<span style="color: Gray;">,</span> chunks<span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> chunk_documents<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> documents<span style="color: Gray;">,</span> chunk_size<span style="color: Gray;">=</span><span style="color: Maroon;">500</span><span style="color: Gray;">,</span> overlap<span style="color: Gray;">=</span><span style="color: Maroon;">50</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>文档切分：把长文档拆成固定长度、有一定重叠的文本块<br/>
-<br/>:param documents: 原始文档列表<br/>:param chunk_size: 每个文本块的字符数<br/>:param overlap: 相邻文本块之间的重叠字符数（避免语义在切分处被截断）<br/>:return: 切分后的文本块列表<br/>
+        <span style="color: #a11;">"""<br/>Segmentación de documentos: dividir documentos largos en bloques de texto de longitud fija con cierta superposición<br/>
+<br/>:param documents: lista de documentos originales<br/>:param chunk_size: Número de caracteres de cada bloque de texto.<br/>:param overlap: cantidad de caracteres superpuestos entre bloques de texto adyacentes (para evitar que la semántica se trunque en el punto de corte).<br/>:return: lista de bloques de texto segmentados<br/>
         """</span><br/>
         chunks <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> doc <span style="color: Green;font-weight:bold;">in</span> documents:<br/>
-            <span style="color: #a50"># 按 (chunk_size - overlap) 的步长滑动切分，保留一定重叠区域</span><br/>
+            <span style="color: #a50"># Segmentar deslizando con tamaño de paso (chunk_size - overlap), manteniendo cierta superposición</span><br/>
             <span style="color: Green;font-weight:bold;">for</span> i <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span><span style="color: Maroon;">0</span><span style="color: Gray;">,</span> <span style="color: Teal;">len</span><span style="color: Olive;">(</span>doc<span style="color: Olive;">)</span><span style="color: Gray;">,</span> chunk_size - overlap<span style="color: Olive;">)</span>:<br/>
                 <span style="color: #05a;">chunk</span> <span style="color: Gray;">=</span> doc<span style="color: Olive;">[</span>i:i + chunk_size<span style="color: Olive;">]</span><br/>
                 chunks.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: #05a;">chunk</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> chunks<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> query<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> question<span style="color: Gray;">,</span> top_k<span style="color: Gray;">=</span><span style="color: Maroon;">5</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>处理用户查询，返回生成的回答<br/>
-<br/>:param question: 用户提出的问题<br/>:param top_k: 检索时返回的相关文本块数量<br/>:return: 生成模型给出的最终回答<br/>
+        <span style="color: #a11;">"""<br/>Procesar la consulta del usuario y devolver la respuesta generada<br/>
+<br/>:param question: pregunta formulada por el usuario<br/>:param top_k: Número de bloques de texto relevantes devueltos durante la recuperación<br/>:return: la respuesta final generada por el modelo<br/>
         """</span><br/>
-        <span style="color: #a50"># 1. 把问题转换为向量，才能与知识库中的向量做比较</span><br/>
+        <span style="color: #a50"># 1. Convierte la consulta en un vector para poder compararla con los vectores de la base de conocimiento</span><br/>
         question_embedding <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span>.<span style="color: #05a;">embed</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>question<span style="color: Olive;">]</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><br/>
 <br/>
-        <span style="color: #a50"># 2. 在向量数据库中检索最相似的 top_k 个文本块</span><br/>
+        <span style="color: #a50"># 2. Recuperar los bloques de texto top_k más similares en la base de datos vectorial</span><br/>
         results <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span>.<span style="color: #05a;">search</span><span style="color: Olive;">(</span>question_embedding<span style="color: Gray;">,</span> top_k<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 3. 把检索到的文本块拼接成上下文</span><br/>
+        <span style="color: #a50"># 3. Concatenar los bloques de texto recuperados para formar el contexto</span><br/>
         context <span style="color: Gray;">=</span> <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>doc <span style="color: Green;font-weight:bold;">for</span> doc<span style="color: Gray;">,</span> _ <span style="color: Green;font-weight:bold;">in</span> results<span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 4. 把上下文和原始问题一起组织成提示词</span><br/>
-        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"基于以下内容回答问题：<span style="color: #000099; font-weight: bold;">\n</span>{context}<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>问题：{question}"</span><br/>
+        <span style="color: #a50"># 4. Organizar el contexto y la pregunta original juntos en un prompt</span><br/>
+        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"Responda a la pregunta basándose en el siguiente contenido:<span style="color: #000099; font-weight: bold;">\n</span>{context}<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>Pregunta: {question}"</span><br/>
 <br/>
-        <span style="color: #a50"># 5. 交给生成模型产出最终回答</span><br/>
+        <span style="color: #a50"># 5. Pasar al modelo generativo para producir la respuesta final</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -262,49 +262,49 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">RAG con reranking</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> AdvancedRAG:<br/>
-    <span style="color: #a11;">"""<br/>高级 RAG 系统<br/>在基础流程之上增加重排序环节<br/>
+    <span style="color: #a11;">"""<br/>Sistema RAG avanzado<br/>Agregar una etapa de reordenamiento al flujo básico<br/>
     """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> embedder<span style="color: Gray;">,</span> vector_store<span style="color: Gray;">,</span> reranker<span style="color: Gray;">,</span> generator<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 嵌入器</span><br/>
+        <span style="color: #a50"># Embedder</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span> <span style="color: Gray;">=</span> embedder<br/>
-        <span style="color: #a50"># 向量数据库</span><br/>
+        <span style="color: #a50">Base de datos vectorial</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span> <span style="color: Gray;">=</span> vector_store<br/>
-        <span style="color: #a50"># 重排序模型（交叉编码器），用于精细化排序</span><br/>
+        <span style="color: #a50"># Modelo de reordenamiento (cross-encoder), para clasificación refinada</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">reranker</span> <span style="color: Gray;">=</span> reranker<br/>
-        <span style="color: #a50"># 生成器</span><br/>
+        <span style="color: #a50"># Generador</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span> <span style="color: Gray;">=</span> generator<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> query<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> question<span style="color: Gray;">,</span> initial_k<span style="color: Gray;">=</span><span style="color: Maroon;">20</span><span style="color: Gray;">,</span> final_k<span style="color: Gray;">=</span><span style="color: Maroon;">5</span><span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>处理查询，包含"粗筛 + 精排"两阶段检索<br/>
-<br/>:param question: 用户问题<br/>:param initial_k: 第一阶段向量检索返回的候选数量<br/>:param final_k: 重排序后最终保留的数量<br/>
+        <span style="color: #a11;">"""<br/>Procesa la consulta, incluyendo una recuperación en dos etapas de "filtrado grueso + clasificación fina".<br/>
+<br/>:param question: pregunta del usuario<br/>:param initial_k: número de candidatos devueltos por la búsqueda vectorial en la primera etapa<br/>:param final_k: cantidad final retenida después del reordenamiento<br/>
         """</span><br/>
-        <span style="color: #a50"># ==================== 阶段1：初步检索（粗筛） ====================</span><br/>
-        <span style="color: #a50"># 把问题转换为向量</span><br/>
+        <span style="color: #a50"># ==================== Etapa 1: Búsqueda preliminar (cribado grueso) ====================</span><br/>
+        <span style="color: #a50"># Convertir la pregunta en vector</span><br/>
         question_embedding <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span>.<span style="color: #05a;">embed</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>question<span style="color: Olive;">]</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><br/>
 <br/>
-        <span style="color: #a50"># 用向量相似度快速召回一批候选文本（速度快，精度一般）</span><br/>
+        <span style="color: #a50"># Usar similitud vectorial para recuperar rápidamente un lote de textos candidatos (rápido, precisión media)</span><br/>
         initial_results <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span>.<span style="color: #05a;">search</span><span style="color: Olive;">(</span><br/>
             question_embedding<span style="color: Gray;">,</span><br/>
             initial_k<br/>
         <span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 阶段2：重排序（精排） ====================</span><br/>
-        <span style="color: #a50"># 构造 (问题, 候选文档) 配对，交给交叉编码器逐一打分</span><br/>
+        <span style="color: #a50"># ==================== Fase 2: Reordenamiento (Preciso) ====================</span><br/>
+        <span style="color: #a50"># Construir pares (pregunta, documento candidato) y pasarlos al codificador cruzado para puntuar uno por uno.</span><br/>
         doc_pairs <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">(</span>question<span style="color: Gray;">,</span> doc<span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">for</span> doc<span style="color: Gray;">,</span> _ <span style="color: Green;font-weight:bold;">in</span> initial_results<span style="color: Olive;">]</span><br/>
 <br/>
-        <span style="color: #a50"># 交叉编码器会同时编码问题和文档，能更精确地判断两者的相关性</span><br/>
+        <span style="color: #a50"># El codificador cruzado codifica la pregunta y el documento simultáneamente, lo que permite juzgar con mayor precisión la relevancia entre ambos</span><br/>
         reranked <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">reranker</span>.<span style="color: #05a;">rerank</span><span style="color: Olive;">(</span>doc_pairs<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 取重排序后真正最相关的 final_k 条</span><br/>
+        <span style="color: #a50"># Obtener los final_k realmente más relevantes después del reordenamiento.</span><br/>
         final_context <span style="color: Gray;">=</span> <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>doc <span style="color: Green;font-weight:bold;">for</span> doc<span style="color: Gray;">,</span> _ <span style="color: Green;font-weight:bold;">in</span> reranked<span style="color: Olive;">[</span>:final_k<span style="color: Olive;">]</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 阶段3：生成 ====================</span><br/>
-        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">"上下文：{final_context}<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>问题：{question}"</span><br/>
+        <span style="color: #a50"># ==================== Etapa 3: Generación ====================</span><br/>
+        prompt <span style="color: Gray;">=</span> f<span style="color: #a11;">Contexto: {final_context}<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>Pregunta: {question}"</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>prompt<span style="color: Olive;">)</span><br/>
 </div>
 </div>
-<h3>混合检索</h3>
+<h3>Recuperación híbrida</h3>
 <p>La recuperación híbrida (Hybrid Retrieval) combina las ventajas de la recuperación densa y la recuperación dispersa.</p>
 <p>La recuperación densa (Dense Retrieval) se basa en la similitud vectorial y es buena para capturar la relevancia semántica; incluso si la pregunta del usuario y el documento no usan exactamente las mismas palabras, puede haber coincidencia.</p>
 <p>La recuperación dispersa (como BM25) se basa en estadísticas de frecuencia de términos de palabras clave, destaca en la coincidencia literal precisa y, en escenarios como nombres propios, números y fragmentos de código, suele ser más fiable que la recuperación vectorial.</p>
@@ -313,95 +313,95 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">RAG con búsqueda híbrida</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> HybridRAG:<br/>
-    <span style="color: #a11;">"""<br/>混合检索 RAG<br/>结合稠密检索（向量）和稀疏检索（关键词）<br/>
+    <span style="color: #a11;">"""<br/>Recuperación híbrida RAG<br/>Combinar la recuperación densa (vectorial) y la recuperación dispersa (por palabras clave)<br/>
     """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> dense_retriever<span style="color: Gray;">,</span> sparse_retriever<span style="color: Gray;">,</span> fusion_fn<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 稠密检索器：基于向量相似度，擅长语义匹配</span><br/>
+        <span style="color: #a50"># Recuperador denso: basado en similitud de vectores, experto en coincidencia semántica</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">dense_retriever</span> <span style="color: Gray;">=</span> dense_retriever<br/>
-        <span style="color: #a50"># 稀疏检索器：基于关键词统计（如 BM25），擅长精确匹配</span><br/>
+        <span style="color: #a50"># Recuperador disperso: basado en estadísticas de palabras clave (como BM25), bueno para coincidencias exactas.</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">sparse_retriever</span> <span style="color: Gray;">=</span> sparse_retriever<br/>
-        <span style="color: #a50"># 融合函数：用于合并两路检索结果，例如 RRF（见下方实现）</span><br/>
+        <span style="color: #a50"># Función de fusión: se utiliza para combinar los resultados de dos rutas de recuperación, por ejemplo RRF (ver implementación a continuación)</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">fusion_fn</span> <span style="color: Gray;">=</span> fusion_fn<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> query<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> question<span style="color: Gray;">,</span> top_k<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>执行混合检索，返回融合排序后的结果<br/>
-<br/>:param question: 用户问题<br/>:param top_k: 最终返回的结果数量<br/>
+        <span style="color: #a11;">"""<br/>Ejecutar la búsqueda híbrida y devolver los resultados tras la fusión de rankings<br/>
+<br/>:param question: pregunta del usuario<br/>:param top_k: la cantidad de resultados que se devuelven al final.<br/>
         """</span><br/>
-        <span style="color: #a50"># ==================== 稠密检索 ====================</span><br/>
-        <span style="color: #a50"># 多召回一些候选（top_k * 2），留出融合时筛选的空间</span><br/>
+        <span style="color: #a50"># ==================== Recuperación densa ====================</span><br/>
+        <span style="color: #a50"># Recuperar más candidatos (top_k * 2), dejando espacio para filtrar durante la fusión</span><br/>
         dense_results <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">dense_retriever</span>.<span style="color: #05a;">search</span><span style="color: Olive;">(</span>question<span style="color: Gray;">,</span> top_k * <span style="color: Maroon;">2</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 稀疏检索 ====================</span><br/>
-        <span style="color: #a50"># 基于关键词的检索，同样多召回一些候选</span><br/>
+        <span style="color: #a50"># ==================== Recuperación dispersa ====================</span><br/>
+        <span style="color: #a50"># Búsqueda basada en palabras clave, también recuperar más candidatos</span><br/>
         sparse_results <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">sparse_retriever</span>.<span style="color: #05a;">search</span><span style="color: Olive;">(</span>question<span style="color: Gray;">,</span> top_k * <span style="color: Maroon;">2</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 结果融合 ====================</span><br/>
-        <span style="color: #a50"># 使用 Reciprocal Rank Fusion（RRF）等策略融合两路排序结果</span><br/>
+        <span style="color: #a50"># ==================== Fusión de resultados ====================</span><br/>
+        <span style="color: #a50"># Usar estrategias como Reciprocal Rank Fusion (RRF) para fusionar los resultados de dos clasificaciones</span><br/>
         fused <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">fusion_fn</span><span style="color: Olive;">(</span>dense_results<span style="color: Gray;">,</span> sparse_results<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 取融合后排名最高的 top_k 条</span><br/>
+        <span style="color: #a50"># Obtener los top_k elementos mejor clasificados después de la fusión</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> fused<span style="color: Olive;">[</span>:top_k<span style="color: Olive;">]</span><br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> reciprocal_rank_fusion<span style="color: Olive;">(</span>results_a<span style="color: Gray;">,</span> results_b<span style="color: Gray;">,</span> k<span style="color: Gray;">=</span><span style="color: Maroon;">60</span><span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""<br/>Reciprocal Rank Fusion（RRF）算法<br/>用于把两路（或多路）检索的排序结果融合成一个统一排序<br/>
-<br/>核心思路：只看每个文档在各路结果里的"排名"，而不是具体分数，<br/>避免了向量相似度分数和 BM25 分数量纲不同、无法直接比较的问题。<br/>
-<br/>:param results_a: 检索结果 A，格式为 [(doc, score), ...]<br/>:param results_b: 检索结果 B，格式为 [(doc, score), ...]<br/>:param k: 平滑常数，用于降低排名靠后的文档的权重差异，通常取 60<br/>:return: 按融合分数从高到低排序的 [(doc, score), ...] 列表<br/>
+    <span style="color: #a11;">"""<br/>Algoritmo Reciprocal Rank Fusion (RRF)<br/>Se utiliza para fusionar los resultados de clasificación de dos (o más) vías de recuperación en una clasificación unificada<br/>
+<br/>Idea central: solo observar el "ranking" de cada documento en los resultados de cada vía, no la puntuación específica,<br/>Evita el problema de que las puntuaciones de similitud vectorial y las puntuaciones BM25 difieren en escala y no se pueden comparar directamente.<br/>
+<br/>:param results_a: Resultados de búsqueda A, formato [(doc, score), ...]<br/>:param results_b: Resultados de búsqueda B, formato [(doc, score), ...]<br/>:param k: constante de suavizado, utilizada para reducir las diferencias de peso entre los documentos con menor ranking; normalmente se toma 60.<br/>:return: Lista de [(doc, score), ...] ordenada por puntuación de fusión de mayor a menor<br/>
     """</span><br/>
     scores <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: Olive;">}</span><br/>
 <br/>
-    <span style="color: #a50"># 处理结果 A：排名越靠前，贡献的分数越高</span><br/>
+    <span style="color: #a50"># Resultado de procesamiento A: cuanto más alto sea el puesto, mayor será la puntuación contribuida</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> rank<span style="color: Gray;">,</span> <span style="color: Olive;">(</span>doc<span style="color: Gray;">,</span> _<span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">enumerate</span><span style="color: Olive;">(</span>results_a<span style="color: Olive;">)</span>:<br/>
         scores<span style="color: Olive;">[</span>doc<span style="color: Olive;">]</span> <span style="color: Gray;">=</span> scores.<span style="color: #05a;">get</span><span style="color: Olive;">(</span>doc<span style="color: Gray;">,</span> <span style="color: Maroon;">0</span><span style="color: Olive;">)</span> + <span style="color: Maroon;">1</span> / <span style="color: Olive;">(</span>k + rank + <span style="color: Maroon;">1</span><span style="color: Olive;">)</span><br/>
 <br/>
-    <span style="color: #a50"># 处理结果 B，同样按排名累加分数</span><br/>
+    <span style="color: #a50"># Procesar el resultado B, acumulando también las puntuaciones según el ranking</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> rank<span style="color: Gray;">,</span> <span style="color: Olive;">(</span>doc<span style="color: Gray;">,</span> _<span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">enumerate</span><span style="color: Olive;">(</span>results_b<span style="color: Olive;">)</span>:<br/>
         scores<span style="color: Olive;">[</span>doc<span style="color: Olive;">]</span> <span style="color: Gray;">=</span> scores.<span style="color: #05a;">get</span><span style="color: Olive;">(</span>doc<span style="color: Gray;">,</span> <span style="color: Maroon;">0</span><span style="color: Olive;">)</span> + <span style="color: Maroon;">1</span> / <span style="color: Olive;">(</span>k + rank + <span style="color: Maroon;">1</span><span style="color: Olive;">)</span><br/>
 <br/>
-    <span style="color: #a50"># 按累加后的融合分数从高到低排序</span><br/>
+    <span style="color: #a50"># Ordenar de mayor a menor por las puntuaciones de fusión acumuladas</span><br/>
     sorted_docs <span style="color: Gray;">=</span> <span style="color: Teal;">sorted</span><span style="color: Olive;">(</span>scores.<span style="color: #05a;">items</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> key<span style="color: Gray;">=</span><span style="color: Green;font-weight:bold;">lambda</span> x: -x<span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">return</span> sorted_docs<br/>
 </div>
 </div>
 <h3>Otras estrategias de optimización</h3>
-<p><b>查询扩展</b>: Expande la consulta original añadiendo sinónimos o palabras relacionadas, ampliando el alcance de recuperación y mejorando la tasa de recall.</p>
-<p><b>查询改写</b>: utiliza modelos para comprender la intención real del usuario y reescribe preguntas coloquiales o ambiguas en formulaciones más adecuadas para la recuperación.</p>
-<p><b>上下文压缩</b>: Antes de entregar los resultados de recuperación al modelo generativo, se eliminan las partes redundantes e irrelevantes y se conserva solo la información clave, lo que reduce costos y el riesgo de que el modelo generativo se vea interferido por contenido no relacionado.</p>
+<p><b>Expansión de consultas</b>: Expande la consulta original añadiendo sinónimos o palabras relacionadas, ampliando el alcance de recuperación y mejorando la tasa de recall.</p>
+<p><b>Reescritura de consultas</b>: utiliza modelos para comprender la intención real del usuario y reescribe preguntas coloquiales o ambiguas en formulaciones más adecuadas para la recuperación.</p>
+<p><b>Compresión de contexto</b>: Antes de entregar los resultados de recuperación al modelo generativo, se eliminan las partes redundantes e irrelevantes y se conserva solo la información clave, lo que reduce costos y el riesgo de que el modelo generativo se vea interferido por contenido no relacionado.</p>
 <hr/>
-<h2>向量数据库</h2>
+<h2>Base de datos vectorial</h2>
 <p>La base de datos vectorial es la infraestructura del sistema RAG; se encarga de almacenar enormes cantidades de vectores de alta dimensión y admite búsqueda de similitud a gran escala y de baja latencia.</p>
-<h3>核心概念</h3>
-<p><b>嵌入（Embedding）</b>: el proceso de convertir texto (o imágenes, audio, etc.) en un conjunto de vectores numéricos densos; el contenido semánticamente similar queda más cerca en el espacio vectorial.</p>
-<p><b>向量维度</b>: la longitud del vector de incrustación. Cuanto mayor es la dimensión, en teoría más rica es la información semántica que puede expresarse, pero también aumentan los costos de almacenamiento y cómputo.</p>
-<p><b>相似度度量</b>: métodos de cálculo específicos para medir el "grado de similitud" o la "distancia" entre dos vectores; diferentes métricas son adecuadas para diferentes escenarios.</p>
+<h3>Conceptos clave</h3>
+<p><b>Incrustación (Embedding)</b>: el proceso de convertir texto (o imágenes, audio, etc.) en un conjunto de vectores numéricos densos; el contenido semánticamente similar queda más cerca en el espacio vectorial.</p>
+<p><b>Dimensión vectorial</b>: la longitud del vector de incrustación. Cuanto mayor es la dimensión, en teoría más rica es la información semántica que puede expresarse, pero también aumentan los costos de almacenamiento y cómputo.</p>
+<p><b>Medida de similitud</b>: métodos de cálculo específicos para medir el "grado de similitud" o la "distancia" entre dos vectores; diferentes métricas son adecuadas para diferentes escenarios.</p>
 <h3>Medidas de similitud comunes</h3>
 <table class="reference">
 <tbody>
 <tr>
-<th>度量方法</th>
-<th>公式</th>
-<th>特点</th>
-<th>适用场景</th>
+<th>Método de medición</th>
+<th>fórmula</th>
+<th>característica</th>
+<th>Escenarios de aplicación</th>
 </tr>
 <tr>
-<td>余弦相似度</td>
+<td>Similitud coseno</td>
 <td>cos(A,B) = A·B/(|A||B|)</td>
 <td>Solo mide la similitud direccional, independientemente de la magnitud del vector; rango de valores [-1,1].</td>
-<td>文档/文本相似度</td>
+<td>Similitud de documentos/texto</td>
 </tr>
 <tr>
-<td>欧氏距离</td>
+<td>Distancia euclidiana</td>
 <td>d(A,B) = sqrt(sum((Ai-Bi)^2))</td>
 <td>Mide la distancia espacial absoluta entre vectores; rango de valores [0,+∞).</td>
 <td>Coincidencia de características de imagen</td>
 </tr>
 <tr>
-<td>点积</td>
+<td>producto escalar</td>
 <td>A·B = sum(Ai*Bi)</td>
 <td>Se ve afectada tanto por la dirección como por la magnitud; alta eficiencia computacional.</td>
-<td>推荐系统</td>
+<td>Sistema de recomendación</td>
 </tr>
 </tbody>
 </table>
@@ -409,85 +409,85 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <table class="reference">
 <tbody>
 <tr>
-<th>数据库</th>
-<th>类型</th>
-<th>特点</th>
-<th>适用场景</th>
+<th>base de datos</th>
+<th>Tipo</th>
+<th>característica</th>
+<th>Escenarios de aplicación</th>
 </tr>
 <tr>
 <td>Pinecone</td>
-<td>云服务</td>
+<td>servicio en la nube</td>
 <td>Servicio totalmente gestionado, fácil de usar, escalado automático, sin necesidad de operación y mantenimiento propios.</td>
 <td>Entornos de producción que necesitan un lanzamiento rápido</td>
 </tr>
 <tr>
 <td>Weaviate</td>
-<td>开源</td>
+<td>código abierto</td>
 <td>Soporte nativo para recuperación híbrida (vectores + palabras clave), alto grado de modularización.</td>
 <td>Escenarios que requieren una lógica de recuperación personalizable y flexible</td>
 </tr>
 <tr>
 <td>Milvus</td>
-<td>开源</td>
+<td>código abierto</td>
 <td>Alta disponibilidad, fácil escalado horizontal, capaz de soportar escalas de miles de millones de vectores o más.</td>
 <td>Recuperación vectorial a muy gran escala</td>
 </tr>
 <tr>
 <td>Chroma</td>
-<td>开源</td>
+<td>código abierto</td>
 <td>Ligero, API simple, se puede poner en marcha con unas pocas líneas de código.</td>
 <td>Desarrollo de prototipos, enseñanza y pruebas locales</td>
 </tr>
 <tr>
 <td>Qdrant</td>
-<td>开源</td>
+<td>código abierto</td>
 <td>Implementado en Rust, excelente rendimiento, admite abundantes condiciones de filtrado.</td>
 <td>Escenarios que requieren alto rendimiento y filtrado complejo</td>
 </tr>
 </tbody>
 </table>
-<h3>代码示例</h3>
+<h3>Ejemplo de código</h3>
 <div class="example">
 <h2 class="example">Usando la base de datos vectorial Chroma.</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> chroma_client<br/>
 <span style="color: Green;font-weight:bold;">from</span> chroma_client <span style="color: Green;font-weight:bold;">import</span> ChromaClient<br/>
 <br/>
-<span style="color: #a50"># 创建客户端（可连接本地实例，也可连接远程服务）</span><br/>
+<span style="color: #a50"># Crear el cliente (puede conectarse a una instancia local o a un servicio remoto)</span><br/>
 client <span style="color: Gray;">=</span> ChromaClient<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 创建或获取一个集合（Collection），相当于关系型数据库里的"表"</span><br/>
+<span style="color: #a50"># Crear u obtener una colección (Collection), equivalente a una "tabla" en bases de datos relacionales.</span><br/>
 collection <span style="color: Gray;">=</span> client.<span style="color: #05a;">get_or_create_collection</span><span style="color: Olive;">(</span><span style="color: #a11;">"knowledge_base"</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 添加文档：ID、向量、原文、元数据需要一一对应</span><br/>
+<span style="color: #a50"># Añadir documento: ID, vector, texto original, metadatos deben corresponder uno a uno</span><br/>
 collection.<span style="color: #05a;">add</span><span style="color: Olive;">(</span><br/>
-    ids<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: #a11;">"doc1"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"doc2"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"doc3"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 每条文档的唯一标识</span><br/>
+    ids<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: #a11;">"doc1"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"doc2"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"doc3"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Identificador único de cada documento</span><br/>
     embeddings<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">[</span><span style="color: Maroon;">0.1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.3</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 文档1对应的向量（实际维度通常远高于3维）</span><br/>
-        <span style="color: Olive;">[</span><span style="color: Maroon;">0.4</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.5</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.6</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 文档2对应的向量</span><br/>
-        <span style="color: Olive;">[</span><span style="color: Maroon;">0.7</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.8</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.9</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 文档3对应的向量</span><br/>
+        <span style="color: Olive;">[</span><span style="color: Maroon;">0.1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.3</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># El vector correspondiente al documento 1 (la dimensión real suele ser mucho mayor que 3).</span><br/>
+        <span style="color: Olive;">[</span><span style="color: Maroon;">0.4</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.5</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.6</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Vector correspondiente al documento 2</span><br/>
+        <span style="color: Olive;">[</span><span style="color: Maroon;">0.7</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.8</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.9</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Vector correspondiente al documento 3</span><br/>
     <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     documents<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: #a11;">"人工智能是计算机科学的一个分支"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"机器学习是人工智能的子领域"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"深度学习是机器学习的子领域"</span><br/>
+        <span style="color: #a11;">"La inteligencia artificial es una rama de la informática"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">El aprendizaje automático es un subcampo de la inteligencia artificial</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">El aprendizaje profundo es un subcampo del aprendizaje automático</span><br/>
     <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     metadatas<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"教科书"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 文档1的来源信息，可用于后续过滤</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"论文"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"论文"</span><span style="color: Olive;">}</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"libro de texto"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Información de origen del documento 1, utilizable para filtrar posteriormente</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"Artículo"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"Artículo"</span><span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 检索：传入查询向量，返回最相似的 n_results 条结果</span><br/>
+<span style="color: #a50"># Recuperación: ingresa el vector de consulta y devuelve los n_results resultados más similares</span><br/>
 results <span style="color: Gray;">=</span> collection.<span style="color: #05a;">query</span><span style="color: Olive;">(</span><br/>
-    query_embeddings<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">[</span><span style="color: Maroon;">0.15</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.25</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.35</span><span style="color: Olive;">]</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># 查询对应的向量</span><br/>
-    n_results<span style="color: Gray;">=</span><span style="color: Maroon;">2</span>  <span style="color: #a50"># 返回 top-2 最相似的结果</span><br/>
+    query_embeddings<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">[</span><span style="color: Maroon;">0.15</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.25</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.35</span><span style="color: Olive;">]</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Vector correspondiente a la consulta</span><br/>
+    n_results<span style="color: Gray;">=</span><span style="color: Maroon;">2</span>  <span style="color: #a50"># Devolver los top-2 resultados más similares</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># 输出检索结果</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>results<span style="color: Olive;">[</span><span style="color: #a11;">"documents"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>   <span style="color: #a50"># 命中的原文内容</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>results<span style="color: Olive;">[</span><span style="color: #a11;">"distances"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>   <span style="color: #a50"># 对应的距离/相似度分数，数值越小通常表示越相似</span><br/>
+<span style="color: #a50"># Mostrar resultados de recuperación</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>results<span style="color: Olive;">[</span><span style="color: #a11;">"documents"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>   <span style="color: #a50"># Contenido original coincidente</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>results<span style="color: Olive;">[</span><span style="color: #a11;">"distances"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>   <span style="color: #a50"># La puntuación de distancia/similitud correspondiente: cuanto menor sea el valor, normalmente más similar</span><br/>
 </div>
 </div>
 <blockquote><p>Al elegir una base de datos vectorial, es necesario considerar de manera integral el volumen de datos, los requisitos de latencia de consulta, el método de implementación (nube gestionada o autogestionada) y la capacidad de operación y mantenimiento del equipo. Para desarrollo de prototipos a pequeña escala, se prefiere Chroma; para entornos de producción listos para usar, se puede elegir Pinecone; para escenarios a muy gran escala que requieren control autónomo, Milvus o Qdrant son más adecuados.</p></blockquote>
@@ -499,137 +499,137 @@ results <span style="color: Gray;">=</span> collection.<span style="color: #05a;
 <p>El RAG tradicional se basa en la búsqueda de similitud de fragmentos de texto y tiene dificultades para manejar problemas que requieren "razonamiento de múltiples saltos" (es decir, respuestas que requieren encadenar múltiples piezas de información).</p>
 <p>El RAG tradicional tampoco captura fácilmente de manera explícita las relaciones semánticas entre entidades, como información estructurada del tipo "quién es el superior de quién" o "qué empresa adquirió a qué empresa".</p>
 <p>GraphRAG organiza explícitamente estas entidades y relaciones en una estructura de grafo, permitiendo que el sistema razone a lo largo de rutas de relación, en lugar de solo "buscar textos similares".</p>
-<h3>核心优势</h3>
+<h3>Ventajas principales</h3>
 <p>Capaz de capturar relaciones semánticas entre entidades y formar una red de conocimiento estructurada, no solo fragmentos de texto dispersos.</p>
 <p>Admite razonamiento basado en rutas y puede responder mejor a preguntas relacionales.</p>
 <p>Puede manejar problemas complejos que requieren razonamiento de múltiples saltos (multi-hop), como "¿quién es el mentor del mentor de alguien?", que necesitan atravesar varios nodos de relación consecutivamente para llegar a la respuesta.</p>
-<h3>代码实现</h3>
+<h3>Implementación de código</h3>
 <div class="example">
-<h2 class="example">GraphRAG 实现</h2>
+<h2 class="example">Implementación de GraphRAG</h2>
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">class</span> GraphRAG:<br/>
-    <span style="color: #a11;">"""<br/>GraphRAG 系统<br/>结合知识图谱检索与向量检索，兼顾关系推理与语义相似度<br/>
+    <span style="color: #a11;">"""<br/>Sistema GraphRAG<br/>Combina la recuperación mediante grafos de conocimiento y la recuperación vectorial, atendiendo tanto al razonamiento relacional como a la similitud semántica<br/>
     """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> kg_builder<span style="color: Gray;">,</span> embedder<span style="color: Gray;">,</span> vector_store<span style="color: Gray;">,</span> generator<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a50"># 知识图谱构建器：负责实体/关系抽取与图谱查询</span><br/>
+        <span style="color: #a50"># Constructor de grafo de conocimiento: responsable de extracción de entidades/relaciones y consulta del grafo</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span> <span style="color: Gray;">=</span> kg_builder<br/>
-        <span style="color: #a50"># 嵌入器：用于将文档和问题转换为向量</span><br/>
+        <span style="color: #a50"># Embedder: se utiliza para convertir documentos y preguntas en vectores.</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span> <span style="color: Gray;">=</span> embedder<br/>
-        <span style="color: #a50"># 向量数据库：作为知识图谱检索的补充通道</span><br/>
+        <span style="color: #a50"># Base de datos vectorial: como canal complementario para la recuperación del grafo de conocimiento</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span> <span style="color: Gray;">=</span> vector_store<br/>
-        <span style="color: #a50"># 生成器：基于融合后的上下文生成最终回答</span><br/>
+        <span style="color: #a50"># Generador: genera la respuesta final basada en el contexto fusionado</span><br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span> <span style="color: Gray;">=</span> generator<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> index_documents<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> documents<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>将文档同时索引到知识图谱和向量数据库<br/>:param documents: 文档列表<br/>
+        <span style="color: #a11;">"""<br/>Indexar el documento simultáneamente en el grafo de conocimiento y la base de datos vectorial<br/>:param documents: lista de documentos<br/>
         """</span><br/>
         <span style="color: Green;font-weight:bold;">for</span> doc <span style="color: Green;font-weight:bold;">in</span> documents:<br/>
-            <span style="color: #a50"># 从文档中提取实体</span><br/>
-            <span style="color: #a50"># 例如从"OpenAI 成立于 2015 年"中提取出</span><br/>
-            <span style="color: #a50"># 实体：OpenAI（组织）、2015年（时间）</span><br/>
+            <span style="color: #a50"># Extraer entidades del documento</span><br/>
+            <span style="color: #a50"># Por ejemplo, extraer de "OpenAI fue fundada en 2015"</span><br/>
+            <span style="color: #a50"># Entidad: OpenAI (organización), 2015 (tiempo)</span><br/>
             entities <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">extract_entities</span><span style="color: Olive;">(</span>doc<span style="color: Olive;">)</span><br/>
 <br/>
-            <span style="color: #a50"># 从文档中提取实体间的关系</span><br/>
-            <span style="color: #a50"># 例如提取出关系三元组：(OpenAI, 成立于, 2015年)</span><br/>
+            <span style="color: #a50"># Extraer las relaciones entre entidades de los documentos</span><br/>
+            <span style="color: #a50"># Por ejemplo, extraer el triplete de relación: (OpenAI, fundado en, 2015)</span><br/>
             relations <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">extract_relations</span><span style="color: Olive;">(</span>doc<span style="color: Olive;">)</span><br/>
 <br/>
-            <span style="color: #a50"># 把实体和关系写入知识图谱</span><br/>
+            <span style="color: #a50"># Escribir las entidades y relaciones en el grafo de conocimiento</span><br/>
             <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">add_entities</span><span style="color: Olive;">(</span>entities<span style="color: Olive;">)</span><br/>
             <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">add_relations</span><span style="color: Olive;">(</span>relations<span style="color: Olive;">)</span><br/>
 <br/>
-            <span style="color: #a50"># 同时把原文向量化后存入向量数据库，用于补充语义检索</span><br/>
+            <span style="color: #a50"># También vectoriza el texto original y lo almacena en la base de datos vectorial para complementar la búsqueda semántica</span><br/>
             embedding <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">embedder</span>.<span style="color: #05a;">embed</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>doc<span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
             <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span>.<span style="color: #05a;">add</span><span style="color: Olive;">(</span>embedding<span style="color: Gray;">,</span> <span style="color: Olive;">[</span>doc<span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> query<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> question<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>处理查询：结合知识图谱推理和向量检索<br/>
+        <span style="color: #a11;">"""<br/>Procesamiento de consultas: combinación de razonamiento de grafos de conocimiento y recuperación vectorial<br/>
         """</span><br/>
-        <span style="color: #a50"># ==================== 知识图谱检索 ====================</span><br/>
-        <span style="color: #a50"># 先找出问题中涉及的相关实体</span><br/>
-        <span style="color: #a50"># 例如"谁创立了 OpenAI？" -&gt; 识别出实体 "OpenAI"</span><br/>
+        <span style="color: #a50"># ==================== Recuperación de Grafo de Conocimiento ====================</span><br/>
+        <span style="color: #a50"># Primero identifica las entidades relevantes involucradas en el problema</span><br/>
+        <span style="color: #a50"># Por ejemplo, "¿Quién fundó OpenAI?" -&gt; identificar la entidad "OpenAI"</span><br/>
         relevant_entities <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">query_entities</span><span style="color: Olive;">(</span>question<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 基于这些实体，取出图谱中与之直接相关的子图</span><br/>
-        <span style="color: #a50"># 子图包含相关实体及其邻接节点、连接边</span><br/>
+        <span style="color: #a50"># Basándose en estas entidades, extraer del grafo el subgrafo directamente relacionado con ellas.</span><br/>
+        <span style="color: #a50"># El subgrafo contiene entidades relevantes y sus nodos adyacentes, aristas de conexión</span><br/>
         subgraph <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">kg_builder</span>.<span style="color: #05a;">get_subgraph</span><span style="color: Olive;">(</span>relevant_entities<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 向量检索 ====================</span><br/>
-        <span style="color: #a50"># 作为补充通道，检索语义相似的文本内容</span><br/>
+        <span style="color: #a50"># ==================== Búsqueda vectorial ====================</span><br/>
+        <span style="color: #a50"># Como canal complementario, recuperar contenido textual semánticamente similar</span><br/>
         vector_results <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">vector_store</span>.<span style="color: #05a;">search</span><span style="color: Olive;">(</span>question<span style="color: Gray;">,</span> top_k<span style="color: Gray;">=</span><span style="color: Maroon;">5</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 结果融合 ====================</span><br/>
-        <span style="color: #a50"># 把图谱推理结果与向量检索结果融合为统一上下文</span><br/>
+        <span style="color: #a50"># ==================== Fusión de resultados ====================</span><br/>
+        <span style="color: #a50"># Fusionar los resultados del razonamiento del grafo con los resultados de búsqueda vectorial en un contexto unificado</span><br/>
         combined_context <span style="color: Gray;">=</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">fuse_results</span><span style="color: Olive;">(</span>subgraph<span style="color: Gray;">,</span> vector_results<span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># ==================== 生成 ====================</span><br/>
+        <span style="color: #a50"># ==================== Generar ====================</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>.<span style="color: #05a;">generator</span>.<span style="color: #05a;">generate</span><span style="color: Olive;">(</span>combined_context<span style="color: Gray;">,</span> question<span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> fuse_results<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> subgraph<span style="color: Gray;">,</span> vector_results<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>融合知识图谱子图与向量检索结果，组织成生成模型可读的上下文文本<br/>
+        <span style="color: #a11;">"""<br/>Fusionar el subgrafo del grafo de conocimiento con los resultados de la búsqueda vectorial y organizarlos en un texto de contexto legible por el modelo generativo.<br/>
         """</span><br/>
-        <span style="color: #a50"># 把子图转换为自然语言描述（如"OpenAI -成立于-&gt; 2015年"）</span><br/>
+        <span style="color: #a50"># Convierte el subgrafo en una descripción en lenguaje natural (por ejemplo, "OpenAI - fundada en -&gt; 2015")</span><br/>
         kg_text <span style="color: Gray;">=</span> subgraph.<span style="color: #05a;">to_text</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-        <span style="color: #a50"># 拼接向量检索到的原文片段</span><br/>
+        <span style="color: #a50"># Concatenar los fragmentos de texto original recuperados por búsqueda vectorial</span><br/>
         vector_text <span style="color: Gray;">=</span> <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span>doc <span style="color: Green;font-weight:bold;">for</span> doc<span style="color: Gray;">,</span> _ <span style="color: Green;font-weight:bold;">in</span> vector_results<span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
         <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"{kg_text}<span style="color: #000099; font-weight: bold;">\n</span>{vector_text}"</span><br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">class</span> KnowledgeGraphBuilder:<br/>
-    <span style="color: #a11;">"""知识图谱构建器（示意实现，实际项目中通常调用专门的 NER/关系抽取模型）"""</span><br/>
+    <span style="color: #a11;">Constructor de grafos de conocimiento (implementación ilustrativa; en proyectos reales se suelen invocar modelos especializados de NER/extracción de relaciones)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> extract_entities<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> text<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>从文本中提取命名实体，通常借助 NER（命名实体识别）模型完成<br/>实体类型常见的有 PERSON（人物）、ORG（组织）、TIME（时间）等<br/>
+        <span style="color: #a11;">"""<br/>Extraer entidades nombradas del texto, normalmente mediante un modelo de NER (Reconocimiento de Entidades Nombradas).<br/>Los tipos de entidad comunes incluyen PERSON (persona), ORG (organización), TIME (tiempo), etc.<br/>
         """</span><br/>
         entities <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> entities<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> extract_relations<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> text<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""<br/>从文本中提取实体间的关系，通常借助关系抽取（Relation Extraction）模型完成<br/>关系一般表示为三元组：(头实体, 关系类型, 尾实体)<br/>
+        <span style="color: #a11;">"""<br/>Extraer las relaciones entre entidades del texto, generalmente se realiza mediante un modelo de extracción de relaciones (Relation Extraction)<br/>Las relaciones generalmente se representan como tripletas: (entidad cabeza, tipo de relación, entidad cola)<br/>
         """</span><br/>
         relations <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> relations<br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> query_entities<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> question<span style="color: Olive;">)</span>:<br/>
-        <span style="color: #a11;">"""根据用户问题，识别出问题中涉及的实体，用于后续的子图检索"""</span><br/>
+        <span style="color: #a11;">Según la pregunta del usuario, identificar las entidades involucradas en la pregunta para la posterior recuperación de subgrafos</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
 </div>
 </div>
-<h3>应用场景</h3>
+<h3>Escenarios de aplicación</h3>
 <p>GraphRAG es especialmente adecuado para los siguientes escenarios:</p>
 <p>Preguntas y respuestas que requieren comprender relaciones entre entidades, por ejemplo, "¿quién es el CEO de esta empresa?".</p>
 <p>Problemas que requieren razonamiento de múltiples saltos para obtener la respuesta, por ejemplo, "¿quién es el mentor del mentor de Zhang San?".</p>
 <p>Escenarios donde es necesario descubrir relaciones implícitas en la base de conocimiento que no están escritas explícitamente.</p>
-<p>需要注意的是，构建和维护知识图谱本身有一定的工程成本（实体/关系抽取的准确率、图谱更新维护等），因此更适合对关系推理有明确需求的场景，而不建议作为所有 RAG 项目的默认起点。</p>
+<p>Es importante tener en cuenta que la construcción y el mantenimiento de un grafo de conocimiento conlleva ciertos costos de ingeniería (precisión de la extracción de entidades/relaciones, actualización y mantenimiento del grafo, etc.), por lo que es más adecuado para escenarios con requisitos claros de razonamiento relacional, y no se recomienda como punto de partida predeterminado para todos los proyectos RAG.</p>
 <hr/>
 <h2>Comparación de soluciones y recomendaciones de selección</h2>
 <table class="reference">
 <tbody>
 <tr>
-<th>方案</th>
-<th>核心思路</th>
-<th>优势</th>
-<th>局限</th>
-<th>适用场景</th>
+<th>solución</th>
+<th>Idea central</th>
+<th>ventaja</th>
+<th>limitación</th>
+<th>Escenarios de aplicación</th>
 </tr>
 <tr>
-<td>基础 RAG</td>
+<td>RAG básico</td>
 <td>Búsqueda vectorial + generación directa</td>
 <td>Implementación simple, bajo costo y curva de aprendizaje rápida</td>
 <td>Precisión de recuperación limitada; es fácil recuperar contenido no suficientemente relevante</td>
 <td>Preguntas y respuestas simples, validación rápida de prototipos</td>
 </tr>
 <tr>
-<td>Advanced RAG（重排序）</td>
+<td>Advanced RAG (reordenamiento)</td>
 <td>Filtrado grueso vectorial + reranking con Cross-Encoder</td>
 <td>Mejora significativamente la precisión del ordenamiento de la recuperación</td>
 <td>Añade una inferencia adicional del modelo, aumentando la latencia y el costo.</td>
 <td>Escenarios con altos requisitos de precisión en las respuestas</td>
 </tr>
 <tr>
-<td>混合检索</td>
+<td>Recuperación híbrida</td>
 <td>Fusión de búsqueda vectorial y búsqueda por palabras clave</td>
 <td>Equilibra la coincidencia semántica y la coincidencia exacta de palabras clave</td>
 <td>Requiere mantener dos índices de recuperación simultáneamente</td>
@@ -644,27 +644,23 @@ results <span style="color: Gray;">=</span> collection.<span style="color: #05a;
 </tr>
 </tbody>
 </table>
-<h2>章节小结</h2>
+<h2>Resumen del capítulo</h2>
 <p>Este capítulo presenta las tecnologías centrales de RAG y la recuperación de conocimiento.</p>
-<p><span class="marked">RAG 基础原理</span>: al combinar la recuperación y la generación, permite que los agentes respondan preguntas utilizando conocimiento externo, en lugar de depender por completo de la memoria de los parámetros del modelo.</p>
+<p><span class="marked">Principios básicos de RAG</span>: al combinar la recuperación y la generación, permite que los agentes respondan preguntas utilizando conocimiento externo, en lugar de depender por completo de la memoria de los parámetros del modelo.</p>
 <p><span class="marked">Advanced RAG</span>: mediante técnicas como el reordenamiento y la recuperación híbrida, mejora aún más la calidad de la recuperación y la precisión de las respuestas sobre el flujo básico.</p>
-<p><span class="marked">向量数据库</span>: es la infraestructura del sistema RAG, responsable de almacenar y recuperar eficientemente las representaciones vectoriales de los documentos; la selección debe evaluarse de manera integral según el volumen de datos y el método de implementación.</p>
+<p><span class="marked">Base de datos vectorial</span>: es la infraestructura del sistema RAG, responsable de almacenar y recuperar eficientemente las representaciones vectoriales de los documentos; la selección debe evaluarse de manera integral según el volumen de datos y el método de implementación.</p>
 <p><span class="marked">GraphRAG</span>: al integrar grafos de conocimiento, refuerza el razonamiento relacional y la capacidad de preguntas y respuestas de múltiples saltos, pero también conlleva costos adicionales de construcción y mantenimiento.</p>
-<p>Para elegir la solución RAG adecuada, lo clave es comprender primero las necesidades reales del escenario de negocio: para preguntas y respuestas simples, el RAG básico suele ser suficiente; si se requieren alta precisión en la recuperación, se puede introducir el reordenamiento; si la base de conocimiento tiene muchos nombres propios/palabras clave, es adecuado incorporar recuperación híbrida; si involucra mucho razonamiento relacional y preguntas y respuestas de múltiples saltos, entonces considerar GraphRAG. Cuanto más compleja es la tecnología, mayores son los costos de ingeniería y mantenimiento; elegir según la necesidad es más importante que perseguir ciegamente "soluciones más avanzadas".</p> 其他扩展
-</div>
+<p>Para elegir la solución RAG adecuada, lo clave es comprender primero las necesidades reales del escenario de negocio: para preguntas y respuestas simples, el RAG básico suele ser suficiente; si se requieren alta precisión en la recuperación, se puede introducir el reordenamiento; si la base de conocimiento tiene muchos nombres propios/palabras clave, es adecuado incorporar recuperación híbrida; si involucra mucho razonamiento relacional y preguntas y respuestas de múltiples saltos, entonces considerar GraphRAG. Cuanto más compleja es la tecnología, mayores son los costos de ingeniería y mantenimiento; elegir según la necesidad es más importante que perseguir ciegamente "soluciones más avanzadas".</p>Otras extensiones</div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">
 <div class="archive-list-item">
-<div class="post-intro" id="ai-info" style="width: 100%;">AI 思考中...</div>
+<div class="post-intro" id="ai-info" style="width: 100%;">AI pensando...</div>
 </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/python-reasoning-planning.html" rel="prev">Python 实现推理与规划</a> </div>
-<div class="next-design-link"><a href="../ai-agent/multi-agent-system.html" rel="next">多智能体系统（Multi-Agent System）</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
-</div>
-
-笔记列表
-<style>
+<div class="previous-design-link"><i aria-hidden="true" class="fa fa-arrow-left" style="font-size:16px;"></i> <a href="../ai-agent/python-reasoning-planning.html" rel="prev">Implementación de razonamiento y planificación en Python</a> </div>
+<div class="next-design-link"><a href="../ai-agent/multi-agent-system.html" rel="next">Sistema multiagente (Multi-Agent System)</a> <i aria-hidden="true" class="fa fa-arrow-right" style="font-size:16px;"></i></div>
+</div>Lista de notas<style>
 .wrapper {
   /*text-transform: uppercase; */
   background: #ececec;
@@ -768,16 +764,16 @@ results <span style="color: Gray;">=</span> collection.<span style="color: #05a;
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
-<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">文章投稿，可点击这里</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href=";.html" class="runoob-pop">登录</a>！</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i>Obligatorio antes de compartir notas<a class="runoob-pop" href=";.html">Iniciar sesión</a>！</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=";.html" id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -785,14 +781,14 @@ results <span style="color: Gray;">=</span> collection.<span style="color: #05a;
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="30008"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -970,7 +966,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1061,7 +1057,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

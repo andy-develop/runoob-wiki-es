@@ -30,17 +30,17 @@
 <div class="toolbar">
 <h1>Ejecución en línea</h1>
 <span class="lang" id="langLabel">—</span>
-<button onclick="runCode()">▶ 运行</button>
+<button onclick="runCode()">▶ Ejecutar</button>
 <span class="ext" id="extInfo"></span>
 </div>
 <div class="main">
 <div class="pane">
-<div class="pane-header">代码</div>
+<div class="pane-header">Código</div>
 <textarea id="code" spellcheck="false"></textarea>
 </div>
 <div class="divider"></div>
 <div class="pane">
-<div class="pane-header">运行结果</div>
+<div class="pane-header">Resultado de la ejecución</div>
 <div id="resultArea" style="flex:1;display:flex;flex-direction:column;overflow:hidden;">
 <pre id="output-pre" style="display:none;"></pre>
 <iframe id="output" style="display:none;"></iframe>
@@ -143,9 +143,10 @@ function runCode() {
   }
   else if (cfg.type === 'js') {
     iframe.style.display = 'block';
-    iframe.srcdoc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:monospace;padding:10px;white-space:pre-wrap;}</style></head><body>
-      <div id="out"></div>
-      <script>
+    iframe.srcdoc = `<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><style>body{font-family:monospace;padding:10px;white-space:pre-wrap;}</style></head><body>
+<div id="out"></div>
+<script>
         (function(){
           var out = document.getElementById('out');
           var logs = [];

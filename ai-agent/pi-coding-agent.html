@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Pi Coding Agent 入门教程   Pi 是一个运行在终端里的 AI 编码 Agent，类似于 Claude Code、OpenAI Codex CLI 这类工具。 Pi 的官方理念是：'There are many agent harnesses but this one is yours'（Agent 工具很多，但这个是你自己的）。 你给 Pi 一句话，它就能在你的项目目录里读文件、写文件、跑命令，循环.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -75,7 +75,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -142,11 +142,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
-<!-- 二级导航 -->
-<!--  内容  -->
+Barra de navegación
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -459,10 +459,10 @@ Summarize this repository and tell me how to run its checks.
 <p>Por defecto, Pi solo otorga al modelo cuatro herramientas, que cubren las capacidades más esenciales de lectura, escritura y ejecución en programación.</p>
 <table class="reference">
 <tr><th>Herramienta</th><th>Función</th><th>¿Habilitada por defecto?</th></tr>
-<tr><td><code>read</code></td><td>Leer el contenido de archivos</td><td>是</td></tr>
-<tr><td><code>write</code></td><td>Crear o sobrescribir archivos</td><td>是</td></tr>
-<tr><td><code>edit</code></td><td>Aplicar modificaciones parciales (parches) a archivos</td><td>是</td></tr>
-<tr><td><code>bash</code></td><td>Ejecutar comandos de shell</td><td>是</td></tr>
+<tr><td><code>read</code></td><td>Leer el contenido de archivos</td><td>Sí</td></tr>
+<tr><td><code>write</code></td><td>Crear o sobrescribir archivos</td><td>Sí</td></tr>
+<tr><td><code>edit</code></td><td>Aplicar modificaciones parciales (parches) a archivos</td><td>Sí</td></tr>
+<tr><td><code>bash</code></td><td>Ejecutar comandos de shell</td><td>Sí</td></tr>
 <tr><td><code>grep</code></td><td>Buscar contenido en archivos</td><td>No (se debe habilitar mediante la opción de herramientas)</td></tr>
 <tr><td><code>find</code></td><td>Buscar archivos según criterios</td><td>No (se debe habilitar mediante la opción de herramientas)</td></tr>
 <tr><td><code>ls</code></td><td>Listar el contenido de directorios</td><td>No (se debe habilitar mediante la opción de herramientas)</td></tr>
@@ -505,7 +505,7 @@ pi --no-tools -p "解释一下这个概念"</pre>
 <tr><td>Del directorio padre<code>AGENTS.md</code></td><td>A nivel de proyecto</td><td>Se busca hacia arriba desde el directorio actual, nivel por nivel.</td></tr>
 <tr><td>Del directorio actual<code>AGENTS.md</code></td><td>A nivel de proyecto</td><td>Las instrucciones más específicas y de mayor prioridad.</td></tr>
 </table>
-<p>Para los nombres de archivo, usa<code>AGENTS.md</code> 或 <code>CLAUDE.md</code>cualquiera de los dos; Pi los reconocerá.</p>
+<p>Para los nombres de archivo, usa<code>AGENTS.md</code>o<code>CLAUDE.md</code>cualquiera de los dos; Pi los reconocerá.</p>
 <h3>Modificar el prompt del sistema</h3>
 <p>AGENTS.md son instrucciones adicionales al mensaje del sistema predeterminado. Si deseas un control más profundo, puedes reemplazar todo el mensaje del sistema.</p>
 <p>En el proyecto, colocar<code>.pi/SYSTEM.md</code>reemplazará el mensaje del sistema predeterminado; colocar<code>.pi/APPEND_SYSTEM.md</code>es para añadirlo (el equivalente global está en<code>~/.pi/agent/</code>los archivos del mismo nombre en ese directorio).</p>
@@ -571,7 +571,7 @@ pi --models "claude-*,gpt-4o"</pre>
 <tr><td>Escape</td><td>Detener el trabajo actual y devolver los mensajes en cola al editor</td><td>Cuando quieres detenerte y reorganizar</td></tr>
 </table>
 <blockquote>
-<p>Nota: en Windows Terminal, Alt+Enter alterna el modo de pantalla completa por defecto. Las teclas para los mensajes de redirección y posteriores se pueden configurar en los ajustes mediante<code>steeringMode</code> 和 <code>followUpMode</code>cambiarlas.</p>
+<p>Nota: en Windows Terminal, Alt+Enter alterna el modo de pantalla completa por defecto. Las teclas para los mensajes de redirección y posteriores se pueden configurar en los ajustes mediante<code>steeringMode</code>y<code>followUpMode</code>cambiarlas.</p>
 </blockquote>
 <hr/>
 <h2>Referencia rápida de comandos de barra</h2>
@@ -623,7 +623,7 @@ pi --session &lt;path|id&gt;
 # 临时会话，不保存
 pi --no-session</pre>
 <h3>Navegar por el árbol de sesiones</h3>
-<p>用 <code>/tree</code>Puedes abrir la vista de árbol de sesiones y saltar a cualquier nodo histórico para continuar.</p>
+<p>usar<code>/tree</code>Puedes abrir la vista de árbol de sesiones y saltar a cualquier nodo histórico para continuar.</p>
 <p>Continuar desde aquí crea una nueva rama; la rama original permanece intacta.</p>
 <h3>Bifurcación (fork) y clonación</h3>
 <table class="reference">
@@ -649,7 +649,7 @@ pi --no-session</pre>
 <h2>Modo no interactivo e integración</h2>
 <p>Pi no solo sirve para conversaciones interactivas; también se puede usar como herramienta de línea de comandos, flujo de eventos, servicio RPC y biblioteca SDK.</p>
 <h3>Consulta única: modo print</h3>
-<p>用 <code>-p</code>Haz que Pi responda y salga; ideal para invocarlo desde scripts:</p>
+<p>usar<code>-p</code>Haz que Pi responda y salga; ideal para invocarlo desde scripts:</p>
 <pre>
 # 直接提问
 pi -p "总结一下这个代码库"
@@ -1009,11 +1009,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Si quieres enviar un artículo, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Debes <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir una nota.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Si quieres enviar un artículo, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Debes <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir una nota.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1211,7 +1211,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1302,7 +1302,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

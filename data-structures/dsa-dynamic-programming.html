@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="动态规划 动态规划（英语：Dynamic programming，简称 DP）是一种在数学、管理科学、计算机科学、经济学和生物信息学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。   想象一下，你正在爬一个 n 级的楼梯。每次你可以爬 1 级或 2 级台阶。那么，爬到楼顶总共有多少种不同的方法呢？ 如果你从最顶层的目标（第 n 级）开始想，可能会觉得复杂。但如果我们换个思路：要到达第 n 级台阶，你只能从第 n-.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -317,7 +317,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>De la recursión a la programación dinámica: el problema de subir escaleras</h2>
 <p>Usemos el clásico<strong>"subir escaleras"</strong>problema para experimentar el proceso de optimización desde la recursión hasta la programación dinámica.</p>
 <h3>Descripción del problema</h3>
-<p>Supón que estás subiendo escaleras. Necesitas<code>n</code>escalones para llegar a la cima. Cada vez puedes subir<code>1</code> 或 <code>2</code>escalones. ¿Cuántos métodos diferentes hay para llegar a la cima?</p>
+<p>Supón que estás subiendo escaleras. Necesitas<code>n</code>escalones para llegar a la cima. Cada vez puedes subir<code>1</code>o<code>2</code>escalones. ¿Cuántos métodos diferentes hay para llegar a la cima?</p>
 <h3>Método 1: Recursión por fuerza bruta (ineficiente)</h3>
 <p>Según el análisis inicial, podemos escribir directamente la fórmula recursiva:<code>f(n) = f(n-1) + f(n-2)</code>donde,<code>f(1) = 1</code>, <code>f(2) = 2</code>。</p>
 <div class="example">
@@ -335,7 +335,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Número de métodos para subir al escalón 5 (recursivo): {climb_stairs_recursive(5)}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: 8</span><br/>
 </div>
 </div>
-<p><strong>Análisis de desventajas</strong>: esta recursión conlleva una gran cantidad de cálculo repetido. Por ejemplo, calcular<code>f(5)</code>necesita<code>f(4)</code> 和 <code>f(3)</code>, calcular<code>f(4)</code>también necesita<code>f(3)</code> 和 <code>f(2)</code>, aquí<code>f(3)</code>se calcula dos veces. Cuando<code>n</code>es muy grande, la complejidad temporal es exponencial<code>O(2^n)</code>, extremadamente ineficiente.</p>
+<p><strong>Análisis de desventajas</strong>: esta recursión conlleva una gran cantidad de cálculo repetido. Por ejemplo, calcular<code>f(5)</code>necesita<code>f(4)</code>y<code>f(3)</code>, calcular<code>f(4)</code>también necesita<code>f(3)</code>y<code>f(2)</code>, aquí<code>f(3)</code>se calcula dos veces. Cuando<code>n</code>es muy grande, la complejidad temporal es exponencial<code>O(2^n)</code>, extremadamente ineficiente.</p>
 <h3>Método 2: Recursión con memoización (de arriba hacia abajo)</h3>
 <p>Podemos usar un arreglo ("memo") para almacenar los resultados ya calculados y evitar cálculos repetidos.</p>
 <div class="example">
@@ -364,7 +364,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Número de métodos para subir al escalón 5 (con memoización): {climb_stairs_memo(5)}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: 8</span><br/>
 </div>
 </div>
-<p>La complejidad temporal de este método se reduce a<code>O(n)</code>, porque cada subproblema se calcula solo una vez. La complejidad espacial es<code>O(n)</code>. Esto ya es una idea de programación dinámica, llamada<strong>"de arriba hacia abajo"</strong> 或 <strong>"búsqueda con memoización"</strong>。</p>
+<p>La complejidad temporal de este método se reduce a<code>O(n)</code>, porque cada subproblema se calcula solo una vez. La complejidad espacial es<code>O(n)</code>. Esto ya es una idea de programación dinámica, llamada<strong>"de arriba hacia abajo"</strong>o<strong>"búsqueda con memoización"</strong>。</p>
 <h3>Método 3: Arreglo de recurrencia (de abajo hacia arriba, DP estándar)</h3>
 <p>Empezamos directamente desde el subproblema más pequeño, avanzando paso a paso hasta el problema original. Normalmente usamos un arreglo<code>dp</code>para almacenar los estados.</p>
 <div class="example">
@@ -462,8 +462,8 @@ test_n <span style="color: Gray;">=</span> <span style="color: Maroon;">10</span
 <h3>Análisis del problema y diseño de DP</h3>
 <ol>
 <li><strong>Definición del estado</strong>：<code>dp[i]</code>que representa, para la cantidad total<code>i</code>el número mínimo de monedas necesario.</li>
-<li><strong>Ecuación de transición de estados</strong>: para la cantidad<code>i</code>, podemos recorrer cada denominación de moneda<code>coin</code>. Si<code>coin &lt;= i</code>, entonces una forma posible de formar la cantidad<code>i</code>es: primero formar la cantidad<code>i - coin</code>, y luego añadir una moneda de<code>coin</code>denominación.<code>dp[i] = min(dp[i], dp[i - coin] + 1)</code>, para todos los que cumplan<code>coin &lt;= i</code> 的 <code>coin</code>。</li>
-<li><strong>Condiciones iniciales</strong>：<code>dp[0] = 0</code>, formar la cantidad 0 requiere 0 monedas. Los demás<code>dp[i]</code>se inicializan a un número muy grande (como<code>amount + 1</code> 或 <code>float('inf')</code>), que representa que temporalmente no se puede formar.</li>
+<li><strong>Ecuación de transición de estados</strong>: para la cantidad<code>i</code>, podemos recorrer cada denominación de moneda<code>coin</code>. Si<code>coin &lt;= i</code>, entonces una forma posible de formar la cantidad<code>i</code>es: primero formar la cantidad<code>i - coin</code>, y luego añadir una moneda de<code>coin</code>denominación.<code>dp[i] = min(dp[i], dp[i - coin] + 1)</code>, para todos los que cumplan<code>coin &lt;= i</code>de<code>coin</code>。</li>
+<li><strong>Condiciones iniciales</strong>：<code>dp[0] = 0</code>, formar la cantidad 0 requiere 0 monedas. Los demás<code>dp[i]</code>se inicializan a un número muy grande (como<code>amount + 1</code>o<code>float('inf')</code>), que representa que temporalmente no se puede formar.</li>
 <li><strong>Orden de cálculo</strong>: de abajo hacia arriba, desde<code>i=1</code>calculando hasta<code>i=amount</code>。</li>
 </ol>
 <h3>Implementación del código</h3>
@@ -522,7 +522,7 @@ amount <span style="color: Gray;">=</span> <span style="color: Maroon;">11</span
 <p><strong>Pista</strong>：</p>
 <ul>
 <li>Definir<code>dp[i]</code>como 'la longitud de la subsecuencia creciente más larga que termina en el<code>i</code>ésimo número'.</li>
-<li>Para cada<code>i</code>, es necesario recorrer<code>j</code> 从 <code>0</code> 到 <code>i-1</code>, si<code>nums[i] &gt; nums[j]</code>, entonces<code>dp[i] = max(dp[i], dp[j] + 1)</code>。</li>
+<li>Para cada<code>i</code>, es necesario recorrer<code>j</code>desde<code>0</code>llegar<code>i-1</code>, si<code>nums[i] &gt; nums[j]</code>, entonces<code>dp[i] = max(dp[i], dp[j] + 1)</code>。</li>
 <li>Inicialmente, cada<code>dp[i]</code>es al menos 1 (solo se contiene a sí mismo).</li>
 </ul>
 Otras extensiones
@@ -644,11 +644,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -846,7 +846,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -948,7 +948,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

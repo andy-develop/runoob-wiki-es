@@ -41,10 +41,8 @@
 </div>
 </div>
 <div class="banner">
-<div class="container">
-    less v1.7.3 版本已发布
-    <strong>
-<a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">查看新版说明</a>
+<div class="container">Se ha publicado la versión less v1.7.3<strong>
+<a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">Ver notas de la nueva versión</a>
 </strong>
 </div>
 </div>
@@ -61,7 +59,7 @@
 </div>
 <p>Less es un lenguaje de preprocesamiento de CSS que amplía el lenguaje CSS, añadiendo características como variables, mixins, funciones, etc., lo que hace que CSS sea más fácil de mantener, facilita la creación de temas y su ampliación.</p>
 <p>Less puede ejecutarse en las plataformas Node, navegador y Rhino. En la web hay muchas herramientas de terceros que ayudan a compilar el código fuente de Less.</p>
-<p>实例:</p>
+<p>Ejemplo:</p>
 <pre><code class="lang-less"><span class="hljs-at_rule">@base: <span class="hljs-hexcolor">#F938AB</span>;</span>
 
 <span class="hljs-class">.box-shadow</span>(<span class="hljs-at_rule">@style, @c)<span class="hljs-preprocessor"> when</span> (<span class="hljs-function">iscolor(@c)</span>) {</span>
@@ -77,7 +75,7 @@
   <span class="hljs-tag">div</span> { <span class="hljs-class">.box-shadow</span>(0 0 5px, 30%) }
 }
 </code></pre>
-<p>编译结果</p>
+<p>Resultado de la compilación</p>
 <pre><code class="lang-css"><span class="hljs-class">.box</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FE33AC</span></span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FDCDEA</span></span></span>;
@@ -94,7 +92,7 @@
 <a class="anchor glyphicon glyphicon-link" href="#using-less" name="using-less"></a></h1>
 </div>
 <blockquote>
-<p>Less puede ejecutarse en la línea de comandos mediante npm; descargarse como archivo de script en el navegador; o integrarse en numerosas herramientas de terceros. Consulte<a href="usage/index.html">用法</a> 
+<p>Less puede ejecutarse en la línea de comandos mediante npm; descargarse como archivo de script en el navegador; o integrarse en numerosas herramientas de terceros. Consulte<a href="usage/index.html">Uso</a> 
 。</p>
 </blockquote>
 <h2 class="docs-heading">Instalación<span class="anchor-target" id="using-less-installation"></span>
@@ -110,8 +108,7 @@
 <p>Esto generará el código CSS compilado en<code>stdout</code>, puedes redirigir la salida a un archivo:</p>
 <pre><code class="lang-bash">$ lessc styles.less &gt; styles.css
 </code></pre>
-<p>Si deseas generar CSS comprimido, solo agrega<code>-x</code>opción. Si deseas obtener una mejor compresión, también puedes usar<code>--clean-css</code> 选项启用 <a href="https://github.com/GoalSmashers/clean-css">Clean CSS</a> 进行压缩。
- </p>
+<p>Si deseas generar CSS comprimido, solo agrega<code>-x</code>opción. Si deseas obtener una mejor compresión, también puedes usar<code>--clean-css</code>Opción habilitada<a href="https://github.com/GoalSmashers/clean-css">Clean CSS</a>Realizar la compresión.</p>
 <p>Ejecutar lessc sin ningún argumento mostrará en la línea de comandos la lista de todas las opciones disponibles.</p>
 <h2 class="docs-heading">Uso en el código<span class="anchor-target" id="using-less-usage-in-code"></span>
 <a class="anchor glyphicon glyphicon-link" href="#using-less-usage-in-code" name="using-less-usage-in-code"></a></h2>
@@ -154,7 +151,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </code></pre>
 <h2 class="docs-heading">Herramientas de terceros<span class="anchor-target" id="using-less-third-party-tools"></span>
 <a class="anchor glyphicon glyphicon-link" href="#using-less-third-party-tools" name="using-less-third-party-tools"></a></h2>
-<p>查看 <a href="usage/index.html">用法</a>Consulta la información detallada sobre herramientas de terceros.</p>
+<p>Ver<a href="usage/index.html">Uso</a>Consulta la información detallada sobre herramientas de terceros.</p>
 <h1 class="docs-heading">Línea de comandos de Rhino<span class="anchor-target" id="command-line-with-rhino"></span>
 <a class="anchor glyphicon glyphicon-link" href="#command-line-with-rhino" name="command-line-with-rhino"></a></h1>
 <blockquote>
@@ -162,8 +159,8 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </blockquote>
 <p>La versión Rhino de la línea de comandos requiere incluir los siguientes dos archivos:</p>
 <ul>
-<li>less-rhino-<version>.js - 编译执行,</version></li>
-<li>lessc-rhino-<version>.js - 命令行支持</version></li>
+<li>less-rhino-<version>.js - compilar y ejecutar,</version></li>
+<li>lessc-rhino-<version>.js - soporte de línea de comandos</version></li>
 </ul>
 <p>Ejecutar la compilación desde la línea de comandos:</p>
 <pre><code>java -jar js.jar -f less-rhino-&lt;version&gt;.js lessc-rhino-&lt;version&gt;.js styles.less styles.css
@@ -177,7 +174,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 <p>Entonces, comencemos. Añada en la página<code>.less</code>el enlace de la hoja de estilo, y<code>rel</code>El atributo se establece en "<code>stylesheet/less</code>"：</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet/less"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"styles.less"</span> /&gt;</span>
 </code></pre>
-<p>A continuación, descargue<a href="https://github.com/less/less.js/archive/master.zip">less.js</a>  并通过  <code>&lt;script&gt;&lt;/script&gt;</code>la etiqueta para introducirlo, colocado en la página<code>&lt;head&gt;</code> 元素内：</p>
+<p>A continuación, descargue<a href="https://github.com/less/less.js/archive/master.zip">less.js</a>y mediante<code>&lt;script&gt;&lt;/script&gt;</code>la etiqueta para introducirlo, colocado en la página<code>&lt;head&gt;</code>Dentro del elemento:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"less.js"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
 <h3 class="docs-heading">Consejos<span class="anchor-target" id="client-side-usage-tips"></span>
@@ -188,8 +185,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </ul>
 <h2 class="docs-heading">Opciones del navegador<span class="anchor-target" id="client-side-usage-browser-options"></span>
 <a class="anchor glyphicon glyphicon-link" href="#client-side-usage-browser-options" name="client-side-usage-browser-options"></a></h2>
-<p>
-在 <code>&lt;script src="less.js"&gt;&lt;/script&gt;</code>antes de definir el global<code>less</code>el objeto puede ser<code>Less.js</code> 设置参数：</p>
+<p>En<code>&lt;script src="less.js"&gt;&lt;/script&gt;</code>antes de definir el global<code>less</code>el objeto puede ser<code>Less.js</code>Establecer parámetros:</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- set options before less.js script --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
   less = {
@@ -205,7 +201,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"less.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
-<p>了解更多  <a href="usage/#using-less-in-the-browser-client-side-options">浏览器选项</a></p>
+<p>Más información<a href="usage/#using-less-in-the-browser-client-side-options">Opciones del navegador</a></p>
 </div>
 <div class="docs-section">
 <div class="page-header">
@@ -214,13 +210,13 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </div>
 <h2 class="docs-heading">Descarga para el navegador<span class="anchor-target" id="download-options-browser-downloads"></span>
 <a class="anchor glyphicon glyphicon-link" href="#download-options-browser-downloads" name="download-options-browser-downloads"></a></h2>
-<a class="btn btn-default" href="https://raw.github.com/less/less.js/master/dist/less-1.7.3.min.js">下载 Less.js v1.7.3</a>
+<a class="btn btn-default" href="https://raw.github.com/less/less.js/master/dist/less-1.7.3.min.js">Descargar Less.js v1.7.3</a>
 <div class="docs-dl-options">
 <h4 id="-download-source-code-https-github-com-less-less-js-archive-v1-7-3-zip-"><a href="https://github.com/less/less.js/archive/v1.7.3.zip">Download source code</a></h4>
 <p>Descargue el código fuente más reciente de Less.js directamente desde GitHub.</p>
 <h4 id="-clone-or-fork-via-github-https-github-com-less-less-js-git-"><a href="https://github.com/less/less.js.git">Clone or fork via GitHub</a></h4>
 <p>¡Clona o haz fork de este proyecto en GitHub!</p>
-<h4 id="-install-with-bower-http-bower-io-"><a href="http://bower.io">通过 Bower 安装</a></h4>
+<h4 id="-install-with-bower-http-bower-io-"><a href="http://bower.io">Instalar mediante Bower</a></h4>
 <p>Para instalar el proyecto Less.js mediante Bower, puedes usar el siguiente comando:</p>
 <pre><code class="lang-bash">bower install less
 </code></pre>
@@ -237,7 +233,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 <h1 class="docs-heading">License FAQs<span class="anchor-target" id="license-faqs"></span>
 <a class="anchor glyphicon glyphicon-link" href="#license-faqs" name="license-faqs"></a></h1>
 </div>
-<p class="lead">Less.js se publica bajo la licencia Apache 2 (<a href="https://github.com/less/less.js/issues/1029">我们打算将来采用双许可证方式</a>). Copyright 2009-2014, Alexis Sellier y el equipo principal de Less (ver arriba). Resumen a continuación:</p>
+<p class="lead">Less.js se publica bajo la licencia Apache 2 (<a href="https://github.com/less/less.js/issues/1029">Tenemos la intención de adoptar un modelo de doble licencia en el futuro.</a>). Copyright 2009-2014, Alexis Sellier y el equipo principal de Less (ver arriba). Resumen a continuación:</p>
 <div class="row">
 <div class="col-12 col-lg-6">
 <h4>te otorga el poder:</h4>
@@ -247,7 +243,7 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </ul>
 </div>
 <div class="col-12 col-lg-6">
-<h4>严禁：</h4>
+<h4>Prohibido:</h4>
 <ul>
 <li>Usar cualquier fragmento de código de Less.js sin declarar la atribución de derechos de autor.</li>
 </ul>
@@ -255,21 +251,21 @@ parser.parse(<span class="hljs-string">'.class { width: (1 + 1) }'</span>, <span
 </div>
 <div class="row">
 <div class="col-12 col-lg-6">
-<h4>你的义务：</h4>
+<h4>Tus obligaciones:</h4>
 <ul>
 <li>Si tu producto incluye Less.js, debes incluir una copia de la licencia de Less.js.</li>
 <li>En tu producto que incluya Less.js, declara explícitamente que los derechos de autor de Less.js pertenecen al equipo central de Less.</li>
 </ul>
 </div>
 <div class="col-12 col-lg-6">
-<h4>不需要：</h4>
+<h4>No es necesario:</h4>
 <ul>
 <li>Incluir el propio Less.js o el código fuente modificado en tu producto.</li>
 <li>Envía tus modificaciones de Less.js al proyecto Less.js (también alentamos enviar mejoras a Less.js).</li>
 </ul>
 </div>
 </div>
-<p>La información completa de los derechos de autor de Less.js se encuentra en<a href="https://github.com/less/less.js/blob/master/LICENSE">项目仓库内</a>，请参考。</p>
+<p>La información completa de los derechos de autor de Less.js se encuentra en<a href="https://github.com/less/less.js/blob/master/LICENSE">Dentro del repositorio del proyecto</a>, por favor consulte.</p>
 </div>
 </div>
 </div>

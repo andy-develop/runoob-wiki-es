@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="1.一些BB    说来惭愧，DrySister的上一篇距今已经有一年多了，期间有不少小伙伴 都曾私信过我说写得很好，稳什么时候更，我基本都回复说太监了... 具体原因各种各样吧，最近一段时间比较闲，就想把第一版的完结了吧。 之前刚开始写的时候是AS 2.1.2，现在都AS 3.0.1了，本节的内容 依次是：   	Step 1：温习一波之前几节涉及到的东西  	Step 2：代码在AS 3.0.1上跑要做一些调整  	Step 3：编.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,11 +72,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
-<!--  Android 基础入门教程 start  -->
+Tutorial básico de Android start
 <div class="col left-column" style="display:none;">
 <div class="tab">Tutorial básico de introducción a Android</div>
 <div class="sidebar-box gallery-list">
@@ -84,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!--  Android 基础入门教程 end  -->
+Tutorial básico de introducción a Android end
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
@@ -150,7 +150,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-5254-aajqntkjl20mg1yzfzj69l1c.png"/></p>
 <p><strong>gradle-wrapper.properties</strong>：</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-5735-hijnbclbwrmwrq67htffny67.png"/></p>
-<p>Hay otro lugar que debe cambiarse ligeramente:<strong>SisterApi.java</strong>, cambiar<strong>福利</strong>por:<strong>%e7%a6%8f%e5%88%a9</strong>Esto implica el problema de la transcodificación de caracteres chinos, y HttpUrlConnection no puede abrir enlaces que contengan chino; es necesario llamar a la codificación de la parte china mediante<strong>URLEncoder.encode(中文部分,"utf-8");</strong>para transcodificar; recuerda<strong>solo</strong>
+<p>Hay otro lugar que debe cambiarse ligeramente:<strong>SisterApi.java</strong>, cambiar<strong>beneficio</strong>por:<strong>%e7%a6%8f%e5%88%a9</strong>Esto implica el problema de la transcodificación de caracteres chinos, y HttpUrlConnection no puede abrir enlaces que contengan chino; es necesario llamar a la codificación de la parte china mediante<strong>URLEncoder.encode(parteChina,"utf-8");</strong>para transcodificar; recuerda<strong>solo</strong>
 <strong>la parte china, no toda la url</strong>¡¡¡También es necesario capturar la excepción. Como aquí solo hay un lugar que necesita transcodificación, simplemente usé una herramienta de transcodificación en línea para hacerlo:<a href="../front-end/695.html" target="_blank">https://c.runoob.com/front-end/695</a></p>
 <p>Resultado después de la conversión:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-6829-iuq65j5rh64ganeyeqz5hs1o.png"/></p>
@@ -215,7 +215,7 @@ git branch -d fix_code_as3.0.1  # 删除合并后的本地分支</pre>
 <p>
 <img decoding="async" src="../wp-content/uploads/2017/12/1513928021-3638-1c1p0op3op171go0avr1fbvu8o1t.png"/></p>
 <h3>4) Escribir la clase de captura de registros de fallos</h3>
-<p>La clase de captura de registros de fallos depende de<strong>Application</strong>与<strong>Thread.UncaughtExceptionHandler</strong>para implementarse. Cuando el programa, debido a<strong>excepción no capturada</strong>Cuando el hilo esté a punto de terminar y salir, se consultará el UncaughtExceptionHandler del hilo mediante Thread.UncaughtExceptionHandler y se llamará a<strong>el método uncaughtException</strong>, pasando el hilo y la excepción como parámetros. Si el hilo<strong>no tiene un UncaughtExceptionHandler establecido explícitamente</strong>, entonces se usará su<strong>ThreadGroup</strong>ThreadGroup como su UncaughtExceptionHandler, y luego se pasará al manejador de excepciones no capturadas predeterminado para que la procese. Así que solo necesitamos<strong>implementar la interfaz UncaughtExceptionHandler</strong>, sobrescribir<strong>el método uncaughtException</strong>para implementar nuestro manejo personalizado. Primero vamos a ordenar la lista de la lógica:</p>
+<p>La clase de captura de registros de fallos depende de<strong>Application</strong>y<strong>Thread.UncaughtExceptionHandler</strong>para implementarse. Cuando el programa, debido a<strong>excepción no capturada</strong>Cuando el hilo esté a punto de terminar y salir, se consultará el UncaughtExceptionHandler del hilo mediante Thread.UncaughtExceptionHandler y se llamará a<strong>el método uncaughtException</strong>, pasando el hilo y la excepción como parámetros. Si el hilo<strong>no tiene un UncaughtExceptionHandler establecido explícitamente</strong>, entonces se usará su<strong>ThreadGroup</strong>ThreadGroup como su UncaughtExceptionHandler, y luego se pasará al manejador de excepciones no capturadas predeterminado para que la procese. Así que solo necesitamos<strong>implementar la interfaz UncaughtExceptionHandler</strong>, sobrescribir<strong>el método uncaughtException</strong>para implementar nuestro manejo personalizado. Primero vamos a ordenar la lista de la lógica:</p>
 <ul>
 <li>1.<strong>Crear una carpeta dedicada a los archivos de registro:</strong>hay que determinar si la tarjeta de almacenamiento está disponible y luego comprobar si la carpeta existe; si no existe, crear la carpeta;</li>
 <li>2. Se necesita un método para escribir una cadena en un archivo.</li>

@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Java 抽象类   在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。  抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。 由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。 父类包含了子类集合的常见.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -819,7 +819,7 @@ public class BigDogs extends Dog{
 <h3>2. Diferencias a nivel de diseño</h3>
 <p><strong>1</strong>1) Las clases abstractas son una abstracción de una cosa, es decir, una abstracción de una clase, mientras que las interfaces son una abstracción del comportamiento. La clase abstracta abstrae toda la clase en su conjunto, incluyendo atributos y comportamientos, pero la interfaz abstrae solo una parte local (el comportamiento) de la clase. Un ejemplo simple: los aviones y las aves son cosas de diferentes categorías, pero ambas tienen una característica en común: ambas pueden volar. Entonces, al diseñar, se puede diseñar el avión como una clase `Airplane` y el ave como una clase `Bird`, pero no se puede<strong>volar</strong>esta característica tampoco se puede diseñar como una clase, porque es solo una característica de comportamiento, no una descripción abstracta de un tipo de cosa. En este momento, se puede diseñar 'volar' como una interfaz `Fly` que contenga el método `fly()`, y luego `Airplane` y `Bird` implementan la interfaz `Fly` según sus propias necesidades. En cuanto a los diferentes tipos de aviones, como cazas o aviones civiles, pueden heredar directamente de `Airplane`; para las aves es similar, los diferentes tipos de aves pueden heredar directamente de la clase `Bird`. De aquí se puede ver que la herencia es una relación de 'es/no es', mientras que la implementación de una interfaz es una relación de 'tiene/no tiene'. Si una clase hereda de una clase abstracta, la subclase debe ser del tipo de la clase abstracta; en cambio, la implementación de una interfaz es una cuestión de tener o no tener, como si un ave puede volar (o si tiene la característica de volar); si puede volar, entonces puede implementar la interfaz; si no puede volar, no la implementa.</p>
 <p><strong>2）</strong>A nivel de diseño, son diferentes: la clase abstracta, como clase padre de muchas subclases, es un diseño basado en plantillas. La interfaz es una especificación de comportamiento, un diseño radial. ¿Qué es el diseño basado en plantillas? El ejemplo más simple: todos han usado plantillas en PowerPoint. Si se diseñan el PPT B y el PPT C usando la plantilla A, la parte común de PPT B y PPT C es la plantilla A. Si su parte común necesita cambios, solo basta con modificar la plantilla A, sin necesidad de volver a modificar PPT B y PPT C. En cuanto al diseño radial, por ejemplo, si un tipo de ascensor está equipado con cierto tipo de alarma, una vez que haya que actualizar la alarma, deben actualizarse todas. Es decir, para una clase abstracta, si se necesita agregar un nuevo método, se puede agregar directamente una implementación concreta en la clase abstracta, y las subclases no tienen que cambiar; pero para una interfaz no es posible: si la interfaz cambia, todas las clases que la implementan deben modificarse en consecuencia.</p>
-<p>A continuación, veamos el ejemplo más difundido en Internet: el ejemplo de la puerta y la alarma: las puertas tienen<strong>open()</strong> 和 <strong>close()</strong>dos acciones; en este momento podemos definir este concepto abstracto mediante una clase abstracta y una interfaz:</p>
+<p>A continuación, veamos el ejemplo más difundido en Internet: el ejemplo de la puerta y la alarma: las puertas tienen<strong>open()</strong>y<strong>close()</strong>dos acciones; en este momento podemos definir este concepto abstracto mediante una clase abstracta y una interfaz:</p>
 <pre>abstract class Door {
     public abstract void open();
     public abstract void close();
@@ -864,11 +864,11 @@ class AlarmDoor extends Door implements Alarm {
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1066,7 +1066,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1168,7 +1168,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

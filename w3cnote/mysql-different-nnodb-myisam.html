@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="摘要: MySQL有多种存储引擎，每种存储引擎有各自的优缺点，可以择优选择使用：MyISAM、InnoDB、MERGE、MEMORY(HEAP)、BDB(BerkeleyDB)、EXAMPLE、FEDERATED、ARCHIVE、CSV、BLACKHOLE。  MySQL 有多种存储引擎，每种存储引擎有各自的优缺点，可以择优选择使用：  MyISAM、InnoDB、MERGE、MEMORY(HEAP)、BDB(BerkeleyDB)、E.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -113,11 +113,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <tr>
 <td>   <strong>SELECT   UPDATE,INSERT</strong><strong>，</strong><strong>Delete</strong><strong>Operaciones</strong><br/>    </td>
 <td>Si se ejecutan muchas consultas SELECT, MyISAM es una mejor opción.<br/> <br/>    </td>
-<td>   <strong>1.</strong>Si tus datos ejecutan una gran cantidad de<strong>INSERT</strong><strong>或</strong><strong>UPDATE</strong>, por consideraciones de rendimiento, deberías usar tablas InnoDB.<br/> <br/>   <strong>2.DELETE   FROM table</strong>En ese caso, InnoDB no reconstruye la tabla, sino que elimina fila por fila.<br/> <br/>   <strong>3.LOAD   TABLE FROM MASTER</strong>La operación no tiene efecto en InnoDB; la solución es primero cambiar las tablas InnoDB a tablas MyISAM, importar los datos y luego cambiarlas de nuevo a tablas InnoDB, pero esto no es aplicable a tablas que usan características adicionales de InnoDB (como claves externas).<br/> <br/>    </td>
+<td>   <strong>1.</strong>Si tus datos ejecutan una gran cantidad de<strong>INSERT</strong><strong>o</strong><strong>UPDATE</strong>, por consideraciones de rendimiento, deberías usar tablas InnoDB.<br/> <br/>   <strong>2.DELETE   FROM table</strong>En ese caso, InnoDB no reconstruye la tabla, sino que elimina fila por fila.<br/> <br/>   <strong>3.LOAD   TABLE FROM MASTER</strong>La operación no tiene efecto en InnoDB; la solución es primero cambiar las tablas InnoDB a tablas MyISAM, importar los datos y luego cambiarlas de nuevo a tablas InnoDB, pero esto no es aplicable a tablas que usan características adicionales de InnoDB (como claves externas).<br/> <br/>    </td>
 </tr>
 <tr>
-<td>   <strong>对</strong><strong>AUTO_INCREMENT</strong><strong>de la operación</strong><br/> <br/>   <br/>    </td>
-<td>Procesamiento interno de una columna AUTO_INCREMENT por tabla.<br/> <br/>   <strong>MyISAM</strong><strong>为</strong><strong>INSERT</strong><strong>和</strong><strong>UPDATE</strong><strong>La operación actualiza automáticamente esta columna.</strong>. Esto hace que la columna AUTO_INCREMENT sea más rápida (al menos un 10%). Una vez que se elimina un valor en la parte superior de la secuencia, no se puede reutilizar. (Cuando la columna AUTO_INCREMENT se define como la última columna de un índice de múltiples columnas, puede ocurrir la reutilización de valores eliminados de la parte superior de la secuencia).<br/> <br/>Los valores de AUTO_INCREMENT se pueden restablecer con ALTER TABLE o myisamch.<br/> <br/>Para los campos de tipo AUTO_INCREMENT, en InnoDB debe haber un índice que contenga solo ese campo, pero en las tablas MyISAM se puede crear un índice compuesto junto con otros campos.<br/> <br/>Mejor y más rápido manejo de auto_increment<br/> <br/>    </td>
+<td>   <strong>Sobre</strong><strong>AUTO_INCREMENT</strong><strong>de la operación</strong><br/> <br/>   <br/>    </td>
+<td>Procesamiento interno de una columna AUTO_INCREMENT por tabla.<br/> <br/>   <strong>MyISAM</strong><strong>Para</strong><strong>INSERT</strong><strong>y</strong><strong>UPDATE</strong><strong>La operación actualiza automáticamente esta columna.</strong>. Esto hace que la columna AUTO_INCREMENT sea más rápida (al menos un 10%). Una vez que se elimina un valor en la parte superior de la secuencia, no se puede reutilizar. (Cuando la columna AUTO_INCREMENT se define como la última columna de un índice de múltiples columnas, puede ocurrir la reutilización de valores eliminados de la parte superior de la secuencia).<br/> <br/>Los valores de AUTO_INCREMENT se pueden restablecer con ALTER TABLE o myisamch.<br/> <br/>Para los campos de tipo AUTO_INCREMENT, en InnoDB debe haber un índice que contenga solo ese campo, pero en las tablas MyISAM se puede crear un índice compuesto junto con otros campos.<br/> <br/>Mejor y más rápido manejo de auto_increment<br/> <br/>    </td>
 <td>Si especificas una columna AUTO_INCREMENT para una tabla, el manejador de tabla InnoDB en el diccionario de datos contiene un contador llamado contador de auto-incremento, que se utiliza para asignar nuevos valores a esa columna.<br/> <br/>El contador de auto-incremento solo se almacena en la memoria principal, no en el disco.<br/> <br/>Sobre la implementación del algoritmo de este contador, consulte<br/> <br/>   <strong>AUTO_INCREMENT</strong><strong>La columna en</strong><strong>InnoDB</strong><strong>cómo funciona dentro de</strong><br/> <br/>    </td>
 </tr>
 <tr>
@@ -126,7 +126,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <td>InnoDB no guarda el número específico de filas de la tabla; es decir, al ejecutar select count(*) from table, InnoDB tiene que escanear toda la tabla para calcular cuántas filas hay.<br/> <br/>    </td>
 </tr>
 <tr>
-<td>   <strong>锁</strong><br/>    </td>
+<td>   <strong>bloqueo</strong><br/>    </td>
 <td>Bloqueo de tablas<br/> <br/>    </td>
 <td>Proporciona bloqueo a nivel de fila (locking on row level) y lectura sin bloqueos consistente con el tipo Oracle (non-locking read in<br/>SELECTs). Además, el bloqueo de filas en las tablas InnoDB no es absoluto; si al ejecutar una sentencia SQL MySQL no puede determinar el rango a escanear, las tablas InnoDB también bloquearán toda la tabla, por ejemplo update table set num=1 where name like "%aaa%".</td>
 </tr>

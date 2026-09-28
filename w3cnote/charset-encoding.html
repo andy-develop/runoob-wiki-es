@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="字符集和字符编码 —— 每个软件开发人员应该无条件掌握的知识！  相信大家一定碰到过，打开某个网页，却显示一堆像乱码？还记得HTTP中的Accept-Charset、Accept-Encoding、Accept-Language、Content-Encoding、Content-Language等消息头字段？这些就是接下来我们要探讨的。 目录：  1.基础知识 2.常用字符集和字符编码  2.1. ASCII字符集&amp;amp;编码.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -69,8 +69,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -180,7 +180,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>（<strong>Se puede entender así: Unicode es un conjunto de caracteres; UTF-32/UTF-16/UTF-8 son tres esquemas de codificación de caracteres.</strong>）
 </p>
 <h3>3.1.UCS &amp; UNICODE</h3>
-<p><strong>通用字符集</strong>（Universal Character Set，<strong>UCS</strong>) es establecido por ISO<strong>ISO 10646</strong>（或称<strong>ISO/IEC 10646</strong>) el conjunto de caracteres estándar definido por la norma. Históricamente existieron dos organizaciones que intentaron de manera independiente crear un único conjunto de caracteres: la Organización Internacional de Normalización (ISO) y el Consorcio Unicode, formado por fabricantes de software multilingüe. La primera desarrolló el proyecto ISO/IEC 10646; la segunda desarrolló el proyecto Unicode. Por lo tanto, inicialmente se establecieron normas diferentes.</p>
+<p><strong>conjunto universal de caracteres</strong>（Universal Character Set，<strong>UCS</strong>) es establecido por ISO<strong>ISO 10646</strong>(o llamado<strong>ISO/IEC 10646</strong>) el conjunto de caracteres estándar definido por la norma. Históricamente existieron dos organizaciones que intentaron de manera independiente crear un único conjunto de caracteres: la Organización Internacional de Normalización (ISO) y el Consorcio Unicode, formado por fabricantes de software multilingüe. La primera desarrolló el proyecto ISO/IEC 10646; la segunda desarrolló el proyecto Unicode. Por lo tanto, inicialmente se establecieron normas diferentes.</p>
 <p>Alrededor de 1991, los participantes de ambos proyectos reconocieron que el mundo no necesitaba dos conjuntos de caracteres incompatibles. Así pues, comenzaron a fusionar los resultados de sus trabajos y a colaborar para crear una única tabla de codificación. A partir de Unicode 2.0, Unicode adoptó el mismo repertorio de caracteres y códigos que ISO 10646-1; ISO también se comprometió a que ISO 10646 no asignaría valores a codificaciones UCS-4 más allá de U+10FFFF, a fin de mantener la coherencia entre ambos. Ambos proyectos siguen existiendo y publican sus estándares de forma independiente. Sin embargo, el Consorcio Unicode y el ISO/IEC JTC1/SC2 acordaron mantener la compatibilidad de las tablas de códigos de ambos estándares y ajustar conjuntamente cualquier extensión futura. En el momento de la publicación, Unicode generalmente adopta la forma glífica más común para los códigos correspondientes, mientras que ISO 10646, por lo general, procura utilizar glifos de estilo Century.</p>
 <h3>3.2.UTF-32</h3>
 <p>El esquema de codificación mencionado anteriormente, que utiliza números de 4 bytes para representar cada letra, símbolo o ideograma (ideograph), donde cada número representa un símbolo único utilizado al menos en algún idioma, se denomina UTF-32. UTF-32 también se conoce como<strong>UCS-4</strong>Es un acuerdo para codificar caracteres Unicode que utiliza 4 bytes para cada carácter. En términos de espacio, es muy ineficiente.</p>
@@ -191,7 +191,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Si el código de carácter U es menor que 0x10000, es decir, dentro del rango decimal de 0 a 65535, se representa directamente con dos bytes;</li>
 <li>Si el código de carácter U es mayor que 0x10000, dado que el rango máximo de codificación Unicode es 0x10FFFF, entre 0x10000 y 0x10FFFF hay un total de 0xFFFFF códigos, es decir, se necesitan 20 bits para representar estos códigos. Sea U' el valor entre 0 y 0xFFFFF; se toman sus primeros 10 bits como parte alta y se realiza una operación lógica OR con el valor de 16 bits 0xD800; se toman los últimos 10 bits como parte baja y se realiza una operación lógica OR con 0xDC00; los 4 bytes así formados constituyen la codificación de U.</li>
 </ul>
-<p>Las codificaciones UTF-32 y UTF-16 tienen otras desventajas no tan evidentes. Los diferentes sistemas informáticos guardan los bytes en órdenes distintos. Esto significa que el carácter U+4E2D en codificación UTF-16 puede guardarse como 4E 2D o 2D 4E, dependiendo de si el sistema utiliza big-endian (extremo grande) o little-endian (extremo pequeño).<span style="text-decoration: line-through;">（对于UTF-32编码方式，则有更多种可能的字节排列。）</span>Mientras el documento no salga de tu computadora, sigue siendo seguro: los diferentes programas de la misma máquina usan el mismo orden de bytes (byte order). Pero cuando necesitamos transferir este documento entre sistemas, quizás en la World Wide Web, necesitamos un método para indicar cómo están almacenados nuestros bytes actualmente. De lo contrario, la computadora que recibe el documento no podrá saber si esos dos bytes 4E 2D representan U+4E2D o U+2D4E.</p>
+<p>Las codificaciones UTF-32 y UTF-16 tienen otras desventajas no tan evidentes. Los diferentes sistemas informáticos guardan los bytes en órdenes distintos. Esto significa que el carácter U+4E2D en codificación UTF-16 puede guardarse como 4E 2D o 2D 4E, dependiendo de si el sistema utiliza big-endian (extremo grande) o little-endian (extremo pequeño).<span style="text-decoration: line-through;">（Para la codificación UTF-32, hay más posibles ordenaciones de bytes.）</span>Mientras el documento no salga de tu computadora, sigue siendo seguro: los diferentes programas de la misma máquina usan el mismo orden de bytes (byte order). Pero cuando necesitamos transferir este documento entre sistemas, quizás en la World Wide Web, necesitamos un método para indicar cómo están almacenados nuestros bytes actualmente. De lo contrario, la computadora que recibe el documento no podrá saber si esos dos bytes 4E 2D representan U+4E2D o U+2D4E.</p>
 <p>Para resolver este problema, las codificaciones Unicode multibyte definen una "marca de orden de bytes" (Byte Order Mark), un carácter especial no imprimible que puedes incluir al principio del documento para indicar el orden de bytes que estás utilizando. Para UTF-16, la marca de orden de bytes es U+FEFF. Si recibes un documento codificado en UTF-16 que comienza con los bytes FF FE, puedes determinar que su orden de bytes es en un sentido (one way); si comienza con FE FF, puedes determinar que el orden de bytes está invertido.</p>
 <h3>3.4.UTF-8</h3>
 <p>UTF-8 (formato de transformación Unicode de 8 bits) es una codificación de caracteres de longitud variable (código de longitud fija) para Unicode, y también es un código de prefijo. Puede utilizarse para representar cualquier carácter del estándar Unicode, y el primer byte de su codificación sigue siendo compatible con ASCII, lo que permite que el software que originalmente procesaba caracteres ASCII pueda seguir usándose sin modificaciones o con solo unas pocas modificaciones. Por lo tanto, se ha convertido gradualmente en la codificación preferida en el correo electrónico, las páginas web y otras aplicaciones que almacenan o transmiten texto. El Grupo de Trabajo de Ingeniería de Internet (IETF) exige que todos los protocolos de Internet sean compatibles con la codificación UTF-8.</p>
@@ -353,11 +353,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes <a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes <a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

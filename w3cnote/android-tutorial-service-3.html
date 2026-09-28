@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="本节引言：  本节，我们继续来研究Service(服务)组件，本节将会学习下Android中的AIDL跨进程通信的一些 概念，并不深入到源码层次，暂时知道是什么，会用即可！开始本节内容~ 本节对应官方文档：Binder    1.Binder机制初涉    1）IBinder和Binder是什么鬼？  我们来看看官方文档怎么说：    中文翻译：  IBinder是远程对象的基本接口，是饿了高性能而设计的轻量级远程调用机制的核心部分。但.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,11 +72,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
-<!--  Android 基础入门教程 start  -->
+Tutorial básico de Android start
 <div class="col left-column" style="display:none;">
 <div class="tab">Tutorial básico de introducción a Android</div>
 <div class="sidebar-box gallery-list">
@@ -84,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!--  Android 基础入门教程 end  -->
+Tutorial básico de introducción a Android end
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
@@ -403,11 +403,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 <blockquote><p>En el ejemplo anterior, solo pasamos un parámetro de tipo int y el servidor devuelve un parámetro de tipo String, lo que parece satisfacer nuestras necesidades básicas. Pero en el desarrollo real, ¡puede que necesitemos considerar el caso de transferir tipos de datos complejos! A continuación, aprendamos cómo transferir datos de tipos complejos al servidor. Antes de empezar, primero entendamos<strong>la interfaz Parcelable</strong>！</p></blockquote>
 <p><strong>——Introducción a la interfaz Parcelable:</strong></p>
 <p>Creo que quienes han usado serialización básicamente conocen esta interfaz. Además, existe otra, Serializable, que también se usa para serialización, solo que Parcelable es más ligera y más rápida. Pero escribirla es un poco complicado. Por supuesto, si usas Android Studio, puedes usar el plugin para completar la serialización, por ejemplo:<strong>Android Parcelable Code Generator</strong>Por supuesto, aquí te enseñaremos paso a paso a implementar esta interfaz.</p>
-<p><strong>Primero</strong>necesitas implementar:<strong>writeToParcel</strong>和<strong>readFromPacel</strong>métodos. El método de escritura escribe el objeto en el Parcel, y el método de lectura lee el objeto desde el Parcel. Ten en cuenta que el orden de escritura de las propiedades debe ser el mismo que el orden de lectura.</p>
-<p><strong>Luego</strong>es necesario agregar en la clase un atributo llamado<strong>CREATOR</strong>的<strong>static final</strong>atributo. Este atributo debe implementar: android.os.Parcelable.Creator<t>interfaz</t></p>
+<p><strong>Primero</strong>necesitas implementar:<strong>writeToParcel</strong>y<strong>readFromPacel</strong>métodos. El método de escritura escribe el objeto en el Parcel, y el método de lectura lee el objeto desde el Parcel. Ten en cuenta que el orden de escritura de las propiedades debe ser el mismo que el orden de lectura.</p>
+<p><strong>Luego</strong>es necesario agregar en la clase un atributo llamado<strong>CREATOR</strong>de<strong>static final</strong>atributo. Este atributo debe implementar: android.os.Parcelable.Creator<t>interfaz</t></p>
 <p><strong>Después</strong>necesitas sobrescribir dos métodos de la interfaz:<strong>createFromParcel</strong>método (Parcel source): implementa la función de crear una instancia de JavaBean a partir de source.<strong>newArray</strong>método (int size): crea un array de tipo T y tamaño size, solo tiene un simple return new T[size]; (aquí T es la clase Person).</p>
 <p><strong>Finalmente, describeContents()</strong>: No sé para qué sirve esto, simplemente devuelve 0. No le prestes atención.</p>
-<p><strong>——Además</strong>，<strong>En los tipos no primitivos,</strong>excepto<strong>String</strong>和<strong>CharSequence</strong>todos los demás necesitan un<strong>indicador de dirección.</strong>Los indicadores de dirección incluyen in<strong>in</strong>、<strong>out</strong>、<strong>y inout</strong>. in significa que lo establece el cliente, out significa que lo establece el servidor, e inout significa que tanto el cliente como el servidor establecen ese valor.</p>
+<p><strong>——Además</strong>，<strong>En los tipos no primitivos,</strong>excepto<strong>String</strong>y<strong>CharSequence</strong>todos los demás necesitan un<strong>indicador de dirección.</strong>Los indicadores de dirección incluyen in<strong>in</strong>、<strong>out</strong>、<strong>y inout</strong>. in significa que lo establece el cliente, out significa que lo establece el servidor, e inout significa que tanto el cliente como el servidor establecen ese valor.</p>
 <hr/>
 <p>Bien, continuemos escribiendo código para probar. (En Android Studio hay un pequeño problema con los tipos personalizados que aún no se ha resuelto, así que vuelvo a usar Eclipse~):</p>
 <p><strong>Ejemplo de código:</strong></p>
@@ -993,11 +993,11 @@ Por ejemplo, para StartService:</p>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes<a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes<a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="void 在英文中作为名词的解释为 “空虚、空间、空隙”，而在 C 语言中，void 被翻译为“无类型”，相应的void * 为“无类型指针”。 void 似乎只有“注释”和限制程序的作用，当然，这里的“注释”不是为我们人提供注释，而是为编译器提供一种所谓的注释。   void 的作用 1.对函数返回的限定，这种情况我们比较常见。  2.对函数参数的限定，这种情况也是比较常见的。  一般我们常见的就是这两种情况：  当函数不需要返回值值.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -85,7 +85,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-intro">
 <!-- ad start-->
 <!-- ad end-->
-<p>void en inglés como sustantivo se interpreta como<strong>"vacío, espacio, hueco"</strong>, y en el lenguaje C, void se traduce como<strong>"sin tipo"</strong>, correspondientemente<span class="marked">void * </span>为<strong>"puntero sin tipo"</strong>。</p>
+<p>void en inglés como sustantivo se interpreta como<strong>"vacío, espacio, hueco"</strong>, y en el lenguaje C, void se traduce como<strong>"sin tipo"</strong>, correspondientemente<span class="marked">void * </span>Para<strong>"puntero sin tipo"</strong>。</p>
 <p>void parece tener solo la función de "comentario" y de restricción del programa. Por supuesto, el "comentario" aquí no es para nosotros los humanos, sino que proporciona una especie de comentario al compilador.</p>
 <hr/><h2>La función de void</h2>
 <p>1. Limitación del valor de retorno de la función; esta situación es bastante común.</p>
@@ -99,7 +99,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 void *p；
 p=a；</pre>
 <p>Si se quiere asignar el puntero void p a un puntero de otro tipo, se necesita una conversión forzada de tipo; en este ejemplo:<span class="marked">a=（int *）p</span>. En la asignación de memoria podemos ver el uso del puntero void: el puntero devuelto por la función de asignación de memoria malloc es de tipo<span class="marked">void *</span>tipo. Cuando el usuario usa este puntero, debe realizar una conversión forzada de tipo, es decir, indicar explícitamente qué tipo de datos se almacenan en la memoria a la que apunta el puntero.<span class="marked">(int *)malloc(1024)</span>Significa que se especifica forzosamente que en la memoria a la que apunta el puntero void* devuelto por malloc se almacenan datos de tipo int uno a uno.</p>
-<p>2. En el estándar ANSI C, no se permiten operaciones aritméticas como p++ o p+=1 sobre punteros void, porque dado que void no tiene tipo, en cada operación aritmética no sabríamos cuántos bytes operar. Por ejemplo, el tipo char opera sobre sizeof(char) bytes, mientras que int debe operar sobre sizeof(int) bytes. En GNU sí se permite, porque por defecto GNU considera que<span class="marked">void *</span> 和 <span class="marked">char *</span>son iguales; ya que es definido, por supuesto se pueden realizar algunas operaciones aritméticas. Aquí<span class="marked">sizeof(*p)==sizeof(char)</span>。</p>
+<p>2. En el estándar ANSI C, no se permiten operaciones aritméticas como p++ o p+=1 sobre punteros void, porque dado que void no tiene tipo, en cada operación aritmética no sabríamos cuántos bytes operar. Por ejemplo, el tipo char opera sobre sizeof(char) bytes, mientras que int debe operar sobre sizeof(int) bytes. En GNU sí se permite, porque por defecto GNU considera que<span class="marked">void *</span>y<span class="marked">char *</span>son iguales; ya que es definido, por supuesto se pueden realizar algunas operaciones aritméticas. Aquí<span class="marked">sizeof(*p)==sizeof(char)</span>。</p>
 <p>void casi solo tiene la función de "comentario" y de restricción del programa, porque nadie definiría una variable void; intentemos definirla:</p>
 <pre>void a;</pre>
 <p>Esta línea de código dará un error al compilar, indicando<strong>"illegal use of type 'void'"</strong>. Incluso si<span class="marked">void a</span>la compilación no diera error, tampoco tendría ningún significado práctico.</p>
@@ -110,7 +110,7 @@ p1 = p2;
 //其中p1 = p2语句会编译出错，
 //提示“'=' : cannot convert from 'int *' to 'float *'”，必须改为：
 p1 = (float *)p2;</pre>
-<p>而 <span class="marked">void *</span>void, en cambio, es diferente: cualquier tipo de puntero se le puede asignar directamente, sin necesidad de conversión forzada de tipo.</p>
+<p>Y<span class="marked">void *</span>void, en cambio, es diferente: cualquier tipo de puntero se le puede asignar directamente, sin necesidad de conversión forzada de tipo.</p>
 <pre>void *p1;
 int *p2;
 p1 = p2;</pre>
@@ -249,11 +249,11 @@ void * memset ( void * buffer, int c, size_t num );</pre>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=".." class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href="..">iniciar sesión</a>.</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="不要问我为什么标题这么长，怎么不写短点，我觉得你是   代码虽然写完了，但是发布的后续操作还是挺多的，如标题， 本节讲述的内容依次是：应用图标的制作，混淆，签名打包APK，Apk瘦身， 以及发布应用到酷安市场。内容较多就不唠叨了，直接开始~    1.图标制作 本来想着自己用Sketch做一枚的，摸索了10分钟不到就放弃了... 还是直接利用AS自带的图标生成工具一键生成算了，步骤如下： 右键drawable文件夹 -&amp;gt; .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,11 +72,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
-<!--  Android 基础入门教程 start  -->
+Tutorial básico de Android start
 <div class="col left-column" style="display:none;">
 <div class="tab">Tutorial básico de introducción a Android</div>
 <div class="sidebar-box gallery-list">
@@ -84,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!--  Android 基础入门教程 end  -->
+Tutorial básico de introducción a Android end
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
@@ -103,9 +103,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513929733-4065-a9p841mst2wexebw8mxshe74.png"/></p>
 <p>Entonces AS nos genera un montón de archivos:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513929733-1791-1c1ri3ufc5qh17mf1nars9ocnm3a.png"/></p>
-<p>Al ver esto, quizás pongas cara de "???" Esta<strong>mipmap-anydpi-v26</strong>carpeta, ¿qué demonios es? ¿Y por qué cada carpeta mipmap tiene además<strong>ic<em>launcher</em>foreground</strong> 和 <strong>ic<em>lanucher</em>round</strong></p>
+<p>Al ver esto, quizás pongas cara de "???" Esta<strong>mipmap-anydpi-v26</strong>carpeta, ¿qué demonios es? ¿Y por qué cada carpeta mipmap tiene además<strong>ic<em>launcher</em>foreground</strong>y<strong>ic<em>lanucher</em>round</strong></p>
 <p><strong>La razón es</strong>：
-<blockquote>Android 8.0 (API 26) introdujo los iconos de lanzador adaptativos, que pueden mostrar diversas formas en diferentes modelos de dispositivos; en realidad consiste en dividir el icono original de una sola capa en dos capas:<strong>fondo</strong>与<strong>primer plano</strong>Luego, los diferentes lanzadores tienen<strong>Mask</strong>(traducido como máscara, aunque siento que<strong>la capa de máscara</strong>es más adecuado). Luego, las diferentes capas de máscara pueden recortar diferentes formas, como el círculo del ejemplo:</blockquote></p>
+<blockquote>Android 8.0 (API 26) introdujo los iconos de lanzador adaptativos, que pueden mostrar diversas formas en diferentes modelos de dispositivos; en realidad consiste en dividir el icono original de una sola capa en dos capas:<strong>fondo</strong>y<strong>primer plano</strong>Luego, los diferentes lanzadores tienen<strong>Mask</strong>(traducido como máscara, aunque siento que<strong>la capa de máscara</strong>es más adecuado). Luego, las diferentes capas de máscara pueden recortar diferentes formas, como el círculo del ejemplo:</blockquote></p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513929735-1771-11a4uu1jjfhts8amc5zof7w9.gif"/></p>
 <p>Además de este modo de uso, también hay<strong>soporte para efectos de animación</strong>, por ejemplo, las dos capas usan diferentes velocidades de deslizamiento:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513929735-7017-lux8zvdif5n0h298pqsv0pyc.gif"/></p>
@@ -114,7 +114,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puedes ver más contenido en el sitio web oficial:<a href="https://developer.android.google.cn/guide/practices/ui_guidelines/icon_design_adaptive.html#creating_adaptive_icons_in_xml" target="_blank">Adaptive Icons</a>Basta con saber el porqué; si no te gusta, puedes eliminar todos los archivos y conservar solo un ic_launcher.png.</p>
 <hr/>
 <h2>2. Ofuscación</h2>
-<p>Antes de publicar la aplicación, ofuscar el código puede hacer que, incluso si nuestro código es decompilado, sea difícil de leer. AS integra por sí mismo la utilidad de Java<strong>ProGuard</strong>como herramienta de compresión, optimización y ofuscación; el archivo de reglas de ofuscación es:<strong>proguard-rules.pro</strong>Si deseas habilitar las reglas de ofuscación, modifica<strong>build.gradle</strong>lo correspondiente en<strong>minifyEnabled</strong>为<strong>ture</strong>para activar la ofuscación.<strong>ofuscar el código</strong>Además, también puede<strong>reducir el volumen de la aplicación</strong>, realizar<strong>optimización a nivel de bytecode</strong>¡Hace que nuestra APP se ejecute más rápido! Además, después de la ofuscación, por defecto<strong>app/build/outputs/mapping/release</strong>se generará en<strong>mapping.txt, archivo de reglas de ofuscación</strong>Con este archivo se puede revertir al código anterior a la ofuscación. Además, hay algunos lugares que deben evitar ser ofuscados; de lo contrario, la APP dará errores al ejecutarse.</p>
+<p>Antes de publicar la aplicación, ofuscar el código puede hacer que, incluso si nuestro código es decompilado, sea difícil de leer. AS integra por sí mismo la utilidad de Java<strong>ProGuard</strong>como herramienta de compresión, optimización y ofuscación; el archivo de reglas de ofuscación es:<strong>proguard-rules.pro</strong>Si deseas habilitar las reglas de ofuscación, modifica<strong>build.gradle</strong>lo correspondiente en<strong>minifyEnabled</strong>Para<strong>ture</strong>para activar la ofuscación.<strong>ofuscar el código</strong>Además, también puede<strong>reducir el volumen de la aplicación</strong>, realizar<strong>optimización a nivel de bytecode</strong>¡Hace que nuestra APP se ejecute más rápido! Además, después de la ofuscación, por defecto<strong>app/build/outputs/mapping/release</strong>se generará en<strong>mapping.txt, archivo de reglas de ofuscación</strong>Con este archivo se puede revertir al código anterior a la ofuscación. Además, hay algunos lugares que deben evitar ser ofuscados; de lo contrario, la APP dará errores al ejecutarse.</p>
 <p>Debido a la limitación de espacio, no explicaré aquí las reglas de ofuscación; si te interesa, puedes ir a:<a href="http://www.jianshu.com/p/7436a1a32891">Ofuscación de Android: de principiante a experto</a>Aquí usaré directamente una plantilla genérica de Internet; si se trata de bibliotecas de terceros, los documentos oficiales generalmente incluyen reglas de ofuscación, solo hay que copiar y pegar. La plantilla genérica es la siguiente:</p>
 <pre>#指定压缩级别
 -optimizationpasses 5
@@ -219,7 +219,7 @@ git push origin v1.0.0 # 把TAG推送到远程仓库</pre>
 <li>3.<strong>AsyncTask</strong>，<strong>Handler</strong>el uso de ...;</li>
 <li>4. Uso del analizador JSON integrado (de andar por casa) para analizar<strong>Json</strong>；</li>
 <li>5. El flujo de la caché de imágenes de segundo nivel;</li>
-<li>6. Uso de<strong>LruCache</strong>和<strong>DiskLruCache</strong>para construir un pequeño marco de caché de imágenes;</li>
+<li>6. Uso de<strong>LruCache</strong>y<strong>DiskLruCache</strong>para construir un pequeño marco de caché de imágenes;</li>
 <li>7. Base de datos nativa<strong>SQLite</strong>: creación de la base de datos, altas, bajas, modificaciones y consultas de tablas, transacciones, paginación;</li>
 <li>8. Cómo escribir<strong>Log</strong>clases de utilidades y clases de recopilación de registros de fallos;</li>
 <li>9. Creación sencilla del icono del APK</li>

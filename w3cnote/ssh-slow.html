@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SSH 连接慢的解决方案详解 | 菜鸟教程</title>
+<title>Soluciones detalladas para conexiones SSH lentas | Tutorial de novatos</title>
 <script>
 window.RUNOOB_CONFIG = {
   darkCssUrl: "https://www.runoob.com/wp-content/themes/runoob/dark-mode.css?v=1.125"
@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="每次PuTTY使用SSH登录到远程的Linux进行管理的时候，远程登录的过程都非常慢——输入完用户名之后，非要等到30秒左右才会出来输入密码的提示。在实际处理问题的时候，特别需要快速响应的时候，这种状况着实让人难以忍受。 但后来具体测试了一下，发现这又并非是每种系统的通病，出现问题的机器主要集中的CentOS上，同样的Debian系统，在远程连接的过程就是健步如飞，丝毫没有卡顿犹豫的感觉。这难道是CentOS的问题？  出于好奇，查看了.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -69,14 +69,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
-<h2>Explicación detallada de las soluciones para la lentitud de la conexión SSH</h2> <h3><em>分类</em> <a href="../w3cnote_genre/code.html" title="编程技术">编程技术</a> </h3>
+<h2>Explicación detallada de las soluciones para la lentitud de la conexión SSH</h2> <h3><em>categoría</em> <a href="../w3cnote_genre/code.html" title="编程技术">Técnicas de programación</a> </h3>
 </div>
 <div class="article-body note-body">
 <div class="article-intro">
@@ -209,7 +209,7 @@ EOF
 <p>Usa cat para exportar la entrada directamente al archivo. En ese momento, cuando uses SSH para conectarte al host remoto, ya no usarás la autenticación GSSAPI.</p>
 <p>Los archivos anteriores están en el cliente, no en el servidor. Es decir, para modificar este archivo, tu cliente también debe ser Linux.</p>
 <p>Si estás en Windows y usas herramientas de cliente como PuTTY, no uses el método anterior. En PuTTY puedes intentar configurarlo antes de la conexión:</p>
-<blockquote><p>PuTTY Configuration -&gt; Connection -&gt; SSH -&gt; Auth -&gt; GSSAPI -&gt; (取消勾选)Attempt GSSAPI authentication(SSH-2 only)</p></blockquote>
+<blockquote><p>PuTTY Configuration -&gt; Connection -&gt; SSH -&gt; Auth -&gt; GSSAPI -&gt; (desmarcar)Attempt GSSAPI authentication(SSH-2 only)</p></blockquote>
 <p>Si no has deshabilitado GSSAPIAuthentication en PuTTY, puedes hacer clic derecho en la ventana de conexión (o Ctrl + clic derecho) para ver el registro. Podrás encontrar registros en los que PuTTY intenta automáticamente una conexión GSSAPI:</p>
 <pre>
 2014-05-18 23:46:54 Using SSPI from SECUR32.DLL
@@ -246,7 +246,7 @@ Credentials cache file '/tmp/krb5cc_0' not found
 debug1: Next authentication method: publickey
 </pre>
 <p>Este error yo también lo cometí al principio; hay que tener cuidado.</p>
-<h4>3、服务端禁用GSSAPIAuthentication。</h4>
+<h4>3. Deshabilitar GSSAPIAuthentication en el servidor.</h4>
 <p>Ve directamente a /etc/ssh/sshd_config y cambia GSSAPIAuthentication yes a no. También ten en cuenta que quizás debas cambiar UseDNS a UseDNS no (ojo, el valor predeterminado varía según el sistema; aquí se usa CentOS 6 como ejemplo):</p>
 <pre>
 sudo vi /etc/ssh/sshd_config
@@ -262,14 +262,14 @@ sudo vi /etc/ssh/sshd_config
 <pre>service sshd restart</pre>
 <p>En este momento, al usar SSH para iniciar sesión nuevamente en este host, ¿no sientes que es rapidísimo?</p>
 <p>Uf... ¡Por fin terminé este artículo largo! Fue bastante difícil escribir este texto mientras trasteaba. Sin embargo, con esto ya he resuelto bastante el problema. Espero que quien lea el artículo pueda entenderlo. Bienvenidos a debatir.</p>
-<h2>说明</h2>
+<h2>Descripción</h2>
 <p>1. GSSAPI: Generic Security Services Application Program Interface. GSSAPI en sí es un conjunto de APIs, estandarizado por la IETF. Su implementación más importante y famosa se basa en Kerberos. Generalmente, cuando se menciona GSSAPI, se hace referencia implícita a la implementación de Kerberos.</p>
 <p>2. UseDNS: es una opción de búsqueda DNS en el servidor OpenSSH, y está activada por defecto. Cuando está activada, cada vez que un cliente intenta conectarse al servidor OpenSSH, el servidor realiza automáticamente una búsqueda inversa PTR de DNS según la IP del cliente (solo habrá registro si se ha hecho la resolución inversa de IP), obtiene el Hostname correspondiente a la IP y luego realiza una búsqueda directa de registro A de DNS según el Hostname del cliente. Mediante esta consulta, verifica si la IP coincide con la IP del cliente conectado. Pero en la gran mayoría de nuestros equipos la IP se obtiene dinámicamente, es decir, esta opción no sirve en absoluto para este caso. Incluso para servidores con IP estática normal, mientras no se haya realizado la resolución inversa de IP, difícilmente es aplicable. Si cumples estas condiciones, se recomienda desactivar UseDNS para aumentar la velocidad de autenticación al iniciar sesión remota por SSH.</p>
-<p>来源：http://blog.useasp.net/archive/2014/05/19/solved-the-problem-of-ssh-client-such-as-putty-remote-login-linux-very-slowly.aspx</p> </div>
+<p>Fuente: http://blog.useasp.net/archive/2014/05/19/solved-the-problem-of-ssh-client-such-as-putty-remote-login-linux-very-slowly.aspx</p> </div>
 </div>
 <div class="previous-next-links">
-<div class="previous-design-link">← <a href="./restful-architecture.html" rel="prev">RESTful 架构详解</a> </div>
-<div class="next-design-link"><a href="./db-solutions.html" rel="next">大型数据库应用解决方案总结</a> →</div>
+<div class="previous-design-link">← <a href="./restful-architecture.html" rel="prev">Explicación detallada de la arquitectura RESTful</a> </div>
+<div class="next-design-link"><a href="./db-solutions.html" rel="next">Resumen de soluciones para aplicaciones de bases de datos a gran escala</a> →</div>
 </div>
 <style>
 .wrapper {
@@ -375,16 +375,16 @@ sudo vi /etc/ssh/sshd_config
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Toca para compartir notas</h3>
-<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">文章投稿，可点击这里</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href=".." class="runoob-pop">登录</a>！</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">注册邀请码获取方式</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i>Obligatorio antes de compartir notas<a class="runoob-pop" href="..">Iniciar sesión</a>！</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
 <div class="comt-title">
-<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=".." id="cancel-comment-reply-link">取消</a></p>
+<i aria-hidden="true" class="fa fa-user-circle" style="font-size:36px;"></i> <p><a href=".." id="cancel-comment-reply-link">Cancelar</a></p>
 </div>
 <div class="comt-box">
 <div id="mded"></div>
@@ -392,14 +392,14 @@ sudo vi /etc/ssh/sshd_config
 <div class="comt-tips"><input id="comment_post_ID" name="comment_post_ID" type="hidden" value="12800"/>
 <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
 </div>
-<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>分享笔记</button>
+<button id="submit" name="submit" tabindex="5" type="submit"><i aria-hidden="true" class="fa fa-pencil"></i>Compartir notas</button>
 </div>
 </div>
 <div class="comt-comterinfo">
 <ul id="comment-author-info">
-<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">昵称 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">邮箱 (必填)</span></li>
-<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>

@@ -31,52 +31,36 @@ tt, kbd, code {
 <h1>
 <a href="http://www.lua.org/"><img alt="Lua" border="0" src="logo.gif"/></a>Bienvenido a Lua 5.3</h1>
 <p>
-<a href="#about">关于</a>
+<a href="#about">Acerca de</a>
 ·
-<a href="#install">安装</a>
+<a href="#install">Instalación</a>
 ·
-<a href="#changes">变更</a>
+<a href="#changes">Cambios</a>
 ·
-<a href="#license">许可证</a>
+<a href="#license">Licencia</a>
 ·
-<a href="contents.html">参考手册</a>
+<a href="contents.html">Manual de referencia</a>
 ·
-<a href="glossary.html">中英术语对照表</a>
-<h2><a name="about">关于 Lua</a></h2>
+<a href="glossary.html">Glosario de términos chino-inglés</a>
+<h2><a name="about">Acerca de Lua</a></h2>
 <p>Lua es un potente, rápido y ligero lenguaje de scripts embebido. Fue creado por la Pontificia Universidad Católica de Río de Janeiro, Brasil<a href="http://www.puc-rio.br/">PUC-Rio</a>
-<a href="http://www.lua.org/authors.html">团队</a>Desarrollo. Lua es un<a href="#license">自由软件</a>,<p>
-Lua 的
-<a href="http://www.lua.org/">官方网站</a>proporciona información completa sobre Lua, incluyendo<a href="http://www.lua.org/about.html">综合概要</a>
-和最新的
-<a href="http://www.lua.org/docs.html">文档</a>, cabe señalar que<a href="http://www.lua.org/manual/5.3/">参考手册</a> 可能和
-<a href="contents.html">这里的版本</a> 有所不同。
-
-<h2><a name="install">安装 Lua</a></h2>
-<p>
-Lua 以
-<a href="http://www.lua.org/ftp/">源代码</a>se publica en forma de...; antes de usarlo, necesitas construirlo. Construir Lua es muy sencillo, porque Lua está implementado en ANSI C puro y se puede compilar directamente en todas las plataformas que tengan un compilador ANSI C. Asimismo, Lua también puede compilarse directamente como C++. A continuación se describe el proceso de compilación en plataformas tipo Unix; además, hay<a href="#other">其它系统构建介绍</a>
-与
-<a href="#customization">配置选项</a> 以作参考。
-
-<p>Si no tienes tiempo o interés en compilar Lua tú mismo, puedes<a href="http://lua-users.org/wiki/LuaBinaries">LuaBinaries</a>obtener los binarios compilados, o desde<a href="http://luadist.org/">LuaDist</a>aquí obtener la distribución multiplataforma de Lua (con las baterías incluidas).<h3>Construyendo Lua</h3>
+<a href="http://www.lua.org/authors.html">Equipo</a>Desarrollo. Lua es un<a href="#license">Software libre</a>,<p>de Lua<a href="http://www.lua.org/">Sitio web oficial</a>proporciona información completa sobre Lua, incluyendo<a href="http://www.lua.org/about.html">Descripción general</a>y la más reciente<a href="http://www.lua.org/docs.html">documentación</a>, cabe señalar que<a href="http://www.lua.org/manual/5.3/">Manual de referencia</a>puede diferir de<a href="contents.html">la versión de aquí</a>en algo.<h2><a name="install">Instalación de Lua</a></h2>
+<p>Lua se distribuye como<a href="http://www.lua.org/ftp/">código fuente</a>se publica en forma de...; antes de usarlo, necesitas construirlo. Construir Lua es muy sencillo, porque Lua está implementado en ANSI C puro y se puede compilar directamente en todas las plataformas que tengan un compilador ANSI C. Asimismo, Lua también puede compilarse directamente como C++. A continuación se describe el proceso de compilación en plataformas tipo Unix; además, hay<a href="#other">Instrucciones de compilación para otros sistemas</a>y<a href="#customization">Opciones de configuración</a>Como referencia.<p>Si no tienes tiempo o interés en compilar Lua tú mismo, puedes<a href="http://lua-users.org/wiki/LuaBinaries">LuaBinaries</a>obtener los binarios compilados, o desde<a href="http://luadist.org/">LuaDist</a>aquí obtener la distribución multiplataforma de Lua (con las baterías incluidas).<h3>Construyendo Lua</h3>
 <p>En la mayoría de las plataformas tipo Unix, escribe "<kbd>make</kbd>" más el nombre de plataforma adecuado es suficiente. Los pasos son:<ol>
 <li>Abra una ventana de consola y cambie a<tt>lua-5.3.0</tt>directorio.<tt>Makefile</tt>El archivo contiene el proceso de construcción e instalación.<p>
-<li>
-  运行 "<kbd>make</kbd>" y comprueba si tu plataforma está incluida. Las plataformas soportadas actualmente son:<p>
+<li>Ejecutar "<kbd>make</kbd>" y comprueba si tu plataforma está incluida. Las plataformas soportadas actualmente son:<p>
 <p class="display">
    aix bsd c89 freebsd generic linux macosx mingw posix solaris
 </p>
 <p>Si su plataforma está entre ellas, ejecute "<kbd>make xxx</kbd>" es suficiente, donde xxx representa el nombre de tu plataforma.<p>Si tu plataforma no está entre ellas, prueba primero la más parecida y luego intenta en orden: posix, generic, c89.<p>
 <li>El proceso de compilación es muy corto y, finalmente, en<tt>src</tt>se generan tres archivos en el directorio: lua (intérprete), luac (compilador) y liblua.a (biblioteca estática).<p>
 <li>Una vez completada la compilación, puede ejecutar "<kbd>make test</kbd>" para comprobar si se ha realizado correctamente. Ejecutará el intérprete e imprimirá el número de versión.</li></p></li></p></p></p></p></li></p></li></ol>
-<p>Si usas Linux y aparecen errores de compilación, verifica si has instalado<tt>readline</tt> （也可能叫 <tt>libreadline-dev</tt> 或者 <tt>readline-devel</tt>paquete de desarrollo). Después, si todavía hay errores de enlace, pruebe con "<kbd>make linux MYLIBS=-ltermcap</kbd>" 。
+<p>Si usas Linux y aparecen errores de compilación, verifica si has instalado<tt>readline</tt>(también puede llamarse<tt>libreadline-dev</tt>o<tt>readline-devel</tt>paquete de desarrollo). Después, si todavía hay errores de enlace, pruebe con "<kbd>make linux MYLIBS=-ltermcap</kbd>" 。
 
 <h3>Instalando Lua</h3>
-<p>Una vez que hayas terminado de construir, puede que quieras instalar Lua en la ubicación predeterminada del sistema; entonces ejecuta "<kbd>make install</kbd>" es suficiente. La ubicación predeterminada del sistema y cómo instalar están definidos en<tt>Makefile</tt>en. Este proceso puede requerir los permisos pertinentes.<p>
-  运行 "<kbd>make xxx install</kbd>" permite construir e instalar en un solo paso, donde xxx se refiere al nombre de tu plataforma.<p>Si quieres instalar Lua localmente, ejecuta "<kbd>make local</kbd>". Creará un<tt>install</tt> 目录，内有
-  <tt>bin</tt>, <tt>include</tt>, <tt>lib</tt>, <tt>man</tt>, <tt>share</tt>, subdirectorio, e instalará en él los siguientes archivos.  
+<p>Una vez que hayas terminado de construir, puede que quieras instalar Lua en la ubicación predeterminada del sistema; entonces ejecuta "<kbd>make install</kbd>" es suficiente. La ubicación predeterminada del sistema y cómo instalar están definidos en<tt>Makefile</tt>en. Este proceso puede requerir los permisos pertinentes.<p>Ejecutar "<kbd>make xxx install</kbd>" permite construir e instalar en un solo paso, donde xxx se refiere al nombre de tu plataforma.<p>Si quieres instalar Lua localmente, ejecuta "<kbd>make local</kbd>". Creará un<tt>install</tt>directorio, que contiene<tt>bin</tt>, <tt>include</tt>, <tt>lib</tt>, <tt>man</tt>, <tt>share</tt>, subdirectorio, e instalará en él los siguientes archivos.  
 
-Si deseas instalarlo en otro directorio local, ejecuta "<kbd>make install INSTALL_TOP=xxx</kbd>", donde xxx indica el directorio que elijas.<tt>src</tt> 以及 <tt>doc</tt>directorio, así que cuando<tt>INSTALL_TOP</tt>Si no es una ruta absoluta, tenga cuidado.<dl class="display">
+Si deseas instalarlo en otro directorio local, ejecuta "<kbd>make install INSTALL_TOP=xxx</kbd>", donde xxx indica el directorio que elijas.<tt>src</tt>así como<tt>doc</tt>directorio, así que cuando<tt>INSTALL_TOP</tt>Si no es una ruta absoluta, tenga cuidado.<dl class="display">
 <dt>
     bin:
 <dd>
@@ -94,59 +78,48 @@ Si deseas instalarlo en otro directorio local, ejecuta "<kbd>make install INSTAL
 <dd>
     lua.1 luac.1
 </dd></dt></dd></dt></dd></dt></dd></dt></dl>
-<p>Estos son los directorios necesarios para el desarrollo. Si solo quieres ejecutar algunos programas Lua, entonces solo necesitas<tt>bin</tt> 和 <tt>man</tt> 下的文件。
-  <tt>include</tt> 和 <tt>lib</tt>Los archivos de dicho directorio se utilizan para incrustar Lua en programas C o C++.<h3><a name="customization">定制</a></h3>
+<p>Estos son los directorios necesarios para el desarrollo. Si solo quieres ejecutar algunos programas Lua, entonces solo necesitas<tt>bin</tt>y<tt>man</tt>archivos debajo.<tt>include</tt>y<tt>lib</tt>Los archivos de dicho directorio se utilizan para incrustar Lua en programas C o C++.<h3><a name="customization">Personalización</a></h3>
 <p>Hay tres tipos de personalizaciones que se pueden realizar editando archivos:<ul>
 <li>Cómo instalar Lua y dónde instalarlo — edita<tt>Makefile</tt>。
     <li>Cómo compilar Lua — editar<tt>src/Makefile</tt>。
     <li>Características de Lua — editar<tt>src/luaconf.h</tt>。
 </li></li></li></ul>
-<p>En realidad, no es necesario editar el archivo Makefile; basta con especificar las variables correspondientes en la línea de comandos al ejecutar make. Por supuesto, editar y guardar el Makefile puede dejar un registro de la personalización.<p>Por otro lado, si necesitas personalizar algunas características de Lua, entonces debes, antes de construir e instalar Lua, editar<tt>src/luaconf.h</tt>. Los archivos editados deben garantizar la coherencia, es decir, instalarse en un solo lugar, de modo que todos los programas que compiles y que usen Lua utilicen esa única copia. Los expertos pueden personalizar más cosas editando el código fuente de Lua.<h3><a name="other">在其它系统上构建 Lua</a></h3>
+<p>En realidad, no es necesario editar el archivo Makefile; basta con especificar las variables correspondientes en la línea de comandos al ejecutar make. Por supuesto, editar y guardar el Makefile puede dejar un registro de la personalización.<p>Por otro lado, si necesitas personalizar algunas características de Lua, entonces debes, antes de construir e instalar Lua, editar<tt>src/luaconf.h</tt>. Los archivos editados deben garantizar la coherencia, es decir, instalarse en un solo lugar, de modo que todos los programas que compiles y que usen Lua utilicen esa única copia. Los expertos pueden personalizar más cosas editando el código fuente de Lua.<h3><a name="other">Construir Lua en otros sistemas</a></h3>
 <p>Si no utilizas las herramientas Unix habituales, el proceso de compilación de Lua dependerá del compilador que uses. Necesitas crear varios proyectos para compilar la biblioteca, el intérprete y el compilador, etc. Añade los siguientes archivos fuente a los proyectos correspondientes:<dl class="display">
-<dt>
-库:
-<dd>
+<dt>librería:<dd>
 lapi.c lcode.c lctype.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c
 lmem.c lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c
 ltm.c lundump.c lvm.c lzio.c
 lauxlib.c lbaselib.c lbitlib.c lcorolib.c ldblib.c liolib.c
 lmathlib.c loslib.c lstrlib.c ltablib.c lutf8lib.c loadlib.c linit.c
-<dt>
-解释器:
-<dd>
+<dt>intérprete:<dd>
   library, lua.c
-<dt>
-编译器:
-<dd>
+<dt>compilador:<dd>
   library, luac.c
 </dd></dt></dd></dt></dd></dt></dl>
-<p>Para usar Lua como biblioteca en tus programas, necesitas saber cómo crear y usar bibliotecas con tu compilador. Por ejemplo, para usar Lua como una biblioteca C de carga dinámica, necesitas saber cómo crear una biblioteca dinámica y hacer que las funciones de la API de Lua sean visibles en la biblioteca dinámica —<em>不要</em>Enlaza la biblioteca de Lua en cada biblioteca dinámica. En Unix, recomendamos enlazar estáticamente la biblioteca de Lua en el programa anfitrión y luego exportar los símbolos para el enlace dinámico;<tt>src/Makefile</tt>Así se maneja el intérprete de Lua. En Windows, recomendamos compilar la biblioteca de Lua como un DLL. En cualquier caso, el compilador luac debe estar enlazado estáticamente.<p>Como se dijo anteriormente, puedes editar antes de construir Lua<tt>src/luaconf.h</tt>para personalizar algunas características.<h2><a name="changes">自 Lua 5.2 以来的变更</a></h2>
-<p>Aquí se enumeran los principales cambios introducidos en Lua 5.3.<a href="contents.html">参考手册</a>
-中列出了
-<a href="manual.html#8">不兼容的地方</a>。
+<p>Para usar Lua como biblioteca en tus programas, necesitas saber cómo crear y usar bibliotecas con tu compilador. Por ejemplo, para usar Lua como una biblioteca C de carga dinámica, necesitas saber cómo crear una biblioteca dinámica y hacer que las funciones de la API de Lua sean visibles en la biblioteca dinámica —<em>no</em>Enlaza la biblioteca de Lua en cada biblioteca dinámica. En Unix, recomendamos enlazar estáticamente la biblioteca de Lua en el programa anfitrión y luego exportar los símbolos para el enlace dinámico;<tt>src/Makefile</tt>Así se maneja el intérprete de Lua. En Windows, recomendamos compilar la biblioteca de Lua como un DLL. En cualquier caso, el compilador luac debe estar enlazado estáticamente.<p>Como se dijo anteriormente, puedes editar antes de construir Lua<tt>src/luaconf.h</tt>para personalizar algunas características.<h2><a name="changes">Cambios desde Lua 5.2</a></h2>
+<p>Aquí se enumeran los principales cambios introducidos en Lua 5.3.<a href="contents.html">Manual de referencia</a>se enumeran<a href="manual.html#8">incompatibilidades</a>。
 
 <h3>Cambios principales</h3>
 <ul>
-<li>enteros (por defecto de 64 bits)<li>soporte oficial de enteros de 32 bits<li> 位操作符
-<li>soporte básico de UTF-8<li>funciones de empaquetado y desempaquetado de valores</li></li></li></li></li></ul>Estos son otros cambios introducidos en Lua 5.3:<h3>El lenguaje</h3>
+<li>enteros (por defecto de 64 bits)<li>soporte oficial de enteros de 32 bits<li>operadores de bits<li>soporte básico de UTF-8<li>funciones de empaquetado y desempaquetado de valores</li></li></li></li></li></ul>Estos son otros cambios introducidos en Lua 5.3:<h3>El lenguaje</h3>
 <ul>
-<li>userdata puede ser cualquier valor de Lua<li> 整数除法
-<li>algunos metamétodos tienen reglas más flexibles</li></li></li></ul>
-<h3>库</h3>
+<li>userdata puede ser cualquier valor de Lua<li>división entera<li>algunos metamétodos tienen reglas más flexibles</li></li></li></ul>
+<h3>Biblioteca</h3>
 <ul>
-<li> <code>ipairs</code>y la biblioteca de manipulación de tablas también tendrá en cuenta los metamétodos<li> <code>string.dump</code>se agregaron más opciones de recorte<li>la biblioteca de manipulación de tablas tiene en cuenta los metamétodos<li> 新函数 <code>table.move</code>
-<li> 新函数 <code>string.pack</code>
-<li> 新函数 <code>string.unpack</code>
-<li> 新函数 <code>string.packsize</code>
+<li> <code>ipairs</code>y la biblioteca de manipulación de tablas también tendrá en cuenta los metamétodos<li> <code>string.dump</code>se agregaron más opciones de recorte<li>la biblioteca de manipulación de tablas tiene en cuenta los metamétodos<li>Nuevas funciones<code>table.move</code>
+<li>Nuevas funciones<code>string.pack</code>
+<li>Nuevas funciones<code>string.unpack</code>
+<li>Nuevas funciones<code>string.packsize</code>
 </li></li></li></li></li></li></li></ul>
 <h3>C API</h3>
 <ul>
-<li>API de puntos de continuación simplificada<li> <code>lua_gettable</code>y el tipo de valor que devolverán funciones similares<li> <code>lua_dump</code>se agregaron opciones de recorte<li> 新函数： <code>lua_geti</code>
-<li> 新函数： <code>lua_seti</code>
-<li> 新函数： <code>lua_isyieldable</code>
-<li> 新函数： <code>lua_numbertointeger</code>
-<li> 新函数： <code>lua_rotate</code>
-<li> 新函数： <code>lua_stringtonumber</code>
+<li>API de puntos de continuación simplificada<li> <code>lua_gettable</code>y el tipo de valor que devolverán funciones similares<li> <code>lua_dump</code>se agregaron opciones de recorte<li>Nuevas funciones:<code>lua_geti</code>
+<li>Nuevas funciones:<code>lua_seti</code>
+<li>Nuevas funciones:<code>lua_isyieldable</code>
+<li>Nuevas funciones:<code>lua_numbertointeger</code>
+<li>Nuevas funciones:<code>lua_rotate</code>
+<li>Nuevas funciones:<code>lua_stringtonumber</code>
 </li></li></li></li></li></li></li></li></li></ul>
 <h3>El intérprete independiente de Lua</h3>
 <ul>
@@ -194,10 +167,7 @@ THE SOFTWARE.
 </p></p></p></blockquote>
 <p>
 <hr/>
-<small class="footer">
-最后修改时间:
-2015年1月13日15:16
-</small>
+<small class="footer">Última modificación: 13 de enero de 2015, 15:16</small>
 <div style="display:none;">
 <script>
 var _hmt = _hmt || [];

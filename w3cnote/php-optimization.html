@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="PHP语言以其简单易学而闻名，但一些初学者经常会写出一些性能低下的PHP代码，这会严重影响整套系统的运行效率，本文我们为大家收集了一些PHP 编程技巧与优化，希望PHP初学者能认真阅读以下的编辑技巧，并养成良好的PHP编程习惯！  63条PHP编程技巧   1、 尽量采用大量的PHP内置函数。  2、 使用echo代替print，并且使用echo的多重参数（译注：指用逗号而不是句点）代替字符串连接，比如  echo $str1,$str.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -102,9 +102,9 @@ if (!isset($foo{5})) { echo "Foo is too short"; }
 </pre><li>34. Si puedes definir los métodos de una clase como<code>static</code>, defínelos como<code>static</code>, su velocidad aumentará casi 4 veces.</li><li>35. No uses<code>array_key_exists</code>, usa<code>isset</code>para verificar si una clave existe en un array.</li><li>36. Evita usar<code>__set，__get</code>métodos mágicos y similares.</li><li>37. Usa<code>include/require</code>en lugar de<code>include_once/require_once</code>, y trata de usar rutas absolutas.</li><li>38. No pongas<code>count/strlen/sizeof</code>y similares en<code>for</code>la sentencia de condición del bucle.</li><li>39. Trata de usar<code>foreach</code>en lugar de<code>for/while</code></li><li>40. Cuando la cadena contenga variables, usa comillas dobles en lugar de comillas simples, por ejemplo:</li>
 <pre>
 echo "hi, $name, nice to meet you";
-</pre><li>41. Para leer archivos pequeños usa<code>fread</code>, para leer archivos grandes usa<code>file_get_contents</code>, para archivos extremadamente grandes usa<code>fseek</code></li><li>42. Usa<code>ip2long()</code> 和 <code>long2ip()</code>la función para convertir direcciones IP en enteros para almacenarlas; esto facilita calcular si una dirección determinada está dentro de un segmento, y también acelera la búsqueda y la ordenación.</li><li>43. Al validar direcciones de correo electrónico, usa<code>checkdnsrr()</code>la función para verificar si el dominio existe; esta función integrada puede confirmar si el dominio especificado se puede resolver a una dirección IP.</li><li>44. Considera abandonar<code>mysql_*</code>las funciones de la serie y usar la versión mejorada de<code>mysqli_*</code>la serie de funciones.</li><li>45. Aprende a amar el operador ternario.</li><li>46. Si en tu proyecto sientes que hay partes reutilizables, antes de escribir la siguiente línea de código mira si ya existen en PEAR. Esta biblioteca de recursos en línea contiene más de 400 fragmentos de programa reutilizables que se pueden usar inmediatamente en tu programa. A menos que tu proyecto sea realmente muy especial, siempre encontrarás un paquete PEAR que te ayude a ahorrar tiempo.</li><li>47. Usa<code>highlight_file()</code>para imprimir automáticamente código fuente formateado de forma muy bonita.</li><li>48. Usa<code>error_reporting(0)</code>la función para evitar que los usuarios vean mensajes de error potencialmente sensibles. En un caso ideal, el servidor de producción debería tenerlo<code>php.ini</code>completamente deshabilitado. Pero si usas un servidor web compartido, no tienes tu propio archivo php.ini; en ese caso, tu mejor opción es añadir al principio de la primera línea de todos los scripts<code>error_reporting(0)</code>
-</li><li>49. Antes de almacenar cadenas muy grandes en la base de datos, usa<code>gzcompress()</code> 和 <code>gzuncompress()</code>para comprimir/descomprimir explícitamente las cadenas.</li><li>50. Obtén múltiples valores de retorno de una función mediante el método de pasar parámetros por 'referencia'.</li><li>51. Comprende completamente el peligro de las 'comillas mágicas' y de la inyección SQL. El método más simple para prevenir la inyección SQL: en php.ini, establece<code>magic_quotes</code>en On, y usa<code>mysql_real_escape_string()</code>la función para escapar.</li><li>52. Las conexiones a la base de datos deben cerrarse cuando se terminen de usar; no uses conexiones persistentes.</li><li>53. Con las variables globales, debes hacer unset() en cuanto termines de usarlas.</li><li>
-</li><li>54. No confíes en los datos enviados por el usuario; asegúrate de usar<code>htmlentities()</code>或 <code>htmlspecialchars()</code>primero para escapar.</li><li>
+</pre><li>41. Para leer archivos pequeños usa<code>fread</code>, para leer archivos grandes usa<code>file_get_contents</code>, para archivos extremadamente grandes usa<code>fseek</code></li><li>42. Usa<code>ip2long()</code>y<code>long2ip()</code>la función para convertir direcciones IP en enteros para almacenarlas; esto facilita calcular si una dirección determinada está dentro de un segmento, y también acelera la búsqueda y la ordenación.</li><li>43. Al validar direcciones de correo electrónico, usa<code>checkdnsrr()</code>la función para verificar si el dominio existe; esta función integrada puede confirmar si el dominio especificado se puede resolver a una dirección IP.</li><li>44. Considera abandonar<code>mysql_*</code>las funciones de la serie y usar la versión mejorada de<code>mysqli_*</code>la serie de funciones.</li><li>45. Aprende a amar el operador ternario.</li><li>46. Si en tu proyecto sientes que hay partes reutilizables, antes de escribir la siguiente línea de código mira si ya existen en PEAR. Esta biblioteca de recursos en línea contiene más de 400 fragmentos de programa reutilizables que se pueden usar inmediatamente en tu programa. A menos que tu proyecto sea realmente muy especial, siempre encontrarás un paquete PEAR que te ayude a ahorrar tiempo.</li><li>47. Usa<code>highlight_file()</code>para imprimir automáticamente código fuente formateado de forma muy bonita.</li><li>48. Usa<code>error_reporting(0)</code>la función para evitar que los usuarios vean mensajes de error potencialmente sensibles. En un caso ideal, el servidor de producción debería tenerlo<code>php.ini</code>completamente deshabilitado. Pero si usas un servidor web compartido, no tienes tu propio archivo php.ini; en ese caso, tu mejor opción es añadir al principio de la primera línea de todos los scripts<code>error_reporting(0)</code>
+</li><li>49. Antes de almacenar cadenas muy grandes en la base de datos, usa<code>gzcompress()</code>y<code>gzuncompress()</code>para comprimir/descomprimir explícitamente las cadenas.</li><li>50. Obtén múltiples valores de retorno de una función mediante el método de pasar parámetros por 'referencia'.</li><li>51. Comprende completamente el peligro de las 'comillas mágicas' y de la inyección SQL. El método más simple para prevenir la inyección SQL: en php.ini, establece<code>magic_quotes</code>en On, y usa<code>mysql_real_escape_string()</code>la función para escapar.</li><li>52. Las conexiones a la base de datos deben cerrarse cuando se terminen de usar; no uses conexiones persistentes.</li><li>53. Con las variables globales, debes hacer unset() en cuanto termines de usarlas.</li><li>
+</li><li>54. No confíes en los datos enviados por el usuario; asegúrate de usar<code>htmlentities()</code>o<code>htmlspecialchars()</code>primero para escapar.</li><li>
 </li><li>55. Al ejecutar el<code>$i</code>incremento o decremento de una variable,<code>$i++</code>será<code>++$i</code>un poco más lento.<code>++$i</code>Es más rápido porque solo necesita 3 instrucciones (opcodes),<code>$i++</code>en cambio necesita 4 instrucciones. El incremento posterior en realidad produce una variable temporal, que luego se incrementa. Mientras que el incremento previo se incrementa directamente sobre el valor original.</li><li>56. No todo debe ser orientado a objetos (OOP); la orientación a objetos suele tener una gran sobrecarga; cada llamada a un método y a un objeto consume mucha memoria.</li><li>57. Si en el código existen muchas funciones que consumen tiempo, puedes considerar implementarlas como extensiones en C.</li><li>58. Evalúa (perfila) tu código. El perfilador te dirá qué partes del código consumen cuánto tiempo. El depurador Xdebug incluye un programa de perfilado; la evaluación de perfiles en general puede mostrar los cuellos de botella del código.</li><li>59. mod_zip puede usarse como módulo de Apache para comprimir tus datos al instante, y puede reducir la cantidad de transferencia de datos en un 80%</li><li>60. Intenta realizar menos operaciones de archivo, aunque la eficiencia de las operaciones de archivo de PHP tampoco es baja</li><li>61. Optimiza<code>Select SQL</code>las sentencias, y en la medida de lo posible, realiza la menor cantidad de<code>Insert、Update</code>operaciones</li><li>62. No declares variables dentro de bucles, especialmente variables grandes: objetos (¿esto no parece ser solo un problema a tener en cuenta en PHP, verdad?)</li><li>63. Para matrices multidimensionales, intenta no asignar valores en bucles anidados</li><li>
 64、……</li></ul>
 <h3>Recursos relacionados</h3>
@@ -220,11 +220,11 @@ echo "hi, $name, nice to meet you";
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debes <a href=".." class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debes <a class="runoob-pop" href="..">iniciar sesión</a>.</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

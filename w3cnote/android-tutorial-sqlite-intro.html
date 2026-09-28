@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="本节引言：  本节我们继续来学习Android数据存储与访问的第三种方式：SQLite数据库，和其他的SQL数据库不同， 我们并不需要在手机上另外安装一个数据库软件，Android系统已经集成了这个数据库，我们无需像 使用其他数据库软件(Oracle，MSSQL，MySql等)又要安装，然后完成相关配置，又要改端口之类的！ 引言就说这么多，接下来我们来学习下这个东西~    1.基本概念  1）SQLite是什么？为什么要用SQLite.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,11 +72,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
-<!--  Android 基础入门教程 start  -->
+Tutorial básico de Android start
 <div class="col left-column" style="display:none;">
 <div class="tab">Tutorial básico de introducción a Android</div>
 <div class="sidebar-box gallery-list">
@@ -84,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!--  Android 基础入门教程 end  -->
+Tutorial básico de introducción a Android end
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
@@ -104,7 +104,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>② Anteriormente aprendimos a usar archivos y SharedPreference para guardar datos, pero en muchos casos los archivos no son necesariamente efectivos, como cuando hay acceso concurrente de múltiples hilos; la aplicación debe manejar estructuras de datos complejas que pueden cambiar, etc. Por ejemplo, ¡depositar y retirar dinero en un banco! Usar los dos primeros resultaría muy limitado o tedioso. La aparición de las bases de datos puede resolver este problema, y Android nos proporciona un SQLite tan ligero, ¿por qué no usarlo?</p>
 <p>③ SQLite admite<strong>cinco tipos de datos</strong>: NULL, INTEGER, REAL (números de punto flotante), TEXT (texto de cadena) y BLOB (objeto binario). Aunque solo hay cinco, otros tipos de datos como varchar, char, etc. también se pueden guardar; porque SQLite tiene la característica más importante:<strong>Puedes guardar datos de cualquier tipo en cualquier campo sin preocuparte por el tipo de dato declarado para el campo.</strong>cuál sea; por ejemplo, puedes guardar una cadena en un campo de tipo Integer. Por supuesto,<strong>excepto que los campos declarados como clave primaria INTEGER PRIMARY KEY solo pueden almacenar enteros de 64 bits.</strong>! Además, al analizar la sentencia CREATE TABLE, SQLite ignora la información de tipo que sigue al nombre del campo en la sentencia CREATE TABLE; por ejemplo, la siguiente sentencia ignorará la información de tipo del campo name:<strong>CREATE TABLE person (personid integer primary key autoincrement, name varchar(20))</strong></p>
 <p><strong>Resumiendo las características:</strong></p>
-<p>SQLite mediante<strong>archivo</strong>se guarda la base de datos; un archivo es una<strong>base de datos</strong>, la base de datos contiene múltiples<strong>tablas</strong>, las tablas tienen múltiples<strong>registros</strong>, cada registro está compuesto por múltiples<strong>campos</strong>y cada campo tiene un<strong>值</strong>valor correspondiente, a cada valor podemos asignarle un<strong>tipo</strong>, o no asignarle tipo (excepto la clave primaria)</p></blockquote>
+<p>SQLite mediante<strong>archivo</strong>se guarda la base de datos; un archivo es una<strong>base de datos</strong>, la base de datos contiene múltiples<strong>tablas</strong>, las tablas tienen múltiples<strong>registros</strong>, cada registro está compuesto por múltiples<strong>campos</strong>y cada campo tiene un<strong>Valor</strong>valor correspondiente, a cada valor podemos asignarle un<strong>tipo</strong>, o no asignarle tipo (excepto la clave primaria)</p></blockquote>
 <p><strong>PS</strong>: Ah, por cierto, el SQLite integrado en Android es de la versión SQLite 3~</p>
 <h3>2) Algunas clases relacionadas:</h3>
 <blockquote><p>Jeje, al aprender algo nuevo, lo que menos nos gusta es encontrarnos con términos nuevos, ¿verdad? Primero hablemos de las tres clases que usamos al trabajar con bases de datos:</p>
@@ -486,11 +486,11 @@ public long getCount()
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Debes <a href=".." class="runoob-pop">iniciar sesión</a> antes de compartir notas!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Debes <a class="runoob-pop" href="..">iniciar sesión</a> antes de compartir notas!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

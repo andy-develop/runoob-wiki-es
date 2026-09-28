@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="document.addEventListener('DOMContentLoaded', function() {     var articleBody = document.querySelector('.article-body');     if (articleBody) {         renderMathInElement(articleBody, {             .." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <h1>Mecanismo de Atención en PyTorch</h1>
 <p>El mecanismo de atención (Attention Mechanism) es uno de los conceptos más importantes en el aprendizaje profundo.</p><p>El mecanismo de atención permite que el modelo aprenda a "prestar atención" a las partes más relevantes de la entrada, logrando un gran éxito en áreas como el procesamiento del lenguaje natural y la visión por computadora.</p><p>Esta sección detalla los principios fundamentales del mecanismo de atención, su implementación en PyTorch y varias variantes de atención.</p>
-<blockquote><p><strong>Versión aplicable:</strong>El código de este artículo está basado en PyTorch 2.0+.<code>nn.MultiheadAttention</code> 的 <code>batch_first</code>Este parámetro se introdujo en PyTorch 1.9; en versiones anteriores es necesario manejar las dimensiones manualmente.</p></blockquote>
+<blockquote><p><strong>Versión aplicable:</strong>El código de este artículo está basado en PyTorch 2.0+.<code>nn.MultiheadAttention</code>de<code>batch_first</code>Este parámetro se introdujo en PyTorch 1.9; en versiones anteriores es necesario manejar las dimensiones manualmente.</p></blockquote>
 <hr/>
 <h2>1. Fundamentos del mecanismo de atención</h2>
 <h3>1.1 ¿Por qué se necesita la atención?</h3>
@@ -678,7 +678,7 @@ output<span style="color: Gray;">,</span> attn_weights <span style="color: Gray;
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Forma de los pesos de atención: {attn_weights.shape}"</span><span style="color: Olive;">)</span> <span style="color: #a50"># [4, 10, 10]</span><br/>
 </div>
 </div>
-<blockquote><p><strong>Nota sobre el tipo de mask:</strong><code>nn.MultiheadAttention</code> 的 <code>key_padding_mask</code>Se usa la convención<strong>True = ignorar</strong>que es lo contrario de la convención 0 = ignorar en algunas implementaciones personalizadas. Asegúrate de verificarlo al usarla.</p></blockquote>
+<blockquote><p><strong>Nota sobre el tipo de mask:</strong><code>nn.MultiheadAttention</code>de<code>key_padding_mask</code>Se usa la convención<strong>True = ignorar</strong>que es lo contrario de la convención 0 = ignorar en algunas implementaciones personalizadas. Asegúrate de verificarlo al usarla.</p></blockquote>
 <hr/>
 <h2>3. Variantes del mecanismo de atención</h2>
 <h3>3.1 Autoatención (Self-Attention)</h3>
@@ -1023,7 +1023,7 @@ output <span style="color: Gray;">=</span> cbam<span style="color: Olive;">(</sp
 <hr/>
 <h2>5. Aplicaciones del mecanismo de atención en NLP</h2>
 <h3>5.1 Transformer Encoder</h3>
-<p>El Encoder de Transformer se compone de N capas idénticas apiladas, cada capa contiene dos subcapas:<strong>Autoatención multi-cabeza</strong>和<strong>red feed-forward</strong>Cada subcapa utiliza conexión residual y normalización de capa.</p>
+<p>El Encoder de Transformer se compone de N capas idénticas apiladas, cada capa contiene dos subcapas:<strong>Autoatención multi-cabeza</strong>y<strong>red feed-forward</strong>Cada subcapa utiliza conexión residual y normalización de capa.</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
@@ -1436,11 +1436,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas debes <a href=";.html" class="runoob-pop">iniciar sesión</a>.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas debes <a class="runoob-pop" href=";.html">iniciar sesión</a>.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1460,7 +1460,7 @@ Lista de notas
 <ul id="comment-author-info">
 <li class="form-inline"><label class="hide" for="author">Apodo</label><input class="ipt" id="author" name="author" placeholder="昵称" tabindex="2" type="text" value=""/><span class="text-muted">Apodo (obligatorio)</span></li>
 <li class="form-inline"><label class="hide" for="email">Correo electrónico</label><input class="ipt" id="email" name="email" placeholder="邮箱" tabindex="3" type="text" value=""/><span class="text-muted">Correo electrónico (obligatorio)</span></li>
-<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">引用地址</span></li>
+<li class="form-inline"><label class="hide" for="url">Dirección de referencia</label><input class="ipt" id="url" name="url" placeholder="引用地址" tabindex="4" type="text" value=""/><span class="text-muted">Dirección de referencia</span></li>
 </ul>
 </div>
 </div>
@@ -1638,7 +1638,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1740,7 +1740,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

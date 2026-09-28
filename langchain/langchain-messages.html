@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="LangChain 消息类型  在 LangChain 中，所有的对话都通过消息（Message）对象传递。理解各种消息类型的用途是编写 Agent 的基础。    四种核心消息类型  LangChain 定义了四种核心消息类型，分别对应对话中的不同角色：     类型角色说明典型内容   HumanMessage用户用户发送的消息'今天天气怎么样？'   AIMessageAI 助手模型的回复，可能包含 tool_.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -568,24 +568,24 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 <br/>
 <span style="color: #a50"># Construyendo un mensaje con bloques de contenido</span><br/>
 <span style="color: #a50"># content puede ser una cadena simple (caso simple)</span><br/>
-simple_msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"你好"</span><span style="color: Olive;">)</span><br/>
+simple_msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Hola"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># content también puede ser una lista de ContentBlock (caso complejo)</span><br/>
 complex_msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-    PlainTextContentBlock<span style="color: Olive;">(</span>text<span style="color: Gray;">=</span><span style="color: #a11;">"这张图片里是什么？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    PlainTextContentBlock<span style="color: Olive;">(</span>text<span style="color: Gray;">=</span><span style="color: #a11;">¿Qué hay en esta imagen?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a50"># La imagen puede ser una URL o codificación base64</span><br/>
     ImageContentBlock<span style="color: Olive;">(</span><br/>
         url<span style="color: Gray;">=</span><span style="color: #a11;">"https://example.com/photo.jpg"</span><br/>
     <span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"简单消息内容类型: {type(simple_msg.content)}"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Tipo de contenido del mensaje simple: {type(simple_msg.content)}</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Salida: &lt;class 'str'&gt;</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"复杂消息内容类型: {type(complex_msg.content)}"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Tipo de contenido del mensaje complejo: {type(complex_msg.content)}</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Salida: &lt;class 'list'&gt;</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"内容块数量: {len(complex_msg.content)}"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Número de bloques de contenido: {len(complex_msg.content)}</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Salida: 2</span><br/>
 </div>
 </div>
@@ -615,7 +615,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 image_data <span style="color: Gray;">=</span> encode_image<span style="color: Olive;">(</span><span style="color: #a11;">"screenshot.png"</span><span style="color: Olive;">)</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">"请描述这张菜鸟教程 RUNOOB 官网截图的内容"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">Por favor, describe el contenido de esta captura de pantalla del sitio web oficial de RUNOOB.</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"image_url"</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"image_url"</span>: <span style="color: Olive;">{</span><br/>
@@ -627,7 +627,7 @@ messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span
 <span style="color: Olive;">]</span><br/>
 <br/>
 response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span>messages<span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"图片分析结果: {response.content}"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Resultado del análisis de la imagen: {response.content}</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <p>Si tu mensaje solo contiene una imagen y no texto, puedes usar directamente:</p>
@@ -643,7 +643,7 @@ messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span
     <span style="color: Olive;">{</span><br/>
         <span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"content"</span>: <span style="color: Olive;">[</span><br/>
-            <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">"这张图描述了什么内容？"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+            <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">¿Qué describe esta imagen?</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
             <span style="color: Olive;">{</span><br/>
                 <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"image_url"</span><span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"image_url"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"url"</span>: <span style="color: #a11;">"https://www.runoob.com/wp-content/uploads/2024/01/logo.png"</span><span style="color: Olive;">}</span><br/>
@@ -669,7 +669,7 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 <span style="color: #a50"># Construir manualmente un ToolCall</span><br/>
 tool_call <span style="color: Gray;">=</span> ToolCall<span style="color: Olive;">(</span><br/>
     name<span style="color: Gray;">=</span><span style="color: #a11;">"get_weather"</span><span style="color: Gray;">,</span>        <span style="color: #a50"># Nombre de la herramienta</span><br/>
-    args<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"city"</span>: <span style="color: #a11;">"杭州"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span>     <span style="color: #a50"># Parámetros de la llamada</span><br/>
+    args<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"city"</span>: <span style="color: #a11;">"Hangzhou"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span>     <span style="color: #a50"># Parámetros de la llamada</span><br/>
     <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"call_abc123"</span><span style="color: Gray;">,</span>         <span style="color: #a50"># Identificador único</span><br/>
     <span style="color: Teal;">type</span><span style="color: Gray;">=</span><span style="color: #a11;">"tool_call"</span><span style="color: Gray;">,</span>         <span style="color: #a50"># Valor fijo</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -680,9 +680,9 @@ ai_message <span style="color: Gray;">=</span> AIMessage<span style="color: Oliv
     tool_calls<span style="color: Gray;">=</span><span style="color: Olive;">[</span>tool_call<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"工具名称: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"调用参数: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"调用 ID: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Nombre de la herramienta: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Parámetros de la llamada: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">ID de la llamada: {ai_message.tool_calls</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <h3>Verificar si AIMessage contiene una llamada a herramienta</h3>
@@ -698,11 +698,11 @@ tools <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><s
     <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"function"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"function"</span>: <span style="color: Olive;">{</span><br/>
         <span style="color: #a11;">"name"</span>: <span style="color: #a11;">"get_weather"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"description"</span>: <span style="color: #a11;">"查询天气"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"description"</span>: <span style="color: #a11;">Consultar el tiempo</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"parameters"</span>: <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"object"</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"properties"</span>: <span style="color: Olive;">{</span><br/>
-                <span style="color: #a11;">"city"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"string"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"description"</span>: <span style="color: #a11;">"城市名"</span><span style="color: Olive;">}</span><br/>
+                <span style="color: #a11;">"city"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"string"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"description"</span>: <span style="color: #a11;">Nombre de la ciudad</span><span style="color: Olive;">}</span><br/>
             <span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"required"</span>: <span style="color: Olive;">[</span><span style="color: #a11;">"city"</span><span style="color: Olive;">]</span><br/>
         <span style="color: Olive;">}</span><br/>
@@ -712,17 +712,17 @@ tools <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><s
 model_with_tools <span style="color: Gray;">=</span> model.<span style="color: #05a;">bind_tools</span><span style="color: Olive;">(</span>tools<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Pregunta que activa la llamada a herramienta</span><br/>
-response <span style="color: Gray;">=</span> model_with_tools.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"杭州天气怎么样？"</span><span style="color: Olive;">)</span><br/>
+response <span style="color: Gray;">=</span> model_with_tools.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">¿Cómo está el clima en Hangzhou?</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Dos formas de determinar si hay una llamada a herramienta</span><br/>
 <span style="color: #a50"># Método 1: comprobar si la lista tool_calls no está vacía</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> response.<span style="color: #05a;">tool_calls</span>:<br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"模型请求调用工具"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">El modelo solicita llamar a la herramienta</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Método 2: comprobar si content está vacío</span><br/>
 <span style="color: #a50"># (La mayoría de los modelos tienen content vacío cuando hay tool_calls)</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> response.<span style="color: #05a;">content</span>:<br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"模型的 content 为空，说明它想调用工具而非直接回复"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">El content del modelo está vacío, lo que indica que quiere llamar a la herramienta en lugar de responder directamente.</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <hr/>
@@ -738,16 +738,16 @@ response <span style="color: Gray;">=</span> model_with_tools.<span style="color
 <br/>
 <span style="color: #a50"># Simular un historial de conversación muy largo</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    SystemMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"你是菜鸟教程 RUNOOB 的 AI 助手"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Python 怎么入门？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Python 入门可以从基础知识开始..."</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"有推荐的 IDE 吗？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"推荐 VS Code 或 PyCharm..."</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"如何安装第三方库？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"使用 pip install 命令..."</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"NumPy 是什么？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"NumPy 是一个科学计算库..."</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"pandas 和 NumPy 有什么区别？"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    SystemMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asistente de IA de RUNOOB.</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Cómo empezar con Python?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">La introducción a Python puede comenzar desde los conceptos básicos...</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Tienes algún IDE recomendado?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Recomiendo VS Code o PyCharm...</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Cómo instalar librerías de terceros?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Usa el comando pip install...</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Qué es NumPy?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">NumPy es una librería de cálculo científico...</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Cuál es la diferencia entre pandas y NumPy?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Olive;">)</span><br/>
@@ -763,8 +763,8 @@ trimmed <span style="color: Gray;">=</span> trim_messages<span style="color: Oli
     start_on<span style="color: Gray;">=</span><span style="color: #a11;">"human"</span><span style="color: Gray;">,</span>          <span style="color: #a50"># Después del recorte, comienza con un mensaje human</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"裁剪前: {len(messages)} 条消息"</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"裁剪后: {len(trimmed)} 条消息"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Antes de recortar: {len(messages)} mensajes</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Después de recortar: {len(trimmed)} mensajes</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> msg <span style="color: Green;font-weight:bold;">in</span> trimmed:<br/>
     snippet <span style="color: Gray;">=</span> msg.<span style="color: #05a;">content</span><span style="color: Olive;">[</span>:<span style="color: Maroon;">50</span><span style="color: Olive;">]</span> <span style="color: Green;font-weight:bold;">if</span> <span style="color: Teal;">isinstance</span><span style="color: Olive;">(</span>msg.<span style="color: #05a;">content</span><span style="color: Gray;">,</span> <span style="color: Teal;">str</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">else</span> <span style="color: Teal;">str</span><span style="color: Olive;">(</span>msg.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><span style="color: Olive;">[</span>:<span style="color: Maroon;">50</span><span style="color: Olive;">]</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  [{msg.type}] {snippet}..."</span><span style="color: Olive;">)</span><br/>
@@ -796,9 +796,9 @@ trimmed <span style="color: Gray;">=</span> trim_messages<span style="color: Oli
 <br/>
 <span style="color: #a50"># Supongamos que hay una conversación</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"你好"</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_1"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"你好！有什么可以帮你的？"</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_2"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"帮我查天气"</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_3"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Hola"</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_1"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¡Hola! ¿En qué puedo ayudarte?</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_2"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Ayúdame a consultar el tiempo</span><span style="color: Gray;">,</span> <span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_3"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: #a50"># Usar RemoveMessage para eliminar mensajes específicos (mediante ID)</span><br/>
@@ -806,8 +806,8 @@ messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span
 <span style="color: #a50"># Al actualizar el estado del agente, RemoveMessage elimina de la lista los mensajes con el ID correspondiente</span><br/>
 removal <span style="color: Gray;">=</span> RemoveMessage<span style="color: Olive;">(</span><span style="color: Teal;">id</span><span style="color: Gray;">=</span><span style="color: #a11;">"msg_3"</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"要删除的消息 ID: {removal.id}"</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"类型: {removal.type}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># remove</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">ID del mensaje a eliminar: {removal.id}</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Tipo: {removal.type}</span><span style="color: Olive;">)</span>  <span style="color: #a50"># remove</span><br/>
 </div>
 </div>
 <blockquote><p>RemoveMessage normalmente se usa con el reducer add_messages de AgentState. Devolver RemoveMessage en middleware o en el hook after_model permite limpiar dinámicamente el historial de mensajes.</p></blockquote>
@@ -819,7 +819,7 @@ removal <span style="color: Gray;">=</span> RemoveMessage<span style="color: Oli
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> langchain.<span style="color: #05a;">messages</span> <span style="color: Green;font-weight:bold;">import</span> HumanMessage<span style="color: Gray;">,</span> AIMessage<br/>
 <br/>
-msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"你好，菜鸟教程"</span><span style="color: Olive;">)</span><br/>
+msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Hola, Tutorial para Novatos</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Atributos básicos</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"content: {msg.content}"</span><span style="color: Olive;">)</span>      <span style="color: #a50"># Contenido del mensaje</span><br/>
@@ -961,11 +961,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Debes <a href=";.html" class="runoob-pop">iniciar sesión</a> antes de compartir notas.</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Debes <a class="runoob-pop" href=";.html">iniciar sesión</a> antes de compartir notas.</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -1163,7 +1163,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1265,7 +1265,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

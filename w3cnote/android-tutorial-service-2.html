@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="本节引言  上节我们学习了Service的生命周期，以及两种启动Service的两种方法， 本节继续来深入了解Service中的IntentService，Service的使用实例： 前台服务与轮询的实现!    1.IntentService的使用  在上一节后我们已经知道了如何去定义和启动Service，但是如果我们直接把 耗时线程放到Service中的onStart()方法中，虽然可以这样做，但是很容易 会引起ANR异常(Appl.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,11 +72,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
-<!--  Android 基础入门教程 start  -->
+Tutorial básico de Android start
 <div class="col left-column" style="display:none;">
 <div class="tab">Tutorial básico de introducción a Android</div>
 <div class="sidebar-box gallery-list">
@@ -84,7 +84,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!--  Android 基础入门教程 end  -->
+Tutorial básico de introducción a Android end
 <div class="col middle-column big-middle-column">
 <div class="article">
 <div class="article-heading">
@@ -254,7 +254,7 @@ manager.set(AlarmManager.RTC_WAKEUP,triggerAtTime,pendingIntent);</li>
 <blockquote><p><strong>①type:</strong>Hay cinco valores opcionales:<br/>
 <strong>AlarmManager.ELAPSED_REALTIME:</strong>La alarma no está disponible cuando el teléfono está en modo de suspensión. En este estado, la alarma usa tiempo relativo (relativo al inicio del sistema), y el valor de estado es 3;<br/><strong>AlarmManager.ELAPSED_REALTIME_WAKEUP</strong>La alarma despierta el sistema y ejecuta la función de aviso en estado de suspensión. En este estado, la alarma también usa tiempo relativo, y el valor de estado es 2;<br/><strong>AlarmManager.RTC</strong>La alarma no está disponible en estado de suspensión. En este estado, la alarma usa tiempo absoluto, es decir, el tiempo actual del sistema, con valor de estado 1;<br/><strong>AlarmManager.RTC_WAKEUP</strong>Indica que la alarma despierta el sistema y ejecuta la función de aviso en estado de suspensión. En este estado, la alarma usa tiempo absoluto, con valor de estado 0;<br/><strong>AlarmManager.POWER_OFF_WAKEUP</strong>Indica que la alarma también puede realizar la función de aviso normalmente cuando el teléfono está apagado, por lo que es uno de los estados más utilizados entre los 5 estados. En este estado, la alarma también usa tiempo absoluto, con valor de estado 4. Sin embargo, parece que este estado se ve afectado por la versión del SDK; algunas versiones no lo admiten.</p></blockquote>
 <p>PS: El primer parámetro determina el tipo del segundo parámetro. Si es REALTIME, se usa SystemClock.elapsedRealtime(); este método puede obtener los milisegundos transcurridos desde el encendido del sistema hasta ahora. Si es RTC, se usa System.currentTimeMillis(), que obtiene los milisegundos transcurridos desde el 1 de enero de 1970, 0:00 hasta ahora.</p>
-<blockquote><p><strong>②startTime：</strong>El tiempo de primera ejecución de la alarma, en milisegundos, se puede personalizar, pero generalmente se usa el tiempo actual. Ten en cuenta que este atributo está estrechamente relacionado con el primer atributo (type). Si la alarma correspondiente al primer parámetro usa tiempo relativo (<strong>ELAPSED_REALTIME</strong>和<strong>ELAPSED_REALTIME_WAKEUP</strong>entonces este atributo debe usar tiempo relativo (relativo al tiempo de inicio del sistema), por ejemplo, el tiempo actual se expresa como: SystemClock.elapsedRealtime(); si la alarma correspondiente al primer parámetro usa tiempo absoluto (RTC, RTC_WAKEUP, POWER_OFF_WAKEUP), entonces este atributo debe usar tiempo absoluto, por ejemplo, el tiempo actual se expresa como: System.currentTimeMillis().</p>
+<blockquote><p><strong>②startTime：</strong>El tiempo de primera ejecución de la alarma, en milisegundos, se puede personalizar, pero generalmente se usa el tiempo actual. Ten en cuenta que este atributo está estrechamente relacionado con el primer atributo (type). Si la alarma correspondiente al primer parámetro usa tiempo relativo (<strong>ELAPSED_REALTIME</strong>y<strong>ELAPSED_REALTIME_WAKEUP</strong>entonces este atributo debe usar tiempo relativo (relativo al tiempo de inicio del sistema), por ejemplo, el tiempo actual se expresa como: SystemClock.elapsedRealtime(); si la alarma correspondiente al primer parámetro usa tiempo absoluto (RTC, RTC_WAKEUP, POWER_OFF_WAKEUP), entonces este atributo debe usar tiempo absoluto, por ejemplo, el tiempo actual se expresa como: System.currentTimeMillis().</p>
 <p><strong>③PendingIntent:</strong>Está vinculado a la acción de ejecución de la alarma, como enviar una difusión, dar un aviso, etc. PendingIntent es una clase contenedora de Intent.<br/>Ten en cuenta que, si se implementa el aviso de la alarma iniciando un servicio, la obtención del objeto PendingIntent debe usar el método Pending.getService(Context c, int i, Intent intent, int j).<br/>Si la notificación de la alarma se implementa mediante broadcast, la obtención del objeto PendingIntent debe utilizar el método PendingIntent.getBroadcast (Context c,int i,Intent intent,int j);<br/>Si la notificación de la alarma se implementa mediante una Activity, la obtención del objeto PendingIntent debe utilizar el método PendingIntent.getActivity(Context c,int i,Intent intent,int j).<br/>Si estos tres métodos se usan incorrectamente, aunque no se producirá un error, no se verá el efecto de notificación de la alarma.</p></blockquote>
 <p><strong>Además:</strong></p>
 <p>A partir de la versión 4.4 (API 19), el tiempo de activación de las tareas Alarm puede volverse inexacto y puede retrasarse; es una optimización del sistema para el consumo de batería. Si se necesita que sea preciso, se puede llamar al método setExtra()~</p>
@@ -413,11 +413,11 @@ public class AlarmReceiver extends BroadcastReceiver {
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas debe <a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas debe <a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

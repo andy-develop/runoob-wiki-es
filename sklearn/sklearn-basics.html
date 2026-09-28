@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="Sklearn 基础概念 在使用 Sklearn 进行机器学习时，需要了解一些基础的概念。 Sklearn 提供了一种统一且简洁的 API 来实现各种机器学习算法和流程，能够帮助我们快速实现各种机器学习任务。 接下来我们从以下几个概念展开说明：数据表示、模型类型、预处理方法、评估指标、模型调优等。   1、数据表示：数据集和特征 数据集是 Sklearn 最基本的概念之一。 机器学习的核心任务是从数据中学习模式，数据的表示方式至关重要。.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -251,7 +251,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>1. Representación de datos: conjuntos de datos y características</h2><p>El conjunto de datos es uno de los conceptos más básicos de Sklearn.</p>
 <p>La tarea central del aprendizaje automático es aprender patrones a partir de los datos, y la forma en que se representan los datos es crucial.</p>
-<h3>Conjunto de datos (Dataset)</h3><p>En scikit-learn, los datos generalmente se representan mediante dos objetos principales:<span class="marked">Matriz de características</span> 和 <span class="marked">Vector objetivo</span>。</p>
+<h3>Conjunto de datos (Dataset)</h3><p>En scikit-learn, los datos generalmente se representan mediante dos objetos principales:<span class="marked">Matriz de características</span>y<span class="marked">Vector objetivo</span>。</p>
 <p><strong>Matriz de características (Feature Matrix):</strong>Cada fila representa una muestra de datos, y cada columna representa una característica (es decir, una variable de entrada). Es un arreglo o matriz bidimensional, que generalmente se almacena mediante un arreglo de NumPy o un DataFrame de pandas.</p>
 <p>Supongamos que tenemos 3 muestras, cada una con 2 características.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -271,13 +271,13 @@ y = np.array([0, 1, 0])  # 0 类别和 1 类别</pre>
 X_train<span style="color: Gray;">,</span> X_test<span style="color: Gray;">,</span> y_train<span style="color: Gray;">,</span> y_test <span style="color: Gray;">=</span> train_test_split<span style="color: Olive;">(</span>X<span style="color: Gray;">,</span> y<span style="color: Gray;">,</span> test_size<span style="color: Gray;">=</span><span style="color: Maroon;">0.3</span><span style="color: Gray;">,</span> random_state<span style="color: Gray;">=</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <ul>
-<li>El código anterior llama a la función<code class="">train_test_split</code>y asigna el resultado a cuatro variables:<code class="">X_train</code>、<code class="">X_test</code>、<code class="">y_train</code> 和 <code class="">y_test</code>。</li>
-<li><code class="">X</code> 和 <code class="">y</code>se pasan como<code class="">train_test_split</code>parámetros de la función, que representan respectivamente el conjunto de datos de características y la variable objetivo (etiquetas). Generalmente<code class="">X</code>es un arreglo bidimensional,<code class="">y</code>es un arreglo unidimensional.</li>
+<li>El código anterior llama a la función<code class="">train_test_split</code>y asigna el resultado a cuatro variables:<code class="">X_train</code>、<code class="">X_test</code>、<code class="">y_train</code>y<code class="">y_test</code>。</li>
+<li><code class="">X</code>y<code class="">y</code>se pasan como<code class="">train_test_split</code>parámetros de la función, que representan respectivamente el conjunto de datos de características y la variable objetivo (etiquetas). Generalmente<code class="">X</code>es un arreglo bidimensional,<code class="">y</code>es un arreglo unidimensional.</li>
 <li><code class="">test_size=0.3</code>El parámetro especifica que el tamaño del conjunto de prueba debe ser el 30% del conjunto de datos original. Esto significa que el 70% de los datos se usará como conjunto de entrenamiento y el 30% restante como conjunto de prueba.</li>
 <li><code class="">random_state=42</code>El parámetro es una semilla de número aleatorio que se utiliza para garantizar que cada vez que se divida el conjunto de datos se obtengan los mismos resultados. Esto es muy útil en experimentos y validación de modelos, ya que asegura la reproducibilidad de los resultados.</li>
 </ul>
 <hr/><h2>2. Modelos y algoritmos</h2><h3>Aprendizaje supervisado y no supervisado</h3>
-<p>En scikit-learn, los modelos de aprendizaje automático se dividen aproximadamente en dos grandes categorías:<span class="marked">Aprendizaje supervisado</span> 和 <span class="marked">Aprendizaje no supervisado</span>。</p>
+<p>En scikit-learn, los modelos de aprendizaje automático se dividen aproximadamente en dos grandes categorías:<span class="marked">Aprendizaje supervisado</span>y<span class="marked">Aprendizaje no supervisado</span>。</p>
 <p>
 <strong>Aprendizaje supervisado (Supervised Learning):</strong>En el aprendizaje supervisado, el modelo utiliza datos etiquetados durante el entrenamiento; estas etiquetas son los resultados que queremos que el modelo prediga.</p><p>Las tareas comunes de aprendizaje supervisado incluyen clasificación y regresión.</p>
 <ul><li><strong>Clasificación (Classification)</strong>: asigna los puntos de datos a categorías predefinidas. Por ejemplo, determinar si un correo es spam o no.</li><li><strong>Regresión (Regression)</strong>: predice salidas de valores continuos. Por ejemplo, predecir precios de viviendas, temperaturas, etc.</li></ul>
@@ -471,11 +471,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debe <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debe <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -673,7 +673,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -775,7 +775,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

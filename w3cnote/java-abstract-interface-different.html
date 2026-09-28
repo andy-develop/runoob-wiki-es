@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="对于面向对象编程来说，抽象是它的一大特征之一。在 Java 中，可以通过两种形式来体现 OOP 的抽象：接口和抽象类。这两者有太多相似的地方，又有太多不同的地方。很多人在初学的时候会以为它们可以随意互换使用，但是实际则不然。今天我们就一起来学习一下Java中的接口和抽象类。  一、抽象类 在了解抽象类之前，先来了解一下抽象方法。抽象方法是一种特殊的方法：它只有声明，而没有具体的实现。抽象方法的声明格式为： 	 abstract void.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -116,7 +116,7 @@ class ClassName implements Interface1,Interface2,[....]{
 <h3>2. Diferencias a nivel de diseño</h3>
 <p>1) La clase abstracta es una abstracción de una cosa, es decir, una abstracción de la clase, mientras que la interfaz es una abstracción del comportamiento. La clase abstracta abstrae toda la clase en su conjunto, incluyendo atributos y comportamiento, pero la interfaz abstrae una parte local (el comportamiento) de la clase. Pongamos un ejemplo sencillo: los aviones y las aves son cosas de diferentes categorías, pero tienen algo en común: ambas pueden volar. Entonces, al diseñar, se puede diseñar el avión como una clase `Airplane` y el ave como una clase `Bird`, pero no se puede diseñar la característica de<strong>volar</strong>también como una clase, ya que es solo una característica de comportamiento, no una descripción abstracta de una categoría de cosas. En este momento, se puede diseñar "volar" como una interfaz `Fly`, que contiene el método `fly()`, y luego `Airplane` y `Bird` implementan la interfaz `Fly` según sus propias necesidades. En cuanto a los diferentes tipos de aviones, como aviones de combate y aviones civiles, basta con que hereden directamente de `Airplane`; con las aves es similar, los diferentes tipos de aves heredan directamente de la clase `Bird`. De aquí se puede ver que la herencia es una relación de "es un", mientras que la implementación de una interfaz es una relación de "tiene un". Si una clase hereda de una clase abstracta, la subclase es necesariamente un tipo de la clase abstracta; mientras que la implementación de una interfaz es si se tiene o no, si se posee o no. Por ejemplo, si un ave puede volar (o si posee la característica de volar), entonces puede implementar esta interfaz; si no puede volar, no la implementa.</p>
 <p>2) El nivel de diseño es diferente: la clase abstracta, como clase padre de muchas subclases, es un diseño de plantilla. La interfaz es una especificación de comportamiento, es un diseño radial. ¿Qué es un diseño de plantilla? El ejemplo más simple: todos han usado plantillas en PPT. Si se usa la plantilla A para diseñar el PPT B y el PPT C, la parte común de PPT B y PPT C es la plantilla A. Si la parte común necesita cambios, solo se necesita cambiar la plantilla A, no es necesario volver a modificar PPT B y PPT C. En cuanto al diseño radial, por ejemplo, si un ascensor está equipado con un cierto tipo de alarma, una vez que haya que actualizar la alarma, se deben actualizar todas. Es decir, para una clase abstracta, si se necesita agregar un nuevo método, se puede agregar directamente una implementación concreta en la clase abstracta y las subclases no necesitan cambiarse; pero para una interfaz no es posible, si la interfaz cambia, todas las clases que implementan esa interfaz deben modificarse en consecuencia.</p>
-<p>Veamos el ejemplo más difundido en Internet: el ejemplo de la puerta y la alarma: las puertas tienen<strong>open()</strong> 和 <strong>close()</strong>dos acciones. En este momento podemos definir este concepto abstracto mediante una clase abstracta y una interfaz:</p>
+<p>Veamos el ejemplo más difundido en Internet: el ejemplo de la puerta y la alarma: las puertas tienen<strong>open()</strong>y<strong>close()</strong>dos acciones. En este momento podemos definir este concepto abstracto mediante una clase abstracta y una interfaz:</p>
 <div class="example"><div class="example_code"><div class="hl-main"><span class="hl-reserved">abstract</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">Door</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">abstract</span><span class="hl-code"> </span><span class="hl-types">void</span><span class="hl-code"> </span><span class="hl-identifier">open</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
     </span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">abstract</span><span class="hl-code"> </span><span class="hl-types">void</span><span class="hl-code"> </span><span class="hl-identifier">close</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
@@ -259,11 +259,11 @@ class ClassName implements Interface1,Interface2,[....]{
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> ¡Antes de compartir notas, debes <a href=".." class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> ¡Antes de compartir notas, debes <a class="runoob-pop" href="..">iniciar sesión</a>!</h3>
+<p><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">

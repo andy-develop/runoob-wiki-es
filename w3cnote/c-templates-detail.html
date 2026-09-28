@@ -31,16 +31,16 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -51,7 +51,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="模板是C++支持参数化多态的工具，使用模板可以使用户为类或者函数声明一种一般模式，使得类中的某些数据成员或者成员函数的参数、返回值取得任意类型。 模板是一种对类型进行参数化的工具； 通常有两种形式：函数模板和类模板； 函数模板针对仅参数类型不同的函数； 类模板针对仅数据成员和成员函数类型不同的类。 使用模板的目的就是能够让程序员编写与类型无关的代码。比如编写了一个交换两个整型int 类型的swap函数，这个函数就只能实现int 型，对d.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -72,8 +72,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-</div><!-- 导航栏 -->
-<!--  内容  -->
+</div>Barra de navegación
+Contenido
 <div class="container main">
 <div class="row">
 <div class="col middle-column big-middle-column">
@@ -100,7 +100,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }</pre>
 <p>Donde template y class son palabras clave; class puede reemplazarse por la palabra clave typename. Aquí typename y class no tienen diferencia. Los parámetros entre paréntesis angulares &lt;&gt; se llaman parámetros formales de plantilla. Los parámetros de plantilla son muy similares a los parámetros de función; los parámetros de plantilla no pueden estar vacíos. Una vez declarada una plantilla de función, se pueden usar los nombres de los parámetros de la plantilla de función para declarar miembros de datos y funciones miembro; es decir, en cualquier lugar de la función donde se puedan usar tipos integrados, se puede usar el nombre del parámetro de plantilla. Los parámetros de plantilla deben inicializarse con los argumentos de plantilla proporcionados al llamar a la plantilla de función. Una vez que el compilador determina el tipo real del argumento de plantilla, se dice que se ha instanciado una instancia de la plantilla de función. Por ejemplo, la forma de la plantilla de función swap es:</p>
 <pre>template &lt;class T&gt; void swap(T&amp; a, T&amp; b){}，</pre>
-<p>Cuando se llama a dicha plantilla de función, el tipo T será reemplazado por el tipo en el momento de la llamada, por ejemplo<strong>swap(a,b)</strong>donde<strong>a</strong>和<strong>b</strong>是<strong>int</strong>tipo, en este momento los parámetros formales en la plantilla de función swap<strong>T</strong>serán<strong>int</strong>reemplazados, y la plantilla de función se convierte en<strong>swap(int &amp;a, int &amp;b)</strong>. Y cuando<strong>swap(c,d)</strong>donde<strong>c</strong>和<strong>d</strong>是<strong>double</strong>tipo, la plantilla de función será reemplazada por<strong>swap(double &amp;a, double &amp;b)</strong>, logrando así que la implementación de la función sea código independiente del tipo.</p>
+<p>Cuando se llama a dicha plantilla de función, el tipo T será reemplazado por el tipo en el momento de la llamada, por ejemplo<strong>swap(a,b)</strong>donde<strong>a</strong>y<strong>b</strong>Sí<strong>int</strong>tipo, en este momento los parámetros formales en la plantilla de función swap<strong>T</strong>serán<strong>int</strong>reemplazados, y la plantilla de función se convierte en<strong>swap(int &amp;a, int &amp;b)</strong>. Y cuando<strong>swap(c,d)</strong>donde<strong>c</strong>y<strong>d</strong>Sí<strong>double</strong>tipo, la plantilla de función será reemplazada por<strong>swap(double &amp;a, double &amp;b)</strong>, logrando así que la implementación de la función sea código independiente del tipo.</p>
 <p>2. Nota: para las plantillas de función, no existe<strong>h(int,int)</strong>una llamada como esta,<span><strong>no se puede especificar el tipo de los parámetros de plantilla en los argumentos de la llamada a la función; para llamar a una plantilla de función se debe usar<span>la deducción de argumentos</span>para llevarla a cabo</strong></span>, es decir, solo se puede realizar<strong> h(2,3)</strong>una llamada de este tipo, o<strong>int a, b; h(a,b)</strong>。</p>
 <p>¡Los ejemplos de demostración de plantillas de función se tratarán más adelante!</p>
 <hr/><h2>II. Forma general de la plantilla de clase</h2><p>1. El formato de la plantilla de clase es:</p>
@@ -123,7 +123,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>1.1 Parámetro de plantilla de tipo:<strong><span>Un parámetro de tipo se compone de la palabra clave class o typename seguida de un especificador</span></strong>, como<strong>template&lt;class T&gt; void h(T a){}</strong>; donde<strong>T</strong>es un parámetro de tipo; el nombre del parámetro de tipo lo determina el propio usuario.<span><strong>Un parámetro de plantilla representa un tipo desconocido.</strong></span>Los parámetros de tipo de plantilla pueden usarse como especificadores de tipo en cualquier lugar dentro de la plantilla, exactamente igual que los especificadores de tipos integrados o especificadores de tipos de clase; es decir, pueden usarse para especificar tipos de retorno, declaraciones de variables, etc.</p>
 <p><strong><span style="color: #FF0000;">Versión original del autor:</span><span style="color: #FF0000;">1.2、</span></strong>No se pueden especificar dos tipos diferentes para el mismo parámetro de tipo de plantilla, por ejemplo<strong>template&lt;class T&gt;void h(T a, T b){}，</strong>la llamada<strong>h(2, 3.2)</strong>producirá un error, porque la declaración asigna al mismo parámetro de plantilla<strong>T</strong>dos tipos diferentes; el primer argumento<strong>2</strong>establece el parámetro de plantilla T como<strong>int</strong>, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; los dos tipos de parámetros son inconsistentes y causará un error.<span style="color: #FF0000; background-color: #99ccff;"><strong>(Esto es para plantillas de función)</strong></span></p>
 <p>Versión original del autor: 1.2 es correcto para plantillas de función, pero ignora las plantillas de clase. A continuación se complementará el caso de las plantillas de clase.</p>
-<p><strong><span style="color: #FF0000;">Suplemento de 1.2 añadido por mí (para plantillas de clase):</span></strong>Cuando declaramos un objeto de clase como:<strong>A&lt;int&gt; a</strong>, por ejemplo<strong>template&lt;class T&gt;T g(T a, T b){}</strong>, la llamada<strong>a.g(2, 3.2)</strong>no producirá un error en tiempo de compilación, pero habrá una advertencia, porque al declarar el objeto de la clase ya se ha<strong>T</strong>convertido<strong>int</strong>al tipo, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; en tiempo de ejecución, se realizará una conversión forzada de<strong>3.2</strong>a<strong>3</strong>. Cuando declaramos el objeto de la clase como:<strong>A&lt;double&gt; a</strong>, en este caso no habrá la advertencia mencionada, porque desde<strong>int</strong>到<strong>double</strong>es una conversión automática de tipo.</p>
+<p><strong><span style="color: #FF0000;">Suplemento de 1.2 añadido por mí (para plantillas de clase):</span></strong>Cuando declaramos un objeto de clase como:<strong>A&lt;int&gt; a</strong>, por ejemplo<strong>template&lt;class T&gt;T g(T a, T b){}</strong>, la llamada<strong>a.g(2, 3.2)</strong>no producirá un error en tiempo de compilación, pero habrá una advertencia, porque al declarar el objeto de la clase ya se ha<strong>T</strong>convertido<strong>int</strong>al tipo, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; en tiempo de ejecución, se realizará una conversión forzada de<strong>3.2</strong>a<strong>3</strong>. Cuando declaramos el objeto de la clase como:<strong>A&lt;double&gt; a</strong>, en este caso no habrá la advertencia mencionada, porque desde<strong>int</strong>llegar<strong>double</strong>es una conversión automática de tipo.</p>
 <h3>Ejemplo de demostración 1:</h3>
 <div class="example">
 <h2 class="example">TemplateDemo.h</h2>

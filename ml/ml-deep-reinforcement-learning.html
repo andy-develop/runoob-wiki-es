@@ -31,21 +31,21 @@ window.RUNOOB_CONFIG = {
   }
 })();
 </script>
-<!-- 图标 -->
+Icono
 <link href="../static.char123.com/images/favicon.ico" rel="shortcut icon"/>
 <link href="../static.char123.com/images/icon/mobile-icon.png" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- 样式 -->
+Estilo
 <link href="../wp-content/themes/runoob/style.css" media="all" rel="stylesheet"/>
 <link href="../static.jyshare.com/assets/font-awesome-4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet"/>
-<!-- jQuery（IE 条件注释已无意义，现代浏览器直接加载） -->
+jQuery (los comentarios condicionales de IE ya no tienen sentido, los navegadores modernos cargan directamente)
 <script src="../static.char123.com/assets/libs/jquery.min.js"></script>
 <link href="../manifest.webmanifest.html" rel="manifest"/>
 <meta content="#10151c" name="theme-color"/>
 <link href="../pwa/icon-192.png.html" rel="apple-touch-icon"/>
 <meta content="菜鸟教程" name="application-name"/>
 <meta content="菜鸟教程" name="apple-mobile-web-app-title"/>
-<!-- WordPress head 钩子，必须紧贴 </head> 前 -->
+Hook de WordPress head, debe estar justo antes de &lt;/head&gt;
 <meta content="max-image-preview:large" name="robots"/>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -56,7 +56,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta content="深度强化学习  深度强化学习是人工智能领域一个令人兴奋的交叉方向，我们可以把它拆解成两个部分来理解： 强化学习 是核心思想，它模拟了人类或动物通过“试错”来学习的过程。想象一下教小狗学习新指令：当它做对了，你会给它零食作为奖励；做错了，就没有奖励甚至可能有轻微的惩罚。经过多次尝试，小狗就能学会在特定情境下做出正确的动作以获得奖励。强化学习中的智能体（Agent）就像这只小狗，它通过与环境（Environment）互动，根据获得的奖励（R.." name="description"/>
 </head>
 <body>
-<!-- 头部 -->
+Cabecera
 <div class="container logo-search">
 <div class="col search row-search-mobile">
 <form action="../search.html" method="get">
@@ -78,7 +78,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<!-- 导航栏 -->
+Barra de navegación
 <style>
 /* 主题切换按钮 */
 /* ===== 主题变量（核心）===== */
@@ -145,7 +145,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #3b82f6;
 }
 </style>
-<!-- 导航栏 -->
+Barra de navegación
 <nav aria-label="主导航" class="container navigation">
 <div class="row">
 <div class="col nav">
@@ -199,10 +199,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </nav>
-<!-- 二级导航 -->
-<!--  内容  -->
+Navegación secundaria
+Contenido
 <div class="container main">
-<!-- 中间 -->
+Centro
 <div class="row">
 <div class="runoob-col-md2">
 <div class="left-column">
@@ -381,7 +381,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Este ciclo se repite continuamente; el agente recopila una gran cantidad de datos de interacción (<code>s, a, r, s'</code>), y utiliza estos datos para mejorar su propia política.</p>
 <hr/>
 <h2>Algoritmos principales del aprendizaje por refuerzo profundo</h2>
-<p>La familia de algoritmos del aprendizaje por refuerzo profundo se divide principalmente en dos grandes categorías:<strong>Basados en el valor (Value-Based)</strong> 和 <strong>Basados en la política (Policy-Based)</strong>, y la que combina las ventajas de ambos<strong>Actor-Crítico (Actor-Critic)</strong>métodos.</p>
+<p>La familia de algoritmos del aprendizaje por refuerzo profundo se divide principalmente en dos grandes categorías:<strong>Basados en el valor (Value-Based)</strong>y<strong>Basados en la política (Policy-Based)</strong>, y la que combina las ventajas de ambos<strong>Actor-Crítico (Actor-Critic)</strong>métodos.</p>
 <h3>1. Red Q profunda basada en el valor</h3>
 <p>El núcleo de estos algoritmos es aprender la óptima<strong>función de valor de acción Q(s, a)</strong>. Una vez aprendida la función Q precisa, la política óptima es muy simple: en cada estado<code>s</code>se elige la acción que hace que<code>Q(s, a)</code>el valor Q sea máximo<code>a</code>。</p>
 <p><strong>Red Q profunda (DQN)</strong>Es un trabajo pionero. Utiliza redes neuronales profundas para aproximar funciones Q complejas.</p>
@@ -397,7 +397,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Ejecuta la acción, el entorno devuelve la recompensa<code>r</code>y el nuevo estado<code>s'</code>, y almacena la experiencia<code>(s, a, r, s')</code>en el búfer de reproducción.</li>
 <li>Muestrear aleatoriamente un lote de experiencias del búfer de reproducción.</li>
 <li>Para cada muestra, calcular el valor Q objetivo:<code>y = r + γ * max_a' Q_target(s', a')</code>. Donde<code>γ</code>es el factor de descuento, utilizado para equilibrar las recompensas inmediatas y las futuras.</li>
-<li>以 <code>(y - Q(s, a))^2</code>Como pérdida, actualizar mediante el descenso de gradiente<code>Q</code>los parámetros de la red en línea.</li>
+<li>con<code>(y - Q(s, a))^2</code>Como pérdida, actualizar mediante el descenso de gradiente<code>Q</code>los parámetros de la red en línea.</li>
 <li>Cada cierto número de pasos, copiar los parámetros de la red en línea a la red objetivo.</li>
 <li>Repetir los pasos 2-7.</li>
 </ol>
@@ -656,7 +656,7 @@ test_agent<span style="color: Olive;">(</span>env<span style="color: Gray;">,</s
 <p><strong>Ejercicios y reflexión:</strong></p>
 <ol>
 <li><strong>Modificar el código</strong>: Intenta ajustar<code>DQNAgent</code>los hiperparámetros en (como<code>lr</code>, <code>gamma</code>, <code>batch_size</code>), y observa su efecto en la velocidad de entrenamiento y el rendimiento final.</li>
-<li><strong>Cambiar el entorno</strong>: Intenta aplicar el código a otros entornos de Gym, como<code>MountainCar-v0</code> 或 <code>LunarLander-v2</code>. Ten en cuenta ajustar las dimensiones del estado y la acción.</li>
+<li><strong>Cambiar el entorno</strong>: Intenta aplicar el código a otros entornos de Gym, como<code>MountainCar-v0</code>o<code>LunarLander-v2</code>. Ten en cuenta ajustar las dimensiones del estado y la acción.</li>
 <li><strong>Comparación de algoritmos</strong>: Lee e intenta implementar un algoritmo de gradiente de política simple (como REINFORCE) para resolver el problema de CartPole, y compara sus diferencias con DQN en estabilidad de entrenamiento y eficiencia de muestreo.</li>
 <li><strong>Exploración en profundidad</strong>: Elige un algoritmo moderno y avanzado (como PPO o SAC), lee su artículo o implementación de código abierto, y comprende cómo resuelve los problemas presentes en DQN o en el gradiente de política.</li>
 </ol>
@@ -779,11 +779,11 @@ Lista de notas
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
 <h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
-<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
-	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
-	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
-		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> Antes de compartir notas, debes <a href=";.html" class="runoob-pop">iniciar sesión</a>!</h3>
-		<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br/>
+<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
+<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
+<h3 class="text-muted"><i aria-hidden="true" class="fa fa-info-circle"></i> Antes de compartir notas, debes <a class="runoob-pop" href=";.html">iniciar sesión</a>!</h3>
+<p><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
 </div>
 <form action="../wp-content/themes/runoob/option/addnote.php" id="commentform" method="post" style="display:none;">
 <div class="comt">
@@ -981,7 +981,7 @@ function kFormatter(num) {
 <script src="../static.char123.com/assets/simditor/2.3.6/scripts/simditor-autosave.js" type="text/javascript"></script>
 </div>
 </div>
-<!-- 右边栏 -->
+Barra lateral derecha
 <div class="fivecol last right-column">
 <style>
 .sidebar-tree .double-li {
@@ -1083,7 +1083,7 @@ function coll() {
 
 })();
 </script>
-<!-- 反馈对话框开始 -->
+Inicio del cuadro de diálogo de comentarios
 <script src="../wp-content/themes/runoob/assets/js/runoob-article-dir.min.js"></script>
 <div class="fixed-btn">
 <a class="go-top" href="#" title="返回顶部">

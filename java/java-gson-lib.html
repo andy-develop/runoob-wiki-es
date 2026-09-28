@@ -359,7 +359,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Gson<span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// Convertir objeto Java a JSON</span><br/>
-        Person person <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000ff;">张三</span>, <span style="color: #cc66cc;">30</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Person person <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000FF;">张三</span>, <span style="color: #CC66CC;">30</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> gson.<span style="color: #006633;">toJson</span><span style="color: #009900;">(</span>person<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>json<span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Salida: {"name":"张三","age":30}</span><br/>
         <br/>
@@ -401,7 +401,7 @@ Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; fo
     <span style="color: #666666; font-style: italic;">// Se omiten constructor, getters y setters</span><br/>
 <span style="color: #009900;">}</span><br/>
 <br/>
-User user <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> User<span style="color: #009900;">(</span><span style="color: #0000ff;">张三</span>, <span style="color: #cc66cc;">25</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+User user <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> User<span style="color: #009900;">(</span><span style="color: #0000FF;">张三</span>, <span style="color: #CC66CC;">25</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> gson.<span style="color: #006633;">toJson</span><span style="color: #009900;">(</span>user<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #666666; font-style: italic;">// Salida: {"name":"张三","age":25}</span><br/>
 </div>
@@ -410,7 +410,7 @@ User user <span style="color: #339933;">=</span> <span style="color: #000000; fo
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000ff;">"{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>李四<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>age<span style="color: #000099; font-weight: bold;">\"</span>:30}"</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000FF;">"{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>李四<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>age<span style="color: #000099; font-weight: bold;">\"</span>:30}"</span><span style="color: #339933;">;</span><br/>
 User user <span style="color: #339933;">=</span> gson.<span style="color: #006633;">fromJson</span><span style="color: #009900;">(</span>json, User.<span style="color: #000000; font-weight: bold;">class</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>user.<span style="color: #006633;">getName</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Salida: 李四</span><br/>
 </div>
@@ -420,8 +420,8 @@ User user <span style="color: #339933;">=</span> gson.<span style="color: #00663
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Serializar colección</span><br/>
 List<span style="color: #339933;">&lt;</span>Person<span style="color: #339933;">&gt;</span> people <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><br/>
-    <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000ff;">王五</span>, <span style="color: #cc66cc;">28</span><span style="color: #009900;">)</span>,<br/>
-    <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000ff;">赵六</span>, <span style="color: #cc66cc;">32</span><span style="color: #009900;">)</span><br/>
+    <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000FF;">王五</span>, <span style="color: #CC66CC;">28</span><span style="color: #009900;">)</span>,<br/>
+    <span style="color: #000000; font-weight: bold;">new</span> Person<span style="color: #009900;">(</span><span style="color: #0000FF;">赵六</span>, <span style="color: #CC66CC;">32</span><span style="color: #009900;">)</span><br/>
 <span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #003399;">String</span> jsonList <span style="color: #339933;">=</span> gson.<span style="color: #006633;">toJson</span><span style="color: #009900;">(</span>people<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
@@ -432,7 +432,7 @@ List<span style="color: #339933;">&lt;</span>Person<span style="color: #339933;"
 <p><strong>Manejo de fechas</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> GsonBuilder<span style="color: #009900;">(</span><span style="color: #009900;">)</span><br/>
-    .<span style="color: #006633;">setDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><br/>
+    .<span style="color: #006633;">setDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><br/>
     .<span style="color: #006633;">create</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #003399;">Date</span> now <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Date</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -441,11 +441,11 @@ Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; fo
 </div></div>
 <p><strong>Procesamiento del modelo de árbol</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000ff;">"{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>李四<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>age<span style="color: #000099; font-weight: bold;">\"</span>:25}"</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000FF;">"{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>李四<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>age<span style="color: #000099; font-weight: bold;">\"</span>:25}"</span><span style="color: #339933;">;</span><br/>
 JsonElement element <span style="color: #339933;">=</span> JsonParser.<span style="color: #006633;">parseString</span><span style="color: #009900;">(</span>json<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 JsonObject object <span style="color: #339933;">=</span> element.<span style="color: #006633;">getAsJsonObject</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-<span style="color: #003399;">String</span> name <span style="color: #339933;">=</span> object.<span style="color: #006633;">get</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"name"</span><span style="color: #009900;">)</span>.<span style="color: #006633;">getAsString</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-<span style="color: #000066; font-weight: bold;">int</span> age <span style="color: #339933;">=</span> object.<span style="color: #006633;">get</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"age"</span><span style="color: #009900;">)</span>.<span style="color: #006633;">getAsInt</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">String</span> name <span style="color: #339933;">=</span> object.<span style="color: #006633;">get</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"name"</span><span style="color: #009900;">)</span>.<span style="color: #006633;">getAsString</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">int</span> age <span style="color: #339933;">=</span> object.<span style="color: #006633;">get</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"age"</span><span style="color: #009900;">)</span>.<span style="color: #006633;">getAsInt</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <h3>Configuraciones comunes</h3>
 <p><strong>Salida formateada</strong></p>
@@ -476,9 +476,9 @@ Gson gson = new GsonBuilder()
     <span style="color: #666666; font-style: italic;">// Se omite otro código</span><br/>
 <span style="color: #009900;">}</span><br/>
 <br/>
-Order order <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Order<span style="color: #009900;">(</span><span style="color: #0000ff;">"123"</span>, <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><br/>
-    <span style="color: #000000; font-weight: bold;">new</span> Product<span style="color: #009900;">(</span><span style="color: #0000ff;">手机</span>, <span style="color: #cc66cc;">1</span>, <span style="color: #cc66cc;">2999.00</span><span style="color: #009900;">)</span>,<br/>
-    <span style="color: #000000; font-weight: bold;">new</span> Product<span style="color: #009900;">(</span><span style="color: #0000ff;">耳机</span>, <span style="color: #cc66cc;">2</span>, <span style="color: #cc66cc;">199.00</span><span style="color: #009900;">)</span><br/>
+Order order <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> Order<span style="color: #009900;">(</span><span style="color: #0000FF;">"123"</span>, <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><br/>
+    <span style="color: #000000; font-weight: bold;">new</span> Product<span style="color: #009900;">(</span><span style="color: #0000FF;">手机</span>, <span style="color: #CC66CC;">1</span>, <span style="color: #CC66CC;">2999.00</span><span style="color: #009900;">)</span>,<br/>
+    <span style="color: #000000; font-weight: bold;">new</span> Product<span style="color: #009900;">(</span><span style="color: #0000FF;">耳机</span>, <span style="color: #CC66CC;">2</span>, <span style="color: #CC66CC;">199.00</span><span style="color: #009900;">)</span><br/>
 <span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> gson.<span style="color: #006633;">toJson</span><span style="color: #009900;">(</span>order<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -489,7 +489,7 @@ Order order <span style="color: #339933;">=</span> <span style="color: #000000; 
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000ff;">"[{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>苹果<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>price<span style="color: #000099; font-weight: bold;">\"</span>:5.5},{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>香蕉<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>price<span style="color: #000099; font-weight: bold;">\"</span>:3.2}]"</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">String</span> json <span style="color: #339933;">=</span> <span style="color: #0000FF;">"[{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>苹果<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>price<span style="color: #000099; font-weight: bold;">\"</span>:5.5},{<span style="color: #000099; font-weight: bold;">\"</span>name<span style="color: #000099; font-weight: bold;">\"</span>:<span style="color: #000099; font-weight: bold;">\"</span>香蕉<span style="color: #000099; font-weight: bold;">\"</span>,<span style="color: #000099; font-weight: bold;">\"</span>price<span style="color: #000099; font-weight: bold;">\"</span>:3.2}]"</span><span style="color: #339933;">;</span><br/>
 <br/>
 Type productListType <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> TypeToken<span style="color: #339933;">&lt;</span>List<span style="color: #339933;">&lt;</span>Product<span style="color: #339933;">&gt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">{</span><span style="color: #009900;">}</span>.<span style="color: #006633;">getType</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 List<span style="color: #339933;">&lt;</span>Product<span style="color: #339933;">&gt;</span> products <span style="color: #339933;">=</span> gson.<span style="color: #006633;">fromJson</span><span style="color: #009900;">(</span>json, productListType<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -501,7 +501,7 @@ List<span style="color: #339933;">&lt;</span>Product<span style="color: #339933;
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> DateSerializer <span style="color: #000000; font-weight: bold;">implements</span> JsonSerializer<span style="color: #339933;">&lt;</span>Date<span style="color: #339933;">&gt;</span> <span style="color: #009900;">{</span><br/>
-    <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000000; font-weight: bold;">final</span> <span style="color: #003399;">SimpleDateFormat</span> format <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000000; font-weight: bold;">final</span> <span style="color: #003399;">SimpleDateFormat</span> format <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <br/>
     @Override<br/>
     <span style="color: #000000; font-weight: bold;">public</span> JsonElement serialize<span style="color: #009900;">(</span><span style="color: #003399;">Date</span> date, Type type, JsonSerializationContext context<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
@@ -521,13 +521,13 @@ Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; fo
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #000000; font-weight: bold;">class</span> User <span style="color: #009900;">{</span><br/>
-    @SerializedName<span style="color: #009900;">(</span><span style="color: #0000ff;">"user_name"</span><span style="color: #009900;">)</span>  <span style="color: #666666; font-style: italic;">// Nombre del campo JSON</span><br/>
+    @SerializedName<span style="color: #009900;">(</span><span style="color: #0000FF;">"user_name"</span><span style="color: #009900;">)</span>  <span style="color: #666666; font-style: italic;">// Nombre del campo JSON</span><br/>
     <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #003399;">String</span> name<span style="color: #339933;">;</span><br/>
     <br/>
     @Expose<span style="color: #009900;">(</span>serialize <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">false</span><span style="color: #009900;">)</span>   <span style="color: #666666; font-style: italic;">// No se incluye en la serialización</span><br/>
     <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #003399;">String</span> password<span style="color: #339933;">;</span><br/>
     <br/>
-    @Since<span style="color: #009900;">(</span><span style="color: #cc66cc;">1.0</span><span style="color: #009900;">)</span>                  <span style="color: #666666; font-style: italic;">// Control de versiones</span><br/>
+    @Since<span style="color: #009900;">(</span><span style="color: #CC66CC;">1.0</span><span style="color: #009900;">)</span>                  <span style="color: #666666; font-style: italic;">// Control de versiones</span><br/>
     <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #003399;">String</span> email<span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div>
@@ -541,7 +541,7 @@ Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; fo
 Gson gson <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> GsonBuilder<span style="color: #009900;">(</span><span style="color: #009900;">)</span><br/>
     .<span style="color: #006633;">setPrettyPrinting</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>         <span style="color: #666666; font-style: italic;">// Salida con formato</span><br/>
     .<span style="color: #006633;">serializeNulls</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>           <span style="color: #666666; font-style: italic;">// Serializar valores null</span><br/>
-    .<span style="color: #006633;">setDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span> <span style="color: #666666; font-style: italic;">// Formato de fecha</span><br/>
+    .<span style="color: #006633;">setDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span> <span style="color: #666666; font-style: italic;">// Formato de fecha</span><br/>
     .<span style="color: #006633;">disableHtmlEscaping</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>       <span style="color: #666666; font-style: italic;">// Deshabilitar escape HTML</span><br/>
     .<span style="color: #006633;">create</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
@@ -632,7 +632,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -677,7 +677,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -716,7 +716,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -935,7 +935,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

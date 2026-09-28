@@ -288,22 +288,22 @@ type_name(expression)
 <h3>Conversión de tipos numéricos</h3>
 <p>Convertir un entero a punto flotante:</p>
 <div class="example"> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">var</span> a <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">10</span><br/>
-<span style="color: #b1b100; font-weight: bold;">var</span> b <span style="color: #993333;">float64</span> <span style="color: #339933;">=</span> <span style="color: #993333;">float64</span><span style="color: #339933;">(</span>a<span style="color: #339933;">)</span><br/>
+<span style="color: #B1B100; font-weight: bold;">var</span> a <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">10</span><br/>
+<span style="color: #B1B100; font-weight: bold;">var</span> b <span style="color: #993333;">float64</span> <span style="color: #339933;">=</span> <span style="color: #993333;">float64</span><span style="color: #339933;">(</span>a<span style="color: #339933;">)</span><br/>
 </div></div>
 <p>En el siguiente ejemplo, se convierte un entero a punto flotante, se calcula el resultado y se asigna el resultado a una variable de punto flotante:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> sum <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">17</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> count <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">5</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> mean <span style="color: #993333;">float32</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> sum <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">17</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> count <span style="color: #993333;">int</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">5</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> mean <span style="color: #993333;">float32</span><br/>
    <br/>
    mean <span style="color: #339933;">=</span> <span style="color: #993333;">float32</span><span style="color: #339933;">(</span>sum<span style="color: #339933;">)</span><span style="color: #339933;">/</span><span style="color: #993333;">float32</span><span style="color: #339933;">(</span>count<span style="color: #339933;">)</span><br/>
-   fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"El valor de mean es: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span>mean<span style="color: #339933;">)</span><br/>
+   fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"El valor de mean es: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span>mean<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el ejemplo anterior es:</p>
@@ -320,20 +320,20 @@ num, _ = strconv.Atoi(str)</pre>
 <p>Nota:<span class="marked">strconv.Atoi</span>La función devuelve dos valores: el primero es el valor entero convertido y el segundo es un posible error. Podemos usar el identificador en blanco<span class="marked">_</span>para ignorar este error.</p>。
 <p>El siguiente ejemplo convierte una cadena a un entero:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"strconv"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"strconv"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    str <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">"123"</span><br/>
+    str <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">"123"</span><br/>
     num<span style="color: #339933;">,</span> err <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>Atoi<span style="color: #339933;">(</span>str<span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">if</span> err <span style="color: #339933;">!=</span> <span style="color: #000000; font-weight: bold;">nil</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Error de conversión:"</span><span style="color: #339933;">,</span> err<span style="color: #339933;">)</span><br/>
-    <span style="color: #339933;">}</span> <span style="color: #b1b100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"La cadena '%s' convertida a entero es: %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">,</span> num<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">if</span> err <span style="color: #339933;">!=</span> <span style="color: #000000; font-weight: bold;">nil</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Error de conversión:"</span><span style="color: #339933;">,</span> err<span style="color: #339933;">)</span><br/>
+    <span style="color: #339933;">}</span> <span style="color: #B1B100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"La cadena '%s' convertida a entero es: %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">,</span> num<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -343,37 +343,37 @@ num, _ = strconv.Atoi(str)</pre>
 </pre>
 <p>El siguiente ejemplo convierte un entero a una cadena:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"strconv"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"strconv"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    num <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">123</span><br/>
+    num <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">123</span><br/>
     str <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>Itoa<span style="color: #339933;">(</span>num<span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"El entero %d convertido a cadena es: '%s'<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> num<span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"El entero %d convertido a cadena es: '%s'<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> num<span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el ejemplo anterior es:</p>
 <pre>整数 123  转换为字符串为：'123'</pre>
 <p>El siguiente ejemplo convierte una cadena a un número de punto flotante:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"strconv"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"strconv"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    str <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">"3.14"</span><br/>
-    num<span style="color: #339933;">,</span> err <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>ParseFloat<span style="color: #339933;">(</span>str<span style="color: #339933;">,</span> <span style="color: #cc66cc;">64</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">if</span> err <span style="color: #339933;">!=</span> <span style="color: #000000; font-weight: bold;">nil</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Error de conversión:"</span><span style="color: #339933;">,</span> err<span style="color: #339933;">)</span><br/>
-    <span style="color: #339933;">}</span> <span style="color: #b1b100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"La cadena '%s' convertida a punto flotante es: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">,</span> num<span style="color: #339933;">)</span><br/>
+    str <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">"3.14"</span><br/>
+    num<span style="color: #339933;">,</span> err <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>ParseFloat<span style="color: #339933;">(</span>str<span style="color: #339933;">,</span> <span style="color: #CC66CC;">64</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">if</span> err <span style="color: #339933;">!=</span> <span style="color: #000000; font-weight: bold;">nil</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Error de conversión:"</span><span style="color: #339933;">,</span> err<span style="color: #339933;">)</span><br/>
+    <span style="color: #339933;">}</span> <span style="color: #B1B100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"La cadena '%s' convertida a punto flotante es: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">,</span> num<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -381,17 +381,17 @@ num, _ = strconv.Atoi(str)</pre>
 <pre>字符串 '3.14' 转为浮点型为：3.140000</pre>
 <p>El siguiente ejemplo convierte un número de punto flotante a una cadena:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"strconv"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"strconv"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    num <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">14</span><br/>
-    str <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>FormatFloat<span style="color: #339933;">(</span>num<span style="color: #339933;">,</span> <span style="color: #cc66cc;">'f'</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">64</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"El número de punto flotante %f convertido a cadena es: '%s'<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> num<span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
+    num <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">14</span><br/>
+    str <span style="color: #339933;">:=</span> strconv<span style="color: #339933;">.</span>FormatFloat<span style="color: #339933;">(</span>num<span style="color: #339933;">,</span> <span style="color: #CC66CC;">'f'</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">64</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"El número de punto flotante %f convertido a cadena es: '%s'<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> num<span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el ejemplo anterior es:</p><pre>
@@ -406,17 +406,17 @@ value.(T)</pre>
 <p>Donde value es una variable de tipo interfaz, y type o T es el tipo al que se desea convertir.</p>
 <p>Si la aserción de tipo tiene éxito, devuelve el valor convertido y un valor booleano que indica si la conversión fue exitosa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Hello, World"</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Hello, World"</span><br/>
     str<span style="color: #339933;">,</span> ok <span style="color: #339933;">:=</span> <span style="">i</span><span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #993333;">string</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">if</span> ok <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"'%s' is a string<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
-    <span style="color: #339933;">}</span> <span style="color: #b1b100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"conversion failed"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">if</span> ok <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"'%s' is a string<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
+    <span style="color: #339933;">}</span> <span style="color: #B1B100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"conversion failed"</span><span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -426,35 +426,35 @@ value.(T)</pre>
 <pre>T(value)</pre>
 <p>T es el tipo de interfaz de destino y value es el valor que se va a convertir.</p><p>En la conversión de tipos, debemos asegurarnos de que el valor a convertir y el tipo de interfaz de destino sean compatibles; de lo contrario, el compilador mostrará un error.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Define una interfaz Writer</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Writer <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Writer <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
     Write<span style="color: #339933;">([]</span><span style="color: #993333;">byte</span><span style="color: #339933;">)</span> <span style="color: #339933;">(</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> error<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Estructura StringWriter que implementa la interfaz Writer</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> StringWriter <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> StringWriter <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
     str <span style="color: #993333;">string</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Implementa el método Write</span><br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>sw <span style="color: #339933;">*</span>StringWriter<span style="color: #339933;">)</span> Write<span style="color: #339933;">(</span>data <span style="color: #339933;">[]</span><span style="color: #993333;">byte</span><span style="color: #339933;">)</span> <span style="color: #339933;">(</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> error<span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
     sw<span style="color: #339933;">.</span>str <span style="color: #339933;">+=</span> <span style="color: #993333;">string</span><span style="color: #339933;">(</span>data<span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">return</span> <span style="color: #000066;">len</span><span style="color: #339933;">(</span>data<span style="color: #339933;">),</span> <span style="color: #000000; font-weight: bold;">nil</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">return</span> <span style="color: #000066;">len</span><span style="color: #339933;">(</span>data<span style="color: #339933;">),</span> <span style="color: #000000; font-weight: bold;">nil</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Crea una instancia de StringWriter y la asigna a la variable de interfaz Writer</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> w Writer <span style="color: #339933;">=</span> &amp;StringWriter<span style="color: #339933;">{}</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> w Writer <span style="color: #339933;">=</span> &amp;StringWriter<span style="color: #339933;">{}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Convierte el tipo de interfaz Writer al tipo StringWriter</span><br/>
     sw <span style="color: #339933;">:=</span> w<span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #339933;">*</span>StringWriter<span style="color: #339933;">)</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Modifica el campo de StringWriter</span><br/>
-    sw<span style="color: #339933;">.</span><span style="">str</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Hello, World"</span><br/>
+    sw<span style="color: #339933;">.</span><span style="">str</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Hello, World"</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Imprime el valor del campo de StringWriter</span><br/>
     fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>sw<span style="color: #339933;">.</span><span style="">str</span><span style="color: #339933;">)</span><br/>
@@ -463,27 +463,27 @@ value.(T)</pre>
 <ol><li><p><strong>Definir la interfaz y la estructura</strong>：</p><ul><li><code>Writer</code>La interfaz define<code>Write</code>el método.</li><li><code>StringWriter</code>La estructura implementa<code>Write</code>el método.</li></ul></li><li><p><strong>Conversión de tipos</strong>：</p><ul><li>将 <code>StringWriter</code>La instancia se asigna a<code>Writer</code>variable de interfaz<code>w</code>。</li><li>Utilice<code>w.(*StringWriter)</code> 将 <code>Writer</code>la conversión del tipo de interfaz a<code>StringWriter</code>tipo.</li></ul></li><li><p><strong>Acceso a campos</strong>：</p><ul><li>Modificar<code>StringWriter</code>el campo de<code>str</code>, y imprimir su valor.</li></ul></li></ol>
 <h3>Tipo de interfaz vacía</h3><p>Interfaz vacía<span class="marked">interface{}</span>Puede contener valores de cualquier tipo. En la práctica, la interfaz vacía se utiliza a menudo para manejar valores de múltiples tipos.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> printValue<span style="color: #339933;">(</span>v <span style="color: #993333;">interface</span><span style="color: #339933;">{})</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">switch</span> v <span style="color: #339933;">:=</span> v<span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #b1b100; font-weight: bold;">type</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">case</span> <span style="color: #993333;">int</span><span style="color: #339933;">:</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Integer:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">case</span> <span style="color: #993333;">string</span><span style="color: #339933;">:</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"String:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">default</span><span style="color: #339933;">:</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Unknown type"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">switch</span> v <span style="color: #339933;">:=</span> v<span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #B1B100; font-weight: bold;">type</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">case</span> <span style="color: #993333;">int</span><span style="color: #339933;">:</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Integer:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">case</span> <span style="color: #993333;">string</span><span style="color: #339933;">:</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"String:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">default</span><span style="color: #339933;">:</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Unknown type"</span><span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">42</span><span style="color: #339933;">)</span><br/>
-    printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">"hello"</span><span style="color: #339933;">)</span><br/>
-    printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">14</span><span style="color: #339933;">)</span><br/>
+    printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">42</span><span style="color: #339933;">)</span><br/>
+    printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">"hello"</span><span style="color: #339933;">)</span><br/>
+    printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">14</span><span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div><p>En este ejemplo, la función printValue acepta un parámetro de tipo interfaz vacía y utiliza la aserción de tipo y la selección de tipo para manejar diferentes tipos.</p> Otras extensiones
 </div>
@@ -519,7 +519,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -564,7 +564,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -665,7 +665,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">La nota debe ser una extensión del contenido de este artículo.</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -884,7 +884,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

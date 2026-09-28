@@ -293,16 +293,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Comando exec</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Ejecutar una tarea única</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> <span style="color: #a10;">"Revisar el código y generar un informe"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> <span style="color: #a10;">"Revisar el código y generar un informe"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Salida a archivo</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> <span style="color: #660033;">-o</span> review.md <span style="color: #a10;">"Revisar src/auth.py"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> <span style="color: #660033;">-o</span> review.md <span style="color: #a10;">"Revisar src/auth.py"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Usar un modelo específico</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> <span style="color: #660033;">-m</span> gpt-<span style="color: #000000;">5.4</span>-mini <span style="color: #a10;">"Analizar la estructura del proyecto"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> <span style="color: #660033;">-m</span> gpt-<span style="color: #000000;">5.4</span>-mini <span style="color: #a10;">"Analizar la estructura del proyecto"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Ejecución totalmente automática</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> <span style="color: #660033;">--full-auto</span> <span style="color: #a10;">"Ejecutar pruebas y corregir fallos"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> <span style="color: #660033;">--full-auto</span> <span style="color: #a10;">"Ejecutar pruebas y corregir fallos"</span><br/>
 </div>
 </div>
 <h3>Parámetros comunes</h3>
@@ -321,13 +321,13 @@ codex <span style="color: #7a0874; font-weight: bold;">exec</span> <span style="
 <h2 class="example">Entrada stdin</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Leer desde una tubería (pipe)</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Explicar este error"</span> <span style="color: #000000; font-weight: bold;">|</span> codex <span style="color: #7a0874; font-weight: bold;">exec</span> -<br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Explicar este error"</span> <span style="color: #000000; font-weight: bold;">|</span> codex <span style="color: #7A0874; font-weight: bold;">exec</span> -<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Leer desde un archivo</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> - <span style="color: #000000; font-weight: bold;">&lt;</span> task.txt<br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> - <span style="color: #000000; font-weight: bold;">&lt;</span> task.txt<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Tarea multilínea</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">cat</span> <span style="color: #000000; font-weight: bold;">&lt;&lt;</span>EOF <span style="color: #000000; font-weight: bold;">|</span> codex <span style="color: #7a0874; font-weight: bold;">exec</span> -<br/>Analizar src<span style="color: #000000; font-weight: bold;">/</span>directorio<br/>Encontrar posibles errores (bugs)<br/>Enviar sugerencias de corrección<br/>
+<span style="color: #C20CB9; font-weight: bold;">cat</span> <span style="color: #000000; font-weight: bold;">&lt;&lt;</span>EOF <span style="color: #000000; font-weight: bold;">|</span> codex <span style="color: #7A0874; font-weight: bold;">exec</span> -<br/>Analizar src<span style="color: #000000; font-weight: bold;">/</span>directorio<br/>Encontrar posibles errores (bugs)<br/>Enviar sugerencias de corrección<br/>
 EOF<br/>
 </div>
 </div>
@@ -336,10 +336,10 @@ EOF<br/>
 <h2 class="example">Reanudar ejecución</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Reanudar la sesión más reciente</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> resume <span style="color: #660033;">--last</span> <span style="color: #a10;">"Continuar corrigiendo errores"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> resume <span style="color: #660033;">--last</span> <span style="color: #a10;">"Continuar corrigiendo errores"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Reanudar una sesión específica</span><br/>
-codex <span style="color: #7a0874; font-weight: bold;">exec</span> resume <span style="color: #660033;">--session</span> abc123 <span style="color: #a10;">"Siguiente tarea"</span><br/>
+codex <span style="color: #7A0874; font-weight: bold;">exec</span> resume <span style="color: #660033;">--session</span> abc123 <span style="color: #a10;">"Siguiente tarea"</span><br/>
 </div>
 </div>
 <blockquote><p>De forma predeterminada, exec se ejecuta en un sandbox de solo lectura y no modifica archivos.</p></blockquote>
@@ -351,7 +351,7 @@ codex <span style="color: #7a0874; font-weight: bold;">exec</span> resume <span 
 <h2 class="example">Instalar el SDK</h2>
 <div class="example_code">
 
-npm <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #000000; font-weight: bold;">@</span>openai<span style="color: #000000; font-weight: bold;">/</span>codex-sdk<br/>
+npm <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #000000; font-weight: bold;">@</span>openai<span style="color: #000000; font-weight: bold;">/</span>codex-sdk<br/>
 </div>
 </div>
 <h3>Ejemplo de uso</h3>
@@ -550,7 +550,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -595,7 +595,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -634,7 +634,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -853,7 +853,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

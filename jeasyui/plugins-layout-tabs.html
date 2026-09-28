@@ -382,7 +382,7 @@ white-space: pre-wrap;
 <h4>Crear pestañas (Tabs)</h4>
 <p>1. Crear pestañas (Tabs) mediante marcado</p>
 <p>Crear pestañas (Tabs) desde el marcado es más fácil: no necesitamos escribir ningún código JavaScript. Recuerde agregar la clase 'easyui-tabs' a la etiqueta &lt;div&gt;. Cada panel de pestañas (tab panel) se crea mediante una etiqueta &lt;div&gt; secundaria, y su uso es igual que el del panel (panel).</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="tt" class="easyui-tabs" style="width:500px;height:250px;"&gt;
     &lt;div title="Tab1" style="padding:20px;display:none;"&gt;
         tab1
@@ -397,7 +397,7 @@ white-space: pre-wrap;
 </pre>
 <p>2. Crear pestañas (Tabs) mediante programación</p>
 <p>Ahora creamos las pestañas (Tabs) mediante programación y también capturamos el evento 'onSelect'.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#tt').tabs({
     border:false,
     onSelect:function(title){
@@ -407,7 +407,7 @@ $('#tt').tabs({
 </pre>
 <h4>Añadir un nuevo panel de pestañas (tab panel)</h4>
 <p>Añada un nuevo panel de pestañas (tab panel) mediante la mini barra de herramientas. El icono de la mini barra de herramientas (8x8) se coloca delante del botón de cierre.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 // 添加一个新的标签页面板（tab panel）
 $('#tt').tabs('add',{
     title:'New Tab',
@@ -422,7 +422,7 @@ $('#tt').tabs('add',{
 });
 </pre>
 <h4>Obtener la pestaña (Tab) seleccionada</h4>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 // 获取选中的标签页面板（tab panel）和它的标签页（tab）对象
 var pp = $('#tt').tabs('getSelected');
 var tab = pp.panel('options').tab; // 相应的标签页（tab）对象 
@@ -481,7 +481,7 @@ var tab = pp.panel('options').tab; // 相应的标签页（tab）对象
 <td>tools</td>
 <td>array,selector</td>
 <td>La barra de herramientas colocada a la izquierda o a la derecha de la cabecera. Los valores posibles son:<br/>1. Un array que indica un grupo de herramientas; cada opción de herramienta es igual que la del botón de enlace (Linkbutton).<br/>2. Un selector que indica el &lt;div&gt; que contiene las herramientas.<br/>
-<br/>Ejemplo de código:<br/>Definir las herramientas mediante un array.<pre style="color:#006600">
+<br/>Ejemplo de código:<br/>Definir las herramientas mediante un array.<pre style="color:#0053A6">
 $('#tt').tabs({
     tools:[{
         iconCls:'icon-add',
@@ -495,7 +495,7 @@ $('#tt').tabs({
         }
     }]
 });
-</pre>Definir las herramientas mediante un contenedor DOM existente.<pre style="color:#006600">
+</pre>Definir las herramientas mediante un contenedor DOM existente.<pre style="color:#0053A6">
 $('#tt').tabs({
     tools:'#tab-tools'
 });
@@ -575,7 +575,7 @@ $('#tt').tabs({
 <tr>
 <td>onBeforeClose</td>
 <td>title,index</td>
-<td>Se dispara antes de que un panel de pestañas (tab panel) sea cerrado; devolver false cancela la acción de cierre. El siguiente ejemplo demuestra cómo mostrar un cuadro de diálogo de confirmación antes de cerrar el panel de pestañas (tab panel).<pre style="color:#006600">
+<td>Se dispara antes de que un panel de pestañas (tab panel) sea cerrado; devolver false cancela la acción de cierre. El siguiente ejemplo demuestra cómo mostrar un cuadro de diálogo de confirmación antes de cerrar el panel de pestañas (tab panel).<pre style="color:#0053A6">
 $('#tt').tabs({
   onBeforeClose: function(title){
     return confirm('Are you sure you want to close ' + title);
@@ -646,7 +646,7 @@ $('#tt').tabs({
 <tr>
 <td>add</td>
 <td>options</td>
-<td>Añade un nuevo panel de pestañas (tab panel); el parámetro options es un objeto de configuración. Para obtener más detalles, consulte las propiedades del panel de pestañas (tab panel).<br/>Cuando se añade un nuevo panel de pestañas (tab panel), este será seleccionado.<br/>Si necesita añadir un panel de pestañas (tab panel) no seleccionado, recuerde establecer la propiedad 'selected' como false.<pre style="color:#006600">
+<td>Añade un nuevo panel de pestañas (tab panel); el parámetro options es un objeto de configuración. Para obtener más detalles, consulte las propiedades del panel de pestañas (tab panel).<br/>Cuando se añade un nuevo panel de pestañas (tab panel), este será seleccionado.<br/>Si necesita añadir un panel de pestañas (tab panel) no seleccionado, recuerde establecer la propiedad 'selected' como false.<pre style="color:#0053A6">
 // add a unselected tab panel
 $('#tt').tabs('add',{
     title: 'new tab',
@@ -674,7 +674,7 @@ $('#tt').tabs('add',{
 <tr>
 <td>getSelected</td>
 <td>none</td>
-<td>Obtiene el panel de pestañas (tab panel) seleccionado. El siguiente ejemplo demuestra cómo obtener el índice del panel de pestañas (tab panel) seleccionado.<pre style="color:#006600">
+<td>Obtiene el panel de pestañas (tab panel) seleccionado. El siguiente ejemplo demuestra cómo obtener el índice del panel de pestañas (tab panel) seleccionado.<pre style="color:#0053A6">
 var tab = $('#tt').tabs('getSelected');
 var index = $('#tt').tabs('getTabIndex',tab);
 alert(index);
@@ -710,7 +710,7 @@ alert(index);
 <td>update</td>
 <td>param</td>
 <td>Actualiza el panel de pestañas (tab panel) especificado. El parámetro param contiene dos propiedades:<br/>tab: el panel de pestañas (tab panel) que se actualiza.<br/>options: las opciones (options) del panel (panel).<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 // update the selected panel with new title and content
 var tab = $('#tt').tabs('getSelected');  // get selected panel
 $('#tt').tabs('update', {
@@ -731,7 +731,7 @@ tab.panel('refresh', 'get_content.php');
 <td>enableTab</td>
 <td>which</td>
 <td>Habilita el panel de pestañas (tab panel) especificado. El parámetro 'which' puede ser el título (title) o el índice (index) del panel de pestañas (tab panel). Este método está disponible desde la versión 1.3.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#tt').tabs('enableTab', 1);    // enable the second tab panel
 $('#tt').tabs('enableTab', 'Tab2');    enable the tab panel that has 'Tab2' title
 </pre>
@@ -741,7 +741,7 @@ $('#tt').tabs('enableTab', 'Tab2');    enable the tab panel that has 'Tab2' 
 <td>disableTab</td>
 <td>which</td>
 <td>Deshabilita el panel de pestañas (tab panel) especificado. El parámetro 'which' puede ser el título (title) o el índice (index) del panel de pestañas (tab panel). Este método está disponible desde la versión 1.3.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#tt').tabs('disableTab', 1);    // disable the second tab panel.
 </pre>
 </td>
@@ -750,7 +750,7 @@ $('#tt').tabs('disableTab', 1);    // disable the second tab panel.
 <td>scrollBy</td>
 <td>deltaX</td>
 <td>Desplaza la cabecera de las pestañas (tab) en el número de píxeles especificado; un valor negativo indica desplazamiento hacia la derecha, un valor positivo indica desplazamiento hacia la izquierda. Este método está disponible desde la versión 1.3.2.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 // scroll the tab header to left
 $('#tt').tabs('scroll', 10);
 </pre>
@@ -877,7 +877,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -922,7 +922,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -961,7 +961,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1180,7 +1180,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

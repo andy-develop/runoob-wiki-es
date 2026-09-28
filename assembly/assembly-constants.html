@@ -284,36 +284,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ejemplo de definición de constante EQU</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constante numérica</span><br/>
-MAX_SIZE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">256</span>                 <span style="color: #666666; font-style: italic;">; Tamaño máximo del búfer</span><br/>
-<span style="color: #adadad; font-style: italic;">DEFA</span>ULT_PORT <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">8080</span>            <span style="color: #666666; font-style: italic;">; Número de puerto predeterminado</span><br/>
-TRUE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">1</span>                       <span style="color: #666666; font-style: italic;">; Verdadero</span><br/>
-FALSE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0</span>                      <span style="color: #666666; font-style: italic;">; Falso</span><br/>
+MAX_SIZE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">256</span>                 <span style="color: #666666; font-style: italic;">; Tamaño máximo del búfer</span><br/>
+<span style="color: #ADADAD; font-style: italic;">DEFA</span>ULT_PORT <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">8080</span>            <span style="color: #666666; font-style: italic;">; Número de puerto predeterminado</span><br/>
+TRUE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">1</span>                       <span style="color: #666666; font-style: italic;">; Verdadero</span><br/>
+FALSE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0</span>                      <span style="color: #666666; font-style: italic;">; Falso</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constante de carácter</span><br/>
-LF <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0xA</span>                       <span style="color: #666666; font-style: italic;">; Salto de línea</span><br/>
-CR <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0xD</span>                       <span style="color: #666666; font-style: italic;">; Retorno de carro</span><br/>
-NULL <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0</span>                       <span style="color: #666666; font-style: italic;">; Carácter nulo</span><br/>
+LF <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0xA</span>                       <span style="color: #666666; font-style: italic;">; Salto de línea</span><br/>
+CR <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0xD</span>                       <span style="color: #666666; font-style: italic;">; Retorno de carro</span><br/>
+NULL <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0</span>                       <span style="color: #666666; font-style: italic;">; Carácter nulo</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constante de expresión</span><br/>
-ARRAY_SIZE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">100</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span>           <span style="color: #666666; font-style: italic;">; Número de bytes de 100 dwords</span><br/>
-BUFFER_SIZE <span style="color: #0000ff; font-weight: bold;">equ</span> MAX_SIZE <span style="color: #339933;">*</span> <span style="color: #ff0000;">2</span>     <span style="color: #666666; font-style: italic;">; Referencia a otra constante</span><br/>
-TOTAL <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">10</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">20</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">30</span>           <span style="color: #666666; font-style: italic;">; Resultado del cálculo</span><br/>
+ARRAY_SIZE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">100</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span>           <span style="color: #666666; font-style: italic;">; Número de bytes de 100 dwords</span><br/>
+BUFFER_SIZE <span style="color: #0000FF; font-weight: bold;">equ</span> MAX_SIZE <span style="color: #339933;">*</span> <span style="color: #FF0000;">2</span>     <span style="color: #666666; font-style: italic;">; Referencia a otra constante</span><br/>
+TOTAL <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">10</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">20</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">30</span>           <span style="color: #666666; font-style: italic;">; Resultado del cálculo</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Uso de constantes</span><br/>
-    buffer <span style="color: #0000ff; font-weight: bold;">db</span> MAX_SIZE dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #ff0000;">0</span><span style="color: #009900; font-weight: bold;">)</span>    <span style="color: #666666; font-style: italic;">; Definir un búfer de MAX_SIZE bytes</span><br/>
+    buffer <span style="color: #0000FF; font-weight: bold;">db</span> MAX_SIZE dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #FF0000;">0</span><span style="color: #009900; font-weight: bold;">)</span>    <span style="color: #666666; font-style: italic;">; Definir un búfer de MAX_SIZE bytes</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> MAX_SIZE            <span style="color: #666666; font-style: italic;">; eax = 256</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> BUFFER_SIZE         <span style="color: #666666; font-style: italic;">; ebx = 512</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ARRAY_SIZE          <span style="color: #666666; font-style: italic;">; ecx = 400</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> MAX_SIZE            <span style="color: #666666; font-style: italic;">; eax = 256</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> BUFFER_SIZE         <span style="color: #666666; font-style: italic;">; ebx = 512</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ARRAY_SIZE          <span style="color: #666666; font-style: italic;">; ecx = 400</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p><code>EQU</code>Las constantes definidas no pueden modificarse en el programa, ni redefinirse. Si necesita constantes que puedan redefinirse (similares a variables de macro), use<code>%define</code>。</p></blockquote>
@@ -325,23 +325,23 @@ _start<span style="color: #339933;">:</span><br/>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Ejemplo de definición y redefinición de constante con %define</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">%define</span> VERSION <span style="color: #ff0000;">1</span>                <span style="color: #666666; font-style: italic;">; Definir el número de versión</span><br/>
-<span style="color: #0000ff; font-weight: bold;">%define</span> APP_NAME <span style="color: #7f007f;">'runoob'</span>        <span style="color: #666666; font-style: italic;">; Definir el nombre de la aplicación</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%define</span> VERSION <span style="color: #FF0000;">1</span>                <span style="color: #666666; font-style: italic;">; Definir el número de versión</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%define</span> APP_NAME <span style="color: #7F007F;">'runoob'</span>        <span style="color: #666666; font-style: italic;">; Definir el nombre de la aplicación</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Usar una constante definida con %define</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> VERSION             <span style="color: #666666; font-style: italic;">; eax = 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> VERSION             <span style="color: #666666; font-style: italic;">; eax = 1</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Se puede redefinir (EQU no lo permite)</span><br/>
-<span style="color: #0000ff; font-weight: bold;">%define</span> VERSION <span style="color: #ff0000;">2</span>                <span style="color: #666666; font-style: italic;">; Actualización de versión</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> VERSION             <span style="color: #666666; font-style: italic;">; Ahora eax = 2</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%define</span> VERSION <span style="color: #FF0000;">2</span>                <span style="color: #666666; font-style: italic;">; Actualización de versión</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> VERSION             <span style="color: #666666; font-style: italic;">; Ahora eax = 2</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; %undef cancela la definición</span><br/>
-<span style="color: #0000ff; font-weight: bold;">%undef</span> VERSION                   <span style="color: #666666; font-style: italic;">; VERSION ya no es válida</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%undef</span> VERSION                   <span style="color: #666666; font-style: italic;">; VERSION ya no es válida</span><br/>
 <span style="color: #666666; font-style: italic;">; mov eax, VERSION               ; Error: VERSION no está definida</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; %define puede definir macros de varias líneas (macro con paréntesis)</span><br/>
-<span style="color: #0000ff; font-weight: bold;">%define</span> sum<span style="color: #009900; font-weight: bold;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #009900; font-weight: bold;">(</span>a <span style="color: #339933;">+</span> b<span style="color: #009900; font-weight: bold;">)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> sum<span style="color: #009900; font-weight: bold;">(</span><span style="color: #ff0000;">10</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">20</span><span style="color: #009900; font-weight: bold;">)</span>         <span style="color: #666666; font-style: italic;">; mov eax, (10+20) -&gt; eax = 30</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%define</span> sum<span style="color: #009900; font-weight: bold;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #009900; font-weight: bold;">(</span>a <span style="color: #339933;">+</span> b<span style="color: #009900; font-weight: bold;">)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> sum<span style="color: #009900; font-weight: bold;">(</span><span style="color: #FF0000;">10</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">20</span><span style="color: #009900; font-weight: bold;">)</span>         <span style="color: #666666; font-style: italic;">; mov eax, (10+20) -&gt; eax = 30</span><br/>
 </div>
 </div>
 <table class="reference">
@@ -359,15 +359,15 @@ _start<span style="color: #339933;">:</span><br/>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; %assign: constante modificable en tiempo de compilación</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">%assign</span> counter <span style="color: #ff0000;">0</span>                <span style="color: #666666; font-style: italic;">; Valor inicial: 0</span><br/>
+<span style="color: #0000FF; font-weight: bold;">%assign</span> counter <span style="color: #FF0000;">0</span>                <span style="color: #666666; font-style: italic;">; Valor inicial: 0</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Se usa junto con bloques de repetición %rep</span><br/>
     <span style="color: #666666; font-style: italic;">; Genera table_0, table_1, ..., table_9</span><br/>
-    <span style="color: #339933;">%</span><span style="color: #00007f; font-weight: bold;">rep</span> <span style="color: #ff0000;">10</span><br/>
-        <span style="color: #0000ff; font-weight: bold;">db</span> counter               <span style="color: #666666; font-style: italic;">; Usa el valor actual de counter</span><br/>
-        <span style="color: #0000ff; font-weight: bold;">%assign</span> counter counter <span style="color: #339933;">+</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">%endrep</span><br/>
+    <span style="color: #339933;">%</span><span style="color: #00007F; font-weight: bold;">rep</span> <span style="color: #FF0000;">10</span><br/>
+        <span style="color: #0000FF; font-weight: bold;">db</span> counter               <span style="color: #666666; font-style: italic;">; Usa el valor actual de counter</span><br/>
+        <span style="color: #0000FF; font-weight: bold;">%assign</span> counter counter <span style="color: #339933;">+</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">%endrep</span><br/>
 </div>
 </div>
 <hr/>
@@ -379,44 +379,44 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Uso combinado de constantes para mejorar la legibilidad del código</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constantes de números de llamadas del sistema</span><br/>
-SYS_EXIT <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">1</span><br/>
-SYS_FORK <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">2</span><br/>
-SYS_READ <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">3</span><br/>
-SYS_WRITE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">4</span><br/>
-SYS_OPEN <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">5</span><br/>
-SYS_CLOSE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">6</span><br/>
+SYS_EXIT <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">1</span><br/>
+SYS_FORK <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">2</span><br/>
+SYS_READ <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">3</span><br/>
+SYS_WRITE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">4</span><br/>
+SYS_OPEN <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">5</span><br/>
+SYS_CLOSE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">6</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constantes de descriptores de archivo</span><br/>
-STDIN <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0</span><br/>
-STDOUT <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">1</span><br/>
-STDERR <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">2</span><br/>
+STDIN <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0</span><br/>
+STDOUT <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">1</span><br/>
+STDERR <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">2</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Constantes del programa</span><br/>
-MAX_INPUT <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">256</span><br/>
-EXIT_SUCCESS <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">0</span><br/>
-EXIT_FAILURE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">1</span><br/>
+MAX_INPUT <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">256</span><br/>
+EXIT_SUCCESS <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">0</span><br/>
+EXIT_FAILURE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">1</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    msg_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    msg_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.bss</span><br/>
-    buffer <span style="color: #0000ff; font-weight: bold;">resb</span> MAX_INPUT        <span style="color: #666666; font-style: italic;">; Usar constantes para definir el tamaño del búfer</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span><br/>
+    buffer <span style="color: #0000FF; font-weight: bold;">resb</span> MAX_INPUT        <span style="color: #666666; font-style: italic;">; Usar constantes para definir el tamaño del búfer</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Usar nombres de constantes en lugar de números; la intención del código es evidente de un vistazo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> SYS_WRITE           <span style="color: #666666; font-style: italic;">; Claro: esto es una operación de escritura</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> STDOUT              <span style="color: #666666; font-style: italic;">; Claro: salida a la pantalla</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> msg_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> SYS_WRITE           <span style="color: #666666; font-style: italic;">; Claro: esto es una operación de escritura</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> STDOUT              <span style="color: #666666; font-style: italic;">; Claro: salida a la pantalla</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> msg_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> SYS_EXIT            <span style="color: #666666; font-style: italic;">; Claro: salir del programa</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> EXIT_SUCCESS        <span style="color: #666666; font-style: italic;">; Claro: salida normal</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> SYS_EXIT            <span style="color: #666666; font-style: italic;">; Claro: salir del programa</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> EXIT_SUCCESS        <span style="color: #666666; font-style: italic;">; Claro: salida normal</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>Usar nombres de constantes en lugar de "números mágicos" es un buen hábito. Tres meses después,<code>mov eax, SYS_WRITE</code> 比 <code>mov eax, 4</code>es más fácil de entender.</p></blockquote>
@@ -428,21 +428,21 @@ _start<span style="color: #339933;">:</span><br/>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Formas de definir constantes de cadena</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Definición directa (se puede usar EQU para indicar la longitud)</span><br/>
-    s1 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'hello'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    s1_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> s1<br/>
+    s1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'hello'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    s1_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> s1<br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Con caracteres de escape</span><br/>
-    s2 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Line1'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'Line2'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>   <span style="color: #666666; font-style: italic;">; 0xA es el salto de línea</span><br/>
+    s2 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Line1'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'Line2'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>   <span style="color: #666666; font-style: italic;">; 0xA es el salto de línea</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Usar comillas invertidas para admitir escapes de estilo C</span><br/>
-    s3 <span style="color: #0000ff; font-weight: bold;">db</span> `hello\nworld\n`<span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>         <span style="color: #666666; font-style: italic;">; \n se reemplaza automáticamente por 0xA</span><br/>
+    s3 <span style="color: #0000FF; font-weight: bold;">db</span> `hello\nworld\n`<span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>         <span style="color: #666666; font-style: italic;">; \n se reemplaza automáticamente por 0xA</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Cadena de varias líneas</span><br/>
-    s4 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'first line'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-       <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'second line'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-       <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'third line'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
+    s4 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'first line'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+       <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'second line'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+       <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'third line'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
 </div>
 </div>
 <blockquote><p>Las cadenas con comillas invertidas de NASM admiten<code>\n</code>(salto de línea),<code>\t</code>(tabulador),<code>\\</code>(barra invertida),<code>\'</code>(comilla simple) y otras secuencias de escape estándar de C.</p></blockquote>
@@ -480,7 +480,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -525,7 +525,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -564,7 +564,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -783,7 +783,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

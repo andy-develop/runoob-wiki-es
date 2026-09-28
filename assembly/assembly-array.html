@@ -278,27 +278,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Formas de definir un arreglo</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Método 1: enumerar los elementos uno por uno</span><br/>
-    arr1 <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">10</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">20</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">30</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">40</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">50</span>  <span style="color: #666666; font-style: italic;">; Un arreglo de 5 elementos de doble palabra (dword)</span><br/>
+    arr1 <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">10</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">20</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">30</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">40</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">50</span>  <span style="color: #666666; font-style: italic;">; Un arreglo de 5 elementos de doble palabra (dword)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 2: inicializar con dup</span><br/>
-    arr2 <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">10</span> dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #ff0000;">0</span><span style="color: #009900; font-weight: bold;">)</span>            <span style="color: #666666; font-style: italic;">; 10 dobles palabras, todas en 0</span><br/>
+    arr2 <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">10</span> dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #FF0000;">0</span><span style="color: #009900; font-weight: bold;">)</span>            <span style="color: #666666; font-style: italic;">; 10 dobles palabras, todas en 0</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 3: arreglo de bytes</span><br/>
-    bytes <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">1</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">2</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">3</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">5</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">6</span>   <span style="color: #666666; font-style: italic;">; 6 bytes</span><br/>
+    bytes <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">1</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">2</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">3</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">5</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">6</span>   <span style="color: #666666; font-style: italic;">; 6 bytes</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 4: arreglo de caracteres (cadena)</span><br/>
-    chars <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>         <span style="color: #666666; font-style: italic;">; 7 bytes</span><br/>
+    chars <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>         <span style="color: #666666; font-style: italic;">; 7 bytes</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Cálculo de la longitud del arreglo (en tiempo de compilación)</span><br/>
-    arr1_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> arr1<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span>  <span style="color: #666666; font-style: italic;">; Número de elementos de un arreglo de dobles palabras</span><br/>
-    arr2_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> arr2<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span><br/>
-    bytes_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> bytes<span style="color: #009900; font-weight: bold;">)</span>    <span style="color: #666666; font-style: italic;">; Arreglo de bytes, no necesita división</span><br/>
+    arr1_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> arr1<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span>  <span style="color: #666666; font-style: italic;">; Número de elementos de un arreglo de dobles palabras</span><br/>
+    arr2_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> arr2<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span><br/>
+    bytes_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> bytes<span style="color: #009900; font-weight: bold;">)</span>    <span style="color: #666666; font-style: italic;">; Arreglo de bytes, no necesita división</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.bss</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span><br/>
     <span style="color: #666666; font-style: italic;">; Arreglo no inicializado</span><br/>
-    buffer <span style="color: #0000ff; font-weight: bold;">resd</span> <span style="color: #ff0000;">100</span>              <span style="color: #666666; font-style: italic;">; Reservar espacio para 100 dobles palabras</span><br/>
+    buffer <span style="color: #0000FF; font-weight: bold;">resd</span> <span style="color: #FF0000;">100</span>              <span style="color: #666666; font-style: italic;">; Reservar espacio para 100 dobles palabras</span><br/>
 </div>
 </div>
 <hr/>
@@ -310,36 +310,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: array_access.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Lectura y escritura de elementos de un arreglo</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    nums <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">100</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">200</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">300</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">400</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">500</span>   <span style="color: #666666; font-style: italic;">; 5 elementos</span><br/>
-    nums_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> nums<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    nums <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">100</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">200</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">300</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">400</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">500</span>   <span style="color: #666666; font-style: italic;">; 5 elementos</span><br/>
+    nums_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> nums<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Acceder al elemento 0 (índice 0)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums<span style="color: #009900; font-weight: bold;">]</span>              <span style="color: #666666; font-style: italic;">; eax = 100</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums<span style="color: #009900; font-weight: bold;">]</span>              <span style="color: #666666; font-style: italic;">; eax = 100</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Acceder al elemento 2 (índice 2)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #ff0000;">2</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>      <span style="color: #666666; font-style: italic;">; eax = nums[2] = 300</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #FF0000;">2</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>      <span style="color: #666666; font-style: italic;">; eax = nums[2] = 300</span><br/>
     <span style="color: #666666; font-style: italic;">; 2 * 4 = 8, desplazamiento de 8 bytes desde nums</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Usar un registro como índice</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">3</span>                   <span style="color: #666666; font-style: italic;">; Índice = 3</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>    <span style="color: #666666; font-style: italic;">; eax = nums[3] = 400</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">3</span>                   <span style="color: #666666; font-style: italic;">; Índice = 3</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>    <span style="color: #666666; font-style: italic;">; eax = nums[3] = 400</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Modificar un elemento del arreglo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #0000ff; font-weight: bold;">dword</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">250</span>    <span style="color: #666666; font-style: italic;">; nums[1] = 250</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #0000FF; font-weight: bold;">dword</span> <span style="color: #009900; font-weight: bold;">[</span>nums <span style="color: #339933;">+</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">250</span>    <span style="color: #666666; font-style: italic;">; nums[1] = 250</span><br/>
     <span style="color: #666666; font-style: italic;">; El arreglo ahora es: 100, 250, 300, 400, 500</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Usar EBX como registro base</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> nums                <span style="color: #666666; font-style: italic;">; ebx = dirección base del arreglo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebx</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">4</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>       <span style="color: #666666; font-style: italic;">; eax = nums[4] = 500</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> nums                <span style="color: #666666; font-style: italic;">; ebx = dirección base del arreglo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebx</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">4</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>       <span style="color: #666666; font-style: italic;">; eax = nums[4] = 500</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>Nota:<code>[nums + esi * 4]</code>La multiplicación por 4 en la fórmula se debe a que cada elemento es de 4 bytes (doble palabra). Si es un arreglo de bytes (db), se escribe directamente como<code>[arr + esi]</code>; para un arreglo de palabras (dw), se escribe como<code>[arr + esi * 2]</code>。</p></blockquote>
@@ -351,38 +351,38 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: array_traverse.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Recorrer el arreglo y calcular la suma</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    numbers <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">5</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">15</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">20</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">25</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">30</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">35</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">40</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">45</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">50</span><br/>
-    count <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> numbers<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span>   <span style="color: #666666; font-style: italic;">; Número de elementos</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    numbers <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">5</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">15</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">20</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">25</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">30</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">35</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">40</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">45</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">50</span><br/>
+    count <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> numbers<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span>   <span style="color: #666666; font-style: italic;">; Número de elementos</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> count                <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Índice (comenzando desde 0)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> count                <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Índice (comenzando desde 0)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
 <br/>
 sum_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>numbers <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;">; Acumular el elemento del arreglo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                       <span style="color: #666666; font-style: italic;">; Índice + 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> sum_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>numbers <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;">; Acumular el elemento del arreglo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                       <span style="color: #666666; font-style: italic;">; Índice + 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> sum_loop<br/>
     <span style="color: #666666; font-style: italic;">; eax = 5+10+15+...+50 = 275</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Otro método de recorrido: usar puntero</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> count<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> numbers              <span style="color: #666666; font-style: italic;">; ebx apunta al inicio del arreglo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> count<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> numbers              <span style="color: #666666; font-style: italic;">; ebx apunta al inicio del arreglo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
 <br/>
 sum_loop2<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #009900; font-weight: bold;">]</span>                <span style="color: #666666; font-style: italic;">; Acumular el elemento actual</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span>                    <span style="color: #666666; font-style: italic;">; Mover el puntero al siguiente elemento</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> sum_loop2<br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #009900; font-weight: bold;">]</span>                <span style="color: #666666; font-style: italic;">; Acumular el elemento actual</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span>                    <span style="color: #666666; font-style: italic;">; Mover el puntero al siguiente elemento</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> sum_loop2<br/>
     <span style="color: #666666; font-style: italic;">; eax = 275</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                  <span style="color: #666666; font-style: italic;">; Código de salida = suma acumulada</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                  <span style="color: #666666; font-style: italic;">; Código de salida = suma acumulada</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -393,68 +393,68 @@ sum_loop2<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: array_search.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Buscar un valor específico en el arreglo</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">data</span> <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">12</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">45</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">67</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">23</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">89</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">34</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">56</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">78</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">90</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">11</span><br/>
-    data_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> <span style="color: #0000ff; font-weight: bold;">data</span><span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span><br/>
-    target <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">23</span>                   <span style="color: #666666; font-style: italic;">; Valor a buscar</span><br/>
-    found_msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Found at index: '</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    found_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> found_msg<br/>
-    notfound_msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Not found (runoob)'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    notfound_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> notfound_msg<br/>
-    newline <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0xA</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">data</span> <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">12</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">45</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">67</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">23</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">89</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">34</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">56</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">78</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">90</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">11</span><br/>
+    data_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> <span style="color: #0000FF; font-weight: bold;">data</span><span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span><br/>
+    target <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">23</span>                   <span style="color: #666666; font-style: italic;">; Valor a buscar</span><br/>
+    found_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Found at index: '</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    found_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> found_msg<br/>
+    notfound_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Not found (runoob)'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    notfound_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> notfound_msg<br/>
+    newline <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0xA</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> data_len             <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Índice actual</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> data_len             <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                    <span style="color: #666666; font-style: italic;">; Índice actual</span><br/>
 <br/>
 search_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #0000ff; font-weight: bold;">data</span> <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>     <span style="color: #666666; font-style: italic;">; Cargar el elemento actual</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cmp</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>target<span style="color: #009900; font-weight: bold;">]</span>             <span style="color: #666666; font-style: italic;">; Si es igual al valor objetivo</span><br/>
-    <span style="color: #00007f; font-weight: bold;">je</span>  found                     <span style="color: #666666; font-style: italic;">; Encontrado</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #0000FF; font-weight: bold;">data</span> <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>     <span style="color: #666666; font-style: italic;">; Cargar el elemento actual</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cmp</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>target<span style="color: #009900; font-weight: bold;">]</span>             <span style="color: #666666; font-style: italic;">; Si es igual al valor objetivo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">je</span>  found                     <span style="color: #666666; font-style: italic;">; Encontrado</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                       <span style="color: #666666; font-style: italic;">; Índice + 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> search_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                       <span style="color: #666666; font-style: italic;">; Índice + 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> search_loop<br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; No encontrado</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> notfound_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> notfound_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jmp</span> exit<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> notfound_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> notfound_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jmp</span> exit<br/>
 <br/>
 found<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Encontrado (esi es el índice)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> found_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> found_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> found_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> found_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Convertir el índice a carácter ASCII para la salida</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'0'</span>                  <span style="color: #666666; font-style: italic;">; Convertir un índice de un solo dígito a carácter</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                      <span style="color: #666666; font-style: italic;">; Empujar a la pila como almacenamiento temporal</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">esp</span>                  <span style="color: #666666; font-style: italic;">; Dirección del tope de la pila</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">esi</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'0'</span>                  <span style="color: #666666; font-style: italic;">; Convertir un índice de un solo dígito a carácter</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                      <span style="color: #666666; font-style: italic;">; Empujar a la pila como almacenamiento temporal</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">esp</span>                  <span style="color: #666666; font-style: italic;">; Dirección del tope de la pila</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">esi</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Salida de nueva línea</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> newline<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> newline<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 exit<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -469,52 +469,52 @@ exit<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: 2d_array.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Definición y acceso de un arreglo bidimensional</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Arreglo bidimensional de 3 filas y 4 columnas</span><br/>
-    matrix <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">1</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">2</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">3</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">4</span><br/>
-           <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">5</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">6</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">7</span><span style="color: #339933;">,</span>  <span style="color: #ff0000;">8</span><br/>
-           <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">9</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">11</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">12</span><br/>
+    matrix <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">1</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">2</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">3</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">4</span><br/>
+           <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">5</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">6</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">7</span><span style="color: #339933;">,</span>  <span style="color: #FF0000;">8</span><br/>
+           <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">9</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">11</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">12</span><br/>
 <br/>
-    rows <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">3</span><br/>
-    cols <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">4</span><br/>
-    elem_size <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">4</span>              <span style="color: #666666; font-style: italic;">; Doble palabra = 4 bytes</span><br/>
+    rows <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">3</span><br/>
+    cols <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">4</span><br/>
+    elem_size <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">4</span>              <span style="color: #666666; font-style: italic;">; Doble palabra = 4 bytes</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Acceder a matrix</span><br/>
     <span style="color: #666666; font-style: italic;">; Dirección = matrix + (1*4 + 2) * 4 = matrix + 24</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #ff0000;">1</span> <span style="color: #339933;">*</span> cols <span style="color: #339933;">+</span> <span style="color: #ff0000;">2</span><span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #FF0000;">1</span> <span style="color: #339933;">*</span> cols <span style="color: #339933;">+</span> <span style="color: #FF0000;">2</span><span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 7</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Cálculo dinámico con registros (suponiendo i=2, j=1)</span><br/>
     <span style="color: #666666; font-style: italic;">; matrix</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">2</span>                   <span style="color: #666666; font-style: italic;">; Fila i = 2</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                   <span style="color: #666666; font-style: italic;">; Columna j = 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">2</span>                   <span style="color: #666666; font-style: italic;">; Fila i = 2</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                   <span style="color: #666666; font-style: italic;">; Columna j = 1</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> cols                <span style="color: #666666; font-style: italic;">; Número de columnas</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mul</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                      <span style="color: #666666; font-style: italic;">; eax = i * cols = 2*4 = 8</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">edi</span>                 <span style="color: #666666; font-style: italic;">; eax = i*cols + j = 8+1 = 9</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> cols                <span style="color: #666666; font-style: italic;">; Número de columnas</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mul</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                      <span style="color: #666666; font-style: italic;">; eax = i * cols = 2*4 = 8</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">edi</span>                 <span style="color: #666666; font-style: italic;">; eax = i*cols + j = 8+1 = 9</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = eax * elem_size</span><br/>
     <span style="color: #666666; font-style: italic;">; Nota: el resultado de MUL está en EAX, aquí se usa directamente</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">eax</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">eax</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 10</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Recorrer todos los elementos del arreglo bidimensional</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> rows <span style="color: #339933;">*</span> cols         <span style="color: #666666; font-style: italic;">; Número total de elementos = 12</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                   <span style="color: #666666; font-style: italic;">; Índice</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                   <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> rows <span style="color: #339933;">*</span> cols         <span style="color: #666666; font-style: italic;">; Número total de elementos = 12</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                   <span style="color: #666666; font-style: italic;">; Índice</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                   <span style="color: #666666; font-style: italic;">; Suma acumulada</span><br/>
 <br/>
 traverse<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> traverse<br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>matrix <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> elem_size<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> traverse<br/>
     <span style="color: #666666; font-style: italic;">; ebx = 1+2+3+...+12 = 78</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -525,44 +525,44 @@ traverse<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: bubble_sort.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Algoritmo de ordenamiento de burbuja</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    array <span style="color: #0000ff; font-weight: bold;">dd</span> <span style="color: #ff0000;">64</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">34</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">25</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">12</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">22</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">11</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">90</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">78</span><br/>
-    array_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> array<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #ff0000;">4</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    array <span style="color: #0000FF; font-weight: bold;">dd</span> <span style="color: #FF0000;">64</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">34</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">25</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">12</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">22</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">11</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">90</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">78</span><br/>
+    array_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #009900; font-weight: bold;">(</span><span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> array<span style="color: #009900; font-weight: bold;">)</span> <span style="color: #339933;">/</span> <span style="color: #FF0000;">4</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> array_len            <span style="color: #666666; font-style: italic;">; Bucle externo: n veces</span><br/>
-    <span style="color: #00007f; font-weight: bold;">dec</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                       <span style="color: #666666; font-style: italic;">; El bucle externo solo necesita n-1 veces</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> array_len            <span style="color: #666666; font-style: italic;">; Bucle externo: n veces</span><br/>
+    <span style="color: #00007F; font-weight: bold;">dec</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                       <span style="color: #666666; font-style: italic;">; El bucle externo solo necesita n-1 veces</span><br/>
 <br/>
 outer_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                      <span style="color: #666666; font-style: italic;">; Guardar el contador del bucle externo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                      <span style="color: #666666; font-style: italic;">; Guardar el contador del bucle externo</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                    <span style="color: #666666; font-style: italic;">; El índice del bucle interno comienza en 0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> array_len <span style="color: #339933;">-</span> <span style="color: #ff0000;">1</span>        <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle interno</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                    <span style="color: #666666; font-style: italic;">; El índice del bucle interno comienza en 0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> array_len <span style="color: #339933;">-</span> <span style="color: #FF0000;">1</span>        <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle interno</span><br/>
 <br/>
 inner_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>    <span style="color: #666666; font-style: italic;">; a[j]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;">; a[j+1]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cmp</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span>                  <span style="color: #666666; font-style: italic;">; a[j] &gt; a[j+1] ?</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jle</span> no_swap                   <span style="color: #666666; font-style: italic;">; No, no intercambiar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>    <span style="color: #666666; font-style: italic;">; a[j]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;">; a[j+1]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cmp</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span>                  <span style="color: #666666; font-style: italic;">; a[j] &gt; a[j+1] ?</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jle</span> no_swap                   <span style="color: #666666; font-style: italic;">; No, no intercambiar</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Intercambiar a[j] y a[j+1]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46aa03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #ff0000;">4</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>array <span style="color: #339933;">+</span> <span style="color: #46AA03; font-weight: bold;">esi</span> <span style="color: #339933;">*</span> <span style="color: #FF0000;">4</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span><br/>
 <br/>
 no_swap<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> inner_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> inner_loop<br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> outer_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> outer_loop<br/>
     <span style="color: #666666; font-style: italic;">; El arreglo ahora está ordenado: 11, 12, 22, 25, 34, 64, 78, 90</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>Los arreglos en lenguaje ensamblador no tienen ninguna verificación de límites. Acceder a un índice fuera de rango no genera un error, sino que lee o escribe silenciosamente datos en la memoria adyacente, lo que puede causar errores difíciles de depurar. Asegúrate siempre de que el índice esté dentro del rango válido.</p></blockquote>
@@ -600,7 +600,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -645,7 +645,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -684,7 +684,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -903,7 +903,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

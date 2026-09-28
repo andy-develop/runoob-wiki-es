@@ -342,13 +342,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #007800;">file</span>=<span style="color: #a10;">"/etc/passwd"</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #660033;">-e</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>existe"</span><br/>
-    <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #660033;">-r</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-        <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"y es legible"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #660033;">-e</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>existe"</span><br/>
+    <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #660033;">-r</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+        <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"y es legible"</span><br/>
     <span style="color: #000000; font-weight: bold;">fi</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>no existe"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>no existe"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div>
@@ -394,15 +394,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <br/>
-<span style="color: #c20cb9; font-weight: bold;">read</span> <span style="color: #660033;">-p</span> <span style="color: #a10;">"Ingrese el nombre de usuario: "</span> username<br/>
+<span style="color: #C20CB9; font-weight: bold;">read</span> <span style="color: #660033;">-p</span> <span style="color: #a10;">"Ingrese el nombre de usuario: "</span> username<br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #660033;">-z</span> <span style="color: #a10;">"<span style="color: #007800;">$username</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Error: el nombre de usuario no puede estar vacío"</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
-<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$username</span>"</span> = <span style="color: #a10;">"root"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Advertencia: no se recomienda usar la cuenta root"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #660033;">-z</span> <span style="color: #a10;">"<span style="color: #007800;">$username</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Error: el nombre de usuario no puede estar vacío"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
+<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$username</span>"</span> = <span style="color: #a10;">"root"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Advertencia: no se recomienda usar la cuenta root"</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Bienvenido,<span style="color: #007800;">$username</span>"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Bienvenido,<span style="color: #007800;">$username</span>"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div>
@@ -457,16 +457,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <br/>
-<span style="color: #c20cb9; font-weight: bold;">read</span> <span style="color: #660033;">-p</span> <span style="color: #a10;">"Ingrese la edad: "</span> age<br/>
+<span style="color: #C20CB9; font-weight: bold;">read</span> <span style="color: #660033;">-p</span> <span style="color: #a10;">"Ingrese la edad: "</span> age<br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">0</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"La edad no puede ser negativa"</span><br/>
-<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">18</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Menor de edad"</span><br/>
-<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-ge</span> <span style="color: #000000;">18</span> <span style="color: #7a0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">60</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Adulto"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">0</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"La edad no puede ser negativa"</span><br/>
+<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">18</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Menor de edad"</span><br/>
+<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-ge</span> <span style="color: #000000;">18</span> <span style="color: #7A0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$age</span>"</span> <span style="color: #660033;">-lt</span> <span style="color: #000000;">60</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Adulto"</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Persona mayor"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Persona mayor"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div><p>Después de ejecutar, escribimos 12 en la terminal, y el resultado de salida es similar a:</p>
@@ -503,8 +503,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">1</span> <span style="color: #7a0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">2</span> <span style="color: #7a0874; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;"># AND</span><br/>
-<span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">1</span> <span style="color: #7a0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">||</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">2</span> <span style="color: #7a0874; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;"># OR</span><br/>
+<span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">1</span> <span style="color: #7A0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">2</span> <span style="color: #7A0874; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;"># AND</span><br/>
+<span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">1</span> <span style="color: #7A0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">||</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #000000;">2</span> <span style="color: #7A0874; font-weight: bold;">]</span>  <span style="color: #666666; font-style: italic;"># OR</span><br/>
 </div>
 </div>
 <hr/>
@@ -525,12 +525,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span><span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> == <span style="color: #000000; font-weight: bold;">*</span>.log <span style="color: #7a0874; font-weight: bold;">]</span><span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Este es un archivo de registro"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$file</span>"</span> == <span style="color: #000000; font-weight: bold;">*</span>.log <span style="color: #7A0874; font-weight: bold;">]</span><span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Este es un archivo de registro"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #7a0874; font-weight: bold;">(</span> <span style="color: #007800;">$count</span> <span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">10</span> <span style="color: #7a0874; font-weight: bold;">)</span><span style="color: #7a0874; font-weight: bold;">)</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"La cantidad supera 10"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">(</span> <span style="color: #007800;">$count</span> <span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">10</span> <span style="color: #7A0874; font-weight: bold;">)</span><span style="color: #7A0874; font-weight: bold;">)</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"La cantidad supera 10"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div>
@@ -545,9 +545,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #007800;">service</span>=<span style="color: #a10;">"nginx"</span><br/>
 <br/>
 <span style="color: #000000; font-weight: bold;">if</span> systemctl is-active <span style="color: #660033;">--quiet</span> <span style="color: #a10;">"<span style="color: #007800;">$service</span>"</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$service</span>en ejecución"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$service</span>en ejecución"</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$service</span>no en ejecución"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$service</span>no en ejecución"</span><br/>
     <span style="color: #666666; font-style: italic;"># Puede agregar el comando para iniciar el servicio</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
@@ -560,13 +560,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #007800;">backup_file</span>=<span style="color: #a10;">"/backups/data_<span style="color: #007800;">$(date +%Y%m%d)</span>.tar.gz"</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #000000; font-weight: bold;">!</span> <span style="color: #660033;">-f</span> <span style="color: #a10;">"<span style="color: #007800;">$backup_file</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Error: el archivo de respaldo<span style="color: #007800;">$backup_file</span>no existe"</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
-<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #000000; font-weight: bold;">!</span> <span style="color: #660033;">-s</span> <span style="color: #a10;">"<span style="color: #007800;">$backup_file</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Advertencia: el archivo de respaldo está vacío"</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #000000; font-weight: bold;">!</span> <span style="color: #660033;">-f</span> <span style="color: #a10;">"<span style="color: #007800;">$backup_file</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Error: el archivo de respaldo<span style="color: #007800;">$backup_file</span>no existe"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
+<span style="color: #000000; font-weight: bold;">elif</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #000000; font-weight: bold;">!</span> <span style="color: #660033;">-s</span> <span style="color: #a10;">"<span style="color: #007800;">$backup_file</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Advertencia: el archivo de respaldo está vacío"</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Verificación de respaldo exitosa"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Verificación de respaldo exitosa"</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div>
@@ -581,8 +581,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Expresión de prueba: [<span style="color: #007800;">$a</span> -eq <span style="color: #007800;">$b</span> ]"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"verdadero"</span> <span style="color: #000000; font-weight: bold;">||</span> <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"falso"</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Expresión de prueba: [<span style="color: #007800;">$a</span> -eq <span style="color: #007800;">$b</span> ]"</span><br/>
+<span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #a10;">"<span style="color: #007800;">$a</span>"</span> <span style="color: #660033;">-eq</span> <span style="color: #a10;">"<span style="color: #007800;">$b</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span> <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"verdadero"</span> <span style="color: #000000; font-weight: bold;">||</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"falso"</span><br/>
 </div>
 </div>
 Otras extensiones
@@ -619,7 +619,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -664,7 +664,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -790,7 +790,7 @@ fi</pre>
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1009,7 +1009,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

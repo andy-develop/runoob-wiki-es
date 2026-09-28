@@ -102,7 +102,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Si el coeficiente de división par es demasiado grande, es necesario realizar un conteo cíclico del coeficiente de división N. Cuando el ciclo de conteo alcanza el valor intermedio N/2 del coeficiente de división, se invierte el reloj, lo que garantiza un ciclo de trabajo del 50% en el reloj dividido. Al ser una división par, también se puede contar cíclicamente hasta N/2.</p><p>A continuación se muestra un ejemplo de descripción Verilog para la división de frecuencia par.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span> even_divisor<br/>
-  <span style="color: #5D478B;">#</span> <span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">10</span> <span style="color: #9F79EE;">)</span><br/>
+  <span style="color: #5D478B;">#</span> <span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">10</span> <span style="color: #9F79EE;">)</span><br/>
     <span style="color: #9F79EE;">(</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               rstn <span style="color: #5D478B;">,</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               clk<span style="color: #5D478B;">,</span><br/>
@@ -136,16 +136,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">assign</span> clk_div4      <span style="color: #5D478B;">=</span> clk_div4_r <span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">// conteo N/2</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -153,9 +153,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clk_div10_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_div10_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_div10_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          clk_div10_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #5D478B;">~</span>clk_div10_r <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -169,7 +169,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>De manera similar, para una división por 9, es necesario generar en el flanco ascendente y descendente relojes divididos por 9 con 4 ciclos en alto y 5 en bajo, y luego aplicar la operación OR a los dos relojes. La descripción Verilog es la siguiente.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span> odo_div_or<br/>
-  <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">9</span><span style="color: #9F79EE;">)</span><br/>
+  <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">9</span><span style="color: #9F79EE;">)</span><br/>
    <span style="color: #9F79EE;">(</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               rstn <span style="color: #5D478B;">,</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               clk<span style="color: #5D478B;">,</span><br/>
@@ -177,16 +177,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">// contador</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -194,13 +194,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clkp_div9_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo 4-8 en nivel bajo</span><br/>
-        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo 4-8 en nivel bajo</span><br/>
+        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// contar 0-3 es nivel alto</span><br/>
-        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// contar 0-3 es nivel alto</span><br/>
+        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
   <br/>
@@ -208,13 +208,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clkn_div9_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
-        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
+        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
-        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
+        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -229,7 +229,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-division-5.png"/></p><p>De manera similar, para una división por 9, es necesario generar en el flanco ascendente y descendente relojes divididos por 9 con 5 ciclos en alto y 4 en bajo, y luego aplicar la operación AND a los dos relojes. La descripción Verilog es la siguiente.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span> odo_div_and<br/>
-   <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span> <span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">9</span> <span style="color: #9F79EE;">)</span><br/>
+   <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span> <span style="color: #A52A2A; font-weight: bold;">parameter</span> DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">9</span> <span style="color: #9F79EE;">)</span><br/>
    <span style="color: #9F79EE;">(</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               rstn <span style="color: #5D478B;">,</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               clk<span style="color: #5D478B;">,</span><br/>
@@ -237,16 +237,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">// contador</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -254,13 +254,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clkp_div9_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo 5-8 en nivel bajo</span><br/>
-        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo 5-8 en nivel bajo</span><br/>
+        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// contar 0-4 es nivel alto</span><br/>
-        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// contar 0-4 es nivel alto</span><br/>
+        clkp_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -268,13 +268,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clkn_div9_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
-        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>DIV_CLK<span style="color: #5D478B;">&gt;&gt;</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
+        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
-        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <br/>
+        clkn_div9_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -297,35 +297,35 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">// contador</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            MUL2_DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">7</span> <span style="color: #5D478B;">;</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            MUL2_DIV_CLK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">7</span> <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            cnt <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> MUL2_DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo del doble de la relación de división</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> MUL2_DIV_CLK<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">// conteo del doble de la relación de división</span><br/>
          cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt    <span style="color: #5D478B;">&lt;=</span> cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clk_ave_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #00008B; font-style: italic;">//first cycle: 4 source clk cycle</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">0</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">0</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #00008B; font-style: italic;">//2nd cycle: 3 source clk cycle</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>MUL2_DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">+</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>MUL2_DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">+</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_ave_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -333,18 +333,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clk_adjust_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #00008B; font-style: italic;">// este reloj solo sirve para ajustar un ciclo de trabajo consistente</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #00008B; font-style: italic;">// este reloj solo sirve para ajustar la relación de división precisa consistente</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>MUL2_DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">+</span><span style="color: #ff0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>MUL2_DIV_CLK<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">+</span><span style="color: #FF0055;">1</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_adjust_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -368,8 +368,8 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span> frac_divisor<br/>
   <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            SOURCE_NUM <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">76</span> <span style="color: #5D478B;">,</span> <span style="color: #00008B; font-style: italic;">//cycles in source clock</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            DEST_NUM   <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">10</span>  <span style="color: #00008B; font-style: italic;">//cycles in destination clock</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            SOURCE_NUM <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">76</span> <span style="color: #5D478B;">,</span> <span style="color: #00008B; font-style: italic;">//cycles in source clock</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">parameter</span>            DEST_NUM   <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">10</span>  <span style="color: #00008B; font-style: italic;">//cycles in destination clock</span><br/>
    <span style="color: #9F79EE;">)</span><br/>
    <span style="color: #9F79EE;">(</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">input</span>               rstn <span style="color: #5D478B;">,</span><br/>
@@ -379,25 +379,25 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
   <br/>
    <span style="color: #00008B; font-style: italic;">//Parámetro de división por 7, parámetro de división por 8, diferencia de conteo</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    SOURCE_DIV <span style="color: #5D478B;">=</span> SOURCE_NUM<span style="color: #5D478B;">/</span>DEST_NUM <span style="color: #5D478B;">;</span> <br/>
-   <span style="color: #A52A2A; font-weight: bold;">parameter</span>    DEST_DIV   <span style="color: #5D478B;">=</span> SOURCE_DIV <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span> <br/>
+   <span style="color: #A52A2A; font-weight: bold;">parameter</span>    DEST_DIV   <span style="color: #5D478B;">=</span> SOURCE_DIV <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span> <br/>
    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    DIFF_ACC   <span style="color: #5D478B;">=</span> SOURCE_NUM <span style="color: #5D478B;">-</span> SOURCE_DIV<span style="color: #5D478B;">*</span>DEST_NUM <span style="color: #5D478B;">;</span><br/>
 <br/>
 <br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            cnt_end_r <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Período de división variable</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            main_cnt <span style="color: #5D478B;">;</span>   <span style="color: #00008B; font-style: italic;">//Contador principal</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            cnt_end_r <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Período de división variable</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            main_cnt <span style="color: #5D478B;">;</span>   <span style="color: #00008B; font-style: italic;">//Contador principal</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clk_frac_r <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//Salida de reloj, el número de ciclos de nivel alto es 1</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          main_cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
-         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>main_cnt <span style="color: #5D478B;">==</span> cnt_end_r<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          main_cnt    <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
-         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         main_cnt    <span style="color: #5D478B;">&lt;=</span> main_cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
-         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+         main_cnt    <span style="color: #5D478B;">&lt;=</span> main_cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+         clk_frac_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #00008B; font-style: italic;">//Reloj de salida</span><br/>
@@ -406,13 +406,13 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
    <span style="color: #A52A2A; font-weight: bold;">wire</span>         diff_cnt_en     <span style="color: #5D478B;">=</span> main_cnt <span style="color: #5D478B;">==</span> cnt_end_r <span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">//Lógica del acumulador de diferencia</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            diff_cnt_r <span style="color: #5D478B;">;</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>           diff_cnt <span style="color: #5D478B;">=</span> diff_cnt_r <span style="color: #5D478B;">&gt;=</span> DEST_NUM <span style="color: #5D478B;">?</span><br/>
-                                   diff_cnt_r <span style="color: #5D478B;">-</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">+</span> DIFF_ACC <span style="color: #5D478B;">:</span> <br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            diff_cnt_r <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>           diff_cnt <span style="color: #5D478B;">=</span> diff_cnt_r <span style="color: #5D478B;">&gt;=</span> DEST_NUM <span style="color: #5D478B;">?</span><br/>
+                                   diff_cnt_r <span style="color: #5D478B;">-</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">+</span> DIFF_ACC <span style="color: #5D478B;">:</span> <br/>
                                    diff_cnt_r <span style="color: #5D478B;">+</span> DIFF_ACC <span style="color: #5D478B;">;</span>                                <br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         diff_cnt_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+         diff_cnt_r <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>diff_cnt_en<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
          diff_cnt_r <span style="color: #5D478B;">&lt;=</span> diff_cnt <span style="color: #5D478B;">;</span><br/>
@@ -422,14 +422,14 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
    <span style="color: #00008B; font-style: italic;">//Lógica de control de la variable de período de división</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> SOURCE_DIV<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> SOURCE_DIV<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #00008B; font-style: italic;">//Cuando el acumulador de diferencia se desborda, modificar el período de división</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>diff_cnt <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> DEST_DIV<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>diff_cnt <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> DEST_DIV<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> SOURCE_DIV<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+         cnt_end_r      <span style="color: #5D478B;">&lt;=</span> SOURCE_DIV<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
@@ -440,7 +440,7 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
 <h3>Resumen de la división de frecuencia</h3><p>La división por números pares no utiliza lógica de doble flanco del reloj y puede completar una división de reloj con un ciclo de trabajo del 50%; es la situación de división más ideal.</p><p>Si la división por números impares necesita generar un reloj dividido con un ciclo de trabajo del 50%, se debe utilizar la lógica de doble flanco del reloj. Si no se requiere un ciclo de trabajo específico, el método de implementación es similar al de la división por números pares.</p>
 <p>La división de frecuencia semientera es un tipo especial de división de frecuencia fraccionaria y puede diseñarse con lógica de doble flanco. Al integrar dos señales de reloj de doble flanco en una única señal de reloj de salida mediante cierta lógica, se recomienda no utilizar lógica de selección, ya que es propensa a producir glitches y añade cierta incertidumbre al circuito. Por ejemplo, la siguiente descripción no es recomendable.</p>
 <div class="example"><div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">assign</span> clk_div3p5 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">||</span> cnt <span style="color: #5D478B;">==</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> clk_ave_r <br/>
+<span style="color: #A52A2A; font-weight: bold;">assign</span> clk_div3p5 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>cnt <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">||</span> cnt <span style="color: #5D478B;">==</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> clk_ave_r <br/>
                                           <span style="color: #5D478B;">:</span> clk_adjust_r <span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p>La idea básica de la división de frecuencia fraccionaria es que la frecuencia promedio del reloj de salida durante un período de tiempo cumpla con el requisito de división. Pero considerando la fluctuación de fase, también es necesario realizar una operación de promedio sobre la lógica de división cuyo coeficiente de división cambia.</p>
@@ -470,7 +470,7 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -515,7 +515,7 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -554,7 +554,7 @@ N  + M   = 10 </pre><p>Donde 7 es la división entera y N es el número de veces
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -765,7 +765,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

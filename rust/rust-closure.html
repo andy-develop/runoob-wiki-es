@@ -299,12 +299,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
     <span style="color: #a50; font-style: italic;">// Clausura: se omiten las anotaciones de tipo, el compilador lo infiere automáticamente</span><br/>
-    <span style="color: #708;">let</span> add_one <span style="">=</span> <span style="">|</span>x<span style="">|</span> x <span style="">+</span> <span style="color: #0000dd;">1</span><span style="">;</span><br/>
-    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"add_one(4) = {}"</span><span style="">,</span> add_one<span style="">(</span><span style="color: #0000dd;">4</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 5</span><br/>
+    <span style="color: #708;">let</span> add_one <span style="">=</span> <span style="">|</span>x<span style="">|</span> x <span style="">+</span> <span style="color: #0000DD;">1</span><span style="">;</span><br/>
+    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"add_one(4) = {}"</span><span style="">,</span> add_one<span style="">(</span><span style="color: #0000DD;">4</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 5</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Clausura: anotación explícita de los tipos de parámetros y retorno</span><br/>
     <span style="color: #708;">let</span> multiply <span style="">=</span> <span style="">|</span>a<span style="">:</span> <span style="color: #05a;">i32</span><span style="">,</span> b<span style="">:</span> <span style="color: #05a;">i32</span><span style="">|</span> <span style="">-&gt;</span> <span style="color: #05a;">i32</span> <span style="">{</span> a <span style="">*</span> b <span style="">}</span><span style="">;</span><br/>
-    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"multiply(3, 7) = {}"</span><span style="">,</span> multiply<span style="">(</span><span style="color: #0000dd;">3</span><span style="">,</span> <span style="color: #0000dd;">7</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 21</span><br/>
+    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"multiply(3, 7) = {}"</span><span style="">,</span> multiply<span style="">(</span><span style="color: #0000DD;">3</span><span style="">,</span> <span style="color: #0000DD;">7</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 21</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Una clausura de varias líneas requiere llaves</span><br/>
     <span style="color: #708;">let</span> greet <span style="">=</span> <span style="">|</span>name<span style="">:</span> <span style="">&amp;</span><span style="color: #05a;">str</span><span style="">|</span> <span style="">{</span><br/>
@@ -344,10 +344,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Si la clausura necesita modificar la variable capturada, Rust la captura mediante una referencia mutable. En este caso, la propia clausura debe declararse como `mut`.<code>mut</code>。</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> <span style="color: #708;">mut</span> counter <span style="">=</span> <span style="color: #0000dd;">0</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> <span style="color: #708;">mut</span> counter <span style="">=</span> <span style="color: #0000DD;">0</span><span style="">;</span><br/>
     <span style="color: #a50; font-style: italic;">// La clausura captura `counter` con `&amp;mut`; la propia clausura también debe declararse como `mut`</span><br/>
     <span style="color: #708;">let</span> <span style="color: #708;">mut</span> inc <span style="">=</span> <span style="">||</span> <span style="">{</span><br/>
-        counter <span style="">+=</span> <span style="color: #0000dd;">1</span><span style="">;</span><br/>
+        counter <span style="">+=</span> <span style="color: #0000DD;">1</span><span style="">;</span><br/>
     <span style="">}</span><span style="">;</span><br/>
     inc<span style="">(</span><span style="">)</span><span style="">;</span><br/>
     inc<span style="">(</span><span style="">)</span><span style="">;</span><br/>
@@ -390,9 +390,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     greet<span style="">(</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Segunda invocación, sigue funcionando</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Clausura FnMut: necesita modificar la variable capturada</span><br/>
-    <span style="color: #708;">let</span> <span style="color: #708;">mut</span> count <span style="">=</span> <span style="color: #0000dd;">0</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> <span style="color: #708;">mut</span> count <span style="">=</span> <span style="color: #0000DD;">0</span><span style="">;</span><br/>
     <span style="color: #708;">let</span> <span style="color: #708;">mut</span> increment <span style="">=</span> <span style="">||</span> <span style="">{</span><br/>
-        count <span style="">+=</span> <span style="color: #0000dd;">1</span><span style="">;</span><br/>
+        count <span style="">+=</span> <span style="color: #0000DD;">1</span><span style="">;</span><br/>
         count<br/>
     <span style="">}</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"increment() = {}"</span><span style="">,</span> increment<span style="">(</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 1</span><br/>
@@ -423,12 +423,12 @@ where<br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> double <span style="">=</span> <span style="">|</span>x<span style="">|</span> x <span style="">*</span> <span style="color: #0000dd;">2</span><span style="">;</span><br/>
-    <span style="color: #708;">let</span> result <span style="">=</span> apply<span style="">(</span><span style="color: #0000dd;">5</span><span style="">,</span> double<span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> double <span style="">=</span> <span style="">|</span>x<span style="">|</span> x <span style="">*</span> <span style="color: #0000DD;">2</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> result <span style="">=</span> apply<span style="">(</span><span style="color: #0000DD;">5</span><span style="">,</span> double<span style="">)</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"Result: {}"</span><span style="">,</span> result<span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: Result: 10</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// También se puede pasar una clausura anónima directamente</span><br/>
-    <span style="color: #708;">let</span> result2 <span style="">=</span> apply<span style="">(</span><span style="color: #0000dd;">3</span><span style="">,</span> <span style="">|</span>x<span style="">|</span> x <span style="">+</span> <span style="color: #0000dd;">100</span><span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> result2 <span style="">=</span> apply<span style="">(</span><span style="color: #0000DD;">3</span><span style="">,</span> <span style="">|</span>x<span style="">|</span> x <span style="">+</span> <span style="color: #0000DD;">100</span><span style="">)</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"Result2: {}"</span><span style="">,</span> result2<span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: Result2: 103</span><br/>
 <span style="">}</span><br/>
 </div></div>
@@ -444,11 +444,11 @@ where<br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> add_five <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
-    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"5 + 3 = {}"</span><span style="">,</span> add_five<span style="">(</span><span style="color: #0000dd;">3</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 5 + 3 = 8</span><br/>
+    <span style="color: #708;">let</span> add_five <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
+    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"5 + 3 = {}"</span><span style="">,</span> add_five<span style="">(</span><span style="color: #0000DD;">3</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 5 + 3 = 8</span><br/>
 <br/>
-    <span style="color: #708;">let</span> add_ten <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000dd;">10</span><span style="">)</span><span style="">;</span><br/>
-    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"10 + 2 = {}"</span><span style="">,</span> add_ten<span style="">(</span><span style="color: #0000dd;">2</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 10 + 2 = 12</span><br/>
+    <span style="color: #708;">let</span> add_ten <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000DD;">10</span><span style="">)</span><span style="">;</span><br/>
+    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"10 + 2 = {}"</span><span style="">,</span> add_ten<span style="">(</span><span style="color: #0000DD;">2</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 10 + 2 = 12</span><br/>
 <span style="">}</span><br/>
 </div></div>
 <h4>Devolver cierres con Box&lt;dyn Fn&gt;</h4>
@@ -459,8 +459,8 @@ where<br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> add_ten <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000dd;">10</span><span style="">)</span><span style="">;</span><br/>
-    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"10 + 2 = {}"</span><span style="">,</span> add_ten<span style="">(</span><span style="color: #0000dd;">2</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 10 + 2 = 12</span><br/>
+    <span style="color: #708;">let</span> add_ten <span style="">=</span> make_adder<span style="">(</span><span style="color: #0000DD;">10</span><span style="">)</span><span style="">;</span><br/>
+    println<span style="">!</span><span style="">(</span><span style="color: #a11;">"10 + 2 = {}"</span><span style="">,</span> add_ten<span style="">(</span><span style="color: #0000DD;">2</span><span style="">)</span><span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 10 + 2 = 12</span><br/>
 <span style="">}</span><br/>
 </div></div>
 <table class="reference">
@@ -477,18 +477,18 @@ where<br/>
 <p>Los cierres se usan a menudo junto con métodos de iterador para procesar por lotes los elementos de una colección.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000dd;">1</span><span style="">,</span> <span style="color: #0000dd;">2</span><span style="">,</span> <span style="color: #0000dd;">3</span><span style="">,</span> <span style="color: #0000dd;">4</span><span style="">,</span> <span style="color: #0000dd;">5</span><span style="">]</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000DD;">1</span><span style="">,</span> <span style="color: #0000DD;">2</span><span style="">,</span> <span style="color: #0000DD;">3</span><span style="">,</span> <span style="color: #0000DD;">4</span><span style="">,</span> <span style="color: #0000DD;">5</span><span style="">]</span><span style="">;</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// map: transforma cada elemento</span><br/>
     <span style="color: #708;">let</span> squared<span style="">:</span> Vec<span style="">&lt;</span>i32<span style="">&gt;</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.map<span style="">(</span><span style="">|</span>x<span style="">|</span> x <span style="">*</span> x<span style="">)</span>.collect<span style="">(</span><span style="">)</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"cuadrado: {:?}"</span><span style="">,</span> squared<span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: [1, 4, 9, 16, 25]</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// filter: filtra los elementos que cumplen la condición</span><br/>
-    <span style="color: #708;">let</span> even<span style="">:</span> Vec<span style="">&lt;&amp;</span>i32<span style="">&gt;</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.filter<span style="">(</span><span style="">|</span>x<span style="">|</span> <span style="">*</span>x <span style="">%</span> <span style="color: #0000dd;">2</span> <span style="">==</span> <span style="color: #0000dd;">0</span><span style="">)</span>.collect<span style="">(</span><span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> even<span style="">:</span> Vec<span style="">&lt;&amp;</span>i32<span style="">&gt;</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.filter<span style="">(</span><span style="">|</span>x<span style="">|</span> <span style="">*</span>x <span style="">%</span> <span style="color: #0000DD;">2</span> <span style="">==</span> <span style="color: #0000DD;">0</span><span style="">)</span>.collect<span style="">(</span><span style="">)</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"pares: {:?}"</span><span style="">,</span> even<span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: [2, 4]</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// fold: reduce la colección a un solo valor</span><br/>
-    <span style="color: #708;">let</span> sum<span style="">:</span> <span style="color: #05a;">i32</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.fold<span style="">(</span><span style="color: #0000dd;">0</span><span style="">,</span> <span style="">|</span>acc<span style="">,</span> x<span style="">|</span> acc <span style="">+</span> x<span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> sum<span style="">:</span> <span style="color: #05a;">i32</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.fold<span style="">(</span><span style="color: #0000DD;">0</span><span style="">,</span> <span style="">|</span>acc<span style="">,</span> x<span style="">|</span> acc <span style="">+</span> x<span style="">)</span><span style="">;</span><br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"suma: {}"</span><span style="">,</span> sum<span style="">)</span><span style="">;</span> <span style="color: #a50; font-style: italic;">// Salida: 15</span><br/>
 <span style="">}</span><br/>
 </div></div>
@@ -498,12 +498,12 @@ where<br/>
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">thread</span><span style="">;</span><br/>
 <br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000dd;">1</span><span style="">,</span> <span style="color: #0000dd;">2</span><span style="">,</span> <span style="color: #0000dd;">3</span><span style="">,</span> <span style="color: #0000dd;">4</span><span style="">,</span> <span style="color: #0000dd;">5</span><span style="">]</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000DD;">1</span><span style="">,</span> <span style="color: #0000DD;">2</span><span style="">,</span> <span style="color: #0000DD;">3</span><span style="">,</span> <span style="color: #0000DD;">4</span><span style="">,</span> <span style="color: #0000DD;">5</span><span style="">]</span><span style="">;</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Crea un hilo para cada número; `move` mueve la propiedad de `num` al hilo</span><br/>
     <span style="color: #708;">let</span> handles<span style="">:</span> Vec<span style="">&lt;</span>_<span style="">&gt;</span> <span style="">=</span> nums.into_iter<span style="">(</span><span style="">)</span>.map<span style="">(</span><span style="">|</span>num<span style="">|</span> <span style="">{</span><br/>
         thread<span style="">::</span><span style="color: #164;">spawn</span><span style="">(</span>move <span style="">||</span> <span style="">{</span><br/>
-            num <span style="">*</span> <span style="color: #0000dd;">2</span><br/>
+            num <span style="">*</span> <span style="color: #0000DD;">2</span><br/>
         <span style="">}</span><span style="">)</span><br/>
     <span style="">}</span><span style="">)</span>.collect<span style="">(</span><span style="">)</span><span style="">;</span><br/>
 <br/>
@@ -518,10 +518,10 @@ where<br/>
 <p>Los cierres pueden devolver<code>Result</code> 或 <code>Option</code>tipos, y junto con los métodos de iterador implementan una lógica de manejo de errores concisa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000dd;">3</span><span style="">,</span> <span style="">-</span><span style="color: #0000dd;">1</span><span style="">,</span> <span style="color: #0000dd;">4</span><span style="">,</span> <span style="">-</span><span style="color: #0000dd;">5</span><span style="">,</span> <span style="color: #0000dd;">9</span><span style="">]</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> nums <span style="">=</span> vec<span style="">!</span><span style="">[</span><span style="color: #0000DD;">3</span><span style="">,</span> <span style="">-</span><span style="color: #0000DD;">1</span><span style="">,</span> <span style="color: #0000DD;">4</span><span style="">,</span> <span style="">-</span><span style="color: #0000DD;">5</span><span style="">,</span> <span style="color: #0000DD;">9</span><span style="">]</span><span style="">;</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Usa un cierre para encontrar el primer número positivo</span><br/>
-    <span style="color: #708;">let</span> first_positive <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.find<span style="">(</span><span style="">|&amp;</span>amp<span style="">;&amp;</span>amp<span style="">;</span>x<span style="">|</span> x <span style="">&gt;</span> <span style="color: #0000dd;">0</span><span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> first_positive <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.find<span style="">(</span><span style="">|&amp;</span>amp<span style="">;&amp;</span>amp<span style="">;</span>x<span style="">|</span> x <span style="">&gt;</span> <span style="color: #0000DD;">0</span><span style="">)</span><span style="">;</span><br/>
     <span style="color: #708;">match</span> first_positive <span style="">{</span><br/>
         Some<span style="">(</span><span style="">&amp;</span>amp<span style="">;</span>n<span style="">)</span> <span style="">=&gt;</span> println<span style="">!</span><span style="">(</span><span style="color: #a11;">"primer número positivo: {}"</span><span style="">,</span> n<span style="">)</span><span style="">,</span> <span style="color: #a50; font-style: italic;">// Salida: primer número positivo: 3</span><br/>
         None <span style="">=&gt;</span> println<span style="">!</span><span style="">(</span><span style="color: #a11;">"sin números positivos"</span><span style="">)</span><span style="">,</span><br/>
@@ -529,8 +529,8 @@ where<br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Usa cierres para filtrar y transformar, junto con `Result` para manejar posibles errores</span><br/>
     <span style="color: #708;">let</span> results<span style="">:</span> Vec<span style="">&lt;</span>Result<span style="">&lt;</span><span style="color: #05a;">i32</span><span style="">,</span> <span style="">&amp;</span>amp<span style="">;</span>str<span style="">&gt;&gt;</span> <span style="">=</span> nums.iter<span style="">(</span><span style="">)</span>.map<span style="">(</span><span style="">|&amp;</span>amp<span style="">;</span>n<span style="">|</span> <span style="">{</span><br/>
-        <span style="color: #708;">if</span> n <span style="">&gt;</span> <span style="color: #0000dd;">0</span> <span style="">{</span><br/>
-            Ok<span style="">(</span>n <span style="">*</span> <span style="color: #0000dd;">10</span><span style="">)</span><br/>
+        <span style="color: #708;">if</span> n <span style="">&gt;</span> <span style="color: #0000DD;">0</span> <span style="">{</span><br/>
+            Ok<span style="">(</span>n <span style="">*</span> <span style="color: #0000DD;">10</span><span style="">)</span><br/>
         <span style="">}</span> <span style="color: #708;">else</span> <span style="">{</span><br/>
             Err<span style="">(</span><span style="color: #a11;">"no se pueden procesar números negativos"</span><span style="">)</span><br/>
         <span style="">}</span><br/>
@@ -579,7 +579,7 @@ where<br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> num <span style="">=</span> <span style="color: #0000dd;">5</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> num <span style="">=</span> <span style="color: #0000DD;">5</span><span style="">;</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Define un cierre: calcula el cuadrado de un número</span><br/>
     <span style="color: #708;">let</span> square <span style="">=</span> <span style="">|</span>x<span style="">|</span> x <span style="">*</span> x<span style="">;</span><br/>
@@ -635,7 +635,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -680,7 +680,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -719,7 +719,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -938,7 +938,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

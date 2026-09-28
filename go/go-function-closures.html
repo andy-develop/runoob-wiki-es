@@ -283,15 +283,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Go admite funciones anónimas, que pueden usarse como cierres. Una función anónima es una declaración o expresión "en línea". Su ventaja es que puede usar directamente las variables dentro de la función sin tener que declararlas.</p><p>Una función anónima es una función sin nombre, generalmente se usa para definir funciones dentro de otra función o para pasarse como parámetro de función.</p>
 <p>En el siguiente ejemplo, creamos la función getSequence(), que devuelve otra función. El propósito de esta función es incrementar la variable i dentro del cierre. El código es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> getSequence<span style="color: #339933;">()</span> <span style="color: #993333;">func</span><span style="color: #339933;">()</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-   <span style="">i</span><span style="color: #339933;">:=</span><span style="color: #cc66cc;">0</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">return</span> <span style="color: #993333;">func</span><span style="color: #339933;">()</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-      <span style="">i</span><span style="color: #339933;">+=</span><span style="color: #cc66cc;">1</span><br/>
-     <span style="color: #b1b100; font-weight: bold;">return</span> <span style="">i</span>  <br/>
+   <span style="">i</span><span style="color: #339933;">:=</span><span style="color: #CC66CC;">0</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">return</span> <span style="color: #993333;">func</span><span style="color: #339933;">()</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
+      <span style="">i</span><span style="color: #339933;">+=</span><span style="color: #CC66CC;">1</span><br/>
+     <span style="color: #B1B100; font-weight: bold;">return</span> <span style="">i</span>  <br/>
    <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
@@ -319,41 +319,41 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 2
 </pre><p>En el siguiente ejemplo definimos varias funciones anónimas y mostramos cómo asignar una función anónima a una variable, usar funciones anónimas dentro de una función y pasarlas como argumentos a otras funciones.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Definir una función anónima y asignarla a la variable add</span><br/>
     add <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> a <span style="color: #339933;">+</span> b<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> a <span style="color: #339933;">+</span> b<br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Llamar a la función anónima</span><br/>
-    result <span style="color: #339933;">:=</span> add<span style="color: #339933;">(</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"3 + 5 ="</span><span style="color: #339933;">,</span> result<span style="color: #339933;">)</span><br/>
+    result <span style="color: #339933;">:=</span> add<span style="color: #339933;">(</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"3 + 5 ="</span><span style="color: #339933;">,</span> result<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Usar una función anónima dentro de una función</span><br/>
     multiply <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>x<span style="color: #339933;">,</span> y <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> x <span style="color: #339933;">*</span> y<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> x <span style="color: #339933;">*</span> y<br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
-    product <span style="color: #339933;">:=</span> multiply<span style="color: #339933;">(</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"4 * 6 ="</span><span style="color: #339933;">,</span> product<span style="color: #339933;">)</span><br/>
+    product <span style="color: #339933;">:=</span> multiply<span style="color: #339933;">(</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">6</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"4 * 6 ="</span><span style="color: #339933;">,</span> product<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Pasar una función anónima como argumento a otras funciones</span><br/>
     calculate <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>operation <span style="color: #993333;">func</span><span style="color: #339933;">(</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">int</span><span style="color: #339933;">,</span> x<span style="color: #339933;">,</span> y <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> operation<span style="color: #339933;">(</span>x<span style="color: #339933;">,</span> y<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> operation<span style="color: #339933;">(</span>x<span style="color: #339933;">,</span> y<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
-    sum <span style="color: #339933;">:=</span> calculate<span style="color: #339933;">(</span>add<span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"2 + 8 ="</span><span style="color: #339933;">,</span> sum<span style="color: #339933;">)</span><br/>
+    sum <span style="color: #339933;">:=</span> calculate<span style="color: #339933;">(</span>add<span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"2 + 8 ="</span><span style="color: #339933;">,</span> sum<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// También se puede definir una función anónima directamente en la llamada a una función</span><br/>
     difference <span style="color: #339933;">:=</span> calculate<span style="color: #339933;">(</span><span style="color: #993333;">func</span><span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> a <span style="color: #339933;">-</span> b<br/>
-    <span style="color: #339933;">},</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"10 - 4 ="</span><span style="color: #339933;">,</span> difference<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> a <span style="color: #339933;">-</span> b<br/>
+    <span style="color: #339933;">},</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"10 - 4 ="</span><span style="color: #339933;">,</span> difference<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
@@ -396,7 +396,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -441,7 +441,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -589,7 +589,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
@@ -808,7 +808,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

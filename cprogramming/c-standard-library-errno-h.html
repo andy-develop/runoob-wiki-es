@@ -356,12 +356,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #05a;">FILE</span> <span style="color: #000040;">*</span>file <span style="color: #000080;">=</span> <span style="color: #05a;">fopen</span><span style="color: #008000;">(</span><span style="color: #a11;">"nonexistent_file.txt"</span>, <span style="color: #a11;">"r"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>file <span style="color: #000080;">==</span> <span style="color: #05a;">NULL</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">printf</span><span style="color: #008000;">(</span><span style="color: #a11;">"Error opening file: %s<span style="color: #000099; font-weight: bold;">\n</span>"</span>, <span style="color: #05a;">strerror</span><span style="color: #008000;">(</span><span style="color: #05a;">errno</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Código de manejo de archivos</span><br/>
     <span style="color: #05a;">fclose</span><span style="color: #008000;">(</span>file<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <p>En este ejemplo, si<code>fopen</code>la función falla,<code>errno</code>se establecerá al código de error correspondiente.<code>strerror</code>La función se utiliza para convertir<code>errno</code>en un mensaje de error legible por humanos.</p><h3>Consideraciones</h3><ol><li><strong>Seguridad de hilos</strong>: En programas multihilo,<code>errno</code>generalmente se implementa como almacenamiento local de hilo (Thread-Local Storage, TLS), para garantizar que cada hilo tenga un código de error independiente.</li><li><strong>Valor inicial</strong>: En caso de llamadas exitosas, las funciones de biblioteca normalmente no modifican<code>errno</code>el valor de. Por lo tanto, antes de verificar errores, se debe asegurar que<code>errno</code>esté establecido en 0.</li><li><strong>Rango de códigos de error</strong>: Diferentes sistemas operativos e implementaciones de la biblioteca estándar de C pueden definir códigos de error adicionales. Los programas deben evitar depender de los valores numéricos de códigos de error específicos.</li></ol><h3>Recomendaciones para el manejo de errores</h3><ol><li><strong>Verificar el valor de retorno</strong>: Siempre verifique el valor de retorno al llamar a funciones que pueden fallar.</li><li><strong>Establecer<code>errno</code>a 0</strong>: Antes de llamar a una función, se puede<code>errno</code>establecer a 0, para verificar después de la llamada si<code>errno</code>ha sido modificado.</li><li><strong>Usar<code>strerror</code></strong>: Mediante<code>strerror</code> 将 <code>errno</code>convertir a una cadena legible, facilitando la depuración y el registro.</li></ol><p>En resumen,<code>&lt;errno.h&gt;</code>proporciona una forma estandarizada de informar y manejar errores en los programas, haciendo que el código de manejo de errores sea más consistente y mantenible.</p>
@@ -406,7 +406,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -451,7 +451,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -490,7 +490,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -709,7 +709,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

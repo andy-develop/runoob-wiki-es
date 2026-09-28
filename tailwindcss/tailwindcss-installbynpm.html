@@ -300,9 +300,9 @@ module.<span style="color: #660066;">exports</span> <span style="color: #339933;
 </div></div>
 <h3>Añadir las directivas de Tailwind al archivo CSS</h3><p>En tu archivo CSS principal<span class="marked">src/input.css</span>(si no existe, créalo) añade cada módulo de funcionalidad de Tailwind mediante la directiva @tailwind.</p>
 <div class="example"><h2 class="example">Código del archivo src/input.css:</h2> <div class="example_code">
-<span style="color: #a1a100;">@tailwind base;</span><br/>
-<span style="color: #a1a100;">@tailwind components;</span><br/>
-<span style="color: #a1a100;">@tailwind utilities;</span><br/>
+<span style="color: #A1A100;">@tailwind base;</span><br/>
+<span style="color: #A1A100;">@tailwind components;</span><br/>
+<span style="color: #A1A100;">@tailwind utilities;</span><br/>
 </div></div>
 <h3>Iniciar el proceso de compilación de Tailwind CLI</h3>Ejecuta la herramienta CLI para escanear las clases en los archivos de plantilla y compilar el CSS.<pre>
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch</pre>
@@ -311,16 +311,16 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch</pre>
 <span style="color: #170;">&lt;!doctype html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"UTF-8"</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">name</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"viewport"</span> <span style="color: #00c;">content</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"width=device-width, initial-scale=1.0"</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"./output.css"</span> <span style="color: #00c;">rel</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"stylesheet"</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"UTF-8"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">name</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"viewport"</span> <span style="color: #00c;">content</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"width=device-width, initial-scale=1.0"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"./output.css"</span> <span style="color: #00c;">rel</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"stylesheet"</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"text-3xl font-bold underline"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"text-3xl font-bold underline"</span>&gt;</span><br/>
     Hello world!<br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 </div></div><p>Los pasos anteriores se aplican a la mayoría de los proyectos frontend modernos, ya sea que uses Vue, React u otros frameworks. Asegúrate de incluir el archivo CSS compilado en el proceso de compilación para que los estilos de Tailwind CSS se apliquen correctamente a tu proyecto.</p>
 <hr/>
 <h2>Usar PostCSS</h2>
@@ -349,9 +349,9 @@ module.<span style="color: #660066;">exports</span> <span style="color: #339933;
 <span style="color: #009900;">}</span><br/>
 </div></div><h3>4. Añadir las directivas de Tailwind en el archivo CSS</h3><p>En el archivo CSS principal, añade las siguientes tres directivas centrales de Tailwind para incluir estilos base, estilos de componentes y estilos de clases de utilidad.</p>
 <div class="example"><h2 class="example">Código del archivo main.css:</h2> <div class="example_code">
-<span style="color: #a1a100;">@tailwind base;</span><br/>
-<span style="color: #a1a100;">@tailwind components;</span><br/>
-<span style="color: #a1a100;">@tailwind utilities;</span><br/>
+<span style="color: #A1A100;">@tailwind base;</span><br/>
+<span style="color: #A1A100;">@tailwind components;</span><br/>
+<span style="color: #A1A100;">@tailwind utilities;</span><br/>
 </div></div>
 <h3>5. Iniciar el proceso de compilación</h3><p>Inicia el proceso de compilación del proyecto mediante npm run dev u otros comandos configurados en el archivo package.json.</p>
 <pre>
@@ -360,16 +360,16 @@ npm run dev</pre><h3>6. Usar Tailwind CSS en HTML</h3><p>Asegúrate de que el ar
 <span style="color: #170;">&lt;!doctype html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"UTF-8"</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">name</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"viewport"</span> <span style="color: #00c;">content</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"width=device-width, initial-scale=1.0"</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/dist/main.css"</span> <span style="color: #00c;">rel</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"stylesheet"</span>&gt;</span> <span style="color: #808080; font-style: italic;">&lt;!-- Incluir el archivo CSS compilado --&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"UTF-8"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">name</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"viewport"</span> <span style="color: #00c;">content</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"width=device-width, initial-scale=1.0"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/dist/main.css"</span> <span style="color: #00c;">rel</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"stylesheet"</span>&gt;</span> <span style="color: #808080; font-style: italic;">&lt;!-- Incluir el archivo CSS compilado --&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"text-3xl font-bold underline"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"text-3xl font-bold underline"</span>&gt;</span><br/>
     Hello world!<br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 </div></div>
 Otras extensiones
 </div>
@@ -405,7 +405,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -450,7 +450,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -489,7 +489,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -708,7 +708,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

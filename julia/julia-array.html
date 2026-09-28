@@ -175,8 +175,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Crear un arreglo unidimensional</h2>
 <p>El siguiente ejemplo crea un arreglo unidimensional simple:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> arr = <span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr = <span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span><br/>
@@ -184,10 +184,10 @@ julia<span style="color: #6bab5b;">&gt;</span> arr = <span style="color: #3b972e
 <p>En el ejemplo anterior creamos un arreglo unidimensional con 3 elementos, cada elemento es un entero de 64 bits; este arreglo unidimensional se vincula a la variable<span class="marked">arr</span>.</p>
 <p>Los tipos de los elementos del arreglo también pueden ser diferentes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> arr =<span style="color: #3b972e;">[</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"RUNOOB"</span>, <span style="color: black;">2.5</span>, pi<span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">4</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr =<span style="color: #3B972E;">[</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"RUNOOB"</span>, <span style="color: black;">2.5</span>, pi<span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">4</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
-  <span style="color: #c93d39;">"RUNOOB"</span><br/>
+  <span style="color: #C93D39;">"RUNOOB"</span><br/>
  <span style="color: black;">2.5</span><br/>
  π = <span style="color: black;">3.1415926535897</span>...<br/>
 <br/>
@@ -195,47 +195,47 @@ julia<span style="color: #6bab5b;">&gt;</span> arr =<span style="color: #3b972e;
 <p>En el ejemplo anterior creamos un arreglo unidimensional de 4 elementos con diferentes tipos,<strong>pi</strong>es una constante<strong>π</strong>cada elemento es un entero de 64 bits; este arreglo unidimensional se vincula a la variable<span class="marked">arr</span>.</p>
 <p>Por supuesto, también se puede forzar el tipo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"Taobao"</span>,<span style="color: #c93d39;">"RUNOOB"</span>,<span style="color: #c93d39;">"GOOGLE"</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: #c93d39;">"Taobao"</span><br/>
- <span style="color: #c93d39;">"RUNOOB"</span><br/>
- <span style="color: #c93d39;">"GOOGLE"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"Taobao"</span>,<span style="color: #C93D39;">"RUNOOB"</span>,<span style="color: #C93D39;">"GOOGLE"</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: #C93D39;">"Taobao"</span><br/>
+ <span style="color: #C93D39;">"RUNOOB"</span><br/>
+ <span style="color: #C93D39;">"GOOGLE"</span><br/>
 </div></div>
 <p>En el ejemplo anterior, el arreglo<strong>arr</strong>está restringido a solo enteros,<strong>arr2</strong>está restringido a solo cadenas.</p>
 <p>También podemos crear un arreglo vacío:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">[</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">[</span><span style="color: #3b972e;">]</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">[</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">[</span><span style="color: #3B972E;">]</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">[</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">[</span><span style="color: #3b972e;">]</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">[</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">[</span><span style="color: #3B972E;">]</span><br/>
 </div></div>
 <p>El arreglo creado se puede acceder directamente usando valores de índice; el primer valor tiene índice 1 (no 0), el segundo valor índice 2, y así sucesivamente; el último se puede representar con<span class="marked">end</span>para representarlo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr = <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr<span style="color: #3b972e;">[</span><span style="color: black;">2</span><span style="color: #3b972e;">]</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr<span style="color: #3B972E;">[</span><span style="color: black;">2</span><span style="color: #3B972E;">]</span><br/>
 <span style="color: black;">2</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"Taobao"</span>,<span style="color: #c93d39;">"RUNOOB"</span>,<span style="color: #c93d39;">"GOOGLE"</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: #c93d39;">"Taobao"</span><br/>
- <span style="color: #c93d39;">"RUNOOB"</span><br/>
- <span style="color: #c93d39;">"GOOGLE"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr2 = <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"Taobao"</span>,<span style="color: #C93D39;">"RUNOOB"</span>,<span style="color: #C93D39;">"GOOGLE"</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: #C93D39;">"Taobao"</span><br/>
+ <span style="color: #C93D39;">"RUNOOB"</span><br/>
+ <span style="color: #C93D39;">"GOOGLE"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr2<span style="color: #3b972e;">[</span><span style="color: black;">1</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"Taobao"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr2<span style="color: #3B972E;">[</span><span style="color: black;">1</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"Taobao"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr2<span style="color: #3b972e;">[</span><span style="color: #4266d5;font-weight:bold;">end</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"GOOGLE"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr2<span style="color: #3B972E;">[</span><span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"GOOGLE"</span><br/>
 </div></div>
 <hr/>
 <h2>Especificar tipo y dimensiones del arreglo</h2>
@@ -246,25 +246,25 @@ julia<span style="color: #6bab5b;">&gt;</span> arr2<span style="color: #3b972e;"
 <strong>dims...</strong>Puede ser una tupla simple o múltiple de dimensiones, o un conjunto de valores cuando las dimensiones se pasan como argumentos variables.</p>
 <p><strong>dims...</strong>Un número indica la cantidad de elementos; para múltiples dimensiones se usan comas<span class="marked">,</span>para separarlas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> array = <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span>undef, <span style="color: black;">3</span><span style="color: #3b972e;">)</span>    <span style="color: #888888;"># Indica un arreglo unidimensional, el arreglo tiene 3 elementos</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> array = <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span>undef, <span style="color: black;">3</span><span style="color: #3B972E;">)</span>    <span style="color: #888888;"># Indica un arreglo unidimensional, el arreglo tiene 3 elementos</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">4834342704</span><br/>
  <span style="color: black;">4377305096</span><br/>
           <span style="color: black;">0</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> array = <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span>undef, <span style="color: black;">3</span>, <span style="color: black;">3</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span>    <span style="color: #888888;"># Indica un arreglo tridimensional, cada dimensión tiene 3 elementos</span><br/>
-<span style="color: black;">3</span>×<span style="color: black;">3</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>, <span style="color: black;">3</span><span style="color: #3b972e;">}</span>:<br/>
-<span style="color: #3b972e;">[</span>:, :, <span style="color: black;">1</span><span style="color: #3b972e;">]</span> =<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> array = <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span>undef, <span style="color: black;">3</span>, <span style="color: black;">3</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span>    <span style="color: #888888;"># Indica un arreglo tridimensional, cada dimensión tiene 3 elementos</span><br/>
+<span style="color: black;">3</span>×<span style="color: black;">3</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>, <span style="color: black;">3</span><span style="color: #3B972E;">}</span>:<br/>
+<span style="color: #3B972E;">[</span>:, :, <span style="color: black;">1</span><span style="color: #3B972E;">]</span> =<br/>
  <span style="color: black;">4562265712</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
           <span style="color: black;">1</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
           <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
 <br/>
-<span style="color: #3b972e;">[</span>:, :, <span style="color: black;">2</span><span style="color: #3b972e;">]</span> =<br/>
+<span style="color: #3B972E;">[</span>:, :, <span style="color: black;">2</span><span style="color: #3B972E;">]</span> =<br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
 <br/>
-<span style="color: #3b972e;">[</span>:, :, <span style="color: black;">3</span><span style="color: #3b972e;">]</span> =<br/>
+<span style="color: #3B972E;">[</span>:, :, <span style="color: black;">3</span><span style="color: #3B972E;">]</span> =<br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
@@ -272,11 +272,11 @@ julia<span style="color: #6bab5b;">&gt;</span> array = <span style="color: #0000
 <p>En el ejemplo anterior, colocamos el tipo del arreglo entre llaves<span class="marked">{}</span>, undef se utiliza para configurar el arreglo sin inicializar con ningún valor conocido; por eso obtenemos números aleatorios en la salida.</p>
 <hr/><h2>Crear arreglos bidimensionales y matrices</h2><p>Podemos omitir las comas entre los elementos del arreglo<span class="marked">,</span>o usar dos puntos<span class="marked">;;</span>, y así podemos crear un arreglo bidimensional, como en el siguiente ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span> <span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">1</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span> <span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">1</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">2</span>  <span style="color: black;">3</span>  <span style="color: black;">4</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: black;">1</span><span style="color: #6bab5b;">;;</span> <span style="color: black;">2</span><span style="color: #6bab5b;">;;</span> <span style="color: black;">3</span><span style="color: #6bab5b;">;;</span> <span style="color: black;">4</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">1</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: black;">1</span><span style="color: #6BAB5B;">;;</span> <span style="color: black;">2</span><span style="color: #6BAB5B;">;;</span> <span style="color: black;">3</span><span style="color: #6BAB5B;">;;</span> <span style="color: black;">4</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">1</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">2</span>  <span style="color: black;">3</span>  <span style="color: black;">4</span><br/>
 </div></div>
 <p>
@@ -284,15 +284,15 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <p>Aunque solo tiene una fila, sigue siendo un arreglo bidimensional, porque Julia solo reconoce vectores columna y no reconoce los llamados vectores fila.</p>
 <p>Para agregar otra fila, solo necesitas agregar un punto y coma<span class="marked">;</span>, mira el siguiente ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span><span style="color: #6bab5b;">;</span> <span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span> <span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span>  <span style="color: black;">4</span><br/>
 </div></div>
 <p>También se pueden usar dos puntos<span class="marked">:</span>y espacios<span class="marked"> </span>para lograrlo, mira el siguiente ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: black;">1</span>:<span style="color: black;">2</span>  <span style="color: black;">3</span>:<span style="color: black;">4</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: black;">1</span>:<span style="color: black;">2</span>  <span style="color: black;">3</span>:<span style="color: black;">4</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">3</span><br/>
  <span style="color: black;">2</span>  <span style="color: black;">4</span><br/>
 </div></div>
@@ -300,8 +300,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <strong>Nota:</strong>La primera línea de salida<span class="marked">2×2 Matrix{Int64}:</span>, 2×2 indica una matriz de dos filas y dos columnas.</p>
 <p>También podemos, entre corchetes<span class="marked">[]</span>insertar múltiples arreglos unidimensionales de la misma longitud y separarlos con espacios para crear un arreglo bidimensional:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span><span style="color: #3b972e;">]</span> <span style="color: #3b972e;">[</span><span style="color: black;">3</span>,<span style="color: black;">4</span><span style="color: #3b972e;">]</span> <span style="color: #3b972e;">[</span><span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span><span style="color: #3B972E;">]</span> <span style="color: #3B972E;">[</span><span style="color: black;">3</span>,<span style="color: black;">4</span><span style="color: #3B972E;">]</span> <span style="color: #3B972E;">[</span><span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">3</span>  <span style="color: black;">5</span><br/>
  <span style="color: black;">2</span>  <span style="color: black;">4</span>  <span style="color: black;">6</span><br/>
 </div></div>
@@ -309,13 +309,13 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <strong>2x3</strong>Representa un arreglo de dos filas y tres columnas.</p>
 <p>A continuación, mediante el uso flexible de punto y coma<span class="marked">;</span>y espacios<span class="marked"> </span>creamos un arreglo bidimensional de dos filas y tres columnas, y otro de tres filas y dos columnas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span><span style="color: #6bab5b;">;</span><span style="color: black;">2</span><span style="color: #3b972e;">]</span> <span style="color: #3b972e;">[</span><span style="color: black;">3</span><span style="color: #6bab5b;">;</span><span style="color: black;">4</span><span style="color: #3b972e;">]</span> <span style="color: #3b972e;">[</span><span style="color: black;">5</span><span style="color: #6bab5b;">;</span><span style="color: black;">6</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span><span style="color: #6BAB5B;">;</span><span style="color: black;">2</span><span style="color: #3B972E;">]</span> <span style="color: #3B972E;">[</span><span style="color: black;">3</span><span style="color: #6BAB5B;">;</span><span style="color: black;">4</span><span style="color: #3B972E;">]</span> <span style="color: #3B972E;">[</span><span style="color: black;">5</span><span style="color: #6BAB5B;">;</span><span style="color: black;">6</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">3</span>  <span style="color: black;">5</span><br/>
  <span style="color: black;">2</span>  <span style="color: black;">4</span>  <span style="color: black;">6</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span><span style="color: #3b972e;">]</span><span style="color: #6bab5b;">;</span> <span style="color: #3b972e;">[</span><span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3b972e;">]</span><span style="color: #6bab5b;">;</span> <span style="color: #3b972e;">[</span><span style="color: black;">5</span> <span style="color: black;">6</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span><span style="color: #3B972E;">]</span><span style="color: #6BAB5B;">;</span> <span style="color: #3B972E;">[</span><span style="color: black;">3</span> <span style="color: black;">4</span><span style="color: #3B972E;">]</span><span style="color: #6BAB5B;">;</span> <span style="color: #3B972E;">[</span><span style="color: black;">5</span> <span style="color: black;">6</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>×<span style="color: black;">2</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span>  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span>  <span style="color: black;">4</span><br/>
  <span style="color: black;">5</span>  <span style="color: black;">6</span><br/>
@@ -324,8 +324,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <h2>Usar funciones de rango para crear arreglos</h2>
 <h3>Puntos suspensivos ...</h3><p>Se pueden usar puntos suspensivos<span class="marked">...</span>para crear un arreglo, como en el siguiente ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span><span style="color: black;">0</span>:<span style="color: black;">10</span>...<span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">11</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span><span style="color: black;">0</span>:<span style="color: black;">10</span>...<span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">11</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
   <span style="color: black;">0</span><br/>
   <span style="color: black;">1</span><br/>
   <span style="color: black;">2</span><br/>
@@ -345,8 +345,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <p>Esta función devuelve un arreglo.</p>
 <p>En el siguiente ejemplo, el valor inicial es 1, el paso es 2 y el valor final es 13:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span>:<span style="color: black;">2</span>:<span style="color: black;">13</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">7</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span>:<span style="color: black;">2</span>:<span style="color: black;">13</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">7</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
   <span style="color: black;">1</span><br/>
   <span style="color: black;">3</span><br/>
   <span style="color: black;">5</span><br/>
@@ -359,8 +359,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
 <pre>collect(element_type, start:step:stop)</pre>
 <p>El siguiente ejemplo crea un arreglo de tipo flotante:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">Float64</span>, <span style="color: black;">1</span>:<span style="color: black;">2</span>:<span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">Float64</span>, <span style="color: black;">1</span>:<span style="color: black;">2</span>:<span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1.0</span><br/>
  <span style="color: black;">3.0</span><br/>
  <span style="color: black;">5.0</span><br/>
@@ -375,31 +375,31 @@ range(;start, length, stop, step)
 
 <p>start es el valor inicial, step es el tamaño del paso, stop es el valor final, length es la longitud.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">100</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">100</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">100</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, stop=<span style="color: black;">100</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, stop=<span style="color: black;">100</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">100</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, step=<span style="color: black;">5</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">100</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, step=<span style="color: black;">5</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">100</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">5</span>:<span style="color: black;">496</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, step=<span style="color: black;">5</span>, stop=<span style="color: black;">100</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, step=<span style="color: black;">5</span>, stop=<span style="color: black;">100</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">5</span>:<span style="color: black;">96</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">10</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">101</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">10</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">101</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1.0</span>:<span style="color: black;">0.09</span>:<span style="color: black;">10.0</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">100</span>, step=<span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">100</span>, step=<span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">5</span>:<span style="color: black;">96</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span>stop=<span style="color: black;">10</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span>stop=<span style="color: black;">10</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">6</span>:<span style="color: black;">10</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span>stop=<span style="color: black;">10</span>, step=<span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span>stop=<span style="color: black;">10</span>, step=<span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">6</span>:<span style="color: black;">1</span>:<span style="color: black;">10</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> range<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">start</span>=<span style="color: black;">1</span>, step=<span style="color: black;">1</span>, stop=<span style="color: black;">10</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> range<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">start</span>=<span style="color: black;">1</span>, step=<span style="color: black;">1</span>, stop=<span style="color: black;">10</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span>:<span style="color: black;">1</span>:<span style="color: black;">10</span><br/>
 </div></div>
 <p>Si no se especifica la longitud length, y<span class="marked">stop - start</span>stop no es un múltiplo entero de step, se generará un rango que termina antes de stop.</p>
@@ -408,8 +408,8 @@ julia&gt; range(1, 3.5, step=2)
 1.0:2.0:3.0</pre>
 <p>Crear un arreglo usando range() y collect():</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span>range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>,stop=<span style="color: black;">10</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">10</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span>range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>,stop=<span style="color: black;">10</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">10</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
   <span style="color: black;">1</span><br/>
   <span style="color: black;">2</span><br/>
   <span style="color: black;">3</span><br/>
@@ -420,8 +420,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
   <span style="color: black;">8</span><br/>
   <span style="color: black;">9</span><br/>
  <span style="color: black;">10</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span>range<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">15</span>, stop=<span style="color: black;">150</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">15</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span>range<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: #0000A8;font-weight:bold;">length</span>=<span style="color: black;">15</span>, stop=<span style="color: black;">150</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">15</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3B972E;">}</span>:<br/>
    <span style="color: black;">1.0</span><br/>
   <span style="color: black;">11.642857142857142</span><br/>
   <span style="color: black;">22.285714285714285</span><br/>
@@ -444,8 +444,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
 <pre>A = [ F(x,y,...) for x=rx, y=ry, ... ]</pre>
 <p>F(x,y,...) toma cada valor de las variables x, y, etc., en la lista dada para calcular. Los valores pueden especificarse como cualquier objeto iterable, pero generalmente son rangos como 1:n o 2:(n-1), o valores de arreglo explícitos como [1.2, 3.4, 5.7]. El resultado es un arreglo denso N-dimensional, cuyas dimensiones se obtienen concatenando las dimensiones de los rangos de variables rx, ry, etc., y cada cálculo de F(x,y,...) devuelve un escalar.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span>n^<span style="color: black;">2</span> <span style="color: #4266d5;font-weight:bold;">for</span> n <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">10</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span>n^<span style="color: black;">2</span> <span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">10</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
    <span style="color: black;">1</span><br/>
    <span style="color: black;">4</span><br/>
    <span style="color: black;">9</span><br/>
@@ -459,8 +459,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 </div></div>
 <p>Crear un arreglo bidimensional:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span>n<span style="color: #6bab5b;">*</span>m <span style="color: #4266d5;font-weight:bold;">for</span> n <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span>, m <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">10</span>×<span style="color: black;">10</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span>n<span style="color: #6BAB5B;">*</span>m <span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span>, m <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">10</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">10</span>×<span style="color: black;">10</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
   <span style="color: black;">1</span>   <span style="color: black;">2</span>   <span style="color: black;">3</span>   <span style="color: black;">4</span>   <span style="color: black;">5</span>   <span style="color: black;">6</span>   <span style="color: black;">7</span>   <span style="color: black;">8</span>   <span style="color: black;">9</span>   <span style="color: black;">10</span><br/>
   <span style="color: black;">2</span>   <span style="color: black;">4</span>   <span style="color: black;">6</span>   <span style="color: black;">8</span>  <span style="color: black;">10</span>  <span style="color: black;">12</span>  <span style="color: black;">14</span>  <span style="color: black;">16</span>  <span style="color: black;">18</span>   <span style="color: black;">20</span><br/>
   <span style="color: black;">3</span>   <span style="color: black;">6</span>   <span style="color: black;">9</span>  <span style="color: black;">12</span>  <span style="color: black;">15</span>  <span style="color: black;">18</span>  <span style="color: black;">21</span>  <span style="color: black;">24</span>  <span style="color: black;">27</span>   <span style="color: black;">30</span><br/>
@@ -475,8 +475,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 <p>También se puede escribir la comprensión (de arreglo) sin corchetes, lo que produce un objeto llamado generador.</p>
 <p>El siguiente ejemplo crea un arreglo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span>n^<span style="color: black;">2</span> <span style="color: #4266d5;font-weight:bold;">for</span> n <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span>n^<span style="color: black;">2</span> <span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
   <span style="color: black;">1</span><br/>
   <span style="color: black;">4</span><br/>
   <span style="color: black;">9</span><br/>
@@ -485,7 +485,7 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
 </div></div>
 <p>La siguiente expresión suma una secuencia sin asignar memoria:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> sum<span style="color: #3b972e;">(</span><span style="color: black;">1</span>/n^<span style="color: black;">2</span> <span style="color: #4266d5;font-weight:bold;">for</span> n=<span style="color: black;">1</span>:<span style="color: black;">1000</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> sum<span style="color: #3B972E;">(</span><span style="color: black;">1</span>/n^<span style="color: black;">2</span> <span style="color: #4266D5;font-weight:bold;">for</span> n=<span style="color: black;">1</span>:<span style="color: black;">1000</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1.6439345666815615</span><br/>
 </div></div>
 <h2>Funciones básicas de arreglos en Julia</h2>
@@ -624,18 +624,18 @@ julia<span style="color: #6bab5b;">&gt;</span> sum<span style="color: #3b972e;">
 </table><p>
 <strong>zeros()</strong>crear una instancia de array, los valores iniciales de los elementos son todos 0:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> zeros<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">Int8</span>, <span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int8</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> zeros<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">Int8</span>, <span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int8</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> zeros<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">Int8</span>, <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int8</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> zeros<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">Int8</span>, <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int8</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
  <span style="color: black;">0</span>  <span style="color: black;">0</span>  <span style="color: black;">0</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> zeros<span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> zeros<span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">2</span>×<span style="color: black;">3</span> <span style="color: #0000A8;font-weight:bold;">Matrix</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">0.0</span>  <span style="color: black;">0.0</span>  <span style="color: black;">0.0</span><br/>
  <span style="color: black;">0.0</span>  <span style="color: black;">0.0</span>  <span style="color: black;">0.0</span><br/>
 </div></div> otras extensiones
@@ -671,7 +671,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -716,7 +716,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -769,7 +769,7 @@ Lista de notas
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>

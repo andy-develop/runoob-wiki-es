@@ -374,7 +374,7 @@ white-space: pre-wrap;
 </div>
 <h2>Uso</h2>
 <p>Cree un formulario HTML simple. Construya el formulario y asigne valores a id, action y method.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;form id="ff" method="post"&gt;
     &lt;div&gt;
         &lt;label for="name"&gt;Name:&lt;/label&gt;
@@ -388,7 +388,7 @@ white-space: pre-wrap;
 &lt;/form&gt;
 </pre>
 <p>Haga que el formulario sea un formulario de envío ajax.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#ff').form({
     url:...,
     onSubmit: function(){
@@ -403,7 +403,7 @@ $('#ff').form({
 $('#ff').submit();
 </pre>
 <p>Realizar una acción de envío</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 // call 'submit' method of form plugin to submit the form
 $('#ff').form('submit', {
     url:...,
@@ -417,7 +417,7 @@ $('#ff').form('submit', {
 });
 </pre>
 <p>Enviar con parámetros adicionales</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#ff').form('submit', {
     url:...,
     onSubmit: function(param){
@@ -429,14 +429,14 @@ $('#ff').form('submit', {
 <h4>Procesar la respuesta del envío</h4>
 <p>Enviar un formulario ajax es muy sencillo. Cuando se completa el envío, el usuario puede obtener los datos de respuesta. Tenga en cuenta que los datos de respuesta son datos sin procesar provenientes del servidor. Se requiere analizar los datos de respuesta para obtener los datos correctos.</p>
 <p>Por ejemplo, suponiendo que los datos de respuesta están en formato JSON, un ejemplo típico de datos de respuesta es el siguiente:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 {
     "success": true,
     "message": "Message sent successfully."
 }
 </pre>
 <p>Ahora procese la cadena JSON en la función de callback 'success'.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#ff').form('submit', {
     success: function(data){
         var data = eval('(' + data + ')'); // change the JSON string to javascript object
@@ -505,7 +505,7 @@ $('#ff').form('submit', {
 <td>submit</td>
 <td>options</td>
 <td>Realiza la acción de envío. El parámetro options es un objeto que contiene las siguientes propiedades:<br/>url: la URL de la acción<br/>onSubmit: función de callback antes del envío<br/>success: función de callback después del envío exitoso<br/>
-<br/>El siguiente ejemplo demuestra cómo enviar un formulario válido, evitando el envío duplicado del formulario.<pre style="color:#006600">
+<br/>El siguiente ejemplo demuestra cómo enviar un formulario válido, evitando el envío duplicado del formulario.<pre style="color:#0053A6">
 $.messager.progress();    // display the progress bar
 $('#ff').form('submit', {
     url: ...,
@@ -527,7 +527,7 @@ $('#ff').form('submit', {
 <td>load</td>
 <td>data</td>
 <td>Carga un registro para rellenar el formulario. El parámetro data puede ser de tipo cadena u objeto; una cadena se trata como una URL remota; de lo contrario, se trata como un registro local.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#ff').form('load','get_data.php');    // load from URL
 
 $('#ff').form('load',{
@@ -601,7 +601,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -646,7 +646,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -685,7 +685,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
@@ -904,7 +904,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

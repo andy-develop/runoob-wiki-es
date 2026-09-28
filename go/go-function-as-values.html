@@ -286,22 +286,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Asignar una función a una variable</h2>
 <p>Una función se puede asignar a una variable, y a través de esa variable se llama a la función:</p>
 <div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"math"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"math"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">/* Asignar la función anónima a la variable getSquareRoot */</span><br/>
     getSquareRoot <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>x <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Sqrt<span style="color: #339933;">(</span>x<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Sqrt<span style="color: #339933;">(</span>x<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Llamar a la función a través de la variable */</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>getSquareRoot<span style="color: #339933;">(</span><span style="color: #cc66cc;">9</span><span style="color: #339933;">))</span>   <span style="color: #666666; font-style: italic;">// Salida: 3</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>getSquareRoot<span style="color: #339933;">(</span><span style="color: #cc66cc;">16</span><span style="color: #339933;">))</span>  <span style="color: #666666; font-style: italic;">// Salida: 4</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>getSquareRoot<span style="color: #339933;">(</span><span style="color: #CC66CC;">9</span><span style="color: #339933;">))</span>   <span style="color: #666666; font-style: italic;">// Salida: 3</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>getSquareRoot<span style="color: #339933;">(</span><span style="color: #CC66CC;">16</span><span style="color: #339933;">))</span>  <span style="color: #666666; font-style: italic;">// Salida: 4</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de la ejecución del código anterior es:</p>
@@ -311,40 +311,40 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Pasar una función como argumento</h2>
 <p>Al pasar una función como argumento a otra función, el receptor debe declarar el parámetro de tipo de función correspondiente. El siguiente ejemplo define una<code>apply</code>función que recibe una función de operación y dos operandos, y realiza cualquier operación especificada sobre los dos números:</p>
 <div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"math"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"math"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">/* Definir una función que recibe un parámetro op de tipo función */</span><br/>
 <span style="color: #666666; font-style: italic;">/* El tipo de op es func(float64, float64) float64, lo que indica una función que acepta dos parámetros float64 y devuelve float64 */</span><br/>
 <span style="color: #993333;">func</span> apply<span style="color: #339933;">(</span>op <span style="color: #993333;">func</span><span style="color: #339933;">(</span><span style="color: #993333;">float64</span><span style="color: #339933;">,</span> <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span><span style="color: #339933;">,</span> a<span style="color: #339933;">,</span> b <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">return</span> op<span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">return</span> op<span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">/* Definir la función de suma */</span><br/>
     add <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> a <span style="color: #339933;">+</span> b<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> a <span style="color: #339933;">+</span> b<br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Definir la función de multiplicación */</span><br/>
     multiply <span style="color: #339933;">:=</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> a <span style="color: #339933;">*</span> b<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> a <span style="color: #339933;">*</span> b<br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Pasar la función add como argumento a apply */</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>apply<span style="color: #339933;">(</span>add<span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">))</span>       <span style="color: #666666; font-style: italic;">// Salida: 7</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>apply<span style="color: #339933;">(</span>add<span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">))</span>       <span style="color: #666666; font-style: italic;">// Salida: 7</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Pasar la función multiply como argumento a apply */</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>apply<span style="color: #339933;">(</span>multiply<span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">))</span>  <span style="color: #666666; font-style: italic;">// Salida: 12</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>apply<span style="color: #339933;">(</span>multiply<span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">))</span>  <span style="color: #666666; font-style: italic;">// Salida: 12</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* También se puede pasar directamente una función anónima */</span><br/>
     fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>apply<span style="color: #339933;">(</span><span style="color: #993333;">func</span><span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b <span style="color: #993333;">float64</span><span style="color: #339933;">)</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Pow<span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// a elevado a la potencia b</span><br/>
-    <span style="color: #339933;">},</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">))</span>                          <span style="color: #666666; font-style: italic;">// Salida: 1024</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Pow<span style="color: #339933;">(</span>a<span style="color: #339933;">,</span> b<span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// a elevado a la potencia b</span><br/>
+    <span style="color: #339933;">},</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">))</span>                          <span style="color: #666666; font-style: italic;">// Salida: 1024</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de la ejecución del código anterior es:</p>
@@ -355,27 +355,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Aplicación práctica: reglas de ordenación personalizadas</h2>
 <p>Una de las aplicaciones más comunes de las funciones como argumentos es personalizar las reglas de ordenación. La biblioteca estándar de Go<code>sort.Slice</code>acepta una función de comparación como parámetro:</p>
 <div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
-    <span style="color: #cc66cc;">"sort"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
+    <span style="color: #CC66CC;">"sort"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    nums <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">9</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">}</span><br/>
+    nums <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">9</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Pasar la función de comparación como argumento a sort.Slice para ordenar de menor a mayor */</span><br/>
     sort<span style="color: #339933;">.</span>Slice<span style="color: #339933;">(</span>nums<span style="color: #339933;">,</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span><span style="">i</span><span style="color: #339933;">,</span> j <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">bool</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> nums<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> &lt; nums<span style="color: #339933;">[</span>j<span style="color: #339933;">]</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> nums<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> &lt; nums<span style="color: #339933;">[</span>j<span style="color: #339933;">]</span><br/>
     <span style="color: #339933;">})</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Ascendente:"</span><span style="color: #339933;">,</span> nums<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: Ascendente: [1 2 3 5 8 9]</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Ascendente:"</span><span style="color: #339933;">,</span> nums<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: Ascendente: [1 2 3 5 8 9]</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Pasar una función de comparación diferente para ordenar de mayor a menor */</span><br/>
     sort<span style="color: #339933;">.</span>Slice<span style="color: #339933;">(</span>nums<span style="color: #339933;">,</span> <span style="color: #993333;">func</span><span style="color: #339933;">(</span><span style="">i</span><span style="color: #339933;">,</span> j <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">bool</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> nums<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> &gt; nums<span style="color: #339933;">[</span>j<span style="color: #339933;">]</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> nums<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> &gt; nums<span style="color: #339933;">[</span>j<span style="color: #339933;">]</span><br/>
     <span style="color: #339933;">})</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Descendente:"</span><span style="color: #339933;">,</span> nums<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: Descendente: [9 8 5 3 2 1]</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Descendente:"</span><span style="color: #339933;">,</span> nums<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: Descendente: [9 8 5 3 2 1]</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de la ejecución del código anterior es:</p>
@@ -416,7 +416,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -461,7 +461,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -590,7 +590,7 @@ func main(){
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -809,7 +809,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

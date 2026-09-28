@@ -379,23 +379,23 @@ white-space: pre-wrap;
 </ul>
 <h2>Uso</h2>
 <p>Cree la paginación mediante marcado.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="pp" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;"
     data-options="total:2000,pageSize:10"&gt;
 &lt;/div&gt;
 </pre>
 <p>Cree la paginación usando JavaScript.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="pp" style="background:#efefef;border:1px solid #ccc;"&gt;&lt;/div&gt;
 </pre>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#pp').pagination({
     total:2000,
     pageSize:10
 });
 </pre>
 <p>Vamos a crear una paginación ajax mediante los plugins panel y pagination. Cuando el usuario selecciona una nueva página, el panel mostrará el contenido correspondiente a esa página.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="content" class="easyui-panel" style="height:200px"
     data-options="href:'show_content.php?page=1'"&gt;
 &lt;/div&gt;
@@ -438,7 +438,7 @@ $('#pp').pagination({
 <tr>
 <td>pageList</td>
 <td>array</td>
-<td>El usuario puede cambiar el tamaño de página. La propiedad pageList define los tamaños a los que se puede cambiar.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>El usuario puede cambiar el tamaño de página. La propiedad pageList define los tamaños a los que se puede cambiar.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').pagination({
     pageList: [10,20,50,100]
 });
@@ -456,7 +456,7 @@ $('#pp').pagination({
 <td>buttons</td>
 <td>array,selector</td>
 <td>Define botones personalizados; valores posibles:<br/>1. Un array; cada botón contiene dos propiedades:<br/>iconCls: clase CSS que mostrará una imagen de fondo.<br/>handler: función de manejo cuando se hace clic en el botón.<br/>2. Un selector que indica el botón.<br/>
-<br/>Los botones pueden declararse mediante marcado:<pre style="color:#006600">
+<br/>Los botones pueden declararse mediante marcado:<pre style="color:#0053A6">
 &lt;div class="easyui-pagination" style="border:1px solid #ccc" data-options="
         total: 114,
         buttons: [{
@@ -467,7 +467,7 @@ $('#pp').pagination({
             handler:function(){alert('save')}
         }]"&gt;
 &lt;/div&gt;
-</pre>Los botones también pueden crearse usando JavaScript:<pre style="color:#006600">
+</pre>Los botones también pueden crearse usando JavaScript:<pre style="color:#0053A6">
 $('#pp').pagination({
     total: 114,
     buttons: [{
@@ -486,7 +486,7 @@ $('#pp').pagination({
 <td>layout</td>
 <td>array</td>
 <td>Definición del diseño de la paginación. Esta propiedad está disponible desde la versión 1.3.5.<br/>Los elementos de diseño incluyen uno o más de los siguientes valores:<br/>1. list: lista de tamaños de página.<br/>2. sep: separador de botones de página.<br/>3. first: primer botón.<br/>4. prev: botón anterior.<br/>5. next: botón siguiente.<br/>6. last: último botón.<br/>7. efresh: botón de actualizar.<br/>8. manual: campo de entrada manual de número de página.<br/>9. links: enlaces de números de página.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').pagination({
     layout:['first','links','last']
 });
@@ -542,7 +542,7 @@ $('#pp').pagination({
 <td>onSelectPage</td>
 <td>pageNumber, pageSize</td>
 <td>Se dispara cuando el usuario selecciona una nueva página. La función callback contiene dos parámetros:<br/>pageNumber: el nuevo número de página.<br/>pageSize: el nuevo tamaño de página.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').pagination({
     onSelectPage:function(pageNumber, pageSize){
         $(this).pagination('loading');
@@ -594,7 +594,7 @@ $('#pp').pagination({
 <tr>
 <td>refresh</td>
 <td>options</td>
-<td>Actualiza y muestra la información de paginación. Este método está disponible desde la versión 1.3.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Actualiza y muestra la información de paginación. Este método está disponible desde la versión 1.3.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').pagination('refresh');    // 刷新分页栏信息
 $('#pp').pagination('refresh',{    // 改变选项，并刷新分页栏信息
     total: 114,
@@ -606,7 +606,7 @@ $('#pp').pagination('refresh',{    // 改变选项，并刷新分页栏信�
 <tr>
 <td>select</td>
 <td>page</td>
-<td>Selecciona una nueva página. El índice de páginas comienza en 1. Este método está disponible desde la versión 1.3.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Selecciona una nueva página. El índice de páginas comienza en 1. Este método está disponible desde la versión 1.3.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').pagination('select');    // 刷新当前页面
 $('#pp').pagination('select', 2);    // 选择第二页
 </pre>
@@ -648,7 +648,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -693,7 +693,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -732,7 +732,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí.</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para registrarse</a></p>
@@ -951,7 +951,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

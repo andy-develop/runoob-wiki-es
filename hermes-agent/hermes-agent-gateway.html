@@ -304,10 +304,10 @@ hermes gateway setup</pre>
 hermes gateway<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Instalar como servicio de sistema a nivel de usuario (Linux systemd / macOS launchd)</span><br/>
-hermes gateway <span style="color: #c20cb9; font-weight: bold;">install</span><br/>
+hermes gateway <span style="color: #C20CB9; font-weight: bold;">install</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Linux: instalar como servicio del sistema que se inicia automáticamente al arrancar</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> hermes gateway <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #660033;">--system</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> hermes gateway <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #660033;">--system</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Control de servicios</span><br/>
 hermes gateway start       <span style="color: #666666; font-style: italic;"># Iniciar el servicio</span><br/>
@@ -464,7 +464,7 @@ agent:main:{platform}:{chat_type}:{chat_id}:{thread_id}:{user_id}
 <span style="color: #007800;">GATEWAY_ALLOWED_USERS</span>=<span style="color: #000000;">123456789</span>,<span style="color: #000000;">987654321</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Permitir a todos los usuarios (no recomendado para bots con acceso al terminal)</span><br/>
-<span style="color: #007800;">GATEWAY_ALLOW_ALL_USERS</span>=<span style="color: #c20cb9; font-weight: bold;">true</span><br/>
+<span style="color: #007800;">GATEWAY_ALLOW_ALL_USERS</span>=<span style="color: #C20CB9; font-weight: bold;">true</span><br/>
 </div>
 </div>
 <h3>Emparejamiento DM (alternativa a la lista blanca)</h3>
@@ -523,7 +523,7 @@ NO REPLY
 <span style="color: #666666; font-style: italic;"># ─── Gestión de la puerta de enlace ────────────────────────────────────────────────</span><br/>
 hermes gateway setup                  <span style="color: #666666; font-style: italic;"># Configuración interactiva de plataforma</span><br/>
 hermes gateway                        <span style="color: #666666; font-style: italic;"># Ejecución en primer plano (depuración)</span><br/>
-hermes gateway <span style="color: #c20cb9; font-weight: bold;">install</span>                <span style="color: #666666; font-style: italic;"># Instalar como servicio de usuario</span><br/>
+hermes gateway <span style="color: #C20CB9; font-weight: bold;">install</span>                <span style="color: #666666; font-style: italic;"># Instalar como servicio de usuario</span><br/>
 hermes gateway start <span style="color: #000000; font-weight: bold;">/</span> stop <span style="color: #000000; font-weight: bold;">/</span> restart <span style="color: #666666; font-style: italic;"># Control de servicios</span><br/>
 hermes gateway status                 <span style="color: #666666; font-style: italic;"># Ver el estado del servicio</span><br/>
 <br/>
@@ -534,7 +534,7 @@ hermes pairing revoke <span style="color: #000000; font-weight: bold;">&lt;</spa
 <br/>
 <span style="color: #666666; font-style: italic;"># ─── Comandos de barra dentro de la sesión ──────────────────────────────────────────</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>new                                  <span style="color: #666666; font-style: italic;"># Iniciar nueva sesión</span><br/>
-<span style="color: #000000; font-weight: bold;">/</span>model <span style="color: #7a0874; font-weight: bold;">[</span>Nombre<span style="color: #7a0874; font-weight: bold;">]</span>                         <span style="color: #666666; font-style: italic;"># Ver o cambiar el modelo</span><br/>
+<span style="color: #000000; font-weight: bold;">/</span>model <span style="color: #7A0874; font-weight: bold;">[</span>Nombre<span style="color: #7A0874; font-weight: bold;">]</span>                         <span style="color: #666666; font-style: italic;"># Ver o cambiar el modelo</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>retry                                <span style="color: #666666; font-style: italic;"># Reintentar el último mensaje</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>undo                                 <span style="color: #666666; font-style: italic;"># Deshacer la ronda de conversación anterior</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>stop                                 <span style="color: #666666; font-style: italic;"># Interrumpir la tarea actual</span><br/>
@@ -542,13 +542,13 @@ hermes pairing revoke <span style="color: #000000; font-weight: bold;">&lt;</spa
 <span style="color: #000000; font-weight: bold;">/</span>background <span style="color: #000000; font-weight: bold;">&lt;</span>Tarea<span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Tarea en segundo plano</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>status                               <span style="color: #666666; font-style: italic;"># Información de la sesión actual</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>usage                                <span style="color: #666666; font-style: italic;"># Uso de tokens</span><br/>
-<span style="color: #000000; font-weight: bold;">/</span>voice <span style="color: #7a0874; font-weight: bold;">[</span>on<span style="color: #000000; font-weight: bold;">/</span>off<span style="color: #000000; font-weight: bold;">/</span>tts<span style="color: #7a0874; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;"># Control de voz</span><br/>
+<span style="color: #000000; font-weight: bold;">/</span>voice <span style="color: #7A0874; font-weight: bold;">[</span>on<span style="color: #000000; font-weight: bold;">/</span>off<span style="color: #000000; font-weight: bold;">/</span>tts<span style="color: #7A0874; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;"># Control de voz</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>compress                             <span style="color: #666666; font-style: italic;"># Comprimir contexto</span><br/>
-<span style="color: #000000; font-weight: bold;">/</span>resume <span style="color: #7a0874; font-weight: bold;">[</span>Título<span style="color: #7a0874; font-weight: bold;">]</span>                         <span style="color: #666666; font-style: italic;"># Reanudar sesión</span><br/>
+<span style="color: #000000; font-weight: bold;">/</span>resume <span style="color: #7A0874; font-weight: bold;">[</span>Título<span style="color: #7A0874; font-weight: bold;">]</span>                         <span style="color: #666666; font-style: italic;"># Reanudar sesión</span><br/>
 <span style="color: #000000; font-weight: bold;">/&lt;</span>skill-name<span style="color: #000000; font-weight: bold;">&gt;</span>                         <span style="color: #666666; font-style: italic;"># Invocar habilidad</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>reload-mcp                           <span style="color: #666666; font-style: italic;"># Recargar MCP</span><br/>
 <span style="color: #000000; font-weight: bold;">/</span>update                               <span style="color: #666666; font-style: italic;"># Actualizar Hermes</span><br/>
-<span style="color: #000000; font-weight: bold;">/</span><span style="color: #7a0874; font-weight: bold;">help</span>                                 <span style="color: #666666; font-style: italic;"># Todos los comandos</span><br/>
+<span style="color: #000000; font-weight: bold;">/</span><span style="color: #7A0874; font-weight: bold;">help</span>                                 <span style="color: #666666; font-style: italic;"># Todos los comandos</span><br/>
 </div>
 </div> Otras extensiones
 </div>
@@ -584,7 +584,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -629,7 +629,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -668,7 +668,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -887,7 +887,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

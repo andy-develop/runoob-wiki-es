@@ -464,42 +464,42 @@ const {<br/>
   setCategory,<br/>
   fetchPosts<br/>
 } = usePosts()<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"home"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"search-bar"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"home"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"search-bar"</span>&gt;</span><br/>
       <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">input</span></span><br/>
-<span style="color: #170;">        v-model<span style="color: #66cc66;">=</span><span style="color: #a11;">"keyword"</span></span><br/>
-<span style="color: #170;">        <span style="color: #00c;">type</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"text"</span></span><br/>
-<span style="color: #170;">        <span style="color: #00c;">placeholder</span><span style="color: #66cc66;">=</span><span style="color: #a11;">Cargando...</span></span><br/>
-<span style="color: #170;">      <span style="color: #66cc66;">/</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">        v-model<span style="color: #66CC66;">=</span><span style="color: #a11;">"keyword"</span></span><br/>
+<span style="color: #170;">        <span style="color: #00c;">type</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"text"</span></span><br/>
+<span style="color: #170;">        <span style="color: #00c;">placeholder</span><span style="color: #66CC66;">=</span><span style="color: #a11;">Cargando...</span></span><br/>
+<span style="color: #170;">      <span style="color: #66CC66;">/</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
 <br/>
     <span style="color: #170;">&lt;CategoryFilter</span><br/>
-<span style="color: #170;">      :categories<span style="color: #66cc66;">=</span><span style="color: #a11;">"categories"</span></span><br/>
-<span style="color: #170;">      :active-category<span style="color: #66cc66;">=</span><span style="color: #a11;">"activeCategory"</span></span><br/>
-<span style="color: #170;">      @update-category<span style="color: #66cc66;">=</span><span style="color: #a11;">"setCategory"</span></span><br/>
-<span style="color: #170;">    <span style="color: #66cc66;">/</span>&gt;</span><br/>
+<span style="color: #170;">      :categories<span style="color: #66CC66;">=</span><span style="color: #a11;">"categories"</span></span><br/>
+<span style="color: #170;">      :active-category<span style="color: #66CC66;">=</span><span style="color: #a11;">"activeCategory"</span></span><br/>
+<span style="color: #170;">      @update-category<span style="color: #66CC66;">=</span><span style="color: #a11;">"setCategory"</span></span><br/>
+<span style="color: #170;">    <span style="color: #66CC66;">/</span>&gt;</span><br/>
 <br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"isLoading"</span>&gt;</span>Error de carga: {{ error }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"error"</span>&gt;</span>Reintentar<br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> @click<span style="color: #66cc66;">=</span><span style="color: #a11;">"fetchPosts"</span>&gt;</span>No hay artículos que coincidan<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"filteredArticles.length === 0"</span>&gt;</span>La página de detalles también puede reutilizar usePosts sin necesidad de escribir fetch de nuevo. Nota: debes importar por separado desde Vue<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-else <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article-grid"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"isLoading"</span>&gt;</span>Error de carga: {{ error }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"error"</span>&gt;</span>Reintentar<br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"fetchPosts"</span>&gt;</span>No hay artículos que coincidan<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"filteredArticles.length === 0"</span>&gt;</span>La página de detalles también puede reutilizar usePosts sin necesidad de escribir fetch de nuevo. Nota: debes importar por separado desde Vue<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-else <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article-grid"</span>&gt;</span><br/>
       <span style="color: #170;">&lt;BlogCard</span><br/>
-<span style="color: #170;">        v-<span style="color: #00c;">for</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article in filteredArticles"</span></span><br/>
-<span style="color: #170;">        :key<span style="color: #66cc66;">=</span><span style="color: #a11;">"article.id"</span></span><br/>
-<span style="color: #170;">        :<span style="color: #00c;">id</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article.id"</span></span><br/>
-<span style="color: #170;">        :<span style="color: #00c;">title</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article.title"</span></span><br/>
-<span style="color: #170;">        :<span style="color: #00c;">summary</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article.summary"</span></span><br/>
-<span style="color: #170;">        :date<span style="color: #66cc66;">=</span><span style="color: #a11;">"article.date"</span></span><br/>
-<span style="color: #170;">        :category<span style="color: #66cc66;">=</span><span style="color: #a11;">"article.category"</span></span><br/>
-<span style="color: #170;">      <span style="color: #66cc66;">/</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+<span style="color: #170;">        v-<span style="color: #00c;">for</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article in filteredArticles"</span></span><br/>
+<span style="color: #170;">        :key<span style="color: #66CC66;">=</span><span style="color: #a11;">"article.id"</span></span><br/>
+<span style="color: #170;">        :<span style="color: #00c;">id</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article.id"</span></span><br/>
+<span style="color: #170;">        :<span style="color: #00c;">title</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article.title"</span></span><br/>
+<span style="color: #170;">        :<span style="color: #00c;">summary</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article.summary"</span></span><br/>
+<span style="color: #170;">        :date<span style="color: #66CC66;">=</span><span style="color: #a11;">"article.date"</span></span><br/>
+<span style="color: #170;">        :category<span style="color: #66CC66;">=</span><span style="color: #a11;">"article.category"</span></span><br/>
+<span style="color: #170;">      <span style="color: #66CC66;">/</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <p>Ejemplo<code>computed</code>：</p>
@@ -518,19 +518,19 @@ const id = Number(route.params.id)<br/>
 const { isLoading, error, getArticleById } = usePosts()<br/>
 <br/>Cargando...<br/>
 const article = computed(() =&gt; getArticleById(id))<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"isLoading"</span>&gt;</span>Error de carga: {{ error }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"error"</span>&gt;</span>El artículo no existe<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-else-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"!article"</span>&gt;</span>Nota: si el usuario accede directamente a la URL de la página de detalles (por ejemplo, al actualizar la página), usePosts volverá a obtener los datos con fetch. Debido a que la página de inicio y la página de detalles son instancias de componentes diferentes, cada una al llamar a usePosts ejecutará el fetch dentro de onMounted y los datos no se comparten. Si necesitas compartir los mismos datos entre páginas, puedes elevar el estado a un store de Pinia, o invocarlo una vez en un componente de nivel superior y pasarlo hacia abajo con provide / inject.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"isLoading"</span>&gt;</span>Error de carga: {{ error }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"error"</span>&gt;</span>El artículo no existe<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-else-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"!article"</span>&gt;</span>Nota: si el usuario accede directamente a la URL de la página de detalles (por ejemplo, al actualizar la página), usePosts volverá a obtener los datos con fetch. Debido a que la página de inicio y la página de detalles son instancias de componentes diferentes, cada una al llamar a usePosts ejecutará el fetch dentro de onMounted y los datos no se comparten. Si necesitas compartir los mismos datos entre páginas, puedes elevar el estado a un store de Pinia, o invocarlo una vez en un componente de nivel superior y pasarlo hacia abajo con provide / inject.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">article</span> v-else&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-html<span style="color: #66cc66;">=</span><span style="color: #a11;">"article.content"</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-html<span style="color: #66CC66;">=</span><span style="color: #a11;">"article.content"</span>&gt;&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <blockquote><p>useDarkMode: cambia al modo oscuro con una línea de código</p></blockquote>
@@ -584,19 +584,19 @@ const article = computed(() =&gt; getArticleById(id))<br/>
 import { useDarkMode } from '../composables/useDarkMode.js'<br/>
 <br/>
 const { isDark, toggleDark } = useDarkMode()<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"navbar"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>RUNOOB Blog<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"navbar"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>RUNOOB Blog<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Claro' : '☾ Oscuro' }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"theme-btn"</span> @click<span style="color: #66cc66;">=</span><span style="color: #a11;">"toggleDark"</span>&gt;</span><br/>
-        {{ isDark ? '<span style="color: #ddbb00;">&amp;#x2600;</span>Combinado con variables CSS globales para cambiar el tema<br/>
-      <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Claro' : '☾ Oscuro' }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"theme-btn"</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"toggleDark"</span>&gt;</span><br/>
+        {{ isDark ? '<span style="color: #DDBB00;">&amp;#x2600;</span>Combinado con variables CSS globales para cambiar el tema<br/>
+      <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <h3>Combinado con variables CSS globales para cambiar el tema</h3>
@@ -605,21 +605,21 @@ const { isDark, toggleDark } = useDarkMode()<br/>
 <div class="example_code">
 <span style="color: #808080; font-style: italic;">/* Modo claro (predeterminado) */</span><br/>
 <span style="color: #808080; font-style: italic;">/* Modo oscuro (se activa cuando la etiqueta html tiene la clase .dark) */</span><br/>
-<span style="color: #3333ff;">:root </span><span style="color: #00AA00;">{</span><br/>
-  --bg-primary<span style="color: #00AA00;">:</span>    <span style="color: #cc00cc;">#f5f5f5</span><span style="color: #00AA00;">;</span><br/>
-  --bg-card<span style="color: #00AA00;">:</span>       <span style="color: #cc00cc;">#ffffff</span><span style="color: #00AA00;">;</span><br/>
-  --text-primary<span style="color: #00AA00;">:</span>  <span style="color: #cc00cc;">#333333</span><span style="color: #00AA00;">;</span><br/>
-  --text-secondary<span style="color: #00AA00;">:</span><span style="color: #cc00cc;">#666666</span><span style="color: #00AA00;">;</span><br/>
-  --border-color<span style="color: #00AA00;">:</span>  <span style="color: #cc00cc;">#eeeeee</span><span style="color: #00AA00;">;</span><br/>
+<span style="color: #3333FF;">:root </span><span style="color: #00AA00;">{</span><br/>
+  --bg-primary<span style="color: #00AA00;">:</span>    <span style="color: #CC00CC;">#f5f5f5</span><span style="color: #00AA00;">;</span><br/>
+  --bg-card<span style="color: #00AA00;">:</span>       <span style="color: #CC00CC;">#ffffff</span><span style="color: #00AA00;">;</span><br/>
+  --text-primary<span style="color: #00AA00;">:</span>  <span style="color: #CC00CC;">#333333</span><span style="color: #00AA00;">;</span><br/>
+  --text-secondary<span style="color: #00AA00;">:</span><span style="color: #CC00CC;">#666666</span><span style="color: #00AA00;">;</span><br/>
+  --border-color<span style="color: #00AA00;">:</span>  <span style="color: #CC00CC;">#eeeeee</span><span style="color: #00AA00;">;</span><br/>
 <span style="color: #00AA00;">}</span><br/>
 <br/>
 <span style="color: #808080; font-style: italic;">/* Referencia estas variables en los componentes; cambiar el tema no requiere modificar ningún código de componente */</span><br/>
-html<span style="color: #6666ff;">.dark</span> <span style="color: #00AA00;">{</span><br/>
-  --bg-primary<span style="color: #00AA00;">:</span>    <span style="color: #cc00cc;">#1a1a2e</span><span style="color: #00AA00;">;</span><br/>
-  --bg-card<span style="color: #00AA00;">:</span>       <span style="color: #cc00cc;">#16213e</span><span style="color: #00AA00;">;</span><br/>
-  --text-primary<span style="color: #00AA00;">:</span>  <span style="color: #cc00cc;">#e0e0e0</span><span style="color: #00AA00;">;</span><br/>
-  --text-secondary<span style="color: #00AA00;">:</span><span style="color: #cc00cc;">#a0a0a0</span><span style="color: #00AA00;">;</span><br/>
-  --border-color<span style="color: #00AA00;">:</span>  <span style="color: #cc00cc;">#2a2a4a</span><span style="color: #00AA00;">;</span><br/>
+html<span style="color: #6666FF;">.dark</span> <span style="color: #00AA00;">{</span><br/>
+  --bg-primary<span style="color: #00AA00;">:</span>    <span style="color: #CC00CC;">#1a1a2e</span><span style="color: #00AA00;">;</span><br/>
+  --bg-card<span style="color: #00AA00;">:</span>       <span style="color: #CC00CC;">#16213e</span><span style="color: #00AA00;">;</span><br/>
+  --text-primary<span style="color: #00AA00;">:</span>  <span style="color: #CC00CC;">#e0e0e0</span><span style="color: #00AA00;">;</span><br/>
+  --text-secondary<span style="color: #00AA00;">:</span><span style="color: #CC00CC;">#a0a0a0</span><span style="color: #00AA00;">;</span><br/>
+  --border-color<span style="color: #00AA00;">:</span>  <span style="color: #CC00CC;">#2a2a4a</span><span style="color: #00AA00;">;</span><br/>
 <span style="color: #00AA00;">}</span><br/>
 <br/>
 <span style="color: #808080; font-style: italic;">En este momento, al hacer clic en el botón de cambio, los colores de todo el sitio cambian al instante y, después de actualizar la página, tu elección se recordará.</span><br/>
@@ -628,7 +628,7 @@ body <span style="color: #00AA00;">{</span><br/>
   <span style="color: #000000; font-weight: bold;">color</span><span style="color: #00AA00;">:</span> var<span style="color: #00AA00;">(</span>--text-primary<span style="color: #00AA00;">)</span><span style="color: #00AA00;">;</span><br/>
 <span style="color: #00AA00;">}</span><br/>
 <br/>
-<span style="color: #6666ff;">.card</span> <span style="color: #00AA00;">{</span><br/>
+<span style="color: #6666FF;">.card</span> <span style="color: #00AA00;">{</span><br/>
   <span style="color: #000000; font-weight: bold;">background</span><span style="color: #00AA00;">:</span> var<span style="color: #00AA00;">(</span>--bg-card<span style="color: #00AA00;">)</span><span style="color: #00AA00;">;</span><br/>
   <span style="color: #000000; font-weight: bold;">border</span><span style="color: #00AA00;">:</span> <span style="color: #933;">1px</span> <span style="color: #993333;">solid</span> var<span style="color: #00AA00;">(</span>--border-color<span style="color: #00AA00;">)</span><span style="color: #00AA00;">;</span><br/>
 <span style="color: #00AA00;">}</span><br/>
@@ -680,7 +680,7 @@ Haz clic para compartir notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -725,7 +725,7 @@ Haz clic para compartir notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -764,7 +764,7 @@ Haz clic para compartir notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -983,7 +983,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

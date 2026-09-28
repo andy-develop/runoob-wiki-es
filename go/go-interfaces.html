@@ -314,7 +314,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La definición de una interfaz utiliza la palabra clave<span class="marked">interface</span>, que contiene declaraciones de métodos.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">/* Definir la interfaz */</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> interface_name <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> interface_name <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
    method_name1 <span style="color: #339933;">[</span>return_type<span style="color: #339933;">]</span><br/>
    method_name2 <span style="color: #339933;">[</span>return_type<span style="color: #339933;">]</span><br/>
    method_name3 <span style="color: #339933;">[</span>return_type<span style="color: #339933;">]</span><br/>
@@ -323,7 +323,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">/* Definir la estructura */</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> struct_name <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> struct_name <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
    <span style="color: #666666; font-style: italic;">/* variables */</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
@@ -343,38 +343,38 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }</pre><ul><li><code>Shape</code>Es una interfaz que define dos métodos:<code>Area</code> 和 <code>Perimeter</code>。</li><li>Cualquier tipo que implemente estos dos métodos se considera que implementa<code>Shape</code>la interfaz.</li></ul><p>
 <strong>Implementar la interfaz:</strong>Un tipo implementa la interfaz al implementar todos los métodos que la interfaz requiere.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-        <span style="color: #cc66cc;">"fmt"</span><br/>
-        <span style="color: #cc66cc;">"math"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+        <span style="color: #CC66CC;">"fmt"</span><br/>
+        <span style="color: #CC66CC;">"math"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Definir interfaz</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Shape <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Shape <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
         Area<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span><br/>
         Perimeter<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Definir una estructura</span><br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Circle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Circle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
         Radius <span style="color: #993333;">float64</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Circle implementa la interfaz Shape</span><br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>c Circle<span style="color: #339933;">)</span> Area<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Pi <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> math<span style="color: #339933;">.</span>Pi <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>c Circle<span style="color: #339933;">)</span> Perimeter<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> <span style="color: #cc66cc;">2</span> <span style="color: #339933;">*</span> math<span style="color: #339933;">.</span>Pi <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius<br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> <span style="color: #CC66CC;">2</span> <span style="color: #339933;">*</span> math<span style="color: #339933;">.</span>Pi <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>Radius<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        c <span style="color: #339933;">:=</span> Circle<span style="color: #339933;">{</span>Radius<span style="color: #339933;">:</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">}</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> s Shape <span style="color: #339933;">=</span> c <span style="color: #666666; font-style: italic;">// La variable de interfaz puede almacenar un tipo que implementa la interfaz</span><br/>
-        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Area:"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">Area</span><span style="color: #339933;">())</span><br/>
-        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Perimeter:"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">Perimeter</span><span style="color: #339933;">())</span><br/>
+        c <span style="color: #339933;">:=</span> Circle<span style="color: #339933;">{</span>Radius<span style="color: #339933;">:</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">}</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> s Shape <span style="color: #339933;">=</span> c <span style="color: #666666; font-style: italic;">// La variable de interfaz puede almacenar un tipo que implementa la interfaz</span><br/>
+        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Area:"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">Area</span><span style="color: #339933;">())</span><br/>
+        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Perimeter:"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">Perimeter</span><span style="color: #339933;">())</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
@@ -384,19 +384,19 @@ Perimeter: 31.41592653589793</pre>
 <h2>Interfaz vacía</h2><p>Interfaz vacía<code>interface{}</code>Es una interfaz especial de Go que representa el superconjunto de todos los tipos.</p>
 <ul><li>Cualquier tipo implementa la interfaz vacía.</li><li>Se usa a menudo en escenarios donde se necesita almacenar datos de cualquier tipo, como contenedores genéricos, parámetros universales, etc.</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> printValue<span style="color: #339933;">(</span>val <span style="color: #993333;">interface</span><span style="color: #339933;">{})</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Value: %v, Type: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> val<span style="color: #339933;">,</span> val<span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Value: %v, Type: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> val<span style="color: #339933;">,</span> val<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">42</span><span style="color: #339933;">)</span>         <span style="color: #666666; font-style: italic;">// int</span><br/>
-        printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">"hello"</span><span style="color: #339933;">)</span>    <span style="color: #666666; font-style: italic;">// string</span><br/>
-        printValue<span style="color: #339933;">(</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">14</span><span style="color: #339933;">)</span>       <span style="color: #666666; font-style: italic;">// float64</span><br/>
-        printValue<span style="color: #339933;">([]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">})</span> <span style="color: #666666; font-style: italic;">// slice</span><br/>
+        printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">42</span><span style="color: #339933;">)</span>         <span style="color: #666666; font-style: italic;">// int</span><br/>
+        printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">"hello"</span><span style="color: #339933;">)</span>    <span style="color: #666666; font-style: italic;">// string</span><br/>
+        printValue<span style="color: #339933;">(</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">14</span><span style="color: #339933;">)</span>       <span style="color: #666666; font-style: italic;">// float64</span><br/>
+        printValue<span style="color: #339933;">([]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">})</span> <span style="color: #666666; font-style: italic;">// slice</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
@@ -410,12 +410,12 @@ Value: [1 2], Type: []int</pre>
 <pre>
 value := iface.(Type)</pre><ul><li><code>iface</code>es la variable de interfaz.</li><li><code>Type</code>es el tipo concreto que se va a afirmar.</li><li>Si el tipo no coincide, se desencadena<code>panic</code>。</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"hello"</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"hello"</span><br/>
         str <span style="color: #339933;">:=</span> <span style="">i</span><span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #993333;">string</span><span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// Aserción de tipo</span><br/>
         fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>str<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: hello</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -424,16 +424,16 @@ value := iface.(Type)</pre><ul><li><code>iface</code>es la variable de interfaz.
 <pre>
 value, ok := iface.(Type)</pre><ul><li><code>ok</code>es un valor booleano que indica si la aserción fue exitosa.</li><li>Si la aserción falla,<code>value</code>es el valor cero,<code>ok</code> 为 <code>false</code>。</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">42</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">if</span> str<span style="color: #339933;">,</span> ok <span style="color: #339933;">:=</span> <span style="">i</span><span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #993333;">string</span><span style="color: #339933;">);</span> ok <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"String:"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
-        <span style="color: #339933;">}</span> <span style="color: #b1b100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Not a string"</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">42</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">if</span> str<span style="color: #339933;">,</span> ok <span style="color: #339933;">:=</span> <span style="">i</span><span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #993333;">string</span><span style="color: #339933;">);</span> ok <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"String:"</span><span style="color: #339933;">,</span> str<span style="color: #339933;">)</span><br/>
+        <span style="color: #339933;">}</span> <span style="color: #B1B100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Not a string"</span><span style="color: #339933;">)</span><br/>
         <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div><p>Al ejecutar el código anterior, el resultado es:</p>
@@ -441,28 +441,28 @@ value, ok := iface.(Type)</pre><ul><li><code>ok</code>es un valor booleano que i
 <hr/>
 <h2>Selección de tipo (type switch)</h2><p>type switch es una estructura sintáctica en Go que se utiliza para ejecutar diferentes lógicas según el tipo concreto de una variable de interfaz.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> printType<span style="color: #339933;">(</span>val <span style="color: #993333;">interface</span><span style="color: #339933;">{})</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">switch</span> v <span style="color: #339933;">:=</span> val<span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #b1b100; font-weight: bold;">type</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">case</span> <span style="color: #993333;">int</span><span style="color: #339933;">:</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Integer:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">case</span> <span style="color: #993333;">string</span><span style="color: #339933;">:</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"String:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">case</span> <span style="color: #993333;">float64</span><span style="color: #339933;">:</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Float:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">default</span><span style="color: #339933;">:</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Unknown type"</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">switch</span> v <span style="color: #339933;">:=</span> val<span style="color: #339933;">.</span><span style="color: #339933;">(</span><span style="color: #B1B100; font-weight: bold;">type</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">case</span> <span style="color: #993333;">int</span><span style="color: #339933;">:</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Integer:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">case</span> <span style="color: #993333;">string</span><span style="color: #339933;">:</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"String:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">case</span> <span style="color: #993333;">float64</span><span style="color: #339933;">:</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Float:"</span><span style="color: #339933;">,</span> v<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">default</span><span style="color: #339933;">:</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Unknown type"</span><span style="color: #339933;">)</span><br/>
         <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        printType<span style="color: #339933;">(</span><span style="color: #cc66cc;">42</span><span style="color: #339933;">)</span><br/>
-        printType<span style="color: #339933;">(</span><span style="color: #cc66cc;">"hello"</span><span style="color: #339933;">)</span><br/>
-        printType<span style="color: #339933;">(</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">14</span><span style="color: #339933;">)</span><br/>
-        printType<span style="color: #339933;">([]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">})</span><br/>
+        printType<span style="color: #339933;">(</span><span style="color: #CC66CC;">42</span><span style="color: #339933;">)</span><br/>
+        printType<span style="color: #339933;">(</span><span style="color: #CC66CC;">"hello"</span><span style="color: #339933;">)</span><br/>
+        printType<span style="color: #339933;">(</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">14</span><span style="color: #339933;">)</span><br/>
+        printType<span style="color: #339933;">([]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">})</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
@@ -473,37 +473,37 @@ Unknown type</pre>
 <hr/>
 <h2>Composición de interfaces</h2><p>Las interfaces se pueden combinar mediante anidamiento para lograr descripciones de comportamiento más complejas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Reader <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Reader <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
         Read<span style="color: #339933;">()</span> <span style="color: #993333;">string</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Writer <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Writer <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
         Write<span style="color: #339933;">(</span>data <span style="color: #993333;">string</span><span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> ReadWriter <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> ReadWriter <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
         Reader<br/>
         Writer<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> File <span style="color: #993333;">struct</span><span style="color: #339933;">{}</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> File <span style="color: #993333;">struct</span><span style="color: #339933;">{}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>f File<span style="color: #339933;">)</span> Read<span style="color: #339933;">()</span> <span style="color: #993333;">string</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">return</span> <span style="color: #cc66cc;">"Reading data"</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">return</span> <span style="color: #CC66CC;">"Reading data"</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>f File<span style="color: #339933;">)</span> Write<span style="color: #339933;">(</span>data <span style="color: #993333;">string</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Writing data:"</span><span style="color: #339933;">,</span> data<span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Writing data:"</span><span style="color: #339933;">,</span> data<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> rw ReadWriter <span style="color: #339933;">=</span> File<span style="color: #339933;">{}</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> rw ReadWriter <span style="color: #339933;">=</span> File<span style="color: #339933;">{}</span><br/>
         fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>rw<span style="color: #339933;">.</span>Read<span style="color: #339933;">())</span><br/>
-        rw<span style="color: #339933;">.</span>Write<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Hello, Go!"</span><span style="color: #339933;">)</span><br/>
+        rw<span style="color: #339933;">.</span>Write<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Hello, Go!"</span><span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <hr/>
@@ -511,13 +511,13 @@ Unknown type</pre>
 <ol><li><strong>Tipo dinámico</strong>: el tipo concreto almacenado por la variable de interfaz.</li><li><strong>Valor dinámico</strong>: el valor del tipo concreto.</li></ol>
 <p>Ejemplo de valor dinámico y tipo dinámico:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">42</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Dynamic type: %T, Dynamic value: %v<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> i<span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">42</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Dynamic type: %T, Dynamic value: %v<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> i<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div><p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>
@@ -526,12 +526,12 @@ Dynamic type: int, Dynamic value: 42</pre>
 <h2>Valor cero de la interfaz</h2><p>El valor cero de la interfaz es nil.</p><p>Cuando tanto el tipo dinámico como el valor dinámico de una variable de interfaz son nil, la variable de interfaz es nil.</p>
 <p>Ejemplo de valor cero de interfaz:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">interface</span><span style="color: #339933;">{}</span><br/>
         fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="">i</span> <span style="color: #339933;">==</span> <span style="color: #000000; font-weight: bold;">nil</span><span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// Salida: true</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -539,32 +539,32 @@ Dynamic type: int, Dynamic value: 42</pre>
 <h2>Ejemplos de práctica</h2>
 <p>Los siguientes dos ejemplos demuestran el uso de interfaces:</p>
 <div class="example"><h2 class="example">Ejemplo 1</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Phone <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Phone <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
     call<span style="color: #339933;">()</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> NokiaPhone <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> NokiaPhone <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>nokiaPhone NokiaPhone<span style="color: #339933;">)</span> call<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"I am Nokia, I can call you!"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"I am Nokia, I can call you!"</span><span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> IPhone <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> IPhone <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>iPhone IPhone<span style="color: #339933;">)</span> call<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"I am iPhone, I can call you!"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"I am iPhone, I can call you!"</span><span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> phone Phone<br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> phone Phone<br/>
 <br/>
     phone <span style="color: #339933;">=</span> <span style="color: #000066;">new</span><span style="color: #339933;">(</span>NokiaPhone<span style="color: #339933;">)</span><br/>
     phone<span style="color: #339933;">.</span>call<span style="color: #339933;">()</span><br/>
@@ -581,39 +581,39 @@ I am iPhone, I can call you!
 </pre>
 <p>Segundo ejemplo de interfaz:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Shape <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Shape <span style="color: #993333;">interface</span> <span style="color: #339933;">{</span><br/>
     area<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Rectangle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Rectangle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
     width  <span style="color: #993333;">float64</span><br/>
     height <span style="color: #993333;">float64</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>r Rectangle<span style="color: #339933;">)</span> area<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">return</span> r<span style="color: #339933;">.</span>width <span style="color: #339933;">*</span> r<span style="color: #339933;">.</span>height<br/>
+    <span style="color: #B1B100; font-weight: bold;">return</span> r<span style="color: #339933;">.</span>width <span style="color: #339933;">*</span> r<span style="color: #339933;">.</span>height<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">type</span> Circle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #B1B100; font-weight: bold;">type</span> Circle <span style="color: #993333;">struct</span> <span style="color: #339933;">{</span><br/>
     radius <span style="color: #993333;">float64</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> <span style="color: #339933;">(</span>c Circle<span style="color: #339933;">)</span> area<span style="color: #339933;">()</span> <span style="color: #993333;">float64</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">return</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">14</span> <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>radius <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>radius<br/>
+    <span style="color: #B1B100; font-weight: bold;">return</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">14</span> <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>radius <span style="color: #339933;">*</span> c<span style="color: #339933;">.</span>radius<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> s Shape<br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> s Shape<br/>
 <br/>
-    s <span style="color: #339933;">=</span> Rectangle<span style="color: #339933;">{</span>width<span style="color: #339933;">:</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span> height<span style="color: #339933;">:</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">}</span><br/>
-    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Área del rectángulo: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span>area<span style="color: #339933;">())</span><br/>
+    s <span style="color: #339933;">=</span> Rectangle<span style="color: #339933;">{</span>width<span style="color: #339933;">:</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">,</span> height<span style="color: #339933;">:</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">}</span><br/>
+    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Área del rectángulo: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span>area<span style="color: #339933;">())</span><br/>
 <br/>
-    s <span style="color: #339933;">=</span> Circle<span style="color: #339933;">{</span>radius<span style="color: #339933;">:</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">}</span><br/>
-    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Área del círculo: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">area</span><span style="color: #339933;">())</span><br/>
+    s <span style="color: #339933;">=</span> Circle<span style="color: #339933;">{</span>radius<span style="color: #339933;">:</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">}</span><br/>
+    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Área del círculo: %f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> s<span style="color: #339933;">.</span><span style="">area</span><span style="color: #339933;">())</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>En el ejemplo anterior, definimos una interfaz Shape, que define un método area() que devuelve un valor de área de tipo float64. Luego definimos dos estructuras, Rectangle y Circle, que implementan respectivamente el método area() de la interfaz Shape. En la función main(), primero definimos una variable s de tipo Shape, luego asignamos a s las instancias de los tipos Rectangle y Circle respectivamente, y mediante el método area() calculamos sus áreas y las imprimimos. El resultado es el siguiente:</p>
@@ -653,7 +653,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -698,7 +698,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1072,7 +1072,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1291,7 +1291,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

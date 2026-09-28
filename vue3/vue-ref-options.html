@@ -693,10 +693,10 @@ provide / inject</h3><p>El componente padre proporciona los datos, y el componen
 <div class="example"><h2 class="example">Componente padre (ParentComponent.vue)</h2> <div class="example_code">
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;child-component ref<span style="color: #66cc66;">=</span><span style="color: #a11;">"child"</span>&gt;&lt;<span style="color: #66cc66;">/</span>child-component&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> @click<span style="color: #66cc66;">=</span><span style="color: #a11;">"callChildMethod"</span>&gt;</span>Call Child Method<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+    <span style="color: #170;">&lt;child-component ref<span style="color: #66CC66;">=</span><span style="color: #a11;">"child"</span>&gt;&lt;<span style="color: #66CC66;">/</span>child-component&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"callChildMethod"</span>&gt;</span>Call Child Method<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 import { ref } from 'vue';<br/>
@@ -721,14 +721,14 @@ export default {<br/>
     };<br/>
   }<br/>
 };<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 </div></div>
 <div class="example"><h2 class="example">Componente hijo (ChildComponent.vue)</h2> <div class="example_code">
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ exposedData }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ exposedData }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 import { ref } from 'vue';<br/>
@@ -751,7 +751,7 @@ export default {<br/>
     };<br/>
   }<br/>
 };<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 </div></div><p><strong>Explicación:</strong></p>
 <ol><li><p><strong>Componente padre</strong>:</p><ul><li>En el componente padre, se usa<code>ref</code>se crea una referencia al componente hijo<code>child</code>。</li><li>在 <code>callChildMethod</code>en el método, a través de<code>child.value</code>se accede a la instancia del componente hijo y se llaman los métodos expuestos por el componente hijo.<code>exposedMethod</code>。</li></ul></li><li><p><strong>Componente hijo</strong>:</p><ul><li>En el componente hijo,<code>setup</code>dentro de la función, mediante<code>ref</code>se crea un dato reactivo<code>exposedData</code>。</li><li>se define un método<code>exposedMethod</code>, para mostrar cómo exponer métodos.</li><li>Usando el<code>expose</code>método expose, se exponen explícitamente<code>exposedData</code> 和 <code>exposedMethod</code>al componente padre.</li><li>Se devuelve<code>exposedData</code>, para poder usarlo en la plantilla.</li></ul></li></ol> Otras extensiones
 </div>
@@ -787,7 +787,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -832,7 +832,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -871,7 +871,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1090,7 +1090,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

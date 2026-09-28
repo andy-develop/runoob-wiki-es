@@ -97,31 +97,31 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Palabras clave: initial, always</h3><p>Las sentencias de estructura procedural son de 2 tipos: initial y always. Son las 2 sentencias básicas del modelado a nivel de comportamiento.</p><p>Un módulo puede contener múltiples sentencias initial y always, pero los 2 tipos de sentencias no pueden anidarse.</p><p>Estas sentencias se ejecutan en paralelo dentro del módulo, sin relación con su orden en el módulo.</p><p>Sin embargo, el interior de una sentencia initial o always puede entenderse como ejecutándose secuencialmente (excepto con asignaciones no bloqueantes).</p><p>Cada sentencia initial o always genera un flujo de control independiente, y su tiempo de ejecución comienza en el instante 0.</p>
 <h3>Sentencia initial</h3><p>La sentencia initial comienza a ejecutarse en el instante 0, se ejecuta una sola vez, y los múltiples bloques initial son independientes entre sí.</p><p>Si el bloque initial contiene múltiples sentencias, se necesitan las palabras clave begin y end para formar una sentencia de bloque.</p><p>Si el bloque initial tiene solo una sentencia, las palabras clave begin y end pueden usarse o no.</p><p>initial, teóricamente, no es sintetizable; se usa principalmente para inicialización, detección de señales, etc.</p><p>Modificando ligeramente el código de la sección anterior y realizando una simulación, el código es el siguiente.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>  ai<span style="color: #5D478B;">,</span> bi <span style="color: #5D478B;">;</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        ai         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">25</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">35</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 60ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">40</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 100ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 110ns</span><br/>
+        ai         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">25</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">35</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 60ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">40</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 100ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span>      ai        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 110ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        bi         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">70</span> <span style="color: #5D478B;">;</span>      bi        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 70ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">20</span> <span style="color: #5D478B;">;</span>      bi        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 90ns</span><br/>
+        bi         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">70</span> <span style="color: #5D478B;">;</span>      bi        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 70ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">20</span> <span style="color: #5D478B;">;</span>      bi        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 90ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//at proper time stop the simulation</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">100</span><span style="color: #5D478B;">;</span><br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">100</span><span style="color: #5D478B;">;</span><br/>
             <span style="color: #00008B; font-style: italic;">//$display("---gyc---%d", $time);</span><br/>
-            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
                 <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -135,20 +135,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>A diferencia de la sentencia initial, la sentencia always se ejecuta repetidamente. El bloque always comienza a ejecutar sus sentencias de comportamiento en el instante 0; después de ejecutar la última sentencia, vuelve a ejecutar la primera del bloque, y así sucesivamente en un bucle.</p><p>Debido a su característica de ejecución cíclica, la sentencia always se usa frecuentemente para generar relojes de simulación, detectar comportamiento de señales, etc.</p>
 <p>A continuación, se usa always para generar una fuente de reloj de 100 MHz y detener la simulación en 1010 ns. El código es el siguiente.</p><p>El código es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">parameter</span> CLK_FREQ   <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">100</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//100MHz</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">parameter</span> CLK_FREQ   <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">100</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//100MHz</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">parameter</span> CLK_CYCLE  <span style="color: #5D478B;">=</span> 1e9 <span style="color: #5D478B;">/</span> <span style="color: #9F79EE;">(</span>CLK_FREQ <span style="color: #5D478B;">*</span> 1e6<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>   <span style="color: #00008B; font-style: italic;">//switch to ns</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>  clk <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">initial</span>      clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//clk is initialized to "0"</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">always</span>     <span style="color: #5D478B;">#</span> <span style="color: #9F79EE;">(</span>CLK_CYCLE<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//generating a real clock by reversing</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">initial</span>      clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//clk is initialized to "0"</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">always</span>     <span style="color: #5D478B;">#</span> <span style="color: #9F79EE;">(</span>CLK_CYCLE<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//generating a real clock by reversing</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span><span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -183,7 +183,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -228,7 +228,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -267,7 +267,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -478,7 +478,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

@@ -279,24 +279,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Métodos de definición de cadenas</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Método 1: Cadena estándar</span><br/>
-    str1 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>     <span style="color: #666666; font-style: italic;">; Estilo C: terminada en null</span><br/>
+    str1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>     <span style="color: #666666; font-style: italic;">; Estilo C: terminada en null</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 2: Con salto de línea</span><br/>
-    str2 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Line1'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'Line2'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
+    str2 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Line1'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'Line2'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 3: Las comillas invertidas admiten secuencias de escape</span><br/>
-    str3 <span style="color: #0000ff; font-weight: bold;">db</span> `hello\nworld\n`<span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>     <span style="color: #666666; font-style: italic;">; Convierte automáticamente las secuencias de escape</span><br/>
+    str3 <span style="color: #0000FF; font-weight: bold;">db</span> `hello\nworld\n`<span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>     <span style="color: #666666; font-style: italic;">; Convierte automáticamente las secuencias de escape</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 4: Definición carácter por carácter</span><br/>
-    str4 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'A'</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'B'</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'C'</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'D'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
+    str4 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'A'</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'B'</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'C'</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'D'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 5: Usar dup para generar caracteres repetidos</span><br/>
-    border <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">40</span> dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #7f007f;">'-'</span><span style="color: #009900; font-weight: bold;">)</span>           <span style="color: #666666; font-style: italic;">; 40 guiones</span><br/>
+    border <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">40</span> dup<span style="color: #009900; font-weight: bold;">(</span><span style="color: #7F007F;">'-'</span><span style="color: #009900; font-weight: bold;">)</span>           <span style="color: #666666; font-style: italic;">; 40 guiones</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Cálculo de la longitud de la cadena (en tiempo de compilación)</span><br/>
-    str1_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> str1           <span style="color: #666666; font-style: italic;">; Incluye el null final</span><br/>
+    str1_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> str1           <span style="color: #666666; font-style: italic;">; Incluye el null final</span><br/>
 </div>
 </div>
 <hr/>
@@ -308,48 +308,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: strlen_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Dos formas de calcular la longitud de una cadena</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Método A: Cálculo en tiempo de compilación (para cadenas constantes)</span><br/>
-    msg1 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    msg1_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg1          <span style="color: #666666; font-style: italic;">; Cálculo automático en tiempo de compilación</span><br/>
+    msg1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    msg1_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg1          <span style="color: #666666; font-style: italic;">; Cálculo automático en tiempo de compilación</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método B: Cadena terminada en null (cálculo en tiempo de ejecución)</span><br/>
-    msg2 <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Find my length'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>    <span style="color: #666666; font-style: italic;">; Termina en 0</span><br/>
+    msg2 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Find my length'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>    <span style="color: #666666; font-style: italic;">; Termina en 0</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Método A: Usar directamente la longitud calculada en tiempo de compilación</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg1<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> msg1_len              <span style="color: #666666; font-style: italic;">; Usar la constante directamente</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg1<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> msg1_len              <span style="color: #666666; font-style: italic;">; Usar la constante directamente</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método B: Calcular en tiempo de ejecución la longitud de una cadena terminada en null</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> msg2                  <span style="color: #666666; font-style: italic;">; esi apunta al inicio de la cadena</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                     <span style="color: #666666; font-style: italic;">; Contador</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> msg2                  <span style="color: #666666; font-style: italic;">; esi apunta al inicio de la cadena</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                     <span style="color: #666666; font-style: italic;">; Contador</span><br/>
 <br/>
 strlen_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cmp</span> <span style="color: #0000ff; font-weight: bold;">byte</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>              <span style="color: #666666; font-style: italic;">; ¿El byte actual es null?</span><br/>
-    <span style="color: #00007f; font-weight: bold;">je</span>  strlen_done                <span style="color: #666666; font-style: italic;">; Si es así, terminar</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                        <span style="color: #666666; font-style: italic;">; Contador +1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                        <span style="color: #666666; font-style: italic;">; Puntero +1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jmp</span> strlen_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">cmp</span> <span style="color: #0000FF; font-weight: bold;">byte</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>              <span style="color: #666666; font-style: italic;">; ¿El byte actual es null?</span><br/>
+    <span style="color: #00007F; font-weight: bold;">je</span>  strlen_done                <span style="color: #666666; font-style: italic;">; Si es así, terminar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                        <span style="color: #666666; font-style: italic;">; Contador +1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                        <span style="color: #666666; font-style: italic;">; Puntero +1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jmp</span> strlen_loop<br/>
 <br/>
 strlen_done<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; ecx ahora contiene la longitud de la cadena (sin incluir null)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg2<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                   <span style="color: #666666; font-style: italic;">; Usar la longitud calculada</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg2<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                   <span style="color: #666666; font-style: italic;">; Usar la longitud calculada</span><br/>
     <span style="color: #666666; font-style: italic;">; Aquí hay un problema: ecx ha sido sobrescrito, debería guardarse primero</span><br/>
     <span style="color: #666666; font-style: italic;">; Forma correcta: push ecx y luego pop a edx</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -361,54 +361,54 @@ strlen_done<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: strcpy_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Dos implementaciones de copia de cadenas</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    src <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'runoob source string'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    src_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> src<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    src <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob source string'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    src_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> src<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.bss</span><br/>
-    dest_manual <span style="color: #0000ff; font-weight: bold;">resb</span> <span style="color: #ff0000;">64</span>             <span style="color: #666666; font-style: italic;">; Destino de copia manual</span><br/>
-    dest_fast <span style="color: #0000ff; font-weight: bold;">resb</span> <span style="color: #ff0000;">64</span>               <span style="color: #666666; font-style: italic;">; Destino de copia rápida</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span><br/>
+    dest_manual <span style="color: #0000FF; font-weight: bold;">resb</span> <span style="color: #FF0000;">64</span>             <span style="color: #666666; font-style: italic;">; Destino de copia manual</span><br/>
+    dest_fast <span style="color: #0000FF; font-weight: bold;">resb</span> <span style="color: #FF0000;">64</span>               <span style="color: #666666; font-style: italic;">; Destino de copia rápida</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Método A: Copia manual byte a byte</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> src                    <span style="color: #666666; font-style: italic;">; Dirección de origen</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> dest_manual            <span style="color: #666666; font-style: italic;">; Dirección de destino</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> src_len                <span style="color: #666666; font-style: italic;">; Número de bytes</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> src                    <span style="color: #666666; font-style: italic;">; Dirección de origen</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> dest_manual            <span style="color: #666666; font-style: italic;">; Dirección de destino</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> src_len                <span style="color: #666666; font-style: italic;">; Número de bytes</span><br/>
 <br/>
 copy_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;">; Leer un byte</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">al</span>                   <span style="color: #666666; font-style: italic;">; Escribir un byte</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span>                         <span style="color: #666666; font-style: italic;">; Puntero de origen ++</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">edi</span>                         <span style="color: #666666; font-style: italic;">; Puntero de destino ++</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> copy_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;">; Leer un byte</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">al</span>                   <span style="color: #666666; font-style: italic;">; Escribir un byte</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span>                         <span style="color: #666666; font-style: italic;">; Puntero de origen ++</span><br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">edi</span>                         <span style="color: #666666; font-style: italic;">; Puntero de destino ++</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> copy_loop<br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método B: Usar instrucciones de operación con cadenas (más rápido)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cld</span>                             <span style="color: #666666; font-style: italic;">; Limpiar el indicador de dirección (DF=0, copia hacia adelante)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> src                    <span style="color: #666666; font-style: italic;">; Dirección de origen (ESI)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> dest_fast              <span style="color: #666666; font-style: italic;">; Dirección de destino (EDI)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> src_len                <span style="color: #666666; font-style: italic;">; Número de bytes (ECX)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">rep</span> <span style="color: #00007f; font-weight: bold;">movsb</span>                       <span style="color: #666666; font-style: italic;">; Repetir movsb ecx veces</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cld</span>                             <span style="color: #666666; font-style: italic;">; Limpiar el indicador de dirección (DF=0, copia hacia adelante)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> src                    <span style="color: #666666; font-style: italic;">; Dirección de origen (ESI)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> dest_fast              <span style="color: #666666; font-style: italic;">; Dirección de destino (EDI)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> src_len                <span style="color: #666666; font-style: italic;">; Número de bytes (ECX)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">rep</span> <span style="color: #00007F; font-weight: bold;">movsb</span>                       <span style="color: #666666; font-style: italic;">; Repetir movsb ecx veces</span><br/>
     <span style="color: #666666; font-style: italic;">; rep movsb：while(ecx&gt;0) { [edi]=[esi]; esi++; edi++; ecx--; }</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Verificación: mostrar los dos resultados de la copia</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> dest_manual<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> src_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> dest_manual<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> src_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> dest_fast<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> src_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> dest_fast<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> src_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p><code>REP MOVSB</code>Es el método clásico de copia de cadenas en x86. Sin embargo, en las CPU modernas, un bucle de copia manual combinado con desenrollado de bucle puede ser más rápido que REP MOVSB, porque las CPU modernas tienen una mejor optimización de pipeline para operaciones simples.</p></blockquote>
@@ -421,72 +421,72 @@ copy_loop<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: strcmp_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Comparar si dos cadenas son iguales</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    str_a <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    str_b <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    str_c <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    eq_msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Strings are equal'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    eq_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> eq_msg<br/>
-    ne_msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Strings are NOT equal'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    ne_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> ne_msg<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    str_a <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    str_b <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    str_c <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    eq_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Strings are equal'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    eq_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> eq_msg<br/>
+    ne_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Strings are NOT equal'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    ne_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> ne_msg<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cld</span>                             <span style="color: #666666; font-style: italic;">; Comparación hacia adelante</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> str_a                  <span style="color: #666666; font-style: italic;">; Primera cadena</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> str_b                  <span style="color: #666666; font-style: italic;">; Segunda cadena</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">7</span>                      <span style="color: #666666; font-style: italic;">; Comparar como máximo 7 bytes (incluyendo null)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cld</span>                             <span style="color: #666666; font-style: italic;">; Comparación hacia adelante</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> str_a                  <span style="color: #666666; font-style: italic;">; Primera cadena</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> str_b                  <span style="color: #666666; font-style: italic;">; Segunda cadena</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">7</span>                      <span style="color: #666666; font-style: italic;">; Comparar como máximo 7 bytes (incluyendo null)</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">repe</span> <span style="color: #00007f; font-weight: bold;">cmpsb</span>                      <span style="color: #666666; font-style: italic;">; Repetir la comparación hasta que no sean iguales o ecx=0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">repe</span> <span style="color: #00007F; font-weight: bold;">cmpsb</span>                      <span style="color: #666666; font-style: italic;">; Repetir la comparación hasta que no sean iguales o ecx=0</span><br/>
     <span style="color: #666666; font-style: italic;">; repe: si ZF=1 (iguales) y ecx&gt;0, continúa</span><br/>
     <span style="color: #666666; font-style: italic;">; cmpsb: compara [esi] y [edi], luego esi++, edi++</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">je</span>  strings_equal               <span style="color: #666666; font-style: italic;">; Si ZF=1, todos los bytes son iguales</span><br/>
+    <span style="color: #00007F; font-weight: bold;">je</span>  strings_equal               <span style="color: #666666; font-style: italic;">; Si ZF=1, todos los bytes son iguales</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; No iguales</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ne_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> ne_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jmp</span> compare_next<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ne_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> ne_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jmp</span> compare_next<br/>
 <br/>
 strings_equal<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> eq_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> eq_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> eq_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> eq_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 compare_next<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Comparar str_a y str_c (difieren en mayúsculas/minúsculas)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cld</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> str_a<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> str_c<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">7</span><br/>
-    <span style="color: #00007f; font-weight: bold;">repe</span> <span style="color: #00007f; font-weight: bold;">cmpsb</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jne</span> not_equal_2<br/>
+    <span style="color: #00007F; font-weight: bold;">cld</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> str_a<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edi</span><span style="color: #339933;">,</span> str_c<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">7</span><br/>
+    <span style="color: #00007F; font-weight: bold;">repe</span> <span style="color: #00007F; font-weight: bold;">cmpsb</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jne</span> not_equal_2<br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> eq_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> eq_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jmp</span> exit<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> eq_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> eq_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jmp</span> exit<br/>
 <br/>
 not_equal_2<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ne_msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> ne_len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> ne_msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> ne_len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 exit<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -509,50 +509,50 @@ exit<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: case_convert.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Convertir las letras minúsculas de la cadena a mayúsculas</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, runoob! Welcome to Assembly.'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob! Welcome to Assembly.'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Mostrar la cadena original</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Conversión: recorrer la cadena, minúscula -&gt; mayúscula</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> msg                    <span style="color: #666666; font-style: italic;">; Apuntar al inicio de la cadena</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> len                    <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #339933;">,</span> msg                    <span style="color: #666666; font-style: italic;">; Apuntar al inicio de la cadena</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> len                    <span style="color: #666666; font-style: italic;">; Número de iteraciones del bucle</span><br/>
 <br/>
 convert_loop<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;">; Leer carácter</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cmp</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'a'</span>                     <span style="color: #666666; font-style: italic;">; ¿Es &gt;= 'a'?</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jb</span>  next_char                   <span style="color: #666666; font-style: italic;">; Menor que 'a', omitir</span><br/>
-    <span style="color: #00007f; font-weight: bold;">cmp</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'z'</span>                     <span style="color: #666666; font-style: italic;">; ¿Es &lt;= 'z'?</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ja</span>  next_char                   <span style="color: #666666; font-style: italic;">; Mayor que 'z', omitir</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span>                   <span style="color: #666666; font-style: italic;">; Leer carácter</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cmp</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'a'</span>                     <span style="color: #666666; font-style: italic;">; ¿Es &gt;= 'a'?</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jb</span>  next_char                   <span style="color: #666666; font-style: italic;">; Menor que 'a', omitir</span><br/>
+    <span style="color: #00007F; font-weight: bold;">cmp</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'z'</span>                     <span style="color: #666666; font-style: italic;">; ¿Es &lt;= 'z'?</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ja</span>  next_char                   <span style="color: #666666; font-style: italic;">; Mayor que 'z', omitir</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Minúscula a mayúscula: 'a'(97) - 'A'(65) = 32</span><br/>
-    <span style="color: #00007f; font-weight: bold;">sub</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">32</span>                      <span style="color: #666666; font-style: italic;">; Convertir a mayúscula</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">al</span>                   <span style="color: #666666; font-style: italic;">; Escribir de vuelta</span><br/>
+    <span style="color: #00007F; font-weight: bold;">sub</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">32</span>                      <span style="color: #666666; font-style: italic;">; Convertir a mayúscula</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">esi</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">al</span>                   <span style="color: #666666; font-style: italic;">; Escribir de vuelta</span><br/>
 <br/>
 next_char<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">esi</span><br/>
-    <span style="color: #00007f; font-weight: bold;">loop</span> convert_loop<br/>
+    <span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">esi</span><br/>
+    <span style="color: #00007F; font-weight: bold;">loop</span> convert_loop<br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Mostrar la cadena convertida</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <p>Resultado de la ejecución:</p>
@@ -598,7 +598,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -643,7 +643,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -682,7 +682,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -901,7 +901,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

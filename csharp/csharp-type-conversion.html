@@ -172,34 +172,34 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Por ejemplo, de int a long, de float a double, etc.</p>
 <p>De un tipo entero pequeño a un tipo entero grande, de una clase derivada a una clase base. Si se asigna una variable de tipo byte a una variable de tipo int, el compilador convertirá automáticamente el tipo byte a tipo int, sin necesidad de conversión explícita.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">byte</span> b <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> b<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita, no necesita conversión explícita</span><br/>
+<span style="color: #6666CC; font-weight: bold;">byte</span> b <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> b<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita, no necesita conversión explícita</span><br/>
 </div></div><p>Asignar un entero a un entero largo, o asignar un número de punto flotante a un número de punto flotante de doble precisión; esta conversión no causa pérdida de datos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">42</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">long</span> longValue <span style="color: #008000;">=</span> intValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita, de int a long</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">42</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">long</span> longValue <span style="color: #008000;">=</span> intValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita, de int a long</span><br/>
 </div></div>
 <h3>Conversión explícita</h3>
 <p>La conversión explícita de tipos, es decir, la conversión forzada de tipos, requiere que el programador la especifique claramente en el código.</p>
 <p>La conversión explícita se refiere a que cuando se convierte un tipo de datos de rango mayor a un tipo de datos de rango menor, o cuando se convierte un tipo de objeto a otro tipo de objeto, es necesario utilizar el símbolo de conversión forzada para realizar la conversión explícita. La conversión forzada puede causar pérdida de datos.</p><p>Por ejemplo, asignar una variable de tipo int a una variable de tipo byte requiere conversión explícita.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">byte</span> b <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">byte</span><span style="color: #008000;">)</span>i<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión explícita, se necesita usar el símbolo de conversión forzada</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">byte</span> b <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">byte</span><span style="color: #008000;">)</span>i<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión explícita, se necesita usar el símbolo de conversión forzada</span><br/>
 </div></div>
 <p>Conversión forzada a tipo entero:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">double</span> doubleValue <span style="color: #008000;">=</span> <span style="color: Maroon;">3.14</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">)</span>doubleValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Forzar de double a int, los datos pueden perder la parte decimal</span><br/>
+<span style="color: #6666CC; font-weight: bold;">double</span> doubleValue <span style="color: #008000;">=</span> <span style="color: Maroon;">3.14</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">)</span>doubleValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Forzar de double a int, los datos pueden perder la parte decimal</span><br/>
 </div></div>
 <p>Conversión forzada a tipo de punto flotante:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">42</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">float</span> floatValue <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">float</span><span style="color: #008000;">)</span>intValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Forzar de int a float, los datos pueden perder precisión</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">42</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">float</span> floatValue <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">float</span><span style="color: #008000;">)</span>intValue<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Forzar de int a float, los datos pueden perder precisión</span><br/>
 </div></div>
 <p>Conversión forzada a tipo cadena:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">123</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> stringValue <span style="color: #008000;">=</span> intValue<span style="color: #008000;">.</span><span style="color: #05a;">ToString</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Convertir int a cadena</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> intValue <span style="color: #008000;">=</span> <span style="color: Maroon;">123</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> stringValue <span style="color: #008000;">=</span> intValue<span style="color: #008000;">.</span><span style="color: #05a;">ToString</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Convertir int a cadena</span><br/>
 </div></div>
 <p>El siguiente ejemplo muestra una conversión de tipos explícita:</p>
 <div class="example">
@@ -209,15 +209,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #05a; font-weight: bold;">namespace</span> TypeConversionApplication<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #6666cc; font-weight: bold;">class</span> ExplicitConversion<br/>
+    <span style="color: #6666CC; font-weight: bold;">class</span> ExplicitConversion<br/>
     <span style="color: #008000;">{</span><br/>
-        <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
+        <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
         <span style="color: #008000;">{</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: Maroon;">5673.74</span><span style="color: #008000;">;</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">int</span> i<span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: Maroon;">5673.74</span><span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">int</span> i<span style="color: #008000;">;</span><br/>
 <br/>
             <span style="color: #696969; font-style: italic;">// Convertir forzosamente double a int</span><br/>
-            i <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">)</span>d<span style="color: #008000;">;</span><br/>
+            i <span style="color: #008000;">=</span> <span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">)</span>d<span style="color: #008000;">;</span><br/>
             Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>i<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
             Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
             <br/>
@@ -263,21 +263,21 @@ int number = Convert.ToInt32(str); // 转换成功，number为123</pre><p>Si la 
 <br/>
 <span style="color: #05a; font-weight: bold;">namespace</span> TypeConversionApplication<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #6666cc; font-weight: bold;">class</span> StringConversion<br/>
+    <span style="color: #6666CC; font-weight: bold;">class</span> StringConversion<br/>
     <span style="color: #008000;">{</span><br/>
-        <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
+        <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
         <span style="color: #008000;">{</span><br/>
             <span style="color: #696969; font-style: italic;">// Definir una variable entera</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">75</span><span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">75</span><span style="color: #008000;">;</span><br/>
             <br/>
             <span style="color: #696969; font-style: italic;">// Definir una variable de punto flotante</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">float</span> f <span style="color: #008000;">=</span> 53<span style="color: #008000;">.</span>005f<span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">float</span> f <span style="color: #008000;">=</span> 53<span style="color: #008000;">.</span>005f<span style="color: #008000;">;</span><br/>
             <br/>
             <span style="color: #696969; font-style: italic;">// Definir una variable de punto flotante de doble precisión</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: Maroon;">2345.7652</span><span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: Maroon;">2345.7652</span><span style="color: #008000;">;</span><br/>
             <br/>
             <span style="color: #696969; font-style: italic;">// Definir una variable booleana</span><br/>
-            <span style="color: #6666cc; font-weight: bold;">bool</span> b <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">true</span><span style="color: #008000;">;</span><br/>
+            <span style="color: #6666CC; font-weight: bold;">bool</span> b <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">true</span><span style="color: #008000;">;</span><br/>
 <br/>
             <span style="color: #696969; font-style: italic;">// Convertir la variable entera a cadena y generar la salida</span><br/>
             Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>i<span style="color: #008000;">.</span><span style="color: #05a;">ToString</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -313,20 +313,20 @@ True
 <p>C# proporciona varios métodos de conversión de tipos, como la clase Convert, el método Parse y el método TryParse. Estos métodos ayudan a manejar la conversión entre diferentes tipos de datos.</p>
 <h3>Usando la clase Convert</h3><p>La clase Convert proporciona un conjunto de métodos estáticos que pueden realizar conversiones entre varios tipos de datos básicos.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123"</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> Convert<span style="color: #008000;">.</span><span style="color: #05a;">ToInt32</span><span style="color: #008000;">(</span>str<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> Convert<span style="color: #008000;">.</span><span style="color: #05a;">ToInt32</span><span style="color: #008000;">(</span>str<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 </div></div>
 <h3>Usando el método Parse</h3>
 <p>El método Parse se utiliza para convertir una cadena al tipo numérico correspondiente; si la conversión falla, se lanza una excepción.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123.45"</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">.</span><span style="color: #05a;">Parse</span><span style="color: #008000;">(</span>str<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123.45"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">double</span> d <span style="color: #008000;">=</span> <span style="color: #6666CC; font-weight: bold;">double</span><span style="color: #008000;">.</span><span style="color: #05a;">Parse</span><span style="color: #008000;">(</span>str<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 </div></div>
 <h3>Usando el método TryParse</h3><p>El método TryParse es similar a Parse, pero no lanza excepciones; en su lugar, devuelve un valor booleano que indica si la conversión fue exitosa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123.45"</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">double</span> d<span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">bool</span> success <span style="color: #008000;">=</span> <span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">.</span><span style="color: #05a;">TryParse</span><span style="color: #008000;">(</span>str, <span style="color: #05a; font-weight: bold;">out</span> d<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> str <span style="color: #008000;">=</span> <span style="color: #a11;">"123.45"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">double</span> d<span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">bool</span> success <span style="color: #008000;">=</span> <span style="color: #6666CC; font-weight: bold;">double</span><span style="color: #008000;">.</span><span style="color: #05a;">TryParse</span><span style="color: #008000;">(</span>str, <span style="color: #05a; font-weight: bold;">out</span> d<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
 <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>success<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span><span style="color: #a11;">"Conversión exitosa: "</span> <span style="color: #008000;">+</span> d<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -338,36 +338,36 @@ True
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Fahrenheit<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Fahrenheit<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">double</span> Degrees <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">double</span> Degrees <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">public</span> Fahrenheit<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">double</span> degrees<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> Fahrenheit<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">double</span> degrees<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Degrees <span style="color: #008000;">=</span> degrees<span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #696969; font-style: italic;">// Conversión implícita de Fahrenheit a double</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #05a; font-weight: bold;">implicit</span> <span style="color: #05a; font-weight: bold;">operator</span> <span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">(</span>Fahrenheit f<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #05a; font-weight: bold;">implicit</span> <span style="color: #05a; font-weight: bold;">operator</span> <span style="color: #6666CC; font-weight: bold;">double</span><span style="color: #008000;">(</span>Fahrenheit f<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         <span style="color: #05a; font-weight: bold;">return</span> f<span style="color: #008000;">.</span><span style="color: #05a;">Degrees</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #696969; font-style: italic;">// Conversión explícita de double a Fahrenheit</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #05a; font-weight: bold;">explicit</span> <span style="color: #05a; font-weight: bold;">operator</span> Fahrenheit<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">double</span> d<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #05a; font-weight: bold;">explicit</span> <span style="color: #05a; font-weight: bold;">operator</span> Fahrenheit<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">double</span> d<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         <span style="color: #05a; font-weight: bold;">return</span> <span style="color: #008000;">new</span> Fahrenheit<span style="color: #008000;">(</span>d<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Program<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Program<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Fahrenheit f <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Fahrenheit<span style="color: #008000;">(</span><span style="color: Maroon;">98.6</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span><span style="color: #a11;">"Fahrenheit object: "</span> <span style="color: #008000;">+</span> f<span style="color: #008000;">.</span><span style="color: #05a;">Degrees</span> <span style="color: #008000;">+</span> <span style="color: #a11;">" degrees"</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
-        <span style="color: #6666cc; font-weight: bold;">double</span> temp <span style="color: #008000;">=</span> f<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita</span><br/>
+        <span style="color: #6666CC; font-weight: bold;">double</span> temp <span style="color: #008000;">=</span> f<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión implícita</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span><span style="color: #a11;">"After implicit conversion to double: "</span> <span style="color: #008000;">+</span> temp <span style="color: #008000;">+</span> <span style="color: #a11;">" degrees"</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
         Fahrenheit newF <span style="color: #008000;">=</span> <span style="color: #008000;">(</span>Fahrenheit<span style="color: #008000;">)</span>temp<span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Conversión explícita</span><br/>
@@ -415,7 +415,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -460,7 +460,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -678,7 +678,7 @@ class 测试
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>

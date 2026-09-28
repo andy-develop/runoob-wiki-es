@@ -487,13 +487,13 @@ EOF<br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Enviar el contenido del archivo como contexto al Agente</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">cat</span> error.log <span style="color: #000000; font-weight: bold;">|</span> hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Analiza estos registros de errores y encuentra la causa raíz"</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">cat</span> error.log <span style="color: #000000; font-weight: bold;">|</span> hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Analiza estos registros de errores y encuentra la causa raíz"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Guardar la respuesta del Agente en un archivo</span><br/>
 hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Genera el README.md del proyecto"</span> <span style="color: #000000; font-weight: bold;">&gt;</span> README.md<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Usar al Agente como filtro en una tubería</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">cat</span> data.csv <span style="color: #000000; font-weight: bold;">|</span> hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Extrae todas las direcciones de correo, una por línea"</span> <span style="color: #000000; font-weight: bold;">&gt;</span> emails.txt<br/>
+<span style="color: #C20CB9; font-weight: bold;">cat</span> data.csv <span style="color: #000000; font-weight: bold;">|</span> hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Extrae todas las direcciones de correo, una por línea"</span> <span style="color: #000000; font-weight: bold;">&gt;</span> emails.txt<br/>
 </div>
 </div>
 <h3>Combinar con alias de comandos de Profile</h3>
@@ -562,10 +562,10 @@ approvals</span>:<span style="color: green;"><br/>
 <span style="color: #666666; font-style: italic;"># Script de revisión automática de código: revisa uno por uno los archivos modificados en Git</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Obtener todos los archivos Python modificados</span><br/>
-<span style="color: #007800;">changed_files</span>=$<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #c20cb9; font-weight: bold;">git diff</span> <span style="color: #660033;">--name-only</span> HEAD~<span style="color: #000000;">1</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">grep</span> <span style="color: #a10;">'\.py$'</span><span style="color: #7a0874; font-weight: bold;">)</span><br/>
+<span style="color: #007800;">changed_files</span>=$<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #C20CB9; font-weight: bold;">git diff</span> <span style="color: #660033;">--name-only</span> HEAD~<span style="color: #000000;">1</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #C20CB9; font-weight: bold;">grep</span> <span style="color: #a10;">'\.py$'</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #c20cb9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #007800;">$changed_files</span>; <span style="color: #000000; font-weight: bold;">do</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"=== Revisión:<span style="color: #007800;">$file</span> ==="</span><br/>
+<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #C20CB9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #007800;">$changed_files</span>; <span style="color: #000000; font-weight: bold;">do</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"=== Revisión:<span style="color: #007800;">$file</span> ==="</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;"># Usar Hermes para revisar el código, el resultado se envía directamente a la terminal</span><br/>
     hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Revisa el estilo de código y los problemas potenciales de los siguientes archivos Python:<br/>
@@ -573,11 +573,11 @@ approvals</span>:<span style="color: green;"><br/>
 <br/>Por favor, presenta los problemas y sugerencias encontrados en forma de lista."</span> <span style="color: #000000;">2</span><span style="color: #000000; font-weight: bold;">&gt;/</span>dev<span style="color: #000000; font-weight: bold;">/</span>null<br/>
 <br/>
     <span style="color: #666666; font-style: italic;"># Verificar el código de salida</span><br/>
-    <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #007800;">$?</span> <span style="color: #660033;">-ne</span> <span style="color: #000000;">0</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-        <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"[Advertencia]<span style="color: #007800;">$file</span>Se produjo un error durante la revisión."</span><br/>
+    <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #007800;">$?</span> <span style="color: #660033;">-ne</span> <span style="color: #000000;">0</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+        <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"[Advertencia]<span style="color: #007800;">$file</span>Se produjo un error durante la revisión."</span><br/>
     <span style="color: #000000; font-weight: bold;">fi</span><br/>
 <br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">""</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">""</span><br/>
 <span style="color: #000000; font-weight: bold;">done</span><br/>
 </div>
 </div>
@@ -591,33 +591,33 @@ approvals</span>:<span style="color: green;"><br/>
 <span style="color: #666666; font-style: italic;"># Hook de pre-commit de Git: el Agente revisa el código antes de la confirmación</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Obtener la lista de archivos modificados en el área de preparación</span><br/>
-<span style="color: #007800;">staged_files</span>=$<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #c20cb9; font-weight: bold;">git diff</span> <span style="color: #660033;">--cached</span> --name-only<span style="color: #7a0874; font-weight: bold;">)</span><br/>
+<span style="color: #007800;">staged_files</span>=$<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #C20CB9; font-weight: bold;">git diff</span> <span style="color: #660033;">--cached</span> --name-only<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">[</span> <span style="color: #660033;">-z</span> <span style="color: #a10;">"<span style="color: #007800;">$staged_files</span>"</span> <span style="color: #7a0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #660033;">-z</span> <span style="color: #a10;">"<span style="color: #007800;">$staged_files</span>"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 <br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"El Agente Hermes está revisando los cambios de código..."</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"El Agente Hermes está revisando los cambios de código..."</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Hacer que el Agente revise los cambios preparados</span><br/>
-<span style="color: #007800;">result</span>=$<span style="color: #7a0874; font-weight: bold;">(</span>hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Revisa los siguientes cambios de código en el área de preparación de Git,<span style="color: #000099; font-weight: bold;">\<br/>
+<span style="color: #007800;">result</span>=$<span style="color: #7A0874; font-weight: bold;">(</span>hermes chat <span style="color: #660033;">-q</span> <span style="color: #a10;">"Revisa los siguientes cambios de código en el área de preparación de Git,<span style="color: #000099; font-weight: bold;">\<br/>
 </span>solo informa problemas graves (vulnerabilidades de seguridad, errores lógicos, cambios disruptivos).<span style="color: #000099; font-weight: bold;">\<br/>
 </span>Si no hay problemas graves, responde PASS.<span style="color: #000099; font-weight: bold;">\<br/>
 </span><span style="color: #000099; font-weight: bold;">\<br/>
 </span>Archivos modificados:<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #007800;">$staged_files</span><span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\<br/>
-</span>Diff detallado:<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #007800;">$(git diff --cached)</span>"</span> <span style="color: #000000;">2</span><span style="color: #000000; font-weight: bold;">&gt;/</span>dev<span style="color: #000000; font-weight: bold;">/</span>null<span style="color: #7a0874; font-weight: bold;">)</span><br/>
+</span>Diff detallado:<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #007800;">$(git diff --cached)</span>"</span> <span style="color: #000000;">2</span><span style="color: #000000; font-weight: bold;">&gt;/</span>dev<span style="color: #000000; font-weight: bold;">/</span>null<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$result</span>"</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$result</span>"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Si el Agente encuentra problemas graves, bloquea la confirmación</span><br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$result</span>"</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">grep</span> <span style="color: #660033;">-q</span> <span style="color: #a10;">"PASS"</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Revisión aprobada"</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$result</span>"</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #C20CB9; font-weight: bold;">grep</span> <span style="color: #660033;">-q</span> <span style="color: #a10;">"PASS"</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Revisión aprobada"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span><br/>
 <span style="color: #000000; font-weight: bold;">else</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">""</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"El Agente ha encontrado problemas que requieren atención."</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Si confirmas que está correcto, usa git commit --no-verify para omitir esta verificación."</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">""</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"El Agente ha encontrado problemas que requieren atención."</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Si confirmas que está correcto, usa git commit --no-verify para omitir esta verificación."</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">1</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
 </div>
 </div>
@@ -657,7 +657,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -702,7 +702,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -741,7 +741,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -960,7 +960,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

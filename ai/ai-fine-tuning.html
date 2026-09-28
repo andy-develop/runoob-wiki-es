@@ -899,21 +899,21 @@ conda activate finetuning<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Instalar PyTorch (elige el comando adecuado según tu versión de CUDA)</span><br/>
 <span style="color: #666666; font-style: italic;"># Visita https://pytorch.org/get-started/locally/ para obtener los comandos más recientes</span><br/>
-conda <span style="color: #c20cb9; font-weight: bold;">install</span> pytorch pytorch-cuda=<span style="color: #000000;">12.1</span> <span style="color: #660033;">-c</span> pytorch <span style="color: #660033;">-c</span> nvidia<br/>
+conda <span style="color: #C20CB9; font-weight: bold;">install</span> pytorch pytorch-cuda=<span style="color: #000000;">12.1</span> <span style="color: #660033;">-c</span> pytorch <span style="color: #660033;">-c</span> nvidia<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Instalar el ecosistema de bibliotecas de HuggingFace</span><br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> transformers datasets accelerate peft bitsandbytes<br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> transformers datasets accelerate peft bitsandbytes<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Instalar Unsloth (opcional, mayor velocidad de entrenamiento)</span><br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #a10;">"unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"</span><br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #660033;">--no-deps</span> trl xformers<br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #a10;">"unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"</span><br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #660033;">--no-deps</span> trl xformers<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># O usar LLaMA-Factory (framework de entrenamiento integral)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">git clone</span> <span style="color: #660033;">--depth</span> <span style="color: #000000;">1</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>hiyouga<span style="color: #000000; font-weight: bold;">/</span>LLaMA-Factory.git<br/>
-<span style="color: #7a0874; font-weight: bold;">cd</span> LLaMA-Factory<br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #660033;">-e</span> <span style="color: #a10;">".[torch,metrics]"</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">git clone</span> <span style="color: #660033;">--depth</span> <span style="color: #000000;">1</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>hiyouga<span style="color: #000000; font-weight: bold;">/</span>LLaMA-Factory.git<br/>
+<span style="color: #7A0874; font-weight: bold;">cd</span> LLaMA-Factory<br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #660033;">-e</span> <span style="color: #a10;">".[torch,metrics]"</span><br/>
 <br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">¡Configuración del entorno completada!</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">¡Configuración del entorno completada!</span><br/>
 </div>
 </div>
 <h3>Usando Unsloth/LLaMA-Factory</h3>
@@ -1120,7 +1120,7 @@ tokenizer.<span style="color: #05a;">save_pretrained</span><span style="color: O
 <span style="color: #666666; font-style: italic;"># ============================================</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Opción 1: Iniciar Web UI (la más intuitiva)</span><br/>
-<span style="color: #7a0874; font-weight: bold;">cd</span> LLaMA-Factory<br/>
+<span style="color: #7A0874; font-weight: bold;">cd</span> LLaMA-Factory<br/>
 python src<span style="color: #000000; font-weight: bold;">/</span>train_web.py<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Opción 2: Entrenamiento por línea de comandos (adecuado para automatización)</span><br/>
@@ -1142,8 +1142,8 @@ python src<span style="color: #000000; font-weight: bold;">/</span>train.py \<br
     --save_strategy epoch \<br/>
     --learning_rate 2e-5 \<br/>
     --num_train_epochs <span style="color: #000000;">3</span> \<br/>
-    <span style="color: #660033;">--fp16</span> <span style="color: #c20cb9; font-weight: bold;">true</span> \<br/>
-    --plot_loss <span style="color: #c20cb9; font-weight: bold;">true</span><br/>
+    <span style="color: #660033;">--fp16</span> <span style="color: #C20CB9; font-weight: bold;">true</span> \<br/>
+    --plot_loss <span style="color: #C20CB9; font-weight: bold;">true</span><br/>
 </div>
 </div>
 <h3>Ajuste de hiperparámetros de entrenamiento</h3>
@@ -1384,7 +1384,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1429,7 +1429,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1468,7 +1468,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1687,7 +1687,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

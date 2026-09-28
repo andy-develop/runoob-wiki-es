@@ -445,24 +445,24 @@ const favoriteStore = useFavoriteStore()<br/>
 function handleFavorite(e) {<br/>e.preventDefault()   // Evita la navegación de RouterLink<br/>
   favoriteStore.toggleFavorite(props.id)<br/>
 }<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66cc66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id } }"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"card-link"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"card"</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"tag"</span>&gt;</span>{{ category }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ summary }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"card-footer"</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"date"</span>&gt;</span>{{ date }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66CC66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id } }"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"card-link"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"card"</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"tag"</span>&gt;</span>{{ category }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ summary }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"card-footer"</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"date"</span>&gt;</span>{{ date }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
         <span style="color: #808080; font-style: italic;">&lt;!-- Botón de favoritos: si está en favoritos se muestra relleno, si no, vacío --&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"fav-btn"</span> @click<span style="color: #66cc66;">=</span><span style="color: #a11;">"handleFavorite"</span>&gt;</span><br/>
-          {{ favoriteStore.isFavorite(id) ? '<span style="color: #ddbb00;">&amp;#x2665;</span>' : '♡' }}<br/>
-        <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"fav-btn"</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"handleFavorite"</span>&gt;</span><br/>
+          {{ favoriteStore.isFavorite(id) ? '<span style="color: #DDBB00;">&amp;#x2665;</span>' : '♡' }}<br/>
+        <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">style</span> scoped&gt;</span><br/>
 .card-footer {<br/>
@@ -482,7 +482,7 @@ function handleFavorite(e) {<br/>e.preventDefault()   // Evita la navegación de
 .fav-btn:hover {<br/>
   transform: scale(1.2);<br/>
 }<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
 </div>
 </div>
 <h3>Añadir también un botón de favoritos en la página de detalles</h3>
@@ -494,20 +494,20 @@ function handleFavorite(e) {<br/>e.preventDefault()   // Evita la navegación de
 import { useFavoriteStore } from '../stores/useFavoriteStore.js'<br/>
 <br/>
 const favoriteStore = useFavoriteStore()<br/>// ... otro código<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">article</span> v-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"article"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"post-header"</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">article</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"article"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"post-header"</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
       <span style="color: #808080; font-style: italic;">&lt;!-- Botón de favoritos en la página de detalles: el estado está totalmente sincronizado con la página de inicio --&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"fav-btn"</span> @click<span style="color: #66cc66;">=</span><span style="color: #a11;">"favoriteStore.toggleFavorite(article.id)"</span>&gt;</span><br/>
-        {{ favoriteStore.isFavorite(article.id) ? '<span style="color: #ddbb00;">&amp;#x2665;</span>'En favoritos' : '♡ Favorito' }}<br/>
-      <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">button</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"fav-btn"</span> @click<span style="color: #66CC66;">=</span><span style="color: #a11;">"favoriteStore.toggleFavorite(article.id)"</span>&gt;</span><br/>
+        {{ favoriteStore.isFavorite(article.id) ? '<span style="color: #DDBB00;">&amp;#x2665;</span>'En favoritos' : '♡ Favorito' }}<br/>
+      <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">button</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- ... --&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <p>El estado de favoritos de la página de inicio y de la página de detalles está totalmente sincronizado: después de marcar un artículo como favorito en la página de inicio, al entrar en la página de detalles se muestra automáticamente «En favoritos».</p>
@@ -523,18 +523,18 @@ const favoriteStore = useFavoriteStore()<br/>// ... otro código<br/>
 import { useFavoriteStore } from '../stores/useFavoriteStore.js'<br/>
 <br/>
 const favoriteStore = useFavoriteStore()<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"navbar"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>RUNOOB Blog<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"navbar"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>RUNOOB Blog<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
       <span style="color: #808080; font-style: italic;">&lt;!-- Insignia con el número de favoritos --&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"fav-badge"</span> v-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"favoriteStore.favoriteCount &gt;</span></span> 0"&gt;<br/>Favoritos {{ favoriteStore.favoriteCount }}<br/>
-      <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"fav-badge"</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"favoriteStore.favoriteCount &gt;</span></span> 0"&gt;<br/>Favoritos {{ favoriteStore.favoriteCount }}<br/>
+      <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">style</span> scoped&gt;</span><br/>
 .fav-badge {<br/>
@@ -544,7 +544,7 @@ const favoriteStore = useFavoriteStore()<br/>
   border-radius: 12px;<br/>
   font-size: 13px;<br/>
 }<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
 </div>
 </div>
 <p>El número en NavBar se mantiene sincronizado automáticamente con la lista de favoritos más reciente: al marcar o desmarcar un artículo, el número en la barra de navegación cambia al instante.</p>
@@ -596,7 +596,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -641,7 +641,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -680,7 +680,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -899,7 +899,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

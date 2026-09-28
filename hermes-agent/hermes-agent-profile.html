@@ -372,8 +372,8 @@ coder gateway start       <span style="color: #666666; font-style: italic;">#
 assistant gateway start   <span style="color: #666666; font-style: italic;"># Vincular un Bot diferente</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Instalar como servicio de sistema persistente</span><br/>
-coder gateway <span style="color: #c20cb9; font-weight: bold;">install</span>     <span style="color: #666666; font-style: italic;"># Crear el servicio systemd hermes-gateway-coder</span><br/>
-assistant gateway <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #666666; font-style: italic;"># Crear el servicio hermes-gateway-assistant</span><br/>
+coder gateway <span style="color: #C20CB9; font-weight: bold;">install</span>     <span style="color: #666666; font-style: italic;"># Crear el servicio systemd hermes-gateway-coder</span><br/>
+assistant gateway <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #666666; font-style: italic;"># Crear el servicio hermes-gateway-assistant</span><br/>
 </div>
 </div>
 <blockquote><p>Protección de seguridad: si dos Perfiles usan accidentalmente el mismo token de Bot, la segunda puerta de enlace reportará un error inmediatamente e indicará el nombre del Perfil en conflicto, sin que ocurra un conflicto silencioso.</p></blockquote>
@@ -391,7 +391,7 @@ hermes profile show coder<br/>
 hermes profile rename coder dev-bot<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Exportar como coder.tar.gz</span><br/>
-hermes profile <span style="color: #7a0874; font-weight: bold;">export</span> coder<br/>
+hermes profile <span style="color: #7A0874; font-weight: bold;">export</span> coder<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Importar desde un archivo</span><br/>
 hermes profile import coder.tar.gz<br/>
@@ -453,13 +453,13 @@ env_requires</span>:<span style="color: green;"><br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Entrar al directorio Profile e inicializar el repositorio Git</span><br/>
-<span style="color: #7a0874; font-weight: bold;">cd</span> ~<span style="color: #000000; font-weight: bold;">/</span>.hermes<span style="color: #000000; font-weight: bold;">/</span>profiles<span style="color: #000000; font-weight: bold;">/</span>research-bot<br/>
-<span style="color: #c20cb9; font-weight: bold;">git init</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">git add</span> .<br/>
-<span style="color: #c20cb9; font-weight: bold;">git commit</span> <span style="color: #660033;">-m</span> <span style="color: #a10;">"v1.0.0"</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">git remote</span> add origin <span style="color: #c20cb9; font-weight: bold;">git</span><span style="color: #000000; font-weight: bold;">@</span>github.com:you<span style="color: #000000; font-weight: bold;">/</span>research-bot.git<br/>
-<span style="color: #c20cb9; font-weight: bold;">git tag</span> v1.0.0<br/>
-<span style="color: #c20cb9; font-weight: bold;">git push</span> <span style="color: #660033;">-u</span> origin main <span style="color: #660033;">--tags</span><br/>
+<span style="color: #7A0874; font-weight: bold;">cd</span> ~<span style="color: #000000; font-weight: bold;">/</span>.hermes<span style="color: #000000; font-weight: bold;">/</span>profiles<span style="color: #000000; font-weight: bold;">/</span>research-bot<br/>
+<span style="color: #C20CB9; font-weight: bold;">git init</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">git add</span> .<br/>
+<span style="color: #C20CB9; font-weight: bold;">git commit</span> <span style="color: #660033;">-m</span> <span style="color: #a10;">"v1.0.0"</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">git remote</span> add origin <span style="color: #C20CB9; font-weight: bold;">git</span><span style="color: #000000; font-weight: bold;">@</span>github.com:you<span style="color: #000000; font-weight: bold;">/</span>research-bot.git<br/>
+<span style="color: #C20CB9; font-weight: bold;">git tag</span> v1.0.0<br/>
+<span style="color: #C20CB9; font-weight: bold;">git push</span> <span style="color: #660033;">-u</span> origin main <span style="color: #660033;">--tags</span><br/>
 </div>
 </div>
 <blockquote><p>.env y auth.json se excluyen automáticamente: las claves de API no entran en el repositorio. El historial de memoria y sesiones tampoco se incluye.</p></blockquote>
@@ -468,10 +468,10 @@ env_requires</span>:<span style="color: green;"><br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Instalar (--alias crea comandos con el mismo nombre, como research-bot chat)</span><br/>
-hermes profile <span style="color: #c20cb9; font-weight: bold;">install</span> github.com<span style="color: #000000; font-weight: bold;">/</span>you<span style="color: #000000; font-weight: bold;">/</span>research-bot <span style="color: #660033;">--alias</span><br/>
+hermes profile <span style="color: #C20CB9; font-weight: bold;">install</span> github.com<span style="color: #000000; font-weight: bold;">/</span>you<span style="color: #000000; font-weight: bold;">/</span>research-bot <span style="color: #660033;">--alias</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Configurar la clave de API después de la instalación</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">nano</span> ~<span style="color: #000000; font-weight: bold;">/</span>.hermes<span style="color: #000000; font-weight: bold;">/</span>profiles<span style="color: #000000; font-weight: bold;">/</span>research-bot<span style="color: #000000; font-weight: bold;">/</span>.env<br/>
+<span style="color: #C20CB9; font-weight: bold;">nano</span> ~<span style="color: #000000; font-weight: bold;">/</span>.hermes<span style="color: #000000; font-weight: bold;">/</span>profiles<span style="color: #000000; font-weight: bold;">/</span>research-bot<span style="color: #000000; font-weight: bold;">/</span>.env<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Actualizar a la última versión (conserva la memoria y las sesiones propias)</span><br/>
 hermes profile update research-bot<br/>
@@ -491,15 +491,15 @@ hermes profile list                             <span style="color
 hermes profile show <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                      <span style="color: #666666; font-style: italic;"># Ver detalles</span><br/>
 hermes profile use <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                       <span style="color: #666666; font-style: italic;"># Establecer como predeterminado</span><br/>
 hermes profile rename <span style="color: #000000; font-weight: bold;">&lt;</span>old<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000; font-weight: bold;">&lt;</span>new<span style="color: #000000; font-weight: bold;">&gt;</span>              <span style="color: #666666; font-style: italic;"># Renombrar</span><br/>
-hermes profile <span style="color: #7a0874; font-weight: bold;">export</span> <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Exportar copia de seguridad</span><br/>
-hermes profile import <span style="color: #000000; font-weight: bold;">&lt;</span><span style="color: #c20cb9; font-weight: bold;">file</span><span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Importar copia de seguridad</span><br/>
+hermes profile <span style="color: #7A0874; font-weight: bold;">export</span> <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Exportar copia de seguridad</span><br/>
+hermes profile import <span style="color: #000000; font-weight: bold;">&lt;</span><span style="color: #C20CB9; font-weight: bold;">file</span><span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Importar copia de seguridad</span><br/>
 hermes profile delete <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                    <span style="color: #666666; font-style: italic;"># Eliminar</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Alias de comandos de perfil (disponibles automáticamente después de crearlos)</span><br/>
 <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span> chat <span style="color: #000000; font-weight: bold;">/</span> setup <span style="color: #000000; font-weight: bold;">/</span> gateway start <span style="color: #000000; font-weight: bold;">/</span> skills list <span style="color: #000000; font-weight: bold;">/</span> doctor<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># ─── Distribuciones ──────────────────────────────────────────────────</span><br/>
-hermes profile <span style="color: #c20cb9; font-weight: bold;">install</span> github.com<span style="color: #000000; font-weight: bold;">/</span>user<span style="color: #000000; font-weight: bold;">/</span>repo <span style="color: #660033;">--alias</span>  <span style="color: #666666; font-style: italic;"># Instalar</span><br/>
+hermes profile <span style="color: #C20CB9; font-weight: bold;">install</span> github.com<span style="color: #000000; font-weight: bold;">/</span>user<span style="color: #000000; font-weight: bold;">/</span>repo <span style="color: #660033;">--alias</span>  <span style="color: #666666; font-style: italic;"># Instalar</span><br/>
 hermes profile update <span style="color: #000000; font-weight: bold;">&lt;</span>name<span style="color: #000000; font-weight: bold;">&gt;</span>                         <span style="color: #666666; font-style: italic;"># Actualizar</span><br/>
 </div>
 </div> Otras extensiones
@@ -536,7 +536,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -581,7 +581,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -620,7 +620,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir mis notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -839,7 +839,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -377,7 +377,7 @@ white-space: pre-wrap;
 <h4>Crear un panel</h4>
 <p>1. Crear un panel mediante marcado</p>
 <p>Crear un panel desde el marcado es más fácil. Agregue la clase 'easyui-panel' a la etiqueta &lt;div&gt;.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="p" class="easyui-panel" title="My Panel"
     style="width:500px;height:150px;padding:10px;background:#fafafa;"
     data-options="iconCls:'icon-save',closable:true,
@@ -388,7 +388,7 @@ white-space: pre-wrap;
 </pre>
 <p>2. Crear un panel mediante programación</p>
 <p>Vamos a crear un panel con una barra de herramientas en la esquina superior derecha.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="p" style="padding:10px;"&gt;
     &lt;p&gt;panel content.&lt;/p&gt;
     &lt;p&gt;panel content.&lt;/p&gt;
@@ -408,7 +408,7 @@ $('#p').panel({
 </pre>
 <h4>Mover el panel</h4>
 <p>Llame al método 'move' para mover el panel a una nueva posición.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#p').panel('move',{
     left:100,
     top:100
@@ -416,7 +416,7 @@ $('#p').panel('move',{
 </pre>
 <h4>Cargar contenido</h4>
 <p>Carguemos el contenido del panel mediante ajax y mostremos alguna información cuando la carga se realice correctamente.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#p').panel({
     href:'content_url.php',
     onLoad:function(){
@@ -495,7 +495,7 @@ $('#p').panel({
 <tr>
 <td>style</td>
 <td>object</td>
-<td>Agrega estilos personalizados al panel.<br/>Ejemplo de código para cambiar el ancho del borde del panel:<pre style="color:#006600">
+<td>Agrega estilos personalizados al panel.<br/>Ejemplo de código para cambiar el ancho del borde del panel:<pre style="color:#0053A6">
 &lt;div class="easyui-panel" style="width:200px;height:100px"
         data-options="style:{borderWidth:2}"&gt;
 &lt;/div&gt;
@@ -506,7 +506,7 @@ $('#p').panel({
 <tr>
 <td>fit</td>
 <td>boolean</td>
-<td>Cuando se establece en true, el tamaño del panel se ajusta a su contenedor padre. El siguiente ejemplo muestra un panel que se ajusta automáticamente al tamaño interior máximo de su contenedor padre.<pre style="color:#006600">
+<td>Cuando se establece en true, el tamaño del panel se ajusta a su contenedor padre. El siguiente ejemplo muestra un panel que se ajusta automáticamente al tamaño interior máximo de su contenedor padre.<pre style="color:#0053A6">
 &lt;div style="width:200px;height:100px;padding:5px"&gt;
     &lt;div class="easyui-panel" style="width:200px;height:100px"
             data-options="fit:true,border:false"&gt;
@@ -569,7 +569,7 @@ $('#p').panel({
 <td>tools</td>
 <td>array,selector</td>
 <td>Grupo de herramientas personalizado, valores posibles:<br/>1. Un array, cada elemento contiene las propiedades iconCls y handler.<br/>2. Un selector que indica el grupo de herramientas.<br/>
-<br/>El grupo de herramientas del panel puede declararse mediante una etiqueta &lt;div&gt; existente:<pre style="color:#006600">
+<br/>El grupo de herramientas del panel puede declararse mediante una etiqueta &lt;div&gt; existente:<pre style="color:#0053A6">
 &lt;div class="easyui-panel" style="width:300px;height:200px"
         title="My Panel" data-options="iconCls:'icon-ok',tools:'#tt'"&gt;
 &lt;/div&gt;
@@ -577,7 +577,7 @@ $('#p').panel({
     &lt;a href="../index.html" class="icon-add" onclick="javascript:alert('add')"&gt;&lt;/a&gt;
     &lt;a href="../index.html" class="icon-edit" onclick="javascript:alert('edit')"&gt;&lt;/a&gt;
 &lt;/div&gt;
-</pre>El grupo de herramientas del panel puede definirse mediante un array:<pre style="color:#006600">
+</pre>El grupo de herramientas del panel puede definirse mediante un array:<pre style="color:#0053A6">
 &lt;div class="easyui-panel" style="width:300px;height:200px"
         title="My Panel" data-options="iconCls:'icon-ok',tools:[
                 {
@@ -619,7 +619,7 @@ $('#p').panel({
 <tr>
 <td>href</td>
 <td>string</td>
-<td>Una URL para cargar datos remotos y mostrarlos en el panel. Tenga en cuenta que el contenido no se cargará a menos que el panel esté abierto. Esto es útil para crear un panel con carga diferida (lazy loading):<pre style="color:#006600">
+<td>Una URL para cargar datos remotos y mostrarlos en el panel. Tenga en cuenta que el contenido no se cargará a menos que el panel esté abierto. Esto es útil para crear un panel con carga diferida (lazy loading):<pre style="color:#0053A6">
 &lt;div id="pp" class="easyui-panel" style="width:300px;height:200px"
         data-options="href='get_content.php.html',closed:true"&gt;
 &lt;/div&gt;
@@ -643,7 +643,7 @@ $('#p').panel({
 <tr>
 <td>extractor</td>
 <td>function</td>
-<td>Define cómo extraer el contenido de la respuesta ajax y devuelve los datos extraídos.<pre style="color:#006600">
+<td>Define cómo extraer el contenido de la respuesta ajax y devuelve los datos extraídos.<pre style="color:#0053A6">
 extractor: function(data){
     var pattern = /&lt;body[^&gt;]*&gt;((.|[\n\r])*)&lt;\/body&gt;/im;
     var matches = pattern.exec(data);
@@ -683,7 +683,7 @@ extractor: function(data){
 <tr>
 <td>onBeforeClose</td>
 <td>none</td>
-<td>Se dispara antes de cerrar el panel; si devuelve false, se cancela el cierre. El panel declarado a continuación no se cerrará.<pre style="color:#006600">
+<td>Se dispara antes de cerrar el panel; si devuelve false, se cancela el cierre. El panel declarado a continuación no se cerrará.<pre style="color:#0053A6">
 &lt;div class="easyui-panel" style="width:300px;height:200px;"
         title="My Panel" data-options="onBeforeClose:function(){return false}"&gt;
     The panel cannot be closed.
@@ -802,7 +802,7 @@ extractor: function(data){
 <tr>
 <td>refresh</td>
 <td>href</td>
-<td>Actualiza el panel cargando datos remotos. Si se asigna el parámetro 'href', se sobrescribe la antigua propiedad 'href'.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Actualiza el panel cargando datos remotos. Si se asigna el parámetro 'href', se sobrescribe la antigua propiedad 'href'.<br/>Ejemplo de código:<pre style="color:#0053A6">
 // open a panel and then refresh its contents.
 $('#pp').panel('open').panel('refresh');
 // refresh contents with a new URL.
@@ -814,7 +814,7 @@ $('#pp').panel('open').panel('refresh','new_content.php');
 <td>resize</td>
 <td>options</td>
 <td>Establece el tamaño del panel y aplica el diseño. El objeto Options contiene las siguientes propiedades:<br/>width: el nuevo ancho del panel<br/>height: la nueva altura del panel<br/>left: la nueva posición izquierda del panel<br/>top: la nueva posición superior del panel<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#pp').panel('resize',{
     width: 600,
     height: 400
@@ -888,7 +888,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -933,7 +933,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -972,7 +972,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1191,7 +1191,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

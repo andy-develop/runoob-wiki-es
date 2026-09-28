@@ -361,7 +361,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Un índice es una estructura que optimiza el rendimiento de las consultas en bases de datos, pero a veces puede ser necesario eliminar un índice, por ejemplo, cuando ya no se necesita o se debe reemplazar por un índice nuevo.</p>
 <p>La sentencia DROP INDEX se utiliza para eliminar un índice de una tabla.</p>
 <div class="example"><h2 class="example">Sintaxis:</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">INDEX</span> <span style="color: #66cc66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66cc66;">]</span> index_name<br/>
+<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">INDEX</span> <span style="color: #66CC66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66CC66;">]</span> index_name<br/>
 <span style="color: #993333; font-weight: bold;">ON</span> <span style="color: #993333; font-weight: bold;">TABLE_NAME</span>;<br/>
 </div></div><p><strong>Descripción de parámetros:</strong></p>
 <ul><li><code>DROP INDEX</code>: Indica la operación de eliminar el índice.</li><li><code>IF EXISTS</code>: Es una cláusula opcional que se utiliza para verificar si el índice existe. Si existe, realiza la eliminación; si no existe, no se produce ningún error.</li><li><code>index_name</code>: El nombre del índice a eliminar.</li><li><code>ON table_name</code>: Especifica el nombre de la tabla que contiene el índice a eliminar.</li></ul>
@@ -374,7 +374,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Sentencia DROP TABLE</h2>
 <p>La sentencia DROP TABLE se utiliza para eliminar tablas.</p><p>Eliminar una tabla borrará al mismo tiempo la estructura de la tabla y todos los datos almacenados en ella. Por lo tanto, antes de ejecutar la sentencia DROP TABLE, asegúrate de que realmente deseas eliminar de forma permanente la tabla y todos sus datos, ya que esta operación es irreversible.</p>
 <div class="example"><h2 class="example">Sintaxis:</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">TABLE</span> <span style="color: #66cc66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66cc66;">]</span> <span style="color: #993333; font-weight: bold;">TABLE_NAME</span>;<br/>
+<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">TABLE</span> <span style="color: #66CC66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66CC66;">]</span> <span style="color: #993333; font-weight: bold;">TABLE_NAME</span>;<br/>
 </div></div>
 <p><strong>Descripción de parámetros:</strong></p><ul><li><code>DROP TABLE</code>: Indica la operación de eliminar la tabla.</li><li><code>IF EXISTS</code>: Es una cláusula opcional que se utiliza para verificar si la tabla existe. Si existe, ejecuta la operación de eliminación; si no existe, no se muestra ningún error.</li><li><code>table_name</code>: El nombre de la tabla a eliminar.</li></ul>
 <p>A continuación se muestra un ejemplo sencillo: supongamos que se desea eliminar la tabla llamada my_table:</p>
@@ -386,7 +386,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Sentencia DROP DATABASE</h2>
 <p>La sentencia DROP DATABASE se utiliza para eliminar una base de datos, incluyendo todos sus objetos de base de datos, como tablas, vistas, procedimientos almacenados, etc.</p><p>DROP DATABASE es una operación muy potente y peligrosa, porque eliminará de forma permanente toda la base de datos y todos sus datos relacionados. Por lo tanto, antes de ejecutarla, es imprescindible considerar cuidadosamente y asegurarte de que realmente deseas realizar esta operación.</p>
 <div class="example"><h2 class="example">Sintaxis:</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">DATABASE</span> <span style="color: #66cc66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66cc66;">]</span> database_name;<br/>
+<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">DATABASE</span> <span style="color: #66CC66;">[</span><span style="color: #993333; font-weight: bold;">IF</span> <span style="color: #993333; font-weight: bold;">EXISTS</span><span style="color: #66CC66;">]</span> database_name;<br/>
 </div></div>
 <p><strong>Descripción de parámetros:</strong></p>
 <ul><li><code>DROP DATABASE</code>: Indica la operación de eliminar la base de datos.</li><li><code>IF EXISTS</code>: Es una cláusula opcional que se utiliza para verificar si la base de datos existe. Si existe, ejecuta la operación de eliminación; si no existe, no se muestra ningún error.</li><li><code>database_name</code>: El nombre de la base de datos a eliminar.</li></ul><p>A continuación se muestra un ejemplo sencillo: supongamos que se desea eliminar la base de datos llamada my_database:</p>
@@ -442,7 +442,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -487,7 +487,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -526,7 +526,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una ampliación del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar artículos</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -745,7 +745,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

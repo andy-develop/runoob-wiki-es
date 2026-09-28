@@ -360,7 +360,7 @@ sudo /usr/local/mysql/support-files/mysql.server status</pre><p>En los comandos 
 CREATE USER 'username'@'host' IDENTIFIED BY 'password';</pre>
 <ul><li><code>username</code>: nombre de usuario.</li><li><code>host</code>: especifica desde qué hosts puede conectarse el usuario. Por ejemplo,<code>localhost</code>solo permite la conexión local,<code>%</code>permite la conexión desde cualquier host.</li><li><code>password</code>: la contraseña del usuario.</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #ff0000;">'password123'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #FF0000;">'password123'</span>;<br/>
 </div></div>
 <h3>Otorgar privilegios</h3><p>Después de crear el usuario, debe otorgarle privilegios de acceso, use el<span class="marked">GRANT</span>comando para otorgar privilegios:</p>
 <pre>
@@ -368,7 +368,7 @@ GRANT privileges ON database_name.* TO 'username'@'host';</pre>
 <p>
 <ul><li><code>privileges</code>: los privilegios necesarios, como<code>ALL PRIVILEGES</code>、<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>etc.</li><li><code>database_name.*</code>: indica otorgar privilegios sobre una base de datos o tabla específica.<code>database_name.*</code>indica otorgar privilegios sobre todas las tablas de una base de datos,<code>database_name.table_name</code>indica otorgar privilegios sobre una tabla específica.</li><li><code>TO 'username'@'host'</code>: especifica el usuario y el host a los que se otorgan los privilegios.</li></ul>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66cc66;">.*</span> <span style="color: #993333; font-weight: bold;">TO</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66CC66;">.*</span> <span style="color: #993333; font-weight: bold;">TO</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 </div></div>
 <h3>Actualizar privilegios</h3><p>Después de otorgar o revocar privilegios, es necesario actualizar los privilegios para que los cambios surtan efecto:</p>
 <pre>
@@ -377,37 +377,37 @@ FLUSH PRIVILEGES;</pre>
 <pre>
 SHOW GRANTS FOR 'username'@'host';</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">SHOW</span> GRANTS <span style="color: #993333; font-weight: bold;">FOR</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">SHOW</span> GRANTS <span style="color: #993333; font-weight: bold;">FOR</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 </div></div>
 <h3>Revocar privilegios</h3><p>Para revocar los privilegios de un usuario, utilice el comando REVOKE:</p>
 <pre>
 REVOKE privileges ON database_name.* FROM 'username'@'host';</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">REVOKE</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66cc66;">.*</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">REVOKE</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66CC66;">.*</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 </div></div>
 <h3>Eliminar usuario</h3><p>Si necesita eliminar un usuario, puede utilizar el siguiente comando:</p>
 <pre>
 DROP USER 'username'@'host';</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 </div></div>
 <h3>Cambiar la contraseña de usuario</h3><p>Para cambiar la contraseña de un usuario, puede utilizar el comando ALTER USER:</p>
 <pre>ALTER USER 'username'@'host' IDENTIFIED BY 'new_password';</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">ALTER</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #ff0000;">'newpassword456'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">ALTER</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #FF0000;">'newpassword456'</span>;<br/>
 </div></div>
 <h3>Cambiar el host del usuario</h3><p>Para cambiar el host del usuario (es decir, desde qué hosts se permite la conexión), puede eliminar el usuario y luego crear uno nuevo.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #808080; font-style: italic;">-- Eliminar el usuario antiguo</span><br/>
-<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">DROP</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 <br/>
 <span style="color: #808080; font-style: italic;">-- Recrear el usuario y especificar el nuevo host</span><br/>
-<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'%'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #ff0000;">'password123'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'%'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #FF0000;">'password123'</span>;<br/>
 </div></div>
 <h3>Especificar privilegios al crear usuario</h3><p>Al crear un usuario, también se pueden otorgar privilegios al mismo tiempo (en MySQL 8.0.16 y versiones posteriores):</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #ff0000;">'password123'</span> <span style="color: #993333; font-weight: bold;">WITH</span> <span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">OPTION</span>;<br/>
-<span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66cc66;">.*</span> <span style="color: #993333; font-weight: bold;">TO</span> <span style="color: #ff0000;">'john'</span>@<span style="color: #ff0000;">'localhost'</span>;<br/>
+<span style="color: #993333; font-weight: bold;">CREATE</span> <span style="color: #993333; font-weight: bold;">USER</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span> <span style="color: #993333; font-weight: bold;">IDENTIFIED</span> <span style="color: #993333; font-weight: bold;">BY</span> <span style="color: #FF0000;">'password123'</span> <span style="color: #993333; font-weight: bold;">WITH</span> <span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">OPTION</span>;<br/>
+<span style="color: #993333; font-weight: bold;">GRANT</span> <span style="color: #993333; font-weight: bold;">ALL</span> PRIVILEGES <span style="color: #993333; font-weight: bold;">ON</span> test_db<span style="color: #66CC66;">.*</span> <span style="color: #993333; font-weight: bold;">TO</span> <span style="color: #FF0000;">'john'</span>@<span style="color: #FF0000;">'localhost'</span>;<br/>
 </div></div>
 <hr/>
 <h2>Configuración del archivo /etc/my.cnf</h2>
@@ -586,7 +586,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -631,7 +631,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -913,7 +913,7 @@ mysql&gt;</pre>
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1132,7 +1132,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

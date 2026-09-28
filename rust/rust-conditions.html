@@ -277,8 +277,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>Rust sentencias condicionales</h1><p>En el lenguaje Rust, las sentencias condicionales tienen este formato:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #0000dd;">3</span><span style="">;</span> <br/>
-    <span style="color: #708;">if</span> number <span style="">&lt;</span> <span style="color: #0000dd;">5</span> <span style="">{</span> <br/>
+    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #0000DD;">3</span><span style="">;</span> <br/>
+    <span style="color: #708;">if</span> number <span style="">&lt;</span> <span style="color: #0000DD;">5</span> <span style="">{</span> <br/>
         println<span style="">!</span><span style="">(</span><span style="color: #a11;">"La condición es true"</span><span style="">)</span><span style="">;</span> <br/>
     <span style="">}</span> <span style="color: #708;">else</span> <span style="">{</span> <br/>
         println<span style="">!</span><span style="">(</span><span style="color: #a11;">"La condición es false"</span><span style="">)</span><span style="">;</span> <br/>
@@ -288,16 +288,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En el programa anterior hay una sentencia condicional if. Esta sintaxis es común en muchos otros lenguajes, pero también tiene algunas diferencias: Primero, la expresión condicional number &lt; 5 no necesita ir entre paréntesis (nota: no necesitarlo no significa que no esté permitido); pero en Rust, if no tiene la regla de que una sola sentencia no requiera {}, no se permite usar una sola sentencia en lugar de un bloque. Aun así, Rust admite la sintaxis tradicional else-if:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span> <br/>
-    <span style="color: #708;">let</span> a <span style="">=</span> <span style="color: #0000dd;">12</span><span style="">;</span> <br/>
+    <span style="color: #708;">let</span> a <span style="">=</span> <span style="color: #0000DD;">12</span><span style="">;</span> <br/>
     <span style="color: #708;">let</span> b<span style="">;</span> <br/>
-    <span style="color: #708;">if</span> a <span style="">&gt;</span> <span style="color: #0000dd;">0</span> <span style="">{</span> <br/>
-        b <span style="">=</span> <span style="color: #0000dd;">1</span><span style="">;</span> <br/>
+    <span style="color: #708;">if</span> a <span style="">&gt;</span> <span style="color: #0000DD;">0</span> <span style="">{</span> <br/>
+        b <span style="">=</span> <span style="color: #0000DD;">1</span><span style="">;</span> <br/>
     <span style="">}</span>  <br/>
-    <span style="color: #708;">else</span> <span style="color: #708;">if</span> a <span style="">&lt;</span> <span style="color: #0000dd;">0</span> <span style="">{</span> <br/>
-        b <span style="">=</span> <span style="">-</span><span style="color: #0000dd;">1</span><span style="">;</span> <br/>
+    <span style="color: #708;">else</span> <span style="color: #708;">if</span> a <span style="">&lt;</span> <span style="color: #0000DD;">0</span> <span style="">{</span> <br/>
+        b <span style="">=</span> <span style="">-</span><span style="color: #0000DD;">1</span><span style="">;</span> <br/>
     <span style="">}</span>  <br/>
     <span style="color: #708;">else</span> <span style="">{</span> <br/>
-        b <span style="">=</span> <span style="color: #0000dd;">0</span><span style="">;</span> <br/>
+        b <span style="">=</span> <span style="color: #0000DD;">0</span><span style="">;</span> <br/>
     <span style="">}</span> <br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"b is {}"</span><span style="">,</span> b<span style="">)</span><span style="">;</span> <br/>
 <span style="">}</span> <br/>
@@ -308,7 +308,7 @@ b 为 1</pre>
 <p>Las expresiones condicionales en Rust deben ser de tipo bool. Por ejemplo, el siguiente programa es incorrecto:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span> <br/>
-    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #0000dd;">3</span><span style="">;</span> <br/>
+    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #0000DD;">3</span><span style="">;</span> <br/>
     <span style="color: #708;">if</span> number <span style="">{</span>   <span style="color: #a50; font-style: italic;">// Error, expected `bool`, found integer rustc(E0308)</span><br/>
         println<span style="">!</span><span style="">(</span><span style="color: #a11;">"Yes"</span><span style="">)</span><span style="">;</span><br/>
     <span style="">}</span> <br/>
@@ -321,8 +321,8 @@ b 为 1</pre>
 <p>¡La respuesta es sí! Es decir, en Rust podemos usar la estructura if-else para lograr un efecto similar al de la expresión del operador condicional ternario<strong>(A ? B : C)</strong>:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span> <br/>
-    <span style="color: #708;">let</span> a <span style="">=</span> <span style="color: #0000dd;">3</span><span style="">;</span> <br/>
-    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #708;">if</span> a <span style="">&gt;</span> <span style="color: #0000dd;">0</span> <span style="">{</span> <span style="color: #0000dd;">1</span> <span style="">}</span> <span style="color: #708;">else</span> <span style="">{</span> <span style="">-</span><span style="color: #0000dd;">1</span> <span style="">}</span><span style="">;</span> <br/>
+    <span style="color: #708;">let</span> a <span style="">=</span> <span style="color: #0000DD;">3</span><span style="">;</span> <br/>
+    <span style="color: #708;">let</span> number <span style="">=</span> <span style="color: #708;">if</span> a <span style="">&gt;</span> <span style="color: #0000DD;">0</span> <span style="">{</span> <span style="color: #0000DD;">1</span> <span style="">}</span> <span style="color: #708;">else</span> <span style="">{</span> <span style="">-</span><span style="color: #0000DD;">1</span> <span style="">}</span><span style="">;</span> <br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"number es {}"</span><span style="">,</span> number<span style="">)</span><span style="">;</span> <br/>
 <span style="">}</span> <br/>
 </div></div>
@@ -362,7 +362,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -407,7 +407,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -446,7 +446,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Enviar artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -665,7 +665,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

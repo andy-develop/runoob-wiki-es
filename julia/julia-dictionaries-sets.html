@@ -269,162 +269,162 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El siguiente ejemplo crea un diccionario simple: la clave A corresponde al valor 1, y la clave B corresponde al valor 2:</p>
 <pre>Dict("A"=&gt;1, "B"=&gt;2)</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <br/>
 </div></div>
 <p>Usar for para crear un diccionario:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> first_dict = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span>string<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> =<span style="color: #6bab5b;">&gt;</span> sind<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> <span style="color: #4266d5;font-weight:bold;">for</span> x = <span style="color: black;">0</span>:<span style="color: black;">5</span>:<span style="color: black;">360</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">73</span> entries:<br/>
-  <span style="color: #c93d39;">"285"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.965926</span><br/>
-  <span style="color: #c93d39;">"310"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.766044</span><br/>
-  <span style="color: #c93d39;">"245"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.906308</span><br/>
-  <span style="color: #c93d39;">"320"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.642788</span><br/>
-  <span style="color: #c93d39;">"350"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.173648</span><br/>
-  <span style="color: #c93d39;">"20"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.34202</span><br/>
-  <span style="color: #c93d39;">"65"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.906308</span><br/>
-  <span style="color: #c93d39;">"325"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.573576</span><br/>
-  <span style="color: #c93d39;">"155"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.422618</span><br/>
-  <span style="color: #c93d39;">"80"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.984808</span><br/>
-  <span style="color: #c93d39;">"335"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.422618</span><br/>
-  <span style="color: #c93d39;">"125"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.819152</span><br/>
-  <span style="color: #c93d39;">"360"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.0</span><br/>
-  <span style="color: #c93d39;">"75"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.965926</span><br/>
-  <span style="color: #c93d39;">"110"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.939693</span><br/>
-  <span style="color: #c93d39;">"185"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.0871557</span><br/>
-  <span style="color: #c93d39;">"70"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.939693</span><br/>
-  <span style="color: #c93d39;">"50"</span>  =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">0.766044</span><br/>
-  <span style="color: #c93d39;">"190"</span> =<span style="color: #6bab5b;">&gt;</span> -<span style="color: black;">0.173648</span><br/>
-  ⋮     =<span style="color: #6bab5b;">&gt;</span> ⋮<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> first_dict = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span>string<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> =<span style="color: #6BAB5B;">&gt;</span> sind<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">for</span> x = <span style="color: black;">0</span>:<span style="color: black;">5</span>:<span style="color: black;">360</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Float64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">73</span> entries:<br/>
+  <span style="color: #C93D39;">"285"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.965926</span><br/>
+  <span style="color: #C93D39;">"310"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.766044</span><br/>
+  <span style="color: #C93D39;">"245"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.906308</span><br/>
+  <span style="color: #C93D39;">"320"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.642788</span><br/>
+  <span style="color: #C93D39;">"350"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.173648</span><br/>
+  <span style="color: #C93D39;">"20"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.34202</span><br/>
+  <span style="color: #C93D39;">"65"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.906308</span><br/>
+  <span style="color: #C93D39;">"325"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.573576</span><br/>
+  <span style="color: #C93D39;">"155"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.422618</span><br/>
+  <span style="color: #C93D39;">"80"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.984808</span><br/>
+  <span style="color: #C93D39;">"335"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.422618</span><br/>
+  <span style="color: #C93D39;">"125"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.819152</span><br/>
+  <span style="color: #C93D39;">"360"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.0</span><br/>
+  <span style="color: #C93D39;">"75"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.965926</span><br/>
+  <span style="color: #C93D39;">"110"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.939693</span><br/>
+  <span style="color: #C93D39;">"185"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.0871557</span><br/>
+  <span style="color: #C93D39;">"70"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.939693</span><br/>
+  <span style="color: #C93D39;">"50"</span>  =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">0.766044</span><br/>
+  <span style="color: #C93D39;">"190"</span> =<span style="color: #6BAB5B;">&gt;</span> -<span style="color: black;">0.173648</span><br/>
+  ⋮     =<span style="color: #6BAB5B;">&gt;</span> ⋮<br/>
 </div></div>
 <h3>Clave (Key)</h3>
 <p>Las claves en un diccionario son únicas. Si asignamos un valor a una clave existente, no creamos una nueva, sino que modificamos la clave existente.</p>
 <p><strong>Buscar una clave (key)</strong></p><p>Podemos usar la función haskey() para comprobar si el diccionario contiene la clave (key) especificada:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3b972e;">(</span>first_dict, <span style="color: #c93d39;">"A"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3B972E;">(</span>first_dict, <span style="color: #C93D39;">"A"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3b972e;">(</span>D, <span style="color: #c93d39;">"A"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3B972E;">(</span>D, <span style="color: #C93D39;">"A"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3b972e;">(</span>D, <span style="color: #c93d39;">"Z"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">haskey</span><span style="color: #3B972E;">(</span>D, <span style="color: #C93D39;">"Z"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div>
 <p>También se puede usar<span class="marked">in()</span>la función para comprobar si el diccionario contiene<strong>clave/valor</strong>par:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">in</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><span style="color: #3b972e;">)</span>, D<span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">in</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><span style="color: #3B972E;">)</span>, D<span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">in</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"X"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span><span style="color: #3b972e;">)</span>, first_dict<span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">in</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"X"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span><span style="color: #3B972E;">)</span>, first_dict<span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div>
 <p><strong>Agregar un par key/value</strong></p>
 <p>Podemos agregar un nuevo par key/value a un diccionario existente, de la siguiente manera:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> D<span style="color: #3b972e;">[</span><span style="color: #c93d39;">"C"</span><span style="color: #3b972e;">]</span> = <span style="color: black;">3</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D<span style="color: #3B972E;">[</span><span style="color: #C93D39;">"C"</span><span style="color: #3B972E;">]</span> = <span style="color: black;">3</span><br/>
 <span style="color: black;">3</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> D<br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">3</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
-  <span style="color: #c93d39;">"C"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">3</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D<br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">3</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
+  <span style="color: #C93D39;">"C"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">3</span><br/>
 </div></div>
 <p><strong>Eliminar un par key/value</strong></p>
 <p>Podemos usar<span class="marked">delete!()</span>la función para eliminar la clave (key) de un diccionario existente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">delete</span><span style="color: #6bab5b;">!</span><span style="color: #3b972e;">(</span>D, <span style="color: #c93d39;">"C"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">delete</span><span style="color: #6BAB5B;">!</span><span style="color: #3B972E;">(</span>D, <span style="color: #C93D39;">"C"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 </div></div>
 <p><strong>Obtener todas las claves (keys) del diccionario</strong></p>
 <p>Podemos usar<span class="marked">keys()</span>la función para obtener todas las claves (keys) del diccionario:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">keys</span><span style="color: #3b972e;">(</span>D<span style="color: #3b972e;">)</span><br/>
-KeySet <span style="color: #4266d5;font-weight:bold;">for</span> a <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries. <span style="color: black;">Keys</span>:<br/>
-  <span style="color: #c93d39;">"B"</span><br/>
-  <span style="color: #c93d39;">"A"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">keys</span><span style="color: #3B972E;">(</span>D<span style="color: #3B972E;">)</span><br/>
+KeySet <span style="color: #4266D5;font-weight:bold;">for</span> a <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries. <span style="color: black;">Keys</span>:<br/>
+  <span style="color: #C93D39;">"B"</span><br/>
+  <span style="color: #C93D39;">"A"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <br/>
 </div></div>
 <h3>Valor (Value)</h3>
 <p>Cada clave en un diccionario tiene un valor correspondiente.</p>
 <p>
 <strong>Ver todos los valores del diccionario</strong></p><p>Podemos usar<span class="marked">values()</span>para ver todos los valores del diccionario:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">values</span><span style="color: #3b972e;">(</span>D<span style="color: #3b972e;">)</span><br/>
-ValueIterator <span style="color: #4266d5;font-weight:bold;">for</span> a <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries. <span style="color: black;">Values</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">values</span><span style="color: #3B972E;">(</span>D<span style="color: #3B972E;">)</span><br/>
+ValueIterator <span style="color: #4266D5;font-weight:bold;">for</span> a <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries. <span style="color: black;">Values</span>:<br/>
   <span style="color: black;">2</span><br/>
   <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <br/>
 </div></div>
 <h3>El diccionario como objeto iterable</h3>
 <p>Podemos tratar el diccionario como un objeto iterable para ver los pares clave/valor:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"A"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">1</span>, <span style="color: #c93d39;">"B"</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
-  <span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-  <span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> D=<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"A"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">1</span>, <span style="color: #C93D39;">"B"</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+  <span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+  <span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> kv <span style="color: #4266d5;font-weight:bold;">in</span> D<br/>
-         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>kv<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span>  <br/>
-<span style="color: #c93d39;">"B"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span><br/>
-<span style="color: #c93d39;">"A"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> kv <span style="color: #4266D5;font-weight:bold;">in</span> D<br/>
+         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>kv<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span>  <br/>
+<span style="color: #C93D39;">"B"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span><br/>
+<span style="color: #C93D39;">"A"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span><br/>
 </div></div>
 <p>En el ejemplo,<span class="marked">kv</span>es una tupla que contiene cada par clave/valor.</p>
 <h3>Ordenación de diccionarios</h3><p>Los diccionarios son desordenados, pero podemos usar la función sort() para ordenarlos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> runoob_dict = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"R"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">100</span>, <span style="color: #c93d39;">"S"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span>, <span style="color: #c93d39;">"T"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span>, <span style="color: #c93d39;">"U"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span>, <span style="color: #c93d39;">"V"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span>, <span style="color: #c93d39;">"W"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span> with <span style="color: black;">6</span> entries:<br/>
-  <span style="color: #c93d39;">"S"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span><br/>
-  <span style="color: #c93d39;">"U"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span><br/>
-  <span style="color: #c93d39;">"T"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span><br/>
-  <span style="color: #c93d39;">"W"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><br/>
-  <span style="color: #c93d39;">"V"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span><br/>
-  <span style="color: #c93d39;">"R"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">100</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> runoob_dict = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"R"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">100</span>, <span style="color: #C93D39;">"S"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span>, <span style="color: #C93D39;">"T"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span>, <span style="color: #C93D39;">"U"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span>, <span style="color: #C93D39;">"V"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span>, <span style="color: #C93D39;">"W"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span> with <span style="color: black;">6</span> entries:<br/>
+  <span style="color: #C93D39;">"S"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span><br/>
+  <span style="color: #C93D39;">"U"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span><br/>
+  <span style="color: #C93D39;">"T"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span><br/>
+  <span style="color: #C93D39;">"W"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><br/>
+  <span style="color: #C93D39;">"V"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span><br/>
+  <span style="color: #C93D39;">"R"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">100</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> key <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">sort</span><span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">keys</span><span style="color: #3b972e;">(</span>runoob_dict<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"$key =&gt; $(runoob_dict[key])"</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-R =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">100</span><br/>
-S =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span><br/>
-T =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span><br/>
-U =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span><br/>
-V =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span><br/>
-W =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> key <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">sort</span><span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">collect</span><span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">keys</span><span style="color: #3B972E;">(</span>runoob_dict<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"$key =&gt; $(runoob_dict[key])"</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+R =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">100</span><br/>
+S =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span><br/>
+T =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span><br/>
+U =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span><br/>
+V =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span><br/>
+W =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><br/>
 </div></div>
 <p>Podemos usar el tipo de datos SortedDict del paquete DataStructures.ji para mantener el diccionario siempre ordenado.</p>
 <p>Para usar el paquete DataStructures primero hay que instalarlo; se puede agregar SortedDict con el comando add en el modo Pkg del REPL.</p>
 <p>En el REPL, ingrese el símbolo<span class="marked">]</span>, para entrar al<strong>pkg</strong>modo.</p>
 <div class="example"><h2 class="example">Entrar al modo pkg</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">]</span>               <span style="color: #888888;"># Ingrese ] para entrar al modo pkg</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">]</span>               <span style="color: #888888;"># Ingrese ] para entrar al modo pkg</span><br/>
 </div></div>
 <p>Formato de sintaxis para agregar un paquete:</p> <pre>add 包名</pre>
 <p>A continuación, después de agregar el paquete DataStructures, los ejemplos posteriores podrán ejecutarse correctamente:</p>
@@ -432,27 +432,27 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">]</
 <p>Paquete local:</p>
 <pre>add 本地路径/包名.jl</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">import</span> DataStructures<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">import</span> DataStructures<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> runoob_dict = DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"S"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span>, <span style="color: #c93d39;">"T"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span>, <span style="color: #c93d39;">"U"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span>, <span style="color: #c93d39;">"V"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span>, <span style="color: #c93d39;">"W"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><span style="color: #3b972e;">)</span><br/>
-DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span>, Base.<span style="color: black;">Order</span>.<span style="color: black;">ForwardOrdering</span><span style="color: #3b972e;">}</span> with <span style="color: black;">5</span> entries:<br/>
-  <span style="color: #c93d39;">"S"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span><br/>
-  <span style="color: #c93d39;">"T"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span><br/>
-  <span style="color: #c93d39;">"U"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span><br/>
-  <span style="color: #c93d39;">"V"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span><br/>
-  <span style="color: #c93d39;">"W"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> runoob_dict = DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"S"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span>, <span style="color: #C93D39;">"T"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span>, <span style="color: #C93D39;">"U"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span>, <span style="color: #C93D39;">"V"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span>, <span style="color: #C93D39;">"W"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><span style="color: #3B972E;">)</span><br/>
+DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span>, Base.<span style="color: black;">Order</span>.<span style="color: black;">ForwardOrdering</span><span style="color: #3B972E;">}</span> with <span style="color: black;">5</span> entries:<br/>
+  <span style="color: #C93D39;">"S"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span><br/>
+  <span style="color: #C93D39;">"T"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span><br/>
+  <span style="color: #C93D39;">"U"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span><br/>
+  <span style="color: #C93D39;">"V"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span><br/>
+  <span style="color: #C93D39;">"W"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> runoob_dict<span style="color: #3b972e;">[</span><span style="color: #c93d39;">"R"</span><span style="color: #3b972e;">]</span> = <span style="color: black;">100</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> runoob_dict<span style="color: #3B972E;">[</span><span style="color: #C93D39;">"R"</span><span style="color: #3B972E;">]</span> = <span style="color: black;">100</span><br/>
 <span style="color: black;">100</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> runoob_dict<br/>
-DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span>, Base.<span style="color: black;">Order</span>.<span style="color: black;">ForwardOrdering</span><span style="color: #3b972e;">}</span> with <span style="color: black;">6</span> entries:<br/>
-  <span style="color: #c93d39;">"R"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">100</span><br/>
-  <span style="color: #c93d39;">"S"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">220</span><br/>
-  <span style="color: #c93d39;">"T"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">350</span><br/>
-  <span style="color: #c93d39;">"U"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">400</span><br/>
-  <span style="color: #c93d39;">"V"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">575</span><br/>
-  <span style="color: #c93d39;">"W"</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">670</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> runoob_dict<br/>
+DataStructures.<span style="color: black;">SortedDict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span>, <span style="color: #0000A8;font-weight:bold;">Int64</span>, Base.<span style="color: black;">Order</span>.<span style="color: black;">ForwardOrdering</span><span style="color: #3B972E;">}</span> with <span style="color: black;">6</span> entries:<br/>
+  <span style="color: #C93D39;">"R"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">100</span><br/>
+  <span style="color: #C93D39;">"S"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">220</span><br/>
+  <span style="color: #C93D39;">"T"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">350</span><br/>
+  <span style="color: #C93D39;">"U"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">400</span><br/>
+  <span style="color: #C93D39;">"V"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">575</span><br/>
+  <span style="color: #C93D39;">"W"</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">670</span><br/>
 </div></div>
 <hr/>
 <h2>Set (conjunto)</h2>El Set (conjunto) de Julia es un conjunto de datos de objetos sin repetición; todos los elementos son únicos.<p>Las diferencias entre un set y otros tipos de colecciones son:</p>
@@ -463,138 +463,138 @@ DataStructures.<span style="color: black;">SortedDict</span><span style="color: 
 <p>Un set se usa para crear listas sin duplicados.</p>
 <h3>Crear un conjunto Set</h3><p>Con el constructor Set, podemos crear conjuntos como los siguientes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> var_site = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> var_site = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> num_primes = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> num_primes = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> var_site = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"Google"</span>,<span style="color: #c93d39;">"Runoob"</span>,<span style="color: #c93d39;">"Taobao"</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">3</span> elements:<br/>
-  <span style="color: #c93d39;">"Google"</span><br/>
-  <span style="color: #c93d39;">"Taobao"</span><br/>
-  <span style="color: #c93d39;">"Runoob"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> var_site = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"Google"</span>,<span style="color: #C93D39;">"Runoob"</span>,<span style="color: #C93D39;">"Taobao"</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">3</span> elements:<br/>
+  <span style="color: #C93D39;">"Google"</span><br/>
+  <span style="color: #C93D39;">"Taobao"</span><br/>
+  <span style="color: #C93D39;">"Runoob"</span><br/>
 </div></div>
 Alternatively we can also use push!() function, as arrays, to add elements in sets as follows −
 <p>Podemos usar<span class="marked">push!()</span>la función para agregar elementos al conjunto, de la siguiente manera:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">push</span><span style="color: #6bab5b;">!</span><span style="color: #3b972e;">(</span>var_site, <span style="color: #c93d39;">"Wiki"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">4</span> elements:<br/>
-  <span style="color: #c93d39;">"Google"</span><br/>
-  <span style="color: #c93d39;">"Wiki"</span><br/>
-  <span style="color: #c93d39;">"Taobao"</span><br/>
-  <span style="color: #c93d39;">"Runoob"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">push</span><span style="color: #6BAB5B;">!</span><span style="color: #3B972E;">(</span>var_site, <span style="color: #C93D39;">"Wiki"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">4</span> elements:<br/>
+  <span style="color: #C93D39;">"Google"</span><br/>
+  <span style="color: #C93D39;">"Wiki"</span><br/>
+  <span style="color: #C93D39;">"Taobao"</span><br/>
+  <span style="color: #C93D39;">"Runoob"</span><br/>
 </div></div>
 <p>Podemos usar<span class="marked">in()</span>la función para comprobar si un elemento existe en el conjunto:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">in</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Runoob"</span>, var_site<span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">in</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Runoob"</span>, var_site<span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">in</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Zhihu"</span>, var_site<span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">in</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Zhihu"</span>, var_site<span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div>
 <h3>Operaciones comunes</h3>
 <p>La unión, intersección y diferencia son operaciones comunes que podemos realizar sobre conjuntos; las funciones correspondientes son<strong>union()、intersect()</strong> 和 <strong>setdiff()</strong>。</p>
 <p><img decoding="async" src="../wp-content/uploads/2022/04/A033F3AB-6D4E-43D1-95CD-318374D13B33.jpeg"/></p>
 <p><strong>Unión</strong></p>Dados dos conjuntos A y B, el conjunto formado por todos sus elementos combinados se llama unión de A y B.<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> A = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"red"</span>,<span style="color: #c93d39;">"green"</span>,<span style="color: #c93d39;">"blue"</span>, <span style="color: #c93d39;">"black"</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">4</span> elements:<br/>
-  <span style="color: #c93d39;">"blue"</span><br/>
-  <span style="color: #c93d39;">"green"</span><br/>
-  <span style="color: #c93d39;">"black"</span><br/>
-  <span style="color: #c93d39;">"red"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> A = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"red"</span>,<span style="color: #C93D39;">"green"</span>,<span style="color: #C93D39;">"blue"</span>, <span style="color: #C93D39;">"black"</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">4</span> elements:<br/>
+  <span style="color: #C93D39;">"blue"</span><br/>
+  <span style="color: #C93D39;">"green"</span><br/>
+  <span style="color: #C93D39;">"black"</span><br/>
+  <span style="color: #C93D39;">"red"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> B = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"red"</span>,<span style="color: #c93d39;">"orange"</span>,<span style="color: #c93d39;">"yellow"</span>,<span style="color: #c93d39;">"green"</span>,<span style="color: #c93d39;">"blue"</span>,<span style="color: #c93d39;">"indigo"</span>,<span style="color: #c93d39;">"violet"</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">7</span> elements:<br/>
-  <span style="color: #c93d39;">"indigo"</span><br/>
-  <span style="color: #c93d39;">"yellow"</span><br/>
-  <span style="color: #c93d39;">"orange"</span><br/>
-  <span style="color: #c93d39;">"blue"</span><br/>
-  <span style="color: #c93d39;">"violet"</span><br/>
-  <span style="color: #c93d39;">"green"</span><br/>
-  <span style="color: #c93d39;">"red"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> B = <span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"red"</span>,<span style="color: #C93D39;">"orange"</span>,<span style="color: #C93D39;">"yellow"</span>,<span style="color: #C93D39;">"green"</span>,<span style="color: #C93D39;">"blue"</span>,<span style="color: #C93D39;">"indigo"</span>,<span style="color: #C93D39;">"violet"</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">7</span> elements:<br/>
+  <span style="color: #C93D39;">"indigo"</span><br/>
+  <span style="color: #C93D39;">"yellow"</span><br/>
+  <span style="color: #C93D39;">"orange"</span><br/>
+  <span style="color: #C93D39;">"blue"</span><br/>
+  <span style="color: #C93D39;">"violet"</span><br/>
+  <span style="color: #C93D39;">"green"</span><br/>
+  <span style="color: #C93D39;">"red"</span><br/>
 <br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">union</span><span style="color: #3b972e;">(</span>A, B<span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">8</span> elements:<br/>
-  <span style="color: #c93d39;">"indigo"</span><br/>
-  <span style="color: #c93d39;">"green"</span><br/>
-  <span style="color: #c93d39;">"black"</span><br/>
-  <span style="color: #c93d39;">"yellow"</span><br/>
-  <span style="color: #c93d39;">"orange"</span><br/>
-  <span style="color: #c93d39;">"blue"</span><br/>
-  <span style="color: #c93d39;">"violet"</span><br/>
-  <span style="color: #c93d39;">"red"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">union</span><span style="color: #3B972E;">(</span>A, B<span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">8</span> elements:<br/>
+  <span style="color: #C93D39;">"indigo"</span><br/>
+  <span style="color: #C93D39;">"green"</span><br/>
+  <span style="color: #C93D39;">"black"</span><br/>
+  <span style="color: #C93D39;">"yellow"</span><br/>
+  <span style="color: #C93D39;">"orange"</span><br/>
+  <span style="color: #C93D39;">"blue"</span><br/>
+  <span style="color: #C93D39;">"violet"</span><br/>
+  <span style="color: #C93D39;">"red"</span><br/>
 </div></div>
 <p><strong>Intersección</strong></p>
 <p>La intersección de A y B es el conjunto que contiene todos los elementos que pertenecen tanto a A como a B, y ningún otro elemento.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">intersect</span><span style="color: #3b972e;">(</span>A, B<span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">3</span> elements:<br/>
-  <span style="color: #c93d39;">"blue"</span><br/>
-  <span style="color: #c93d39;">"green"</span><br/>
-  <span style="color: #c93d39;">"red"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">intersect</span><span style="color: #3B972E;">(</span>A, B<span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">3</span> elements:<br/>
+  <span style="color: #C93D39;">"blue"</span><br/>
+  <span style="color: #C93D39;">"green"</span><br/>
+  <span style="color: #C93D39;">"red"</span><br/>
 </div></div>
 <p><strong>Diferencia</strong></p>
 <p>La diferencia de A y B es el conjunto que contiene todos los elementos que pertenecen a A pero no a B, es decir, elimina los elementos que se superponen entre B y A.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">setdiff</span><span style="color: #3b972e;">(</span>A, B<span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">1</span> element:<br/>
-  <span style="color: #c93d39;">"black"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">setdiff</span><span style="color: #3B972E;">(</span>A, B<span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Set</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">1</span> element:<br/>
+  <span style="color: #C93D39;">"black"</span><br/>
 </div></div>
 <hr/>
 <h2>Ejemplos de funciones comunes para diccionarios y conjuntos</h2><p>En los siguientes ejemplos se muestran funciones de uso común en diccionarios, que también se aplican a los conjuntos:</p>
 <p>Crear dos diccionarios dict1 y dict2:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> dict1 = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: black;">100</span>=<span style="color: #6bab5b;">&gt;</span><span style="color: #c93d39;">"X"</span>, <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
- <span style="color: black;">100</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"X"</span><br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> dict1 = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: black;">100</span>=<span style="color: #6BAB5B;">&gt;</span><span style="color: #C93D39;">"X"</span>, <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+ <span style="color: black;">100</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"X"</span><br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
  <br/>
-julia<span style="color: #6bab5b;">&gt;</span> dict2 = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">(</span><span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span>, <span style="color: black;">300</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Z"</span>, <span style="color: black;">450</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"W"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">3</span> entries:<br/>
- <span style="color: black;">450</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"W"</span><br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
- <span style="color: black;">300</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Z"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> dict2 = <span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">(</span><span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span>, <span style="color: black;">300</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Z"</span>, <span style="color: black;">450</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"W"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">3</span> entries:<br/>
+ <span style="color: black;">450</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"W"</span><br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
+ <span style="color: black;">300</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Z"</span><br/>
 </div></div>
 <p>Unión de diccionarios:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">union</span><span style="color: #3b972e;">(</span>dict1, dict2<span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">4</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span>Pair<span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span>,<span style="color: black;">1</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: black;">100</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"X"</span><br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
- <span style="color: black;">450</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"W"</span><br/>
- <span style="color: black;">300</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Z"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">union</span><span style="color: #3B972E;">(</span>dict1, dict2<span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">4</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span>Pair<span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span>,<span style="color: black;">1</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: black;">100</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"X"</span><br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
+ <span style="color: black;">450</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"W"</span><br/>
+ <span style="color: black;">300</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Z"</span><br/>
 Intersect<br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">intersect</span><span style="color: #3b972e;">(</span>dict1, dict2<span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">1</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span>Pair<span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span>,<span style="color: black;">1</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">intersect</span><span style="color: #3B972E;">(</span>dict1, dict2<span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">1</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span>Pair<span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span>,<span style="color: black;">1</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
 </div></div>
 <p>Diferencia de diccionarios:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">setdiff</span><span style="color: #3b972e;">(</span>dict1, dict2<span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">1</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span>Pair<span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span>,<span style="color: black;">1</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: black;">100</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"X"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">setdiff</span><span style="color: #3B972E;">(</span>dict1, dict2<span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">1</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span>Pair<span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span>,<span style="color: black;">1</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: black;">100</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"X"</span><br/>
 </div></div>
 <p>Combinar diccionarios:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">merge</span><span style="color: #3b972e;">(</span>dict1, dict2<span style="color: #3b972e;">)</span><br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">4</span> entries:<br/>
- <span style="color: black;">100</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"X"</span><br/>
- <span style="color: black;">450</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"W"</span><br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
- <span style="color: black;">300</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Z"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">merge</span><span style="color: #3B972E;">(</span>dict1, dict2<span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">4</span> entries:<br/>
+ <span style="color: black;">100</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"X"</span><br/>
+ <span style="color: black;">450</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"W"</span><br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
+ <span style="color: black;">300</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Z"</span><br/>
 </div></div>
 <p>Ver el valor mínimo en el diccionario:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> dict1<br/>
-<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span> with <span style="color: black;">2</span> entries:<br/>
- <span style="color: black;">100</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"X"</span><br/>
- <span style="color: black;">220</span> =<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Y"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> dict1<br/>
+<span style="color: #0000A8;font-weight:bold;">Dict</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span> with <span style="color: black;">2</span> entries:<br/>
+ <span style="color: black;">100</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"X"</span><br/>
+ <span style="color: black;">220</span> =<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Y"</span><br/>
  <br/>
  <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findmin<span style="color: #3b972e;">(</span>dict1<span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"X"</span>, <span style="color: black;">100</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findmin<span style="color: #3B972E;">(</span>dict1<span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"X"</span>, <span style="color: black;">100</span><span style="color: #3B972E;">)</span><br/>
 </div></div> Otras extensiones
 </div>
 </div>
@@ -629,7 +629,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -674,7 +674,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -713,7 +713,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una ampliación del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -932,7 +932,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -393,7 +393,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"objects.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Error: no se pudo cargar la imagen, verifique que la ruta sea correcta."</span> <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Convertir a imagen en escala de grises</span><br/>
@@ -402,18 +402,18 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Binarización</span><br/>
     Mat binary<span style="color: #008080;">;</span><br/>
-    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Eliminar el ruido</span><br/>
-    Mat kernel <span style="color: #000080;">=</span> getStructuringElement<span style="color: #008000;">(</span>MORPH_RECT, Size<span style="color: #008000;">(</span><span style="color: #0000dd;">3</span>, <span style="color: #0000dd;">3</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    morphologyEx<span style="color: #008000;">(</span>binary, binary, MORPH_OPEN, kernel, Point<span style="color: #008000;">(</span><span style="color: #000040;">-</span><span style="color: #0000dd;">1</span>, <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008000;">)</span>, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    Mat kernel <span style="color: #000080;">=</span> getStructuringElement<span style="color: #008000;">(</span>MORPH_RECT, Size<span style="color: #008000;">(</span><span style="color: #0000DD;">3</span>, <span style="color: #0000DD;">3</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    morphologyEx<span style="color: #008000;">(</span>binary, binary, MORPH_OPEN, kernel, Point<span style="color: #008000;">(</span><span style="color: #000040;">-</span><span style="color: #0000DD;">1</span>, <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008000;">)</span>, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Calcular la transformada de distancia</span><br/>
     Mat dist<span style="color: #008080;">;</span><br/>
-    distanceTransform<span style="color: #008000;">(</span>binary, dist, DIST_L2, <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    distanceTransform<span style="color: #008000;">(</span>binary, dist, DIST_L2, <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Normalizar la imagen de transformada de distancia</span><br/>
-    normalize<span style="color: #008000;">(</span>dist, dist, <span style="color: #0000dd;">0</span>, <span style="color:#800080;">1.0</span>, NORM_MINMAX<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    normalize<span style="color: #008000;">(</span>dist, dist, <span style="color: #0000DD;">0</span>, <span style="color:#800080;">1.0</span>, NORM_MINMAX<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Binarizar la imagen de transformada de distancia</span><br/>
     threshold<span style="color: #008000;">(</span>dist, dist, <span style="color:#800080;">0.5</span>, <span style="color:#800080;">1.0</span>, THRESH_BINARY<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
@@ -426,8 +426,8 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Crear la imagen de marcadores</span><br/>
     Mat markers <span style="color: #000080;">=</span> Mat<span style="color: #008080;">::</span><span style="color: #007788;">zeros</span><span style="color: #008000;">(</span>dist.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span>, CV_32S<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">size_t</span> i <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> contours.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-        drawContours<span style="color: #008000;">(</span>markers, contours, <span style="color: #05a;">static_cast</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i<span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color: #05a;">static_cast</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i<span style="color: #008000;">)</span> <span style="color: #000040;">+</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span>, <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">size_t</span> i <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> contours.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        drawContours<span style="color: #008000;">(</span>markers, contours, <span style="color: #05a;">static_cast</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i<span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color: #05a;">static_cast</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i<span style="color: #008000;">)</span> <span style="color: #000040;">+</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span>, <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Aplicar el algoritmo de watershed</span><br/>
@@ -435,18 +435,18 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Mostrar el resultado</span><br/>
     Mat result <span style="color: #000080;">=</span> image.<span style="color: #007788;">clone</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">int</span> i <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> markers.<span style="color: #007788;">rows</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-        <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">int</span> j <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> j <span style="color: #000080;">&lt;</span> markers.<span style="color: #007788;">cols</span><span style="color: #008080;">;</span> j<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-            <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>markers.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i, j<span style="color: #008000;">)</span> <span style="color: #000080;">==</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-                result.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span>Vec3b<span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i, j<span style="color: #008000;">)</span> <span style="color: #000080;">=</span> Vec3b<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Marcar los bordes en verde</span><br/>
+    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">int</span> i <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> markers.<span style="color: #007788;">rows</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">int</span> j <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> j <span style="color: #000080;">&lt;</span> markers.<span style="color: #007788;">cols</span><span style="color: #008080;">;</span> j<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+            <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>markers.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i, j<span style="color: #008000;">)</span> <span style="color: #000080;">==</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+                result.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span>Vec3b<span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span>i, j<span style="color: #008000;">)</span> <span style="color: #000080;">=</span> Vec3b<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, <span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Marcar los bordes en verde</span><br/>
             <span style="color: #008000;">}</span><br/>
         <span style="color: #008000;">}</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Watershed Result"</span>, result<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Detección de contornos</h3><p>La detección de contornos se utiliza para extraer los bordes de los objetos en una imagen.</p><p>OpenCV proporciona la función findContours para detectar contornos.</p>
@@ -462,7 +462,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"objects.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Error: no se pudo cargar la imagen, verifique que la ruta sea correcta."</span> <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Convertir a imagen en escala de grises</span><br/>
@@ -471,7 +471,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Binarización</span><br/>
     Mat binary<span style="color: #008080;">;</span><br/>
-    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Encontrar contornos</span><br/>
     vector<span style="color: #000080;">&lt;</span>vector<span style="color: #000080;">&lt;</span>Point<span style="color: #000080;">&gt;&gt;</span> contours<span style="color: #008080;">;</span><br/>
@@ -480,15 +480,15 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Dibujar contornos</span><br/>
     Mat result <span style="color: #000080;">=</span> Mat<span style="color: #008080;">::</span><span style="color: #007788;">zeros</span><span style="color: #008000;">(</span>image.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span>, CV_8UC3<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">size_t</span> i <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> contours.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-        drawContours<span style="color: #008000;">(</span>result, contours, i, Scalar<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">)</span>, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #05a;">size_t</span> i <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> i <span style="color: #000080;">&lt;</span> contours.<span style="color: #007788;">size</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> i<span style="color: #000040;">++</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        drawContours<span style="color: #008000;">(</span>result, contours, i, Scalar<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, <span style="color: #0000DD;">0</span><span style="color: #008000;">)</span>, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Mostrar el resultado</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Contours"</span>, result<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Operaciones morfológicas</h3><p>Las operaciones morfológicas son técnicas de procesamiento de imágenes basadas en la forma; se usan comúnmente para eliminar ruido, separar objetos, etc.</p>
@@ -504,7 +504,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"noisy_image.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Error: no se pudo cargar la imagen, verifique que la ruta sea correcta."</span> <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Convertir a imagen en escala de grises</span><br/>
@@ -513,10 +513,10 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
 <br/>
     <span style="color: #666666;">// Binarización</span><br/>
     Mat binary<span style="color: #008080;">;</span><br/>
-    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    threshold<span style="color: #008000;">(</span>gray, binary, <span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, THRESH_BINARY_INV <span style="color: #000040;">+</span> THRESH_OTSU<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Definir el kernel</span><br/>
-    Mat kernel <span style="color: #000080;">=</span> getStructuringElement<span style="color: #008000;">(</span>MORPH_RECT, Size<span style="color: #008000;">(</span><span style="color: #0000dd;">5</span>, <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    Mat kernel <span style="color: #000080;">=</span> getStructuringElement<span style="color: #008000;">(</span>MORPH_RECT, Size<span style="color: #008000;">(</span><span style="color: #0000DD;">5</span>, <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Operación de apertura (eliminar ruido)</span><br/>
     Mat opened<span style="color: #008080;">;</span><br/>
@@ -530,9 +530,9 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Original Binary"</span>, binary<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Opened Image"</span>, opened<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Closed Image"</span>, closed<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Procesamiento de histogramas</h3><p>El procesamiento de histogramas se utiliza para analizar la distribución de píxeles de una imagen. Las operaciones comunes incluyen la ecualización del histograma, la coincidencia de histogramas, etc.</p>
@@ -548,7 +548,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"low_contrast.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Error: no se pudo cargar la imagen, verifique que la ruta sea correcta."</span> <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Convertir a imagen en escala de grises</span><br/>
@@ -562,9 +562,9 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     <span style="color: #666666;">// Mostrar el resultado</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Original Image"</span>, gray<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Equalized Image"</span>, equalized<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Coincidencia de plantillas</h3><p>La coincidencia de plantillas se utiliza para encontrar regiones similares a una plantilla en una imagen.</p>
@@ -582,7 +582,7 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     Mat templ <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"template.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000040;">||</span> templ.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Error: no se pudo cargar la imagen, verifique que la ruta sea correcta."</span> <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Coincidencia de plantillas</span><br/>
@@ -595,13 +595,13 @@ cv::minMaxLoc(result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc);</pre>
     minMaxLoc<span style="color: #008000;">(</span>result, <span style="color: #000040;">&amp;</span>minVal, <span style="color: #000040;">&amp;</span>maxVal, <span style="color: #000040;">&amp;</span>minLoc, <span style="color: #000040;">&amp;</span>maxLoc<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Dibujar el rectángulo</span><br/>
-    rectangle<span style="color: #008000;">(</span>image, maxLoc, Point<span style="color: #008000;">(</span>maxLoc.<span style="color: #007788;">x</span> <span style="color: #000040;">+</span> templ.<span style="color: #007788;">cols</span>, maxLoc.<span style="color: #007788;">y</span> <span style="color: #000040;">+</span> templ.<span style="color: #007788;">rows</span><span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">255</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">)</span>, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    rectangle<span style="color: #008000;">(</span>image, maxLoc, Point<span style="color: #008000;">(</span>maxLoc.<span style="color: #007788;">x</span> <span style="color: #000040;">+</span> templ.<span style="color: #007788;">cols</span>, maxLoc.<span style="color: #007788;">y</span> <span style="color: #000040;">+</span> templ.<span style="color: #007788;">rows</span><span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span>, <span style="color: #0000DD;">255</span>, <span style="color: #0000DD;">0</span><span style="color: #008000;">)</span>, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Mostrar el resultado</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Template Matching"</span>, image<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 Otras extensiones
@@ -638,7 +638,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -683,7 +683,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -722,7 +722,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -941,7 +941,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

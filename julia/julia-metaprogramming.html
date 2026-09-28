@@ -269,134 +269,134 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Representación de programas</h2>
 <p>Julia proporciona una clase Meta, en la que se puede usar Meta.parse(str) para analizar una cadena, y typeof(e1) devuelve Expr:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> prog = <span style="color: #c93d39;">"1 + 1"</span><br/>
-<span style="color: #c93d39;">"1 + 1"</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> ex1 = Meta.<span style="color: black;">parse</span><span style="color: #3b972e;">(</span>prog<span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: black;">1</span> + <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> prog = <span style="color: #C93D39;">"1 + 1"</span><br/>
+<span style="color: #C93D39;">"1 + 1"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex1 = Meta.<span style="color: black;">parse</span><span style="color: #3B972E;">(</span>prog<span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: black;">1</span> + <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>ex1<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>ex1<span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
 </div></div>
 <p>Devuelve<strong>:(1 + 1)</strong>, este valor devuelto consiste en dos puntos y la expresión posterior. typeof(ex1) devuelve Expr.</p>
 <p>El objeto Expr contiene dos partes (ex1 incluye los atributos head y args):</p>
 <p>Un objeto símbolo que identifica el tipo de expresión.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex1.<span style="color: #0000A8;font-weight:bold;">head</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex1.<span style="color: #0000A8;font-weight:bold;">head</span><br/>
 :call<br/>
 </div></div>
 <p>El otro son los argumentos de la expresión, que pueden ser símbolos, otras expresiones o literales:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex1.<span style="color: black;">args</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex1.<span style="color: black;">args</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span>:<br/>
   :+<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">1</span><br/>
 </div></div>
 <p>Las expresiones también se pueden construir directamente con Expr:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex2 = <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3b972e;">(</span>:call, :+, <span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: black;">1</span> + <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex2 = <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3B972E;">(</span>:call, :+, <span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: black;">1</span> + <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Las dos expresiones construidas anteriormente: una construida mediante análisis y otra mediante construcción directa, las dos son equivalentes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex1 == ex2<br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex1 == ex2<br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 </div></div>
 <p>Los objetos Expr también se pueden anidar:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex3 = Meta.<span style="color: black;">parse</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"(4 + 4) / 2"</span><span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: black;">4</span> + <span style="color: black;">4</span><span style="color: #3b972e;">)</span> / <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex3 = Meta.<span style="color: black;">parse</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"(4 + 4) / 2"</span><span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: black;">4</span> + <span style="color: black;">4</span><span style="color: #3B972E;">)</span> / <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>También podemos usar Meta.show_sexpr para ver la expresión. El siguiente ejemplo muestra un Expr anidado:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> Meta.<span style="color: black;">show_sexpr</span><span style="color: #3b972e;">(</span>ex3<span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>:call, :/, <span style="color: #3b972e;">(</span>:call, :+, <span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Meta.<span style="color: black;">show_sexpr</span><span style="color: #3B972E;">(</span>ex3<span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>:call, :/, <span style="color: #3B972E;">(</span>:call, :+, <span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <h3>Símbolos</h3>
 <p>Podemos, mediante el operador de prefijo de dos puntos,<strong>:</strong>almacenar una expresión no evaluada pero analizada.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ABC = <span style="color: black;">100</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ABC = <span style="color: black;">100</span><br/>
 <span style="color: black;">100</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> :ABC<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> :ABC<br/>
 :ABC<br/>
 </div></div>
 <p>Citar toda la siguiente expresión:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> :<span style="color: #3b972e;">(</span><span style="color: black;">100</span>-<span style="color: black;">50</span><span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: black;">100</span> - <span style="color: black;">50</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> :<span style="color: #3B972E;">(</span><span style="color: black;">100</span>-<span style="color: black;">50</span><span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: black;">100</span> - <span style="color: black;">50</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Citar una expresión aritmética:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex = :<span style="color: #3b972e;">(</span>a+b<span style="color: #6bab5b;">*</span>c+<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span>a + b <span style="color: #6bab5b;">*</span> c + <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex = :<span style="color: #3B972E;">(</span>a+b<span style="color: #6BAB5B;">*</span>c+<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span>a + b <span style="color: #6BAB5B;">*</span> c + <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>ex<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>ex<span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
 </div></div>
 <p>Ten en cuenta que las expresiones equivalentes también se pueden construir usando Meta.parse o directamente con Expr:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span>      :<span style="color: #3b972e;">(</span>a + b<span style="color: #6bab5b;">*</span>c + <span style="color: black;">1</span><span style="color: #3b972e;">)</span>       ==<br/>
-       Meta.<span style="color: black;">parse</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"a + b*c + 1"</span><span style="color: #3b972e;">)</span> ==<br/>
-       <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3b972e;">(</span>:call, :+, :a, <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3b972e;">(</span>:call, :<span style="color: #6bab5b;">*</span>, :b, :c<span style="color: #3b972e;">)</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span>      :<span style="color: #3B972E;">(</span>a + b<span style="color: #6BAB5B;">*</span>c + <span style="color: black;">1</span><span style="color: #3B972E;">)</span>       ==<br/>
+       Meta.<span style="color: black;">parse</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"a + b*c + 1"</span><span style="color: #3B972E;">)</span> ==<br/>
+       <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3B972E;">(</span>:call, :+, :a, <span style="color: #0000A8;font-weight:bold;">Expr</span><span style="color: #3B972E;">(</span>:call, :<span style="color: #6BAB5B;">*</span>, :b, :c<span style="color: #3B972E;">)</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 </div></div>
 <p>Citar múltiples expresiones también puede hacerse<strong>quote ... end</strong>incluyendo bloques de código.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex = <span style="color: #4266d5;font-weight:bold;">quote</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex = <span style="color: #4266D5;font-weight:bold;">quote</span><br/>
            x = <span style="color: black;">1</span><br/>
            y = <span style="color: black;">2</span><br/>
            x + y<br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #4266d5;font-weight:bold;">quote</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #4266D5;font-weight:bold;">quote</span><br/>
     <span style="color: #888888;">#= none:2 =#</span><br/>
     x = <span style="color: black;">1</span><br/>
     <span style="color: #888888;">#= none:3 =#</span><br/>
     y = <span style="color: black;">2</span><br/>
     <span style="color: #888888;">#= none:4 =#</span><br/>
     x + y<br/>
-<span style="color: #4266d5;font-weight:bold;">end</span><br/>
+<span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>ex<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>ex<span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
 </div></div>
 <h2>Ejecutar expresiones</h2>
 <p>Después de analizar la expresión, podemos usar la función eval() para ejecutarla:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex1 = :<span style="color: #3b972e;">(</span><span style="color: black;">1</span> + <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: black;">1</span> + <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex1 = :<span style="color: #3B972E;">(</span><span style="color: black;">1</span> + <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: black;">1</span> + <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">eval</span><span style="color: #3b972e;">(</span>ex1<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">eval</span><span style="color: #3B972E;">(</span>ex1<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">3</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> ex = :<span style="color: #3b972e;">(</span>a + b<span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span>a + b<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex = :<span style="color: #3B972E;">(</span>a + b<span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span>a + b<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">eval</span><span style="color: #3b972e;">(</span>ex<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">eval</span><span style="color: #3B972E;">(</span>ex<span style="color: #3B972E;">)</span><br/>
 ERROR: UndefVarError: b not defined<br/>
-<span style="color: #3b972e;">[</span>...<span style="color: #3b972e;">]</span><br/>
+<span style="color: #3B972E;">[</span>...<span style="color: #3B972E;">]</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> a = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span> b = <span style="color: black;">2</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> a = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span> b = <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">eval</span><span style="color: #3b972e;">(</span>ex<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">eval</span><span style="color: #3B972E;">(</span>ex<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">3</span><br/>
 </div></div>
 <h2>Árbol de sintaxis abstracta (AST)</h2>
 <p>El árbol de sintaxis abstracta (AST) es una estructura, una representación abstracta de la estructura sintáctica del código fuente.</p><p>Presenta la estructura sintáctica del lenguaje de programación en forma de árbol; cada nodo del árbol representa una estructura en el código fuente.</p><p>Podemos ver la estructura jerárquica de la expresión con la función dump():</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> dump<span style="color: #3b972e;">(</span>:<span style="color: #3b972e;">(</span><span style="color: black;">1</span> <span style="color: #6bab5b;">*</span> cos<span style="color: #3b972e;">(</span>pi/<span style="color: black;">2</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> dump<span style="color: #3B972E;">(</span>:<span style="color: #3B972E;">(</span><span style="color: black;">1</span> <span style="color: #6BAB5B;">*</span> cos<span style="color: #3B972E;">(</span>pi/<span style="color: black;">2</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
    <span style="color: #0000A8;font-weight:bold;">head</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> call<br/>
-   args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: black;">3</span>,<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-      <span style="color: black;">1</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> <span style="color: #6bab5b;">*</span><br/>
+   args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: black;">3</span>,<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+      <span style="color: black;">1</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> <span style="color: #6BAB5B;">*</span><br/>
       <span style="color: black;">2</span>: <span style="color: #0000A8;font-weight:bold;">Int64</span> <span style="color: black;">1</span><br/>
       <span style="color: black;">3</span>: <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
          <span style="color: #0000A8;font-weight:bold;">head</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> call<br/>
-         args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: black;">2</span>,<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+         args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: black;">2</span>,<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
             <span style="color: black;">1</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> cos<br/>
             <span style="color: black;">2</span>: <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
                <span style="color: #0000A8;font-weight:bold;">head</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> call<br/>
-               args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span><span style="color: black;">3</span>,<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+               args: <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Any</span><span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span><span style="color: black;">3</span>,<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
                   <span style="color: black;">1</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> /<br/>
                   <span style="color: black;">2</span>: <span style="color: #0000A8;font-weight:bold;">Symbol</span> pi<br/>
                   <span style="color: black;">3</span>: <span style="color: #0000A8;font-weight:bold;">Int64</span> <span style="color: black;">2</span><br/>
@@ -405,10 +405,10 @@ julia<span style="color: #6bab5b;">&gt;</span> dump<span style="color: #3b972e;"
 <p>Aunque construir objetos Expr directamente con parámetros de valor es muy potente, en comparación con la sintaxis de Julia, el constructor de Expr puede resultar tedioso. Como método alternativo, Julia permite insertar literales o expresiones en una expresión citada. La interpolación de expresiones se indica con el prefijo $.</p>
 <p>En este ejemplo, se inserta el valor de la variable a:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> a = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> a = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> ex = :<span style="color: #3b972e;">(</span>$a + b<span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: black;">1</span> + b<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex = :<span style="color: #3B972E;">(</span>$a + b<span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: black;">1</span> + b<span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>No se admite la interpolación en expresiones no citadas; esto provocará un error en tiempo de compilación:</p>
 <pre>julia&gt; $a + b
@@ -420,10 +420,10 @@ ERROR: syntax: "$" expression outside quote</pre>
 <h2>宏</h2><p>Las macros proporcionan un mecanismo para incluir código generado en el cuerpo final del programa. Una macro asigna un conjunto de argumentos a una expresión devuelta, y la expresión generada se compila directamente sin necesidad de llamadas eval en tiempo de ejecución. Los argumentos de una macro pueden incluir expresiones, literales y símbolos.</p>
 <p>Este es un macro muy simple:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">macro</span> sayhello<span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">return</span> :<span style="color: #3b972e;">(</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Hello, world!"</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-@sayhello <span style="color: #3b972e;">(</span><span style="color: #4266d5;font-weight:bold;">macro</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">macro</span> sayhello<span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">return</span> :<span style="color: #3B972E;">(</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Hello, world!"</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+@sayhello <span style="color: #3B972E;">(</span><span style="color: #4266D5;font-weight:bold;">macro</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>En la sintaxis de Julia, los macros tienen un carácter especial @ (arroba), seguido inmediatamente por el nombre único del macro, que se declara con la forma macro NAME ... end. En este ejemplo, el compilador reemplazará todos los @sayhello por:</p>
 <pre>:( println("Hello, world!") )</pre>
@@ -432,29 +432,29 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-
 Hello, world!</pre>
 <p>Ahora, consideremos un macro un poco más complejo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">macro</span> sayhello<span style="color: #3b972e;">(</span>name<span style="color: #3b972e;">)</span><br/>
- <span style="color: #4266d5;font-weight:bold;">return</span> :<span style="color: #3b972e;">(</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Hello, "</span>, $name<span style="color: #3b972e;">)</span> <span style="color: #3b972e;">)</span><br/>
- <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-@sayhello <span style="color: #3b972e;">(</span><span style="color: #4266d5;font-weight:bold;">macro</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">macro</span> sayhello<span style="color: #3B972E;">(</span>name<span style="color: #3B972E;">)</span><br/>
+ <span style="color: #4266D5;font-weight:bold;">return</span> :<span style="color: #3B972E;">(</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Hello, "</span>, $name<span style="color: #3B972E;">)</span> <span style="color: #3B972E;">)</span><br/>
+ <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+@sayhello <span style="color: #3B972E;">(</span><span style="color: #4266D5;font-weight:bold;">macro</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Este macro acepta un argumento name. Cuando se encuentra @sayhello, la expresión citada se expande y el valor del argumento se inserta en la expresión final:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> @sayhello<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"human"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> @sayhello<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"human"</span><span style="color: #3B972E;">)</span><br/>
 Hello, human<br/>
 </div></div>
 <p>Podemos usar la función macroexpand para ver la expresión devuelta citada:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> ex = macroexpand<span style="color: #3b972e;">(</span>Main, :<span style="color: #3b972e;">(</span>@sayhello<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"human"</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">)</span><br/>
-:<span style="color: #3b972e;">(</span>Main.<span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Hello, "</span>, <span style="color: #c93d39;">"human"</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ex = macroexpand<span style="color: #3B972E;">(</span>Main, :<span style="color: #3B972E;">(</span>@sayhello<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"human"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">)</span><br/>
+:<span style="color: #3B972E;">(</span>Main.<span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Hello, "</span>, <span style="color: #C93D39;">"human"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>ex<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>ex<span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Expr</span><br/>
 </div></div>
 <p>Podemos ver que el literal "human" se ha insertado en la expresión.</p>
 <p>También existe un macro @macroexpand, que puede ser más conveniente que la función macroexpand:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> @macroexpand @sayhello <span style="color: #c93d39;">"human"</span><br/>
-:<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Hello, "</span>, <span style="color: #c93d39;">"human"</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> @macroexpand @sayhello <span style="color: #C93D39;">"human"</span><br/>
+:<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Hello, "</span>, <span style="color: #C93D39;">"human"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 </div></div> Otras extensiones
 </div>
 </div>
@@ -489,7 +489,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -534,7 +534,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -573,7 +573,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -792,7 +792,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

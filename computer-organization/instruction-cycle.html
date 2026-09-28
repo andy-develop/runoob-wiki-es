@@ -629,7 +629,7 @@ cpu.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><sp
   flex-wrap: wrap;
 }
 .cpu-btn {
-  background: #238636;
+  background: #2B69A6;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -638,7 +638,7 @@ cpu.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><sp
   font-size: 14px;
   transition: background 0.2s;
 }
-.cpu-btn:hover { background: #2ea043; }
+.cpu-btn:hover { background: #306BA6; }
 .cpu-btn:disabled { background: #484f58; cursor: not-allowed; }
 .cpu-btn.reset { background: #da3633; }
 .cpu-btn.reset:hover { background: #f85149; }
@@ -667,7 +667,7 @@ cpu.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><sp
 }
 .stage-dot.active-fetch { background: #58a6ff; box-shadow: 0 0 12px #58a6ff; }
 .stage-dot.active-decode { background: #e3b341; box-shadow: 0 0 12px #e3b341; }
-.stage-dot.active-execute { background: #3fb950; box-shadow: 0 0 12px #3fb950; }
+.stage-dot.active-execute { background: #3F7CB9; box-shadow: 0 0 12px #3F7CB9; }
 .stage-dot.active-writeback { background: #f78166; box-shadow: 0 0 12px #f78166; }
 .stage-dot.completed { background: #484f58; }
 .stage-dot-label { font-size: 13px; color: #8b949e; }
@@ -716,7 +716,7 @@ cpu.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><sp
 var COLOR_DEFAULT = '#484f58';       // 默认灰色
 var COLOR_FETCH   = '#58a6ff';       // 取指 - 蓝色
 var COLOR_DECODE  = '#e3b341';       // 译码 - 黄色
-var COLOR_EXECUTE = '#3fb950';       // 执行 - 绿色
+var COLOR_EXECUTE = '#3F7CB9';       // 执行 - 绿色
 var COLOR_WB      = '#f78166';       // 写回 - 橙色
 
 // ----- 全局状态 -----
@@ -779,7 +779,7 @@ var stageDescs = [
   '',
   '<strong>取指阶段：</strong>PC 将指令地址放到地址总线上，向内存发出读信号。<br>内存返回该地址处的指令数据，存入指令寄存器 IR。<br><strong>PC 自动 +1</strong>，指向下一条指令。<br><span style="color:#58a6ff;">激活部件：PC、内存、IR</span>',
   '<strong>译码阶段：</strong>控制器解析 IR 中的操作码和操作数。<br>识别指令类型（如 ADD、LOAD），确定需要的操作数来源。<br>向 ALU、寄存器组等部件发出相应的<strong>控制信号</strong>。<br><span style="color:#e3b341;">激活部件：IR、控制器</span>',
-  '<strong>执行阶段：</strong>根据译码结果，ALU 执行实际运算。<br>从通用寄存器（R0~R3）读取操作数，进行算术/逻辑运算。<br>这也是指令真正「干活」的阶段。<br><span style="color:#3fb950;">激活部件：控制器、ALU、通用寄存器</span>',
+  '<strong>执行阶段：</strong>根据译码结果，ALU 执行实际运算。<br>从通用寄存器（R0~R3）读取操作数，进行算术/逻辑运算。<br>这也是指令真正「干活」的阶段。<br><span style="color:#3F7CB9;">激活部件：控制器、ALU、通用寄存器</span>',
   '<strong>写回阶段：</strong>将 ALU 的运算结果写回目标寄存器。<br>数据通过内部总线从 ALU 输出端传输到寄存器组。<br>写回完成后，一条指令执行周期结束，CPU 准备取下一条指令。<br><span style="color:#f78166;">激活部件：ALU、目标寄存器</span>'
 ];
 
@@ -923,7 +923,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -968,7 +968,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1007,7 +1007,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1226,7 +1226,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

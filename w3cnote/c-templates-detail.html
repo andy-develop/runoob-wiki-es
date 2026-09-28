@@ -121,9 +121,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Hay tres tipos de parámetros de plantilla: parámetros de tipo, parámetros no tipo y parámetros de plantilla.</p>
 <h3>1. Parámetro de tipo</h3>
 <p>1.1 Parámetro de plantilla de tipo:<strong><span>Un parámetro de tipo se compone de la palabra clave class o typename seguida de un especificador</span></strong>, como<strong>template&lt;class T&gt; void h(T a){}</strong>; donde<strong>T</strong>es un parámetro de tipo; el nombre del parámetro de tipo lo determina el propio usuario.<span><strong>Un parámetro de plantilla representa un tipo desconocido.</strong></span>Los parámetros de tipo de plantilla pueden usarse como especificadores de tipo en cualquier lugar dentro de la plantilla, exactamente igual que los especificadores de tipos integrados o especificadores de tipos de clase; es decir, pueden usarse para especificar tipos de retorno, declaraciones de variables, etc.</p>
-<p><strong><span style="color: #ff0000;">Versión original del autor:</span><span style="color: #ff0000;">1.2、</span></strong>No se pueden especificar dos tipos diferentes para el mismo parámetro de tipo de plantilla, por ejemplo<strong>template&lt;class T&gt;void h(T a, T b){}，</strong>la llamada<strong>h(2, 3.2)</strong>producirá un error, porque la declaración asigna al mismo parámetro de plantilla<strong>T</strong>dos tipos diferentes; el primer argumento<strong>2</strong>establece el parámetro de plantilla T como<strong>int</strong>, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; los dos tipos de parámetros son inconsistentes y causará un error.<span style="color: #ff0000; background-color: #99ccff;"><strong>(Esto es para plantillas de función)</strong></span></p>
+<p><strong><span style="color: #FF0000;">Versión original del autor:</span><span style="color: #FF0000;">1.2、</span></strong>No se pueden especificar dos tipos diferentes para el mismo parámetro de tipo de plantilla, por ejemplo<strong>template&lt;class T&gt;void h(T a, T b){}，</strong>la llamada<strong>h(2, 3.2)</strong>producirá un error, porque la declaración asigna al mismo parámetro de plantilla<strong>T</strong>dos tipos diferentes; el primer argumento<strong>2</strong>establece el parámetro de plantilla T como<strong>int</strong>, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; los dos tipos de parámetros son inconsistentes y causará un error.<span style="color: #FF0000; background-color: #99ccff;"><strong>(Esto es para plantillas de función)</strong></span></p>
 <p>Versión original del autor: 1.2 es correcto para plantillas de función, pero ignora las plantillas de clase. A continuación se complementará el caso de las plantillas de clase.</p>
-<p><strong><span style="color: #ff0000;">Suplemento de 1.2 añadido por mí (para plantillas de clase):</span></strong>Cuando declaramos un objeto de clase como:<strong>A&lt;int&gt; a</strong>, por ejemplo<strong>template&lt;class T&gt;T g(T a, T b){}</strong>, la llamada<strong>a.g(2, 3.2)</strong>no producirá un error en tiempo de compilación, pero habrá una advertencia, porque al declarar el objeto de la clase ya se ha<strong>T</strong>convertido<strong>int</strong>al tipo, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; en tiempo de ejecución, se realizará una conversión forzada de<strong>3.2</strong>a<strong>3</strong>. Cuando declaramos el objeto de la clase como:<strong>A&lt;double&gt; a</strong>, en este caso no habrá la advertencia mencionada, porque desde<strong>int</strong>到<strong>double</strong>es una conversión automática de tipo.</p>
+<p><strong><span style="color: #FF0000;">Suplemento de 1.2 añadido por mí (para plantillas de clase):</span></strong>Cuando declaramos un objeto de clase como:<strong>A&lt;int&gt; a</strong>, por ejemplo<strong>template&lt;class T&gt;T g(T a, T b){}</strong>, la llamada<strong>a.g(2, 3.2)</strong>no producirá un error en tiempo de compilación, pero habrá una advertencia, porque al declarar el objeto de la clase ya se ha<strong>T</strong>convertido<strong>int</strong>al tipo, mientras que el segundo argumento<strong>3.2</strong>establece el parámetro de plantilla como<strong>double</strong>; en tiempo de ejecución, se realizará una conversión forzada de<strong>3.2</strong>a<strong>3</strong>. Cuando declaramos el objeto de la clase como:<strong>A&lt;double&gt; a</strong>, en este caso no habrá la advertencia mencionada, porque desde<strong>int</strong>到<strong>double</strong>es una conversión automática de tipo.</p>
 <h3>Ejemplo de demostración 1:</h3>
 <div class="example">
 <h2 class="example">TemplateDemo.h</h2>
@@ -162,15 +162,15 @@ TemplateDemo.obj - 0 error(s), 1 warning(s)</pre>
 
 <p>De los ejemplos de prueba anteriores podemos ver que no es tan riguroso como en el original del autor. ¡Esto es solo el resultado de mis propias pruebas! Por favor, con una actitud de buscar la verdad, verifíquenlo ustedes mismos.</p>
 <h3>2. Parámetros no tipo</h3>
-<p>2.1 Parámetro de plantilla no tipo:<span style="color: #0000ff;"><strong>Los parámetros no tipo de una plantilla son parámetros de tipos integrados</strong></span>, como<strong>template&lt;class T, int a&gt; class B{};</strong>donde<strong>int a</strong>es un parámetro de plantilla no tipo.</p>
+<p>2.1 Parámetro de plantilla no tipo:<span style="color: #0000FF;"><strong>Los parámetros no tipo de una plantilla son parámetros de tipos integrados</strong></span>, como<strong>template&lt;class T, int a&gt; class B{};</strong>donde<strong>int a</strong>es un parámetro de plantilla no tipo.</p>
 <p>2.2 Los parámetros no tipo son valores constantes dentro de la definición de la plantilla; es decir, los parámetros no tipo son constantes dentro de la plantilla.</p>
-<p>　　　　<strong>2.3、 <span style="color: #0000ff;">Los parámetros<strong><span style="color: #0000ff;">de plantilla</span></strong>no tipo solo pueden ser de tipo entero, puntero y referencia</span>; tipos como double, String, String** no están permitidos.</strong>Pero<strong>double &amp;，double *，</strong>la referencia o puntero a un objeto es correcto.</p>
+<p>　　　　<strong>2.3、 <span style="color: #0000FF;">Los parámetros<strong><span style="color: #0000FF;">de plantilla</span></strong>no tipo solo pueden ser de tipo entero, puntero y referencia</span>; tipos como double, String, String** no están permitidos.</strong>Pero<strong>double &amp;，double *，</strong>la referencia o puntero a un objeto es correcto.</p>
 <p>　　　　2.4、 <strong>El argumento pasado a un parámetro de plantilla no tipo debe ser una expresión constante</strong>, es decir, debe poder evaluarse en tiempo de compilación.</p>
 <p>2.5 Nota:<strong>Cualquier objeto local, variable local, dirección de objeto local, dirección de variable local no son expresiones constantes y no pueden usarse como argumentos para parámetros de plantilla no tipo</strong>. Los tipos de puntero globales, variables globales y objetos globales tampoco son expresiones constantes y no pueden usarse como argumentos para parámetros de plantilla no tipo.</p>
-<p>　　　　2.6、 <span style="color: #0000ff;"><strong>; A&lt;b&gt; m; es decir, conversión de array a puntero.</strong></span>。</p>
+<p>　　　　2.6、 <span style="color: #0000FF;"><strong>; A&lt;b&gt; m; es decir, conversión de array a puntero.</strong></span>。</p>
 <p>　　　　2.7 、<strong>sizeof</strong>El resultado de una expresión es una expresión constante y también puede usarse como argumento real de un parámetro de plantilla no tipo.</p>
 <p>2.8. Cuando el parámetro de la plantilla es de tipo entero, el argumento real al invocar la plantilla debe ser de tipo entero y constante durante la compilación, por ejemplo:<strong>template &lt;class T, int a&gt; class A{};</strong>Si tenemos<strong>int b, entonces A&lt;int, b&gt; m;</strong>se producirá un error, porque<strong>b</strong>no es constante; si<strong>const int b, entonces A&lt;int, b&gt; m</strong>; es correcto, porque en este caso<strong>b</strong>es constante.</p>
-<p>　　　　<strong>2.9 、<span style="color: #0000ff;">Los parámetros no tipo generalmente no se aplican en plantillas de función.</span></strong>, por ejemplo, si tenemos la plantilla de función<strong>template&lt;class T, int a&gt; void h(T b){}</strong>, si se utiliza<strong>h(2)</strong>la llamada producirá un error de que no se puede deducir el argumento para el parámetro no tipo a. Para este tipo de plantilla de función se puede resolver con argumentos de plantilla explícitos, como usar h&lt;int, 3&gt;(2), de modo que el parámetro no tipo a se establece como el entero 3. Los argumentos de plantilla explícitos se presentarán más adelante.</p>
+<p>　　　　<strong>2.9 、<span style="color: #0000FF;">Los parámetros no tipo generalmente no se aplican en plantillas de función.</span></strong>, por ejemplo, si tenemos la plantilla de función<strong>template&lt;class T, int a&gt; void h(T b){}</strong>, si se utiliza<strong>h(2)</strong>la llamada producirá un error de que no se puede deducir el argumento para el parámetro no tipo a. Para este tipo de plantilla de función se puede resolver con argumentos de plantilla explícitos, como usar h&lt;int, 3&gt;(2), de modo que el parámetro no tipo a se establece como el entero 3. Los argumentos de plantilla explícitos se presentarán más adelante.</p>
 <p>2.10. Conversiones permitidas entre los parámetros formales y los argumentos reales de los parámetros de plantilla no tipo.<br/><strong>1. Se permiten conversiones de array a puntero y de función a puntero. Por ejemplo: template &lt;int *a&gt; class A{}; int b</strong><br/><strong>2. Conversión del modificador const. Por ejemplo: template&lt;const int *a&gt; class A{}; int b; A&lt;&amp;b&gt; m; es decir, la conversión de int * a const int *.</strong><br/><strong>3. Conversión de promoción. Por ejemplo: template&lt;int a&gt; class A{}; const short b=2; A&lt;b&gt; m; es decir, la conversión de promoción de short a int.</strong><br/><strong>4. Conversión de valores enteros. Por ejemplo: template&lt;unsigned int a&gt; class A{}; A&lt;3&gt; m; es decir, la conversión de int a unsigned int.</strong><br/><strong>5. Conversión habitual.</strong></p>
 <p><span style="color: #008000;"><strong><span style="font-size: 14pt;">Ejemplo de demostración 1 de parámetros no tipo:</span></strong></span></p>
 <p>　　<strong>El usuario especifica personalmente el tamaño de la pila e implementa las operaciones relacionadas con la pila.</strong></p>
@@ -377,7 +377,7 @@ TemplateDemo02.obj - 0 error(s), 2 warning(s)</pre>
 <p>2. La forma de los valores predeterminados de los parámetros de tipo de una plantilla de clase es:<strong>template&lt;class T1, class T2=int&gt; class A{};</strong>para el segundo parámetro de tipo de plantilla<strong>T2</strong>proporcionar<strong>int</strong>un valor predeterminado de tipo.</p>
 <p>3. Los valores predeterminados de los parámetros de tipo de una plantilla de clase son como los parámetros predeterminados de una función: si hay varios parámetros de tipo, todos los parámetros de plantilla posteriores al primer parámetro que ha establecido un valor predeterminado también deben establecer un valor predeterminado, por ejemplo<strong>template&lt;class T1=int, class T2&gt;class A{};</strong>es incorrecto, porque<strong>T1</strong>se dio un valor predeterminado, pero<strong>T2</strong>no se estableció.</p>
 <p>4. Al definir miembros de la clase fuera de la plantilla de clase,<strong>template</strong>la lista de parámetros después de template debe omitir los tipos de parámetros predeterminados. Por ejemplo<strong>template&lt;class  T1, class T2=int&gt; class A{public: void h();}</strong>; el método de definición es<strong>template&lt;class T1,class T2&gt; void A&lt;T1,T2&gt;::h(){}</strong>。</p>
-<p><span style="color: #ff0000;"><strong>Definir los parámetros de tipo de la plantilla de clase:</strong></span></p>
+<p><span style="color: #FF0000;"><strong>Definir los parámetros de tipo de la plantilla de clase:</strong></span></p>
 <h3>Ejemplo de demostración 1:</h3>
 <div class="example">
 <h2 class="example">TemplateDemo.h</h2>
@@ -695,7 +695,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }
@@ -726,7 +726,7 @@ var aid = 19684;
 
 	&lt;div class="sidebar-box cate-list"&gt;
 	&lt;div class="sidebar-box recommend-here list-link"&gt;
-			&lt;a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"&gt;Lista de notas&lt;/a&gt;
+			&lt;a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"&gt;Lista de notas&lt;/a&gt;
 		&lt;/div&gt;
 
  
@@ -735,7 +735,7 @@ var aid = 19684;
 
 <div class="sidebar-box cate-list" style="display:none;">
 <div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">Artículos populares</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;">Artículos populares</a>
 </div>
 <div class="membership">
 <ul class="membership">
@@ -750,7 +750,7 @@ var aid = 19684;
 </div>
 <div class="sidebar-box cate-list">
 <div class="sidebar-box recommend-here list-link">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;">Lista de tutoriales</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;">Lista de tutoriales</a>
 </div>
 <div class="cate-items">
 <a href="../ado.html">Tutorial de ADO</a>

@@ -275,238 +275,238 @@ runoob = """菜鸟教程 "RUNOOB"，包含了单个引号"""
 <h2>Carácter</h2>
 <p>Un carácter individual se representa con un valor Char.</p><p>Char es un tipo primitivo de 32 bits, que se puede convertir en su valor entero correspondiente, es decir, el código Unicode:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> c = <span style="color: #c93d39;">'x'</span><br/>
-<span style="color: #c93d39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3b972e;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> c = <span style="color: #C93D39;">'x'</span><br/>
+<span style="color: #C93D39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3B972E;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>c<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>c<span style="color: #3B972E;">)</span><br/>
 Char<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> c = <span style="color: #0000A8;font-weight:bold;">Int</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'x'</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> c = <span style="color: #0000A8;font-weight:bold;">Int</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'x'</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">120</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>c<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>c<span style="color: #3B972E;">)</span><br/>
 <span style="color: #0000A8;font-weight:bold;">Int64</span><br/>
 </div></div>
 <p>También podemos convertir un valor entero en Char:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> Char<span style="color: #3b972e;">(</span><span style="color: black;">97</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">'a'</span>: ASCII/Unicode U+0061 <span style="color: #3b972e;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Char<span style="color: #3B972E;">(</span><span style="color: black;">97</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">'a'</span>: ASCII/Unicode U+0061 <span style="color: #3B972E;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Char<span style="color: #3b972e;">(</span><span style="color: black;">120</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3b972e;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Char<span style="color: #3B972E;">(</span><span style="color: black;">120</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3B972E;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Podemos realizar comparaciones y operaciones aritméticas limitadas con valores Char:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">'A'</span> <span style="color: #6bab5b;">&lt;</span> <span style="color: #c93d39;">'a'</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'A'</span> <span style="color: #6BAB5B;">&lt;</span> <span style="color: #C93D39;">'a'</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">'A'</span> <span style="color: #6bab5b;">&lt;</span>= <span style="color: #c93d39;">'a'</span> <span style="color: #6bab5b;">&lt;</span>= <span style="color: #c93d39;">'Z'</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'A'</span> <span style="color: #6BAB5B;">&lt;</span>= <span style="color: #C93D39;">'a'</span> <span style="color: #6BAB5B;">&lt;</span>= <span style="color: #C93D39;">'Z'</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">'A'</span> <span style="color: #6bab5b;">&lt;</span>= <span style="color: #c93d39;">'X'</span> <span style="color: #6bab5b;">&lt;</span>= <span style="color: #c93d39;">'Z'</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'A'</span> <span style="color: #6BAB5B;">&lt;</span>= <span style="color: #C93D39;">'X'</span> <span style="color: #6BAB5B;">&lt;</span>= <span style="color: #C93D39;">'Z'</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">'x'</span> - <span style="color: #c93d39;">'a'</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'x'</span> - <span style="color: #C93D39;">'a'</span><br/>
 <span style="color: black;">23</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">'A'</span> + <span style="color: black;">1</span><br/>
-<span style="color: #c93d39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'A'</span> + <span style="color: black;">1</span><br/>
+<span style="color: #C93D39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <hr/>
 <h2>Cadenas</h2>
 <p>Las cadenas en Julia se pueden declarar con comillas dobles<span class="marked">"</span>o tres comillas dobles<span class="marked">"""</span>para declararlas. Si necesita usar comillas en alguna parte de la cadena, puede usar las tres comillas dobles para hacerlo, como se muestra a continuación:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str = <span style="color: #c93d39;">"RUNOOB"</span><br/>
-<span style="color: #c93d39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
+<span style="color: #C93D39;">"RUNOOB"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> runoob = <span style="color: #c93d39;">"""Tutorial de novatos "RUNOOB", contiene una comilla"""</span><br/>
-<span style="color: #c93d39;">"Tutorial de novatos<span style="color: #000099; font-weight: bold;">\"</span>RUNOOB<span style="color: #000099; font-weight: bold;">\"</span>, contiene una comilla"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> runoob = <span style="color: #C93D39;">"""Tutorial de novatos "RUNOOB", contiene una comilla"""</span><br/>
+<span style="color: #C93D39;">"Tutorial de novatos<span style="color: #000099; font-weight: bold;">\"</span>RUNOOB<span style="color: #000099; font-weight: bold;">\"</span>, contiene una comilla"</span><br/>
 </div></div>
 <p>Si la cadena es demasiado larga, podemos usar una barra invertida<span class="marked">\</span>para dividirla:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"This is a long <span style="color: #000099; font-weight: bold;">\</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"This is a long <span style="color: #000099; font-weight: bold;">\</span><br/>
        line"</span><br/>
-<span style="color: #c93d39;">"This is a long line"</span><br/>
+<span style="color: #C93D39;">"This is a long line"</span><br/>
 </div></div>Las cadenas de Julia también pueden usar índices, como los arreglos, para leer el carácter en una posición específica o extraer la subcadena en una posición determinada. La posición inicial del índice es<span class="marked">1</span>o<span class="marked">begin</span>, la posición final es<span class="marked">end</span> ：
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str = <span style="color: #c93d39;">"RUNOOB"</span><br/>
-<span style="color: #c93d39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
+<span style="color: #C93D39;">"RUNOOB"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span>begin<span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'R'</span>: ASCII/Unicode U+0052 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin<span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'R'</span>: ASCII/Unicode U+0052 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: black;">1</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'R'</span>: ASCII/Unicode U+0052 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: black;">1</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'R'</span>: ASCII/Unicode U+0052 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: black;">2</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'U'</span>: ASCII/Unicode U+0055 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: black;">2</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'U'</span>: ASCII/Unicode U+0055 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: #4266d5;font-weight:bold;">end</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span>end-<span style="color: black;">1</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'O'</span>: ASCII/Unicode U+004F <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>end-<span style="color: black;">1</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'O'</span>: ASCII/Unicode U+004F <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Podemos usar índices de rango para extraer subcadenas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str = <span style="color: #c93d39;">"RUNOOB"</span><br/>
-<span style="color: #c93d39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
+<span style="color: #C93D39;">"RUNOOB"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span>begin:<span style="color: #4266d5;font-weight:bold;">end</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin:<span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"RUNOOB"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span>begin:end-<span style="color: black;">1</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"RUNOO"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin:end-<span style="color: black;">1</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"RUNOO"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: black;">2</span>:<span style="color: black;">5</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"UNOO"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: black;">2</span>:<span style="color: black;">5</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"UNOO"</span><br/>
 </div></div>
 <p>Además, la expresión<span class="marked">str[k]</span> 和 <span class="marked">str[k:k]</span>da resultados diferentes; la primera obtiene el carácter en la posición especificada mediante el índice, y su tipo es Char; la segunda lee la cadena mediante el rango dado, pero solo es una cadena que contiene un carácter:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: black;">6</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3b972e;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: black;">6</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">'B'</span>: ASCII/Unicode U+0042 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> str<span style="color: #3b972e;">[</span><span style="color: black;">6</span>:<span style="color: black;">6</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: #c93d39;">"B"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span><span style="color: black;">6</span>:<span style="color: black;">6</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: #C93D39;">"B"</span><br/>
 </div></div>
 <p>La extracción por rango también se puede realizar usando<strong>SubString</strong>el método, por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str = <span style="color: #c93d39;">"long string"</span><br/>
-<span style="color: #c93d39;">"long string"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"long string"</span><br/>
+<span style="color: #C93D39;">"long string"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> substr = SubString<span style="color: #3b972e;">(</span>str, <span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">"long"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> substr = SubString<span style="color: #3B972E;">(</span>str, <span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">"long"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>substr<span style="color: #3b972e;">)</span><br/>
-SubString<span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3b972e;">}</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>substr<span style="color: #3B972E;">)</span><br/>
+SubString<span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">}</span><br/>
 </div></div>
 <hr/>
 <h2>Concatenación de cadenas</h2>Podemos usar el método string() para concatenar varias cadenas:<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> greet = <span style="color: #c93d39;">"Hello"</span><br/>
-<span style="color: #c93d39;">"Hello"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> greet = <span style="color: #C93D39;">"Hello"</span><br/>
+<span style="color: #C93D39;">"Hello"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> whom = <span style="color: #c93d39;">"world"</span><br/>
-<span style="color: #c93d39;">"world"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> whom = <span style="color: #C93D39;">"world"</span><br/>
+<span style="color: #C93D39;">"world"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> string<span style="color: #3b972e;">(</span>greet, <span style="color: #c93d39;">", "</span>, whom, <span style="color: #c93d39;">".<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">"Hello, world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> string<span style="color: #3B972E;">(</span>greet, <span style="color: #C93D39;">", "</span>, whom, <span style="color: #C93D39;">".<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">"Hello, world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
 </div></div>
 <hr/>
 <h2>Interpolación</h2>
 <p>Concatenar para construir cadenas a veces es algo engorroso. Para reducir las llamadas redundantes a string o la multiplicación repetida, Julia permite interpolar literales de cadena usando $, como en Perl:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"$greet, $whom.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
-<span style="color: #c93d39;">"Hello, world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"$greet, $whom.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
+<span style="color: #C93D39;">"Hello, world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
 </div></div>
 <p>Esto es más legible y conveniente, y equivale a la concatenación de cadenas anterior: el sistema reescribe este literal de cadena, aparentemente de una sola línea, como una concatenación de literales de cadena con parámetros.<span class="marked">string(greet, ", ", whom, ".\n")</span>。</p>
 <p>
 在 <span class="marked">$</span>La expresión completa más corta a continuación se considera la expresión cuyo valor se inserta en la cadena. Por lo tanto, puedes usar paréntesis para insertar cualquier expresión en una cadena:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"1 + 2 = $(1 + 2)"</span><br/>
-<span style="color: #c93d39;">"1 + 2 = 3"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"1 + 2 = $(1 + 2)"</span><br/>
+<span style="color: #C93D39;">"1 + 2 = 3"</span><br/>
 </div></div>
 <p>Tanto la concatenación como la interpolación llaman a string para convertir los objetos a forma de cadena. Sin embargo, string en realidad solo devuelve la salida de print, por lo que los nuevos tipos deben agregar métodos print o show, no métodos string.</p>
 <p>La mayoría de los objetos que no son AbstractString se convierten en cadenas que corresponden estrechamente a su forma de entrada como expresiones de texto:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> v = <span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> v = <span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">2</span>,<span style="color: black;">3</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">3</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">2</span><br/>
  <span style="color: black;">3</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"v: $v"</span><br/>
-<span style="color: #c93d39;">"v: [1, 2, 3]"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"v: $v"</span><br/>
+<span style="color: #C93D39;">"v: [1, 2, 3]"</span><br/>
 </div></div>
 <p>string es la identidad de los valores AbstractString y AbstractChar, por lo que se insertan en las cadenas como ellos mismos, sin comillas ni escapes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> c = <span style="color: #c93d39;">'x'</span><br/>
-<span style="color: #c93d39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3b972e;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> c = <span style="color: #C93D39;">'x'</span><br/>
+<span style="color: #C93D39;">'x'</span>: ASCII/Unicode U+0078 <span style="color: #3B972E;">(</span>category Ll: Letter, <span style="color: #0000A8;font-weight:bold;">lowercase</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"hi, $c"</span><br/>
-<span style="color: #c93d39;">"hi, x"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"hi, $c"</span><br/>
+<span style="color: #C93D39;">"hi, x"</span><br/>
 </div></div>
 <p>Si desea incluir texto en un literal de cadena<span class="marked">$</span>, use una barra invertida para escaparlo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">print</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"I have <span style="color: #000099; font-weight: bold;">\$</span>100 in my account.<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #3b972e;">)</span><br/>
-I have $100 <span style="color: #4266d5;font-weight:bold;">in</span> my account.<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">print</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"I have <span style="color: #000099; font-weight: bold;">\$</span>100 in my account.<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #3B972E;">)</span><br/>
+I have $100 <span style="color: #4266D5;font-weight:bold;">in</span> my account.<br/>
 </div></div>
 <hr/>
 <h2>Unicode y UTF-8</h2>
 <p>Julia admite completamente caracteres y cadenas Unicode.</p><p>En los literales de carácter, los códigos Unicode se pueden representar con las secuencias de escape Unicode \u y \U, y también con todas las secuencias de escape estándar de C. Estas también se pueden usar para escribir literales de cadena:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> s = <span style="color: #c93d39;">"<span style="color: #000099; font-weight: bold;">\u</span>2200 x <span style="color: #000099; font-weight: bold;">\u</span>2203 y"</span><br/>
-<span style="color: #c93d39;">"∀ x ∃ y"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> s = <span style="color: #C93D39;">"<span style="color: #000099; font-weight: bold;">\u</span>2200 x <span style="color: #000099; font-weight: bold;">\u</span>2203 y"</span><br/>
+<span style="color: #C93D39;">"∀ x ∃ y"</span><br/>
 </div></div><p>Estos caracteres Unicode se muestran como escapes o como caracteres especiales dependiendo de la configuración regional de tu terminal y de su soporte para Unicode. Los literales de cadena están codificados en UTF-8. UTF-8 es una codificación de longitud variable, es decir, no todos los caracteres se codifican con el mismo número de bytes (code units). En UTF-8, los caracteres ASCII (los menores que 0x80 (128)) se codifican con un solo byte, igual que en ASCII; mientras que los caracteres de 0x80 en adelante se codifican con hasta 4 bytes.</p>
 <hr/>
 <h2>Literales de cadena con triple comilla</h2>
 <p>Las comillas triples<span class="marked">"""..."""</span>nos brindan comodidad para crear cadenas más largas y complejas. Dentro de las comillas triples se pueden usar convenientemente saltos de línea, comillas y sangrías, sin necesidad de un manejo especial.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> str = <span style="color: #c93d39;">"""<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"""<br/>
            Hello,<br/>
            world.<br/>
          """</span><br/>
-<span style="color: #c93d39;">"  Hello,<span style="color: #000099; font-weight: bold;">\n</span>  world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
+<span style="color: #C93D39;">"  Hello,<span style="color: #000099; font-weight: bold;">\n</span>  world.<span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
 </div></div>
 <hr/>
 <h2>Comparación de cadenas</h2>
 <p>Podemos usar operadores de comparación para comparar cadenas en orden lexicográfico:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"abracadabra"</span> <span style="color: #6bab5b;">&lt;</span> <span style="color: #c93d39;">"xylophone"</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"abracadabra"</span> <span style="color: #6BAB5B;">&lt;</span> <span style="color: #C93D39;">"xylophone"</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"abracadabra"</span> == <span style="color: #c93d39;">"xylophone"</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"abracadabra"</span> == <span style="color: #C93D39;">"xylophone"</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"Hello, world."</span> <span style="color: #6bab5b;">!</span>= <span style="color: #c93d39;">"Goodbye, world."</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Hello, world."</span> <span style="color: #6BAB5B;">!</span>= <span style="color: #C93D39;">"Goodbye, world."</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #c93d39;">"1 + 2 = 3"</span> == <span style="color: #c93d39;">"1 + 2 = $(1 + 2)"</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"1 + 2 = 3"</span> == <span style="color: #C93D39;">"1 + 2 = $(1 + 2)"</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 </div></div><p>Puedes usar las funciones findfirst y findlast para buscar el índice de un carácter específico:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> findfirst<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findfirst<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">4</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findlast<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findlast<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">7</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findfirst<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'z'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findfirst<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'z'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Puedes usar las funciones findnext y findprev con un tercer argumento para buscar caracteres en un desplazamiento dado:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> findnext<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findnext<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">4</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findnext<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findnext<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">7</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findprev<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findprev<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">4</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> findnext<span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span><span style="color: #3b972e;">)</span>, <span style="color: #c93d39;">"xylophone"</span>, <span style="color: black;">8</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> findnext<span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">isequal</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span><span style="color: #3B972E;">)</span>, <span style="color: #C93D39;">"xylophone"</span>, <span style="color: black;">8</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <p>Puedes usar la función occursin para comprobar si se puede encontrar una subcadena en una cadena.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> occursin<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"world"</span>, <span style="color: #c93d39;">"Hello, world."</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> occursin<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"world"</span>, <span style="color: #C93D39;">"Hello, world."</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> occursin<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"o"</span>, <span style="color: #c93d39;">"Xylophon"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> occursin<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"o"</span>, <span style="color: #C93D39;">"Xylophon"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> occursin<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"a"</span>, <span style="color: #c93d39;">"Xylophon"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> occursin<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"a"</span>, <span style="color: #C93D39;">"Xylophon"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> occursin<span style="color: #3b972e;">(</span><span style="color: #c93d39;">'o'</span>, <span style="color: #c93d39;">"Xylophon"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> occursin<span style="color: #3B972E;">(</span><span style="color: #C93D39;">'o'</span>, <span style="color: #C93D39;">"Xylophon"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 </div></div>
 <p>El último ejemplo muestra que occursin también se puede usar para buscar literales de carácter.</p>
 <p>Además, hay otras dos funciones de cadena convenientes: repeat y join:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> repeat<span style="color: #3b972e;">(</span><span style="color: #c93d39;">".:Z:."</span>, <span style="color: black;">10</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">".:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:."</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> repeat<span style="color: #3B972E;">(</span><span style="color: #C93D39;">".:Z:."</span>, <span style="color: black;">10</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">".:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:..:Z:."</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">join</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">[</span><span style="color: #c93d39;">"apples"</span>, <span style="color: #c93d39;">"bananas"</span>, <span style="color: #c93d39;">"pineapples"</span><span style="color: #3b972e;">]</span>, <span style="color: #c93d39;">", "</span>, <span style="color: #c93d39;">" and "</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">"apples, bananas and pineapples"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">join</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">[</span><span style="color: #C93D39;">"apples"</span>, <span style="color: #C93D39;">"bananas"</span>, <span style="color: #C93D39;">"pineapples"</span><span style="color: #3B972E;">]</span>, <span style="color: #C93D39;">", "</span>, <span style="color: #C93D39;">" and "</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">"apples, bananas and pineapples"</span><br/>
 </div></div>
 <p>Otras funciones útiles incluyen:</p>
 <ul><li>
@@ -560,7 +560,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -605,7 +605,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -644,7 +644,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -863,7 +863,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

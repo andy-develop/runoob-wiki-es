@@ -273,39 +273,39 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Expresiones compuestas</h2><p>
 <span class="marked">begin ... end</span>Las expresiones pueden evaluar varias subexpresiones en orden y devolver el valor de la última subexpresión:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> z = begin<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> z = begin<br/>
            x = <span style="color: black;">1</span><br/>
            y = <span style="color: black;">2</span><br/>
            x + y<br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">3</span><br/>
 </div></div>
 <p>Debido a que estas son expresiones muy cortas, pueden colocarse simplemente en una línea, y de ahí proviene la cadena:<span class="marked">;</span>Ejemplo</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> z = <span style="color: #3b972e;">(</span>x = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span> y = <span style="color: black;">2</span><span style="color: #6bab5b;">;</span> x + y<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> z = <span style="color: #3B972E;">(</span>x = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span> y = <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span> x + y<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">3</span><br/>
 </div></div>
 <p>En la práctica, no se requiere que el bloque begin sea multilínea, ni que la cadena ; sea de una sola línea.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> begin x = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span> y = <span style="color: black;">2</span><span style="color: #6bab5b;">;</span> x + y <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> begin x = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span> y = <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span> x + y <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">3</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">(</span>x = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span><br/>
-        y = <span style="color: black;">2</span><span style="color: #6bab5b;">;</span><br/>
-        x + y<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">(</span>x = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span><br/>
+        y = <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span><br/>
+        x + y<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">3</span><br/>
 </div></div>
 <hr/>
 <h2>Expresiones condicionales</h2><p>Las expresiones condicionales determinan qué bloque de código se ejecuta según el valor de una expresión booleana.</p><p>Sintaxis de if-elseif-else:</p>
 <div class="example"><div class="example_code">
-<span style="color: #4266d5;font-weight:bold;">if</span> boolean_expression <span style="color: black;">1</span><br/>
-   /<span style="color: #6bab5b;">*</span>Cuando la expresión booleana<span style="color: black;">1</span>es verdadera, se ejecuta<span style="color: #6bab5b;">*</span>/<br/>
-<span style="color: #4266d5;font-weight:bold;">elseif</span> boolean_expression <span style="color: black;">2</span> <br/>
-   /<span style="color: #6bab5b;">*</span>Cuando la expresión booleana<span style="color: black;">2</span>es verdadera, se ejecuta<span style="color: #6bab5b;">*</span>/<br/>
-<span style="color: #4266d5;font-weight:bold;">elseif</span> boolean_expression <span style="color: black;">3</span> <br/>
-   /<span style="color: #6bab5b;">*</span>Cuando la expresión booleana<span style="color: black;">3</span>es verdadera, se ejecuta<span style="color: #6bab5b;">*</span>/<br/>
-<span style="color: #4266d5;font-weight:bold;">else</span> <br/>
-   /<span style="color: #6bab5b;">*</span>Cuando ninguna de las condiciones anteriores es verdadera, se ejecuta<span style="color: #6bab5b;">*</span>/<br/>
+<span style="color: #4266D5;font-weight:bold;">if</span> boolean_expression <span style="color: black;">1</span><br/>
+   /<span style="color: #6BAB5B;">*</span>Cuando la expresión booleana<span style="color: black;">1</span>es verdadera, se ejecuta<span style="color: #6BAB5B;">*</span>/<br/>
+<span style="color: #4266D5;font-weight:bold;">elseif</span> boolean_expression <span style="color: black;">2</span> <br/>
+   /<span style="color: #6BAB5B;">*</span>Cuando la expresión booleana<span style="color: black;">2</span>es verdadera, se ejecuta<span style="color: #6BAB5B;">*</span>/<br/>
+<span style="color: #4266D5;font-weight:bold;">elseif</span> boolean_expression <span style="color: black;">3</span> <br/>
+   /<span style="color: #6BAB5B;">*</span>Cuando la expresión booleana<span style="color: black;">3</span>es verdadera, se ejecuta<span style="color: #6BAB5B;">*</span>/<br/>
+<span style="color: #4266D5;font-weight:bold;">else</span> <br/>
+   /<span style="color: #6BAB5B;">*</span>Cuando ninguna de las condiciones anteriores es verdadera, se ejecuta<span style="color: #6BAB5B;">*</span>/<br/>
 </div></div>
 <p>Una<b>if</b>sentencia if puede ir seguida de un opcional<b>else if...else</b>sentencia else.</p>
 <p>Al usar sentencias if...else if...else, ten en cuenta los siguientes puntos:</p>
@@ -316,33 +316,33 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">(</
 </ul>
 <p>A continuación se muestra el análisis de la sintaxis condicional if-elseif-else:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #4266d5;font-weight:bold;">if</span> x <span style="color: #6bab5b;">&lt;</span> y<br/>
-    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is less than y"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">elseif</span> x <span style="color: #6bab5b;">&gt;</span> y<br/>
-    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is greater than y"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">else</span><br/>
-    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is equal to y"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">end</span><br/>
+<span style="color: #4266D5;font-weight:bold;">if</span> x <span style="color: #6BAB5B;">&lt;</span> y<br/>
+    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is less than y"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">elseif</span> x <span style="color: #6BAB5B;">&gt;</span> y<br/>
+    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is greater than y"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">else</span><br/>
+    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is equal to y"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">end</span><br/>
 </div></div><p>Si la expresión x &lt; y es true, se ejecuta el bloque de código correspondiente; de lo contrario, se evalúa la condición x &gt; y; si es true, se ejecuta el bloque correspondiente; si ninguna expresión es true, se ejecuta el bloque else.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">function</span> test<span style="color: #3b972e;">(</span>x, y<span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">if</span> x <span style="color: #6bab5b;">&lt;</span> y<br/>
-               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is less than y"</span><span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">elseif</span> x <span style="color: #6bab5b;">&gt;</span> y<br/>
-               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is greater than y"</span><span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">else</span><br/>
-               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"x is equal to y"</span><span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-test <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">function</span> test<span style="color: #3B972E;">(</span>x, y<span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">if</span> x <span style="color: #6BAB5B;">&lt;</span> y<br/>
+               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is less than y"</span><span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">elseif</span> x <span style="color: #6BAB5B;">&gt;</span> y<br/>
+               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is greater than y"</span><span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">else</span><br/>
+               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"x is equal to y"</span><span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+test <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 x is less than y<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 x is greater than y<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 x is equal to y<br/>
 </div></div>
 <h3>Operador ternario</h3>
@@ -352,119 +352,119 @@ a ? b : c
 <p>在 <span class="marked">?</span>La expresión a anterior es una condición; si a es true, el operador ternario evalúa la expresión b antes de :; si a es false, ejecuta la expresión c después de :.</p>
 <p><strong>Nota:</strong><span class="marked">?</span> 和 <span class="marked">:</span>Los espacios circundantes son obligatorios; una expresión como a?b:c no es un operador ternario válido (pero se permiten saltos de línea después de ? y de :).</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> x = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span> y = <span style="color: black;">2</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> x = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span> y = <span style="color: black;">2</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x <span style="color: #6bab5b;">&lt;</span> y <span style="color: #6bab5b;">?</span> <span style="color: #c93d39;">"less than"</span> : <span style="color: #c93d39;">"not less than"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x <span style="color: #6BAB5B;">&lt;</span> y <span style="color: #6BAB5B;">?</span> <span style="color: #C93D39;">"less than"</span> : <span style="color: #C93D39;">"not less than"</span><span style="color: #3B972E;">)</span><br/>
 less than<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> x = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span> y = <span style="color: black;">0</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> x = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span> y = <span style="color: black;">0</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x <span style="color: #6bab5b;">&lt;</span> y <span style="color: #6bab5b;">?</span> <span style="color: #c93d39;">"less than"</span> : <span style="color: #c93d39;">"not less than"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x <span style="color: #6BAB5B;">&lt;</span> y <span style="color: #6BAB5B;">?</span> <span style="color: #C93D39;">"less than"</span> : <span style="color: #C93D39;">"not less than"</span><span style="color: #3B972E;">)</span><br/>
 not less than<br/>
 </div></div>
 <p>Si la expresión x &lt; y es verdadera, todo el operador ternario ejecutará la cadena "less than"; de lo contrario, ejecutará la cadena "not less than".</p>
 <p>Anidamiento en cadena del operador ternario:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span>x, y<span style="color: #3b972e;">)</span> = <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x <span style="color: #6bab5b;">&lt;</span> y <span style="color: #6bab5b;">?</span> <span style="color: #c93d39;">"x is less than y"</span>    :<br/>
-                            x <span style="color: #6bab5b;">&gt;</span> y <span style="color: #6bab5b;">?</span> <span style="color: #c93d39;">"x is greater than y"</span> : <span style="color: #c93d39;">"x is equal to y"</span><span style="color: #3b972e;">)</span><br/>
-test <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span>x, y<span style="color: #3B972E;">)</span> = <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x <span style="color: #6BAB5B;">&lt;</span> y <span style="color: #6BAB5B;">?</span> <span style="color: #C93D39;">"x is less than y"</span>    :<br/>
+                            x <span style="color: #6BAB5B;">&gt;</span> y <span style="color: #6BAB5B;">?</span> <span style="color: #C93D39;">"x is greater than y"</span> : <span style="color: #C93D39;">"x is equal to y"</span><span style="color: #3B972E;">)</span><br/>
+test <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 x is less than y<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 x is greater than y<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> test<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> test<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 x is equal to y<br/>
 </div></div>
 <p>Para facilitar el encadenamiento de valores, los operadores se asocian de derecha a izquierda.</p>
 <p>Similar a if-elseif-else,<span class="marked">:</span>las expresiones anteriores y posteriores se ejecutan únicamente cuando la condición es true o false, respectivamente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> v<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span><span style="color: #6bab5b;">;</span> x<span style="color: #3b972e;">)</span><br/>
-v <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> v<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span> x<span style="color: #3B972E;">)</span><br/>
+v <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span> <span style="color: #6bab5b;">&lt;</span> <span style="color: black;">2</span> <span style="color: #6bab5b;">?</span> v<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"yes"</span><span style="color: #3b972e;">)</span> : v<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"no"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span> <span style="color: #6BAB5B;">&lt;</span> <span style="color: black;">2</span> <span style="color: #6BAB5B;">?</span> v<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"yes"</span><span style="color: #3B972E;">)</span> : v<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"no"</span><span style="color: #3B972E;">)</span><br/>
 yes<br/>
-<span style="color: #c93d39;">"yes"</span><br/>
+<span style="color: #C93D39;">"yes"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: black;">1</span> <span style="color: #6bab5b;">&gt;</span> <span style="color: black;">2</span> <span style="color: #6bab5b;">?</span> v<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"yes"</span><span style="color: #3b972e;">)</span> : v<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"no"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">1</span> <span style="color: #6BAB5B;">&gt;</span> <span style="color: black;">2</span> <span style="color: #6BAB5B;">?</span> v<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"yes"</span><span style="color: #3B972E;">)</span> : v<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"no"</span><span style="color: #3B972E;">)</span><br/>
 no<br/>
-<span style="color: #c93d39;">"no"</span><br/>
+<span style="color: #C93D39;">"no"</span><br/>
 </div></div>
 <hr/>
 <h2>Evaluación de cortocircuito</h2><p>En Julia,<span class="marked">&amp;&amp;</span> 和 <span class="marked">||</span>los operadores corresponden respectivamente a las operaciones lógicas<strong>"Y"</strong> 和 <strong>"O"</strong>operaciones.</p>
 <ul><li>En la expresión<code>a &amp;&amp; b</code>, la subexpresión<code>b</code>solo cuando<code>a</code> 为 <code>true</code>se ejecuta; si a es false, se devuelve directamente false.</li><li>En la expresión<code>a || b</code>, la subexpresión<code>b</code>solo se<code>a</code> 为 <code>false</code>se ejecuta; si a es true, devuelve directamente a.</li></ul>
 <div class="example"><h2 class="example">Ejemplo de &amp;&amp;</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> isodd<span style="color: #3b972e;">(</span><span style="color: black;">3</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> @warn<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"An odd Number!"</span><span style="color: #3b972e;">)</span><br/>
-┌ Warning: An odd <span style="color: #0000A8;font-weight:bold;">Number</span><span style="color: #6bab5b;">!</span><br/>
-└ @ Main REPL<span style="color: #3b972e;">[</span><span style="color: black;">5</span><span style="color: #3b972e;">]</span>:<span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> isodd<span style="color: #3B972E;">(</span><span style="color: black;">3</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> @warn<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"An odd Number!"</span><span style="color: #3B972E;">)</span><br/>
+┌ Warning: An odd <span style="color: #0000A8;font-weight:bold;">Number</span><span style="color: #6BAB5B;">!</span><br/>
+└ @ Main REPL<span style="color: #3B972E;">[</span><span style="color: black;">5</span><span style="color: #3B972E;">]</span>:<span style="color: black;">1</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> isodd<span style="color: #3b972e;">(</span><span style="color: black;">4</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> @warn<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"An odd Number!"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> isodd<span style="color: #3B972E;">(</span><span style="color: black;">4</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> @warn<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"An odd Number!"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div>
 <div class="example"><h2 class="example">Ejemplo de ||</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> isodd<span style="color: #3b972e;">(</span><span style="color: black;">3</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> @warn<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"An odd Number!"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> isodd<span style="color: #3B972E;">(</span><span style="color: black;">3</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> @warn<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"An odd Number!"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> isodd<span style="color: #3b972e;">(</span><span style="color: black;">4</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> @warn<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"An odd Number!"</span><span style="color: #3b972e;">)</span><br/>
-┌ Warning: An odd <span style="color: #0000A8;font-weight:bold;">Number</span><span style="color: #6bab5b;">!</span><br/>
-└ @ Main REPL<span style="color: #3b972e;">[</span><span style="color: black;">8</span><span style="color: #3b972e;">]</span>:<span style="color: black;">1</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> isodd<span style="color: #3B972E;">(</span><span style="color: black;">4</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> @warn<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"An odd Number!"</span><span style="color: #3B972E;">)</span><br/>
+┌ Warning: An odd <span style="color: #0000A8;font-weight:bold;">Number</span><span style="color: #6BAB5B;">!</span><br/>
+└ @ Main REPL<span style="color: #3B972E;">[</span><span style="color: black;">8</span><span style="color: #3B972E;">]</span>:<span style="color: black;">1</span><br/>
 </div></div><p>&amp;&amp; y || dependen del lado derecho, pero &amp;&amp; tiene mayor prioridad que ||, mira el ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> t<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span><span style="color: #6bab5b;">;</span> <span style="color: #4266d5;font-weight:bold;">true</span><span style="color: #3b972e;">)</span><br/>
-t <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> t<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span> <span style="color: #4266D5;font-weight:bold;">true</span><span style="color: #3B972E;">)</span><br/>
+t <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span><span style="color: #6bab5b;">;</span> <span style="color: #4266d5;font-weight:bold;">false</span><span style="color: #3b972e;">)</span><br/>
-f <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span> <span style="color: #4266D5;font-weight:bold;">false</span><span style="color: #3B972E;">)</span><br/>
+f <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&amp;&amp;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&amp;&amp;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> t<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> t<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> t<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> f<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> t<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> f<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> t<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">1</span><br/>
-<span style="color: black;">2</span><br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
-<br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">||</span> f<span style="color: #3b972e;">(</span><span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> t<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
+<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">||</span> f<span style="color: #3B972E;">(</span><span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">1</span><br/>
+<span style="color: black;">2</span><br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div>
 <hr/>
 <h2>Sentencias de bucle</h2>
 <p>Las sentencias de bucle utilizan<span class="marked">while</span> 和 <span class="marked">for</span>dos palabras clave para implementarse.</p>
 <p>A continuación hay un<strong>while</strong>ejemplo de bucle:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> i = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> i = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">while</span> i <span style="color: #6bab5b;">&lt;</span>= <span style="color: black;">5</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>i<span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">global</span> i += <span style="color: black;">1</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">while</span> i <span style="color: #6BAB5B;">&lt;</span>= <span style="color: black;">5</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>i<span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">global</span> i += <span style="color: black;">1</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
 <span style="color: black;">3</span><br/>
@@ -474,9 +474,9 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-
 <p>La sentencia while evalúa la condición (i &lt;= 5); mientras sea true, se ejecuta el cuerpo del bucle while. Si la condición es false, es decir, cuando i=6, el bucle termina.</p>
 <p>El bucle for es más conveniente; el ejemplo anterior se implementa con for de la siguiente manera:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>i<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>i<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
 <span style="color: black;">3</span><br/>
@@ -487,57 +487,57 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-
 <p>El bucle for itera sobre estos valores, asignando a cada variable i.</p>
 <p>Una diferencia muy importante entre el bucle for y el bucle while anterior es el ámbito, es decir, la visibilidad de las variables. Si la variable i no se ha introducido en otro ámbito, dentro del bucle for solo es visible dentro del bucle for, y no es visible fuera ni después. Necesitas una nueva sesión interactiva o un nuevo nombre de variable para probar esta característica:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> j = <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>j<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> j = <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>j<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
 <span style="color: black;">3</span><br/>
 <span style="color: black;">4</span><br/>
 <span style="color: black;">5</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> j<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> j<br/>
 ERROR: UndefVarError: j not defined<br/>
 </div></div>
 <p>En general, los componentes del bucle for pueden usarse para iterar sobre cualquier contenedor. En este caso, en lugar de =, la otra palabra clave (pero completamente equivalente)<span class="marked">in</span>o<span class="marked">∈</span>es más utilizada, porque hace que el código sea más claro:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> i <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: #3b972e;">[</span><span style="color: black;">1</span>,<span style="color: black;">4</span>,<span style="color: black;">0</span><span style="color: #3b972e;">]</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>i<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> i <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #3B972E;">[</span><span style="color: black;">1</span>,<span style="color: black;">4</span>,<span style="color: black;">0</span><span style="color: #3B972E;">]</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>i<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">4</span><br/>
 <span style="color: black;">0</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> s ∈ <span style="color: #3b972e;">[</span><span style="color: #c93d39;">"foo"</span>,<span style="color: #c93d39;">"bar"</span>,<span style="color: #c93d39;">"baz"</span><span style="color: #3b972e;">]</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>s<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> s ∈ <span style="color: #3B972E;">[</span><span style="color: #C93D39;">"foo"</span>,<span style="color: #C93D39;">"bar"</span>,<span style="color: #C93D39;">"baz"</span><span style="color: #3B972E;">]</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>s<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 foo<br/>
 bar<br/>
 baz<br/>
 </div></div>
 <p>Por conveniencia, podemos terminar un bucle while antes de que la condición deje de cumplirse, o detener un bucle for antes de llegar al final del objeto iterado. Esto se puede hacer con la palabra clave<span class="marked">break</span>para lograrlo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> i = <span style="color: black;">1</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> i = <span style="color: black;">1</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">while</span> <span style="color: #4266d5;font-weight:bold;">true</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>i<span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">if</span> i <span style="color: #6bab5b;">&gt;</span>= <span style="color: black;">5</span><br/>
-               <span style="color: #4266d5;font-weight:bold;">break</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">global</span> i += <span style="color: black;">1</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">while</span> <span style="color: #4266D5;font-weight:bold;">true</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>i<span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">if</span> i <span style="color: #6BAB5B;">&gt;</span>= <span style="color: black;">5</span><br/>
+               <span style="color: #4266D5;font-weight:bold;">break</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">global</span> i += <span style="color: black;">1</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
 <span style="color: black;">3</span><br/>
 <span style="color: black;">4</span><br/>
 <span style="color: black;">5</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> j = <span style="color: black;">1</span>:<span style="color: black;">1000</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>j<span style="color: #3b972e;">)</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">if</span> j <span style="color: #6bab5b;">&gt;</span>= <span style="color: black;">5</span><br/>
-               <span style="color: #4266d5;font-weight:bold;">break</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> j = <span style="color: black;">1</span>:<span style="color: black;">1000</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>j<span style="color: #3B972E;">)</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">if</span> j <span style="color: #6BAB5B;">&gt;</span>= <span style="color: black;">5</span><br/>
+               <span style="color: #4266D5;font-weight:bold;">break</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span><br/>
 <span style="color: black;">2</span><br/>
 <span style="color: black;">3</span><br/>
@@ -546,120 +546,120 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-
 </div></div><p>Sin la palabra clave break, el bucle while anterior nunca terminaría por sí solo, y el bucle for iteraría hasta 1000. Estos bucles pueden terminarse antes usando break.</p>
 <p>En algunos escenarios, es necesario terminar la iteración actual e inmediatamente pasar a la siguiente;<span class="marked">continue</span>la palabra clave se utiliza para lograr esto:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">10</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">if</span> i <span style="color: #6bab5b;">%</span> <span style="color: black;">3</span> <span style="color: #6bab5b;">!</span>= <span style="color: black;">0</span><br/>
-               <span style="color: #4266d5;font-weight:bold;">continue</span><br/>
-           <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>i<span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">10</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">if</span> i <span style="color: #6BAB5B;">%</span> <span style="color: black;">3</span> <span style="color: #6BAB5B;">!</span>= <span style="color: black;">0</span><br/>
+               <span style="color: #4266D5;font-weight:bold;">continue</span><br/>
+           <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>i<span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">3</span><br/>
 <span style="color: black;">6</span><br/>
 <span style="color: black;">9</span><br/>
 </div></div><p>Este es un ejemplo un poco artificial, porque podríamos negar la condición y poner la llamada a println dentro del bloque if para lograr lo mismo de forma más concisa. En la práctica, suele haber más código que se ejecuta después de continue, y puede haber múltiples lugares donde se llame a continue.</p>
 <p>Varios bucles for anidados pueden combinarse en un solo bucle externo, lo que puede usarse para crear el producto cartesiano de sus objetos de iteración:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">2</span>, j = <span style="color: black;">3</span>:<span style="color: black;">4</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span>i, j<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">2</span>, j = <span style="color: black;">3</span>:<span style="color: black;">4</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span>i, j<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
 </div></div><p>Con esta sintaxis, las variables de iteración aún pueden usarse normalmente para indexar con las variables del bucle, por ejemplo<span class="marked">for i = 1:n, j = 1:i</span>es válido, pero usar break dentro de un bucle salta de todo el bucle anidado, no solo del bucle interno. Cada vez que se ejecuta el bucle interno, las variables (i y j) se asignan a sus valores de iteración actuales. Por lo tanto, las asignaciones a i no son visibles para las siguientes iteraciones:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">2</span>, j = <span style="color: black;">3</span>:<span style="color: black;">4</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span>i, j<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> i = <span style="color: black;">1</span>:<span style="color: black;">2</span>, j = <span style="color: black;">3</span>:<span style="color: black;">4</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span>i, j<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
            i = <span style="color: black;">0</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
 </div></div><p>Si este ejemplo se reescribe con una palabra clave `for` para cada variable, la salida será diferente: la segunda y la cuarta variables contienen 0.</p>
 <p>Se puede usar `zip` en un solo bucle `for` para iterar sobre múltiples contenedores simultáneamente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> <span style="color: #3b972e;">(</span>j, k<span style="color: #3b972e;">)</span> <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span> <span style="color: black;">3</span><span style="color: #3b972e;">]</span>, <span style="color: #3b972e;">[</span><span style="color: black;">4</span> <span style="color: black;">5</span> <span style="color: black;">6</span> <span style="color: black;">7</span><span style="color: #3b972e;">]</span><span style="color: #3b972e;">)</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">(</span>j,k<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">6</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> <span style="color: #3B972E;">(</span>j, k<span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">[</span><span style="color: black;">1</span> <span style="color: black;">2</span> <span style="color: black;">3</span><span style="color: #3B972E;">]</span>, <span style="color: #3B972E;">[</span><span style="color: black;">4</span> <span style="color: black;">5</span> <span style="color: black;">6</span> <span style="color: black;">7</span><span style="color: #3B972E;">]</span><span style="color: #3B972E;">)</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">(</span>j,k<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">6</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> x <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3b972e;">(</span><span style="color: black;">0</span>:<span style="color: black;">15</span>, <span style="color: black;">100</span>:<span style="color: black;">110</span>, <span style="color: black;">200</span>:<span style="color: black;">210</span><span style="color: #3b972e;">)</span><br/>
-               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span><br/>
-            <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">0</span>, <span style="color: black;">100</span>, <span style="color: black;">200</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">101</span>, <span style="color: black;">201</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">102</span>, <span style="color: black;">202</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">103</span>, <span style="color: black;">203</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">104</span>, <span style="color: black;">204</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">105</span>, <span style="color: black;">205</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">6</span>, <span style="color: black;">106</span>, <span style="color: black;">206</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">7</span>, <span style="color: black;">107</span>, <span style="color: black;">207</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">8</span>, <span style="color: black;">108</span>, <span style="color: black;">208</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">9</span>, <span style="color: black;">109</span>, <span style="color: black;">209</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">10</span>, <span style="color: black;">110</span>, <span style="color: black;">210</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> x <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3B972E;">(</span><span style="color: black;">0</span>:<span style="color: black;">15</span>, <span style="color: black;">100</span>:<span style="color: black;">110</span>, <span style="color: black;">200</span>:<span style="color: black;">210</span><span style="color: #3B972E;">)</span><br/>
+               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span><br/>
+            <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">0</span>, <span style="color: black;">100</span>, <span style="color: black;">200</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">101</span>, <span style="color: black;">201</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">102</span>, <span style="color: black;">202</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">103</span>, <span style="color: black;">203</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">104</span>, <span style="color: black;">204</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">105</span>, <span style="color: black;">205</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">6</span>, <span style="color: black;">106</span>, <span style="color: black;">206</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">7</span>, <span style="color: black;">107</span>, <span style="color: black;">207</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">8</span>, <span style="color: black;">108</span>, <span style="color: black;">208</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">9</span>, <span style="color: black;">109</span>, <span style="color: black;">209</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">10</span>, <span style="color: black;">110</span>, <span style="color: black;">210</span><span style="color: #3B972E;">)</span><br/>
 <br/>// Manejar la inconsistencia en la cantidad de elementos<br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> x <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3b972e;">(</span><span style="color: black;">0</span>:<span style="color: black;">10</span>, <span style="color: black;">100</span>:<span style="color: black;">115</span>, <span style="color: black;">200</span>:<span style="color: black;">210</span><span style="color: #3b972e;">)</span><br/>
-               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span><br/>
-            <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">0</span>, <span style="color: black;">100</span>, <span style="color: black;">200</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">101</span>, <span style="color: black;">201</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">102</span>, <span style="color: black;">202</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">103</span>, <span style="color: black;">203</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">104</span>, <span style="color: black;">204</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">105</span>, <span style="color: black;">205</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">6</span>, <span style="color: black;">106</span>, <span style="color: black;">206</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">7</span>, <span style="color: black;">107</span>, <span style="color: black;">207</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">8</span>, <span style="color: black;">108</span>, <span style="color: black;">208</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">9</span>, <span style="color: black;">109</span>, <span style="color: black;">209</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">10</span>, <span style="color: black;">110</span>, <span style="color: black;">210</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> x <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">zip</span><span style="color: #3B972E;">(</span><span style="color: black;">0</span>:<span style="color: black;">10</span>, <span style="color: black;">100</span>:<span style="color: black;">115</span>, <span style="color: black;">200</span>:<span style="color: black;">210</span><span style="color: #3B972E;">)</span><br/>
+               <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span><br/>
+            <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">0</span>, <span style="color: black;">100</span>, <span style="color: black;">200</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">101</span>, <span style="color: black;">201</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">102</span>, <span style="color: black;">202</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">103</span>, <span style="color: black;">203</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">104</span>, <span style="color: black;">204</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">105</span>, <span style="color: black;">205</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">6</span>, <span style="color: black;">106</span>, <span style="color: black;">206</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">7</span>, <span style="color: black;">107</span>, <span style="color: black;">207</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">8</span>, <span style="color: black;">108</span>, <span style="color: black;">208</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">9</span>, <span style="color: black;">109</span>, <span style="color: black;">209</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">10</span>, <span style="color: black;">110</span>, <span style="color: black;">210</span><span style="color: #3B972E;">)</span><br/>
 </div></div><p>Usar `zip` creará un iterador que es una tupla que contiene subiteradores de los contenedores que se le pasan. El iterador `zip` iterará sobre todos los subiteradores en orden, seleccionando el elemento `ii` de cada subiterador en la iteración `ii` del bucle `for`. Una vez que cualquier subiterador se agote, el bucle `for` se detendrá.</p>
 <p>La declaración `for` puede anidar múltiples condiciones de bucle, usando comas<span class="marked">,</span>para separar:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> n <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span>, m <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
-                  @show <span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span><br/>
-               <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span>n, m<span style="color: #3b972e;">)</span> = <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span>, m <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><br/>
+                  @show <span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span><br/>
+               <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span>n, m<span style="color: #3B972E;">)</span> = <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <h3>Comprensiones</h3>La comprensión es una forma única de procesamiento de datos que permite construir una nueva estructura de secuencia de datos a partir de otra secuencia de datos.<p>El formato es el siguiente:</p>
 <div class="example"><div class="example_code">
-<span style="color: #3b972e;">[</span>expresión<span style="color: #4266d5;font-weight:bold;">for</span>variable<span style="color: #4266d5;font-weight:bold;">in</span>lista<span style="color: #3b972e;">]</span> <br/>
-<span style="color: #3b972e;">[</span>out_exp_res <span style="color: #4266d5;font-weight:bold;">for</span> out_exp <span style="color: #4266d5;font-weight:bold;">in</span> input_list<span style="color: #3b972e;">]</span><br/>
+<span style="color: #3B972E;">[</span>expresión<span style="color: #4266D5;font-weight:bold;">for</span>variable<span style="color: #4266D5;font-weight:bold;">in</span>lista<span style="color: #3B972E;">]</span> <br/>
+<span style="color: #3B972E;">[</span>out_exp_res <span style="color: #4266D5;font-weight:bold;">for</span> out_exp <span style="color: #4266D5;font-weight:bold;">in</span> input_list<span style="color: #3B972E;">]</span><br/>
 <br/>o<br/>
 <br/>
-<span style="color: #3b972e;">[</span>expresión<span style="color: #4266d5;font-weight:bold;">for</span>variable<span style="color: #4266d5;font-weight:bold;">in</span>lista<span style="color: #4266d5;font-weight:bold;">if</span>condición<span style="color: #3b972e;">]</span><br/>
-<span style="color: #3b972e;">[</span>out_exp_res <span style="color: #4266d5;font-weight:bold;">for</span> out_exp <span style="color: #4266d5;font-weight:bold;">in</span> input_list <span style="color: #4266d5;font-weight:bold;">if</span> condition<span style="color: #3b972e;">]</span><br/>
+<span style="color: #3B972E;">[</span>expresión<span style="color: #4266D5;font-weight:bold;">for</span>variable<span style="color: #4266D5;font-weight:bold;">in</span>lista<span style="color: #4266D5;font-weight:bold;">if</span>condición<span style="color: #3B972E;">]</span><br/>
+<span style="color: #3B972E;">[</span>out_exp_res <span style="color: #4266D5;font-weight:bold;">for</span> out_exp <span style="color: #4266D5;font-weight:bold;">in</span> input_list <span style="color: #4266D5;font-weight:bold;">if</span> condition<span style="color: #3B972E;">]</span><br/>
 <br/>
 <br/>
 </div></div>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span>X^<span style="color: black;">2</span> <span style="color: #4266d5;font-weight:bold;">for</span> X <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: black;">1</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span>X^<span style="color: black;">2</span> <span style="color: #4266D5;font-weight:bold;">for</span> X <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: black;">1</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span><br/>
  <span style="color: black;">4</span><br/>
  <span style="color: black;">9</span><br/>
@@ -668,8 +668,8 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</
 </div></div>
 <p>También podemos especificar el tipo de elementos que queremos generar:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">Complex</span><span style="color: #3b972e;">[</span>X^<span style="color: black;">2</span> <span style="color: #4266d5;font-weight:bold;">for</span> X <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Complex</span>,<span style="color: black;">1</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">Complex</span><span style="color: #3B972E;">[</span>X^<span style="color: black;">2</span> <span style="color: #4266D5;font-weight:bold;">for</span> X <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:<span style="color: black;">5</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">5</span>-element <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Complex</span>,<span style="color: black;">1</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">1</span> + 0im<br/>
  <span style="color: black;">4</span> + 0im<br/>
  <span style="color: black;">9</span> + 0im<br/>
@@ -679,84 +679,84 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
 <h3>Recorrer arreglos</h3>
 <p>A veces queremos iterar sobre cada elemento de un arreglo, incluyendo el número de índice del elemento.</p><p>Julia proporciona<span class="marked">enumerate(iter)</span>la función, cuyo parámetro<strong>iter</strong>es un objeto iterable; esta función generará los números de índice y los valores correspondientes a cada índice.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> a = <span style="color: #3b972e;">[</span><span style="color: #c93d39;">"a"</span>, <span style="color: #c93d39;">"b"</span>, <span style="color: #c93d39;">"c"</span><span style="color: #3b972e;">]</span><span style="color: #6bab5b;">;</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> a = <span style="color: #3B972E;">[</span><span style="color: #C93D39;">"a"</span>, <span style="color: #C93D39;">"b"</span>, <span style="color: #C93D39;">"c"</span><span style="color: #3B972E;">]</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">for</span> <span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">index</span>, value<span style="color: #3b972e;">)</span> <span style="color: #4266d5;font-weight:bold;">in</span> enumerate<span style="color: #3b972e;">(</span>a<span style="color: #3b972e;">)</span><br/>
-           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"$index $value"</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">for</span> <span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">index</span>, value<span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">in</span> enumerate<span style="color: #3B972E;">(</span>a<span style="color: #3B972E;">)</span><br/>
+           <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"$index $value"</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <span style="color: black;">1</span> a<br/>
 <span style="color: black;">2</span> b<br/>
 <span style="color: black;">3</span> c<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> arr = rand<span style="color: #3b972e;">(</span><span style="color: black;">0</span>:<span style="color: black;">9</span>, <span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">4</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: black;">2</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> arr = rand<span style="color: #3B972E;">(</span><span style="color: black;">0</span>:<span style="color: black;">9</span>, <span style="color: black;">4</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">4</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: black;">2</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">7</span> <span style="color: black;">6</span> <span style="color: black;">5</span> <span style="color: black;">8</span><br/>
  <span style="color: black;">8</span> <span style="color: black;">6</span> <span style="color: black;">9</span> <span style="color: black;">4</span><br/>
  <span style="color: black;">6</span> <span style="color: black;">3</span> <span style="color: black;">0</span> <span style="color: black;">7</span><br/>
  <span style="color: black;">2</span> <span style="color: black;">3</span> <span style="color: black;">2</span> <span style="color: black;">4</span><br/>
  <br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #3b972e;">[</span>x <span style="color: #4266d5;font-weight:bold;">for</span> x <span style="color: #4266d5;font-weight:bold;">in</span> enumerate<span style="color: #3b972e;">(</span>arr<span style="color: #3b972e;">)</span><span style="color: #3b972e;">]</span><br/>
-<span style="color: black;">4</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3b972e;">{</span>Tuple<span style="color: #3b972e;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">}</span>,<span style="color: black;">2</span><span style="color: #3b972e;">}</span>:<br/>
- <span style="color: #3b972e;">(</span><span style="color: black;">1</span>, <span style="color: black;">7</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">5</span>, <span style="color: black;">6</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">9</span>, <span style="color: black;">5</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">13</span>, <span style="color: black;">8</span><span style="color: #3b972e;">)</span><br/>
- <span style="color: #3b972e;">(</span><span style="color: black;">2</span>, <span style="color: black;">8</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">6</span>, <span style="color: black;">6</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">10</span>, <span style="color: black;">9</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">14</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
- <span style="color: #3b972e;">(</span><span style="color: black;">3</span>, <span style="color: black;">6</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">7</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">11</span>, <span style="color: black;">0</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">15</span>, <span style="color: black;">7</span><span style="color: #3b972e;">)</span><br/>
- <span style="color: #3b972e;">(</span><span style="color: black;">4</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">8</span>, <span style="color: black;">3</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">12</span>, <span style="color: black;">2</span><span style="color: #3b972e;">)</span> <span style="color: #3b972e;">(</span><span style="color: black;">16</span>, <span style="color: black;">4</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #3B972E;">[</span>x <span style="color: #4266D5;font-weight:bold;">for</span> x <span style="color: #4266D5;font-weight:bold;">in</span> enumerate<span style="color: #3B972E;">(</span>arr<span style="color: #3B972E;">)</span><span style="color: #3B972E;">]</span><br/>
+<span style="color: black;">4</span>×<span style="color: black;">4</span> <span style="color: #0000A8;font-weight:bold;">Array</span><span style="color: #3B972E;">{</span>Tuple<span style="color: #3B972E;">{</span><span style="color: #0000A8;font-weight:bold;">Int64</span>,<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">}</span>,<span style="color: black;">2</span><span style="color: #3B972E;">}</span>:<br/>
+ <span style="color: #3B972E;">(</span><span style="color: black;">1</span>, <span style="color: black;">7</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">5</span>, <span style="color: black;">6</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">9</span>, <span style="color: black;">5</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">13</span>, <span style="color: black;">8</span><span style="color: #3B972E;">)</span><br/>
+ <span style="color: #3B972E;">(</span><span style="color: black;">2</span>, <span style="color: black;">8</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">6</span>, <span style="color: black;">6</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">10</span>, <span style="color: black;">9</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">14</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
+ <span style="color: #3B972E;">(</span><span style="color: black;">3</span>, <span style="color: black;">6</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">7</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">11</span>, <span style="color: black;">0</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">15</span>, <span style="color: black;">7</span><span style="color: #3B972E;">)</span><br/>
+ <span style="color: #3B972E;">(</span><span style="color: black;">4</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">8</span>, <span style="color: black;">3</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">12</span>, <span style="color: black;">2</span><span style="color: #3B972E;">)</span> <span style="color: #3B972E;">(</span><span style="color: black;">16</span>, <span style="color: black;">4</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <hr/>
 <h2>Manejo de excepciones</h2>
 <p>Durante la ejecución de un programa, si ocurre una condición inesperada, una función puede ser incapaz de devolver un valor razonable al llamador. En tal caso, es mejor dejar que la condición inesperada termine el programa e imprima un mensaje de error de depuración, lo que facilita a los desarrolladores el manejo de su código.</p>
 <p>Mediante<span class="marked">try / catch</span>la sentencia, se pueden manejar convenientemente las excepciones.</p><p>Por ejemplo, en el siguiente código, la función de raíz cuadrada `sqrt` lanzará una excepción. Con `try / catch` podemos generar con precisión la información de la excepción.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">try</span><br/>
-         sqrt<span style="color: #3b972e;">(</span><span style="color: #c93d39;">"ten"</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">catch</span> e<br/>
-         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Necesitas ingresar un número"</span><span style="color: #3b972e;">)</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>Necesitas ingresar un número<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">try</span><br/>
+         sqrt<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ten"</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">catch</span> e<br/>
+         <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Necesitas ingresar un número"</span><span style="color: #3B972E;">)</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>Necesitas ingresar un número<br/>
 </div></div>
 <h3>Cláusula finally</h3>
 <p>Al programar cambios de estado o al usar recursos similares a archivos, a menudo es necesario realizar tareas de limpieza al final del código (por ejemplo, cerrar archivos). Dado que las excepciones hacen que algunos bloques de código salgan antes de terminar normalmente, esto puede complicar dichas tareas. La palabra clave `finally` proporciona una manera de ejecutar cierto código cuando un bloque sale, sin importar cómo salga.</p>
 <p>Aquí hay un ejemplo que asegura que un archivo abierto se cierre:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-f = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"file"</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">try</span><br/>
+f = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"file"</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">try</span><br/>
     <span style="color: #888888;"># operate on file f</span><br/>
-<span style="color: #4266d5;font-weight:bold;">finally</span><br/>
-    <span style="color: #0000A8;font-weight:bold;">close</span><span style="color: #3b972e;">(</span>f<span style="color: #3b972e;">)</span><br/>
-<span style="color: #4266d5;font-weight:bold;">end</span><br/>
+<span style="color: #4266D5;font-weight:bold;">finally</span><br/>
+    <span style="color: #0000A8;font-weight:bold;">close</span><span style="color: #3B972E;">(</span>f<span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">end</span><br/>
 </div></div><p>Cuando el flujo de control sale del bloque `try` (por ejemplo, al encontrar un `return`, o al terminar normalmente), se ejecutará `close(f)`. Si el bloque `try` sale debido a una excepción, la excepción se seguirá propagando. El bloque `catch` se puede usar junto con `try` y `finally`. En ese caso, el bloque `finally` se ejecuta después de que `catch` maneje el error.</p>
 <h3>La función throw</h3>
 <p>Podemos usar `throw` para crear excepciones explícitamente.</p><p>Por ejemplo, si una función solo está definida para números no negativos, cuando el parámetro de entrada es negativo, se puede usar `throw` para lanzar un `DomainError`.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span>x<span style="color: #3b972e;">)</span> = x<span style="color: #6bab5b;">&gt;</span>=<span style="color: black;">0</span> <span style="color: #6bab5b;">?</span> exp<span style="color: #3b972e;">(</span>-x<span style="color: #3b972e;">)</span> : <span style="color: #4266d5;font-weight:bold;">throw</span><span style="color: #3b972e;">(</span>DomainError<span style="color: #3b972e;">(</span>x, <span style="color: #c93d39;">"argument must be nonnegative"</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-f <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span>x<span style="color: #3B972E;">)</span> = x<span style="color: #6BAB5B;">&gt;</span>=<span style="color: black;">0</span> <span style="color: #6BAB5B;">?</span> exp<span style="color: #3B972E;">(</span>-x<span style="color: #3B972E;">)</span> : <span style="color: #4266D5;font-weight:bold;">throw</span><span style="color: #3B972E;">(</span>DomainError<span style="color: #3B972E;">(</span>x, <span style="color: #C93D39;">"argument must be nonnegative"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+f <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">0.36787944117144233</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> f<span style="color: #3b972e;">(</span>-<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> f<span style="color: #3B972E;">(</span>-<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 ERROR: DomainError with -<span style="color: black;">1</span>:<br/>
 argument must be nonnegative<br/>
 Stacktrace:<br/>
- <span style="color: #3b972e;">[</span><span style="color: black;">1</span><span style="color: #3b972e;">]</span> f<span style="color: #3b972e;">(</span>::<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3b972e;">)</span> at ./none:<span style="color: black;">1</span><br/>
+ <span style="color: #3B972E;">[</span><span style="color: black;">1</span><span style="color: #3B972E;">]</span> f<span style="color: #3B972E;">(</span>::<span style="color: #0000A8;font-weight:bold;">Int64</span><span style="color: #3B972E;">)</span> at ./none:<span style="color: black;">1</span><br/>
 </div></div>
 <p>Ten en cuenta que `DomainError` sin paréntesis no es una excepción, sino un tipo de excepción. Necesitamos invocarlo para obtener un objeto `Exception`:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>DomainError<span style="color: #3b972e;">(</span>nothing<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&lt;</span>: Exception<br/>
-<span style="color: #4266d5;font-weight:bold;">true</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>DomainError<span style="color: #3B972E;">(</span>nothing<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&lt;</span>: Exception<br/>
+<span style="color: #4266D5;font-weight:bold;">true</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> typeof<span style="color: #3b972e;">(</span>DomainError<span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">&lt;</span>: Exception<br/>
-<span style="color: #4266d5;font-weight:bold;">false</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> typeof<span style="color: #3B972E;">(</span>DomainError<span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">&lt;</span>: Exception<br/>
+<span style="color: #4266D5;font-weight:bold;">false</span><br/>
 </div></div><p>Además, algunos tipos de excepción aceptan uno o más parámetros para el informe de errores:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">throw</span><span style="color: #3b972e;">(</span>UndefVarError<span style="color: #3b972e;">(</span>:x<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">throw</span><span style="color: #3B972E;">(</span>UndefVarError<span style="color: #3B972E;">(</span>:x<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 ERROR: UndefVarError: x not defined<br/>
 </div></div><p>Podemos imitar el estilo de `UndefVarError` y usar un tipo de excepción personalizado para implementar fácilmente este mecanismo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> struct MyUndefVarError <span style="color: #6bab5b;">&lt;</span>: Exception<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> struct MyUndefVarError <span style="color: #6BAB5B;">&lt;</span>: Exception<br/>
            var::<span style="color: #0000A8;font-weight:bold;">Symbol</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Base.<span style="color: black;">showerror</span><span style="color: #3b972e;">(</span>io::<span style="color: #0000A8;font-weight:bold;">IO</span>, e::MyUndefVarError<span style="color: #3b972e;">)</span> = <span style="color: #0000A8;font-weight:bold;">print</span><span style="color: #3b972e;">(</span>io, e.<span style="color: black;">var</span>, <span style="color: #c93d39;">" not defined"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Base.<span style="color: black;">showerror</span><span style="color: #3B972E;">(</span>io::<span style="color: #0000A8;font-weight:bold;">IO</span>, e::MyUndefVarError<span style="color: #3B972E;">)</span> = <span style="color: #0000A8;font-weight:bold;">print</span><span style="color: #3B972E;">(</span>io, e.<span style="color: black;">var</span>, <span style="color: #C93D39;">" not defined"</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <hr/>
 <h2>Task (corrutinas)</h2>
@@ -794,7 +794,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -839,7 +839,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -878,7 +878,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Haz clic aquí para enviar artículos</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1097,7 +1097,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

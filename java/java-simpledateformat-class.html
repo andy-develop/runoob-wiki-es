@@ -330,14 +330,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Main <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         <span style="color: #666666; font-style: italic;">// Crear un objeto SimpleDateFormat y especificar el formato</span><br/>
-        <span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// Obtener la fecha y hora actuales</span><br/>
         <span style="color: #003399;">Date</span> now <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Date</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// Formatear la fecha como cadena</span><br/>
         <span style="color: #003399;">String</span> formattedDate <span style="color: #339933;">=</span> sdf.<span style="color: #006633;">format</span><span style="color: #009900;">(</span>now<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hora actual: "</span> <span style="color: #339933;">+</span> formattedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hora actual: "</span> <span style="color: #339933;">+</span> formattedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div>
@@ -401,7 +401,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy年MM月dd日 EEEE a hh:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy年MM月dd日 EEEE a hh:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #003399;">Date</span> now <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Date</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>sdf.<span style="color: #006633;">format</span><span style="color: #009900;">(</span>now<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #666666; font-style: italic;">// Ejemplo de salida: 2023年11月15日 星期三 下午 03:45:22</span><br/>
@@ -414,8 +414,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #000000; font-weight: bold;">try</span> <span style="color: #009900;">{</span><br/>
-    <span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-    <span style="color: #003399;">String</span> dateString <span style="color: #339933;">=</span> <span style="color: #0000ff;">"2023-11-15"</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #003399;">SimpleDateFormat</span> sdf <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #003399;">String</span> dateString <span style="color: #339933;">=</span> <span style="color: #0000FF;">"2023-11-15"</span><span style="color: #339933;">;</span><br/>
     <span style="color: #003399;">Date</span> date <span style="color: #339933;">=</span> sdf.<span style="color: #006633;">parse</span><span style="color: #009900;">(</span>dateString<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>date<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #666666; font-style: italic;">// Salida: Wed Nov 15 00:00:00 CST 2023</span><br/>
@@ -438,7 +438,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Solución usando ThreadLocal</span><br/>
 <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000000; font-weight: bold;">final</span> ThreadLocal<span style="color: #339933;">&lt;</span>SimpleDateFormat<span style="color: #339933;">&gt;</span> dateFormat <span style="color: #339933;">=</span> <br/>
-    <span style="color: #003399;">ThreadLocal</span>.<span style="color: #006633;">withInitial</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">-&gt;</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #003399;">ThreadLocal</span>.<span style="color: #006633;">withInitial</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">-&gt;</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">SimpleDateFormat</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Modo de uso</span><br/>
 <span style="color: #003399;">String</span> formattedDate <span style="color: #339933;">=</span> dateFormat.<span style="color: #006633;">get</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>.<span style="color: #006633;">format</span><span style="color: #009900;">(</span><span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Date</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -456,16 +456,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Main <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         <span style="color: #666666; font-style: italic;">// Crear el formateador</span><br/>
-        DateTimeFormatter formatter <span style="color: #339933;">=</span> DateTimeFormatter.<span style="color: #006633;">ofPattern</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        DateTimeFormatter formatter <span style="color: #339933;">=</span> DateTimeFormatter.<span style="color: #006633;">ofPattern</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"yyyy-MM-dd HH:mm:ss"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// Obtener la hora actual y formatear</span><br/>
         LocalDateTime now <span style="color: #339933;">=</span> LocalDateTime.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">String</span> formattedDate <span style="color: #339933;">=</span> now.<span style="color: #006633;">format</span><span style="color: #009900;">(</span>formatter<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hora actual: "</span> <span style="color: #339933;">+</span> formattedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hora actual: "</span> <span style="color: #339933;">+</span> formattedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// Analizar la cadena como fecha y hora</span><br/>
-        LocalDateTime parsedDate <span style="color: #339933;">=</span> LocalDateTime.<span style="color: #006633;">parse</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"2023-11-15 14:30:00"</span>, formatter<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hora analizada: "</span> <span style="color: #339933;">+</span> parsedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        LocalDateTime parsedDate <span style="color: #339933;">=</span> LocalDateTime.<span style="color: #006633;">parse</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"2023-11-15 14:30:00"</span>, formatter<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hora analizada: "</span> <span style="color: #339933;">+</span> parsedDate<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div>
@@ -647,7 +647,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -692,7 +692,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -731,7 +731,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -950,7 +950,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

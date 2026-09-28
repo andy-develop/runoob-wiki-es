@@ -337,13 +337,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 MathOperation addition <span style="color: #339933;">=</span> <span style="color: #009900;">(</span>a, b<span style="color: #009900;">)</span> <span style="color: #339933;">-&gt;</span> a <span style="color: #339933;">+</span> b<span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Llamando a la expresión Lambda</span><br/>
-<span style="color: #000066; font-weight: bold;">int</span> result <span style="color: #339933;">=</span> addition.<span style="color: #006633;">operation</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span>, <span style="color: #cc66cc;">3</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"5 + 3 = "</span> <span style="color: #339933;">+</span> result<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">int</span> result <span style="color: #339933;">=</span> addition.<span style="color: #006633;">operation</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">5</span>, <span style="color: #CC66CC;">3</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"5 + 3 = "</span> <span style="color: #339933;">+</span> result<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <p>En el ejemplo anterior, MathOperation es una interfaz funcional que contiene un método abstracto operation. La expresión Lambda<span class="marked">(a, b) -&gt; a + b</span>implementa ese método abstracto, representando la operación de sumar dos parámetros.</p>
 <p>Las expresiones Lambda se pueden usar en diversos escenarios, incluyendo operaciones de colecciones, manejo de eventos, etc. A continuación se muestra un ejemplo de recorrido de una lista usando una expresión Lambda:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Alice"</span>, <span style="color: #0000ff;">"Bob"</span>, <span style="color: #0000ff;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Alice"</span>, <span style="color: #0000FF;">"Bob"</span>, <span style="color: #0000FF;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Usando una expresión Lambda para recorrer una lista</span><br/>
 names.<span style="color: #000000; font-weight: bold;">forEach</span><span style="color: #009900;">(</span>name <span style="color: #339933;">-&gt;</span> <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>name<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -356,36 +356,36 @@ names.<span style="color: #000000; font-weight: bold;">forEach</span><span style
 <span style="color: #003399;">Runnable</span> runnable1 <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">Runnable</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
     @Override<br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> run<span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hello World!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hello World!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Usando una expresión Lambda</span><br/>
-<span style="color: #003399;">Runnable</span> runnable2 <span style="color: #339933;">=</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">-&gt;</span> <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hello World!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">Runnable</span> runnable2 <span style="color: #339933;">=</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">-&gt;</span> <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hello World!"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <h3>Soporte de programación funcional</h3> <p>Las expresiones Lambda son una manifestación de la programación funcional; permiten pasar funciones como parámetros a métodos o devolver funciones como valores de retorno. Este soporte hace que Java sea más flexible en programación funcional y pueda manejar mejor tareas como operaciones de colecciones y cálculo paralelo.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Usando una expresión Lambda como parámetro pasado a un método</span><br/>
-List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Alice"</span>, <span style="color: #0000ff;">"Bob"</span>, <span style="color: #0000ff;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Alice"</span>, <span style="color: #0000FF;">"Bob"</span>, <span style="color: #0000FF;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 names.<span style="color: #000000; font-weight: bold;">forEach</span><span style="color: #009900;">(</span>name <span style="color: #339933;">-&gt;</span> <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>name<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <h3>Captura de variables</h3><p>Las expresiones Lambda pueden acceder a variables del ámbito externo; esta característica se llama captura de variables. Las expresiones Lambda pueden capturar implícitamente variables locales finales o efectivamente finales.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Captura de variables</span><br/>
-<span style="color: #000066; font-weight: bold;">int</span> x <span style="color: #339933;">=</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">int</span> x <span style="color: #339933;">=</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">;</span><br/>
 MyFunction myFunction <span style="color: #339933;">=</span> y <span style="color: #339933;">-&gt;</span> <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>x <span style="color: #339933;">+</span> y<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-myFunction.<span style="color: #006633;">doSomething</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Imprime 15</span><br/>
+myFunction.<span style="color: #006633;">doSomething</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">5</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Imprime 15</span><br/>
 </div></div>
 <h3>Referencias a métodos</h3><p>Las expresiones Lambda se pueden simplificar aún más mediante referencias a métodos. Las referencias a métodos le permiten referirse directamente a métodos de clases u objetos existentes, sin escribir código redundante.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Usando una referencia a método</span><br/>
-List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Alice"</span>, <span style="color: #0000ff;">"Bob"</span>, <span style="color: #0000ff;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Alice"</span>, <span style="color: #0000FF;">"Bob"</span>, <span style="color: #0000FF;">"Charlie"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 names.<span style="color: #000000; font-weight: bold;">forEach</span><span style="color: #009900;">(</span><span style="color: #003399;">System</span>.<span style="color: #006633;">out</span><span style="color: #339933;">::</span>println<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <h3>Paralelismo</h3> <p>Las expresiones Lambda permiten implementar operaciones paralelas de forma más conveniente. Al combinar la API Stream con expresiones Lambda, es más fácil realizar cálculos paralelos y mejorar el rendimiento del programa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Usando expresiones Lambda y la API Stream para cálculo paralelo</span><br/>
-List<span style="color: #339933;">&lt;</span>Integer<span style="color: #339933;">&gt;</span> numbers <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span>, <span style="color: #cc66cc;">2</span>, <span style="color: #cc66cc;">3</span>, <span style="color: #cc66cc;">4</span>, <span style="color: #cc66cc;">5</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+List<span style="color: #339933;">&lt;</span>Integer<span style="color: #339933;">&gt;</span> numbers <span style="color: #339933;">=</span> <span style="color: #003399;">Arrays</span>.<span style="color: #006633;">asList</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1</span>, <span style="color: #CC66CC;">2</span>, <span style="color: #CC66CC;">3</span>, <span style="color: #CC66CC;">4</span>, <span style="color: #CC66CC;">5</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">int</span> sum <span style="color: #339933;">=</span> numbers.<span style="color: #006633;">parallelStream</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>.<span style="color: #006633;">mapToInt</span><span style="color: #009900;">(</span><span style="color: #003399;">Integer</span><span style="color: #339933;">::</span>intValue<span style="color: #009900;">)</span>.<span style="color: #006633;">sum</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div></div>
 <p>La introducción de las expresiones Lambda hace que la programación en Java sea más flexible y concisa, e impulsa el desarrollo de la programación funcional.</p>
@@ -558,7 +558,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -603,7 +603,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1091,7 +1091,7 @@ Goodbye, the time is late, I'd go now, 李四</pre>
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1310,7 +1310,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

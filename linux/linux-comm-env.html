@@ -216,7 +216,7 @@ env [OPTION]... [NAME=VALUE]... [COMMAND [ARG]...]</pre>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span><br/>
 </div>
 </div>
 <p>Esto mostrará todas las variables de entorno del shell actual, con el formato<code>nombre de variable=valor</code>, por ejemplo:</p>
@@ -229,7 +229,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=C <span style="color: #c20cb9; font-weight: bold;">ls</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=C <span style="color: #C20CB9; font-weight: bold;">ls</span><br/>
 </div>
 </div>
 <p>En este ejemplo, establecemos temporalmente<code>LANG=C</code>y luego ejecutamos el comando<code>ls</code>, lo cual afectará<code>ls</code>el idioma de salida del comando.</p>
@@ -238,7 +238,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #007800;">PATH</span>=<span style="color: #000000; font-weight: bold;">/</span>bin:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #c20cb9; font-weight: bold;">ls</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #007800;">PATH</span>=<span style="color: #000000; font-weight: bold;">/</span>bin:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #C20CB9; font-weight: bold;">ls</span><br/>
 </div>
 </div>
 <p>Aquí hemos creado un entorno limpio que solo tiene la<code>PATH</code>variable para ejecutar el<code>ls</code>comando.</p>
@@ -248,7 +248,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #007800;">EDITOR</span>=<span style="color: #c20cb9; font-weight: bold;">nano</span> crontab <span style="color: #660033;">-e</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #007800;">EDITOR</span>=<span style="color: #C20CB9; font-weight: bold;">nano</span> crontab <span style="color: #660033;">-e</span><br/>
 </div>
 </div>
 <p>Este comando establecerá temporalmente la<code>EDITOR</code>variable de entorno en<code>nano</code>, y luego ejecutará<code>crontab -e</code>, de esta manera se usará el editor nano para editar crontab.</p>
@@ -256,7 +256,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #660033;">-u</span> HOME <span style="color: #c20cb9; font-weight: bold;">ls</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #660033;">-u</span> HOME <span style="color: #C20CB9; font-weight: bold;">ls</span><br/>
 </div>
 </div>
 <p>Este comando, al ejecutar<code>ls</code>, eliminará la<code>HOME</code>variable de entorno.</p>
@@ -276,7 +276,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #000000; font-weight: bold;">/</span>path<span style="color: #000000; font-weight: bold;">/</span>to<span style="color: #000000; font-weight: bold;">/</span>program<br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #000000; font-weight: bold;">/</span>path<span style="color: #000000; font-weight: bold;">/</span>to<span style="color: #000000; font-weight: bold;">/</span>program<br/>
 </div>
 </div>
 <p>Esto permite descartar la interferencia de las variables de entorno y determinar si el problema es causado por ellas.</p>
@@ -285,15 +285,15 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #007800;">PATH</span>=<span style="color: #000000; font-weight: bold;">/</span>bin:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #000000; font-weight: bold;">/</span>path<span style="color: #000000; font-weight: bold;">/</span>to<span style="color: #000000; font-weight: bold;">/</span>script.sh<br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #660033;">-i</span> <span style="color: #007800;">PATH</span>=<span style="color: #000000; font-weight: bold;">/</span>bin:<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin <span style="color: #000000; font-weight: bold;">/</span>path<span style="color: #000000; font-weight: bold;">/</span>to<span style="color: #000000; font-weight: bold;">/</span>script.sh<br/>
 </div>
 </div>
 <h3>3. Probar el comportamiento del programa en diferentes configuraciones regionales</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=fr_FR.UTF-<span style="color: #000000;">8</span> program<br/>
-<span style="color: #c20cb9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=zh_CN.UTF-<span style="color: #000000;">8</span> program<br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=fr_FR.UTF-<span style="color: #000000;">8</span> program<br/>
+<span style="color: #C20CB9; font-weight: bold;">env</span> <span style="color: #007800;">LANG</span>=zh_CN.UTF-<span style="color: #000000;">8</span> program<br/>
 </div>
 </div>
 <p>Esto permite probar el comportamiento del programa en diferentes entornos de idioma.</p>
@@ -338,7 +338,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -383,7 +383,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -422,7 +422,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>

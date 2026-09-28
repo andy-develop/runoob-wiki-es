@@ -329,16 +329,16 @@ systemctl [选项] [命令] [单元名称]</pre>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Iniciar servicio</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl start <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl start <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Detener servicio</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl stop <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl stop <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Reiniciar servicio</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl restart <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl restart <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Recargar la configuración (sin reiniciar el servicio)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl reload <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl reload <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 </div>
 </div>
 <h3>Ver el estado del servicio</h3>
@@ -346,7 +346,7 @@ systemctl [选项] [命令] [单元名称]</pre>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Ver el estado de un solo servicio</span><br/>
-systemctl status <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+systemctl status <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Ver todos los servicios en ejecución</span><br/>
 systemctl list-units <span style="color: #660033;">--type</span>=service <span style="color: #660033;">--state</span>=running<br/>
@@ -360,13 +360,13 @@ systemctl <span style="color: #660033;">--failed</span><br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Habilitar servicio (inicio automático al arrancar)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl <span style="color: #7a0874; font-weight: bold;">enable</span> <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl <span style="color: #7A0874; font-weight: bold;">enable</span> <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Deshabilitar servicio (cancelar inicio automático al arrancar)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl disable <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl disable <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Ver si el servicio está habilitado</span><br/>
-systemctl is-enabled <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+systemctl is-enabled <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-servicio<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 </div>
 </div>
 <hr/>
@@ -381,13 +381,13 @@ systemctl is-enabled <span style="color: #7a0874; font-weight: bold;">[</span>no
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Recargar todos los archivos de unidad (se debe ejecutar después de modificar la configuración)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl daemon-reload<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl daemon-reload<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Mostrar el contenido del archivo de unidad</span><br/>
-systemctl <span style="color: #c20cb9; font-weight: bold;">cat</span> <span style="color: #7a0874; font-weight: bold;">[</span>nombre-de-la-unidad<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+systemctl <span style="color: #C20CB9; font-weight: bold;">cat</span> <span style="color: #7A0874; font-weight: bold;">[</span>nombre-de-la-unidad<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Editar el archivo de unidad (se creará un archivo de anulación)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl edit <span style="color: #7a0874; font-weight: bold;">[</span>nombre-de-la-unidad<span style="color: #7a0874; font-weight: bold;">]</span> <span style="color: #660033;">--full</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl edit <span style="color: #7A0874; font-weight: bold;">[</span>nombre-de-la-unidad<span style="color: #7A0874; font-weight: bold;">]</span> <span style="color: #660033;">--full</span><br/>
 </div>
 </div>
 <hr/>
@@ -397,16 +397,16 @@ systemctl <span style="color: #c20cb9; font-weight: bold;">cat</span> <span styl
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Apagar</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl poweroff<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl poweroff<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Reiniciar</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl reboot<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl reboot<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Suspender</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl <span style="color: #7a0874; font-weight: bold;">suspend</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl <span style="color: #7A0874; font-weight: bold;">suspend</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Hibernar</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl hibernate<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl hibernate<br/>
 </div>
 </div>
 <h3>Niveles de ejecución del sistema</h3>
@@ -417,10 +417,10 @@ systemctl <span style="color: #c20cb9; font-weight: bold;">cat</span> <span styl
 systemctl get-default<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Establecer el objetivo predeterminado</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl set-default <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-objetivo<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl set-default <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-objetivo<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Cambiar de objetivo (efecto inmediato)</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl isolate <span style="color: #7a0874; font-weight: bold;">[</span>nombre-del-objetivo<span style="color: #7a0874; font-weight: bold;">]</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl isolate <span style="color: #7A0874; font-weight: bold;">[</span>nombre-del-objetivo<span style="color: #7A0874; font-weight: bold;">]</span><br/>
 </div>
 </div>
 <p>Objetivos comunes:</p>
@@ -437,17 +437,17 @@ systemctl get-default<br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Iniciar Nginx</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl start nginx<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl start nginx<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Configurar el inicio automático al arrancar</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl <span style="color: #7a0874; font-weight: bold;">enable</span> nginx<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl <span style="color: #7A0874; font-weight: bold;">enable</span> nginx<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Comprobar el estado</span><br/>
 systemctl status nginx<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Recargar después de probar la configuración</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> nginx <span style="color: #660033;">-t</span>  <span style="color: #666666; font-style: italic;"># Probar primero la configuración</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl reload nginx<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> nginx <span style="color: #660033;">-t</span>  <span style="color: #666666; font-style: italic;"># Probar primero la configuración</span><br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl reload nginx<br/>
 </div>
 </div>
 <h3>Ejemplo 2: Crear un servicio personalizado</h3>
@@ -478,9 +478,9 @@ systemctl status nginx<br/>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl daemon-reload<br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl <span style="color: #7a0874; font-weight: bold;">enable</span> myapp<br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl start myapp<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl daemon-reload<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl <span style="color: #7A0874; font-weight: bold;">enable</span> myapp<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl start myapp<br/>
 </div>
 </div>
 <hr/>
@@ -548,7 +548,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -593,7 +593,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -632,7 +632,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener un código de invitación para el registro</a></p>
@@ -851,7 +851,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

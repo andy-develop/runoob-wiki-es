@@ -379,7 +379,7 @@ white-space: pre-wrap;
 </ul>
 <h2>Uso</h2>
 <p>Crear un combobox (cuadro combinado) a partir de un elemento &lt;select&gt; con una estructura predefinida.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;select id="cc" class="easyui-combobox" name="dept" style="width:200px;"&gt;
     &lt;option value="aa"&gt;aitem1&lt;/option&gt;
     &lt;option&gt;bitem2&lt;/option&gt;
@@ -389,15 +389,15 @@ white-space: pre-wrap;
 &lt;/select&gt;
 </pre>
 <p>Crear un combobox (cuadro combinado) a partir de una etiqueta &lt;input&gt;.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;input id="cc" class="easyui-combobox" name="dept"
     data-options="valueField:'id',textField:'text',url:'get_data.php'"&gt;
 </pre>
 <p>Crear un combobox (cuadro combinado) usando JavaScript.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;input id="cc" name="dept" value="aa"&gt;
 </pre>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#cc').combobox({
     url:'combobox_data.json',
     valueField:'id',
@@ -405,7 +405,7 @@ $('#cc').combobox({
 });
 </pre>
 <p>Crear dos combobox (cuadros combinados) dependientes.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;input id="cc1" class="easyui-combobox" data-options="
     valueField: 'id',
     textField: 'text',
@@ -417,7 +417,7 @@ $('#cc').combobox({
 &lt;input id="cc2" class="easyui-combobox" data-options="valueField:'id',textField:'text'"&gt;
 </pre>
 <p>Ejemplo del formato de datos JSON:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 [{
     "id":1,
     "text":"text1"
@@ -466,7 +466,7 @@ $('#cc').combobox({
 <tr>
 <td>groupFormatter</td>
 <td>function(group)</td>
-<td>Devuelve el texto de grupo que se muestra en los elementos agrupados. Esta propiedad está disponible desde la versión 1.3.4.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Devuelve el texto de grupo que se muestra en los elementos agrupados. Esta propiedad está disponible desde la versión 1.3.4.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox({
     groupFormatter: function(group){
         return '&lt;span style="color:red"&gt;' + group + '&lt;/span&gt;';
@@ -497,7 +497,7 @@ $('#cc').combobox({
 <tr>
 <td>data</td>
 <td>array</td>
-<td>Los datos de la lista que se cargan.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Los datos de la lista que se cargan.<br/>Ejemplo de código:<pre style="color:#0053A6">
 &lt;input class="easyui-combobox" data-options="
         valueField: 'label',
         textField: 'value',
@@ -519,7 +519,7 @@ $('#cc').combobox({
 <td>filter</td>
 <td>function</td>
 <td>Define cómo filtrar los datos locales cuando 'mode' está establecido en 'local'. Esta función tiene dos parámetros:<br/>q: el texto ingresado por el usuario.<br/>row: los datos de la fila en la lista.<br/>Devuelve true para permitir que la fila se muestre.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox({
     filter: function(q, row){
         var opts = $(this).combobox('options');
@@ -533,7 +533,7 @@ $('#cc').combobox({
 <tr>
 <td>formatter</td>
 <td>function</td>
-<td>Define cómo se representa la fila. Esta función tiene un parámetro: row.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Define cómo se representa la fila. Esta función tiene un parámetro: row.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox({
     formatter: function(row){
         var opts = $(this).combobox('options');
@@ -569,7 +569,7 @@ $('#cc').combobox({
 <tr>
 <td>onBeforeLoad</td>
 <td>param</td>
-<td>Se dispara antes de solicitar la carga de datos. Devuelve false para cancelar la acción de carga.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Se dispara antes de solicitar la carga de datos. Devuelve false para cancelar la acción de carga.<br/>Ejemplo de código:<pre style="color:#0053A6">
 // change the http request parameters before load data from server
 $('#cc').combobox({
     onBeforeLoad: function(param){
@@ -627,7 +627,7 @@ $('#cc').combobox({
 <tr>
 <td>reload</td>
 <td>url</td>
-<td>Solicita datos de lista remotos. Pase el parámetro 'url' para sobrescribir el valor de URL original.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Solicita datos de lista remotos. Pase el parámetro 'url' para sobrescribir el valor de URL original.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox('reload');  // reload list data using old URL
 $('#cc').combobox('reload','get_data.php');  // reload list data using new URL
 </pre>
@@ -636,7 +636,7 @@ $('#cc').combobox('reload','get_data.php');  // reload list data using new URL
 <tr>
 <td>setValues</td>
 <td>values</td>
-<td>Establece el array de valores del combobox.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Establece el array de valores del combobox.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox('setValues', ['001','002']);
 </pre>
 </td>
@@ -644,7 +644,7 @@ $('#cc').combobox('setValues', ['001','002']);
 <tr>
 <td>setValue</td>
 <td>value</td>
-<td>Establece el valor del combobox.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Establece el valor del combobox.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#cc').combobox('setValue', '001');
 </pre>
 </td>
@@ -700,7 +700,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -745,7 +745,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -784,7 +784,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar un artículo</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1003,7 +1003,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

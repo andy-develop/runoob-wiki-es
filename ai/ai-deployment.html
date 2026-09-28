@@ -307,7 +307,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Instalar vLLM</span><br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> vllm<br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> vllm<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Iniciar un servicio API compatible con OpenAI usando vLLM</span><br/>
 <span style="color: #666666; font-style: italic;"># --model especifica el modelo, --host y --port especifican la dirección de escucha</span><br/>
@@ -457,11 +457,11 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">g
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Instalar Ollama (servidor Linux)</span><br/>
-curl <span style="color: #660033;">-fsSL</span> https:<span style="color: #000000; font-weight: bold;">//</span>ollama.com<span style="color: #000000; font-weight: bold;">/</span>install.sh <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">sh</span><br/>
+curl <span style="color: #660033;">-fsSL</span> https:<span style="color: #000000; font-weight: bold;">//</span>ollama.com<span style="color: #000000; font-weight: bold;">/</span>install.sh <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #C20CB9; font-weight: bold;">sh</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Configurar Ollama para escuchar en todas las interfaces de red (preste atención al firewall en producción)</span><br/>
 <span style="color: #666666; font-style: italic;"># Editar el archivo de servicio systemd</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl edit ollama.service<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl edit ollama.service<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Agregar el siguiente contenido:</span><br/>
 <span style="color: #666666; font-style: italic;"># [Service]</span><br/>
@@ -469,7 +469,7 @@ curl <span style="color: #660033;">-fsSL</span> https:<span style="color: #00000
 <span style="color: #666666; font-style: italic;"># Environment="OLLAMA_MODELS=/var/lib/ollama/models"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Reiniciar el servicio</span><br/>
-<span style="color: #c20cb9; font-weight: bold;">sudo</span> systemctl restart ollama<br/>
+<span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl restart ollama<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Descargar y ejecutar el modelo</span><br/>
 ollama pull qwen2.5:7b<br/>
@@ -878,7 +878,7 @@ async <span style="color: Green;font-weight:bold;">def</span> list_models<span s
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Instalar dependencias</span><br/>
-pip <span style="color: #c20cb9; font-weight: bold;">install</span> fastapi uvicorn python-multipart pydantic<br/>
+pip <span style="color: #C20CB9; font-weight: bold;">install</span> fastapi uvicorn python-multipart pydantic<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Iniciar el servicio</span><br/>
 python llm_api_server.py<br/>
@@ -1022,56 +1022,56 @@ async <span style="color: Green;font-weight:bold;">def</span> main<span style="c
 <span style="color: #808080; font-style: italic;"># Ruta del archivo: nginx.conf</span><br/>
 <span style="color: #808080; font-style: italic;"># Configuración de Nginx: balanceo de carga para múltiples servicios LLM</span><br/>
 <br/>
-<span style="color: #993333;">upstream</span> llm_backends <span style="color: #66cc66;">{</span><br/>
+<span style="color: #993333;">upstream</span> llm_backends <span style="color: #66CC66;">{</span><br/>
     <span style="color: #808080; font-style: italic;"># Algoritmo de menos conexiones: envía la solicitud al servidor con menos conexiones actuales</span><br/>
-    <span style="color: #993333;">least_conn</span><span style="color: #66cc66;">;</span><br/>
+    <span style="color: #993333;">least_conn</span><span style="color: #66CC66;">;</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;"># Lista de servidores backend</span><br/>
-    <span style="color: #000066;">server</span> 192.168.1.101:<span style="">8000</span> weight<span style="color: #66cc66;">=</span><span style="">1</span> max_fails<span style="color: #66cc66;">=</span><span style="">3</span> fail_timeout<span style="color: #66cc66;">=</span>30s<span style="color: #66cc66;">;</span><br/>
-    <span style="color: #000066;">server</span> 192.168.1.102:<span style="">8000</span> weight<span style="color: #66cc66;">=</span><span style="">1</span> max_fails<span style="color: #66cc66;">=</span><span style="">3</span> fail_timeout<span style="color: #66cc66;">=</span>30s<span style="color: #66cc66;">;</span><br/>
-    <span style="color: #000066;">server</span> 192.168.1.103:<span style="">8000</span> weight<span style="color: #66cc66;">=</span><span style="">1</span> max_fails<span style="color: #66cc66;">=</span><span style="">3</span> fail_timeout<span style="color: #66cc66;">=</span>30s<span style="color: #66cc66;">;</span><br/>
+    <span style="color: #000066;">server</span> 192.168.1.101:<span style="">8000</span> weight<span style="color: #66CC66;">=</span><span style="">1</span> max_fails<span style="color: #66CC66;">=</span><span style="">3</span> fail_timeout<span style="color: #66CC66;">=</span>30s<span style="color: #66CC66;">;</span><br/>
+    <span style="color: #000066;">server</span> 192.168.1.102:<span style="">8000</span> weight<span style="color: #66CC66;">=</span><span style="">1</span> max_fails<span style="color: #66CC66;">=</span><span style="">3</span> fail_timeout<span style="color: #66CC66;">=</span>30s<span style="color: #66CC66;">;</span><br/>
+    <span style="color: #000066;">server</span> 192.168.1.103:<span style="">8000</span> weight<span style="color: #66CC66;">=</span><span style="">1</span> max_fails<span style="color: #66CC66;">=</span><span style="">3</span> fail_timeout<span style="color: #66CC66;">=</span>30s<span style="color: #66CC66;">;</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;"># Si hay varios modelos de GPU, puedes asignar diferentes proporciones de tráfico según el peso (weight)</span><br/>
     <span style="color: #808080; font-style: italic;"># weight=2 significa que este servidor recibe el doble de tráfico que los demás</span><br/>
-<span style="color: #66cc66;">}</span><br/>
+<span style="color: #66CC66;">}</span><br/>
 <br/>
-<span style="color: #000066;">server</span> <span style="color: #66cc66;">{</span><br/>
-    <span style="color: #000066;">listen</span> <span style="">80</span><span style="color: #66cc66;">;</span><br/>
-    <span style="color: #000066;">server_name</span> api.runoob.com<span style="color: #66cc66;">;</span><br/>
+<span style="color: #000066;">server</span> <span style="color: #66CC66;">{</span><br/>
+    <span style="color: #000066;">listen</span> <span style="">80</span><span style="color: #66CC66;">;</span><br/>
+    <span style="color: #000066;">server_name</span> api.runoob.com<span style="color: #66CC66;">;</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;"># Reenvío de solicitudes API</span><br/>
-    <span style="color: #000066;">location</span> /v1/ <span style="color: #66cc66;">{</span><br/>
+    <span style="color: #000066;">location</span> /v1/ <span style="color: #66CC66;">{</span><br/>
         <span style="color: #808080; font-style: italic;"># Reenviar al backend</span><br/>
-        <span style="">proxy_pass</span> <span style="color: #000066;">http</span>://llm_backends<span style="color: #66cc66;">;</span><br/>
+        <span style="">proxy_pass</span> <span style="color: #000066;">http</span>://llm_backends<span style="color: #66CC66;">;</span><br/>
 <br/>
         <span style="color: #808080; font-style: italic;"># Configuración de tiempo de espera (la generación de IA puede ser lenta)</span><br/>
-        <span style="">proxy_connect_timeout</span> 10s<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_send_timeout</span> 600s<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_read_timeout</span> 600s<span style="color: #66cc66;">;</span><br/>
+        <span style="">proxy_connect_timeout</span> 10s<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_send_timeout</span> 600s<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_read_timeout</span> 600s<span style="color: #66CC66;">;</span><br/>
 <br/>
         <span style="color: #808080; font-style: italic;"># Pasar la IP real del cliente</span><br/>
-        <span style="">proxy_set_header</span> Host <span style="color: #000066;">$host</span><span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_set_header</span> X-Real-IP <span style="color: #000066;">$remote_addr</span><span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_set_header</span> X-Forwarded-For <span style="color: #000066;">$proxy_add_x_forwarded_for</span><span style="color: #66cc66;">;</span><br/>
+        <span style="">proxy_set_header</span> Host <span style="color: #000066;">$host</span><span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_set_header</span> X-Real-IP <span style="color: #000066;">$remote_addr</span><span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_set_header</span> X-Forwarded-For <span style="color: #000066;">$proxy_add_x_forwarded_for</span><span style="color: #66CC66;">;</span><br/>
 <br/>
         <span style="color: #808080; font-style: italic;"># Configuración necesaria para respuestas en streaming</span><br/>
-        <span style="">proxy_buffering</span> off<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_cache</span> off<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_set_header</span> Connection <span style="color: #ff0000;">''</span><span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_http_version</span> <span style="">1.1</span><span style="color: #66cc66;">;</span><br/>
-    <span style="color: #66cc66;">}</span><br/>
+        <span style="">proxy_buffering</span> off<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_cache</span> off<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_set_header</span> Connection <span style="color: #FF0000;">''</span><span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_http_version</span> <span style="">1.1</span><span style="color: #66CC66;">;</span><br/>
+    <span style="color: #66CC66;">}</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;"># Endpoint de comprobación de salud</span><br/>
-    <span style="color: #000066;">location</span> /health <span style="color: #66cc66;">{</span><br/>
-        <span style="">proxy_pass</span> <span style="color: #000066;">http</span>://llm_backends/health<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_connect_timeout</span> 5s<span style="color: #66cc66;">;</span><br/>
-        <span style="">proxy_read_timeout</span> 5s<span style="color: #66cc66;">;</span><br/>
-    <span style="color: #66cc66;">}</span><br/>
+    <span style="color: #000066;">location</span> /health <span style="color: #66CC66;">{</span><br/>
+        <span style="">proxy_pass</span> <span style="color: #000066;">http</span>://llm_backends/health<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_connect_timeout</span> 5s<span style="color: #66CC66;">;</span><br/>
+        <span style="">proxy_read_timeout</span> 5s<span style="color: #66CC66;">;</span><br/>
+    <span style="color: #66CC66;">}</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;"># Límite de velocidad: máximo 10 solicitudes por segundo por IP</span><br/>
-    <span style="">limit_req_zone</span> <span style="color: #000066;">$binary_remote_addr</span> zone<span style="color: #66cc66;">=</span>api_limit:10m rate<span style="color: #66cc66;">=</span>10r/s<span style="color: #66cc66;">;</span><br/>
-    <span style="">limit_req</span> zone<span style="color: #66cc66;">=</span>api_limit burst<span style="color: #66cc66;">=</span><span style="">20</span> nodelay<span style="color: #66cc66;">;</span><br/>
-<span style="color: #66cc66;">}</span><br/>
+    <span style="">limit_req_zone</span> <span style="color: #000066;">$binary_remote_addr</span> zone<span style="color: #66CC66;">=</span>api_limit:10m rate<span style="color: #66CC66;">=</span>10r/s<span style="color: #66CC66;">;</span><br/>
+    <span style="">limit_req</span> zone<span style="color: #66CC66;">=</span>api_limit burst<span style="color: #66CC66;">=</span><span style="">20</span> nodelay<span style="color: #66CC66;">;</span><br/>
+<span style="color: #66CC66;">}</span><br/>
 </div>
 </div>
 <h3>Escalado automático con Kubernetes HPA</h3>
@@ -2575,7 +2575,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -2620,7 +2620,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -2659,7 +2659,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -2878,7 +2878,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -549,21 +549,21 @@ size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
 <span style="color: #666666;">// Nota: se debe usar un array de longitud fija, no se puede usar un miembro puntero char *name</span><br/>
 <span style="color: #05a;">typedef</span> <span style="color: #05a;">struct</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #05a;">int</span> id<span style="color: #008080;">;</span>             <span style="color: #666666;">// Número de estudiante</span><br/>
-    <span style="color: #05a;">char</span> name<span style="color: #008000;">[</span><span style="color: #0000dd;">50</span><span style="color: #008000;">]</span><span style="color: #008080;">;</span>      <span style="color: #666666;">// Nombre (array fijo, no usar puntero)</span><br/>
+    <span style="color: #05a;">char</span> name<span style="color: #008000;">[</span><span style="color: #0000DD;">50</span><span style="color: #008000;">]</span><span style="color: #008080;">;</span>      <span style="color: #666666;">// Nombre (array fijo, no usar puntero)</span><br/>
     <span style="color: #05a;">float</span> score<span style="color: #008080;">;</span>        <span style="color: #666666;">// Nota</span><br/>
 <span style="color: #008000;">}</span> Student<span style="color: #008080;">;</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// ===== Escribir estructura en el archivo =====</span><br/>
-    Student s <span style="color: #000080;">=</span> <span style="color: #008000;">{</span><span style="color: #0000dd;">101</span>, <span style="color: #a11;">"Alice"</span>, <span style="color:#800080;">95.5f</span><span style="color: #008000;">}</span><span style="color: #008080;">;</span>  <span style="color: #666666;">// Inicializar datos</span><br/>
+    Student s <span style="color: #000080;">=</span> <span style="color: #008000;">{</span><span style="color: #0000DD;">101</span>, <span style="color: #a11;">"Alice"</span>, <span style="color:#800080;">95.5f</span><span style="color: #008000;">}</span><span style="color: #008080;">;</span>  <span style="color: #666666;">// Inicializar datos</span><br/>
     <span style="color: #05a;">FILE</span> <span style="color: #000040;">*</span>fp <span style="color: #000080;">=</span> <span style="color: #05a;">fopen</span><span style="color: #008000;">(</span><span style="color: #a11;">"student.bin"</span>, <span style="color: #a11;">"wb"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>fp <span style="color: #000080;">==</span> <span style="color: #05a;">NULL</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">perror</span><span style="color: #008000;">(</span><span style="color: #a11;">"Error al abrir el archivo"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
     <span style="color: #666666;">// Escribir toda la estructura como un bloque de datos</span><br/>
-    <span style="color: #05a;">size_t</span> written <span style="color: #000080;">=</span> <span style="color: #05a;">fwrite</span><span style="color: #008000;">(</span><span style="color: #000040;">&amp;</span>s, <span style="color: #05a;">sizeof</span><span style="color: #008000;">(</span>Student<span style="color: #008000;">)</span>, <span style="color: #0000dd;">1</span>, fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>written <span style="color: #000040;">!</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+    <span style="color: #05a;">size_t</span> written <span style="color: #000080;">=</span> <span style="color: #05a;">fwrite</span><span style="color: #008000;">(</span><span style="color: #000040;">&amp;</span>s, <span style="color: #05a;">sizeof</span><span style="color: #008000;">(</span>Student<span style="color: #008000;">)</span>, <span style="color: #0000DD;">1</span>, fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>written <span style="color: #000040;">!</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">printf</span><span style="color: #008000;">(</span><span style="color: #a11;">"Error de escritura"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
     <span style="color: #05a;">fclose</span><span style="color: #008000;">(</span>fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
@@ -572,18 +572,18 @@ size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
     fp <span style="color: #000080;">=</span> <span style="color: #05a;">fopen</span><span style="color: #008000;">(</span><span style="color: #a11;">"student.bin"</span>, <span style="color: #a11;">"rb"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>fp <span style="color: #000080;">==</span> <span style="color: #05a;">NULL</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">perror</span><span style="color: #008000;">(</span><span style="color: #a11;">"Error al abrir el archivo"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
     Student loaded<span style="color: #008080;">;</span>  <span style="color: #666666;">// Sin inicializar, será rellenado por fread</span><br/>
-    <span style="color: #05a;">size_t</span> read_count <span style="color: #000080;">=</span> <span style="color: #05a;">fread</span><span style="color: #008000;">(</span><span style="color: #000040;">&amp;</span>loaded, <span style="color: #05a;">sizeof</span><span style="color: #008000;">(</span>Student<span style="color: #008000;">)</span>, <span style="color: #0000dd;">1</span>, fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>read_count <span style="color: #000040;">!</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+    <span style="color: #05a;">size_t</span> read_count <span style="color: #000080;">=</span> <span style="color: #05a;">fread</span><span style="color: #008000;">(</span><span style="color: #000040;">&amp;</span>loaded, <span style="color: #05a;">sizeof</span><span style="color: #008000;">(</span>Student<span style="color: #008000;">)</span>, <span style="color: #0000DD;">1</span>, fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>read_count <span style="color: #000040;">!</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">printf</span><span style="color: #008000;">(</span><span style="color: #a11;">"Error de lectura o fin de archivo"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
         <span style="color: #05a;">fclose</span><span style="color: #008000;">(</span>fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-        <span style="color: #05a;">return</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">return</span> <span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
     <span style="color: #05a;">printf</span><span style="color: #008000;">(</span><span style="color: #a11;">"ID: %d, Nombre: %s, Nota: %.1f"<span style="color: #000099; font-weight: bold;">\n</span>"</span>, loaded.<span style="color: #007788;">id</span>, loaded.<span style="color: #007788;">name</span>, loaded.<span style="color: #007788;">score</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">fclose</span><span style="color: #008000;">(</span>fp<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div>
 </div>
@@ -991,7 +991,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1036,7 +1036,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1155,7 +1155,7 @@ int main()
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic aquí para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic aquí para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1374,7 +1374,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

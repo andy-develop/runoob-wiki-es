@@ -388,7 +388,7 @@ jobs</span><span style="font-weight: bold; color: brown;">: </span>         
 </tbody>
 </table>
 <h3>2. Filtrar por rama o ruta específica</h3>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 on:<span style="color: #007F45;"><br/>
   push</span>:<span style="color: #007F45;"><br/>
     branches</span><span style="font-weight: bold; color: brown;">:<br/>
@@ -410,7 +410,7 @@ on:<span style="color: #007F45;"><br/>
 </div></div>
 <h3>3. Activación programada (schedule)</h3>
 <p>Usa una expresión Cron estándar para definir el tiempo de ejecución; la zona horaria es UTC (hora de Pekín = UTC+8, requiere conversión):</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 on:<span style="color: #007F45;"><br/>
   schedule</span><span style="font-weight: bold; color: brown;">:<br/>
 </span>    <span style="color: blue;"># Formato Cron: minuto hora día del mes mes día de la semana</span><span style="color: green;"><br/>
@@ -426,7 +426,7 @@ on:<span style="color: #007F45;"><br/>
 </div></div>
 <h3>4. Activación manual (workflow_dispatch)</h3>
 <p><code>workflow_dispatch</code>Permite hacer clic manualmente en un botón en la pestaña Actions de la página de GitHub para iniciar el Workflow, y también se pueden definir parámetros de entrada:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 on:<span style="color: #007F45;"><br/>
   workflow_dispatch</span>:<span style="color: #007F45;"><br/>
     inputs</span>:<span style="color: green;"><br/>
@@ -456,7 +456,7 @@ jobs</span>:<span style="color: #007F45;"><br/>
 <hr/>
 <h2>Explicación detallada de Jobs y Steps</h2>
 <h3>1. Estructura básica de un Job</h3>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 jobs:<span style="color: green;"><br/>
   build</span><span style="font-weight: bold; color: brown;">: </span>                         <span style="color: blue;"># ID del Job, debe ser único dentro del mismo Workflow</span><span style="color: green;"><br/>
     name</span><span style="font-weight: bold; color: brown;">: </span>Construir proyecto<span style="color: blue;"># Nombre para mostrar del Job (opcional)</span><span style="color: green;"><br/>
@@ -520,7 +520,7 @@ jobs:<span style="color: green;"><br/>
 </table>
 <h3>3. Dependencias entre Jobs (needs)</h3>
 <p>De forma predeterminada, varios Jobs se ejecutan en paralelo. Usar<code>needs</code>permite establecer el orden de ejecución de los Jobs, formando dependencias en serie:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 jobs:<span style="color: green;"><br/>
   test</span><span style="font-weight: bold; color: brown;">: </span>                          <span style="color: blue;"># Paso 1: ejecutar pruebas</span><span style="color: green;"><br/>
     runs-on</span><span style="font-weight: bold; color: brown;">: </span>ubuntu-latest<span style="color: #007F45;"><br/>
@@ -546,7 +546,7 @@ jobs:<span style="color: green;"><br/>
 </div></div>
 <h3>4. Ejecución condicional (if)</h3>
 <p>Mediante<code>if</code>se puede controlar si un Job o Step se ejecuta; se usa a menudo para distinguir ramas o comprobar si el paso anterior fue exitoso:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 jobs:<span style="color: #007F45;"><br/>
   deploy</span>:<span style="color: green;"><br/>
     runs-on</span><span style="font-weight: bold; color: brown;">: </span>ubuntu-latest<br/>
@@ -599,7 +599,7 @@ jobs</span>:<span style="color: #007F45;"><br/>
 </div></div>
 <h3>2. Variables integradas de GitHub (contexto github)</h3>
 <p>GitHub Actions proporciona un conjunto de variables de contexto integradas que se pueden referenciar en cualquier posición con la<code>${{ }}</code>sintaxis:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps:<span style="color: green;"><br/>
   - name</span><span style="font-weight: bold; color: brown;">: </span>Imprimir variables integradas comunes<span style="color: green;"><br/>
     run</span><span style="font-weight: bold; color: brown;">: |<br/>
@@ -608,7 +608,7 @@ steps:<span style="color: green;"><br/>
 <h3>3. Secrets (gestión de información sensible)</h3>
 <p>Información sensible como contraseñas, claves de API o direcciones de servidor<strong>no se puede escribir directamente en el archivo yml</strong>(porque el código es público); debe almacenarse en los Secrets del repositorio de GitHub.</p>
 <p>Pasos de configuración: entrar en la página del repositorio →<strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong>→ hacer clic en<strong>New repository secret</strong>, rellenar el nombre y el valor y guardar.</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps<span style="font-weight: bold; color: brown;">:<br/>
 </span>  <span style="color: blue;"># En un Step, referenciar el Secret configurado mediante ${{ secrets.nombre_de_la_clave }}</span><br/>
   <span style="color: blue;"># El valor del Secret se oculta automáticamente con *** en los registros, no se filtrará</span><span style="color: green;"><br/>
@@ -637,7 +637,7 @@ steps<span style="font-weight: bold; color: brown;">:<br/>
 <p>GitHub oficial y la comunidad proporcionan una gran cantidad de Actions listas para usar, a través de<code>uses: action名称@版本</code>referenciarlas, se puede evitar repetir la escritura de operaciones comunes.</p>
 <h3>1. actions/checkout (obtener el código)</h3>
 <p>Casi todos los primeros pasos de un Workflow consisten en obtener el código del repositorio, usando el oficial.<code>actions/checkout</code>：</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps<span style="font-weight: bold; color: brown;">:<br/>
 </span>  <span style="color: blue;"># Uso más básico: obtener el código más reciente de la rama actual al directorio de trabajo.</span><span style="color: green;"><br/>
   - uses</span><span style="font-weight: bold; color: brown;">: </span>actions/checkout@v4<br/>
@@ -651,7 +651,7 @@ steps<span style="font-weight: bold; color: brown;">:<br/>
       submodules</span><span style="font-weight: bold; color: brown;">: </span>true          <span style="color: blue;"># También inicializa y actualiza los submódulos de git (submodule).</span><br/>
 </div></div>
 <h3>2. actions/setup-node (configurar el entorno de Node.js)</h3>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps:<span style="color: green;"><br/>
   - uses</span><span style="font-weight: bold; color: brown;">: </span>actions/checkout@v4<br/>
 <span style="color: green;"><br/>
@@ -666,7 +666,7 @@ steps:<span style="color: green;"><br/>
   - run</span><span style="font-weight: bold; color: brown;">: </span>npm test<br/>
 </div></div>
 <h3>3. actions/setup-python (configurar el entorno de Python)</h3>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps:<span style="color: green;"><br/>
   - uses</span><span style="font-weight: bold; color: brown;">: </span>actions/checkout@v4<br/>
 <span style="color: green;"><br/>
@@ -683,7 +683,7 @@ steps:<span style="color: green;"><br/>
 </div></div>
 <h3>4. actions/cache (acelerar la compilación almacenando en caché las dependencias)</h3>
 <p>Cada vez que se ejecuta un Workflow, volver a descargar las dependencias es lento. Usar la Action cache permite almacenar en caché las dependencias, y en la próxima ejecución usar la caché directamente, reduciendo significativamente el tiempo de compilación:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps:<span style="color: green;"><br/>
   - uses</span><span style="font-weight: bold; color: brown;">: </span>actions/checkout@v4<br/>
 <span style="color: green;"><br/>
@@ -709,7 +709,7 @@ steps:<span style="color: green;"><br/>
 </div></div>
 <h3>5. actions/upload-artifact / download-artifact (transferir archivos entre Jobs)</h3>
 <p>Los diferentes Jobs se ejecutan en máquinas virtuales independientes, los archivos no se pueden compartir directamente. Mediante artifact (producto) se pueden transferir los archivos de salida de un Job a otro:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 jobs:<span style="color: #007F45;"><br/>
   build</span>:<span style="color: green;"><br/>
     runs-on</span><span style="font-weight: bold; color: brown;">: </span>ubuntu-latest<span style="color: #007F45;"><br/>
@@ -740,7 +740,7 @@ jobs:<span style="color: #007F45;"><br/>
 <hr/>
 <h2>Matriz de compilación (Matrix)</h2>
 <p>La compilación en matriz te permite usar una configuración de Job para ejecutar en paralelo en múltiples entornos, comúnmente usada para pruebas de compatibilidad entre versiones y sistemas operativos:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 jobs:<span style="color: #007F45;"><br/>
   test</span>:<span style="color: green;"><br/>
     name</span><span style="font-weight: bold; color: brown;">: </span>Probar Node $<span class="br0">{</span><span class="br0">{</span> matrix.node-version <span class="br0">}</span><span class="br0">}</span> on $<span class="br0">{</span><span class="br0">{</span> matrix.os <span class="br0">}</span><span class="br0">}</span><span style="color: green;"><br/>
@@ -983,7 +983,7 @@ jobs</span>:<span style="color: #007F45;"><br/>
 <li><code>ACTIONS_STEP_DEBUG</code>: Habilitar el registro de depuración detallado de cada Step</li>
 </ul>
 <h3>2. Imprimir información de contexto para ayudar a diagnosticar problemas</h3>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps:<span style="color: green;"><br/>
   - name</span><span style="font-weight: bold; color: brown;">: </span>Imprimir toda la información de contexto (para depuración, añadir al resolver problemas, eliminar después de resolverlos)<span style="color: green;"><br/>
     run</span><span style="font-weight: bold; color: brown;">: |<br/>
@@ -1029,7 +1029,7 @@ permissions</span>:<span style="color: green;"><br/>
 <pre>git commit -m "自动格式化代码 [skip ci]"</pre>
 <p><strong>3. Escape de caracteres especiales en YAML</strong></p>
 <p>在 <code>run</code>En el comando Shell del campo, al usar<code>${{ }}</code>expresiones, si la expresión contiene dos puntos (<code>:</code>) y otros caracteres especiales de YAML, es necesario encerrar todo el valor entre comillas, o bien asignarlo primero a una variable de entorno y luego usarla:</p>
-<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #007F45;"&gt;<br/>
+<div class="example"><h2 class="example">Ejemplo</h2><div class="example_code">span style="color: #0053A6;"&gt;<br/>
 steps<span style="font-weight: bold; color: brown;">:<br/>
 </span>  <span style="color: blue;"># No recomendado: insertar la expresión ${{ }} directamente en comandos complejos puede causar errores de análisis de YAML</span><span style="color: green;"><br/>
   - run</span><span style="font-weight: bold; color: brown;">: </span>echo $<span class="br0">{</span><span class="br0">{</span> github.event.pull_request.title <span class="br0">}</span><span class="br0">}</span><br/>
@@ -1074,7 +1074,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1119,7 +1119,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1158,7 +1158,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1377,7 +1377,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

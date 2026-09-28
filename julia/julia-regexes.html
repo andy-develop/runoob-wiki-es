@@ -299,16 +299,16 @@ m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</s
 </div></div><p>Si la expresión regular coincide, el valor devuelto por match es un objeto RegexMatch. Estos objetos registran cómo coincide la expresión, incluyendo la subcadena que coincide con el patrón y cualquier subcadena que pueda haber sido capturada. El ejemplo anterior solo capturó la parte de la subcadena que coincidió, pero quizás queremos capturar cualquier texto no vacío después del carácter de comentario. Podemos hacerlo de la siguiente manera:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"^<span style="color: #9F79EE">\s</span>*(?:#<span style="color: #9F79EE">\s</span>*(.*?)<span style="color: #9F79EE">\s</span>*$|$)"</span><span style="color: #5D478B;">,</span> <span style="color: #FF00FF;">"# a comment "</span><span style="color: #9F79EE;">)</span><br/>
-RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"# a comment "</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a comment"</span><span style="color: #9F79EE;">)</span><br/>
+RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"# a comment "</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a comment"</span><span style="color: #9F79EE;">)</span><br/>
 </div></div><p>Al llamar a match, puedes optar por especificar el índice desde el cual comenzar la búsqueda. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span><br/>
+julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span><br/>
 RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"1"</span><span style="color: #9F79EE;">)</span><br/>
 <br/>
-julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #ff0055;">6</span><span style="color: #9F79EE;">)</span><br/>
+julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #FF0055;">6</span><span style="color: #9F79EE;">)</span><br/>
 RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"2"</span><span style="color: #9F79EE;">)</span><br/>
 <br/>
-julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #ff0055;">11</span><span style="color: #9F79EE;">)</span><br/>
+julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"[0-9]"</span><span style="color: #5D478B;">,</span><span style="color: #FF00FF;">"aaaa1aaaa2aaaa3"</span><span style="color: #5D478B;">,</span><span style="color: #FF0055;">11</span><span style="color: #9F79EE;">)</span><br/>
 RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"3"</span><span style="color: #9F79EE;">)</span><br/>
 </div></div>
 <p>Puedes extraer la siguiente información del objeto RegexMatch:</p>
@@ -316,46 +316,46 @@ RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"3
 <p>Cuando una captura no coincide,<span class="marked">m.captures</span>en ese lugar ya no se incluye una subcadena, sino que no se incluye nada; además,<span class="marked">m.offsets</span>el desplazamiento es 0 (recuerda que los índices de Julia comienzan en 1, por lo que un desplazamiento de cero en una cadena no es válido). A continuación se muestran dos ejemplos un poco forzados:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"(a|b)(c)?(d)"</span><span style="color: #5D478B;">,</span> <span style="color: #FF00FF;">"acd"</span><span style="color: #9F79EE;">)</span><br/>
-RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"acd"</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a"</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">2</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"c"</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">3</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"d"</span><span style="color: #9F79EE;">)</span><br/>
+RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"acd"</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a"</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">2</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"c"</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">3</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"d"</span><span style="color: #9F79EE;">)</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.match<br/>
 <span style="color: #FF00FF;">"acd"</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.captures<br/>
-<span style="color: #ff0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">Union</span><span style="color: #9F79EE;">{</span>Nothing<span style="color: #5D478B;">,</span> SubString<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">String</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
+<span style="color: #FF0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">Union</span><span style="color: #9F79EE;">{</span>Nothing<span style="color: #5D478B;">,</span> SubString<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">String</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
  <span style="color: #FF00FF;">"a"</span><br/>
  <span style="color: #FF00FF;">"c"</span><br/>
  <span style="color: #FF00FF;">"d"</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.offset<br/>
-<span style="color: #ff0055;">1</span><br/>
+<span style="color: #FF0055;">1</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.offsets<br/>
-<span style="color: #ff0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span>Int64<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
- <span style="color: #ff0055;">1</span><br/>
- <span style="color: #ff0055;">2</span><br/>
- <span style="color: #ff0055;">3</span><br/>
+<span style="color: #FF0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span>Int64<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
+ <span style="color: #FF0055;">1</span><br/>
+ <span style="color: #FF0055;">2</span><br/>
+ <span style="color: #FF0055;">3</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m <span style="color: #5D478B;">=</span> match<span style="color: #9F79EE;">(</span>r<span style="color: #FF00FF;">"(a|b)(c)?(d)"</span><span style="color: #5D478B;">,</span> <span style="color: #FF00FF;">"ad"</span><span style="color: #9F79EE;">)</span><br/>
-RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"ad"</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a"</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">2</span><span style="color: #5D478B;">=</span>nothing<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">3</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"d"</span><span style="color: #9F79EE;">)</span><br/>
+RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"ad"</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"a"</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">2</span><span style="color: #5D478B;">=</span>nothing<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">3</span><span style="color: #5D478B;">=</span><span style="color: #FF00FF;">"d"</span><span style="color: #9F79EE;">)</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.match<br/>
 <span style="color: #FF00FF;">"ad"</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.captures<br/>
-<span style="color: #ff0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">Union</span><span style="color: #9F79EE;">{</span>Nothing<span style="color: #5D478B;">,</span> SubString<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">String</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
+<span style="color: #FF0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">Union</span><span style="color: #9F79EE;">{</span>Nothing<span style="color: #5D478B;">,</span> SubString<span style="color: #9F79EE;">{</span><span style="color: #A52A2A; font-weight: bold;">String</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
  <span style="color: #FF00FF;">"a"</span><br/>
  nothing<br/>
  <span style="color: #FF00FF;">"d"</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.offset<br/>
-<span style="color: #ff0055;">1</span><br/>
+<span style="color: #FF0055;">1</span><br/>
 <br/>
 julia<span style="color: #5D478B;">&gt;</span> m.offsets<br/>
-<span style="color: #ff0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span>Int64<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
- <span style="color: #ff0055;">1</span><br/>
- <span style="color: #ff0055;">0</span><br/>
- <span style="color: #ff0055;">2</span><br/>
+<span style="color: #FF0055;">3</span><span style="color: #5D478B;">-</span>element Vector<span style="color: #9F79EE;">{</span>Int64<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">:</span><br/>
+ <span style="color: #FF0055;">1</span><br/>
+ <span style="color: #FF0055;">0</span><br/>
+ <span style="color: #FF0055;">2</span><br/>
 </div></div><p>Es conveniente que las capturas se devuelvan como un array, para poder vincularlas a variables locales mediante la sintaxis de desestructuración. Para mayor comodidad, el objeto RegexMatch implementa un método iterador que delega en el campo captures, por lo que puedes desestructurar directamente el objeto de coincidencia:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 julia<span style="color: #5D478B;">&gt;</span> first<span style="color: #5D478B;">,</span> second<span style="color: #5D478B;">,</span> third <span style="color: #5D478B;">=</span> m<span style="color: #5D478B;">;</span> first<br/>
@@ -368,7 +368,7 @@ RegexMatch<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"1
 julia<span style="color: #5D478B;">&gt;</span> m<span style="color: #9F79EE;">[</span><span style="color: #5D478B;">:</span>minute<span style="color: #9F79EE;">]</span><br/>
 <span style="color: #FF00FF;">"45"</span><br/>
 <br/>
-julia<span style="color: #5D478B;">&gt;</span> m<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">]</span><br/>
+julia<span style="color: #5D478B;">&gt;</span> m<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">]</span><br/>
 <span style="color: #FF00FF;">"45"</span><br/>
 </div></div>
 <p>Al usar replace, se puede hacer referencia a las capturas en la cadena de reemplazo utilizando \n para referirse al enésimo grupo de captura y añadiendo el prefijo s a la cadena de reemplazo. El grupo de captura 0 se refiere a todo el objeto de coincidencia. En el reemplazo se puede usar \g<groupname>para hacer referencia a grupos de captura con nombre. Por ejemplo:</groupname></p>
@@ -412,7 +412,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -457,7 +457,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -496,7 +496,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -715,7 +715,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

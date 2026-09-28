@@ -99,11 +99,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Por ejemplo, sobrescribir el parámetro MASK de un módulo ram cuyas líneas de dirección y datos de un solo puerto tienen ambas 4 bits de ancho:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #00008B; font-style: italic;">//instantiation</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram_4x4.MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">7</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram_4x4.MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">7</span> <span style="color: #5D478B;">;</span><br/>
 ram_4x4    u_ram_4x4<br/>
     <span style="color: #9F79EE;">(</span><br/>
         .CLK    <span style="color: #9F79EE;">(</span>clk<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
-        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
+        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .D      <span style="color: #9F79EE;">(</span>d<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .EN     <span style="color: #9F79EE;">(</span>en<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .WR     <span style="color: #9F79EE;">(</span>wr<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
@@ -114,15 +114,15 @@ ram_4x4    u_ram_4x4<br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span>  ram_4x4<br/>
     <span style="color: #9F79EE;">(</span><br/>
      <span style="color: #A52A2A; font-weight: bold;">input</span>               CLK <span style="color: #5D478B;">,</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>       A <span style="color: #5D478B;">,</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>       D <span style="color: #5D478B;">,</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>       A <span style="color: #5D478B;">,</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>       D <span style="color: #5D478B;">,</span><br/>
      <span style="color: #A52A2A; font-weight: bold;">input</span>               EN <span style="color: #5D478B;">,</span><br/>
      <span style="color: #A52A2A; font-weight: bold;">input</span>               WR <span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>  Q    <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>  Q    <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">parameter</span>        MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">parameter</span>        MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span> <span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>     mem <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>     mem <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> CLK<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>EN <span style="color: #5D478B;">&amp;&amp;</span> WR<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             mem<span style="color: #9F79EE;">[</span>A<span style="color: #9F79EE;">]</span>  <span style="color: #5D478B;">&lt;=</span> D <span style="color: #5D478B;">&amp;</span> MASK<span style="color: #5D478B;">;</span><br/>
@@ -136,51 +136,51 @@ ram_4x4    u_ram_4x4<br/>
 </div></div>
 <p>Para realizar una simulación simple de esto, el testbench se escribe de la siguiente manera:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    DW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">parameter</span>    DW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>                  clk <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>           a <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>         d <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>           a <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>         d <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>                  en <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>                  wr <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>        q <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>        q <span style="color: #5D478B;">;</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//clock generating</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">15</span> <span style="color: #5D478B;">;</span>     clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">15</span> <span style="color: #5D478B;">;</span>     clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">15</span> <span style="color: #5D478B;">;</span>     clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">15</span> <span style="color: #5D478B;">;</span>     clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        a         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
-        d         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2</span> <span style="color: #5D478B;">;</span><br/>
+        a         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+        d         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2</span> <span style="color: #5D478B;">;</span><br/>
         en        <span style="color: #5D478B;">=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
         wr        <span style="color: #5D478B;">=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">repeat</span><span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">repeat</span><span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
-            en     <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span><span style="color: #5D478B;">;</span><br/>
-            a      <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-            wr     <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//write command</span><br/>
-            d      <span style="color: #5D478B;">=</span> d <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+            en     <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span><span style="color: #5D478B;">;</span><br/>
+            a      <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+            wr     <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//write command</span><br/>
+            d      <span style="color: #5D478B;">=</span> d <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-        a         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">repeat</span><span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        a         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">repeat</span><span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
-            a      <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-            wr     <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//read command</span><br/>
+            a      <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+            wr     <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//read command</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span> <span style="color: #00008B; font-style: italic;">// initial begin</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//instantiation</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram_4x4.MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">7</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram_4x4.MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">7</span> <span style="color: #5D478B;">;</span><br/>
     ram_4x4    u_ram_4x4<br/>
     <span style="color: #9F79EE;">(</span><br/>
         .CLK    <span style="color: #9F79EE;">(</span>clk<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
-        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
+        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .D      <span style="color: #9F79EE;">(</span>d<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .EN     <span style="color: #9F79EE;">(</span>en<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .WR     <span style="color: #9F79EE;">(</span>wr<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
@@ -190,8 +190,8 @@ ram_4x4    u_ram_4x4<br/>
     <span style="color: #00008B; font-style: italic;">//stop simulation</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">100</span><span style="color: #5D478B;">;</span><br/>
-            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">1000</span><span style="color: #9F79EE;">)</span>  <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">100</span><span style="color: #5D478B;">;</span><br/>
+            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">1000</span><span style="color: #9F79EE;">)</span>  <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
@@ -202,11 +202,11 @@ ram_4x4    u_ram_4x4<br/>
 <h3>Instanciación de módulo con parámetros</h3><p>El segundo método consiste en escribir los nuevos valores de los parámetros en la sentencia de instanciación del módulo al instanciarlo, para así sobrescribir los valores de los parámetros del módulo original.</p>
 <p>Por ejemplo, realizar una instanciación de módulo con parámetros en un módulo ram cuyos anchos de dirección y datos son ambos variables:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.AW<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span> .DW<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span><br/>
+ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.AW<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span> .DW<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span><br/>
     u_ram<br/>
     <span style="color: #9F79EE;">(</span><br/>
         .CLK    <span style="color: #9F79EE;">(</span>clk<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
-        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
+        .A      <span style="color: #9F79EE;">(</span>a<span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .D      <span style="color: #9F79EE;">(</span>d<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .EN     <span style="color: #9F79EE;">(</span>en<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span><br/>
         .WR     <span style="color: #9F79EE;">(</span>wr<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
@@ -216,18 +216,18 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 <p>El modelo de ram es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span>  ram<br/>
-    <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>  <span style="color: #A52A2A; font-weight: bold;">parameter</span>       AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2</span> <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">parameter</span>       DW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span> <span style="color: #9F79EE;">)</span><br/>
+    <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>  <span style="color: #A52A2A; font-weight: bold;">parameter</span>       AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2</span> <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">parameter</span>       DW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span> <span style="color: #9F79EE;">)</span><br/>
     <span style="color: #9F79EE;">(</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   CLK <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>          A <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>          D <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>          A <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>          D <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   EN <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   WR <span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>     Q<br/>
+        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>     Q<br/>
      <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>         mem <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span>AW<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>         mem <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span>AW<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> CLK<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>EN <span style="color: #5D478B;">&amp;&amp;</span> WR<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             mem<span style="color: #9F79EE;">[</span>A<span style="color: #9F79EE;">]</span>  <span style="color: #5D478B;">&lt;=</span> D <span style="color: #5D478B;">;</span><br/>
@@ -245,32 +245,32 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 <pre>ram #(4, 4)   u_ram (......) ;</pre>
 <p>(2) Por supuesto, con defparam también se pueden sobrescribir los parámetros declarados en la declaración de puertos del módulo, y con la instanciación parametrizada también se pueden sobrescribir los parámetros declarados en el cuerpo del módulo. Por ejemplo, la instanciación de u_ram y u_ram_4x4 puede describirse respectivamente como:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.DW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.DW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
 ram   u_ram<span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-ram_4x4  <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.MASK<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">7</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span>    u_ram_4x4<span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+ram_4x4  <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.MASK<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">7</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span>    u_ram_4x4<span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p>(3) ¿Se pueden mezclar estos dos métodos de sobrescritura de parámetros? ¡Por supuesto que sí! El requisito es que todos los parámetros estén declarados en la declaración de puertos del módulo o que todos los parámetros estén declarados en el cuerpo del módulo. Por ejemplo, la declaración de u_ram también se puede expresar como (los parámetros en el cuerpo del módulo se pueden verificar mediante experimentos propios):</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.DW<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span> u_ram <span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//solo a alguien tan aburrido como yo se le ocurriría experimentar con esta forma de escribir</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.DW<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span> u_ram <span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//solo a alguien tan aburrido como yo se le ocurriría experimentar con esta forma de escribir</span><br/>
 </div></div>
 <p>(4) ¿Y si un módulo tiene tanto parámetros declarados en la declaración de puertos del módulo como parámetros declarados en el cuerpo del módulo? ¿Se pueden sobrescribir ambos tipos al mismo tiempo? Por ejemplo, agregue el parámetro MASK al módulo ram, y el modelo es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span>  ram<br/>
-    <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>  <span style="color: #A52A2A; font-weight: bold;">parameter</span>       AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2</span> <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">parameter</span>       DW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span> <span style="color: #9F79EE;">)</span><br/>
+    <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>  <span style="color: #A52A2A; font-weight: bold;">parameter</span>       AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2</span> <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">parameter</span>       DW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span> <span style="color: #9F79EE;">)</span><br/>
     <span style="color: #9F79EE;">(</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   CLK <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>          A <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>          D <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>AW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>          A <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>          D <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   EN <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   WR <span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//1 for write and 0 for read</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>     Q    <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>     Q    <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">parameter</span>            MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">parameter</span>            MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span> <span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>         mem <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span>AW<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span>DW<span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>         mem <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">:</span><span style="color: #9F79EE;">(</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">&lt;&lt;</span>AW<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> CLK<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>EN <span style="color: #5D478B;">&amp;&amp;</span> WR<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             mem<span style="color: #9F79EE;">[</span>A<span style="color: #9F79EE;">]</span>  <span style="color: #5D478B;">&lt;=</span> D <span style="color: #5D478B;">;</span><br/>
@@ -284,14 +284,14 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 </div></div><p>En este momento, si se usa defparam para sobrescribir el valor del parámetro MASK, la compilación informa un Error:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #00008B; font-style: italic;">//Se informa Error cuando todos usan defparam</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.DW <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">7</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.AW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.DW <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">7</span> <span style="color: #5D478B;">;</span><br/>
 ram   u_ram  <span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
  <br/>
 <span style="color: #00008B; font-style: italic;">//También se informa Error al sobrescribir parámetros en el cuerpo del módulo con defparam</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.MASK <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">7</span> <span style="color: #5D478B;">;</span><br/>
-ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.AW<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span> .DW<span style="color: #9F79EE;">(</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span>   u_ram <span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">defparam</span>     u_ram.MASK <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">7</span> <span style="color: #5D478B;">;</span><br/>
+ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>.AW<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">,</span> .DW<span style="color: #9F79EE;">(</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">)</span>   u_ram <span style="color: #9F79EE;">(</span>......<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p>¡¡¡Aquí viene el punto clave!!! Si usa el método de instanciación de módulo con parámetros para sobrescribir el valor del parámetro MASK, la compilación no informará error, y MASK también se sobrescribirá correctamente.</p>
 <pre>ram #(.AW(4), .DW(4), .MASK(7)) u_ram (......);</pre><p>Una posible explicación es que, a los ojos del compilador, si existen parámetros en la declaración de puertos del módulo, entonces los parámetros en el cuerpo se consideran de tipo localparam, y el uso de defparam no podrá sobrescribir los parámetros declarados en el cuerpo del módulo.</p><p>También puede estar relacionado con el compilador, y puedes experimentar en otros compiladores también.</p>
@@ -325,7 +325,7 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -370,7 +370,7 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -409,7 +409,7 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -620,7 +620,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

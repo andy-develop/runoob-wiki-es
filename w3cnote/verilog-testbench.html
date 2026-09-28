@@ -106,23 +106,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #9F79EE;">(</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>           clk <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>           rstn <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>     din <span style="color: #5D478B;">,</span>          <span style="color: #00008B; font-style: italic;">//data in</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">input</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>     din <span style="color: #5D478B;">,</span>          <span style="color: #00008B; font-style: italic;">//data in</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>           din_en <span style="color: #5D478B;">,</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    dout <span style="color: #5D478B;">,</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    dout <span style="color: #5D478B;">,</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">output</span>          dout_en        <span style="color: #00008B; font-style: italic;">//data out</span><br/>
      <span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">// data shift and counter</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            data_r <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>            state_cnt <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            data_r <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>            state_cnt <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             state_cnt     <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
             data_r        <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>din_en<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-            state_cnt     <span style="color: #5D478B;">&lt;=</span> state_cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//conteo de datos</span><br/>
-            data_r        <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>data_r<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//concatenación de datos</span><br/>
+            state_cnt     <span style="color: #5D478B;">&lt;=</span> state_cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//conteo de datos</span><br/>
+            data_r        <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>data_r<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//concatenación de datos</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             state_cnt <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
@@ -137,11 +137,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             dout_en_r       <span style="color: #5D478B;">&lt;=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #00008B; font-style: italic;">//cuando el contador es 3 y se introduce el cuarto dato, se emite sincrónicamente la señal de habilitación de salida de datos</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>state_cnt <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">2'd3</span> <span style="color: #5D478B;">&amp;</span> din_en<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>  <br/>
-            dout_en_r       <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>state_cnt <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">2'd3</span> <span style="color: #5D478B;">&amp;</span> din_en<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>  <br/>
+            dout_en_r       <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-            dout_en_r       <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+            dout_en_r       <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #00008B; font-style: italic;">//aquí no se declara dout_en directamente como variable reg, sino que se le asigna valor mediante assign con registros relacionados</span><br/>
@@ -151,40 +151,40 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p>La descripción del testbench correspondiente es la siguiente, con declaraciones adicionales de lectura y escritura de archivos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ps</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ps</span><br/>
 <br/>
    <span style="color: #00008B; font-style: italic;">//============== (1) ==================</span><br/>
    <span style="color: #00008B; font-style: italic;">//signals declaration</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>          clk<span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>          rstn <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    din <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    din <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>          din_en <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   dout <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   dout <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">wire</span>         dout_en <span style="color: #5D478B;">;</span><br/>
 <br/>
     <span style="color: #00008B; font-style: italic;">//============== (2) ==================</span><br/>
     <span style="color: #00008B; font-style: italic;">//clock generating</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">real</span>         CYCLE_200MHz <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">5</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">real</span>         CYCLE_200MHz <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">5</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
-        clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
+        clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
+        clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
     <span style="color: #00008B; font-style: italic;">//============== (3) ==================</span><br/>
     <span style="color: #00008B; font-style: italic;">//reset generating</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        rstn      <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">8</span> rstn      <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+        rstn      <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">8</span> rstn      <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
     <span style="color: #00008B; font-style: italic;">//============== (4) ==================</span><br/>
     <span style="color: #00008B; font-style: italic;">//motivation</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">int</span>          fd_rd <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    data_in_temp <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//for self check</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">15</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   read_temp <span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">//8bit ascii data, 8bit \n</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    data_in_temp <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//for self check</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">15</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   read_temp <span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">//8bit ascii data, 8bit \n</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        din_en    <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//(4.1)</span><br/>
+        din_en    <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//(4.1)</span><br/>
         din       <span style="color: #5D478B;">=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
         open_file<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"../tb/data_in.dat"</span><span style="color: #5D478B;">,</span> <span style="color: #FF00FF;">"r"</span><span style="color: #5D478B;">,</span> fd_rd<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//(4.2)</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">wait</span> <span style="color: #9F79EE;">(</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//(4.3)</span><br/>
@@ -194,14 +194,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <span style="color: #A52A2A; font-weight: bold;">while</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span> <span style="color: #9932CC;">$feof</span><span style="color: #9F79EE;">(</span>fd_rd<span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>  <span style="color: #00008B; font-style: italic;">//(4.4)</span><br/>
             <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
             <span style="color: #9932CC;">$fread</span><span style="color: #9F79EE;">(</span>read_temp<span style="color: #5D478B;">,</span> fd_rd<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-            din    <span style="color: #5D478B;">=</span> read_temp<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
-            data_in_temp <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_in_temp<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
-            din_en <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+            din    <span style="color: #5D478B;">=</span> read_temp<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
+            data_in_temp <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_in_temp<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
+            din_en <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
         <span style="color: #00008B; font-style: italic;">//stop data</span><br/>
         <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//(4.5)</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">2</span> din_en <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">2</span> din_en <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
     <span style="color: #00008B; font-style: italic;">//open task</span><br/>
@@ -233,7 +233,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
     <span style="color: #00008B; font-style: italic;">//============== (6) ==================</span><br/>
     <span style="color: #00008B; font-style: italic;">//auto check</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span>  <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>           err_cnt <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span>  <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>           err_cnt <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">int</span>                  fd_wr <span style="color: #5D478B;">;</span><br/>
 <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
@@ -248,10 +248,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>dout_en<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>data_in_temp <span style="color: #5D478B;">!=</span> dout<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-                err_cnt <span style="color: #5D478B;">=</span> err_cnt <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+                err_cnt <span style="color: #5D478B;">=</span> err_cnt <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -259,8 +259,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #00008B; font-style: italic;">//============== (7) ==================</span><br/>
     <span style="color: #00008B; font-style: italic;">//simulation finish</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">100</span><span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">10000</span><span style="color: #9F79EE;">)</span>  <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">100</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">10000</span><span style="color: #9F79EE;">)</span>  <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>err_cnt<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
                 <span style="color: #9932CC;">$display</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"-------------------------------------"</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
                 <span style="color: #9932CC;">$display</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"Data process is OK!!!"</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
@@ -271,7 +271,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <span style="color: #9932CC;">$display</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"Error occurs in data process!!!"</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
                 <span style="color: #9932CC;">$display</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"-------------------------------------"</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
             <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -285,13 +285,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>2) Generación del reloj</strong></p>
 <p>Hay muchas formas de generar el reloj; por ejemplo, los dos métodos de generación siguientes también se pueden tomar como referencia.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">initial</span> clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk<span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">initial</span> clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk<span style="color: #5D478B;">;</span><br/>
 <br/>
 <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-    clk <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+    clk <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk<span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>CYCLE_200MHz<span style="color: #5D478B;">/</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> clk <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>clk<span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">end</span>       <br/>
 </div></div>
@@ -304,27 +304,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La señal data_in_temp es una integración posterior de la señal de datos de entrada; más adelante, el módulo de verificación la tomará como referencia para juzgar si la simulación es correcta y si el diseño del módulo es correcto.</p><ul><li>En (4.5) se elige detener los datos de entrada después de un retardo de 2 ciclos en el flanco ascendente del reloj, para que el módulo bajo prueba pueda muestrear normalmente la última señal de habilitación de datos y realizar la integración normal de los datos.</li></ul>
 <p>Cuando la cantidad de datos es relativamente pequeña, se puede utilizar la tarea del sistema $readmemh de Verilog para leer directamente datos hexadecimales línea por línea. Manteniendo sin cambios los datos y el formato del archivo data_in.dat, la parte de excitación puede describirse como:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    data_mem <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">39</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    data_in_temp <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//for self check</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    data_mem <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">39</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">7</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    data_in_temp <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//for self check</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">integer</span>      k1 <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        din_en    <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+        din_en    <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
         din       <span style="color: #5D478B;">=</span> 'b0 <span style="color: #5D478B;">;</span><br/>
         <span style="color: #9932CC;">$readmemh</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"../tb/data_in.dat"</span><span style="color: #5D478B;">,</span> data_mem<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">wait</span> <span style="color: #9F79EE;">(</span>rstn<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #5D478B;">#</span> CYCLE_200MHz <span style="color: #5D478B;">;</span><br/>
 <br/>
         <span style="color: #00008B; font-style: italic;">//read data from file</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">for</span><span style="color: #9F79EE;">(</span>k1<span style="color: #5D478B;">=</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">;</span> k1<span style="color: #5D478B;">&lt;</span><span style="color: #ff0055;">40</span><span style="color: #5D478B;">;</span> k1<span style="color: #5D478B;">=</span>k1<span style="color: #5D478B;">+</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span>  <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">for</span><span style="color: #9F79EE;">(</span>k1<span style="color: #5D478B;">=</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">;</span> k1<span style="color: #5D478B;">&lt;</span><span style="color: #FF0055;">40</span><span style="color: #5D478B;">;</span> k1<span style="color: #5D478B;">=</span>k1<span style="color: #5D478B;">+</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span>  <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">negedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
             din    <span style="color: #5D478B;">=</span> data_mem<span style="color: #9F79EE;">[</span>k1<span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">;</span><br/>
-            data_in_temp <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_in_temp<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
-            din_en <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+            data_in_temp <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_in_temp<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> din<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
+            din_en <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
         <span style="color: #00008B; font-style: italic;">//stop data</span><br/>
         <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">2</span> din_en <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">2</span> din_en <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
      <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 </div></div>
 <p><strong>5) Instanciación del módulo</strong></p><p>Aquí se utilizan las variables de señal declaradas al inicio del testbench para realizar la instanciación y conexión del módulo bajo prueba.</p>
@@ -363,7 +363,7 @@ fd = $fopen("&lt;name_of_file&gt;", "mode")</pre>
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -408,7 +408,7 @@ fd = $fopen("&lt;name_of_file&gt;", "mode")</pre>
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -447,7 +447,7 @@ fd = $fopen("&lt;name_of_file&gt;", "mode")</pre>
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -658,7 +658,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

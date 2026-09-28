@@ -405,29 +405,29 @@ runoob-flask-test/
 <span style="color: #555;">&lt;!DOCTYPE html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{{ username }} - RUNOOB<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{{ username }} - RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Página personal de {{ username }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Página personal de {{ username }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- Condición: si la lista posts está vacía, se muestra un mensaje --&gt;</span><br/>
     {% if posts %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes:<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes:<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
         <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">ul</span>&gt;</span><br/>
         <span style="color: #808080; font-style: italic;">&lt;!-- Recorre la lista posts con un bucle --&gt;</span><br/>
         {% for post in posts %}<br/>
             <span style="color: #808080; font-style: italic;">&lt;!-- loop.index es una variable integrada de Jinja2, se cuenta desde 1 --&gt;</span><br/>
-            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">li</span>&gt;</span>{{ loop.index }}. {{ post.title }} ({{ post.date }})<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">li</span>&gt;</span><br/>
+            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">li</span>&gt;</span>{{ loop.index }}. {{ post.title }} ({{ post.date }})<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">li</span>&gt;</span><br/>
         {% endfor %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">ul</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">ul</span>&gt;</span><br/>
     {% else %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>No hay artículos por ahora<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>No hay artículos por ahora<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     {% endif %}<br/>
 <br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- Usa el filtro: upper convierte el texto a mayúsculas --&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Nombre de usuario en mayúsculas: {{ username|upper }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Nombre de usuario en mayúsculas: {{ username|upper }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 </div>
 </div>
 <hr/>
@@ -508,29 +508,29 @@ runoob-flask-test/
 <span style="color: #555;">&lt;!DOCTYPE html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"utf-8"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Tutorial Flask de RUNOOB{% endblock %}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">rel</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"stylesheet"</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"{{ url_for('static', filename='style.css') }}"</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"utf-8"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Tutorial Flask de RUNOOB{% endblock %}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">rel</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"stylesheet"</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"{{ url_for('static', filename='style.css') }}"</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Tutorial Flask de RUNOOB<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Tutorial Flask de RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
         <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
-            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
-            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
+            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
+            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
 <br/>
     <span style="color: #170;">&lt;main&gt;</span><br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- block es una zona de marcador de posición; la plantilla hija puede rellenarla o sobrescribirla --&gt;</span><br/>
     {% block content %}{% endblock %}<br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>main&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>main&gt;</span><br/>
 <br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span><span style="color: #ddbb00;">&amp;copy;</span> 2026 RUNOOB.com<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span><span style="color: #DDBB00;">&amp;copy;</span> 2026 RUNOOB.com<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 </div>
 </div>
 <h3>Plantilla hija (hereda de la plantilla padre)</h3>
@@ -544,13 +544,13 @@ runoob-flask-test/
 <br/>
 <span style="color: #808080; font-style: italic;">&lt;!-- Rellena el bloque content de la plantilla padre --&gt;</span><br/>
 {% block content %}<br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Bienvenido a RUNOOB<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ greeting }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Bienvenido a RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ greeting }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
 <br/>
     {% if user %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Usuario actual: {{ user }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Usuario actual: {{ user }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     {% else %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/login"</span>&gt;</span>Inicia sesión primero<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/login"</span>&gt;</span>Inicia sesión primero<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     {% endif %}<br/>
 {% endblock %}<br/>
 </div>
@@ -621,11 +621,11 @@ runoob-flask-test/
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #808080; font-style: italic;">&lt;!-- Ruta de archivo: templates/_navbar.html (el guion bajo al inicio indica que es una plantilla parcial) --&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span> <span style="color: #00c;">style</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"background:#f0f0f0;padding:10px;"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/posts"</span>&gt;</span>Artículos<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span> <span style="color: #00c;">style</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"background:#f0f0f0;padding:10px;"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/posts"</span>&gt;</span>Artículos<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
 </div>
 </div>
 <div class="example">
@@ -634,14 +634,14 @@ runoob-flask-test/
 <span style="color: #808080; font-style: italic;">&lt;!-- Incluye la barra de navegación en cualquier plantilla --&gt;</span><br/>
 <span style="color: #555;">&lt;!DOCTYPE html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>Página<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>Página<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
     {% include "_navbar.html" %}<br/>
 <br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Contenido de la página<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Este es el contenido principal de la página.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Contenido de la página<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Este es el contenido principal de la página.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 </div>
 </div>
 <blockquote><p><span class="tag1">Mejores prácticas</span>: la herencia de plantillas (extends) se usa para la reutilización del diseño a nivel de página,<span class="marked">include</span>se usa para la reutilización de código a nivel de componentes. Los componentes reutilizables como la barra de navegación y la barra lateral son adecuados para usar include.</p></blockquote>
@@ -675,22 +675,22 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <br/>{% block title %}Blog RUNOOB{% endblock %}<br/>
 <br/>
 {% block content %}<br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
 <br/>
     {% if articles %}<br/>
         {% for article in articles %}<br/>
             <span style="color: #808080; font-style: italic;">&lt;!-- Agrega diferentes estilos según el número de visitas --&gt;</span><br/>
-            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"article"</span> <span style="color: #66cc66;">{</span>% if article.views &gt;</span> 1000 %}style="background:#fff3cd;"{% endif %}&gt;<br/>
-                <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
-                <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Autor: {{ article.author }} | Vistas: {{ article.views }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+            <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"article"</span> <span style="color: #66CC66;">{</span>% if article.views &gt;</span> 1000 %}style="background:#fff3cd;"{% endif %}&gt;<br/>
+                <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
+                <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Autor: {{ article.author }} | Vistas: {{ article.views }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
                 <span style="color: #808080; font-style: italic;">&lt;!-- Usar la variable loop para implementar la línea separadora --&gt;</span><br/>
                 {% if not loop.last %}<br/>
                     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">hr</span>&gt;</span><br/>
                 {% endif %}<br/>
-            <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+            <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
         {% endfor %}<br/>
     {% else %}<br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Por el momento no hay artículos, por favor vuelva más tarde.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Por el momento no hay artículos, por favor vuelva más tarde.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     {% endif %}<br/>
 {% endblock %}<br/>
 </div>
@@ -756,7 +756,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -801,7 +801,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -840,7 +840,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1059,7 +1059,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

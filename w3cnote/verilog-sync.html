@@ -104,12 +104,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-sync-2.png"/></p>
 <p>Si se requiere que la señal sig2 en el dominio clk2 dure solo un ciclo de reloj, entonces se debe realizar una detección de flanco ascendente en sig1.</p><p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">La descripción en Verilog del programa de detección de flanco ascendente entre señales síncronas es la siguiente.<span style="color: #5D478B;">&lt;/</span>p<span style="color: #5D478B;">&gt;</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    sig2_r <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    sig2_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk2 <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> sig2_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">2'b0</span> <span style="color: #5D478B;">;</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">else</span>       sig2_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>sig2_r<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> sig1<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> sig2_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">2'b0</span> <span style="color: #5D478B;">;</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">else</span>       sig2_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>sig2_r<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> sig1<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">assign</span> sig2 <span style="color: #5D478B;">=</span> sig2_r<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">&amp;&amp;</span> <span style="color: #5D478B;">!</span>sig2_r<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">assign</span> sig2 <span style="color: #5D478B;">=</span> sig2_r<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">&amp;&amp;</span> <span style="color: #5D478B;">!</span>sig2_r<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p>El resultado de la simulación se muestra en la siguiente figura:</p>
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-sync-3.png"/></p>
@@ -117,15 +117,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-sync-4.png"/></p>
 <p>Cuando la relación de frecuencias de los dos relojes es relativamente pequeña, se puede ensanchar la señal mediante el método de retardo de la señal en el dominio de reloj rápido;</p><p>Cuando la relación de frecuencias de los dos relojes difiere considerablemente, se puede utilizar un método de conteo en el dominio de reloj rápido para extender el tiempo efectivo de la señal de un solo bit.</p><p>El método de usar el retardo para ensanchar señales de pulso estrecho se describe en Verilog de la siguiente manera. Debido a que la relación de frecuencia entre clk1 y clk2 es 2, solo se necesita un retardo de 2 ciclos en el dominio de reloj clk2.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    sig11_r <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    sig11_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk1 <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> sig11_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">2'b0</span> <span style="color: #5D478B;">;</span><br/>
-     <span style="color: #A52A2A; font-weight: bold;">else</span>       sig11_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>sig11_r<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> sig11<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span> sig11_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">2'b0</span> <span style="color: #5D478B;">;</span><br/>
+     <span style="color: #A52A2A; font-weight: bold;">else</span>       sig11_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #9F79EE;">{</span>sig11_r<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> sig11<span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
    <span style="color: #A52A2A; font-weight: bold;">reg</span>          sig22_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk2 <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-      <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span>        sig22_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span>rstn<span style="color: #9F79EE;">)</span>        sig22_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">else</span>              sig22_r  <span style="color: #5D478B;">&lt;=</span> <span style="color: #5D478B;">|</span>sig11_r <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">assign</span> sig22 <span style="color: #5D478B;">=</span> sig22_r <span style="color: #5D478B;">;</span><br/>
@@ -166,7 +166,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -211,7 +211,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -250,7 +250,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -461,7 +461,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

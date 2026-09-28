@@ -281,39 +281,39 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: simple_proc.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; El ejemplo más simple de llamada a un procedimiento</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> print_message           <span style="color: #666666; font-style: italic;">; Llamar al procedimiento (empuja la dirección de la siguiente instrucción a la pila)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> print_message           <span style="color: #666666; font-style: italic;">; Llamar de nuevo</span><br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> print_message           <span style="color: #666666; font-style: italic;">; Llamar al procedimiento (empuja la dirección de la siguiente instrucción a la pila)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> print_message           <span style="color: #666666; font-style: italic;">; Llamar de nuevo</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Procedimiento: imprime un mensaje</span><br/>
 print_message<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                     <span style="color: #666666; font-style: italic;">; Guardar los registros que se van a modificar</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">edx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                     <span style="color: #666666; font-style: italic;">; Guardar los registros que se van a modificar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">edx</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">edx</span>                      <span style="color: #666666; font-style: italic;">; Restaurar los registros (en orden inverso)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">eax</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span>                          <span style="color: #666666; font-style: italic;">; Retornar al punto de llamada (extrae la dirección de retorno de la pila)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">edx</span>                      <span style="color: #666666; font-style: italic;">; Restaurar los registros (en orden inverso)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span>                          <span style="color: #666666; font-style: italic;">; Retornar al punto de llamada (extrae la dirección de retorno de la pila)</span><br/>
 </div>
 </div>
 <blockquote><p>Dentro de un procedimiento, se deben guardar y restaurar todos los registros que se modifiquen (excepto EAX cuando se usa como valor de retorno); esto es una regla básica de etiqueta en la programación en ensamblador. No hacerlo puede provocar que los valores de los registros del llamador se modifiquen inesperadamente.</p></blockquote>
@@ -334,27 +334,27 @@ print_message<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: proc_params_reg.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Paso de parámetros mediante registros</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    newline <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0xA</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    newline <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0xA</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Llamar al procedimiento add_two: calcular 10 + 20</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span>                  <span style="color: #666666; font-style: italic;">; El primer parámetro se coloca en eax</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">20</span>                  <span style="color: #666666; font-style: italic;">; El segundo parámetro se coloca en ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> add_two                 <span style="color: #666666; font-style: italic;">; Llamar al procedimiento</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span>                  <span style="color: #666666; font-style: italic;">; El primer parámetro se coloca en eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">20</span>                  <span style="color: #666666; font-style: italic;">; El segundo parámetro se coloca en ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> add_two                 <span style="color: #666666; font-style: italic;">; Llamar al procedimiento</span><br/>
     <span style="color: #666666; font-style: italic;">; El valor de retorno está en eax = 30</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                 <span style="color: #666666; font-style: italic;">; Código de salida = 30</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                 <span style="color: #666666; font-style: italic;">; Código de salida = 30</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Procedimiento: calcula eax + ebx, el resultado se devuelve en eax</span><br/>
 add_two<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span>                 <span style="color: #666666; font-style: italic;">; eax = eax + ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span>                 <span style="color: #666666; font-style: italic;">; eax = eax + ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span><br/>
 </div>
 </div>
 <hr/>
@@ -366,33 +366,33 @@ add_two<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: proc_params_stack.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Paso de parámetros mediante la pila (estilo cdecl)</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Sum is: '</span><br/>
-    msg_len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
-    newline <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0xA</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Sum is: '</span><br/>
+    msg_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
+    newline <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0xA</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.bss</span><br/>
-    result_buf <span style="color: #0000ff; font-weight: bold;">resb</span> <span style="color: #ff0000;">4</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span><br/>
+    result_buf <span style="color: #0000FF; font-weight: bold;">resb</span> <span style="color: #FF0000;">4</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Llamar al procedimiento sum: calcular 100 + 200</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #0000ff; font-weight: bold;">dword</span> <span style="color: #ff0000;">200</span>               <span style="color: #666666; font-style: italic;">; Empujar el segundo parámetro</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #0000ff; font-weight: bold;">dword</span> <span style="color: #ff0000;">100</span>               <span style="color: #666666; font-style: italic;">; Empujar el primer parámetro</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> sum                     <span style="color: #666666; font-style: italic;">; Llamar al procedimiento</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">8</span>                   <span style="color: #666666; font-style: italic;">; ★ El llamador limpia la pila (convención cdecl)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #0000FF; font-weight: bold;">dword</span> <span style="color: #FF0000;">200</span>               <span style="color: #666666; font-style: italic;">; Empujar el segundo parámetro</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #0000FF; font-weight: bold;">dword</span> <span style="color: #FF0000;">100</span>               <span style="color: #666666; font-style: italic;">; Empujar el primer parámetro</span><br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> sum                     <span style="color: #666666; font-style: italic;">; Llamar al procedimiento</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">8</span>                   <span style="color: #666666; font-style: italic;">; ★ El llamador limpia la pila (convención cdecl)</span><br/>
     <span style="color: #666666; font-style: italic;">; El valor de retorno está en eax = 300</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Procedimiento: sum(a, b) = a + b</span><br/>
 sum<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">ebp</span>                     <span style="color: #666666; font-style: italic;">; ★ Guardar el puntero base anterior</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebp</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">esp</span>                 <span style="color: #666666; font-style: italic;">; ★ Establecer la nueva base del marco de pila</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">ebp</span>                     <span style="color: #666666; font-style: italic;">; ★ Guardar el puntero base anterior</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebp</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">esp</span>                 <span style="color: #666666; font-style: italic;">; ★ Establecer la nueva base del marco de pila</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Diseño de la pila (de dirección alta a dirección baja):</span><br/>
     <span style="color: #666666; font-style: italic;">; [ebp+12] = parámetro b (200)</span><br/>
@@ -401,11 +401,11 @@ sum<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; [ebp]    = ebp anterior</span><br/>
     <span style="color: #666666; font-style: italic;">; [ebp-4]  = espacio para variables locales</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">8</span><span style="color: #009900; font-weight: bold;">]</span>           <span style="color: #666666; font-style: italic;">; Obtener el primer parámetro (a)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">12</span><span style="color: #009900; font-weight: bold;">]</span>          <span style="color: #666666; font-style: italic;">; Sumar el segundo parámetro (b)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">8</span><span style="color: #009900; font-weight: bold;">]</span>           <span style="color: #666666; font-style: italic;">; Obtener el primer parámetro (a)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">12</span><span style="color: #009900; font-weight: bold;">]</span>          <span style="color: #666666; font-style: italic;">; Sumar el segundo parámetro (b)</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">ebp</span>                      <span style="color: #666666; font-style: italic;">; ★ Restaurar el puntero base anterior</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span>                          <span style="color: #666666; font-style: italic;">; Retornar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">ebp</span>                      <span style="color: #666666; font-style: italic;">; ★ Restaurar el puntero base anterior</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span>                          <span style="color: #666666; font-style: italic;">; Retornar</span><br/>
 </div>
 </div>
 <p>Diagrama de la estructura del marco de pila:</p>
@@ -436,21 +436,21 @@ sum<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de valor de retorno</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Retornar un int</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> get_answer<br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> get_answer<br/>
     <span style="color: #666666; font-style: italic;">; eax = 42</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Retornar un valor de 64 bits (como long long)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> get_big_value<br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> get_big_value<br/>
     <span style="color: #666666; font-style: italic;">; edx:eax = resultado de 64 bits</span><br/>
 <br/>
 get_answer<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>                  <span style="color: #666666; font-style: italic;">; El valor de retorno se coloca en eax</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>                  <span style="color: #666666; font-style: italic;">; El valor de retorno se coloca en eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span><br/>
 <br/>
 get_big_value<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x00000001</span>          <span style="color: #666666; font-style: italic;">; 32 bits bajos</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x00000000</span>          <span style="color: #666666; font-style: italic;">; 32 bits altos</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x00000001</span>          <span style="color: #666666; font-style: italic;">; 32 bits bajos</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x00000000</span>          <span style="color: #666666; font-style: italic;">; 32 bits altos</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span><br/>
 </div>
 </div>
 <hr/>
@@ -462,48 +462,48 @@ get_big_value<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: local_vars.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Uso de variables locales en un procedimiento</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #0000ff; font-weight: bold;">dword</span> <span style="color: #ff0000;">10</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #0000ff; font-weight: bold;">dword</span> <span style="color: #ff0000;">20</span><br/>
-    <span style="color: #00007f; font-weight: bold;">call</span> multiply_add<br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">8</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #0000FF; font-weight: bold;">dword</span> <span style="color: #FF0000;">10</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #0000FF; font-weight: bold;">dword</span> <span style="color: #FF0000;">20</span><br/>
+    <span style="color: #00007F; font-weight: bold;">call</span> multiply_add<br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">8</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 10 * 20 + 10 + 20 = 230</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Procedimiento: multiply_add(x, y) = x*y + x + y</span><br/>
 multiply_add<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">ebp</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebp</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">esp</span><br/>
-    <span style="color: #00007f; font-weight: bold;">sub</span> <span style="color: #46aa03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">8</span>                   <span style="color: #666666; font-style: italic;">; ★ Asignar 8 bytes de espacio para variables locales en la pila</span><br/>
+    <span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">ebp</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebp</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">esp</span><br/>
+    <span style="color: #00007F; font-weight: bold;">sub</span> <span style="color: #46AA03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">8</span>                   <span style="color: #666666; font-style: italic;">; ★ Asignar 8 bytes de espacio para variables locales en la pila</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Ahora [ebp-4] y [ebp-8] son variables locales disponibles</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">8</span><span style="color: #009900; font-weight: bold;">]</span>           <span style="color: #666666; font-style: italic;">; x</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">12</span><span style="color: #009900; font-weight: bold;">]</span>          <span style="color: #666666; font-style: italic;">; y</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">8</span><span style="color: #009900; font-weight: bold;">]</span>           <span style="color: #666666; font-style: italic;">; x</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">12</span><span style="color: #009900; font-weight: bold;">]</span>          <span style="color: #666666; font-style: italic;">; y</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; [ebp-4] = x * y</span><br/>
-    <span style="color: #00007f; font-weight: bold;">imul</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>           <span style="color: #666666; font-style: italic;">; Variable local 1 = x * y</span><br/>
+    <span style="color: #00007F; font-weight: bold;">imul</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>           <span style="color: #666666; font-style: italic;">; Variable local 1 = x * y</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; [ebp-8] = x + y</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #ff0000;">12</span><span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #ff0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>           <span style="color: #666666; font-style: italic;">; Variable local 2 = x + y</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">+</span> <span style="color: #FF0000;">12</span><span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #FF0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>           <span style="color: #666666; font-style: italic;">; Variable local 2 = x + y</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Valor de retorno = [ebp-4] + [ebp-8]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #ff0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46aa03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #ff0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #FF0000;">4</span><span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span><span style="color: #46AA03; font-weight: bold;">ebp</span> <span style="color: #339933;">-</span> <span style="color: #FF0000;">8</span><span style="color: #009900; font-weight: bold;">]</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; ★ Limpiar el espacio de variables locales y restaurar</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebp</span>                  <span style="color: #666666; font-style: italic;">; Equivalente a add esp, 8</span><br/>
-    <span style="color: #00007f; font-weight: bold;">pop</span> <span style="color: #46aa03; font-weight: bold;">ebp</span><br/>
-    <span style="color: #00007f; font-weight: bold;">ret</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">esp</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebp</span>                  <span style="color: #666666; font-style: italic;">; Equivalente a add esp, 8</span><br/>
+    <span style="color: #00007F; font-weight: bold;">pop</span> <span style="color: #46AA03; font-weight: bold;">ebp</span><br/>
+    <span style="color: #00007F; font-weight: bold;">ret</span><br/>
 </div>
 </div>
 <blockquote><p>Las variables locales se asignan en el marco de pila y se liberan automáticamente cuando el procedimiento retorna. Usar la<code>leave</code>instrucción puede reemplazar a<code>mov esp, ebp; pop ebp</code>, el efecto es equivalente.</p></blockquote>
@@ -549,7 +549,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -594,7 +594,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -633,7 +633,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener un código de invitación de registro</a></p>
@@ -852,7 +852,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

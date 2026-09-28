@@ -370,7 +370,7 @@ Cualquier contenido puede cargarse como detalle de fila, y el subgrid también p
 Este tutorial le mostrará cómo crear un subgrid en el grid principal.</p>
 <img decoding="async" src="../wp-content/uploads/2013/12/datagrid22.png"/>
 <h4>Paso 1: Crear el grid principal</h4>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;table id="dg" style="width:700px;height:250px"
         url="datagrid22_getdata.php" 
         title="DataGrid - SubGrid"
@@ -389,10 +389,10 @@ Este tutorial le mostrará cómo crear un subgrid en el grid principal.</p>
 </pre>
 <h4>Paso 2: Configurar la vista de detalles para mostrar el subgrid</h4>
 <p>Para usar la vista de detalles, recuerde incluir la referencia al archivo de script de la vista en el encabezado de la página.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/datagrid-detailview.js"&gt;&lt;/script&gt;
 </pre>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#dg').datagrid({
     view: detailview,
     detailFormatter:function(index,row){
@@ -430,7 +430,7 @@ Creamos un nuevo subgrid con tres columnas.
 Cuando los datos del subgrid se carguen correctamente o cuando se cambie el tamaño, recuerde llamar al método 'fixDetailRowHeight' en el grid principal.</p>
 <h4>Paso 3: Código del lado del servidor</h4>
 <div>datagrid22_getdata.php</div>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $result = array();
 
 include 'conn.php';
@@ -445,7 +445,7 @@ while($row = mysql_fetch_object($rs)){
 echo json_encode($items);
 </pre>
 <div>datagrid22_getdetail.php</div>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 include 'conn.php';
 
 $itemid = mysql_real_escape_string($_REQUEST['itemid']);
@@ -492,7 +492,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -537,7 +537,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -576,7 +576,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener un código de invitación de registro</a></p>
@@ -795,7 +795,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

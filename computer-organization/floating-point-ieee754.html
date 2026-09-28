@@ -310,7 +310,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="float-legend">
 <div class="leg-item"><div class="leg-color" style="background:#e53935;"></div>Bit de signo (1 bit)</div>
 <div class="leg-item"><div class="leg-color" style="background:#1e88e5;"></div>Bits de exponente (8 bits)</div>
-<div class="leg-item"><div class="leg-color" style="background:#43a047;"></div>Bits de mantisa (23 bits)</div>
+<div class="leg-item"><div class="leg-color" style="background:#4576A6;"></div>Bits de mantisa (23 bits)</div>
 </div>
 </div>
 <h3>Primera parte: bit de signo (1 bit)</h3>
@@ -347,7 +347,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #e0e0e0;
 }
 .demo-panel .demo-panel h3 {
-  color: #66bb6a;
+  color: #6690BB;
   margin-top: 0;
 }
 .demo-input-row {
@@ -391,8 +391,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   background: rgba(255,255,255,0.1);
 }
 .demo-btn.calc {
-  border-color: #66bb6a;
-  color: #66bb6a;
+  border-color: #6690BB;
+  color: #6690BB;
 }
 .demo-btn.preset {
   border-color: #42a5f5;
@@ -437,7 +437,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /* 尾数位段 (23 bits) - 绿色 */
 .bar-seg-m {
   flex: 1;
-  background: #2e7d32;
+  background: #3D71A6;
   color: #fff;
   display: flex;
   align-items: center;
@@ -469,7 +469,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 .bar-seg-info div:nth-child(3) {
   flex: 1;
-  color: #66bb6a;
+  color: #6690BB;
   text-align: right;
 }
 /* 数值显示 */
@@ -528,7 +528,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 .bar-mantissa {
   flex: 1;
-  background: #43a047;
+  background: #4576A6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -644,7 +644,7 @@ function decomposeFloat() {
   /* ---------- 步骤 5：构建 HTML 输出（动画分段展示）---------- */
   let html = `
     <!-- 输入值大字体显示 -->
-    <div class="float-value" style="color:#66bb6a;">${val}</div>
+    <div class="float-value" style="color:#6690BB;">${val}</div>
 
     <!-- 32位分段横条（核心可视化） -->
     <div class="bar-seg">
@@ -662,7 +662,7 @@ function decomposeFloat() {
 
     <!-- IEEE 754 公式展示 -->
     <div class="float-explanation" style="background:#263238;color:#eee;">
-      <p style="color:#81c784;">
+      <p style="color:#6D9AC7;">
         公式：(-1)<sup>符号</sup> x 1.尾数 x 2<sup>实际指数</sup>
       </p>
       <p>= (-1)<sup>${signBit}</sup> x 1.${manBits} x 2<sup>${actualExp}</sup></p>
@@ -686,7 +686,7 @@ function decomposeFloat() {
       </tr>
       <tr style="border-bottom:1px solid #444;">
         <td style="padding:6px 10px;color:#90a4ae;">尾数位 (23 bits)</td>
-        <td style="padding:6px 10px;font-family:monospace;color:#43a047;font-size:11px;">${manBits}</td>
+        <td style="padding:6px 10px;font-family:monospace;color:#4576A6;font-size:11px;">${manBits}</td>
         <td style="padding:6px 10px;">隐含前导 1，实际 1.${manBits.substring(0, 8)}...</td>
       </tr>
     </table>
@@ -948,7 +948,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -993,7 +993,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1032,7 +1032,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía tu artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener un código de invitación</a></p>
@@ -1251,7 +1251,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

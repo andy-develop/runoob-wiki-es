@@ -99,14 +99,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El formato es libre; se puede escribir en una sola línea o en múltiples líneas.</p><p>Cada declaración debe terminar con un punto y coma. Los caracteres en blanco (saltos de línea, tabulaciones y espacios) no tienen significado real y pueden ignorarse en la fase de compilación. Por ejemplo, las dos formas de programación siguientes son equivalentes.</p>
 <p><strong>Sin salto de línea (no recomendado)</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>  results <span style="color: #5D478B;">;</span><span style="color: #A52A2A; font-weight: bold;">assign</span> results <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>a <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #ff0055;">2'b01</span> ： <span style="color: #9F79EE;">(</span>b<span style="color: #5D478B;">==</span><span style="color: #ff0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #ff0055;">2'b10</span> ： <span style="color: #ff0055;">2'b11</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>  results <span style="color: #5D478B;">;</span><span style="color: #A52A2A; font-weight: bold;">assign</span> results <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>a <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #FF0055;">2'b01</span> ： <span style="color: #9F79EE;">(</span>b<span style="color: #5D478B;">==</span><span style="color: #FF0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #FF0055;">2'b10</span> ： <span style="color: #FF0055;">2'b11</span> <span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p><strong>Con salto de línea (recomendado)</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>  results <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">assign</span>      results <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>a <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #ff0055;">2'b01</span> ：<br/>
-            <span style="color: #9F79EE;">(</span>b<span style="color: #5D478B;">==</span><span style="color: #ff0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #ff0055;">2'b10</span> ：<br/>
-                <span style="color: #ff0055;">2'b11</span> <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>  results <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">assign</span>      results <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>a <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #FF0055;">2'b01</span> ：<br/>
+            <span style="color: #9F79EE;">(</span>b<span style="color: #5D478B;">==</span><span style="color: #FF0055;">1'b0</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> <span style="color: #FF0055;">2'b10</span> ：<br/>
+                <span style="color: #FF0055;">2'b11</span> <span style="color: #5D478B;">;</span><br/>
 </div></div>
 <h3>Comentarios</h3>
 <p>Verilog tiene 2 formas de comentarios:</p>
@@ -125,7 +125,7 @@ assign   addr = 12'b0 ;
 <p>Además, los identificadores distinguen entre mayúsculas y minúsculas.</p>
 <p>Las palabras clave son identificadores especiales reservados en Verilog para definir estructuras del lenguaje.</p><p>Todas las palabras clave en Verilog están en minúsculas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span> counter <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//reg es una palabra clave, counter es un identificador</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span> counter <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//reg es una palabra clave, counter es un identificador</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">input</span> clk<span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//input es una palabra clave, clk es un identificador</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">input</span> CLK<span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//CLK y clk son 2 identificadores diferentes</span><br/>
 </div></div> </div>
@@ -153,7 +153,7 @@ assign   addr = 12'b0 ;
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -198,7 +198,7 @@ assign   addr = 12'b0 ;
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -237,7 +237,7 @@ assign   addr = 12'b0 ;
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -448,7 +448,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

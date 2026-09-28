@@ -110,7 +110,7 @@ reg  value_embed ;
 value_embed        = #10 value_test ;</pre><p>Cabe señalar que los efectos de estos 2 métodos de control de retardo son diferentes.</p><p>Cuando el lado derecho del signo de asignación de la sentencia de retardo es una constante, ambos métodos de control de retardo pueden lograr el mismo efecto de asignación con retardo.</p><p>Cuando el lado derecho del signo de asignación de la sentencia de retardo es una variable, los dos métodos de control de retardo pueden producir efectos de asignación con retardo diferentes.</p>
 <p>Por ejemplo, el siguiente código de simulación:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span>  value_test <span style="color: #5D478B;">;</span><br/>
@@ -118,47 +118,47 @@ value_embed        = #10 value_test ;</pre><p>Cabe señalar que los efectos de e
  <br/>
     <span style="color: #00008B; font-style: italic;">//signal source</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        value_test        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">25</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">35</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 60ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">40</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 100ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 110ns</span><br/>
+        value_test        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">25</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">35</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 60ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">40</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 100ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span>      value_test        <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//absolute 110ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//(1)general delay control</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        value_general     <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//10ns, value_test=0</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">45</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//55ns, value_test=1</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">30</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//85ns, value_test=0</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">20</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//105ns, value_test=1</span><br/>
+        value_general     <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//10ns, value_test=0</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">45</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//55ns, value_test=1</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">30</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//85ns, value_test=0</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">20</span> value_general  <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//105ns, value_test=1</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//(2)embedded delay control</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        value_embed       <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span><br/>
-        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//0ns, value_test=0</span><br/>
-        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #ff0055;">45</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//10ns, value_test=0</span><br/>
-        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #ff0055;">30</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//55ns, value_test=1</span><br/>
-        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #ff0055;">20</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//85ns, value_test=0</span><br/>
+        value_embed       <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span><br/>
+        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//0ns, value_test=0</span><br/>
+        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #FF0055;">45</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//10ns, value_test=0</span><br/>
+        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #FF0055;">30</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//55ns, value_test=1</span><br/>
+        value_embed  <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">#</span><span style="color: #FF0055;">20</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//85ns, value_test=0</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #00008B; font-style: italic;">//(3)single delay control</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        value_single      <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+        value_single      <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
         value_single <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//10ns, value_test=0</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">45</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">45</span> <span style="color: #5D478B;">;</span><br/>
         value_single <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//55ns, value_test=1</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">30</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">30</span> <span style="color: #5D478B;">;</span><br/>
         value_single <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//85ns, value_test=0</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">20</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">20</span> <span style="color: #5D478B;">;</span><br/>
         value_single <span style="color: #5D478B;">=</span> value_test <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">//105ns, value_test=1</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span><span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">150</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span><span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">150</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -202,7 +202,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span>start_receiving<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-    data_buf <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_if<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> data_if<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// En el momento de disparo, se integran los datos multidimensionales</span><br/>
+    data_buf <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_if<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> data_if<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// En el momento de disparo, se integran los datos multidimensionales</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 </div></div>
 <p><strong>Lista de sensibilidad</strong></p><p>Cuando el cambio de cualquiera de varias señales o eventos puede disparar la ejecución de una sentencia, Verilog utiliza la expresión 'or' para describir esta situación, con la palabra clave<span class="marked">or</span>para conectar múltiples eventos o señales. La lista formada por estos eventos o señales se llama 'lista de sensibilidad'. Por supuesto, or también puede reemplazarse por una coma<span class="marked">,</span>en su lugar. Por ejemplo:</p>
@@ -212,7 +212,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
 <span style="color: #00008B; font-style: italic;">//always @(posedge clk , negedge rstn)    begin      </span><br/>
 <span style="color: #00008B; font-style: italic;">// También se pueden listar múltiples eventos de disparo usando comas</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">if</span>（<span style="color: #5D478B;">!</span> rstn）<span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        q <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">1</span>'b <span style="color: #5D478B;">;</span>      <br/>
+        q <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">1</span>'b <span style="color: #5D478B;">;</span>      <br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         q <span style="color: #5D478B;">&lt;=</span> d <span style="color: #5D478B;">;</span><br/>
@@ -233,7 +233,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
     <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         <span style="color: #00008B; font-style: italic;">// Después de que la señal start se active, en el flanco de subida de clk_samp, se integran los datos</span><br/>
         <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk_samp<span style="color: #9F79EE;">)</span>  <span style="color: #5D478B;">;</span><br/>
-        data_buf <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_if<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> data_if<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span>      <br/>
+        data_buf <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>data_if<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> data_if<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span><span style="color: #9F79EE;">}</span> <span style="color: #5D478B;">;</span>      <br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 </div></div><h3>Descarga del código fuente</h3>
@@ -262,7 +262,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -307,7 +307,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -346,7 +346,7 @@ q <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">@</span><
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación para el registro</a></p>
@@ -557,7 +557,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

@@ -411,15 +411,15 @@ import NavBar from './components/NavBar.vue'<br/>
 <div class="example_code">
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- Escritura normal --&gt;</span><br/>
-  <span style="color: #170;">&lt;RouterLink to<span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
+  <span style="color: #170;">&lt;RouterLink to<span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
 <br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- Escritura con ruta con nombre (recomendada: si cambia la ruta, solo se modifica en un lugar) --&gt;</span><br/>
-  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66cc66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id: article.id } }"</span>&gt;</span><br/>Leer artículo {{ article.id }}<br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
+  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66CC66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id: article.id } }"</span>&gt;</span><br/>Leer artículo {{ article.id }}<br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
 <br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- La etiqueta a tradicional provoca recarga de página, no la uses --&gt;</span><br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- &lt;a href="/post/1"&gt;Leer el artículo completo&lt;/a&gt; --&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <hr/>
@@ -435,15 +435,15 @@ import { useRoute } from 'vue-router'<br/>
 <br/>// useRoute devuelve el objeto de ruta actual<br/>
 const route = useRoute()<br/>
 <br/>// route.params contiene los parámetros de la URL<br/>// Por ejemplo, si la URL es /post/3, entonces route.params.id === '3'<br/>console.log('ID del artículo:', route.params.id)<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Página de detalle del artículo<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Página de detalle del artículo<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- Nota: los valores en params son cadenas de texto --&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>ID del artículo actual: {{ route.params.id }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>ID del artículo actual: {{ route.params.id }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 </div>
 </div>
 <blockquote><p><code>route.params.id</code>Su valor siempre es una cadena de texto. Incluso si la URL es<code>/post/3</code>, el valor obtenido también es<code>'3'</code>y no un número<code>3</code>. Cuando necesites un número, usa<code>Number(route.params.id)</code> 或 <code>parseInt</code>para convertirlo.</p></blockquote>
@@ -462,19 +462,19 @@ defineProps({<br/>id: Number,       // Nuevo: ID del artículo, se usa para la n
   date: String,<br/>
   category: String<br/>
 })<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- La tarjeta completa está envuelta en RouterLink, al hacer clic en cualquier parte se navega --&gt;</span><br/>
-  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66cc66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id } }"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"card-link"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"card"</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"tag"</span>&gt;</span>{{ category }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ summary }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"date"</span>&gt;</span>{{ date }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+  <span style="color: #170;">&lt;RouterLink :to<span style="color: #66CC66;">=</span><span style="color: #a11;">"{ name: 'post', params: { id } }"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"card-link"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"card"</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"tag"</span>&gt;</span>{{ category }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h3</span>&gt;</span>{{ title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h3</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ summary }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"date"</span>&gt;</span>{{ date }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">style</span> scoped&gt;</span><br/>
 .card-link { text-decoration: none; color: inherit; display: block; }<br/>
@@ -492,15 +492,15 @@ defineProps({<br/>id: Number,       // Nuevo: ID del artículo, se usa para la n
 .tag {<br/>
   display: inline-block;<br/>
   padding: 2px 10px;<br/>
-  background: #e8f5e9;<br/>
-  color: #42b883;<br/>
+  background: #E8EEF5;<br/>
+  color: #427DB8;<br/>
   border-radius: 12px;<br/>
   font-size: 12px;<br/>
 }<br/>
 .card h3 { margin: 10px 0 8px; font-size: 18px; }<br/>
 .card p { color: #666; font-size: 14px; line-height: 1.6; }<br/>
 .date { font-size: 12px; color: #999; }<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
 </div>
 </div>
 <h3>Segundo paso: crear la página de detalle PostView</h3>
@@ -522,12 +522,12 @@ const articles = ref([<br/>
     category: 'Vue',<br/>
     date: '2024-05-10',<br/>
     content: `<br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>¿Por qué aprender Vue3?<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Vue3 es uno de los frameworks de frontend más populares actualmente; es fácil de aprender, flexible y tiene un rendimiento excelente.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Ventajas de la Composition API<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>En comparación con la Options API de Vue2, la Composition API hace que la reutilización de lógica sea más sencilla y que la organización del código sea más flexible.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>ref y reactive<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>ref es adecuado para datos de tipos primitivos; reactive para objetos y arrays. Pero en el desarrollo real se recomienda usar ref de manera uniforme.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>¿Por qué aprender Vue3?<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Vue3 es uno de los frameworks de frontend más populares actualmente; es fácil de aprender, flexible y tiene un rendimiento excelente.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Ventajas de la Composition API<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>En comparación con la Options API de Vue2, la Composition API hace que la reutilización de lógica sea más sencilla y que la organización del código sea más flexible.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>ref y reactive<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>ref es adecuado para datos de tipos primitivos; reactive para objetos y arrays. Pero en el desarrollo real se recomienda usar ref de manera uniforme.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     `<br/>
   },<br/>
   {<br/>
@@ -535,10 +535,10 @@ const articles = ref([<br/>
     category: 'JavaScript',<br/>
     date: '2024-05-08',<br/>
     content: `<br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>¿Qué es la asincronía?<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>JS es de un solo subproceso; las operaciones asíncronas permiten que el subproceso principal no se bloquee y manejen solicitudes de red, temporizadores y otras tareas al mismo tiempo.<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Conceptos básicos de Promise<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Promise tiene tres estados: pending (en curso), fulfilled (cumplida), rejected (rechazada).<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>¿Qué es la asincronía?<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>JS es de un solo subproceso; las operaciones asíncronas permiten que el subproceso principal no se bloquee y manejen solicitudes de red, temporizadores y otras tareas al mismo tiempo.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Conceptos básicos de Promise<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>Promise tiene tres estados: pending (en curso), fulfilled (cumplida), rejected (rechazada).<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     `<br/>
   }<br/>
 ])<br/>
@@ -546,28 +546,28 @@ const articles = ref([<br/>
 const article = computed(() =&gt; {<br/>
   return articles.value.find(a =&gt; a.id === id)<br/>
 })<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;template&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"post-view"</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"post-view"</span>&gt;</span><br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- El artículo no existe --&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-if<span style="color: #66cc66;">=</span><span style="color: #a11;">"!article"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"not-found"</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>El artículo no existe<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>No se encuentra el artículo con ID {{ id }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;RouterLink to<span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Volver al inicio<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> v-if<span style="color: #66CC66;">=</span><span style="color: #a11;">"!article"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"not-found"</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>El artículo no existe<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>No se encuentra el artículo con ID {{ id }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;RouterLink to<span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Volver al inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
 <br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- El artículo existe, mostrar el contenido completo --&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">article</span> v-else&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"category-tag"</span>&gt;</span>{{ article.category }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">time</span>&gt;</span>{{ article.date }}<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">time</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">span</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"category-tag"</span>&gt;</span>{{ article.category }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">span</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>{{ article.title }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">time</span>&gt;</span>{{ article.date }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">time</span>&gt;</span><br/>
       <span style="color: #808080; font-style: italic;">&lt;!-- v-html renderiza cadenas HTML --&gt;</span><br/>
-      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"content"</span> v-html<span style="color: #66cc66;">=</span><span style="color: #a11;">"article.content"</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-      <span style="color: #170;">&lt;RouterLink to<span style="color: #66cc66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"back-link"</span>&gt;</span>← Volver al inicio<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>RouterLink&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>template&gt;</span><br/>
+      <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">div</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"content"</span> v-html<span style="color: #66CC66;">=</span><span style="color: #a11;">"article.content"</span>&gt;&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+      <span style="color: #170;">&lt;RouterLink to<span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"back-link"</span>&gt;</span>← Volver al inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>RouterLink&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">article</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">div</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>template&gt;</span><br/>
 <br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">style</span> scoped&gt;</span><br/>
 .post-view {<br/>
@@ -579,8 +579,8 @@ const article = computed(() =&gt; {<br/>
 .category-tag {<br/>
   display: inline-block;<br/>
   padding: 4px 12px;<br/>
-  background: #e8f5e9;<br/>
-  color: #42b883;<br/>
+  background: #E8EEF5;<br/>
+  color: #427DB8;<br/>
   border-radius: 12px;<br/>
   font-size: 13px;<br/>
   margin-bottom: 12px;<br/>
@@ -617,7 +617,7 @@ time {<br/>
 .back-link {<br/>
   display: inline-block;<br/>
   margin-top: 40px;<br/>
-  color: #42b883;<br/>
+  color: #427DB8;<br/>
   text-decoration: none;<br/>
 }<br/>
 <br/>
@@ -625,7 +625,7 @@ time {<br/>
   text-align: center;<br/>
   padding: 60px 0;<br/>
 }<br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
 </div>
 </div>
 <blockquote><p><code>v-html</code>Se usa para renderizar cadenas HTML, pero ten en cuenta: no lo utilices para renderizar contenido introducido por el usuario, de lo contrario existe riesgo de seguridad XSS. Aquí el contenido del artículo está escrito por el desarrollador, por lo que es seguro.</p></blockquote>
@@ -667,7 +667,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -712,7 +712,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -751,7 +751,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -970,7 +970,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

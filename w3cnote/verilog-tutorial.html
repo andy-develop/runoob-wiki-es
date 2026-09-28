@@ -109,23 +109,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <span style="color: #00008B; font-style: italic;">//Definición de puertos</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   rstn<span style="color: #5D478B;">,</span>   <span style="color: #00008B; font-style: italic;">//Pin de reinicio, activo en bajo</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">input</span>                   clk<span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//Reloj de entrada</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>    cnt<span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//Salida de conteo</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>    cnt<span style="color: #5D478B;">,</span>    <span style="color: #00008B; font-style: italic;">//Salida de conteo</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">output</span>                  cout<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Bit de desbordamiento</span><br/>
 <br/>
-        <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>               cnt_temp <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Registro del contador</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>               cnt_temp <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Registro del contador</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">always</span><span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk <span style="color: #A52A2A; font-weight: bold;">or</span> <span style="color: #A52A2A; font-weight: bold;">negedge</span> rstn<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">if</span><span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span> rstn<span style="color: #9F79EE;">)</span><span style="color: #A52A2A; font-weight: bold;">begin</span>         <span style="color: #00008B; font-style: italic;">//Al reiniciar, la cuenta vuelve a 0</span><br/>
-                        cnt_temp        <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">4'b0</span> <span style="color: #5D478B;">;</span><br/>
+                        cnt_temp        <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">4'b0</span> <span style="color: #5D478B;">;</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-                <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt_temp<span style="color: #5D478B;">==</span><span style="color: #ff0055;">4'd9</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>  <span style="color: #00008B; font-style: italic;">//Al contar 10 ciclos, la cuenta vuelve a 0</span><br/>
-                        cnt_temp        <span style="color: #5D478B;">&lt;=</span><span style="color: #ff0055;">4'b000</span><span style="color: #5D478B;">;</span><br/>
+                <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>cnt_temp<span style="color: #5D478B;">==</span><span style="color: #FF0055;">4'd9</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>  <span style="color: #00008B; font-style: italic;">//Al contar 10 ciclos, la cuenta vuelve a 0</span><br/>
+                        cnt_temp        <span style="color: #5D478B;">&lt;=</span><span style="color: #FF0055;">4'b000</span><span style="color: #5D478B;">;</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">else</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>                                      <span style="color: #00008B; font-style: italic;">//La cuenta se incrementa en 1</span><br/>
-                        cnt_temp        <span style="color: #5D478B;">&lt;=</span> cnt_temp <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span> <br/>
+                        cnt_temp        <span style="color: #5D478B;">&lt;=</span> cnt_temp <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span> <br/>
                 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
-        <span style="color: #A52A2A; font-weight: bold;">assign</span>  cout <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>cnt_temp<span style="color: #5D478B;">==</span><span style="color: #ff0055;">4'd9</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//Salida del bit de período</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">assign</span>  cout <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>cnt_temp<span style="color: #5D478B;">==</span><span style="color: #FF0055;">4'd9</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//Salida del bit de período</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">assign</span>  cnt  <span style="color: #5D478B;">=</span> cnt_temp <span style="color: #5D478B;">;</span>                       <span style="color: #00008B; font-style: italic;">//Salida del contador en tiempo real</span><br/>
 <br/>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
@@ -164,7 +164,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -209,7 +209,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -248,7 +248,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Si deseas enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -459,7 +459,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

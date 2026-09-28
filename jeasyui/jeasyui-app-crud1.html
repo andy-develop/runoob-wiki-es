@@ -378,7 +378,7 @@ white-space: pre-wrap;
 <img decoding="async" src="../wp-content/uploads/2013/12/db.png"/>
 <h4>Paso 2: Crear un DataGrid para mostrar la información de los usuarios</h4>
 <p>Crear el DataGrid sin código javascript.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
         url="get_users.php"
         toolbar="#toolbar"
@@ -402,7 +402,7 @@ white-space: pre-wrap;
 <img decoding="async" src="../wp-content/uploads/2013/12/list.png"/>
 <p>El DataGrid utiliza la propiedad 'url' y se le asigna el valor 'get_users.php', para recuperar los datos del servidor.</p>
 <p>El código del archivo get_users.php</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $rs = mysql_query('select * from users');
 $result = array();
 while($row = mysql_fetch_object($rs)){
@@ -413,7 +413,7 @@ echo json_encode($result);
 </pre>
 <h4>Paso 3: Crear el cuadro de diálogo del formulario</h4>
 <p>Usamos el mismo cuadro de diálogo para crear o editar usuarios.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
         closed="true" buttons="#dlg-buttons"&gt;
     &lt;div class="ftitle"&gt;User Information&lt;/div&gt;
@@ -445,7 +445,7 @@ echo json_encode($result);
 <img decoding="async" src="../wp-content/uploads/2013/12/dialog.png"/>
 <h4>Paso 4: Implementar la creación y edición de usuarios</h4>
 <p>Al crear un usuario, se abre un cuadro de diálogo y se vacían los datos del formulario.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 function newUser(){
     $('#dlg').dialog('open').dialog('setTitle','New User');
     $('#fm').form('clear');
@@ -453,7 +453,7 @@ function newUser(){
 }
 </pre>
 <p>Al editar un usuario, se abre un cuadro de diálogo y se cargan los datos del formulario desde la fila seleccionada del datagrid.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 var row = $('#dg').datagrid('getSelected');
 if (row){
     $('#dlg').dialog('open').dialog('setTitle','Edit User');
@@ -464,7 +464,7 @@ if (row){
 <p>'url' almacena la dirección URL de devolución del formulario al guardar los datos del usuario.</p>
 <h4>Paso 5: Guardar los datos del usuario</h4>
 <p>Usamos el siguiente código para guardar los datos del usuario:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 function saveUser(){
     $('#fm').form('submit',{
         url: url,
@@ -489,7 +489,7 @@ function saveUser(){
 <p>Antes de enviar el formulario, se llamará a la función 'onSubmit', que se utiliza para validar los valores de los campos del formulario. Cuando los valores de los campos del formulario se envían correctamente, se cierra el cuadro de diálogo y se recargan los datos del datagrid.</p>
 <h4>Paso 6: Eliminar un usuario</h4>
 <p>Usamos el siguiente código para eliminar un usuario:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 function destroyUser(){
     var row = $('#dg').datagrid('getSelected');
     if (row){
@@ -550,7 +550,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -595,7 +595,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -634,7 +634,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -853,7 +853,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

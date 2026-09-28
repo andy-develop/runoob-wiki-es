@@ -294,7 +294,7 @@ map_variable := make(map[KeyType]ValueType, initialCapacity)</pre>
 m <span style="color: #339933;">:=</span> <span style="color: #000066;">make</span><span style="color: #339933;">(</span><span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Crear un Map con capacidad inicial de 10</span><br/>
-m <span style="color: #339933;">:=</span> <span style="color: #000066;">make</span><span style="color: #339933;">(</span><span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">)</span><br/>
+m <span style="color: #339933;">:=</span> <span style="color: #000066;">make</span><span style="color: #339933;">(</span><span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">)</span><br/>
 </div></div>
 <p>También se puede crear un Map usando literales:</p>
 <pre>
@@ -324,33 +324,33 @@ delete(m, "banana")</pre>
 <h3>Ejemplo</h3>
 <p>El siguiente ejemplo demuestra la creación y el uso de un map:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> siteMap <span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span> <span style="color: #666666; font-style: italic;">/* Crear una colección */</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> siteMap <span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span> <span style="color: #666666; font-style: italic;">/* Crear una colección */</span><br/>
     siteMap <span style="color: #339933;">=</span> <span style="color: #000066;">make</span><span style="color: #339933;">(</span><span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Insertar pares clave-valor en el map, las capitales correspondientes a cada país */</span><br/>
-    siteMap <span style="color: #339933;">[</span> <span style="color: #cc66cc;">"Google"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">Google</span><br/>
-    siteMap <span style="color: #339933;">[</span> <span style="color: #cc66cc;">"Runoob"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">Runoob</span><br/>
-    siteMap <span style="color: #339933;">[</span> <span style="color: #cc66cc;">"Baidu"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">Baidu</span><br/>
-    siteMap <span style="color: #339933;">[</span> <span style="color: #cc66cc;">"Wiki"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">Wikipedia</span><br/>
+    siteMap <span style="color: #339933;">[</span> <span style="color: #CC66CC;">"Google"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">Google</span><br/>
+    siteMap <span style="color: #339933;">[</span> <span style="color: #CC66CC;">"Runoob"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">Runoob</span><br/>
+    siteMap <span style="color: #339933;">[</span> <span style="color: #CC66CC;">"Baidu"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">Baidu</span><br/>
+    siteMap <span style="color: #339933;">[</span> <span style="color: #CC66CC;">"Wiki"</span> <span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">Wikipedia</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Usar la clave para imprimir el valor del mapa */</span> <br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> site <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> siteMap <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>site<span style="color: #339933;">,</span> <span style="color: #cc66cc;">La capital es</span><span style="color: #339933;">,</span> siteMap <span style="color: #339933;">[</span>site<span style="color: #339933;">])</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> site <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> siteMap <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>site<span style="color: #339933;">,</span> <span style="color: #CC66CC;">La capital es</span><span style="color: #339933;">,</span> siteMap <span style="color: #339933;">[</span>site<span style="color: #339933;">])</span><br/>
     <span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">/* Comprobar si el elemento existe en la colección */</span><br/>
-    name<span style="color: #339933;">,</span> ok <span style="color: #339933;">:=</span> siteMap <span style="color: #339933;">[</span> <span style="color: #cc66cc;">"Facebook"</span> <span style="color: #339933;">]</span> <span style="color: #666666; font-style: italic;">/* Si se determina que es verdadero, existe; de lo contrario, no existe */</span><br/>
+    name<span style="color: #339933;">,</span> ok <span style="color: #339933;">:=</span> siteMap <span style="color: #339933;">[</span> <span style="color: #CC66CC;">"Facebook"</span> <span style="color: #339933;">]</span> <span style="color: #666666; font-style: italic;">/* Si se determina que es verdadero, existe; de lo contrario, no existe */</span><br/>
     <span style="color: #666666; font-style: italic;">/*fmt.Println(capital) */</span><br/>
     <span style="color: #666666; font-style: italic;">/*fmt.Println(ok) */</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">if</span> <span style="color: #339933;">(</span>ok<span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">El sitio de Facebook es</span><span style="color: #339933;">,</span> name<span style="color: #339933;">)</span><br/>
-    <span style="color: #339933;">}</span> <span style="color: #b1b100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">El sitio de Facebook no existe</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">if</span> <span style="color: #339933;">(</span>ok<span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">El sitio de Facebook es</span><span style="color: #339933;">,</span> name<span style="color: #339933;">)</span><br/>
+    <span style="color: #339933;">}</span> <span style="color: #B1B100; font-weight: bold;">else</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">El sitio de Facebook no existe</span><span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -365,29 +365,29 @@ Facebook 站点不存在
 <h2>La función delete()</h2>
 <p>La función delete() se utiliza para eliminar elementos de una colección; sus parámetros son el map y su clave correspondiente. Ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
         <span style="color: #666666; font-style: italic;">/* Crear un map */</span><br/>
-        countryCapitalMap <span style="color: #339933;">:=</span> <span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">"France"</span><span style="color: #339933;">:</span> <span style="color: #cc66cc;">"Paris"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"Italy"</span><span style="color: #339933;">:</span> <span style="color: #cc66cc;">"Rome"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"Japan"</span><span style="color: #339933;">:</span> <span style="color: #cc66cc;">"Tokyo"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"India"</span><span style="color: #339933;">:</span> <span style="color: #cc66cc;">"New delhi"</span><span style="color: #339933;">}</span><br/>
+        countryCapitalMap <span style="color: #339933;">:=</span> <span style="color: #993333;">map</span><span style="color: #339933;">[</span><span style="color: #993333;">string</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">"France"</span><span style="color: #339933;">:</span> <span style="color: #CC66CC;">"Paris"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"Italy"</span><span style="color: #339933;">:</span> <span style="color: #CC66CC;">"Rome"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"Japan"</span><span style="color: #339933;">:</span> <span style="color: #CC66CC;">"Tokyo"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"India"</span><span style="color: #339933;">:</span> <span style="color: #CC66CC;">"New delhi"</span><span style="color: #339933;">}</span><br/>
 <br/>
-        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">Mapa original</span><span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">Mapa original</span><span style="color: #339933;">)</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">/* Imprimir el mapa */</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> country <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> countryCapitalMap <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>country<span style="color: #339933;">,</span> <span style="color: #cc66cc;">La capital es</span><span style="color: #339933;">,</span> countryCapitalMap <span style="color: #339933;">[</span> country <span style="color: #339933;">])</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> country <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> countryCapitalMap <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>country<span style="color: #339933;">,</span> <span style="color: #CC66CC;">La capital es</span><span style="color: #339933;">,</span> countryCapitalMap <span style="color: #339933;">[</span> country <span style="color: #339933;">])</span><br/>
         <span style="color: #339933;">}</span><br/>
 <br/>
-        <span style="color: #666666; font-style: italic;">/* Eliminar elemento */</span> delete<span style="color: #339933;">(</span>countryCapitalMap<span style="color: #339933;">,</span> <span style="color: #cc66cc;">"France"</span><span style="color: #339933;">)</span><br/>
-        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">Entrada de Francia eliminada</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #666666; font-style: italic;">/* Eliminar elemento */</span> delete<span style="color: #339933;">(</span>countryCapitalMap<span style="color: #339933;">,</span> <span style="color: #CC66CC;">"France"</span><span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">Entrada de Francia eliminada</span><span style="color: #339933;">)</span><br/>
 <br/>
-        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">Mapa después de eliminar el elemento</span><span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">Mapa después de eliminar el elemento</span><span style="color: #339933;">)</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">/* Imprimir el mapa */</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> country <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> countryCapitalMap <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>country<span style="color: #339933;">,</span> <span style="color: #cc66cc;">La capital es</span><span style="color: #339933;">,</span> countryCapitalMap <span style="color: #339933;">[</span> country <span style="color: #339933;">])</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> country <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> countryCapitalMap <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>country<span style="color: #339933;">,</span> <span style="color: #CC66CC;">La capital es</span><span style="color: #339933;">,</span> countryCapitalMap <span style="color: #339933;">[</span> country <span style="color: #339933;">])</span><br/>
         <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
@@ -437,7 +437,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -482,7 +482,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -655,7 +655,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -874,7 +874,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

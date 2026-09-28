@@ -337,17 +337,17 @@ Instant now <span style="color: #339933;">=</span> Instant.<span style="color: #
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-Instant instant1 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">3</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1970-01-01T00:00:03Z</span><br/>
-Instant instant2 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">3</span>, <span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// Lo mismo que arriba</span><br/>
-Instant instant3 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">2</span>, <span style="color: #cc66cc;">1</span>_000_000_000<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1 nanosegundo después de 3 segundos</span><br/>
-Instant instant4 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">4</span>, <span style="color: #339933;">-</span><span style="color: #cc66cc;">1</span>_000_000_000<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1 nanosegundo antes de 3 segundos</span><br/>
+Instant instant1 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">3</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1970-01-01T00:00:03Z</span><br/>
+Instant instant2 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">3</span>, <span style="color: #CC66CC;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// Lo mismo que arriba</span><br/>
+Instant instant3 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, <span style="color: #CC66CC;">1</span>_000_000_000<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1 nanosegundo después de 3 segundos</span><br/>
+Instant instant4 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">4</span>, <span style="color: #339933;">-</span><span style="color: #CC66CC;">1</span>_000_000_000<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1 nanosegundo antes de 3 segundos</span><br/>
 </div>
 </div>
 <h3>Crear a partir de milisegundos</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-Instant instant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochMilli</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">1000</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1970-01-01T00:00:01Z</span><br/>
+Instant instant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochMilli</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1000</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// 1970-01-01T00:00:01Z</span><br/>
 </div>
 </div>
 <hr/>
@@ -367,7 +367,7 @@ Instant instant <span style="color: #339933;">=</span> Instant.<span style="colo
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 Instant instant1 <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-Instant instant2 <span style="color: #339933;">=</span> instant1.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+Instant instant2 <span style="color: #339933;">=</span> instant1.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">10</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #000066; font-weight: bold;">boolean</span> isBefore <span style="color: #339933;">=</span> instant1.<span style="color: #006633;">isBefore</span><span style="color: #009900;">(</span>instant2<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// true</span><br/>
 <span style="color: #000066; font-weight: bold;">boolean</span> isAfter <span style="color: #339933;">=</span> instant1.<span style="color: #006633;">isAfter</span><span style="color: #009900;">(</span>instant2<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// false</span><br/>
@@ -380,15 +380,15 @@ Instant instant2 <span style="color: #339933;">=</span> instant1.<span style="co
 Instant instant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Sumar 10 segundos</span><br/>
-Instant later <span style="color: #339933;">=</span> instant.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+Instant later <span style="color: #339933;">=</span> instant.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">10</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Restar 5 minutos</span><br/>
-Instant earlier <span style="color: #339933;">=</span> instant.<span style="color: #006633;">minus</span><span style="color: #009900;">(</span>Duration.<span style="color: #006633;">ofMinutes</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">5</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+Instant earlier <span style="color: #339933;">=</span> instant.<span style="color: #006633;">minus</span><span style="color: #009900;">(</span>Duration.<span style="color: #006633;">ofMinutes</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">5</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Sumar 2 días, 4 horas y 30 minutos</span><br/>
-Instant future <span style="color: #339933;">=</span> instant.<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">2</span>, ChronoUnit.<span style="color: #006633;">DAYS</span><span style="color: #009900;">)</span><br/>
-                       .<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">4</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><br/>
-                       .<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">30</span>, ChronoUnit.<span style="color: #006633;">MINUTES</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+Instant future <span style="color: #339933;">=</span> instant.<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, ChronoUnit.<span style="color: #006633;">DAYS</span><span style="color: #009900;">)</span><br/>
+                       .<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">4</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><br/>
+                       .<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">30</span>, ChronoUnit.<span style="color: #006633;">MINUTES</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <hr/>
@@ -413,7 +413,7 @@ Instant fromLdt <span style="color: #339933;">=</span> ldt.<span style="color: #
 Instant instant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Convertir Instant a ZonedDateTime</span><br/>
-ZonedDateTime zdt <span style="color: #339933;">=</span> instant.<span style="color: #006633;">atZone</span><span style="color: #009900;">(</span>ZoneId.<span style="color: #006633;">of</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Asia/Shanghai"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+ZonedDateTime zdt <span style="color: #339933;">=</span> instant.<span style="color: #006633;">atZone</span><span style="color: #009900;">(</span>ZoneId.<span style="color: #006633;">of</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Asia/Shanghai"</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Convertir ZonedDateTime a Instant</span><br/>
 Instant fromZdt <span style="color: #339933;">=</span> zdt.<span style="color: #006633;">toInstant</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -458,7 +458,7 @@ Instant start <span style="color: #339933;">=</span> Instant.<span style="color:
 Instant end <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 Duration duration <span style="color: #339933;">=</span> Duration.<span style="color: #006633;">between</span><span style="color: #009900;">(</span>start, end<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Tiempo de operación: "</span> <span style="color: #339933;">+</span> duration.<span style="color: #006633;">toMillis</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #0000ff;">"milisegundos"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Tiempo de operación: "</span> <span style="color: #339933;">+</span> duration.<span style="color: #006633;">toMillis</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #0000FF;">"milisegundos"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>Tareas programadas</h3>
@@ -466,19 +466,19 @@ Duration duration <span style="color: #339933;">=</span> Duration.<span style="c
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 Instant now <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-Instant nextRun <span style="color: #339933;">=</span> now.<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">1</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+Instant nextRun <span style="color: #339933;">=</span> now.<span style="color: #006633;">plus</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #000000; font-weight: bold;">while</span> <span style="color: #009900;">(</span>Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span>.<span style="color: #006633;">isBefore</span><span style="color: #009900;">(</span>nextRun<span style="color: #009900;">)</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Esperar hasta el momento especificado</span><br/>
     <span style="color: #000000; font-weight: bold;">try</span> <span style="color: #009900;">{</span><br/>
-        <span style="color: #003399;">Thread</span>.<span style="color: #006633;">sleep</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">1000</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">Thread</span>.<span style="color: #006633;">sleep</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1000</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span> <span style="color: #000000; font-weight: bold;">catch</span> <span style="color: #009900;">(</span><span style="color: #003399;">InterruptedException</span> e<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         e.<span style="color: #006633;">printStackTrace</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Ejecutar la tarea programada</span><br/>
-<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hora de ejecución de la tarea programada: "</span> <span style="color: #339933;">+</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hora de ejecución de la tarea programada: "</span> <span style="color: #339933;">+</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>Ejemplo integral</h3>
@@ -491,37 +491,37 @@ Instant nextRun <span style="color: #339933;">=</span> now.<span style="color: #
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         <span style="color: #666666; font-style: italic;">// 1. Obtener el Instant del momento actual</span><br/>
         Instant now <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">now</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Momento actual: "</span> <span style="color: #339933;">+</span> now<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Momento actual: "</span> <span style="color: #339933;">+</span> now<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 2. Analizar Instant desde una cadena</span><br/>
-        Instant parsedInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">parse</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"2023-05-15T10:15:30.00Z"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Instant analizado: "</span> <span style="color: #339933;">+</span> parsedInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Instant parsedInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">parse</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"2023-05-15T10:15:30.00Z"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Instant analizado: "</span> <span style="color: #339933;">+</span> parsedInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 3. Crear un Instant en un momento específico</span><br/>
-        Instant epochInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Tiempo de época (1970-01-01T00:00:00Z): "</span> <span style="color: #339933;">+</span> epochInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Instant epochInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Tiempo de época (1970-01-01T00:00:00Z): "</span> <span style="color: #339933;">+</span> epochInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
-        Instant specificInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">1684131330</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Marca de tiempo específica: "</span> <span style="color: #339933;">+</span> specificInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Instant specificInstant <span style="color: #339933;">=</span> Instant.<span style="color: #006633;">ofEpochSecond</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1684131330</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Marca de tiempo específica: "</span> <span style="color: #339933;">+</span> specificInstant<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 4. Operaciones de tiempo</span><br/>
-        Instant later <span style="color: #339933;">=</span> now.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">60</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Sumar 60 segundos</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Después de 60 segundos: "</span> <span style="color: #339933;">+</span> later<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Instant later <span style="color: #339933;">=</span> now.<span style="color: #006633;">plusSeconds</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">60</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Sumar 60 segundos</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Después de 60 segundos: "</span> <span style="color: #339933;">+</span> later<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
-        Instant earlier <span style="color: #339933;">=</span> now.<span style="color: #006633;">minus</span><span style="color: #009900;">(</span><span style="color: #cc66cc;">2</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Restar 2 horas</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Hace 2 horas: "</span> <span style="color: #339933;">+</span> earlier<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        Instant earlier <span style="color: #339933;">=</span> now.<span style="color: #006633;">minus</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, ChronoUnit.<span style="color: #006633;">HOURS</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Restar 2 horas</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Hace 2 horas: "</span> <span style="color: #339933;">+</span> earlier<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 5. Calcular el intervalo de tiempo</span><br/>
         Duration duration <span style="color: #339933;">=</span> Duration.<span style="color: #006633;">between</span><span style="color: #009900;">(</span>earlier, later<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Intervalo de tiempo: "</span> <span style="color: #339933;">+</span> duration.<span style="color: #006633;">toMinutes</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #0000ff;">" minutos"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Intervalo de tiempo: "</span> <span style="color: #339933;">+</span> duration.<span style="color: #006633;">toMinutes</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">+</span> <span style="color: #0000FF;">" minutos"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 6. Comparar tiempo</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"¿Está earlier antes de later? "</span> <span style="color: #339933;">+</span> earlier.<span style="color: #006633;">isBefore</span><span style="color: #009900;">(</span>later<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"¿Está later después de earlier? "</span> <span style="color: #339933;">+</span> later.<span style="color: #006633;">isAfter</span><span style="color: #009900;">(</span>earlier<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"¿Está earlier antes de later? "</span> <span style="color: #339933;">+</span> earlier.<span style="color: #006633;">isBefore</span><span style="color: #009900;">(</span>later<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"¿Está later después de earlier? "</span> <span style="color: #339933;">+</span> later.<span style="color: #006633;">isAfter</span><span style="color: #009900;">(</span>earlier<span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <br/>
         <span style="color: #666666; font-style: italic;">// 7. Obtener la marca de tiempo</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Segundos desde la época: "</span> <span style="color: #339933;">+</span> now.<span style="color: #006633;">getEpochSecond</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000ff;">"Parte de nanosegundos: "</span> <span style="color: #339933;">+</span> now.<span style="color: #006633;">getNano</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Segundos desde la época: "</span> <span style="color: #339933;">+</span> now.<span style="color: #006633;">getEpochSecond</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Parte de nanosegundos: "</span> <span style="color: #339933;">+</span> now.<span style="color: #006633;">getNano</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div></div>
@@ -584,7 +584,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -629,7 +629,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -668,7 +668,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -887,7 +887,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

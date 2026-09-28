@@ -283,26 +283,26 @@ Nanosecond</pre>
 <p>Date y DateTime son subtipos del tipo abstracto TimeType.</p>
 <p>La siguiente figura muestra la relación entre los tipos de fecha. Haz clic en la imagen para ampliarla:</p>
 <p><a href="../wp-content/uploads/2022/05/2880px-Julia-time-type-hierarchy.svg.png" rel="noopener" target="_blank"><img decoding="async" src="../wp-content/uploads/2022/05/2880px-Julia-time-type-hierarchy.svg.png"/></a></p>Mostrar el tiempo de la fecha:<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">import</span> Dates<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">import</span> Dates<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> rightnow = Dates.<span style="color: black;">Time</span><span style="color: #3b972e;">(</span>Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span> <span style="color: #888888;"># Hora</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> rightnow = Dates.<span style="color: black;">Time</span><span style="color: #3B972E;">(</span>Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span> <span style="color: #888888;"># Hora</span><br/>
 08:<span style="color: black;">41</span>:<span style="color: black;">15.917</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3b972e;">)</span> <span style="color: #888888;"># Fecha</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3B972E;">)</span> <span style="color: #888888;"># Fecha</span><br/>
 <span style="color: black;">2022</span>-05-06<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> today_date = Dates.<span style="color: black;">today</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span> <br/>
+julia<span style="color: #6BAB5B;">&gt;</span> today_date = Dates.<span style="color: black;">today</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span> <br/>
 <span style="color: black;">2022</span>-05-<span style="color: black;">11</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span>Dates.<span style="color: black;">UTC</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span>Dates.<span style="color: black;">UTC</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T00:<span style="color: black;">44</span>:<span style="color: black;">20.136</span><br/>
 <br/>
 <span style="color: #888888;"># Formatear hora</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"20220429 120000"</span>, <span style="color: #c93d39;">"yyyymmdd HHMMSS"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"20220429 120000"</span>, <span style="color: #C93D39;">"yyyymmdd HHMMSS"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-04-29T12:00:00<br/>
 <br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"19/04/2022 17:42"</span>, <span style="color: #c93d39;">"dd/mm/yyyy HH:MM"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"19/04/2022 17:42"</span>, <span style="color: #C93D39;">"dd/mm/yyyy HH:MM"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-04-19T17:<span style="color: black;">42</span>:00<br/>
 </div></div>
 <p>La siguiente tabla muestra los códigos de formato de fecha, mediante los cuales podemos formatear nuestras fechas:</p>
@@ -357,87 +357,87 @@ julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;"
 </tr>
 </tbody></table>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Sun, 27 Sep 2022"</span>, <span style="color: #c93d39;">"e, d u y"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Sun, 27 Sep 2022"</span>, <span style="color: #C93D39;">"e, d u y"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-09-<span style="color: black;">27</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"Sun, 27 Sep 2022 10:25:10"</span>, <span style="color: #c93d39;">"e, d u y H:M:S"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">DateTime</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"Sun, 27 Sep 2022 10:25:10"</span>, <span style="color: #C93D39;">"e, d u y H:M:S"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-09-27T10:<span style="color: black;">25</span>:<span style="color: black;">10</span><br/>
 </div></div>
 <p>Mediante los ejemplos anteriores hemos creado algunos objetos de fecha y hora. A continuación podemos utilizar estos objetos para obtener datos (incluyendo año, mes, día, minuto, segundo, hora, etc.):</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3b972e;">)</span> <span style="color: #888888;"># Crear objeto de fecha</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3B972E;">)</span> <span style="color: #888888;"># Crear objeto de fecha</span><br/>
 <span style="color: black;">2022</span>-05-06<br/>
 <br/>
 <span style="color: #888888;"># A continuación, obtener los datos de theday</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">year</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">year</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">month</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">month</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">5</span><br/>
 <br/>
 <span style="color: #888888;"># Obtener los datos de la hora actual</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> rightnow = Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> rightnow = Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T08:<span style="color: black;">51</span>:<span style="color: black;">45.342</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">minute</span><span style="color: #3b972e;">(</span>rightnow<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">minute</span><span style="color: #3B972E;">(</span>rightnow<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">51</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">hour</span><span style="color: #3b972e;">(</span>rightnow<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">hour</span><span style="color: #3B972E;">(</span>rightnow<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">8</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">second</span><span style="color: #3b972e;">(</span>rightnow<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">second</span><span style="color: #3B972E;">(</span>rightnow<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">45</span><br/>
 <br/>
 <span style="color: #888888;"># Obtener el mes y el día de la semana</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">dayofweek</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">dayofweek</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">5</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">"Friday"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">"Friday"</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">yearmonthday</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
-<span style="color: #3b972e;">(</span><span style="color: black;">2022</span>, <span style="color: black;">5</span>, <span style="color: black;">6</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">yearmonthday</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
+<span style="color: #3B972E;">(</span><span style="color: black;">2022</span>, <span style="color: black;">5</span>, <span style="color: black;">6</span><span style="color: #3B972E;">)</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">dayofweekofmonth</span><span style="color: #3b972e;">(</span>theday<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">dayofweekofmonth</span><span style="color: #3B972E;">(</span>theday<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1</span><br/>
 </div></div>
 <h3>Operaciones con fechas</h3>
 <p>Podemos realizar operaciones aritméticas con objetos de fecha.</p>
 <p>Por ejemplo, calcular cuántos días difieren dos fechas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> day1 = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">17</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> day1 = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">17</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-01-<span style="color: black;">17</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> day2 = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">3</span>,<span style="color: black;">23</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> day2 = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">3</span>,<span style="color: black;">23</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-03-<span style="color: black;">23</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> day2 - day1<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> day2 - day1<br/>
 <span style="color: black;">65</span> days<br/>
 <br/>
 <span style="color: #888888;"># Usar diferentes unidades de tiempo</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">canonicalize</span><span style="color: #3b972e;">(</span>Dates.<span style="color: black;">CompoundPeriod</span><span style="color: #3b972e;">(</span>day2 - day1<span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">canonicalize</span><span style="color: #3B972E;">(</span>Dates.<span style="color: black;">CompoundPeriod</span><span style="color: #3B972E;">(</span>day2 - day1<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">9</span> weeks, <span style="color: black;">2</span> days<br/>
 </div></div><p>También podemos sumar fechas, por ejemplo, calcular la fecha después de 2 años y 6 meses:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> rightnow = Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> rightnow = Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T09:01:<span style="color: black;">07.946</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> rightnow + Dates.<span style="color: black;">Year</span><span style="color: #3b972e;">(</span><span style="color: black;">20</span><span style="color: #3b972e;">)</span> + Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">6</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> rightnow + Dates.<span style="color: black;">Year</span><span style="color: #3B972E;">(</span><span style="color: black;">20</span><span style="color: #3B972E;">)</span> + Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">6</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2042</span>-<span style="color: black;">11</span>-11T09:01:<span style="color: black;">07.946</span><br/>
 <br/>
 <span style="color: #888888;"># Fecha después de 6 días</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> rightnow + Dates.<span style="color: black;">Day</span><span style="color: #3b972e;">(</span><span style="color: black;">6</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> rightnow + Dates.<span style="color: black;">Day</span><span style="color: #3B972E;">(</span><span style="color: black;">6</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-17T09:01:<span style="color: black;">07.946</span><br/>
 </div></div>
 <h3>Rango de fechas</h3>
 <p>Julia puede crear fechas en un intervalo especificado mediante objetos iterables range (rango). En el siguiente ejemplo, crearemos un iterador que genera el primer día de cada mes.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-date_range = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2011</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"2011-01-01"</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"2022-01-01"</span><span style="color: #3b972e;">)</span><br/>
+date_range = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2011</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"2011-01-01"</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"2022-01-01"</span><span style="color: #3B972E;">)</span><br/>
 </div></div><p>En el objeto de rango anterior, podemos averiguar cuáles son días laborables. Para ello, debemos crear una función anónima para filter(), que determinará si un día es laborable según la fecha dada:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> weekdaysfromrange = <span style="color: #0000A8;font-weight:bold;">filter</span><span style="color: #3b972e;">(</span>dy -<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3b972e;">(</span>dy<span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">!</span>= <span style="color: #c93d39;">"Saturday"</span> <span style="color: #6bab5b;">&amp;&amp;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3b972e;">(</span>dy<span style="color: #3b972e;">)</span> <span style="color: #6bab5b;">!</span>= <span style="color: #c93d39;">"Sunday"</span> , date_range<span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">94</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span>Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> weekdaysfromrange = <span style="color: #0000A8;font-weight:bold;">filter</span><span style="color: #3B972E;">(</span>dy -<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3B972E;">(</span>dy<span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">!</span>= <span style="color: #C93D39;">"Saturday"</span> <span style="color: #6BAB5B;">&amp;&amp;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3B972E;">(</span>dy<span style="color: #3B972E;">)</span> <span style="color: #6BAB5B;">!</span>= <span style="color: #C93D39;">"Sunday"</span> , date_range<span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">94</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span>Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">2011</span>-02-01<br/>
  <span style="color: black;">2011</span>-03-01<br/>
  <span style="color: black;">2011</span>-04-01<br/>
@@ -461,37 +461,37 @@ julia<span style="color: #6bab5b;">&gt;</span> weekdaysfromrange = <span style="
 </div></div>
 <h3>Redondear fecha y hora</h3><p>Usualmente usamos las funciones round(), floor() y ceil() para redondear argumentos hacia arriba o hacia abajo. Asimismo, estas funciones pueden usarse para redondear fechas, a fin de ajustar la fecha hacia adelante o hacia atrás.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T09:<span style="color: black;">17</span>:<span style="color: black;">49.824</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">format</span><span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">round</span><span style="color: #3b972e;">(</span>Dates.<span style="color: black;">DateTime</span><span style="color: #3b972e;">(</span>Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span>, Dates.<span style="color: black;">Minute</span><span style="color: #3b972e;">(</span><span style="color: black;">15</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span>, Dates.<span style="color: black;">RFC1123Format</span><span style="color: #3b972e;">)</span><br/>
-<span style="color: #c93d39;">"Wed, 11 May 2022 09:15:00"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">format</span><span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">round</span><span style="color: #3B972E;">(</span>Dates.<span style="color: black;">DateTime</span><span style="color: #3B972E;">(</span>Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span>, Dates.<span style="color: black;">Minute</span><span style="color: #3B972E;">(</span><span style="color: black;">15</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span>, Dates.<span style="color: black;">RFC1123Format</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #C93D39;">"Wed, 11 May 2022 09:15:00"</span><br/>
 </div></div><p>
 <span class="marked">ceil()</span>La función ajustará la fecha/hora hacia adelante, como se muestra a continuación:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> theday = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">5</span>,<span style="color: black;">6</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-06<br/>
 <br/>
 <span style="color: #888888;"># El próximo mes</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> ceil<span style="color: #3b972e;">(</span>theday, Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ceil<span style="color: #3B972E;">(</span>theday, Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-06-01<br/>
 <br/>
 <span style="color: #888888;"># El próximo año</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> ceil<span style="color: #3b972e;">(</span>theday, Dates.<span style="color: black;">Year</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ceil<span style="color: #3B972E;">(</span>theday, Dates.<span style="color: black;">Year</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2023</span>-01-01<br/>
 <br/>
 <span style="color: #888888;"># La próxima semana</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> ceil<span style="color: #3b972e;">(</span>theday, Dates.<span style="color: black;">Week</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ceil<span style="color: #3B972E;">(</span>theday, Dates.<span style="color: black;">Week</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-09<br/>
 </div></div>
 <h3>Fechas recurrentes</h3><p>Podemos buscar fechas recurrentes dentro de un rango, por ejemplo, todos los domingos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Crear fechas de rango</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> date_range = Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2011</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
-Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"2011-01-01"</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">(</span><span style="color: #c93d39;">"2022-01-01"</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> date_range = Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2011</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: black;">2022</span>,<span style="color: black;">1</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
+Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"2011-01-01"</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span>:Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"2022-01-01"</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #888888;"># Usar la función filter() para filtrar todos los domingos</span><br/>
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">filter</span><span style="color: #3b972e;">(</span>d -<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3b972e;">(</span>d<span style="color: #3b972e;">)</span> == <span style="color: #c93d39;">"Sunday"</span>, date_range<span style="color: #3b972e;">)</span><br/>
-<span style="color: black;">20</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3b972e;">{</span>Dates.<span style="color: black;">Date</span><span style="color: #3b972e;">}</span>:<br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">filter</span><span style="color: #3B972E;">(</span>d -<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">dayname</span><span style="color: #3B972E;">(</span>d<span style="color: #3B972E;">)</span> == <span style="color: #C93D39;">"Sunday"</span>, date_range<span style="color: #3B972E;">)</span><br/>
+<span style="color: black;">20</span>-element <span style="color: #0000A8;font-weight:bold;">Vector</span><span style="color: #3B972E;">{</span>Dates.<span style="color: black;">Date</span><span style="color: #3B972E;">}</span>:<br/>
  <span style="color: black;">2011</span>-05-01<br/>
  <span style="color: black;">2012</span>-01-01<br/>
  <span style="color: black;">2012</span>-04-01<br/>
@@ -515,80 +515,80 @@ julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-
 </div></div>Tiempo Unix<p>El tiempo UNIX, también llamado tiempo POSIX, es una representación del tiempo utilizada por sistemas UNIX o similares a UNIX: el número total de segundos transcurridos desde el 1 de enero de 1970 a las 00:00:00 UTC hasta el presente, sin considerar los segundos intercalares.</p>
 <p>La función time() devuelve el valor Unix:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">time</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #0000A8;font-weight:bold;">time</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 1.652232489777e9<br/>
 </div></div>
 <p>La función unix2datetime() convierte el tiempo Unix en un objeto de fecha/hora:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">unix2datetime</span><span style="color: #3b972e;">(</span><span style="color: #0000A8;font-weight:bold;">time</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">unix2datetime</span><span style="color: #3B972E;">(</span><span style="color: #0000A8;font-weight:bold;">time</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T01:<span style="color: black;">28</span>:<span style="color: black;">23.493</span><br/>
 </div></div>
 <h3>Momento actual</h3>
 <p>DateTimes están expresados en milisegundos. Podemos usar la función Dates.value para obtener el tiempo en milisegundos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> moment=Dates.<span style="color: black;">now</span><span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> moment=Dates.<span style="color: black;">now</span><span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2022</span>-05-11T09:<span style="color: black;">31</span>:<span style="color: black;">31.037</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Dates.<span style="color: black;">value</span><span style="color: #3b972e;">(</span>moment<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Dates.<span style="color: black;">value</span><span style="color: #3B972E;">(</span>moment<span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">63787944691037</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> moment.<span style="color: black;">instant</span><br/>
-Dates.<span style="color: black;">UTInstant</span><span style="color: #3b972e;">{</span>Millisecond<span style="color: #3b972e;">}</span><span style="color: #3b972e;">(</span>Millisecond<span style="color: #3b972e;">(</span><span style="color: black;">63787944691037</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> moment.<span style="color: black;">instant</span><br/>
+Dates.<span style="color: black;">UTInstant</span><span style="color: #3B972E;">{</span>Millisecond<span style="color: #3B972E;">}</span><span style="color: #3B972E;">(</span>Millisecond<span style="color: #3B972E;">(</span><span style="color: black;">63787944691037</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 </div></div>
 <h3>Tiempo y monitoreo</h3>
 <p>Julia nos proporciona<span class="marked">@elapsed</span>macro, que devolverá el tiempo (en segundos) necesario para ejecutar una expresión.</p>
 <p>Calcula el tiempo necesario para ejecutar el siguiente código:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> <span style="color: #4266d5;font-weight:bold;">function</span> foo<span style="color: #3b972e;">(</span>n<span style="color: #3b972e;">)</span><br/>
-         <span style="color: #4266d5;font-weight:bold;">for</span> i <span style="color: #4266d5;font-weight:bold;">in</span> <span style="color: black;">1</span>:n<br/>
-           x = sin<span style="color: #3b972e;">(</span>rand<span style="color: #3b972e;">(</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
-         <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-       <span style="color: #4266d5;font-weight:bold;">end</span><br/>
-foo <span style="color: #3b972e;">(</span>generic <span style="color: #4266d5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #4266D5;font-weight:bold;">function</span> foo<span style="color: #3B972E;">(</span>n<span style="color: #3B972E;">)</span><br/>
+         <span style="color: #4266D5;font-weight:bold;">for</span> i <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: black;">1</span>:n<br/>
+           x = sin<span style="color: #3B972E;">(</span>rand<span style="color: #3B972E;">(</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+         <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+       <span style="color: #4266D5;font-weight:bold;">end</span><br/>
+foo <span style="color: #3B972E;">(</span>generic <span style="color: #4266D5;font-weight:bold;">function</span> with <span style="color: black;">1</span> method<span style="color: #3B972E;">)</span><br/>
 <br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> @elapsed foo<span style="color: #3b972e;">(</span><span style="color: black;">100000000</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> @elapsed foo<span style="color: #3B972E;">(</span><span style="color: black;">100000000</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">1.360567967</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> @<span style="color: #0000A8;font-weight:bold;">time</span> foo<span style="color: #3b972e;">(</span><span style="color: black;">100000000</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> @<span style="color: #0000A8;font-weight:bold;">time</span> foo<span style="color: #3B972E;">(</span><span style="color: black;">100000000</span><span style="color: #3B972E;">)</span><br/>
   <span style="color: black;">1.363258</span> seconds<br/>
 </div></div>
 <h3>Más ejemplos</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-01-01T00:00:00<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T00:00:00<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T00:00:00<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T12:00:00<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T12:<span style="color: black;">30</span>:00<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span>,<span style="color: black;">59</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span>,<span style="color: black;">59</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T12:<span style="color: black;">30</span>:<span style="color: black;">59</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> DateTime<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span>,<span style="color: black;">59</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> DateTime<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span>,<span style="color: black;">12</span>,<span style="color: black;">30</span>,<span style="color: black;">59</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01T12:<span style="color: black;">30</span>:<span style="color: black;">59.001</span><br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Date<span style="color: #3b972e;">(</span><span style="color: black;">2013</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Date<span style="color: #3B972E;">(</span><span style="color: black;">2013</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-01-01<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Date<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Date<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Date<span style="color: #3b972e;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Date<span style="color: #3B972E;">(</span><span style="color: black;">2013</span>,<span style="color: black;">7</span>,<span style="color: black;">1</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Date<span style="color: #3b972e;">(</span>Dates.<span style="color: black;">Year</span><span style="color: #3b972e;">(</span><span style="color: black;">2013</span><span style="color: #3b972e;">)</span>,Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">7</span><span style="color: #3b972e;">)</span>,Dates.<span style="color: black;">Day</span><span style="color: #3b972e;">(</span><span style="color: black;">1</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Date<span style="color: #3B972E;">(</span>Dates.<span style="color: black;">Year</span><span style="color: #3B972E;">(</span><span style="color: black;">2013</span><span style="color: #3B972E;">)</span>,Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">7</span><span style="color: #3B972E;">)</span>,Dates.<span style="color: black;">Day</span><span style="color: #3B972E;">(</span><span style="color: black;">1</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01<br/>
 <br/>
-julia<span style="color: #6bab5b;">&gt;</span> Date<span style="color: #3b972e;">(</span>Dates.<span style="color: black;">Month</span><span style="color: #3b972e;">(</span><span style="color: black;">7</span><span style="color: #3b972e;">)</span>,Dates.<span style="color: black;">Year</span><span style="color: #3b972e;">(</span><span style="color: black;">2013</span><span style="color: #3b972e;">)</span><span style="color: #3b972e;">)</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> Date<span style="color: #3B972E;">(</span>Dates.<span style="color: black;">Month</span><span style="color: #3B972E;">(</span><span style="color: black;">7</span><span style="color: #3B972E;">)</span>,Dates.<span style="color: black;">Year</span><span style="color: #3B972E;">(</span><span style="color: black;">2013</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: black;">2013</span>-07-01<br/>
 </div></div>
 Otras extensiones
@@ -625,7 +625,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -670,7 +670,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -709,7 +709,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -928,7 +928,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

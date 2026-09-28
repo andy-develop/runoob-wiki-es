@@ -281,15 +281,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Efectos de filtro</h3><p>Los filtros SVG pueden lograr varios efectos; los efectos de filtro comunes incluyen:</p><ul><li><p><strong>Desenfoque (Blur)</strong>: hace que la imagen tenga un efecto de desenfoque, a través de<code>&lt;feGaussianBlur&gt;</code>elemento se implementa.</p></li><li><p><strong>Sombra (Shadow)</strong>: agrega un efecto de sombra a la imagen, a través de<code>&lt;feDropShadow&gt;</code>elemento se implementa.</p></li><li><p><strong>Ajuste de brillo y contraste (Brightness, Contrast)</strong>: ajusta el brillo y el contraste de la imagen, a través de<code>&lt;feComponentTransfer&gt;</code>elemento se implementa.</p></li><li><p><strong>Matriz de color (Color Matrix)</strong>: modifica el color de la imagen mediante operaciones de matriz de color, a través de<code>&lt;feColorMatrix&gt;</code>elemento se implementa.</p></li><li><p><strong>Modo de mezcla (Blend Mode)</strong>: mezcla dos imágenes juntas, a través de<code>&lt;feBlend&gt;</code>elemento se implementa.</p></li></ul>
 <p>El siguiente código define un filtro de desenfoque y luego lo aplica a un rectángulo relleno de rojo, haciendo que el rectángulo muestre un efecto de desenfoque.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #170;">&lt;svg <span style="color: #00c;">width</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"200"</span> <span style="color: #00c;">height</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"200"</span> xmlns<span style="color: #66cc66;">=</span><span style="color: #a11;">"http://www.w3.org/2000/svg"</span>&gt;</span><br/>
+<span style="color: #170;">&lt;svg <span style="color: #00c;">width</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"200"</span> <span style="color: #00c;">height</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"200"</span> xmlns<span style="color: #66CC66;">=</span><span style="color: #a11;">"http://www.w3.org/2000/svg"</span>&gt;</span><br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- Definir filtro de desenfoque --&gt;</span><br/>
-  <span style="color: #170;">&lt;filter <span style="color: #00c;">id</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"blur_filter"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;feGaussianBlur in<span style="color: #66cc66;">=</span><span style="color: #a11;">"SourceGraphic"</span> stdDeviation<span style="color: #66cc66;">=</span><span style="color: #a11;">"5"</span> <span style="color: #66cc66;">/</span>&gt;</span><br/>
-  <span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>filter&gt;</span><br/>
+  <span style="color: #170;">&lt;filter <span style="color: #00c;">id</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"blur_filter"</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;feGaussianBlur in<span style="color: #66CC66;">=</span><span style="color: #a11;">"SourceGraphic"</span> stdDeviation<span style="color: #66CC66;">=</span><span style="color: #a11;">"5"</span> <span style="color: #66CC66;">/</span>&gt;</span><br/>
+  <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>filter&gt;</span><br/>
   <br/>
   <span style="color: #808080; font-style: italic;">&lt;!-- Rectángulo que aplica el filtro de desenfoque --&gt;</span><br/>
-  <span style="color: #170;">&lt;rect x<span style="color: #66cc66;">=</span><span style="color: #a11;">"50"</span> y<span style="color: #66cc66;">=</span><span style="color: #a11;">"50"</span> <span style="color: #00c;">width</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"100"</span> <span style="color: #00c;">height</span><span style="color: #66cc66;">=</span><span style="color: #a11;">"80"</span> fill<span style="color: #66cc66;">=</span><span style="color: #a11;">"red"</span> filter<span style="color: #66cc66;">=</span><span style="color: #a11;">"url(#blur_filter)"</span> <span style="color: #66cc66;">/</span>&gt;</span><br/>
-<span style="color: #170;">&lt;<span style="color: #66cc66;">/</span>svg&gt;</span><br/>
+  <span style="color: #170;">&lt;rect x<span style="color: #66CC66;">=</span><span style="color: #a11;">"50"</span> y<span style="color: #66CC66;">=</span><span style="color: #a11;">"50"</span> <span style="color: #00c;">width</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"100"</span> <span style="color: #00c;">height</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"80"</span> fill<span style="color: #66CC66;">=</span><span style="color: #a11;">"red"</span> filter<span style="color: #66CC66;">=</span><span style="color: #a11;">"url(#blur_filter)"</span> <span style="color: #66CC66;">/</span>&gt;</span><br/>
+<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>svg&gt;</span><br/>
 </div><br/>
 <a class="tryitbtn" data-lang="xml" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCsKgIDwhLS0g5a6a5LmJ5qih57OK5ruk6ZWcIC0tPgoKwqAgPGZpbHRlciBpZD0iYmx1cl9maWx0ZXIiPgoKwqAgwqAgPGZlR2F1c3NpYW5CbHVyIGluPSJTb3VyY2VHcmFwaGljIiBzdGREZXZpYXRpb249IjUiIC8+CgrCoCA8L2ZpbHRlcj4KCsKgIAoKwqAgPCEtLSDlupTnlKjmqKHns4rmu6TplZznmoTnn6nlvaIgLS0+CgrCoCA8cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9InJlZCIgZmlsdGVyPSJ1cmwoI2JsdXJfZmlsdGVyKSIgLz4KCjwvc3ZnPg==');localStorage.setItem('tryit_lang','xml');">Pruébalo »</a>
 </div>
@@ -350,7 +350,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -395,7 +395,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -434,7 +434,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envía artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -653,7 +653,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

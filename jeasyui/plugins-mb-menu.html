@@ -376,7 +376,7 @@ white-space: pre-wrap;
 <h2>Uso</h2>
 <h4>Crear un menú (Menu)</h4>
 <p>Para crear un menú (menu) mediante marcado, se debe añadir la clase 'easyui-menu' a la etiqueta &lt;div&gt;. Cada elemento de menú (menu item) se crea mediante la etiqueta &lt;div&gt;. Podemos añadir el atributo 'iconCls' al elemento de menú (menu item) para definir un icono que se muestra a la izquierda del elemento. Añadir la clase 'menu-sep' al elemento de menú (menu item) producirá un separador de menú.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;div id="mm" class="easyui-menu" style="width:120px;"&gt;
     &lt;div&gt;New&lt;/div&gt;
     &lt;div&gt;
@@ -393,7 +393,7 @@ white-space: pre-wrap;
 &lt;/div&gt;
 </pre>
 <p>Crear programáticamente un menú (menu) y escuchar el evento 'onClick'.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#mm').menu({
     onClick:function(item){
         //...
@@ -402,7 +402,7 @@ $('#mm').menu({
 </pre>
 <h4>Mostrar el menú (Menu)</h4>
 <p>Cuando se crea el menú (menu), está oculto e invisible. Llame al método 'show' para mostrar el menú (menu).</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#mm').menu('show', {
     left: 200,
     top: 100
@@ -513,7 +513,7 @@ $('#mm').menu('show', {
 <tr>
 <td>onClick</td>
 <td>item</td>
-<td>Se dispara al hacer clic en un elemento de menú (menu item). El siguiente ejemplo demuestra cómo manejar los clics en todos los elementos de menú:<pre style="color:#006600">
+<td>Se dispara al hacer clic en un elemento de menú (menu item). El siguiente ejemplo demuestra cómo manejar los clics en todos los elementos de menú:<pre style="color:#0053A6">
 &lt;div class="easyui-menu" data-options="onClick:menuHandler" style="width:120px;"&gt;
     &lt;div data-options="name:'new'"&gt;New&lt;/div&gt;
     &lt;div data-options="name:'save',iconCls:'icon-save'"&gt;Save&lt;/div&gt;
@@ -560,7 +560,7 @@ $('#mm').menu('show', {
 <tr>
 <td>getItem</td>
 <td>itemEl</td>
-<td>Obtiene las propiedades del elemento de menú (menu item) que contienen el atributo 'target' (que indica el elemento DOM del elemento). El siguiente ejemplo demuestra cómo obtener el elemento especificado por id:<pre style="color:#006600">
+<td>Obtiene las propiedades del elemento de menú (menu item) que contienen el atributo 'target' (que indica el elemento DOM del elemento). El siguiente ejemplo demuestra cómo obtener el elemento especificado por id:<pre style="color:#0053A6">
 &lt;div id="mm" class="easyui-menu" style="width:120px"&gt;
     &lt;div&gt;New&lt;/div&gt;
     &lt;div id="m-open"&gt;Open&lt;/div&gt;
@@ -577,7 +577,7 @@ console.log(item);
 <td>setText</td>
 <td>param</td>
 <td>Establece el texto para el elemento de menú (menu item) especificado. El parámetro 'param' contiene dos propiedades:<br/>target: el objeto DOM, el elemento de menú (menu item) que se va a establecer.<br/>text: cadena, el nuevo valor de texto.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 var item = $('#mm').menu('findItem', 'Save');
 $('#mm').menu('setText', {
     target: item.target,
@@ -590,7 +590,7 @@ $('#mm').menu('setText', {
 <td>setIcon</td>
 <td>param</td>
 <td>Establece el icono para el elemento de menú (menu item) especificado. El parámetro 'param' contiene dos propiedades:<br/>target: el objeto DOM, es decir, el elemento de menú (menu item).<br/>iconCls: la clase CSS del nuevo icono.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#mm').menu('setIcon', {
     target: $('#m-open')[0],
     iconCls: 'icon-closed'
@@ -601,7 +601,7 @@ $('#mm').menu('setIcon', {
 <tr>
 <td>findItem</td>
 <td>text</td>
-<td>Encuentra el elemento de menú (menu item) especificado y devuelve un objeto igual al del método getItem.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Encuentra el elemento de menú (menu item) especificado y devuelve un objeto igual al del método getItem.<br/>Ejemplo de código:<pre style="color:#0053A6">
 // find 'Open' item and disable it
 var item = $('#mm').menu('findItem', 'Open');
 $('#mm').menu('disableItem', item.target);
@@ -611,7 +611,7 @@ $('#mm').menu('disableItem', item.target);
 <tr>
 <td>appendItem</td>
 <td>options</td>
-<td>Agrega un nuevo elemento de menú (menu item). El parámetro 'param' indica las propiedades del nuevo elemento. De forma predeterminada, el nuevo elemento se agregará como un elemento de menú (menu item) de nivel superior. Si se necesita agregar un subelemento de menú, debe establecerse la propiedad 'parent' para indicar el elemento padre que ya tiene subelementos.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Agrega un nuevo elemento de menú (menu item). El parámetro 'param' indica las propiedades del nuevo elemento. De forma predeterminada, el nuevo elemento se agregará como un elemento de menú (menu item) de nivel superior. Si se necesita agregar un subelemento de menú, debe establecerse la propiedad 'parent' para indicar el elemento padre que ya tiene subelementos.<br/>Ejemplo de código:<pre style="color:#0053A6">
 // append a top menu item
 $('#mm').menu('appendItem', {
     text: 'New Item',
@@ -684,7 +684,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -729,7 +729,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -768,7 +768,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Método para obtener el código de invitación de registro</a></p>
@@ -987,7 +987,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

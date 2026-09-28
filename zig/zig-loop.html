@@ -269,8 +269,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #05a;">const</span> std <span style="color: #000080;">=</span> @import<span style="color: #008000;">(</span><span style="color: #a11;">"std"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
 pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #05a;">void</span> <span style="color: #008000;">{</span><br/>
-    var i<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">&lt;</span> <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>i <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+    var i<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">&lt;</span> <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>i <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std.<span style="color: #007788;">debug</span>.<span style="color: #007788;">print</span><span style="color: #008000;">(</span><span style="color: #a11;">"i: {}<span style="color: #000099; font-weight: bold;">\n</span>"</span>, .<span style="color: #008000;">{</span>i<span style="color: #008000;">}</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -303,11 +303,11 @@ i: 4</pre>
 <span style="color: #05a;">const</span> std <span style="color: #000080;">=</span> @import<span style="color: #008000;">(</span><span style="color: #a11;">"std"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
 pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #05a;">void</span> <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a;">const</span> array <span style="color: #000080;">=</span> <span style="color: #008000;">[</span><span style="color: #0000dd;">5</span><span style="color: #008000;">]</span>i32<span style="color: #008000;">{</span> <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">2</span>, <span style="color: #0000dd;">3</span>, <span style="color: #0000dd;">4</span>, <span style="color: #0000dd;">5</span> <span style="color: #008000;">}</span><span style="color: #008080;">;</span><br/>
-    var index<span style="color: #008080;">:</span> usize <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// La variable de índice necesita declarar su tipo</span><br/>
+    <span style="color: #05a;">const</span> array <span style="color: #000080;">=</span> <span style="color: #008000;">[</span><span style="color: #0000DD;">5</span><span style="color: #008000;">]</span>i32<span style="color: #008000;">{</span> <span style="color: #0000DD;">1</span>, <span style="color: #0000DD;">2</span>, <span style="color: #0000DD;">3</span>, <span style="color: #0000DD;">4</span>, <span style="color: #0000DD;">5</span> <span style="color: #008000;">}</span><span style="color: #008080;">;</span><br/>
+    var index<span style="color: #008080;">:</span> usize <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// La variable de índice necesita declarar su tipo</span><br/>
     <span style="color: #05a;">for</span> <span style="color: #008000;">(</span>array<span style="color: #008000;">)</span> <span style="color: #000040;">|</span>item<span style="color: #000040;">|</span> <span style="color: #008000;">{</span><br/>
         std.<span style="color: #007788;">debug</span>.<span style="color: #007788;">print</span><span style="color: #008000;">(</span><span style="color: #a11;">"index: {}, item: {}<span style="color: #000099; font-weight: bold;">\n</span>"</span>, .<span style="color: #008000;">{</span> index, item <span style="color: #008000;">}</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-        index <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Actualizar el índice</span><br/>
+        index <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Actualizar el índice</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
@@ -336,12 +336,12 @@ index: 4, item: 5</pre>
 <span style="color: #05a;">const</span> std <span style="color: #000080;">=</span> @import<span style="color: #008000;">(</span><span style="color: #a11;">"std"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
 pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #05a;">void</span> <span style="color: #008000;">{</span><br/>
-    var i<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">&lt;</span> <span style="color: #0000dd;">10</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>i <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">==</span> <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+    var i<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">&lt;</span> <span style="color: #0000DD;">10</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>i <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">==</span> <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
             <span style="color: #05a;">continue</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Omitir la iteración en la que i es igual a 5</span><br/>
         <span style="color: #008000;">}</span><br/>
-        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">==</span> <span style="color: #0000dd;">8</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>i <span style="color: #000080;">==</span> <span style="color: #0000DD;">8</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
             <span style="color: #05a;">break</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Terminar el bucle</span><br/>
         <span style="color: #008000;">}</span><br/>
         std.<span style="color: #007788;">debug</span>.<span style="color: #007788;">print</span><span style="color: #008000;">(</span><span style="color: #a11;">"i: {}<span style="color: #000099; font-weight: bold;">\n</span>"</span>, .<span style="color: #008000;">{</span>i<span style="color: #008000;">}</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
@@ -379,9 +379,9 @@ pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)
     <span style="color: #05a;">const</span> letters <span style="color: #000080;">=</span> <span style="color: #008000;">[</span>_<span style="color: #008000;">]</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span><span style="color: #05a;">const</span> u8<span style="color: #008000;">{</span> <span style="color: #a11;">"A"</span>, <span style="color: #a11;">"B"</span>, <span style="color: #a11;">"C"</span> <span style="color: #008000;">}</span><span style="color: #008080;">;</span><br/>
     <span style="color: #666666;">// Recorrer el array</span><br/>
     <span style="color: #05a;">for</span> <span style="color: #008000;">(</span>letters<span style="color: #008000;">)</span> <span style="color: #000040;">|</span>letter<span style="color: #000040;">|</span> <span style="color: #008000;">{</span><br/>
-        var count<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Declarar un contador</span><br/>
+        var count<span style="color: #008080;">:</span> i32 <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Declarar un contador</span><br/>
         <span style="color: #666666;">// Usar un bucle while para imprimir cada letra y el contador</span><br/>
-        <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>count <span style="color: #000080;">&lt;</span> <span style="color: #0000dd;">3</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>count <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+        <span style="color: #05a;">while</span> <span style="color: #008000;">(</span>count <span style="color: #000080;">&lt;</span> <span style="color: #0000DD;">3</span><span style="color: #008000;">)</span> <span style="color: #008080;">:</span> <span style="color: #008000;">(</span>count <span style="color: #000040;">+</span><span style="color: #000080;">=</span> <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
             std.<span style="color: #007788;">debug</span>.<span style="color: #007788;">print</span><span style="color: #008000;">(</span><span style="color: #a11;">"{s} - {}<span style="color: #000099; font-weight: bold;">\n</span>"</span>, .<span style="color: #008000;">{</span> letter, count <span style="color: #008000;">}</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
         <span style="color: #008000;">}</span><br/>
     <span style="color: #008000;">}</span><br/>
@@ -415,7 +415,7 @@ pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)
 <h3>Bucle de rango</h3><p>Zig también te permite usar rangos para hacer bucles, lo que puede simplificar el código en algunos casos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 pub fn main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #05a;">void</span> <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #0000dd;">0</span>..<span style="color: #0000dd;">10</span><span style="color: #008000;">)</span> <span style="color: #000040;">|</span>i<span style="color: #000040;">|</span> <span style="color: #008000;">{</span><br/>
+    <span style="color: #05a;">for</span> <span style="color: #008000;">(</span><span style="color: #0000DD;">0</span>..<span style="color: #0000DD;">10</span><span style="color: #008000;">)</span> <span style="color: #000040;">|</span>i<span style="color: #000040;">|</span> <span style="color: #008000;">{</span><br/>
         std.<span style="color: #007788;">debug</span>.<span style="color: #007788;">print</span><span style="color: #008000;">(</span><span style="color: #a11;">"i: {}<span style="color: #000099; font-weight: bold;">\n</span>"</span>, .<span style="color: #008000;">{</span>i<span style="color: #008000;">}</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -465,7 +465,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -510,7 +510,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -549,7 +549,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar un artículo</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -768,7 +768,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

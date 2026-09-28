@@ -316,29 +316,29 @@ var 数组名 [行数][列数]元素类型 = [行数][列数]元素类型{初始
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/go-array-2021-01-19.png"/></p>
 <p>A los elementos de un arreglo bidimensional se puede acceder mediante<span class="marked">a[ i ][ j ]</span>para acceder.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Step 1: 创建数组</span><br/>
     values <span style="color: #339933;">:=</span> <span style="color: #339933;">[][]</span><span style="color: #993333;">int</span><span style="color: #339933;">{}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Step 2: 使用 append() 函数向空的二维数组添加两行一维数组</span><br/>
-    row1 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">}</span><br/>
-    row2 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">}</span><br/>
+    row1 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">}</span><br/>
+    row2 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">6</span><span style="color: #339933;">}</span><br/>
     values <span style="color: #339933;">=</span> append<span style="color: #339933;">(</span>values<span style="color: #339933;">,</span> row1<span style="color: #339933;">)</span><br/>
     values <span style="color: #339933;">=</span> append<span style="color: #339933;">(</span>values<span style="color: #339933;">,</span> row2<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Step 3: 显示两行数据</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Row 1"</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">])</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Row 2"</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Row 1"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Row 2"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">])</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Step 4: 访问第一个元素</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"第一个元素为："</span><span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"第一个元素为："</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span>values<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">])</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el ejemplo anterior es:</p>
@@ -364,19 +364,19 @@ Row 2
 </pre></blockquote>
 <p>El siguiente ejemplo inicializa un arreglo bidimensional de 2 filas y 2 columnas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建二维数组</span><br/>
-    sites <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><span style="color: #339933;">{}</span><br/>
+    sites <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><span style="color: #339933;">{}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// 向二维数组添加元素</span><br/>
-    sites<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Google"</span><br/>
-    sites<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Runoob"</span><br/>
-    sites<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Taobao"</span><br/>
-    sites<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"Weibo"</span><br/>
+    sites<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Google"</span><br/>
+    sites<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Runoob"</span><br/>
+    sites<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Taobao"</span><br/>
+    sites<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"Weibo"</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// 显示结果</span><br/>
     fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>sites<span style="color: #339933;">)</span><br/>
@@ -395,19 +395,19 @@ var value int = a[2][3]
 <p>El ejemplo anterior accede al cuarto elemento de la tercera fila del arreglo bidimensional val.</p>
 <p>Se pueden usar bucles anidados para mostrar los elementos de un arreglo bidimensional:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
    <span style="color: #666666; font-style: italic;">/* 数组 - 5 行 2 列*/</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> a <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">},{</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span><span style="color: #cc66cc;">8</span><span style="color: #339933;">}}</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span><span style="color: #339933;">,</span> j <span style="color: #993333;">int</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> a <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">,</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span><span style="color: #CC66CC;">6</span><span style="color: #339933;">},{</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span><span style="color: #CC66CC;">8</span><span style="color: #339933;">}}</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span><span style="color: #339933;">,</span> j <span style="color: #993333;">int</span><br/>
 <br/>
    <span style="color: #666666; font-style: italic;">/* 输出数组元素 */</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">for</span>  <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">5</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-      <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">2</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-         fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"a[%d][%d] = %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span>j<span style="color: #339933;">,</span> a<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">)</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">for</span>  <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">5</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+      <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">2</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+         fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"a[%d][%d] = %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span>j<span style="color: #339933;">,</span> a<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">)</span><br/>
       <span style="color: #339933;">}</span><br/>
    <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -425,18 +425,18 @@ a[4][0] = 4
 a[4][1] = 8
 </pre><p>El siguiente ejemplo crea un arreglo multidimensional con distinta cantidad de elementos en cada dimensión:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建空的二维数组</span><br/>
     animals <span style="color: #339933;">:=</span> <span style="color: #339933;">[][]</span><span style="color: #993333;">string</span><span style="color: #339933;">{}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// 创建三一维数组，各数组长度不同</span><br/>
-    row1 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">"fish"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"shark"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"eel"</span><span style="color: #339933;">}</span><br/>
-    row2 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">"bird"</span><span style="color: #339933;">}</span><br/>
-    row3 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">"lizard"</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">"salamander"</span><span style="color: #339933;">}</span><br/>
+    row1 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">"fish"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"shark"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"eel"</span><span style="color: #339933;">}</span><br/>
+    row2 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">"bird"</span><span style="color: #339933;">}</span><br/>
+    row3 <span style="color: #339933;">:=</span> <span style="color: #339933;">[]</span><span style="color: #993333;">string</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">"lizard"</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">"salamander"</span><span style="color: #339933;">}</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// 使用 append() 函数将一维数组添加到二维数组中</span><br/>
     animals <span style="color: #339933;">=</span> append<span style="color: #339933;">(</span>animals<span style="color: #339933;">,</span> row1<span style="color: #339933;">)</span><br/>
@@ -444,8 +444,8 @@ a[4][1] = 8
     animals <span style="color: #339933;">=</span> append<span style="color: #339933;">(</span>animals<span style="color: #339933;">,</span> row3<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// 循环输出</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> animals <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Row: %v<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> animals <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Row: %v<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">)</span><br/>
         fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>animals<span style="color: #339933;">[</span>i<span style="color: #339933;">])</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -462,30 +462,30 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建一个3x3的矩阵</span><br/>
-    matrix <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">7</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">9</span><span style="color: #339933;">},</span><br/>
+    matrix <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">6</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">7</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">9</span><span style="color: #339933;">},</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 访问单个元素</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"第一行第二列:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 2</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"第三行第三列:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">])</span> <span style="color: #666666; font-style: italic;">// 输出: 9</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"第一行第二列:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 2</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"第三行第三列:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">])</span> <span style="color: #666666; font-style: italic;">// 输出: 9</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 访问整行</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"第二行:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: [4 5 6]</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"第二行:"</span><span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: [4 5 6]</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 遍历所有元素</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"<span style="color: #000099; font-weight: bold;">\n</span>遍历所有元素:"</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"matrix[%d][%d] = %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> j<span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"<span style="color: #000099; font-weight: bold;">\n</span>遍历所有元素:"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"matrix[%d][%d] = %d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> i<span style="color: #339933;">,</span> j<span style="color: #339933;">,</span> matrix<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
         <span style="color: #339933;">}</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -495,27 +495,27 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建一个2x2的零值矩阵</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> grid <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> grid <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
     <br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"修改前的矩阵:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"修改前的矩阵:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 修改特定位置的元素</span><br/>
-    grid<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">10</span><br/>
-    grid<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">20</span><br/>
-    grid<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">30</span><br/>
-    grid<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">40</span><br/>
+    grid<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">10</span><br/>
+    grid<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">20</span><br/>
+    grid<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">30</span><br/>
+    grid<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">40</span><br/>
     <br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"修改后的矩阵:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"修改后的矩阵:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 批量修改一行</span><br/>
-    grid<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">100</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">200</span><span style="color: #339933;">}</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"修改第一行后:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
+    grid<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">100</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">200</span><span style="color: #339933;">}</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"修改第一行后:"</span><span style="color: #339933;">,</span> grid<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -525,40 +525,40 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 声明一个2x3x4的三维数组</span><br/>
     <span style="color: #666666; font-style: italic;">// 可以理解为：2个平面，每个平面有3行4列</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> cube <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> cube <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 初始化三维数组</span><br/>
-    cube <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
+    cube <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
         <span style="color: #339933;">{</span> <span style="color: #666666; font-style: italic;">// 第一个平面</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">},</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">7</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">},</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">9</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">10</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">11</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">12</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">6</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">7</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">9</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">10</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">11</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">12</span><span style="color: #339933;">},</span><br/>
         <span style="color: #339933;">},</span><br/>
         <span style="color: #339933;">{</span> <span style="color: #666666; font-style: italic;">// 第二个平面</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">13</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">14</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">15</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">16</span><span style="color: #339933;">},</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">17</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">18</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">19</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">20</span><span style="color: #339933;">},</span><br/>
-            <span style="color: #339933;">{</span><span style="color: #cc66cc;">21</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">22</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">23</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">24</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">13</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">14</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">15</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">16</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">17</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">18</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">19</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">20</span><span style="color: #339933;">},</span><br/>
+            <span style="color: #339933;">{</span><span style="color: #CC66CC;">21</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">22</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">23</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">24</span><span style="color: #339933;">},</span><br/>
         <span style="color: #339933;">},</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 访问三维数组元素</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"cube[0][1][2] ="</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 7</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"cube[1][2][3] ="</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 24</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"cube[0][1][2] ="</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 7</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"cube[1][2][3] ="</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">])</span>  <span style="color: #666666; font-style: italic;">// 输出: 24</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 遍历三维数组</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"<span style="color: #000099; font-weight: bold;">\n</span>三维数组内容:"</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">2</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"平面 %d:<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">)</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            <span style="color: #b1b100; font-weight: bold;">for</span> k <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> k &lt; <span style="color: #cc66cc;">4</span><span style="color: #339933;">;</span> k<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"%3d "</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">][</span>k<span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"<span style="color: #000099; font-weight: bold;">\n</span>三维数组内容:"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">2</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"平面 %d:<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            <span style="color: #B1B100; font-weight: bold;">for</span> k <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> k &lt; <span style="color: #CC66CC;">4</span><span style="color: #339933;">;</span> k<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"%3d "</span><span style="color: #339933;">,</span> cube<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">][</span>k<span style="color: #339933;">])</span><br/>
             <span style="color: #339933;">}</span><br/>
             fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">()</span><br/>
         <span style="color: #339933;">}</span><br/>
@@ -575,25 +575,25 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建一个二维数组</span><br/>
-    scores <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">85</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">90</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">78</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">92</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">88</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">76</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">95</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">89</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">92</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">85</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">88</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">90</span><span style="color: #339933;">},</span><br/>
+    scores <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">85</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">90</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">78</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">92</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">88</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">76</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">95</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">89</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">92</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">85</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">88</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">90</span><span style="color: #339933;">},</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"学生成绩表:"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"学生成绩表:"</span><span style="color: #339933;">)</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 使用 range 遍历二维数组</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span><span style="color: #339933;">,</span> row <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> scores <span style="color: #339933;">{</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"学生 %d 的成绩: "</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">+</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">)</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j<span style="color: #339933;">,</span> score <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> row <span style="color: #339933;">{</span><br/>
-            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"%d "</span><span style="color: #339933;">,</span> score<span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span><span style="color: #339933;">,</span> row <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> scores <span style="color: #339933;">{</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"学生 %d 的成绩: "</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">+</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j<span style="color: #339933;">,</span> score <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> row <span style="color: #339933;">{</span><br/>
+            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"%d "</span><span style="color: #339933;">,</span> score<span style="color: #339933;">)</span><br/>
             <span style="color: #666666; font-style: italic;">// 如果需要索引和值都使用</span><br/>
             _ <span style="color: #339933;">=</span> j <span style="color: #666666; font-style: italic;">// 避免未使用变量警告</span><br/>
         <span style="color: #339933;">}</span><br/>
@@ -601,15 +601,15 @@ Row: 2
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 只关心值，不关心索引</span><br/>
-    total <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><br/>
-    count <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> row <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> scores <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> score <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> row <span style="color: #339933;">{</span><br/>
+    total <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><br/>
+    count <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> row <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> scores <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> score <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> row <span style="color: #339933;">{</span><br/>
             total <span style="color: #339933;">+=</span> score<br/>
             count<span style="color: #339933;">++</span><br/>
         <span style="color: #339933;">}</span><br/>
     <span style="color: #339933;">}</span><br/>
-    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"<span style="color: #000099; font-weight: bold;">\n</span>平均分: %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="color: #993333;">float64</span><span style="color: #339933;">(</span>total<span style="color: #339933;">)</span><span style="color: #339933;">/</span><span style="color: #993333;">float64</span><span style="color: #339933;">(</span>count<span style="color: #339933;">))</span><br/>
+    fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"<span style="color: #000099; font-weight: bold;">\n</span>平均分: %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="color: #993333;">float64</span><span style="color: #339933;">(</span>total<span style="color: #339933;">)</span><span style="color: #339933;">/</span><span style="color: #993333;">float64</span><span style="color: #339933;">(</span>count<span style="color: #339933;">))</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -617,32 +617,32 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建一个不规则的多维数组</span><br/>
-    jagged <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">},</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">7</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">9</span><span style="color: #339933;">},</span> <span style="color: #666666; font-style: italic;">// 注意：这里会编译错误，因为每行必须长度一致</span><br/>
+    jagged <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">},</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">6</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">7</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">9</span><span style="color: #339933;">},</span> <span style="color: #666666; font-style: italic;">// 注意：这里会编译错误，因为每行必须长度一致</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 正确的示例：获取数组维度</span><br/>
-    matrix <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{}</span><br/>
+    matrix <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 获取行数</span><br/>
     rows <span style="color: #339933;">:=</span> <span style="color: #000066;">len</span><span style="color: #339933;">(</span>matrix<span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"行数:"</span><span style="color: #339933;">,</span> rows<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 4</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"行数:"</span><span style="color: #339933;">,</span> rows<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 4</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 获取第一行的列数（所有行长度相同）</span><br/>
-    cols <span style="color: #339933;">:=</span> <span style="color: #000066;">len</span><span style="color: #339933;">(</span>matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">])</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"列数:"</span><span style="color: #339933;">,</span> cols<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 5</span><br/>
+    cols <span style="color: #339933;">:=</span> <span style="color: #000066;">len</span><span style="color: #339933;">(</span>matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">])</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"列数:"</span><span style="color: #339933;">,</span> cols<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 5</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 获取总元素数</span><br/>
     totalElements <span style="color: #339933;">:=</span> rows <span style="color: #339933;">*</span> cols<br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"总元素数:"</span><span style="color: #339933;">,</span> totalElements<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 20</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"总元素数:"</span><span style="color: #339933;">,</span> totalElements<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// 输出: 20</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -650,19 +650,19 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// 创建两个相同的二维数组</span><br/>
-    a <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">}}</span><br/>
-    b <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">}}</span><br/>
-    c <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">}}</span><br/>
+    a <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">}}</span><br/>
+    b <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">}}</span><br/>
+    c <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">}}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// 数组可以直接比较（只有当维度完全相同时）</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"a == b:"</span><span style="color: #339933;">,</span> a <span style="color: #339933;">==</span> b<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: true</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"a == c:"</span><span style="color: #339933;">,</span> a <span style="color: #339933;">==</span> c<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: false</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"a == b:"</span><span style="color: #339933;">,</span> a <span style="color: #339933;">==</span> b<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: true</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"a == c:"</span><span style="color: #339933;">,</span> a <span style="color: #339933;">==</span> c<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Salida: false</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Nota: los arrays de diferentes dimensiones no se pueden comparar</span><br/>
     <span style="color: #666666; font-style: italic;">// d := [2][3]int{{1, 2, 3}, {4, 5, 6}}</span><br/>
@@ -676,38 +676,38 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Inicializar un tablero de tres en raya de 3x3</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> board <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> board <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">string</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Inicializar vacío</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            board<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">" "</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            board<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">" "</span><br/>
         <span style="color: #339933;">}</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Simular jugada</span><br/>
-    board<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"X"</span><br/>
-    board<span style="color: #339933;">[</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"O"</span><br/>
-    board<span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">"X"</span><br/>
+    board<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"X"</span><br/>
+    board<span style="color: #339933;">[</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"O"</span><br/>
+    board<span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">"X"</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Imprimir tablero</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Tablero de tres en raya:"</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">" %s "</span><span style="color: #339933;">,</span> board<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
-            <span style="color: #b1b100; font-weight: bold;">if</span> j &lt; <span style="color: #cc66cc;">2</span> <span style="color: #339933;">{</span><br/>
-                fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"|"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Tablero de tres en raya:"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">" %s "</span><span style="color: #339933;">,</span> board<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
+            <span style="color: #B1B100; font-weight: bold;">if</span> j &lt; <span style="color: #CC66CC;">2</span> <span style="color: #339933;">{</span><br/>
+                fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"|"</span><span style="color: #339933;">)</span><br/>
             <span style="color: #339933;">}</span><br/>
         <span style="color: #339933;">}</span><br/>
         fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">()</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">if</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">2</span> <span style="color: #339933;">{</span><br/>
-            fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"---+---+---"</span><span style="color: #339933;">)</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">if</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">2</span> <span style="color: #339933;">{</span><br/>
+            fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"---+---+---"</span><span style="color: #339933;">)</span><br/>
         <span style="color: #339933;">}</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -717,41 +717,41 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Definir: 3 estudiantes, cada uno con 4 cursos</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> grades <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">float64</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> grades <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">float64</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Ingresar calificaciones de estudiantes</span><br/>
-    grades <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">float64</span><span style="color: #339933;">{</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">85</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">90</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">78</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">92</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 1</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">88</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">76</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">95</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">89</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 2</span><br/>
-        <span style="color: #339933;">{</span><span style="color: #cc66cc;">92</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">85</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">88</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">90</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 3</span><br/>
+    grades <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">]</span><span style="color: #993333;">float64</span><span style="color: #339933;">{</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">85</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">90</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">78</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">92</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 1</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">88</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">76</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">95</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">89</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 2</span><br/>
+        <span style="color: #339933;">{</span><span style="color: #CC66CC;">92</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">85</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">88</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">90</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">},</span>  <span style="color: #666666; font-style: italic;">// Calificaciones del estudiante 3</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Calcular el promedio de cada estudiante</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Estadísticas de calificaciones de estudiantes:"</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span><span style="color: #339933;">,</span> studentGrades <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> grades <span style="color: #339933;">{</span><br/>
-        sum <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> grade <span style="color: #339933;">:=</span> <span style="color: #b1b100; font-weight: bold;">range</span> studentGrades <span style="color: #339933;">{</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Estadísticas de calificaciones de estudiantes:"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span><span style="color: #339933;">,</span> studentGrades <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> grades <span style="color: #339933;">{</span><br/>
+        sum <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> _<span style="color: #339933;">,</span> grade <span style="color: #339933;">:=</span> <span style="color: #B1B100; font-weight: bold;">range</span> studentGrades <span style="color: #339933;">{</span><br/>
             sum <span style="color: #339933;">+=</span> grade<br/>
         <span style="color: #339933;">}</span><br/>
         average <span style="color: #339933;">:=</span> sum <span style="color: #339933;">/</span> <span style="color: #993333;">float64</span><span style="color: #339933;">(</span><span style="color: #000066;">len</span><span style="color: #339933;">(</span>studentGrades<span style="color: #339933;">))</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Estudiante %d: Promedio = %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">+</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> average<span style="color: #339933;">)</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Estudiante %d: Promedio = %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> <span style="">i</span><span style="color: #339933;">+</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> average<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Calcular el promedio de cada curso</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"<span style="color: #000099; font-weight: bold;">\n</span>Promedio de los cursos:</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">4</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        sum <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"<span style="color: #000099; font-weight: bold;">\n</span>Promedio de los cursos:</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">4</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        sum <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
             sum <span style="color: #339933;">+=</span> grades<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span><br/>
         <span style="color: #339933;">}</span><br/>
-        average <span style="color: #339933;">:=</span> sum <span style="color: #339933;">/</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">0</span><br/>
-        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Curso %d: Promedio = %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> j<span style="color: #339933;">+</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> average<span style="color: #339933;">)</span><br/>
+        average <span style="color: #339933;">:=</span> sum <span style="color: #339933;">/</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">0</span><br/>
+        fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Curso %d: Promedio = %.2f<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> j<span style="color: #339933;">+</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> average<span style="color: #339933;">)</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
@@ -760,34 +760,34 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Simular una imagen en escala de grises simple de 3x3</span><br/>
     <span style="color: #666666; font-style: italic;">// Rango de valores de cada píxel: 0 (negro) ~ 255 (blanco)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> image <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> image <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Inicializar la imagen (un degradado simple)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            image<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">(</span><span style="">i</span> <span style="color: #339933;">+</span> j<span style="color: #339933;">)</span> <span style="color: #339933;">*</span> <span style="color: #cc66cc;">50</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            image<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">(</span><span style="">i</span> <span style="color: #339933;">+</span> j<span style="color: #339933;">)</span> <span style="color: #339933;">*</span> <span style="color: #CC66CC;">50</span><br/>
         <span style="color: #339933;">}</span><br/>
     <span style="color: #339933;">}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Mostrar la imagen original</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Imagen original:"</span><span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Imagen original:"</span><span style="color: #339933;">)</span><br/>
     displayImage<span style="color: #339933;">(</span>image<span style="color: #339933;">)</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Procesamiento de imagen: aumentar brillo</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"<span style="color: #000099; font-weight: bold;">\n</span>Imagen con brillo aumentado:"</span><span style="color: #339933;">)</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"<span style="color: #000099; font-weight: bold;">\n</span>Imagen con brillo aumentado:"</span><span style="color: #339933;">)</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
             <span style="color: #666666; font-style: italic;">// Aumentar el brillo, pero sin superar 255</span><br/>
-            newValue <span style="color: #339933;">:=</span> image<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">+</span> <span style="color: #cc66cc;">50</span><br/>
-            <span style="color: #b1b100; font-weight: bold;">if</span> newValue &gt; <span style="color: #cc66cc;">255</span> <span style="color: #339933;">{</span><br/>
-                newValue <span style="color: #339933;">=</span> <span style="color: #cc66cc;">255</span><br/>
+            newValue <span style="color: #339933;">:=</span> image<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">+</span> <span style="color: #CC66CC;">50</span><br/>
+            <span style="color: #B1B100; font-weight: bold;">if</span> newValue &gt; <span style="color: #CC66CC;">255</span> <span style="color: #339933;">{</span><br/>
+                newValue <span style="color: #339933;">=</span> <span style="color: #CC66CC;">255</span><br/>
             <span style="color: #339933;">}</span><br/>
             image<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">][</span>j<span style="color: #339933;">]</span> <span style="color: #339933;">=</span> newValue<br/>
         <span style="color: #339933;">}</span><br/>
@@ -795,10 +795,10 @@ Row: 2
     displayImage<span style="color: #339933;">(</span>image<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
-<span style="color: #993333;">func</span> displayImage<span style="color: #339933;">(</span>img <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #b1b100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #cc66cc;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #cc66cc;">"%3d "</span><span style="color: #339933;">,</span> img<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
+<span style="color: #993333;">func</span> displayImage<span style="color: #339933;">(</span>img <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #B1B100; font-weight: bold;">for</span> j <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> j &lt; <span style="color: #CC66CC;">3</span><span style="color: #339933;">;</span> j<span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+            fmt<span style="color: #339933;">.</span>Printf<span style="color: #339933;">(</span><span style="color: #CC66CC;">"%3d "</span><span style="color: #339933;">,</span> img<span style="color: #339933;">[</span>i<span style="color: #339933;">][</span>j<span style="color: #339933;">])</span><br/>
         <span style="color: #339933;">}</span><br/>
         fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">()</span><br/>
     <span style="color: #339933;">}</span><br/>
@@ -811,20 +811,20 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// ¡Estos dos son de tipos diferentes!</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> a <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">var</span> b <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> a <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">var</span> b <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// El siguiente código dará error de compilación</span><br/>
     <span style="color: #666666; font-style: italic;">// a = b  // Error: tipos no coinciden</span><br/>
     <br/>
-    fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Tipo de a: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> a<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [2][3]int</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Tipo de b: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> b<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [3][2]int</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Tipo de a: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> a<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [2][3]int</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Tipo de b: %T<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #339933;">,</span> b<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [3][2]int</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -832,22 +832,22 @@ Row: 2
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Los arrays son tipos de valor</span><br/>
-    original <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">}}</span><br/>
+    original <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">2</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">},</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">}}</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// La asignación crea una copia</span><br/>
     <span style="color: #000066;">copy</span> <span style="color: #339933;">:=</span> original<br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Modificar la copia no afecta al array original</span><br/>
-    <span style="color: #000066;">copy</span><span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">100</span><br/>
+    <span style="color: #000066;">copy</span><span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">100</span><br/>
     <br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Array original:"</span><span style="color: #339933;">,</span> original<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [[1 2] [3 4]]</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Array copia:"</span><span style="color: #339933;">,</span> <span style="color: #000066;">copy</span><span style="color: #339933;">)</span>      <span style="color: #666666; font-style: italic;">// [[100 2] [3 4]]</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Array original:"</span><span style="color: #339933;">,</span> original<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// [[1 2] [3 4]]</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Array copia:"</span><span style="color: #339933;">,</span> <span style="color: #000066;">copy</span><span style="color: #339933;">)</span>      <span style="color: #666666; font-style: italic;">// [[100 2] [3 4]]</span><br/>
     <br/>
     <span style="color: #666666; font-style: italic;">// Si se necesita semántica de referencia, se pueden usar slices (se presentará en artículos posteriores)</span><br/>
 <span style="color: #339933;">}</span><br/>
@@ -898,9 +898,9 @@ Row: 2
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">// Usar slices para crear una estructura irregular</span><br/>
 irregular <span style="color: #339933;">:=</span> <span style="color: #339933;">[][]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><br/>
-    <span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">},</span><br/>
-    <span style="color: #339933;">{</span><span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">},</span>          <span style="color: #666666; font-style: italic;">// Esta fila solo tiene 2 elementos</span><br/>
-    <span style="color: #339933;">{</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">7</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">9</span><span style="color: #339933;">},</span>    <span style="color: #666666; font-style: italic;">// Esta fila tiene 4 elementos</span><br/>
+    <span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">},</span><br/>
+    <span style="color: #339933;">{</span><span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">},</span>          <span style="color: #666666; font-style: italic;">// Esta fila solo tiene 2 elementos</span><br/>
+    <span style="color: #339933;">{</span><span style="color: #CC66CC;">6</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">7</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">8</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">9</span><span style="color: #339933;">},</span>    <span style="color: #666666; font-style: italic;">// Esta fila tiene 4 elementos</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -909,15 +909,15 @@ irregular <span style="color: #339933;">:=</span> <span style="color: #339933;">
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #993333;">func</span> processMatrix<span style="color: #339933;">(</span>matrix <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
+<span style="color: #993333;">func</span> processMatrix<span style="color: #339933;">(</span>matrix <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Procesar la matriz...</span><br/>
-    matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">100</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">return</span> matrix<br/>
+    matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">100</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">return</span> matrix<br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// Una mejor opción es usar punteros o slices</span><br/>
-<span style="color: #993333;">func</span> processMatrixPtr<span style="color: #339933;">(</span>matrix <span style="color: #339933;">*</span><span style="color: #339933;">[</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-    matrix<span style="color: #339933;">[</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">][</span><span style="color: #cc66cc;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">100</span><br/>
+<span style="color: #993333;">func</span> processMatrixPtr<span style="color: #339933;">(</span>matrix <span style="color: #339933;">*</span><span style="color: #339933;">[</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">3</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+    matrix<span style="color: #339933;">[</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">][</span><span style="color: #CC66CC;">0</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">100</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div>
 </div>
@@ -955,7 +955,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1000,7 +1000,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1143,7 +1143,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1362,7 +1362,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

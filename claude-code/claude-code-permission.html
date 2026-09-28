@@ -812,13 +812,13 @@ claude --permission-mode bypassPermissions</pre>
 <div class="example"><h2 class="example">Ejemplos</h2><div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># Ejemplo de hook PreToolUse: interceptar comandos peligrosos</span><br/>
-<span style="color: #007800;">COMMAND</span>=$<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #c20cb9; font-weight: bold;">cat</span> <span style="color: #000000; font-weight: bold;">|</span> jq <span style="color: #660033;">-r</span> <span style="color: #a10;">'.tool_input.command // empty'</span><span style="color: #7a0874; font-weight: bold;">)</span><br/>
+<span style="color: #007800;">COMMAND</span>=$<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #C20CB9; font-weight: bold;">cat</span> <span style="color: #000000; font-weight: bold;">|</span> jq <span style="color: #660033;">-r</span> <span style="color: #a10;">'.tool_input.command // empty'</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
-<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$COMMAND</span>"</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #c20cb9; font-weight: bold;">grep</span> <span style="color: #660033;">-qE</span> <span style="color: #a10;">'rm\s+(-[rf]+\s+)*(\/|~|\.\.\/)'</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"BLOCKED: rm on sensitive path"</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">2</span>  <span style="color: #666666; font-style: italic;"># El código de salida 2 bloquea la llamada a la herramienta</span><br/>
+<span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"<span style="color: #007800;">$COMMAND</span>"</span> <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #C20CB9; font-weight: bold;">grep</span> <span style="color: #660033;">-qE</span> <span style="color: #a10;">'rm\s+(-[rf]+\s+)*(\/|~|\.\.\/)'</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"BLOCKED: rm on sensitive path"</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">2</span>  <span style="color: #666666; font-style: italic;"># El código de salida 2 bloquea la llamada a la herramienta</span><br/>
 <span style="color: #000000; font-weight: bold;">fi</span><br/>
-<span style="color: #7a0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span>  <span style="color: #666666; font-style: italic;"># Permitir continuar</span><br/>
+<span style="color: #7A0874; font-weight: bold;">exit</span> <span style="color: #000000;">0</span>  <span style="color: #666666; font-style: italic;"># Permitir continuar</span><br/>
 </div></div>
 <blockquote><p><strong>Importante:</strong>Omitir el aviso no elude las reglas de permisos. Las reglas de Deny y ask se siguen evaluando después de que el hook devuelva "allow". Cuando un hook de bloqueo sale con el código de salida 2, detiene la llamada a la herramienta antes de que se evalúen las reglas de permisos.</p></blockquote>
 <hr/>
@@ -1019,7 +1019,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1064,7 +1064,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1103,7 +1103,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1322,7 +1322,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

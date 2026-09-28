@@ -280,36 +280,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: and_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de la instrucción AND</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Y bit a bit básico</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x0F0F</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111</span><br/>
-    <span style="color: #00007f; font-weight: bold;">and</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x0F0F</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">and</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
     <span style="color: #666666; font-style: italic;">; Resultado: eax = 0x000F         ; 0000 0000 0000 1111</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica común 1: enmascarar los 4 bits bajos (conservar los 4 bits bajos)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xAB</span>               <span style="color: #666666; font-style: italic;">; 1010 1011</span><br/>
-    <span style="color: #00007f; font-weight: bold;">and</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x0F</span>               <span style="color: #666666; font-style: italic;">; 0000 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xAB</span>               <span style="color: #666666; font-style: italic;">; 1010 1011</span><br/>
+    <span style="color: #00007F; font-weight: bold;">and</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x0F</span>               <span style="color: #666666; font-style: italic;">; 0000 1111</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 0x0B                ; 0000 1011</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica común 2: comprobar paridad (hacer AND con 1)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>                 <span style="color: #666666; font-style: italic;">; par</span><br/>
-    <span style="color: #00007f; font-weight: bold;">and</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 0 (par)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>                 <span style="color: #666666; font-style: italic;">; par</span><br/>
+    <span style="color: #00007F; font-weight: bold;">and</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 0 (par)</span><br/>
     <span style="color: #666666; font-style: italic;">; El bit final de 42 en binario es 0, 42 &amp; 1 = 0</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">43</span>                 <span style="color: #666666; font-style: italic;">; impar</span><br/>
-    <span style="color: #00007f; font-weight: bold;">and</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 1 (impar)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">43</span>                 <span style="color: #666666; font-style: italic;">; impar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">and</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 1 (impar)</span><br/>
     <span style="color: #666666; font-style: italic;">; El bit final de 43 en binario es 1, 43 &amp; 1 = 1</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica común 3: poner a cero un registro</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; Equivale a mov eax, 0, pero es más rápido y más corto</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; Equivale a mov eax, 0, pero es más rápido y más corto</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; AND establece los indicadores: CF=0, OF=0, ZF y SF según el resultado</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -321,18 +321,18 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de la instrucción OR</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Combinar indicadores</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x0F00</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 0000</span><br/>
-    <span style="color: #00007f; font-weight: bold;">or</span>  <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x0F00</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 0000</span><br/>
+    <span style="color: #00007F; font-weight: bold;">or</span>  <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 0x0FFF              ; 0000 1111 1111 1111</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Establecer un bit (poner el bit 3 a 1)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                  <span style="color: #666666; font-style: italic;">; 0000 0000</span><br/>
-    <span style="color: #00007f; font-weight: bold;">or</span>  <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x08</span>               <span style="color: #666666; font-style: italic;">; 0000 1000</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                  <span style="color: #666666; font-style: italic;">; 0000 0000</span><br/>
+    <span style="color: #00007F; font-weight: bold;">or</span>  <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x08</span>               <span style="color: #666666; font-style: italic;">; 0000 1000</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 0x8                 ; 0000 1000</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Conversión de mayúsculas a minúsculas</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'A'</span>                 <span style="color: #666666; font-style: italic;">; al = 0x41 (0100 0001)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">or</span>  <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x20</span>                <span style="color: #666666; font-style: italic;">; 0x20 = 0010 0000</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'A'</span>                 <span style="color: #666666; font-style: italic;">; al = 0x41 (0100 0001)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">or</span>  <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x20</span>                <span style="color: #666666; font-style: italic;">; 0x20 = 0010 0000</span><br/>
     <span style="color: #666666; font-style: italic;">; al = 0x61 = 'a'          ; 0110 0001</span><br/>
 </div>
 </div>
@@ -344,8 +344,8 @@ _start<span style="color: #339933;">:</span><br/>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Ejemplo de la instrucción NOT</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x0F0F0F0F</span>        <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111 ...</span><br/>
-    <span style="color: #00007f; font-weight: bold;">not</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                     <span style="color: #666666; font-style: italic;">; 1111 0000 1111 0000 ...</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x0F0F0F0F</span>        <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111 ...</span><br/>
+    <span style="color: #00007F; font-weight: bold;">not</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                     <span style="color: #666666; font-style: italic;">; 1111 0000 1111 0000 ...</span><br/>
     <span style="color: #666666; font-style: italic;">; eax = 0xF0F0F0F0</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; NOT no afecta a ningún indicador (a diferencia de AND/OR/XOR)</span><br/>
@@ -360,38 +360,38 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: xor_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de la instrucción XOR</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; O exclusiva básica</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x0F0F</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x0F0F</span>             <span style="color: #666666; font-style: italic;">; 0000 1111 0000 1111</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x00FF</span>             <span style="color: #666666; font-style: italic;">; 0000 0000 1111 1111</span><br/>
     <span style="color: #666666; font-style: italic;">; Resultado: eax = 0x0FF0         ; 0000 1111 1111 0000</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica clásica 1: poner a cero un registro (más eficiente que mov reg, 0)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; eax = 0, solo ocupa 2 bytes</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; eax = 0, solo ocupa 2 bytes</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica clásica 2: intercambiar dos registros (no se necesita un tercer registro temporal)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">100</span>                <span style="color: #666666; font-style: italic;">; eax = 100</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">200</span>                <span style="color: #666666; font-style: italic;">; ebx = 200</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span>                <span style="color: #666666; font-style: italic;">; eax = 100 xor 200</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; ebx = 200 xor (100 xor 200) = 100</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ebx</span>                <span style="color: #666666; font-style: italic;">; eax = (100 xor 200) xor 100 = 200</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">100</span>                <span style="color: #666666; font-style: italic;">; eax = 100</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">200</span>                <span style="color: #666666; font-style: italic;">; ebx = 200</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span>                <span style="color: #666666; font-style: italic;">; eax = 100 xor 200</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; ebx = 200 xor (100 xor 200) = 100</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ebx</span>                <span style="color: #666666; font-style: italic;">; eax = (100 xor 200) xor 100 = 200</span><br/>
     <span style="color: #666666; font-style: italic;">; Ahora eax = 200, ebx = 100 (¡intercambio completado!)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Técnica clásica 3: cifrado/descifrado simple</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'A'</span>                 <span style="color: #666666; font-style: italic;">; Carácter original 'A' = 0x41</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x55</span>                <span style="color: #666666; font-style: italic;">; Cifrado: al = 'A' xor 0x55</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'A'</span>                 <span style="color: #666666; font-style: italic;">; Carácter original 'A' = 0x41</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x55</span>                <span style="color: #666666; font-style: italic;">; Cifrado: al = 'A' xor 0x55</span><br/>
     <span style="color: #666666; font-style: italic;">; al ahora es un valor ilegible</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x55</span>                <span style="color: #666666; font-style: italic;">; Descifrado: aplicar xor 0x55 nuevamente para recuperar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x55</span>                <span style="color: #666666; font-style: italic;">; Descifrado: aplicar xor 0x55 nuevamente para recuperar</span><br/>
     <span style="color: #666666; font-style: italic;">; ¡al = 'A' ha vuelto!</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>El truco de intercambio con XOR es interesante, pero en las CPU modernas no es tan eficiente como usar<code>XCHG</code>instrucciones o un registro temporal. Solo conócelo, no es necesario insistir en usarlo.</p></blockquote>
@@ -411,35 +411,35 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: shift_demo.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de instrucciones de desplazamiento</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; SHL: desplazamiento lógico a la izquierda = multiplicar por una potencia de 2</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span>                 <span style="color: #666666; font-style: italic;">; eax = 10 (1010)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">shl</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 20 (10100), es decir, 10×2</span><br/>
-    <span style="color: #00007f; font-weight: bold;">shl</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">2</span>                  <span style="color: #666666; font-style: italic;">; eax = 80 (1010000), es decir, 20×4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span>                 <span style="color: #666666; font-style: italic;">; eax = 10 (1010)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">shl</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 20 (10100), es decir, 10×2</span><br/>
+    <span style="color: #00007F; font-weight: bold;">shl</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">2</span>                  <span style="color: #666666; font-style: italic;">; eax = 80 (1010000), es decir, 20×4</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; SHR: desplazamiento lógico a la derecha = división sin signo entre una potencia de 2</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">80</span>                 <span style="color: #666666; font-style: italic;">; eax = 80</span><br/>
-    <span style="color: #00007f; font-weight: bold;">shr</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">3</span>                  <span style="color: #666666; font-style: italic;">; eax = 10, es decir, 80÷8</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">80</span>                 <span style="color: #666666; font-style: italic;">; eax = 80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">shr</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">3</span>                  <span style="color: #666666; font-style: italic;">; eax = 10, es decir, 80÷8</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; SAR: desplazamiento aritmético a la derecha = división con signo entre una potencia de 2 (conserva el bit de signo)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #339933;">-</span><span style="color: #ff0000;">16</span>                <span style="color: #666666; font-style: italic;">; eax = -16 (0xFFFFFFF0)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">sar</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">2</span>                  <span style="color: #666666; font-style: italic;">; eax = -4 (0xFFFFFFFC), es decir, -16÷4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #339933;">-</span><span style="color: #FF0000;">16</span>                <span style="color: #666666; font-style: italic;">; eax = -16 (0xFFFFFFF0)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">sar</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">2</span>                  <span style="color: #666666; font-style: italic;">; eax = -4 (0xFFFFFFFC), es decir, -16÷4</span><br/>
     <span style="color: #666666; font-style: italic;">; SAR comparado con SHR:</span><br/>
     <span style="color: #666666; font-style: italic;">; Si eax = 0xFFFFFFF0 (-16), SHR daría 0x3FFFFFFC (un número positivo muy grande)</span><br/>
     <span style="color: #666666; font-style: italic;">; Mientras que SAR daría 0xFFFFFFFC (-4), conservando el bit de signo</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; El último bit desplazado fuera pasa al indicador CF</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">5</span>                  <span style="color: #666666; font-style: italic;">; 0101</span><br/>
-    <span style="color: #00007f; font-weight: bold;">shr</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 2, CF = 1 (el 1 final se desplazó fuera)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jc</span> carry_was_set            <span style="color: #666666; font-style: italic;">; Si CF=1, significa que el número original es impar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">5</span>                  <span style="color: #666666; font-style: italic;">; 0101</span><br/>
+    <span style="color: #00007F; font-weight: bold;">shr</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                  <span style="color: #666666; font-style: italic;">; eax = 2, CF = 1 (el 1 final se desplazó fuera)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jc</span> carry_was_set            <span style="color: #666666; font-style: italic;">; Si CF=1, significa que el número original es impar</span><br/>
 <br/>
 carry_was_set<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <hr/>
@@ -458,8 +458,8 @@ carry_was_set<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de rotación</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; ROL: rotación a la izquierda</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x85</span>                <span style="color: #666666; font-style: italic;">; 1000 0101</span><br/>
-    <span style="color: #00007f; font-weight: bold;">rol</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                   <span style="color: #666666; font-style: italic;">; Desplazar 1 bit a la izquierda: 0000 1011</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x85</span>                <span style="color: #666666; font-style: italic;">; 1000 0101</span><br/>
+    <span style="color: #00007F; font-weight: bold;">rol</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                   <span style="color: #666666; font-style: italic;">; Desplazar 1 bit a la izquierda: 0000 1011</span><br/>
     <span style="color: #666666; font-style: italic;">; CF = 1 (el bit más significativo se desplaza a CF)</span><br/>
     <span style="color: #666666; font-style: italic;">; Al mismo tiempo, el 1 original de CF se introduce en el bit menos significativo, formando el ciclo</span><br/>
 <br/>
@@ -467,9 +467,9 @@ carry_was_set<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; 1000 0101 -&gt; ROL 1 -&gt; 0000 1011</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; RCL: rotación a la izquierda con acarreo (CF participa en el ciclo)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">clc</span>                         <span style="color: #666666; font-style: italic;">; Limpiar CF = 0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x85</span>                <span style="color: #666666; font-style: italic;">; 1000 0101</span><br/>
-    <span style="color: #00007f; font-weight: bold;">rcl</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                   <span style="color: #666666; font-style: italic;">; CF participa: CF bit7...bit0 -&gt; CF</span><br/>
+    <span style="color: #00007F; font-weight: bold;">clc</span>                         <span style="color: #666666; font-style: italic;">; Limpiar CF = 0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x85</span>                <span style="color: #666666; font-style: italic;">; 1000 0101</span><br/>
+    <span style="color: #00007F; font-weight: bold;">rcl</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                   <span style="color: #666666; font-style: italic;">; CF participa: CF bit7...bit0 -&gt; CF</span><br/>
     <span style="color: #666666; font-style: italic;">; Resultado: 0000 1010, CF = 1</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; La rotación se usa frecuentemente en algoritmos de cifrado y operaciones de bits</span><br/>
@@ -484,48 +484,48 @@ carry_was_set<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: bit_flags.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Implementar un sistema de indicadores de bits usando operaciones lógicas</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    flags <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0</span>                  <span style="color: #666666; font-style: italic;">; 8 indicadores, inicialmente todos en 0</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    flags <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0</span>                  <span style="color: #666666; font-style: italic;">; 8 indicadores, inicialmente todos en 0</span><br/>
     <span style="color: #666666; font-style: italic;">; bit0: si está activado</span><br/>
     <span style="color: #666666; font-style: italic;">; bit1: si es visible</span><br/>
     <span style="color: #666666; font-style: italic;">; bit2: si necesita guardarse</span><br/>
     <span style="color: #666666; font-style: italic;">; bit3: si ha sido modificado</span><br/>
 <br/>
-    FLAG_ACTIVE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">1</span>           <span style="color: #666666; font-style: italic;">; 0000 0001</span><br/>
-    FLAG_VISIBLE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">2</span>          <span style="color: #666666; font-style: italic;">; 0000 0010</span><br/>
-    FLAG_NEED_SAVE <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">4</span>        <span style="color: #666666; font-style: italic;">; 0000 0100</span><br/>
-    FLAG_MODIFIED <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #ff0000;">8</span>         <span style="color: #666666; font-style: italic;">; 0000 1000</span><br/>
+    FLAG_ACTIVE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">1</span>           <span style="color: #666666; font-style: italic;">; 0000 0001</span><br/>
+    FLAG_VISIBLE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">2</span>          <span style="color: #666666; font-style: italic;">; 0000 0010</span><br/>
+    FLAG_NEED_SAVE <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">4</span>        <span style="color: #666666; font-style: italic;">; 0000 0100</span><br/>
+    FLAG_MODIFIED <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #FF0000;">8</span>         <span style="color: #666666; font-style: italic;">; 0000 1000</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Establecer indicadores: OR</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">or</span>  <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_ACTIVE         <span style="color: #666666; font-style: italic;">; Establecer bit0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">or</span>  <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_VISIBLE        <span style="color: #666666; font-style: italic;">; Establecer bit1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">or</span>  <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_ACTIVE         <span style="color: #666666; font-style: italic;">; Establecer bit0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">or</span>  <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_VISIBLE        <span style="color: #666666; font-style: italic;">; Establecer bit1</span><br/>
     <span style="color: #666666; font-style: italic;">; al = 0000 0011 = 3</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">al</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">al</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Comprobar indicadores: AND + TEST</span><br/>
-    <span style="color: #00007f; font-weight: bold;">test</span> <span style="color: #0000ff; font-weight: bold;">byte</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> FLAG_ACTIVE    <span style="color: #666666; font-style: italic;">; Probar si bit0 es 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jnz</span> is_active                     <span style="color: #666666; font-style: italic;">; ZF=0 indica que el bit es 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">test</span> <span style="color: #0000FF; font-weight: bold;">byte</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> FLAG_ACTIVE    <span style="color: #666666; font-style: italic;">; Probar si bit0 es 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jnz</span> is_active                     <span style="color: #666666; font-style: italic;">; ZF=0 indica que el bit es 1</span><br/>
 <br/>
 is_active<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Limpiar indicadores: AND + NOT</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">and</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> ~FLAG_VISIBLE       <span style="color: #666666; font-style: italic;">; Limpiar bit1 (conservar los demás bits sin cambios)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">and</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> ~FLAG_VISIBLE       <span style="color: #666666; font-style: italic;">; Limpiar bit1 (conservar los demás bits sin cambios)</span><br/>
     <span style="color: #666666; font-style: italic;">; al = 0000 0001 = 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">al</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">al</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Cambiar indicadores: XOR</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
-    <span style="color: #00007f; font-weight: bold;">xor</span> <span style="color: #46aa03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_MODIFIED       <span style="color: #666666; font-style: italic;">; Cambiar bit3</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">[</span>flags<span style="color: #009900; font-weight: bold;">]</span><br/>
+    <span style="color: #00007F; font-weight: bold;">xor</span> <span style="color: #46AA03; font-weight: bold;">al</span><span style="color: #339933;">,</span> FLAG_MODIFIED       <span style="color: #666666; font-style: italic;">; Cambiar bit3</span><br/>
     <span style="color: #666666; font-style: italic;">; Si originalmente era 0 se convierte en 1, si era 1 se convierte en 0</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>Las operaciones con indicadores de bits son muy comunes en programación de sistemas. Los núcleos de sistemas operativos, los controladores de dispositivos y los sistemas embebidos utilizan ampliamente esta técnica para gestionar estados.</p></blockquote>
@@ -563,7 +563,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -608,7 +608,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -647,7 +647,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>¡Haz clic para compartir notas!</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>¡Haz clic para compartir notas!</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -866,7 +866,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

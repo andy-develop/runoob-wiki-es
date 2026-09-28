@@ -133,23 +133,23 @@ En resumen, el diseño de bajo consumo tiene muchas ventajas y es la tendencia f
     <span style="color: #00008B; font-style: italic;">/*  library head: xxx */</span><br/>
     technology <span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">cmos</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span><br/>
     simulation  <span style="color: #5D478B;">:</span> true <span style="color: #5D478B;">;</span><br/>
-    nom_process <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span> <br/>
-    nom_temperature <span style="color: #5D478B;">:</span> <span style="color: #5D478B;">-</span><span style="color: #ff0055;">40</span><span style="color: #5D478B;">;</span>         <span style="color: #00008B; font-style: italic;">//Temperatura por defecto</span><br/>
-    nom_voltage <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.81</span><span style="color: #5D478B;">;</span>            <span style="color: #00008B; font-style: italic;">//Voltaje por defecto</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>VDD<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//Define múltiples voltajes en la lib, incluyendo las siguientes líneas</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>TVDD<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>VDDDST<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>VDDGR<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>VDDSRC<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-    voltage_map<span style="color: #9F79EE;">(</span>VSS<span style="color: #5D478B;">,</span> <span style="color: #ff0055;">0</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+    nom_process <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span> <br/>
+    nom_temperature <span style="color: #5D478B;">:</span> <span style="color: #5D478B;">-</span><span style="color: #FF0055;">40</span><span style="color: #5D478B;">;</span>         <span style="color: #00008B; font-style: italic;">//Temperatura por defecto</span><br/>
+    nom_voltage <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.81</span><span style="color: #5D478B;">;</span>            <span style="color: #00008B; font-style: italic;">//Voltaje por defecto</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>VDD<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">//Define múltiples voltajes en la lib, incluyendo las siguientes líneas</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>TVDD<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>VDDDST<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>VDDGR<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>VDDSRC<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0.81</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
+    voltage_map<span style="color: #9F79EE;">(</span>VSS<span style="color: #5D478B;">,</span> <span style="color: #FF0055;">0</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
     operating_conditions<span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"ssg0p81vm40c"</span><span style="color: #9F79EE;">)</span><span style="color: #9F79EE;">{</span>    <span style="color: #00008B; font-style: italic;">//Definición de un corner</span><br/>
-        process <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">/* SSGlobalCorner_LocalMC_MOS_MOSCAP-SSGlobalCorner_LocalMC_RES_BIP_DIO_DISRES */</span><br/>
-        temperature <span style="color: #5D478B;">:</span> <span style="color: #5D478B;">-</span><span style="color: #ff0055;">40</span><span style="color: #5D478B;">;</span><br/>
-        voltage <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.81</span><span style="color: #5D478B;">;</span><br/>
+        process <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">/* SSGlobalCorner_LocalMC_MOS_MOSCAP-SSGlobalCorner_LocalMC_RES_BIP_DIO_DISRES */</span><br/>
+        temperature <span style="color: #5D478B;">:</span> <span style="color: #5D478B;">-</span><span style="color: #FF0055;">40</span><span style="color: #5D478B;">;</span><br/>
+        voltage <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.81</span><span style="color: #5D478B;">;</span><br/>
         tree_type <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"balanced_tree"</span><span style="color: #5D478B;">;</span><br/>
     <span style="color: #9F79EE;">}</span><br/>
     default_operating_conditions <span style="color: #5D478B;">:</span> ssg0p81vm40c <span style="color: #5D478B;">;</span><br/>
-    capacitive_load_unit <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">,</span>pf<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Define la unidad de capacitancia</span><br/>
+    capacitive_load_unit <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">,</span>pf<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Define la unidad de capacitancia</span><br/>
     voltage_unit <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"1V"</span> <span style="color: #5D478B;">;</span>              <span style="color: #00008B; font-style: italic;">//Define la unidad de voltaje</span><br/>
     current_unit <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"1mA"</span> <span style="color: #5D478B;">;</span>             <span style="color: #00008B; font-style: italic;">//Define la unidad de corriente</span><br/>
     time_unit <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"1ns"</span> <span style="color: #5D478B;">;</span>                <span style="color: #00008B; font-style: italic;">//Define la unidad de tiempo</span><br/>
@@ -160,7 +160,7 @@ En resumen, el diseño de bajo consumo tiene muchas ventajas y es la tendencia f
 <h3>Información de cell</h3><p>En una library puede haber múltiples unidades funcionales básicas, declaradas con la palabra clave cell, que también contienen diversa información de potencia.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">cell</span> <span style="color: #9F79EE;">(</span>AN2D0BWP7T40P140<span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">{</span><br/>
-    area <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.392</span><span style="color: #5D478B;">;</span><br/>
+    area <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.392</span><span style="color: #5D478B;">;</span><br/>
     cell_footprint <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"an2d1"</span><span style="color: #5D478B;">;</span><br/>
     pg_pin <span style="color: #9F79EE;">(</span>VDD<span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">{</span>                <span style="color: #00008B; font-style: italic;">//Pin de alimentación</span><br/>
         pg_type <span style="color: #5D478B;">:</span> primary_power<span style="color: #5D478B;">;</span><br/>
@@ -174,7 +174,7 @@ En resumen, el diseño de bajo consumo tiene muchas ventajas y es la tendencia f
     direction <span style="color: #5D478B;">:</span> <span style="color: #A52A2A; font-weight: bold;">input</span><span style="color: #5D478B;">;</span><br/>
     related_ground_pin <span style="color: #5D478B;">:</span> VSS<span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">//Tierra del pin de entrada</span><br/>
     related_power_pin <span style="color: #5D478B;">:</span> VDD<span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Voltaje del pin de entrada</span><br/>
-    capacitance <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.000418924</span> <span style="color: #5D478B;">;</span>   <span style="color: #00008B; font-style: italic;">//Capacitancia del pin de entrada</span><br/>
+    capacitance <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.000418924</span> <span style="color: #5D478B;">;</span>   <span style="color: #00008B; font-style: italic;">//Capacitancia del pin de entrada</span><br/>
     ……  <br/>
     <span style="color: #9F79EE;">}</span><br/>
 <br/>
@@ -184,8 +184,8 @@ En resumen, el diseño de bajo consumo tiene muchas ventajas y es la tendencia f
     <span style="color: #A52A2A; font-weight: bold;">function</span> <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"(A1 A2)"</span><span style="color: #5D478B;">;</span><br/>
     related_ground_pin <span style="color: #5D478B;">:</span> VSS<span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">//Tierra del pin de salida</span><br/>
     related_power_pin <span style="color: #5D478B;">:</span> VDD<span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">//Voltaje del pin de salida</span><br/>
-    max_capacitance <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.04182</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//Capacitancia máxima del pin de salida</span><br/>
-    min_capacitance <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.00013</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//Capacitancia mínima del pin de salida</span><br/>
+    max_capacitance <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.04182</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//Capacitancia máxima del pin de salida</span><br/>
+    min_capacitance <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.00013</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//Capacitancia mínima del pin de salida</span><br/>
     ……  <br/>
   <span style="color: #9F79EE;">}</span><br/>
 </div></div><p>En este punto, si además se conoce la tasa de conmutación, se puede calcular la potencia dinámica.</p><p>La tasa de conmutación (Toggle rate, Tr) se refiere al número de conmutaciones de una señal (incluyendo señales de reloj, datos, etc.) por unidad de tiempo. Como se muestra a continuación, si la señal conmuta 4 veces en 40 ns, entonces la tasa de conmutación es Tr = 4/4ns = 0.1GHz.</p>
@@ -221,16 +221,16 @@ internal_power<span style="color: #9F79EE;">(</span><span style="color: #9F79EE;
 <h3>Información de potencia estática</h3><p>En la definición de cell, la potencia estática (potencia de fuga) se define de la siguiente manera.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
   leakage_power <span style="color: #9F79EE;">(</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">{</span><br/>
-    value <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.059561</span><span style="color: #5D478B;">;</span><br/>
+    value <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.059561</span><span style="color: #5D478B;">;</span><br/>
     related_pg_pin <span style="color: #5D478B;">:</span> VDD<span style="color: #5D478B;">;</span><br/>
   <span style="color: #9F79EE;">}</span><br/>
   leakage_power <span style="color: #9F79EE;">(</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">{</span><br/>
-    value <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.048082</span><span style="color: #5D478B;">;</span><br/>
+    value <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.048082</span><span style="color: #5D478B;">;</span><br/>
     when <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"!A1 !A2 !Z"</span><span style="color: #5D478B;">;</span><br/>
     related_pg_pin <span style="color: #5D478B;">:</span> VDD<span style="color: #5D478B;">;</span><br/>
   <span style="color: #9F79EE;">}</span><br/>
   leakage_power <span style="color: #9F79EE;">(</span><span style="color: #9F79EE;">)</span> <span style="color: #9F79EE;">{</span><br/>
-    value <span style="color: #5D478B;">:</span> <span style="color: #ff0055;">0.053318</span><span style="color: #5D478B;">;</span><br/>
+    value <span style="color: #5D478B;">:</span> <span style="color: #FF0055;">0.053318</span><span style="color: #5D478B;">;</span><br/>
     when <span style="color: #5D478B;">:</span> <span style="color: #FF00FF;">"!A1 A2 !Z"</span><span style="color: #5D478B;">;</span><br/>
     related_pg_pin <span style="color: #5D478B;">:</span> VDD<span style="color: #5D478B;">;</span><br/>
   <span style="color: #9F79EE;">}</span><br/>
@@ -261,7 +261,7 @@ En el análisis real de potencia, no se buscan manualmente los parámetros relev
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -306,7 +306,7 @@ En el análisis real de potencia, no se buscan manualmente los parámetros relev
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -345,7 +345,7 @@ En el análisis real de potencia, no se buscan manualmente los parámetros relev
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Forma de obtener el código de invitación de registro</a></p>
@@ -556,7 +556,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

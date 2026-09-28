@@ -288,7 +288,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Tomando 8 bits como ejemplo:</p>
 <div class="bit-display">
 <span style="font-size:14px;color:#888;">+5 = </span>
-<div class="bit-cell sign" style="background:#c8e6c9;color:#2e7d32;">0</div>
+<div class="bit-cell sign" style="background:#C8D7E6;color:#3D71A6;">0</div>
 <div class="bit-cell">0</div>
 <div class="bit-cell">0</div>
 <div class="bit-cell">0</div>
@@ -372,7 +372,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #e0e0e0;
 }
 .demo-panel .demo-panel h3 {
-  color: #66bb6a;
+  color: #6690BB;
   margin-top: 0;
 }
 /* 圆环容器 - 用于 Canvas 和 Plotly 图 */
@@ -481,7 +481,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 .step-arrow {
   font-size: 20px;
-  color: #66bb6a;
+  color: #6690BB;
   font-weight: bold;
 }
 /* 补码计算器输入行 */
@@ -523,8 +523,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   background: rgba(255,255,255,0.1);
 }
 .demo-btn.calc {
-  border-color: #66bb6a;
-  color: #66bb6a;
+  border-color: #6690BB;
+  color: #6690BB;
 }
 .demo-btn.reset {
   border-color: #ffb74d;
@@ -561,7 +561,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   color: #90a4ae;
 }
 .bit.one {
-  background: #2e7d32;
+  background: #3D71A6;
   color: #fff;
 }
 .bit.sign-bit {
@@ -633,7 +633,7 @@ function updateCircle() {
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
-    ctx.strokeStyle = tickVal === 0 ? '#66bb6a' : (tickVal < 0 ? '#ef5350' : '#42a5f5');
+    ctx.strokeStyle = tickVal === 0 ? '#6690BB' : (tickVal < 0 ? '#ef5350' : '#42a5f5');
     ctx.lineWidth = tickVal === 0 ? 3 : 1.5;
     ctx.stroke();
 
@@ -641,7 +641,7 @@ function updateCircle() {
     const lx = cx + (r + 16) * Math.cos(angle);
     const ly = cy + (r + 16) * Math.sin(angle);
     ctx.font = tickVal === 0 ? 'bold 11px monospace' : '10px monospace';
-    ctx.fillStyle = tickVal === 0 ? '#66bb6a' : (tickVal < 0 ? '#ef5350' : '#90a4ae');
+    ctx.fillStyle = tickVal === 0 ? '#6690BB' : (tickVal < 0 ? '#ef5350' : '#90a4ae');
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(tickVal, lx, ly);
@@ -696,7 +696,7 @@ function updateCircle() {
   ctx.fillRect(10, 26, 10, 10);
   ctx.fillStyle = '#ccc';
   ctx.fillText('正数', 24, 36);
-  ctx.fillStyle = '#66bb6a';
+  ctx.fillStyle = '#6690BB';
   ctx.fillRect(10, 42, 10, 10);
   ctx.fillStyle = '#ccc';
   ctx.fillText('0', 24, 52);
@@ -704,13 +704,13 @@ function updateCircle() {
 
 updateCircle();
 </script>
-<h3 style="color:#66bb6a;margin-top:24px;">Diagrama circular del complemento a dos con Plotly (coordenadas polares scatterpolar)</h3>
+<h3 style="color:#6690BB;margin-top:24px;">Diagrama circular del complemento a dos con Plotly (coordenadas polares scatterpolar)</h3>
 <p style="color:#90a4ae;font-size:13px;">La siguiente figura usa las coordenadas polares de Plotly.js para mostrar las 16 marcas del complemento a dos de 4 bits. Azul = zona positiva, rojo = zona negativa, verde = punto cero.</p>
 <div id="plotlyCircle" style="width:100%;max-width:500px;margin:0 auto;"></div>
 <div class="circle-legend" style="margin-bottom:16px;">
 <div class="legend-item"><div class="legend-dot" style="background:#42a5f5;"></div>Zona positiva (0 ~ +7)</div>
 <div class="legend-item"><div class="legend-dot" style="background:#ef5350;"></div>Zona negativa (-8 ~ -1)</div>
-<div class="legend-item"><div class="legend-dot" style="background:#66bb6a;"></div>Punto cero</div>
+<div class="legend-item"><div class="legend-dot" style="background:#6690BB;"></div>Punto cero</div>
 <div class="legend-item"><div class="legend-dot" style="background:#ff9800;"></div>Punto de desbordamiento (+7→-8)</div>
 </div>
 <script>
@@ -750,7 +750,7 @@ updateCircle();
 
     // 颜色编码：正数=蓝，负数=红，零=绿
     if (signedVal === 0) {
-      colors.push('#66bb6a');               // 零点绿色
+      colors.push('#6690BB');               // 零点绿色
     } else if (signedVal > 0) {
       colors.push('#42a5f5');               // 正数蓝色
     } else {
@@ -882,7 +882,7 @@ updateCircle();
 <div class="step-arrow">→</div>
 <div class="step-box">
 <div class="step-title">Sumar 1 (complemento a dos)</div>
-<div class="step-value" style="color:#2e7d32;">11101100</div>
+<div class="step-value" style="color:#3D71A6;">11101100</div>
 </div>
 </div>
 <p>Verificación: el complemento a dos de -20 es 11101100, interpretado sin signo = 236.</p>
@@ -894,10 +894,10 @@ updateCircle();
 <tr><td>+5</td><td>00000101</td><td>00000101</td><td>00000101</td></tr>
 <tr><td>-5</td><td>10000101</td><td>11111010</td><td>11111011</td></tr>
 <tr><td>+0</td><td>00000000</td><td>00000000</td><td>00000000</td></tr>
-<tr><td>-0</td><td style="color:#c62828;">10000000</td><td style="color:#c62828;">11111111</td><td style="color:#2e7d32;">No existe</td></tr>
+<tr><td>-0</td><td style="color:#c62828;">10000000</td><td style="color:#c62828;">11111111</td><td style="color:#3D71A6;">No existe</td></tr>
 <tr><td>+127</td><td>01111111</td><td>01111111</td><td>01111111</td></tr>
 <tr><td>-127</td><td>11111111</td><td>10000000</td><td>10000001</td></tr>
-<tr><td>-128</td><td style="color:#888;">No representable</td><td style="color:#888;">No representable</td><td style="color:#2e7d32;">10000000</td></tr>
+<tr><td>-128</td><td style="color:#888;">No representable</td><td style="color:#888;">No representable</td><td style="color:#3D71A6;">10000000</td></tr>
 </table>
 <p>Observa tres diferencias clave:</p>
 <ol>
@@ -949,7 +949,7 @@ function calcTwos() {
   const unsig = ((val % 256) + 256) % 256;
 
   let html = `
-    <p style="font-size:20px;color:#66bb6a;">数值：${val}</p>
+    <p style="font-size:20px;color:#6690BB;">数值：${val}</p>
     <p style="color:#90a4ae;">无符号对应值：${unsig}（${val} + 256 = ${val + 256} 取模 = ${unsig}）</p>
     <div class="demo-bit-row">
       <span class="label">原码：</span>
@@ -960,7 +960,7 @@ function calcTwos() {
       <div class="bits">${renderBits(inverted, bits)}</div>
     </div>
     <div class="demo-bit-row">
-      <span class="label" style="color:#66bb6a;">补码：</span>
+      <span class="label" style="color:#6690BB;">补码：</span>
       <div class="bits">${renderBits(twosComp, bits)}</div>
     </div>
     <p style="color:#90a4ae;font-size:13px;margin-top:12px;">
@@ -1152,7 +1152,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1197,7 +1197,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1236,7 +1236,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1455,7 +1455,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

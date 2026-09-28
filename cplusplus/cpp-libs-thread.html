@@ -438,8 +438,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_id, <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_id, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_id, <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_id, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Iniciar hilo</h3>
@@ -457,15 +457,15 @@ t2.join();</pre>
 <span style="color: #060;">#include &lt;iostream&gt;</span><br/>
 <span style="color: #060;">#include &lt;thread&gt;</span><br/>
 <br/>
-<span style="color: #05a;">int</span> sum <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+<span style="color: #05a;">int</span> sum <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <br/>
 <span style="color: #05a;">void</span> add<span style="color: #008000;">(</span><span style="color: #05a;">int</span> a, <span style="color: #05a;">int</span> b<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     sum <span style="color: #000040;">+</span><span style="color: #000080;">=</span> a <span style="color: #000040;">+</span> b<span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a;">int</span> a <span style="color: #000080;">=</span> <span style="color: #0000dd;">5</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">int</span> b <span style="color: #000080;">=</span> <span style="color: #0000dd;">10</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">int</span> a <span style="color: #000080;">=</span> <span style="color: #0000DD;">5</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">int</span> b <span style="color: #000080;">=</span> <span style="color: #0000DD;">10</span><span style="color: #008080;">;</span><br/>
 <br/>
     std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>add, a, b<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>add, a, b<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
@@ -492,8 +492,8 @@ t2.join();</pre>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// Crear dos hilos que ejecutan la función print_message</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_message, <span style="color: #a11;">"Hello from thread 1"</span>, <span style="color: #0000dd;">1000</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_message, <span style="color: #a11;">"Hello from thread 2"</span>, <span style="color: #0000dd;">500</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_message, <span style="color: #a11;">"Hello from thread 1"</span>, <span style="color: #0000DD;">1000</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_message, <span style="color: #a11;">"Hello from thread 2"</span>, <span style="color: #0000DD;">500</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Esperar a que el hilo t1 termine</span><br/>
     <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>t1.<span style="color: #007788;">joinable</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
@@ -507,7 +507,7 @@ t2.join();</pre>
 <br/>
     std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Main thread finished."</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <p>El resultado es:</p>
@@ -536,7 +536,7 @@ std::thread</h3><p>La clase std::thread se utiliza para crear y gestionar hilos.
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t<span style="color: #008000;">(</span>print_hello<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Esperar a que el hilo t termine</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <p><strong>Métodos importantes</strong></p>
@@ -548,7 +548,7 @@ std::thread</h3><p>La clase std::thread se utiliza para crear y gestionar hilos.
 <span style="color: #060;">#include &lt;mutex&gt;</span><br/>
 <br/>
 std<span style="color: #008080;">::</span><span style="color: #007788;">mutex</span> mtx<span style="color: #008080;">;</span> <span style="color: #666666;">// Crear un objeto mutex global</span><br/>
-<span style="color: #05a;">int</span> shared_resource <span style="color: #000080;">=</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Recurso compartido</span><br/>
+<span style="color: #05a;">int</span> shared_resource <span style="color: #000080;">=</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span> <span style="color: #666666;">// Recurso compartido</span><br/>
 <br/>
 <span style="color: #666666;">// Función del hilo</span><br/>
 <span style="color: #05a;">void</span> increment<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
@@ -567,7 +567,7 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">mutex</s
 <br/>
     std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Final value of shared_resource: "</span> <span style="color: #000080;">&lt;&lt;</span> shared_resource <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::lock_guard</h3><p>std::lock_guard es un administrador de bloqueos de estilo RAII que gestiona automáticamente el ciclo de vida del bloqueo.</p>
@@ -584,11 +584,11 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">mutex</s
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t1.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t2.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::unique_lock</h3><p>std::unique_lock proporciona una gestión de bloqueos más flexible que std::lock_guard.</p>
@@ -607,11 +607,11 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">mutex</s
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_thread_id, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t1.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t2.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::condition_variable</h3><p>std::condition_variable se utiliza para la espera y notificación entre hilos.</p>
@@ -638,15 +638,15 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">conditio
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_id, <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_id, <span style="color: #0000dd;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t1<span style="color: #008000;">(</span>print_id, <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t2<span style="color: #008000;">(</span>print_id, <span style="color: #0000DD;">2</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">this_thread</span><span style="color: #008080;">::</span><span style="color: #007788;">sleep_for</span><span style="color: #008000;">(</span>std<span style="color: #008080;">::</span><span style="color: #007788;">chrono</span><span style="color: #008080;">::</span><span style="color: #007788;">seconds</span><span style="color: #008000;">(</span><span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">this_thread</span><span style="color: #008080;">::</span><span style="color: #007788;">sleep_for</span><span style="color: #008000;">(</span>std<span style="color: #008080;">::</span><span style="color: #007788;">chrono</span><span style="color: #008080;">::</span><span style="color: #007788;">seconds</span><span style="color: #008000;">(</span><span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     set_ready<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <br/>
     t1.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     t2.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::future y std::promise</h3><p>std::future y std::promise se utilizan para transferir resultados entre hilos.</p>
@@ -663,12 +663,12 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">conditio
     std<span style="color: #008080;">::</span><span style="color: #007788;">promise</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span> p<span style="color: #008080;">;</span><br/>
     std<span style="color: #008080;">::</span><span style="color: #007788;">future</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span> f <span style="color: #000080;">=</span> p.<span style="color: #007788;">get_future</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t<span style="color: #008000;">(</span>calculate_square, std<span style="color: #008080;">::</span><span style="color: #007788;">move</span><span style="color: #008000;">(</span>p<span style="color: #008000;">)</span>, <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">thread</span> t<span style="color: #008000;">(</span>calculate_square, std<span style="color: #008080;">::</span><span style="color: #007788;">move</span><span style="color: #008000;">(</span>p<span style="color: #008000;">)</span>, <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <br/>
     std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Square: "</span> <span style="color: #000080;">&lt;&lt;</span> f.<span style="color: #007788;">get</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <br/>
     t.<span style="color: #007788;">join</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::async</h3><p>std::async se utiliza para iniciar tareas asíncronas y devuelve un std::future.</p>
@@ -681,11 +681,11 @@ std<span style="color: #008080;">::</span><span style="color: #007788;">conditio
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    std<span style="color: #008080;">::</span><span style="color: #007788;">future</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span> result <span style="color: #000080;">=</span> std<span style="color: #008080;">::</span><span style="color: #007788;">async</span><span style="color: #008000;">(</span>calculate_square, <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    std<span style="color: #008080;">::</span><span style="color: #007788;">future</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span> result <span style="color: #000080;">=</span> std<span style="color: #008080;">::</span><span style="color: #007788;">async</span><span style="color: #008000;">(</span>calculate_square, <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <br/>
     std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Square: "</span> <span style="color: #000080;">&lt;&lt;</span> result.<span style="color: #007788;">get</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <p>La biblioteca de C++<code>&lt;thread&gt;</code>proporciona a los desarrolladores un potente soporte para multihilo. A través de la introducción de este artículo, deberíamos poder comprender los conceptos básicos de los hilos y aprender a usar<code>&lt;thread&gt;</code>la biblioteca para crear y gestionar hilos. En el desarrollo real, el uso razonable de multihilo puede mejorar significativamente el rendimiento y la capacidad de respuesta del programa.</p> Otras extensiones
@@ -722,7 +722,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -767,7 +767,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -806,7 +806,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1025,7 +1025,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

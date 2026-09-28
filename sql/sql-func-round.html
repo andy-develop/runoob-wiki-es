@@ -358,7 +358,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La función ROUND() se utiliza para redondear un campo numérico al número especificado de decimales.</p>
 <h3>Sintaxis de SQL ROUND()</h3>
 <div class="example"><div class="example_code">
-<span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span>column_name<span style="color: #66cc66;">,</span>decimals<span style="color: #66cc66;">)</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #993333; font-weight: bold;">TABLE_NAME</span>;<br/>
+<span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span>column_name<span style="color: #66CC66;">,</span>decimals<span style="color: #66CC66;">)</span> <span style="color: #993333; font-weight: bold;">FROM</span> <span style="color: #993333; font-weight: bold;">TABLE_NAME</span>;<br/>
 </div></div>
 <br/><table class="reference">
 <tr>
@@ -379,20 +379,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Ejemplo de SQL ROUND()</h2>
 <p><strong>ROUND(X)：</strong>Devuelve un entero redondeado del parámetro X.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-mysql<span style="color: #66cc66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span><span style="color: #66cc66;">-</span><span style="color: #cc66cc;">1.23</span><span style="color: #66cc66;">)</span>;<br/>
-        <span style="color: #66cc66;">-&gt;</span> <span style="color: #66cc66;">-</span><span style="color: #cc66cc;">1</span><br/>
-mysql<span style="color: #66cc66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span><span style="color: #66cc66;">-</span><span style="color: #cc66cc;">1.58</span><span style="color: #66cc66;">)</span>;<br/>
-        <span style="color: #66cc66;">-&gt;</span> <span style="color: #66cc66;">-</span><span style="color: #cc66cc;">2</span><br/>
-mysql<span style="color: #66cc66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span><span style="color: #cc66cc;">1.58</span><span style="color: #66cc66;">)</span>;<br/>
-        <span style="color: #66cc66;">-&gt;</span> <span style="color: #cc66cc;">2</span><br/>
+mysql<span style="color: #66CC66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span><span style="color: #66CC66;">-</span><span style="color: #CC66CC;">1.23</span><span style="color: #66CC66;">)</span>;<br/>
+        <span style="color: #66CC66;">-&gt;</span> <span style="color: #66CC66;">-</span><span style="color: #CC66CC;">1</span><br/>
+mysql<span style="color: #66CC66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span><span style="color: #66CC66;">-</span><span style="color: #CC66CC;">1.58</span><span style="color: #66CC66;">)</span>;<br/>
+        <span style="color: #66CC66;">-&gt;</span> <span style="color: #66CC66;">-</span><span style="color: #CC66CC;">2</span><br/>
+mysql<span style="color: #66CC66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span><span style="color: #CC66CC;">1.58</span><span style="color: #66CC66;">)</span>;<br/>
+        <span style="color: #66CC66;">-&gt;</span> <span style="color: #CC66CC;">2</span><br/>
 </div></div>
 <p>
 <strong>ROUND(X,D)：</strong>Devuelve un número redondeado del parámetro X con D decimales. Si D es 0, el resultado no tendrá punto decimal ni parte fraccionaria.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-mysql<span style="color: #66cc66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span><span style="color: #cc66cc;">1.298</span><span style="color: #66cc66;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #66cc66;">)</span>;<br/>
-        <span style="color: #66cc66;">-&gt;</span> <span style="color: #cc66cc;">1.3</span><br/>
-mysql<span style="color: #66cc66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66cc66;">(</span><span style="color: #cc66cc;">1.298</span><span style="color: #66cc66;">,</span> <span style="color: #cc66cc;">0</span><span style="color: #66cc66;">)</span>;<br/>
-        <span style="color: #66cc66;">-&gt;</span> <span style="color: #cc66cc;">1</span><br/>
+mysql<span style="color: #66CC66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span><span style="color: #CC66CC;">1.298</span><span style="color: #66CC66;">,</span> <span style="color: #CC66CC;">1</span><span style="color: #66CC66;">)</span>;<br/>
+        <span style="color: #66CC66;">-&gt;</span> <span style="color: #CC66CC;">1.3</span><br/>
+mysql<span style="color: #66CC66;">&gt;</span> <span style="color: #993333; font-weight: bold;">SELECT</span> ROUND<span style="color: #66CC66;">(</span><span style="color: #CC66CC;">1.298</span><span style="color: #66CC66;">,</span> <span style="color: #CC66CC;">0</span><span style="color: #66CC66;">)</span>;<br/>
+        <span style="color: #66CC66;">-&gt;</span> <span style="color: #CC66CC;">1</span><br/>
 </div></div>
 <p>Nota: ¡El valor de retorno de ROUND se convierte en un BIGINT!</p> Otras extensiones
 </div>
@@ -428,7 +428,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -473,7 +473,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -512,7 +512,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Método para obtener el código de invitación de registro</a></p>
@@ -731,7 +731,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

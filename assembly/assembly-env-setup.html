@@ -322,25 +322,25 @@ GNU gdb (Ubuntu 12.1-0ubuntu1) 12.1
 <span style="color: #666666; font-style: italic;">; Primer programa en ensamblador: imprime Hello, runoob!</span><br/>
 <span style="color: #666666; font-style: italic;">; Sintaxis de NASM, Linux de 32 bits</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span>                       <span style="color: #666666; font-style: italic;">; Segmento de datos: almacena datos inicializados</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span>    <span style="color: #666666; font-style: italic;">; Define la cadena msg, 0xA es el salto de línea</span><br/>
-    len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg                 <span style="color: #666666; font-style: italic;">; Calcula la longitud de la cadena: dirección actual - dirección inicial de msg</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span>                       <span style="color: #666666; font-style: italic;">; Segmento de datos: almacena datos inicializados</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span>    <span style="color: #666666; font-style: italic;">; Define la cadena msg, 0xA es el salto de línea</span><br/>
+    len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg                 <span style="color: #666666; font-style: italic;">; Calcula la longitud de la cadena: dirección actual - dirección inicial de msg</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span>                       <span style="color: #666666; font-style: italic;">; Segmento de código: almacena instrucciones ejecutables</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start                   <span style="color: #666666; font-style: italic;">; Declara _start como punto de entrada del programa</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span>                       <span style="color: #666666; font-style: italic;">; Segmento de código: almacena instrucciones ejecutables</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start                   <span style="color: #666666; font-style: italic;">; Declara _start como punto de entrada del programa</span><br/>
 <br/>
 _start<span style="color: #339933;">:</span>                             <span style="color: #666666; font-style: italic;">; Punto de entrada del programa</span><br/>
     <span style="color: #666666; font-style: italic;">; Llamada al sistema sys_write (4): envía la cadena a stdout</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span>                      <span style="color: #666666; font-style: italic;">; Número de llamada al sistema 4 = sys_write</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                      <span style="color: #666666; font-style: italic;">; Descriptor de archivo 1 = stdout (salida estándar)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg                    <span style="color: #666666; font-style: italic;">; Dirección de la cadena a enviar</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len                    <span style="color: #666666; font-style: italic;">; Longitud de la cadena</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span>                        <span style="color: #666666; font-style: italic;">; Dispara la interrupción para ejecutar la llamada al sistema</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span>                      <span style="color: #666666; font-style: italic;">; Número de llamada al sistema 4 = sys_write</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                      <span style="color: #666666; font-style: italic;">; Descriptor de archivo 1 = stdout (salida estándar)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg                    <span style="color: #666666; font-style: italic;">; Dirección de la cadena a enviar</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len                    <span style="color: #666666; font-style: italic;">; Longitud de la cadena</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span>                        <span style="color: #666666; font-style: italic;">; Dispara la interrupción para ejecutar la llamada al sistema</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Llamada al sistema sys_exit (1): sale del programa normalmente</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span>                      <span style="color: #666666; font-style: italic;">; Número de llamada al sistema 1 = sys_exit</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                      <span style="color: #666666; font-style: italic;">; Valor de retorno 0 = salida normal</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span>                        <span style="color: #666666; font-style: italic;">; Dispara la interrupción para ejecutar la llamada al sistema</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span>                      <span style="color: #666666; font-style: italic;">; Número de llamada al sistema 1 = sys_exit</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                      <span style="color: #666666; font-style: italic;">; Valor de retorno 0 = salida normal</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span>                        <span style="color: #666666; font-style: italic;">; Dispara la interrupción para ejecutar la llamada al sistema</span><br/>
 </div>
 </div>
 <hr/>
@@ -444,7 +444,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -489,7 +489,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -528,7 +528,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -747,7 +747,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

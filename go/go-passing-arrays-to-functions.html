@@ -303,46 +303,46 @@ func myFunction(param []int) {
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #993333;">func</span> getAverage<span style="color: #339933;">(</span>arr <span style="color: #339933;">[]</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> size <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">float32</span><br/>
 <span style="color: #339933;">{</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">int</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> avg<span style="color: #339933;">,</span> sum <span style="color: #993333;">float32</span>  <br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span> <span style="color: #993333;">int</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> avg<span style="color: #339933;">,</span> sum <span style="color: #993333;">float32</span>  <br/>
 <br/>
-   <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; size<span style="color: #339933;">;</span> <span style="color: #339933;">++</span><span style="">i</span> <span style="color: #339933;">{</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; size<span style="color: #339933;">;</span> <span style="color: #339933;">++</span><span style="">i</span> <span style="color: #339933;">{</span><br/>
       sum <span style="color: #339933;">+=</span> arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span><br/>
    <span style="color: #339933;">}</span><br/>
 <br/>
    avg <span style="color: #339933;">=</span> sum <span style="color: #339933;">/</span> size<br/>
 <br/>
-   <span style="color: #b1b100; font-weight: bold;">return</span> avg<span style="color: #339933;">;</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">return</span> avg<span style="color: #339933;">;</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>A continuación, llamaremos a esta función:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
    <span style="color: #666666; font-style: italic;">/* La longitud del array es 5 */</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span>  balance <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span> <span style="color: #339933;">{</span><span style="color: #cc66cc;">1000</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">17</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">50</span><span style="color: #339933;">}</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> avg <span style="color: #993333;">float32</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span>  balance <span style="color: #339933;">=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span> <span style="color: #339933;">{</span><span style="color: #CC66CC;">1000</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">17</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">50</span><span style="color: #339933;">}</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> avg <span style="color: #993333;">float32</span><br/>
 <br/>
    <span style="color: #666666; font-style: italic;">/* El array se pasa como parámetro a la función */</span><br/>
-   avg <span style="color: #339933;">=</span> getAverage<span style="color: #339933;">(</span> balance<span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span> <span style="color: #339933;">)</span> <span style="color: #339933;">;</span><br/>
+   avg <span style="color: #339933;">=</span> getAverage<span style="color: #339933;">(</span> balance<span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span> <span style="color: #339933;">)</span> <span style="color: #339933;">;</span><br/>
 <br/>
    <span style="color: #666666; font-style: italic;">/* Se imprime el promedio devuelto */</span><br/>
-   fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span> <span style="color: #cc66cc;">"El promedio es: %f "</span><span style="color: #339933;">,</span> avg <span style="color: #339933;">);</span><br/>
+   fmt<span style="color: #339933;">.</span><span style="">Printf</span><span style="color: #339933;">(</span> <span style="color: #CC66CC;">"El promedio es: %f "</span><span style="color: #339933;">,</span> avg <span style="color: #339933;">);</span><br/>
 <span style="color: #339933;">}</span><br/>
-<span style="color: #993333;">func</span> getAverage<span style="color: #339933;">(</span>arr <span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> size <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">float32</span> <span style="color: #339933;">{</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> <span style="">i</span><span style="color: #339933;">,</span>sum <span style="color: #993333;">int</span><br/>
-   <span style="color: #b1b100; font-weight: bold;">var</span> avg <span style="color: #993333;">float32</span>  <br/>
+<span style="color: #993333;">func</span> getAverage<span style="color: #339933;">(</span>arr <span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">,</span> size <span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #993333;">float32</span> <span style="color: #339933;">{</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> <span style="">i</span><span style="color: #339933;">,</span>sum <span style="color: #993333;">int</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">var</span> avg <span style="color: #993333;">float32</span>  <br/>
 <br/>
-   <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; size<span style="color: #339933;">;</span><span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; size<span style="color: #339933;">;</span><span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
       sum <span style="color: #339933;">+=</span> arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span><br/>
    <span style="color: #339933;">}</span><br/>
 <br/>
    avg <span style="color: #339933;">=</span> <span style="color: #993333;">float32</span><span style="color: #339933;">(</span>sum<span style="color: #339933;">)</span> <span style="color: #339933;">/</span> <span style="color: #993333;">float32</span><span style="color: #339933;">(</span>size<span style="color: #339933;">)</span><br/>
 <br/>
-   <span style="color: #b1b100; font-weight: bold;">return</span> avg<span style="color: #339933;">;</span><br/>
+   <span style="color: #B1B100; font-weight: bold;">return</span> avg<span style="color: #339933;">;</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>El resultado de ejecutar el ejemplo anterior es:</p>
@@ -350,64 +350,64 @@ func myFunction(param []int) {
 </pre>
 <p>En el ejemplo anterior, el parámetro formal que usamos no especificó el tamaño del array.<p>El cálculo con números de punto flotante tiene cierto error en la salida; también puedes convertirlo a entero para establecer la precisión.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    a <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">69</span><br/>
-    b <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">.</span><span style="color: #cc66cc;">7</span><br/>
+    a <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">1</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">69</span><br/>
+    b <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">1</span><span style="color: #339933;">.</span><span style="color: #CC66CC;">7</span><br/>
     c <span style="color: #339933;">:=</span> a <span style="color: #339933;">*</span> b      <span style="color: #666666; font-style: italic;">// El resultado debería ser 2.873</span><br/>
     fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>c<span style="color: #339933;">)</span>  <span style="color: #666666; font-style: italic;">// Se imprime 2.8729999999999998</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>Establecer precisión fija:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
-    <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #339933;">(</span><br/>
+    <span style="color: #CC66CC;">"fmt"</span><br/>
 <span style="color: #339933;">)</span><br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
-    a <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">1690</span>           <span style="color: #666666; font-style: italic;">// representa 1.69</span><br/>
-    b <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">1700</span>           <span style="color: #666666; font-style: italic;">// representa 1.70</span><br/>
+    a <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">1690</span>           <span style="color: #666666; font-style: italic;">// representa 1.69</span><br/>
+    b <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">1700</span>           <span style="color: #666666; font-style: italic;">// representa 1.70</span><br/>
     c <span style="color: #339933;">:=</span> a <span style="color: #339933;">*</span> b          <span style="color: #666666; font-style: italic;">// El resultado debería ser 2873000, que representa 2.873</span><br/>
     fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span>c<span style="color: #339933;">)</span>      <span style="color: #666666; font-style: italic;">// codificación interna</span><br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #993333;">float64</span><span style="color: #339933;">(</span>c<span style="color: #339933;">)</span> <span style="color: #339933;">/</span> <span style="color: #cc66cc;">1000000</span><span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// visualización</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #993333;">float64</span><span style="color: #339933;">(</span>c<span style="color: #339933;">)</span> <span style="color: #339933;">/</span> <span style="color: #CC66CC;">1000000</span><span style="color: #339933;">)</span> <span style="color: #666666; font-style: italic;">// visualización</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div>
 <p>Si deseas modificar el array original dentro de la función, puedes hacerlo pasando un puntero al array.</p><p>El siguiente ejemplo demuestra cómo pasar arrays a una función. La función acepta un array y un puntero al array como parámetros:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #b1b100; font-weight: bold;">package</span> main<br/>
+<span style="color: #B1B100; font-weight: bold;">package</span> main<br/>
 <br/>
-<span style="color: #b1b100; font-weight: bold;">import</span> <span style="color: #cc66cc;">"fmt"</span><br/>
+<span style="color: #B1B100; font-weight: bold;">import</span> <span style="color: #CC66CC;">"fmt"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// La función acepta un array como parámetro</span><br/>
-<span style="color: #993333;">func</span> modifyArray<span style="color: #339933;">(</span>arr <span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #000066;">len</span><span style="color: #339933;">(</span>arr<span style="color: #339933;">);</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">*</span> <span style="color: #cc66cc;">2</span><br/>
+<span style="color: #993333;">func</span> modifyArray<span style="color: #339933;">(</span>arr <span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #000066;">len</span><span style="color: #339933;">(</span>arr<span style="color: #339933;">);</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> arr<span style="color: #339933;">[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">*</span> <span style="color: #CC66CC;">2</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">// La función acepta un puntero a un array como parámetro</span><br/>
-<span style="color: #993333;">func</span> modifyArrayWithPointer<span style="color: #339933;">(</span>arr <span style="color: #339933;">*</span><span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
-    <span style="color: #b1b100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #000066;">len</span><span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">);</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
-        <span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">)[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">)[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">*</span> <span style="color: #cc66cc;">2</span><br/>
+<span style="color: #993333;">func</span> modifyArrayWithPointer<span style="color: #339933;">(</span>arr <span style="color: #339933;">*</span><span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">)</span> <span style="color: #339933;">{</span><br/>
+    <span style="color: #B1B100; font-weight: bold;">for</span> <span style="">i</span> <span style="color: #339933;">:=</span> <span style="color: #CC66CC;">0</span><span style="color: #339933;">;</span> <span style="">i</span> &lt; <span style="color: #000066;">len</span><span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">);</span> <span style="">i</span><span style="color: #339933;">++</span> <span style="color: #339933;">{</span><br/>
+        <span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">)[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">=</span> <span style="color: #339933;">(</span><span style="color: #339933;">*</span>arr<span style="color: #339933;">)[</span><span style="">i</span><span style="color: #339933;">]</span> <span style="color: #339933;">*</span> <span style="color: #CC66CC;">2</span><br/>
     <span style="color: #339933;">}</span><br/>
 <span style="color: #339933;">}</span><br/>
 <br/>
 <span style="color: #993333;">func</span> main<span style="color: #339933;">()</span> <span style="color: #339933;">{</span><br/>
     <span style="color: #666666; font-style: italic;">// Se crea un array de enteros con 5 elementos</span><br/>
-    myArray <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #cc66cc;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">4</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">}</span><br/>
+    myArray <span style="color: #339933;">:=</span> <span style="color: #339933;">[</span><span style="color: #CC66CC;">5</span><span style="color: #339933;">]</span><span style="color: #993333;">int</span><span style="color: #339933;">{</span><span style="color: #CC66CC;">1</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">2</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">3</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">4</span><span style="color: #339933;">,</span> <span style="color: #CC66CC;">5</span><span style="color: #339933;">}</span><br/>
 <br/>
-    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #cc66cc;">"Original Array:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span>Println<span style="color: #339933;">(</span><span style="color: #CC66CC;">"Original Array:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Se pasa el array a la función, pero no se modifica el valor del array original</span><br/>
     modifyArray<span style="color: #339933;">(</span>myArray<span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Array after modifyArray:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Array after modifyArray:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Se pasa un puntero al array a la función, lo que permite modificar el valor del array original</span><br/>
     modifyArrayWithPointer<span style="color: #339933;">(</span><span style="color: #339933;">&amp;</span>myArray<span style="color: #339933;">)</span><br/>
-    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #cc66cc;">"Array after modifyArrayWithPointer:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
+    fmt<span style="color: #339933;">.</span><span style="">Println</span><span style="color: #339933;">(</span><span style="color: #CC66CC;">"Array after modifyArrayWithPointer:"</span><span style="color: #339933;">,</span> myArray<span style="color: #339933;">)</span><br/>
 <span style="color: #339933;">}</span><br/>
 </div></div><p>En el ejemplo anterior, la función modifyArray acepta un array e intenta modificar el valor del array, pero después de llamarla en la función principal, el array original no se modifica. Por el contrario, la función modifyArrayWithPointer acepta un puntero a un array y modifica el valor del array original mediante el puntero.</p>
 <p>El resultado de ejecutar el ejemplo anterior es:</p>
@@ -448,7 +448,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -493,7 +493,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -659,7 +659,7 @@ func main() {
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Método para obtener el código de invitación de registro</a></p>
@@ -878,7 +878,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

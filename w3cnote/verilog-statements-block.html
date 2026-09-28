@@ -99,28 +99,28 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Bloque paralelo</h3><p>El bloque paralelo se representa con las palabras clave fork y join.</p><p>Las sentencias en un bloque paralelo se ejecutan en paralelo, incluso si son asignaciones en forma bloqueante.</p><p>El retardo de cada sentencia en un bloque paralelo está relacionado con el tiempo en que el bloque comienza a ejecutarse.</p><p>La diferencia entre el bloque secuencial y el bloque paralelo es evidente; a continuación se explica con una simulación.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   ai_sequen<span style="color: #5D478B;">,</span> bi_sequen <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   ai_paral<span style="color: #5D478B;">,</span>  bi_paral <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   ai_nonblk<span style="color: #5D478B;">,</span> bi_nonblk <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   ai_sequen<span style="color: #5D478B;">,</span> bi_sequen <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   ai_paral<span style="color: #5D478B;">,</span>  bi_paral <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   ai_nonblk<span style="color: #5D478B;">,</span> bi_nonblk <span style="color: #5D478B;">;</span><br/>
  <br/>
  <span style="color: #00008B; font-style: italic;">//============================================================//</span><br/>
     <span style="color: #00008B; font-style: italic;">//(1)Sequence block</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> ai_sequen         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> bi_sequen         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 10ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> ai_sequen         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> bi_sequen         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 10ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #00008B; font-style: italic;">//(2)fork block</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">fork</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> ai_paral          <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> bi_paral          <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> ai_paral          <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> bi_paral          <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">join</span><br/>
     <span style="color: #00008B; font-style: italic;">//(3)non-block block</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">fork</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> ai_nonblk         <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> bi_nonblk         <span style="color: #5D478B;">&lt;=</span> <span style="color: #ff0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> ai_nonblk         <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> bi_nonblk         <span style="color: #5D478B;">&lt;=</span> <span style="color: #FF0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 5ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">join</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
@@ -130,19 +130,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Bloque anidado</h3><p>Los bloques secuenciales y paralelos también se pueden usar anidados.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span>      <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span>      <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
  <br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   ai_sequen2<span style="color: #5D478B;">,</span> bi_sequen2 <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>   ai_paral2<span style="color: #5D478B;">,</span>  bi_paral2 <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   ai_sequen2<span style="color: #5D478B;">,</span> bi_sequen2 <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>   ai_paral2<span style="color: #5D478B;">,</span>  bi_paral2 <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-        ai_sequen2         <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 0ns</span><br/>
+        ai_sequen2         <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 0ns</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">fork</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> ai_paral2          <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 10ns</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">15</span> bi_paral2          <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 15ns</span><br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> ai_paral2          <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd5</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 10ns</span><br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">15</span> bi_paral2          <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 15ns</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">join</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">20</span> bi_sequen2      <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 35ns</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">20</span> bi_sequen2      <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'd8</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//at 35ns</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
@@ -152,26 +152,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Bloque nombrado</h3><p>Podemos nombrar las estructuras de bloques de sentencias.</p><p>En un bloque nombrado se pueden declarar variables locales, y se puede acceder a las variables mediante referencias por nombre jerárquico.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test<span style="color: #5D478B;">;</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> runoob   <span style="color: #00008B; font-style: italic;">//El nombre del módulo nombrado es runoob, el punto y coma no puede faltar</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">integer</span>    i <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//Esta variable puede ser utilizada por otros módulos mediante test.runoob.i</span><br/>
-        i <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+        i <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-            <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> i <span style="color: #5D478B;">=</span> i <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span>       <br/>
+            <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> i <span style="color: #5D478B;">=</span> i <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span>       <br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span> stop_flag <span style="color: #5D478B;">;</span><br/>
-    <span style="color: #A52A2A; font-weight: bold;">initial</span> stop_flag <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
+    <span style="color: #A52A2A; font-weight: bold;">initial</span> stop_flag <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b0</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #5D478B;">:</span> detect_stop<br/>
-        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span> test.runoob.i <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">100</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">//i se incrementa 10 veces, es decir, la simulación se detiene en 100ns</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span> test.runoob.i <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">100</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span> <span style="color: #00008B; font-style: italic;">//i se incrementa 10 veces, es decir, la simulación se detiene en 100ns</span><br/>
             <span style="color: #9932CC;">$display</span><span style="color: #9F79EE;">(</span><span style="color: #FF00FF;">"Now you can stop the simulation!!!"</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
-            stop_flag <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+            stop_flag <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-        <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
@@ -181,28 +181,28 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Un bloque nombrado también puede ser deshabilitado, representado con la palabra clave disable.</p><p>disable puede terminar la ejecución de un bloque nombrado, y puede usarse para salir de un bucle, manejar errores, etc.</p><p>Es similar a break en C, pero break solo puede salir del bucle actual, mientras que disable puede deshabilitar cualquier bloque nombrado en el diseño.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ns</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ns</span><br/>
  <br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test<span style="color: #5D478B;">;</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> runoob_d <span style="color: #00008B; font-style: italic;">//El nombre del módulo nombrado es runoob_d</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">integer</span>    i_d <span style="color: #5D478B;">;</span><br/>
-        i_d <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-        <span style="color: #A52A2A; font-weight: bold;">while</span><span style="color: #9F79EE;">(</span>i_d<span style="color: #5D478B;">&lt;=</span><span style="color: #ff0055;">100</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> runoob_d2<br/>
-            <span style="color: #5D478B;">#</span> <span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
-            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>i_d <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">50</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>       <span style="color: #00008B; font-style: italic;">//Se incrementa 5 veces y se detiene la acumulación</span><br/>
+        i_d <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">while</span><span style="color: #9F79EE;">(</span>i_d<span style="color: #5D478B;">&lt;=</span><span style="color: #FF0055;">100</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> runoob_d2<br/>
+            <span style="color: #5D478B;">#</span> <span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+            <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span>i_d <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">50</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span>       <span style="color: #00008B; font-style: italic;">//Se incrementa 5 veces y se detiene la acumulación</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">disable</span> runoob_d3.clk_gen <span style="color: #5D478B;">;</span><span style="color: #00008B; font-style: italic;">//detener el bloque externo: clk_gen</span><br/>
                 <span style="color: #A52A2A; font-weight: bold;">disable</span> runoob_d2 <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">//detener el bloque actual: runoob_d2</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
-            i_d <span style="color: #5D478B;">=</span> i_d <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+            i_d <span style="color: #5D478B;">=</span> i_d <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
     <span style="color: #A52A2A; font-weight: bold;">reg</span> clk <span style="color: #5D478B;">;</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> runoob_d3<br/>
-        <span style="color: #A52A2A; font-weight: bold;">while</span> <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> clk_gen  <span style="color: #00008B; font-style: italic;">//Módulo generador de reloj</span><br/>
-            clk<span style="color: #5D478B;">=</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span>      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
-            clk<span style="color: #5D478B;">=</span><span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+        <span style="color: #A52A2A; font-weight: bold;">while</span> <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><span style="color: #5D478B;">:</span> clk_gen  <span style="color: #00008B; font-style: italic;">//Módulo generador de reloj</span><br/>
+            clk<span style="color: #5D478B;">=</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span>      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
+            clk<span style="color: #5D478B;">=</span><span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
         <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
     <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
  <br/>
@@ -238,7 +238,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -283,7 +283,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -322,7 +322,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, puedes hacer clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -533,7 +533,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

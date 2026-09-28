@@ -449,7 +449,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #060;">#include &lt;stdexcept&gt;</span><br/>
 <br/>
 <span style="color: #05a;">void</span> riskyFunction<span style="color: #008000;">(</span><span style="color: #05a;">int</span> x<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>x <span style="color: #000080;">&lt;</span> <span style="color: #0000dd;">0</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>x <span style="color: #000080;">&lt;</span> <span style="color: #0000DD;">0</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         <span style="color: #05a;">throw</span> std<span style="color: #008080;">::</span><span style="color: #007788;">invalid_argument</span><span style="color: #008000;">(</span><span style="color: #a11;">"Negative value not allowed"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
     std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Processing "</span> <span style="color: #000080;">&lt;&lt;</span> x <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
@@ -457,11 +457,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #05a;">try</span> <span style="color: #008000;">{</span><br/>
-        riskyFunction<span style="color: #008000;">(</span><span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+        riskyFunction<span style="color: #008000;">(</span><span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">invalid_argument</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cerr</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught an exception: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><p>Salida:</p><pre>
 Caught an exception: Negative value not allowed</pre>
@@ -479,7 +479,7 @@ std::exception</h3><p>std::exception es la clase base de todas las clases de exc
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">exception</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught exception: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::logic_error</h3><p>std::logic_error deriva de std::exception y representa errores lógicos del programa. Es una clase base abstracta que normalmente es concretada por clases derivadas.</p>
@@ -493,7 +493,7 @@ std::logic_error</h3><p>std::logic_error deriva de std::exception y representa e
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">logic_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught logic error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::invalid_argument</h3><p>std::invalid_argument deriva de std::logic_error y representa que se ha pasado un argumento no válido.</p>
@@ -507,7 +507,7 @@ std::invalid_argument</h3><p>std::invalid_argument deriva de std::logic_error y 
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">invalid_argument</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught invalid argument: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::domain_error</h3><p>std::domain_error deriva de std::logic_error y representa que el argumento está fuera del dominio válido.</p>
@@ -521,7 +521,7 @@ std::invalid_argument</h3><p>std::invalid_argument deriva de std::logic_error y 
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">domain_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught domain error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::length_error</h3><p>std::length_error deriva de std::logic_error y representa un error de longitud, como exceder el límite máximo de longitud en operaciones de contenedor.</p>
@@ -535,7 +535,7 @@ std::length_error</h3><p>std::length_error deriva de std::logic_error y represen
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">length_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught length error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::out_of_range</h3><p>std::out_of_range deriva de std::logic_error y representa un acceso fuera del rango válido.</p>
@@ -549,7 +549,7 @@ std::out_of_range</h3><p>std::out_of_range deriva de std::logic_error y represen
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">out_of_range</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught out of range error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::runtime_error</h3><p>std::runtime_error deriva de std::exception y representa errores en tiempo de ejecución del programa. Es una clase base abstracta que normalmente es concretada por clases derivadas.</p>
@@ -563,7 +563,7 @@ std::runtime_error</h3><p>std::runtime_error deriva de std::exception y represen
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">runtime_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught runtime error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::range_error</h3><p>std::range_error deriva de std::runtime_error y representa que el resultado de un cálculo está fuera del rango representable.</p>
@@ -577,7 +577,7 @@ std::range_error</h3><p>std::range_error deriva de std::runtime_error y represen
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">range_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught range error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>std::overflow_error</h3><p>std::overflow_error deriva de std::runtime_error y representa un error de desbordamiento aritmético.</p>
@@ -591,7 +591,7 @@ std::range_error</h3><p>std::range_error deriva de std::runtime_error y represen
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">overflow_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught overflow error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>
 std::underflow_error</h3><p>std::underflow_error deriva de std::runtime_error y representa un error de subdesbordamiento aritmético.</p>
@@ -605,7 +605,7 @@ std::underflow_error</h3><p>std::underflow_error deriva de std::runtime_error y 
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">underflow_error</span><span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught underflow error: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div><h3>Usar clases de excepción personalizadas</h3><p>Además de las clases de excepción estándar, también podemos definir nuestras propias clases de excepción, heredando de las clases de excepción estándar.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -623,7 +623,7 @@ std::underflow_error</h3><p>std::underflow_error deriva de std::runtime_error y 
     <span style="color: #008000;">}</span> <span style="color: #05a;">catch</span> <span style="color: #008000;">(</span><span style="color: #05a;">const</span> MyException<span style="color: #000040;">&amp;</span> e<span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
         std<span style="color: #008080;">::</span><span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Caught custom exception: "</span> <span style="color: #000080;">&lt;&lt;</span> e.<span style="color: #007788;">what</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> std<span style="color: #008080;">::</span><span style="color: #007788;">endl</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <p><code>&lt;stdexcept&gt;</code>es un componente importante de la biblioteca estándar de C++. Proporciona un conjunto de clases de excepción estándar que hacen que el manejo de errores sea más consistente y predecible. Al usar estas clases de excepción, puedes escribir código más robusto y fácil de mantener. Para los principiantes, comprender los conceptos básicos de las excepciones y cómo usar<code>&lt;stdexcept&gt;</code>las clases de excepción en él es muy importante.</p> Otras extensiones
@@ -660,7 +660,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -705,7 +705,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -744,7 +744,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -963,7 +963,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

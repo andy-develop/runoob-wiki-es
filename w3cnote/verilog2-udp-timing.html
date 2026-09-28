@@ -112,22 +112,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    <span style="color: #A52A2A; font-weight: bold;">input</span>        d<span style="color: #5D478B;">,</span> en<span style="color: #5D478B;">,</span> clear <span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span><br/>
-     q <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+     q <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
 <br/>
    <span style="color: #A52A2A; font-weight: bold;">table</span><br/>
     <span style="color: #00008B; font-style: italic;">//clear     en      d       :q      :q+ ;</span><br/>
-      <span style="color: #ff0055;">1</span>         <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//clear</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #ff0055;">0</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//"-" means stable</span><br/>
+      <span style="color: #FF0055;">1</span>         <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//clear</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #FF0055;">0</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//"-" means stable</span><br/>
 <br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #ff0055;">1</span>       <span style="color: #ff0055;">0</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//q = d</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #ff0055;">1</span>       <span style="color: #ff0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #FF0055;">1</span>       <span style="color: #FF0055;">0</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">//q = d</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #FF0055;">1</span>       <span style="color: #FF0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">endtable</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">endprimitive</span><br/>
 </div></div>
 <p>Por supuesto, también se puede declarar su tipo al enumerar las señales de puerto y asignar un valor inicial.</p>
 <div class="example"> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">primitive</span> d_latch2<span style="color: #9F79EE;">(</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span>   q <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span><span style="color: #5D478B;">,</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span>   q <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span><span style="color: #5D478B;">,</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">input</span>        clear<span style="color: #5D478B;">,</span> en<span style="color: #5D478B;">,</span> d<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
    ......<br/>
 <span style="color: #A52A2A; font-weight: bold;">endprimitive</span><br/>
@@ -138,58 +138,58 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La descripción del UDP de lógica secuencial de este flip-flop D es la siguiente:</p>
 <div class="example"> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">primitive</span> D_TRI<span style="color: #9F79EE;">(</span><br/>
-            <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span>  Q <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span><span style="color: #5D478B;">,</span><br/>
+            <span style="color: #A52A2A; font-weight: bold;">output</span> <span style="color: #A52A2A; font-weight: bold;">reg</span>  Q <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span><span style="color: #5D478B;">,</span><br/>
             <span style="color: #A52A2A; font-weight: bold;">input</span>       RST<span style="color: #5D478B;">,</span> CP<span style="color: #5D478B;">,</span> D<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">table</span><br/>
     <span style="color: #00008B; font-style: italic;">//RST       CP      D       :Q      :Q+ ;</span><br/>
       <span style="color: #00008B; font-style: italic;">//(1) Puesta a cero</span><br/>
-      <span style="color: #ff0055;">1</span>         <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Puesta a cero cuando RST=1</span><br/>
+      <span style="color: #FF0055;">1</span>         <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Puesta a cero cuando RST=1</span><br/>
       <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">??</span><span style="color: #9F79EE;">)</span>      <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Se ignoran los cambios de flanco de RST</span><br/>
       <span style="color: #00008B; font-style: italic;">//(2) Captura en flanco de bajada del reloj</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #ff0055;">0</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Captura la señal en el flanco de bajada del reloj</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #ff0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #FF0055;">0</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Captura la señal en el flanco de bajada del reloj</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #FF0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #00008B; font-style: italic;">//possible negedge</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span>1x<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Posible retención en el flanco de bajada del reloj</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span>x0<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span>1x<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Posible retención en el flanco de bajada del reloj</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span>x0<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span><br/>
       <span style="color: #00008B; font-style: italic;">//(3) Retención en el flanco de subida del reloj</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">?</span><span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Retención en el flanco de subida del reloj</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">?</span><span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Retención en el flanco de subida del reloj</span><br/>
       <span style="color: #00008B; font-style: italic;">//possible posedge</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #9F79EE;">(</span>x1<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Posible retención en el flanco de subida del reloj</span><br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #9F79EE;">(</span>x1<span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">?</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//Posible retención en el flanco de subida del reloj</span><br/>
       <span style="color: #00008B; font-style: italic;">//(4) Cuando no hay flanco de reloj, incluso si los datos cambian, la salida se mantiene</span><br/>
-      <span style="color: #ff0055;">0</span>         <span style="color: #5D478B;">?</span>       <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">??</span><span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <br/>
+      <span style="color: #FF0055;">0</span>         <span style="color: #5D478B;">?</span>       <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">??</span><span style="color: #9F79EE;">)</span>    <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:-</span> <span style="color: #5D478B;">;</span>  <br/>
    <span style="color: #A52A2A; font-weight: bold;">endtable</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">endprimitive</span> <span style="color: #00008B; font-style: italic;">// D_TRI</span><br/>
 </div></div><p>Para realizar una simulación simple de este flip-flop, el testbench se describe a continuación.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #008800;">`timescale</span> <span style="color: #ff0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #ff0055;">1ps</span><br/>
+<span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ps</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">reg</span>  D<span style="color: #5D478B;">,</span> CP <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">reg</span>  D<span style="color: #5D478B;">,</span> CP <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">reg</span>  RST <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">wire</span> Q <span style="color: #5D478B;">;</span><br/>
-   <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">#</span><span style="color: #ff0055;">5</span> CP <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>CP <span style="color: #5D478B;">;</span><br/>
+   <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">#</span><span style="color: #FF0055;">5</span> CP <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">~</span>CP <span style="color: #5D478B;">;</span><br/>
    <span style="color: #00008B; font-style: italic;">//data driver</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-      D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">12</span> D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">10</span> D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">14</span>  D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">3</span>  D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">18</span>  D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">12</span> D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">14</span>  D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">3</span>  D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">18</span>  D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    <span style="color: #00008B; font-style: italic;">//reset driver</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-      RST <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">3</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">2</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">22</span>       RST <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
-      <span style="color: #5D478B;">#</span><span style="color: #ff0055;">1</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      RST <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">3</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">2</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">22</span>       RST <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">1</span>        RST <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
    D_TRI u_d_trigger<span style="color: #9F79EE;">(</span>Q<span style="color: #5D478B;">,</span> RST<span style="color: #5D478B;">,</span> CP<span style="color: #5D478B;">,</span> D<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">forever</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
-         <span style="color: #5D478B;">#</span><span style="color: #ff0055;">100</span><span style="color: #5D478B;">;</span><br/>
+         <span style="color: #5D478B;">#</span><span style="color: #FF0055;">100</span><span style="color: #5D478B;">;</span><br/>
          <span style="color: #00008B; font-style: italic;">//$display("---gyc---%d", $time);</span><br/>
-         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #ff0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
+         <span style="color: #A52A2A; font-weight: bold;">if</span> <span style="color: #9F79EE;">(</span><span style="color: #9932CC;">$time</span> <span style="color: #5D478B;">&gt;=</span> <span style="color: #FF0055;">1000</span><span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
             <span style="color: #9932CC;">$finish</span> <span style="color: #5D478B;">;</span><br/>
          <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
       <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -203,7 +203,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example"><div class="example_code">
    <span style="color: #A52A2A; font-weight: bold;">table</span><br/>
       ......<br/>
-      <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span>     <span style="color: #9F79EE;">(</span><span style="color: #ff0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #ff0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span><br/>
+      <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span>     <span style="color: #9F79EE;">(</span><span style="color: #FF0055;">10</span><span style="color: #9F79EE;">)</span>    <span style="color: #FF0055;">1</span>       <span style="color: #5D478B;">:?</span>      <span style="color: #5D478B;">:</span><span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">endtable</span><br/>
 </div></div>
 <p><strong>Las entradas de la tabla de estados sensibles al nivel tienen mayor prioridad que las entradas de la tabla de estados sensibles al flanco. Si ambas aparecen en el mismo instante, el estado de salida lo determina la tabla de estados de activación por nivel.</strong></p>
@@ -252,7 +252,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -297,7 +297,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -336,7 +336,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -547,7 +547,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

@@ -280,29 +280,29 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: structure.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplo de estructura básica de un programa NASM</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span>                       <span style="color: #666666; font-style: italic;">; Sección de datos: almacena datos inicializados</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span>                       <span style="color: #666666; font-style: italic;">; Sección de datos: almacena datos inicializados</span><br/>
     <span style="color: #666666; font-style: italic;">; Aquí se definen variables y constantes</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0xA</span><br/>
-    len <span style="color: #0000ff; font-weight: bold;">equ</span> <span style="color: #0000ff; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.bss</span>                        <span style="color: #666666; font-style: italic;">; Sección BSS: almacena datos no inicializados</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span>                        <span style="color: #666666; font-style: italic;">; Sección BSS: almacena datos no inicializados</span><br/>
     <span style="color: #666666; font-style: italic;">; Aquí se reserva espacio en memoria</span><br/>
-    buffer <span style="color: #0000ff; font-weight: bold;">resb</span> <span style="color: #ff0000;">64</span>                  <span style="color: #666666; font-style: italic;">; Reservar un búfer de 64 bytes</span><br/>
+    buffer <span style="color: #0000FF; font-weight: bold;">resb</span> <span style="color: #FF0000;">64</span>                  <span style="color: #666666; font-style: italic;">; Reservar un búfer de 64 bytes</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span>                       <span style="color: #666666; font-style: italic;">; Sección de código: almacena instrucciones ejecutables</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span>                       <span style="color: #666666; font-style: italic;">; Sección de código: almacena instrucciones ejecutables</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Aquí se escribe la lógica del programa</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">4</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">4</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> msg<br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">edx</span><span style="color: #339933;">,</span> len<br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <table class="reference">
@@ -332,20 +332,20 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ejemplos de varios formatos de sentencias</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Solo la instrucción, sin operandos</span><br/>
-<span style="color: #00007f; font-weight: bold;">ret</span>                     <span style="color: #666666; font-style: italic;">; Retorno de subrutina</span><br/>
+<span style="color: #00007F; font-weight: bold;">ret</span>                     <span style="color: #666666; font-style: italic;">; Retorno de subrutina</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Instrucción + un solo operando</span><br/>
-<span style="color: #00007f; font-weight: bold;">push</span> <span style="color: #46aa03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; Empuja el valor de eax a la pila</span><br/>
-<span style="color: #00007f; font-weight: bold;">inc</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                 <span style="color: #666666; font-style: italic;">; Incrementa ecx en 1</span><br/>
+<span style="color: #00007F; font-weight: bold;">push</span> <span style="color: #46AA03; font-weight: bold;">eax</span>                <span style="color: #666666; font-style: italic;">; Empuja el valor de eax a la pila</span><br/>
+<span style="color: #00007F; font-weight: bold;">inc</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                 <span style="color: #666666; font-style: italic;">; Incrementa ecx en 1</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Instrucción + dos operandos (el más común)</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>             <span style="color: #666666; font-style: italic;">; Copia 42 al registro eax</span><br/>
-<span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>            <span style="color: #666666; font-style: italic;">; ebx = ebx + ecx</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>             <span style="color: #666666; font-style: italic;">; Copia 42 al registro eax</span><br/>
+<span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>            <span style="color: #666666; font-style: italic;">; ebx = ebx + ecx</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;">; Con etiqueta</span><br/>
 loop_start<span style="color: #339933;">:</span>             <span style="color: #666666; font-style: italic;">; Etiqueta: marca la posición de inicio del bucle</span><br/>
-    <span style="color: #00007f; font-weight: bold;">dec</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>             <span style="color: #666666; font-style: italic;">; Decrementa ecx en 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jnz</span> loop_start      <span style="color: #666666; font-style: italic;">; Si ecx no es 0, salta de regreso a loop_start</span><br/>
+    <span style="color: #00007F; font-weight: bold;">dec</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>             <span style="color: #666666; font-style: italic;">; Decrementa ecx en 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jnz</span> loop_start      <span style="color: #666666; font-style: italic;">; Si ecx no es 0, salta de regreso a loop_start</span><br/>
 </div>
 </div>
 <hr/>
@@ -357,8 +357,8 @@ loop_start<span style="color: #339933;">:</span>             <span style="
 <span style="color: #666666; font-style: italic;">; Comentario de línea completa: explica el propósito del siguiente bloque de código</span><br/>
 <span style="color: #666666; font-style: italic;">; Calcula la suma de dos números y muestra el resultado</span><br/>
 <br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span>             <span style="color: #666666; font-style: italic;">; Comentario en línea: coloca 10 en eax</span><br/>
-<span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">20</span>             <span style="color: #666666; font-style: italic;">; Comentario en línea: suma 20 a eax, ahora eax = 30</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span>             <span style="color: #666666; font-style: italic;">; Comentario en línea: coloca 10 en eax</span><br/>
+<span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">20</span>             <span style="color: #666666; font-style: italic;">; Comentario en línea: suma 20 a eax, ahora eax = 30</span><br/>
 </div>
 </div>
 <blockquote><p>Los comentarios son extremadamente importantes en el código ensamblador. Sin comentarios, el código ensamblador puede resultar incomprensible incluso para su propio autor después de unas semanas. Adquiere el hábito de escribir comentarios en cada instrucción.</p></blockquote>
@@ -409,18 +409,18 @@ counter2<span style="color: #339933;">:</span>               <span style=
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Ejemplo de sensibilidad a mayúsculas y minúsculas</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #7f007f;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>       <span style="color: #666666; font-style: italic;">; Define la variable msg</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>       <span style="color: #666666; font-style: italic;">; Define la variable msg</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> MSG             <span style="color: #666666; font-style: italic;">; Error: MSG y msg son diferentes (a menos que se active ignorar mayúsculas y minúsculas)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> msg             <span style="color: #666666; font-style: italic;">; Correcto: msg coincide exactamente con la definición</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> MSG             <span style="color: #666666; font-style: italic;">; Error: MSG y msg son diferentes (a menos que se active ignorar mayúsculas y minúsculas)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> msg             <span style="color: #666666; font-style: italic;">; Correcto: msg coincide exactamente con la definición</span><br/>
 <br/>
-    <span style="color: #00007f; font-weight: bold;">MOV</span> <span style="color: #46aa03; font-weight: bold;">EAX</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>              <span style="color: #666666; font-style: italic;">; Sintaxis correcta: los mnemónicos de instrucciones no distinguen entre mayúsculas y minúsculas</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>              <span style="color: #666666; font-style: italic;">; Escritura recomendada: usar minúsculas para una mejor legibilidad</span><br/>
+    <span style="color: #00007F; font-weight: bold;">MOV</span> <span style="color: #46AA03; font-weight: bold;">EAX</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>              <span style="color: #666666; font-style: italic;">; Sintaxis correcta: los mnemónicos de instrucciones no distinguen entre mayúsculas y minúsculas</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>              <span style="color: #666666; font-style: italic;">; Escritura recomendada: usar minúsculas para una mejor legibilidad</span><br/>
 </div>
 </div>
 <blockquote><p>Los mnemónicos de instrucciones y los nombres de registros no distinguen entre mayúsculas y minúsculas (<code>MOV</code>、<code>Mov</code>、<code>mov</code>el efecto es el mismo), pero el estilo recomendado es usar minúsculas de manera uniforme.</p></blockquote>
@@ -432,13 +432,13 @@ _start<span style="color: #339933;">:</span><br/>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Representación de diferentes bases en NASM</span><br/>
 <br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">42</span>             <span style="color: #666666; font-style: italic;">; Decimal: escribir el número directamente</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0x2A</span>           <span style="color: #666666; font-style: italic;">; Hexadecimal: prefijo 0x (notación recomendada)</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">2Ah</span>            <span style="color: #666666; font-style: italic;">; Hexadecimal: sufijo h</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> 0o52           <span style="color: #666666; font-style: italic;">; Octal: prefijo 0o</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">52o</span>            <span style="color: #666666; font-style: italic;">; Octal: sufijo o</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">101010b</span>        <span style="color: #666666; font-style: italic;">; Binario: sufijo b</span><br/>
-<span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> 0b101010       <span style="color: #666666; font-style: italic;">; Binario: prefijo 0b</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">42</span>             <span style="color: #666666; font-style: italic;">; Decimal: escribir el número directamente</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0x2A</span>           <span style="color: #666666; font-style: italic;">; Hexadecimal: prefijo 0x (notación recomendada)</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">2Ah</span>            <span style="color: #666666; font-style: italic;">; Hexadecimal: sufijo h</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> 0o52           <span style="color: #666666; font-style: italic;">; Octal: prefijo 0o</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">52o</span>            <span style="color: #666666; font-style: italic;">; Octal: sufijo o</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">101010b</span>        <span style="color: #666666; font-style: italic;">; Binario: sufijo b</span><br/>
+<span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> 0b101010       <span style="color: #666666; font-style: italic;">; Binario: prefijo 0b</span><br/>
 </div>
 </div>
 <blockquote><p>Se recomienda utilizar<code>0x</code>el prefijo para representar hexadecimal (como<code>0x2A</code>), de esta manera no es fácil confundirlo con etiquetas.</p></blockquote>
@@ -451,34 +451,34 @@ _start<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: sum.asm</span><br/>
 <span style="color: #666666; font-style: italic;">; Calcula 1+2+...+10 y muestra el carácter del resultado</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.data</span><br/>
-    result <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0</span>                 <span style="color: #666666; font-style: italic;">; Almacena el resultado del cálculo (1 byte)</span><br/>
-    newline <span style="color: #0000ff; font-weight: bold;">db</span> <span style="color: #ff0000;">0xA</span>              <span style="color: #666666; font-style: italic;">; Carácter de nueva línea</span><br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
+    result <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0</span>                 <span style="color: #666666; font-style: italic;">; Almacena el resultado del cálculo (1 byte)</span><br/>
+    newline <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #FF0000;">0xA</span>              <span style="color: #666666; font-style: italic;">; Carácter de nueva línea</span><br/>
 <br/>
-<span style="color: #0000ff; font-weight: bold;">section</span> <span style="color: #0000ff; font-weight: bold;">.text</span><br/>
-    <span style="color: #0000ff; font-weight: bold;">global</span> _start<br/>
+<span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
+    <span style="color: #0000FF; font-weight: bold;">global</span> _start<br/>
 <br/>
 _start<span style="color: #339933;">:</span><br/>
     <span style="color: #666666; font-style: italic;">; Inicializa registros y variables</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">10</span>                 <span style="color: #666666; font-style: italic;">; Contador del bucle: comienza la cuenta regresiva desde 10</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span>                  <span style="color: #666666; font-style: italic;">; eax almacena la suma acumulada, inicialmente 0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ecx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">10</span>                 <span style="color: #666666; font-style: italic;">; Contador del bucle: comienza la cuenta regresiva desde 10</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>                  <span style="color: #666666; font-style: italic;">; eax almacena la suma acumulada, inicialmente 0</span><br/>
 <br/>
 sum_loop<span style="color: #339933;">:</span>                       <span style="color: #666666; font-style: italic;">; Etiqueta de inicio del bucle</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                <span style="color: #666666; font-style: italic;">; eax = eax + ecx</span><br/>
-    <span style="color: #00007f; font-weight: bold;">dec</span> <span style="color: #46aa03; font-weight: bold;">ecx</span>                     <span style="color: #666666; font-style: italic;">; Decrementa ecx en 1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">jnz</span> sum_loop                <span style="color: #666666; font-style: italic;">; Si ecx != 0, continúa el bucle</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                <span style="color: #666666; font-style: italic;">; eax = eax + ecx</span><br/>
+    <span style="color: #00007F; font-weight: bold;">dec</span> <span style="color: #46AA03; font-weight: bold;">ecx</span>                     <span style="color: #666666; font-style: italic;">; Decrementa ecx en 1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">jnz</span> sum_loop                <span style="color: #666666; font-style: italic;">; Si ecx != 0, continúa el bucle</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; En este punto eax = 55 (10+9+...+1)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">add</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #7f007f;">'0'</span>                <span style="color: #666666; font-style: italic;">; Convierte el número en un carácter ASCII ('0'=48, 55+48=103='g', incorrecto)</span><br/>
+    <span style="color: #00007F; font-weight: bold;">add</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'0'</span>                <span style="color: #666666; font-style: italic;">; Convierte el número en un carácter ASCII ('0'=48, 55+48=103='g', incorrecto)</span><br/>
                                 <span style="color: #666666; font-style: italic;">; Una demostración real requiere una conversión más compleja; ver capítulos posteriores</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Aquí solo se muestra result (demostración simplificada)</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>result<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46aa03; font-weight: bold;">al</span>            <span style="color: #666666; font-style: italic;">; Almacena el resultado acumulado en result</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #009900; font-weight: bold;">[</span>result<span style="color: #009900; font-weight: bold;">]</span><span style="color: #339933;">,</span> <span style="color: #46AA03; font-weight: bold;">al</span>            <span style="color: #666666; font-style: italic;">; Almacena el resultado acumulado en result</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Sale del programa</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">1</span><br/>
-    <span style="color: #00007f; font-weight: bold;">mov</span> <span style="color: #46aa03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #ff0000;">0</span><br/>
-    <span style="color: #00007f; font-weight: bold;">int</span> <span style="color: #ff0000;">0x80</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">eax</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">1</span><br/>
+    <span style="color: #00007F; font-weight: bold;">mov</span> <span style="color: #46AA03; font-weight: bold;">ebx</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    <span style="color: #00007F; font-weight: bold;">int</span> <span style="color: #FF0000;">0x80</span><br/>
 </div>
 </div>
 <blockquote><p>Nota: en el ejemplo anterior, sumar directamente '0' solo es correcto cuando el número está en el rango de 0-9. La conversión de números de dos o más dígitos se explicará en detalle en capítulos posteriores.</p></blockquote>
@@ -516,7 +516,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -561,7 +561,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -600,7 +600,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -819,7 +819,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -344,7 +344,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #696969; font-style: italic;">// 传统方式 - 繁琐的 null 检查</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> name <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> name <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
 <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>person <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>person<span style="color: #008000;">.</span><span style="color: #05a;">Address</span> <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">)</span><br/>
@@ -372,46 +372,46 @@ string name = person?.Address?.City?.Name;</pre>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">class</span> Person<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Person<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Address Address <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">class</span> Address<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Address<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> City <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> City <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 安全访问属性</span><br/>
 Person person <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> cityName <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Address</span><span style="color: #008000;">?.</span><span style="color: #05a;">City</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> cityName <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Address</span><span style="color: #008000;">?.</span><span style="color: #05a;">City</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
 </div>
 </div>
 <h4>Llamar a un método</h4>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">class</span> Calculator<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Calculator<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> <span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> a, <span style="color: #6666cc; font-weight: bold;">int</span> b<span style="color: #008000;">)</span> <span style="color: #008000;">=&gt;</span> a <span style="color: #008000;">+</span> b<span style="color: #008000;">;</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">int</span> <span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> a, <span style="color: #6666CC; font-weight: bold;">int</span> b<span style="color: #008000;">)</span> <span style="color: #008000;">=&gt;</span> a <span style="color: #008000;">+</span> b<span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 Calculator calc <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> result <span style="color: #008000;">=</span> calc<span style="color: #008000;">?.</span><span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">(</span><span style="color: Maroon;">5</span>, <span style="color: Maroon;">3</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">?</span> result <span style="color: #008000;">=</span> calc<span style="color: #008000;">?.</span><span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">(</span><span style="color: Maroon;">5</span>, <span style="color: Maroon;">3</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
 </div>
 </div>
 <h4>Acceso a campos</h4>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">class</span> DataContainer<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> DataContainer<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">Value</span><span style="color: #008000;">;</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">Value</span><span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 DataContainer container <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">value</span> <span style="color: #008000;">=</span> container<span style="color: #008000;">?.</span><span style="color: #05a; font-weight: bold;">Value</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">value</span> <span style="color: #008000;">=</span> container<span style="color: #008000;">?.</span><span style="color: #05a; font-weight: bold;">Value</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
 </div>
 </div>
 <h3>2. Operador de acceso a elementos<code>?[]</code></h3>
@@ -420,10 +420,10 @@ DataContainer container <span style="color: #008000;">=</span> <span style="colo
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> numbers <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> firstNumber <span style="color: #008000;">=</span> numbers<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: Maroon;">0</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> numbers <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">?</span> firstNumber <span style="color: #008000;">=</span> numbers<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: Maroon;">0</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
 <br/>
-numbers <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> <span style="color: #008000;">{</span> <span style="color: Maroon;">1</span>, <span style="color: Maroon;">2</span>, <span style="color: Maroon;">3</span> <span style="color: #008000;">}</span><span style="color: #008000;">;</span><br/>
+numbers <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> <span style="color: #008000;">{</span> <span style="color: Maroon;">1</span>, <span style="color: Maroon;">2</span>, <span style="color: Maroon;">3</span> <span style="color: #008000;">}</span><span style="color: #008000;">;</span><br/>
 firstNumber <span style="color: #008000;">=</span> numbers<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: Maroon;">0</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 1</span><br/>
 </div>
 </div>
@@ -431,10 +431,10 @@ firstNumber <span style="color: #008000;">=</span> numbers<span style="color: #0
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-Dictionary<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span>, <span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> dictionary <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">value</span> <span style="color: #008000;">=</span> dictionary<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: #a11;">"key"</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
+Dictionary<span style="color: #008000;">&lt;</span><span style="color: #6666CC; font-weight: bold;">string</span>, <span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> dictionary <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> <span style="color: #05a; font-weight: bold;">value</span> <span style="color: #008000;">=</span> dictionary<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: #a11;">"key"</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 null，不会抛出异常</span><br/>
 <br/>
-dictionary <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Dictionary<span style="color: #008000;">&lt;</span><span style="color: #6666cc; font-weight: bold;">string</span>, <span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> <span style="color: #008000;">{</span> <span style="color: #008000;">[</span><span style="color: #a11;">"key"</span><span style="color: #008000;">]</span> <span style="color: #008000;">=</span> <span style="color: #a11;">"value"</span> <span style="color: #008000;">}</span><span style="color: #008000;">;</span><br/>
+dictionary <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Dictionary<span style="color: #008000;">&lt;</span><span style="color: #6666CC; font-weight: bold;">string</span>, <span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">&gt;</span> <span style="color: #008000;">{</span> <span style="color: #008000;">[</span><span style="color: #a11;">"key"</span><span style="color: #008000;">]</span> <span style="color: #008000;">=</span> <span style="color: #a11;">"value"</span> <span style="color: #008000;">}</span><span style="color: #008000;">;</span><br/>
 <span style="color: #05a; font-weight: bold;">value</span> <span style="color: #008000;">=</span> dictionary<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: #a11;">"key"</span><span style="color: #008000;">]</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 返回 "value"</span><br/>
 </div>
 </div>
@@ -502,25 +502,25 @@ Console.WriteLine(cityName);  // 输出: 北京</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">class</span> Address<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Address<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> City <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> City <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">class</span> Person<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Person<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Address Address <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> SayHello<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">void</span> SayHello<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>$<span style="color: #a11;">你好，我是 {Name}</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">class</span> Program<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> Program<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Person person <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
 <br/>
@@ -534,7 +534,7 @@ Console.WriteLine(cityName);  // 输出: 北京</pre>
         person<span style="color: #008000;">?.</span><span style="color: #05a;">SayHello</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
         <span style="color: #696969; font-style: italic;">// 安全访问数组</span><br/>
-        <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> arr <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
+        <span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> arr <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>arr<span style="color: #008000;">?</span><span style="color: #008000;">[</span><span style="color: Maroon;">0</span><span style="color: #008000;">]</span> <span style="color: #008000;">??</span> <span style="color: #008000;">-</span><span style="color: Maroon;">1</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -548,7 +548,7 @@ Console.WriteLine(cityName);  // 输出: 北京</pre>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 Person person <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> displayName <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span> <span style="color: #008000;">??</span> <span style="color: #008000;">(</span>person <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span> <span style="color: #008000;">?</span> <span style="color: #a11;">匿名用户</span> <span style="color: #008000;">:</span> <span style="color: #a11;">用户不存在</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> displayName <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span> <span style="color: #008000;">??</span> <span style="color: #008000;">(</span>person <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span> <span style="color: #008000;">?</span> <span style="color: #a11;">匿名用户</span> <span style="color: #008000;">:</span> <span style="color: #a11;">用户不存在</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 </div>
 </div>
 <h3>3. Uso en consultas LINQ</h3>
@@ -576,7 +576,7 @@ List<span style="color: #008000;">&lt;</span>Person<span style="color: #008000;"
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #696969; font-style: italic;">// 在 WPF 或 ASP.NET 中安全地绑定数据</span><br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> DisplayAddress <span style="color: #008000;">=&gt;</span> $<span style="color: #a11;">"{Person?.Address?.City ?? "</span>未知城市<span style="color: #a11;">"} - {Person?.Address?.Street ?? "</span>未知街道<span style="color: #a11;">"}"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> DisplayAddress <span style="color: #008000;">=&gt;</span> $<span style="color: #a11;">"{Person?.Address?.City ?? "</span>未知城市<span style="color: #a11;">"} - {Person?.Address?.Street ?? "</span>未知街道<span style="color: #a11;">"}"</span><span style="color: #008000;">;</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 安全地调用方法</span><br/>
 button<span style="color: #008000;">.</span><span style="color: #05a;">Click</span> <span style="color: #008000;">+=</span> <span style="color: #008000;">(</span>s, e<span style="color: #008000;">)</span> <span style="color: #008000;">=&gt;</span> <br/>
@@ -589,47 +589,47 @@ button<span style="color: #008000;">.</span><span style="color: #05a;">Click</sp
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> ApiResponse<span style="color: #008000;">&lt;</span>T<span style="color: #008000;">&gt;</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> ApiResponse<span style="color: #008000;">&lt;</span>T<span style="color: #008000;">&gt;</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> T Data <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Error <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Error <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> User<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> User<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Profile Profile <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Profile<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Profile<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> AvatarUrl <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> AvatarUrl <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 安全地处理 API 响应</span><br/>
 ApiResponse<span style="color: #008000;">&lt;</span>User<span style="color: #008000;">&gt;</span> response <span style="color: #008000;">=</span> GetUserFromApi<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> avatarUrl <span style="color: #008000;">=</span> response<span style="color: #008000;">?.</span><span style="color: #05a;">Data</span><span style="color: #008000;">?.</span><span style="color: #05a;">Profile</span><span style="color: #008000;">?.</span><span style="color: #05a;">AvatarUrl</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"default-avatar.png"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> avatarUrl <span style="color: #008000;">=</span> response<span style="color: #008000;">?.</span><span style="color: #05a;">Data</span><span style="color: #008000;">?.</span><span style="color: #05a;">Profile</span><span style="color: #008000;">?.</span><span style="color: #05a;">AvatarUrl</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"default-avatar.png"</span><span style="color: #008000;">;</span><br/>
 </div>
 </div>
 <h3>Caso 3: Lectura de configuración</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> AppConfig<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> AppConfig<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> DatabaseConfig Database <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> DatabaseConfig<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> DatabaseConfig<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> ConnectionString <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> Timeout <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> ConnectionString <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">?</span> Timeout <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 安全读取配置</span><br/>
 AppConfig config <span style="color: #008000;">=</span> LoadConfiguration<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> connectionString <span style="color: #008000;">=</span> config<span style="color: #008000;">?.</span><span style="color: #05a;">Database</span><span style="color: #008000;">?.</span><span style="color: #05a;">ConnectionString</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"DefaultConnection"</span><span style="color: #008000;">;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span> timeout <span style="color: #008000;">=</span> config<span style="color: #008000;">?.</span><span style="color: #05a;">Database</span><span style="color: #008000;">?.</span><span style="color: #05a;">Timeout</span> <span style="color: #008000;">??</span> <span style="color: Maroon;">30</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> connectionString <span style="color: #008000;">=</span> config<span style="color: #008000;">?.</span><span style="color: #05a;">Database</span><span style="color: #008000;">?.</span><span style="color: #05a;">ConnectionString</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"DefaultConnection"</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span> timeout <span style="color: #008000;">=</span> config<span style="color: #008000;">?.</span><span style="color: #05a;">Database</span><span style="color: #008000;">?.</span><span style="color: #05a;">Timeout</span> <span style="color: #008000;">??</span> <span style="color: Maroon;">30</span><span style="color: #008000;">;</span><br/>
 </div>
 </div>
 <hr/>
@@ -642,10 +642,10 @@ AppConfig config <span style="color: #008000;">=</span> LoadConfiguration<span s
 Person person <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Person <span style="color: #008000;">{</span> Name <span style="color: #008000;">=</span> <span style="color: #a11;">张三</span> <span style="color: #008000;">}</span><span style="color: #008000;">;</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 对于值类型，返回 Nullable&lt;T&gt;</span><br/>
-<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> nameLength <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span><span style="color: #008000;">?.</span><span style="color: #05a;">Length</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 类型是 int?</span><br/>
+<span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">?</span> nameLength <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span><span style="color: #008000;">?.</span><span style="color: #05a;">Length</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 类型是 int?</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 对于引用类型，返回类型本身</span><br/>
-<span style="color: #6666cc; font-weight: bold;">string</span> name <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 类型是 string</span><br/>
+<span style="color: #6666CC; font-weight: bold;">string</span> name <span style="color: #008000;">=</span> person<span style="color: #008000;">?.</span><span style="color: #05a;">Name</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// 类型是 string</span><br/>
 </div>
 </div>
 <h3>2. Evitar el uso excesivo</h3>
@@ -686,7 +686,7 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <span style="color: #696969; font-style: italic;">// 传统方式</span><br/>
 <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">event</span> EventHandler SomethingHappened<span style="color: #008000;">;</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">protected</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnSomethingHappened<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">protected</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666CC; font-weight: bold;">void</span> OnSomethingHappened<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>SomethingHappened <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
@@ -695,7 +695,7 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// 使用 Null 条件运算符 - 更简洁</span><br/>
-<span style="color: #05a; font-weight: bold;">protected</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnSomethingHappened<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">protected</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666CC; font-weight: bold;">void</span> OnSomethingHappened<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     SomethingHappened<span style="color: #008000;">?.</span><span style="color: #05a;">Invoke</span><span style="color: #008000;">(</span><span style="color: #05a; font-weight: bold;">this</span>, EventArgs<span style="color: #008000;">.</span><span style="color: #05a;">Empty</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -709,7 +709,7 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #696969; font-style: italic;">// Código original</span><br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> GetUserEmail<span style="color: #008000;">(</span>User user<span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> GetUserEmail<span style="color: #008000;">(</span>User user<span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>user <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
@@ -725,7 +725,7 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// Tu código refactorizado</span><br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> GetUserEmail<span style="color: #008000;">(</span>User user<span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> GetUserEmail<span style="color: #008000;">(</span>User user<span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">return</span> user<span style="color: #008000;">?.</span><span style="color: #05a;">Profile</span><span style="color: #008000;">?.</span><span style="color: #05a;">ContactInfo</span><span style="color: #008000;">?.</span><span style="color: #05a;">Email</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"Sin información de correo electrónico"</span><span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -735,31 +735,31 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Order<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Order<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> List<span style="color: #008000;">&lt;</span>OrderItem<span style="color: #008000;">&gt;</span> Items <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Customer Customer <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> OrderItem<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> OrderItem<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Product Product <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> Quantity <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">int</span> Quantity <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Product<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Product<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">decimal</span> Price <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">decimal</span> Price <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Customer<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Customer<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> Name <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
 <span style="color: #696969; font-style: italic;">// Escribe un método para obtener de forma segura el nombre del primer producto en el pedido</span><br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> GetFirstProductName<span style="color: #008000;">(</span>Order order<span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">string</span> GetFirstProductName<span style="color: #008000;">(</span>Order order<span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">return</span> order<span style="color: #008000;">?.</span><span style="color: #05a;">Items</span><span style="color: #008000;">?.</span><span style="color: #05a;">FirstOrDefault</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">?.</span><span style="color: #05a;">Product</span><span style="color: #008000;">?.</span><span style="color: #05a;">Name</span> <span style="color: #008000;">??</span> <span style="color: #a11;">"Sin información del producto"</span><span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -770,19 +770,19 @@ Person person <span style="color: #008000;">=</span> <span style="color: #008000
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #696969; font-style: italic;">// Crea un ejemplo completo que demuestre la aplicación del operador condicional Null en proyectos reales</span><br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> ShoppingCart<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> ShoppingCart<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> List<span style="color: #008000;">&lt;</span>CartItem<span style="color: #008000;">&gt;</span> Items <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">decimal</span><span style="color: #008000;">?</span> CalculateTotal<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">decimal</span><span style="color: #008000;">?</span> CalculateTotal<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         <span style="color: #05a; font-weight: bold;">return</span> Items<span style="color: #008000;">?.</span><span style="color: #05a;">Sum</span><span style="color: #008000;">(</span>item <span style="color: #008000;">=&gt;</span> item<span style="color: #008000;">?.</span><span style="color: #05a;">Product</span><span style="color: #008000;">?.</span><span style="color: #05a;">Price</span> <span style="color: #008000;">*</span> item<span style="color: #008000;">?.</span><span style="color: #05a;">Quantity</span><span style="color: #008000;">)</span> <span style="color: #008000;">??</span> <span style="color: Maroon;">0</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> CartItem<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> CartItem<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> Product Product <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> Quantity <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">int</span><span style="color: #008000;">?</span> Quantity <span style="color: #008000;">{</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div>
 </div>
@@ -821,7 +821,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -866,7 +866,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -905,7 +905,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar un artículo</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1124,7 +1124,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

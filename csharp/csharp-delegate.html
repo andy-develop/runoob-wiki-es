@@ -188,7 +188,7 @@ public delegate int MyDelegate (string s);
 <h2 class="tutheader">Instanciación de delegados (Delegate)</h2>
 <p>Una vez que se ha declarado el tipo de delegado, el objeto delegado debe crearse usando la palabra clave<b>new</b>new, y asociado a un método específico. Al crear el delegado, los argumentos pasados a la<b>new</b>sentencia se escriben como una llamada a método, pero sin parámetros. Por ejemplo:</p>
 <div class="example"> <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">delegate</span> <span style="color: #6666cc; font-weight: bold;">void</span> printString<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">delegate</span> <span style="color: #6666CC; font-weight: bold;">void</span> printString<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <span style="color: #008000;">...</span><br/>
 <span style="color: #05a;">printString</span> ps1 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> printString<span style="color: #008000;">(</span>WriteToScreen<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 printString ps2 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> printString<span style="color: #008000;">(</span>WriteToFile<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -197,29 +197,29 @@ printString ps2 <span style="color: #008000;">=</span> <span style="color: #0080
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">delegate</span> <span style="color: #6666cc; font-weight: bold;">int</span> NumberChanger<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> n<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">delegate</span> <span style="color: #6666CC; font-weight: bold;">int</span> NumberChanger<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> n<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <span style="color: #05a; font-weight: bold;">namespace</span> DelegateAppl<br/>
 <span style="color: #008000;">{</span><br/>
-   <span style="color: #6666cc; font-weight: bold;">class</span> TestDelegate<br/>
+   <span style="color: #6666CC; font-weight: bold;">class</span> TestDelegate<br/>
    <span style="color: #008000;">{</span><br/>
-      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> AddNum<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> p<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> AddNum<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> p<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          num <span style="color: #008000;">+=</span> p<span style="color: #008000;">;</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
 <br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> MultNum<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> q<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> MultNum<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> q<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          num <span style="color: #008000;">*=</span> q<span style="color: #008000;">;</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> getNum<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> getNum<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
 <br/>
-      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          <span style="color: #696969; font-style: italic;">// Crear una instancia del delegado</span><br/>
          NumberChanger nc1 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> NumberChanger<span style="color: #008000;">(</span>AddNum<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -245,29 +245,29 @@ Value of Num: 175
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br/>
 <br/>
-<span style="color: #6666cc; font-weight: bold;">delegate</span> <span style="color: #6666cc; font-weight: bold;">int</span> NumberChanger<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> n<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+<span style="color: #6666CC; font-weight: bold;">delegate</span> <span style="color: #6666CC; font-weight: bold;">int</span> NumberChanger<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> n<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <span style="color: #05a; font-weight: bold;">namespace</span> DelegateAppl<br/>
 <span style="color: #008000;">{</span><br/>
-   <span style="color: #6666cc; font-weight: bold;">class</span> TestDelegate<br/>
+   <span style="color: #6666CC; font-weight: bold;">class</span> TestDelegate<br/>
    <span style="color: #008000;">{</span><br/>
-      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> AddNum<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> p<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> num <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> AddNum<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> p<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          num <span style="color: #008000;">+=</span> p<span style="color: #008000;">;</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
 <br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> MultNum<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> q<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> MultNum<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> q<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          num <span style="color: #008000;">*=</span> q<span style="color: #008000;">;</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> getNum<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> getNum<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          <span style="color: #05a; font-weight: bold;">return</span> num<span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
 <br/>
-      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          <span style="color: #696969; font-style: italic;">// Crear una instancia del delegado</span><br/>
          NumberChanger nc<span style="color: #008000;">;</span><br/>
@@ -296,20 +296,20 @@ Value of Num: 75
 <br/>
 <span style="color: #05a; font-weight: bold;">namespace</span> DelegateAppl<br/>
 <span style="color: #008000;">{</span><br/>
-   <span style="color: #6666cc; font-weight: bold;">class</span> PrintString<br/>
+   <span style="color: #6666CC; font-weight: bold;">class</span> PrintString<br/>
    <span style="color: #008000;">{</span><br/>
       <span style="color: #05a; font-weight: bold;">static</span> FileStream fs<span style="color: #008000;">;</span><br/>
       <span style="color: #05a; font-weight: bold;">static</span> StreamWriter sw<span style="color: #008000;">;</span><br/>
       <span style="color: #696969; font-style: italic;">// Declaración del delegado</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">delegate</span> <span style="color: #6666cc; font-weight: bold;">void</span> printString<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">delegate</span> <span style="color: #6666CC; font-weight: bold;">void</span> printString<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
       <span style="color: #696969; font-style: italic;">// Este método imprime en la consola</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> WriteToScreen<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> str<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> WriteToScreen<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> str<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span><span style="color: #a11;">"The String is: {0}"</span>, str<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
       <span style="color: #696969; font-style: italic;">// Este método imprime en un archivo</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> WriteToFile<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> WriteToFile<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> s<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          fs <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> FileStream<span style="color: #008000;">(</span><span style="color: #a11;">"c:<span style="color: #008080; font-weight: bold;">\\</span>message.txt"</span>, FileMode<span style="color: #008000;">.</span><span style="color: #05a;">Append</span>, FileAccess<span style="color: #008000;">.</span><span style="color: #05a;">Write</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
          sw <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> StreamWriter<span style="color: #008000;">(</span>fs<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -319,11 +319,11 @@ Value of Num: 75
          fs<span style="color: #008000;">.</span><span style="color: #05a;">Close</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
       <span style="color: #696969; font-style: italic;">// Este método toma un delegado como parámetro y lo usa para llamar al método</span><br/>
-      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> sendString<span style="color: #008000;">(</span>printString ps<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> sendString<span style="color: #008000;">(</span>printString ps<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          ps<span style="color: #008000;">(</span><span style="color: #a11;">"Hello World"</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
       <span style="color: #008000;">}</span><br/>
-      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
+      <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span><span style="color: #008000;">[</span><span style="color: #008000;">]</span> args<span style="color: #008000;">)</span><br/>
       <span style="color: #008000;">{</span><br/>
          printString ps1 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> printString<span style="color: #008000;">(</span>WriteToScreen<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
          printString ps2 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> printString<span style="color: #008000;">(</span>WriteToFile<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
@@ -341,21 +341,21 @@ The String is: Hello World
 <hr/><h2>Eliminar delegados</h2>
 <p>Si ya no necesitas un método, puedes<span class="marked">-=</span>usar el operador - para quitar ese método de la cadena de delegados.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Program<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Program<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">delegate</span> <span style="color: #6666cc; font-weight: bold;">void</span> PrintMessage<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">delegate</span> <span style="color: #6666CC; font-weight: bold;">void</span> PrintMessage<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> PrintUpperCase<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> PrintUpperCase<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>message<span style="color: #008000;">.</span><span style="color: #05a;">ToUpper</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> PrintLowerCase<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> PrintLowerCase<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">string</span> message<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span>message<span style="color: #008000;">.</span><span style="color: #05a;">ToLower</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         PrintMessage print <span style="color: #008000;">=</span> PrintUpperCase<span style="color: #008000;">;</span><br/>
         print <span style="color: #008000;">+=</span> PrintLowerCase<span style="color: #008000;">;</span><br/>
@@ -370,13 +370,13 @@ The String is: Hello World
 </div></div><hr/>
 <h2>Delegados y eventos</h2><p>Los delegados se usan a menudo junto con los eventos (Event). Un evento es un tipo especial de delegado utilizado para el mecanismo de publicación y suscripción.</p><p>En C#, un evento es esencialmente un tipo que encapsula un delegado y se utiliza para responder a ciertas operaciones en el programa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Button<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Button<br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #696969; font-style: italic;">// Definir un evento</span><br/>
     <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">event</span> EventHandler Click<span style="color: #008000;">;</span><br/>
 <br/>
     <span style="color: #696969; font-style: italic;">// Método para provocar el evento</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> OnClick<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">void</span> OnClick<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         <span style="color: #05a; font-weight: bold;">if</span> <span style="color: #008000;">(</span>Click <span style="color: #008000;">!=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">)</span><br/>
         <span style="color: #008000;">{</span><br/>
@@ -385,9 +385,9 @@ The String is: Hello World
     <span style="color: #008000;">}</span><br/>
 <span style="color: #008000;">}</span><br/>
 <br/>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Program<br/>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666CC; font-weight: bold;">class</span> Program<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Main<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Button button <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Button<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
         <br/>
@@ -398,7 +398,7 @@ The String is: Hello World
         button<span style="color: #008000;">.</span><span style="color: #05a;">OnClick</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span>  <span style="color: #696969; font-style: italic;">// Salida "Button clicked!"</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
-    <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Button_Click<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">object</span> sender, EventArgs e<span style="color: #008000;">)</span><br/>
+    <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">void</span> Button_Click<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">object</span> sender, EventArgs e<span style="color: #008000;">)</span><br/>
     <span style="color: #008000;">{</span><br/>
         Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">(</span><span style="color: #a11;">"Button clicked!"</span><span style="color: #008000;">)</span><span style="color: #008000;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
@@ -461,7 +461,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -506,7 +506,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -722,7 +722,7 @@ namespace DelegateAppl
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>

@@ -287,51 +287,51 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </ul>
 <h3>Puntero inteligente Box&lt;T&gt;</h3><p>Box&lt;T&gt; es uno de los punteros inteligentes más simples en Rust; permite asignar un bloque de memoria en el montón y almacenar el valor en esa memoria.</p><p>Debido a las reglas de propiedad de Rust, el uso de Box permite crear datos con un tamaño conocido en el montón.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #708;">let</span> b <span style="">=</span> Box<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> b <span style="">=</span> Box<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 println<span style="">!</span><span style="">(</span><span style="color: #a11;">"b = {}"</span><span style="">,</span> b<span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente Rc&lt;T&gt;</h3><p>Rc&lt;T&gt; (puntero de recuento de referencias) permite que varios propietarios compartan datos; utiliza un recuento de referencias para rastrear el número de propietarios de los datos y libera los datos cuando el número de propietarios llega a cero.</p><p>Rc&lt;T&gt; es adecuado para compartir datos en entornos de un solo hilo.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">rc</span><span style="">::</span><span style="color: #05a;">Rc</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> data <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> data <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> data_clone <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">clone</span><span style="">(</span><span style="">&amp;</span>data<span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente Arc&lt;T&gt;</h3><p>Arc&lt;T&gt; (puntero atómico de recuento de referencias) es similar a Rc&lt;T&gt;, pero puede compartir datos de forma segura en entornos de múltiples hilos, ya que utiliza operaciones atómicas para actualizar el recuento de referencias.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">sync</span><span style="">::</span><span style="color: #164;">Arc</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> data <span style="">=</span> Arc<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> data <span style="">=</span> Arc<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> data_clone <span style="">=</span> Arc<span style="">::</span><span style="color: #164;">clone</span><span style="">(</span><span style="">&amp;</span>data<span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente RefCell&lt;T&gt;</h3><p>RefCell&lt;T&gt; permite verificar las reglas de préstamo en tiempo de ejecución; utiliza la mutabilidad interior para proporcionar un patrón seguro de mutabilidad interior, permitiendo modificar datos incluso con referencias inmutables.</p><p>Sin embargo, RefCell&lt;T&gt; solo se puede utilizar en entornos de un solo hilo.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">cell</span><span style="">::</span><span style="color: #164;">RefCell</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> data <span style="">=</span> RefCell<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> data <span style="">=</span> RefCell<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> <span style="color: #708;">mut</span> borrowed_data <span style="">=</span> data.borrow_mut<span style="">(</span><span style="">)</span><span style="">;</span><br/>
-<span style="">*</span>borrowed_data <span style="">=</span> <span style="color: #0000dd;">10</span><span style="">;</span><br/>
+<span style="">*</span>borrowed_data <span style="">=</span> <span style="color: #0000DD;">10</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente Mutex&lt;T&gt;</h3>
 <p>Mutex&lt;T&gt; es un bloqueo de exclusión mutua que garantiza que, en cualquier momento, solo un hilo pueda acceder a los datos dentro del Mutex.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">sync</span><span style="">::</span><span style="color: #164;">Mutex</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> m <span style="">=</span> Mutex<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> m <span style="">=</span> Mutex<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> <span style="color: #708;">mut</span> data <span style="">=</span> m.lock<span style="">(</span><span style="">)</span>.unwrap<span style="">(</span><span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente RwLock&lt;T&gt;</h3><p>RwLock&lt;T&gt; es un bloqueo de lectura-escritura que permite que varios lectores accedan a los datos al mismo tiempo, pero es exclusivo al escribir.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">sync</span><span style="">::</span><span style="color: #164;">RwLock</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> lock <span style="">=</span> RwLock<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> lock <span style="">=</span> RwLock<span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> read_guard <span style="">=</span> lock.read<span style="">(</span><span style="">)</span>.unwrap<span style="">(</span><span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Puntero inteligente Weak&lt;T&gt;</h3><p>Weak&lt;T&gt; es un puntero inteligente no propietario de Rc&lt;T&gt;; no aumenta el recuento de referencias y se utiliza para resolver problemas de referencias cíclicas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #708;">use</span> std<span style="">::</span><span style="color: #164;">rc</span><span style="">::</span><span style="">{</span><span style="color: #05a;">Rc</span><span style="">,</span> Weak<span style="">}</span><span style="">;</span><br/>
 <br/>
-<span style="color: #708;">let</span> five <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000dd;">5</span><span style="">)</span><span style="">;</span><br/>
+<span style="color: #708;">let</span> five <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span><span style="color: #0000DD;">5</span><span style="">)</span><span style="">;</span><br/>
 <span style="color: #708;">let</span> weak_five <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">downgrade</span><span style="">(</span><span style="">&amp;</span>five<span style="">)</span><span style="">;</span><br/>
 </div></div>
 <h3>Gestión del ciclo de vida de los punteros inteligentes</h3><p>Los punteros inteligentes pueden ayudar a gestionar el ciclo de vida de los datos; cuando se destruyen, liberan automáticamente la memoria, evitando así fugas de memoria y punteros colgantes.</p><p>Además, los punteros inteligentes permiten especificar un destructor personalizado al crearlos para implementar una gestión de recursos personalizada.</p>
@@ -349,7 +349,7 @@ println<span style="">!</span><span style="">(</span><span style="color: #a11;">
 <span style="color: #a50; font-style: italic;">// Función principal</span><br/>
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
     <span style="color: #a50; font-style: italic;">// Crear un puntero inteligente Rc para compartir datos</span><br/>
-    <span style="color: #708;">let</span> data <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span>Data <span style="">{</span> value<span style="">:</span> <span style="color: #0000dd;">5</span> <span style="">}</span><span style="">)</span><span style="">;</span><br/>
+    <span style="color: #708;">let</span> data <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">new</span><span style="">(</span>Data <span style="">{</span> value<span style="">:</span> <span style="color: #0000DD;">5</span> <span style="">}</span><span style="">)</span><span style="">;</span><br/>
 <br/>
     <span style="color: #a50; font-style: italic;">// Clonar el puntero inteligente Rc para aumentar el recuento de referencias de los datos</span><br/>
     <span style="color: #708;">let</span> data_clone1 <span style="">=</span> <span style="color: #05a;">Rc</span><span style="">::</span><span style="color: #164;">clone</span><span style="">(</span><span style="">&amp;</span>data<span style="">)</span><span style="">;</span><br/>
@@ -405,7 +405,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -450,7 +450,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -489,7 +489,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -708,7 +708,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -97,7 +97,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Expresión</h3><p>Una expresión está compuesta por operadores y operandos, y su objetivo es obtener un resultado de cálculo según el significado de los operadores. Las expresiones se pueden usar en cualquier lugar donde aparezcan valores numéricos. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 a<span style="color: #5D478B;">^</span>b <span style="color: #5D478B;">;</span>          <span style="color: #00008B; font-style: italic;">// operación XOR entre a y b</span><br/>
-address<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span><span style="color: #ff0055;">0'b1</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">// acumulación de dirección</span><br/>
+address<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span><span style="color: #FF0055;">0'b1</span> <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">// acumulación de dirección</span><br/>
 flag1 <span style="color: #5D478B;">&amp;&amp;</span> flag2 <span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">// operación AND lógica</span><br/>
 </div></div>
 <h3>Operandos</h3><p>Los operandos pueden ser de cualquier tipo de datos, solo que ciertas estructuras sintácticas específicas requieren el uso de un tipo de operando concreto.</p>
@@ -110,7 +110,7 @@ flag1 <span style="color: #5D478B;">&amp;&amp;</span> flag2 <span style="color: 
 c <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span> b <span style="color: #5D478B;">;</span><br/>
 <br/>
 <span style="color: #00008B; font-style: italic;">// registro</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">reg</span>  <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>       cprmu_1<span style="color: #5D478B;">,</span> cprmu_2 <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span>  <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>       cprmu_1<span style="color: #5D478B;">,</span> cprmu_2 <span style="color: #5D478B;">;</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">always</span> <span style="color: #5D478B;">@</span><span style="color: #9F79EE;">(</span><span style="color: #A52A2A; font-weight: bold;">posedge</span> clk<span style="color: #9F79EE;">)</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
         cprmu_2 <span style="color: #5D478B;">=</span> cprmu_1 <span style="color: #5D478B;">^</span> cprmu_2 <span style="color: #5D478B;">;</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
@@ -120,8 +120,8 @@ c <span style="color: #5D478B;">=</span> a <span style="color: #5D478B;">+</span
 flag <span style="color: #5D478B;">=</span> calculate_result<span style="color: #9F79EE;">(</span>A<span style="color: #5D478B;">,</span> B<span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span><br/>
  <br/>
 <span style="color: #00008B; font-style: italic;">// operando ilegal</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>         res<span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>        temp<span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>         res<span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">wire</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>        temp<span style="color: #5D478B;">;</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">always</span><span style="color: #5D478B;">@</span> （<span style="color: #5D478B;">*</span>）<span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
     res    <span style="color: #5D478B;">=</span> cprmu_2 – cprmu_1 <span style="color: #5D478B;">;</span><br/>
     <span style="color: #00008B; font-style: italic;">//temp = cprmu_2 – cprmu_1 ; // no válido, el objeto de asignación en un bloque always no puede ser de tipo wire</span><br/>
@@ -150,33 +150,33 @@ A ? B : C ? D : F ; //结果为 B、D 或 F
 <h3>Operadores aritméticos</h3><p>Los operadores aritméticos incluyen operadores unarios y operadores binarios.</p>
 <p>Los operadores binarios realizan operaciones aritméticas sobre 2 operandos, incluyendo multiplicación (*), división (/), suma (+), resta (-), potencia (**) y módulo (%).</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>  a<span style="color: #5D478B;">,</span> b<span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>  c <span style="color: #5D478B;">;</span><br/>
-a <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b0010</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// el valor de a es 2</span><br/>
-b <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b1001</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// el valor de b es 9</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>  a<span style="color: #5D478B;">,</span> b<span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">4</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>  c <span style="color: #5D478B;">;</span><br/>
+a <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b0010</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// el valor de a es 2</span><br/>
+b <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b1001</span><span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// el valor de b es 9</span><br/>
 c <span style="color: #5D478B;">=</span> a<span style="color: #5D478B;">+</span>b<span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">// el resultado es c=b'b1011</span><br/>
 c <span style="color: #5D478B;">=</span> b<span style="color: #5D478B;">/</span>a<span style="color: #5D478B;">;</span>     <span style="color: #00008B; font-style: italic;">// el resultado es c=4, truncado</span><br/>
 </div></div>
 <p>Si algún bit de un operando es X, el resultado del cálculo también será todo X. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-b <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b100x</span> <span style="color: #5D478B;">;</span><br/>
+b <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b100x</span> <span style="color: #5D478B;">;</span><br/>
 c <span style="color: #5D478B;">=</span> a<span style="color: #5D478B;">+</span>b <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">// el resultado es c=4'bxxxx</span><br/>
 </div></div>
 <p>Al declarar variables, se debe declarar razonablemente el ancho de bits de la variable según los operadores involucrados, para no provocar desbordamiento del resultado. En el ejemplo anterior, los 2 operandos que se suman tienen un ancho de 4 bits, por lo que el ancho de bits de la variable de resultado (registro) debe ser al menos de 5 bits. De lo contrario, los bits altos se truncarán y se perderán. En la multiplicación de números sin signo, el ancho de bits de la variable de resultado debe ser la suma de los anchos de bits de los 2 operandos.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>        mula <span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>        mulb<span style="color: #5D478B;">;</span><br/>
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span>        res <span style="color: #5D478B;">;</span><br/>
-mula <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'he</span>   <span style="color: #5D478B;">;</span><br/>
-mulb <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2'h3</span>   <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>        mula <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">1</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>        mulb<span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">5</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span>        res <span style="color: #5D478B;">;</span><br/>
+mula <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'he</span>   <span style="color: #5D478B;">;</span><br/>
+mulb <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2'h3</span>   <span style="color: #5D478B;">;</span><br/>
 res  <span style="color: #5D478B;">=</span> mula <span style="color: #5D478B;">*</span> mulb <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// el resultado es res=6'h2a, el resultado de datos no pierde bits</span><br/>
 </div></div><p>+ y - también se pueden usar como operadores unarios, indicando el signo positivo o negativo del operando. Este tipo de operadores tiene la precedencia más alta.</p>
 <pre>-4  //表示负4
 +3  //表示正3</pre>
 <p>Para representar números negativos, se puede añadir directamente un signo menos delante del número decimal<span class="marked">-</span>, o se puede especificar el ancho de bits. Debido a que los números negativos se representan en complemento a dos, si no se especifica el ancho de bits para representar un número negativo, el compilador asignará automáticamente el ancho de bits durante la conversión, lo que puede producir resultados inesperados. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-mula <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">-</span><span style="color: #ff0055;">4'd4</span> <span style="color: #5D478B;">;</span><br/>
-mulb <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2</span> <span style="color: #5D478B;">;</span><br/>
+mula <span style="color: #5D478B;">=</span> <span style="color: #5D478B;">-</span><span style="color: #FF0055;">4'd4</span> <span style="color: #5D478B;">;</span><br/>
+mulb <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2</span> <span style="color: #5D478B;">;</span><br/>
 res <span style="color: #5D478B;">=</span> mula <span style="color: #5D478B;">*</span> mulb <span style="color: #5D478B;">;</span>      <span style="color: #00008B; font-style: italic;">// el resultado es res=-6'd8, es decir, res=6'h38, normal</span><br/>
 res <span style="color: #5D478B;">=</span> mula <span style="color: #5D478B;">*</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">-</span>'d4<span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">// (4 elevado a 32 - 4) * 2, resultado anormal</span><br/>
 </div></div>
@@ -185,9 +185,9 @@ res <span style="color: #5D478B;">=</span> mula <span style="color: #5D478B;">*<
 <p>Los resultados normales de los operadores relacionales son 2: verdadero (1) o falso (0).</p>
 <p>Si algún bit de los operandos es x o z, el resultado de la expresión relacional es x.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span> <span style="color: #5D478B;">;</span><br/>
-X <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3'b1xx</span> <span style="color: #5D478B;">;</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span> <span style="color: #5D478B;">;</span><br/>
+X <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3'b1xx</span> <span style="color: #5D478B;">;</span><br/>
     <br/>
 A <span style="color: #5D478B;">&gt;</span> B     <span style="color: #00008B; font-style: italic;">// verdadero</span><br/>
 A <span style="color: #5D478B;">&lt;=</span> B    <span style="color: #00008B; font-style: italic;">// falso</span><br/>
@@ -195,12 +195,12 @@ A <span style="color: #5D478B;">&gt;=</span> Z    <span style="color: #00008B;
 </div></div>
 <h3>Operadores de igualdad</h3><p>Los operadores de igualdad incluyen igualdad lógica (==), desigualdad lógica (!=), identidad (===) y no identidad (!==).</p><p>Los resultados normales de los operadores de igualdad son 2: verdadero (1) o falso (0).</p><p>Los operadores de igualdad/desigualdad lógica no pueden comparar x o z; cuando un operando contiene un x o z, el resultado es un valor indeterminado.</p><p>En la comparación de identidad, si la comparación bit a bit tiene los mismos x o z, el resultado devuelto también puede ser 1, es decir, la comparación de identidad puede comparar x o z. Por lo tanto, el resultado de la comparación de identidad nunca contiene x. Ejemplos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4</span> <span style="color: #5D478B;">;</span><br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">8'h04</span> <span style="color: #5D478B;">;</span><br/>
-C <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'bxxxx</span> <span style="color: #5D478B;">;</span><br/>
-D <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'hx</span> <span style="color: #5D478B;">;</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4</span> <span style="color: #5D478B;">;</span><br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">8'h04</span> <span style="color: #5D478B;">;</span><br/>
+C <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'bxxxx</span> <span style="color: #5D478B;">;</span><br/>
+D <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'hx</span> <span style="color: #5D478B;">;</span><br/>
 A <span style="color: #5D478B;">==</span> B        <span style="color: #00008B; font-style: italic;">// verdadero</span><br/>
-A <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>B <span style="color: #5D478B;">+</span> <span style="color: #ff0055;">1</span><span style="color: #9F79EE;">)</span>  <span style="color: #00008B; font-style: italic;">// falso</span><br/>
+A <span style="color: #5D478B;">==</span> <span style="color: #9F79EE;">(</span>B <span style="color: #5D478B;">+</span> <span style="color: #FF0055;">1</span><span style="color: #9F79EE;">)</span>  <span style="color: #00008B; font-style: italic;">// falso</span><br/>
 A <span style="color: #5D478B;">==</span> C        <span style="color: #00008B; font-style: italic;">// es X, indeterminado</span><br/>
 A <span style="color: #5D478B;">===</span> C       <span style="color: #00008B; font-style: italic;">// falso, valor de retorno 0</span><br/>
 C <span style="color: #5D478B;">===</span> D       <span style="color: #00008B; font-style: italic;">// verdadero, valor de retorno 1</span><br/>
@@ -208,9 +208,9 @@ C <span style="color: #5D478B;">===</span> D       <span style="color: #00008
 <h3>Operadores lógicos</h3>
 <p>Los operadores lógicos principales son 3: &amp;&amp; (AND lógico), || (OR lógico), ! (NOT lógico).</p><p>El resultado del cálculo de los operadores lógicos es un valor de 1 bit; 0 representa falso, 1 verdadero, y x indeterminado.</p><p>Si un operando no es 0, equivale a lógico 1; si un operando es 0, equivale a lógico 0. Si cualquier bit de él es x o z, equivale a x.</p><p>Si cualquier operando contiene x, el resultado de la operación lógica no es necesariamente x.</p><p>Los operandos de los operadores lógicos pueden ser variables o expresiones. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span><span style="color: #5D478B;">;</span> <br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">0</span><span style="color: #5D478B;">;</span> <br/>
-C <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">2'b1x</span> <span style="color: #5D478B;">;</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span><span style="color: #5D478B;">;</span> <br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">0</span><span style="color: #5D478B;">;</span> <br/>
+C <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">2'b1x</span> <span style="color: #5D478B;">;</span><br/>
     <br/>
 A <span style="color: #5D478B;">&amp;&amp;</span> B    <span style="color: #00008B; font-style: italic;">//      falso</span><br/>
 A <span style="color: #5D478B;">||</span> B    <span style="color: #00008B; font-style: italic;">//      verdadero</span><br/>
@@ -218,7 +218,7 @@ A <span style="color: #5D478B;">||</span> B    <span style="color: #00008B; fo
 <span style="color: #5D478B;">!</span> B       <span style="color: #00008B; font-style: italic;">//      verdadero</span><br/>
 A <span style="color: #5D478B;">&amp;&amp;</span> C    <span style="color: #00008B; font-style: italic;">//      es X, indeterminado</span><br/>
 A <span style="color: #5D478B;">||</span> C    <span style="color: #00008B; font-style: italic;">//      verdadero, porque A es verdadero</span><br/>
-<span style="color: #9F79EE;">(</span>A<span style="color: #5D478B;">==</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">&amp;&amp;</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span> B<span style="color: #9F79EE;">)</span>  <span style="color: #00008B; font-style: italic;">// verdadero, en este caso el primer operando es una expresión</span><br/>
+<span style="color: #9F79EE;">(</span>A<span style="color: #5D478B;">==</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">&amp;&amp;</span> <span style="color: #9F79EE;">(</span><span style="color: #5D478B;">!</span> B<span style="color: #9F79EE;">)</span>  <span style="color: #00008B; font-style: italic;">// verdadero, en este caso el primer operando es una expresión</span><br/>
 </div></div>
 <h3>Operadores bit a bit</h3>
 <p>Los operadores bit a bit incluyen: negación (~), AND (&amp;), OR (|), XOR (^), XNOR (~^).</p><p>Los operadores bit a bit operan sobre cada bit de los 2 operandos.</p><p>Si los dos operandos no tienen el mismo ancho de bits, se rellena el operando más corto con ceros a la izquierda.</p><p>El operador de negación tiene un solo operando y realiza la negación de cada bit del operando.</p>
@@ -226,9 +226,9 @@ A <span style="color: #5D478B;">||</span> C    <span style="color: #00008B; fo
 <table class="reference"><thead><tr><th style="text-align:left;"><span>&amp; (AND)</span></th><th style="text-align:left;"><span>0</span></th><th style="text-align:left;"><span>1</span></th><th style="text-align:left;"><span>x</span></th><th style="text-align:left;"> </th><th style="text-align:left;"><span>|</span><span>(OR)</span></th><th style="text-align:left;"><span>0</span></th><th style="text-align:left;"><span>1</span></th><th style="text-align:left;"><span>x</span></th></tr></thead><tbody><tr><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>x</span></td></tr><tr><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>1</span></td></tr><tr><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>x</span></td></tr></tbody></table>
 <table class="reference"><thead><tr><th style="text-align:left;"><span>^ (XOR)</span></th><th style="text-align:left;"><span>0</span></th><th style="text-align:left;"><span>1</span></th><th style="text-align:left;"><span>x</span></th><th style="text-align:left;"> </th><th style="text-align:left;"><span>~^ (XNOR)</span></th><th style="text-align:left;"><span>0</span></th><th style="text-align:left;"><span>1</span></th><th style="text-align:left;"><span>x</span></th></tr></thead><tbody><tr><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>x</span></td></tr><tr><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>0</span></td><td style="text-align:left;"><span>1</span></td><td style="text-align:left;"><span>x</span></td></tr><tr><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"> </td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td><td style="text-align:left;"><span>x</span></td></tr></tbody></table>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b0101</span> <span style="color: #5D478B;">;</span><br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b1001</span> <span style="color: #5D478B;">;</span><br/>
-C <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'bx010</span> <span style="color: #5D478B;">;</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b0101</span> <span style="color: #5D478B;">;</span><br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b1001</span> <span style="color: #5D478B;">;</span><br/>
+C <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'bx010</span> <span style="color: #5D478B;">;</span><br/>
     <br/>
 <span style="color: #5D478B;">~</span>A        <span style="color: #00008B; font-style: italic;">//4'b1010</span><br/>
 A <span style="color: #5D478B;">&amp;</span> B     <span style="color: #00008B; font-style: italic;">//4'b0001</span><br/>
@@ -249,21 +249,21 @@ A = 4'b1010 ;
 <p>Los operadores de desplazamiento son operadores binarios; los dos operandos representan respectivamente la señal vectorial a desplazar (lado izquierdo del operador) y el número de posiciones a desplazar (lado derecho del operador).</p>
 <p>En el desplazamiento aritmético a la izquierda y en el desplazamiento lógico a la izquierda, los bits bajos de la derecha se rellenan con 0.</p><p>En el desplazamiento lógico a la derecha, los bits altos de la izquierda se rellenan con 0; mientras que en el desplazamiento aritmético a la derecha, los bits altos de la izquierda se rellenan con el bit de signo, para garantizar la corrección del valor al reducir los datos.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b1100</span> <span style="color: #5D478B;">;</span><br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b0010</span> <span style="color: #5D478B;">;</span><br/>
-A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&gt;&gt;</span> <span style="color: #ff0055;">2</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">// el resultado es 4'b0011</span><br/>
-A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&lt;&lt;</span> <span style="color: #ff0055;">1</span><span style="color: #5D478B;">;</span>         <span style="color: #00008B; font-style: italic;">// el resultado es 4'b1000</span><br/>
-A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&lt;&lt;&lt;</span> <span style="color: #ff0055;">1</span> <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">// el resultado es 4'b1000</span><br/>
-C <span style="color: #5D478B;">=</span> B <span style="color: #5D478B;">+</span> <span style="color: #9F79EE;">(</span>A<span style="color: #5D478B;">&gt;&gt;&gt;</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">// el resultado es 2 + (-4/4) = 1, 4'b0001</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b1100</span> <span style="color: #5D478B;">;</span><br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b0010</span> <span style="color: #5D478B;">;</span><br/>
+A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&gt;&gt;</span> <span style="color: #FF0055;">2</span> <span style="color: #5D478B;">;</span>        <span style="color: #00008B; font-style: italic;">// el resultado es 4'b0011</span><br/>
+A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&lt;&lt;</span> <span style="color: #FF0055;">1</span><span style="color: #5D478B;">;</span>         <span style="color: #00008B; font-style: italic;">// el resultado es 4'b1000</span><br/>
+A <span style="color: #5D478B;">=</span> A <span style="color: #5D478B;">&lt;&lt;&lt;</span> <span style="color: #FF0055;">1</span> <span style="color: #5D478B;">;</span>       <span style="color: #00008B; font-style: italic;">// el resultado es 4'b1000</span><br/>
+C <span style="color: #5D478B;">=</span> B <span style="color: #5D478B;">+</span> <span style="color: #9F79EE;">(</span>A<span style="color: #5D478B;">&gt;&gt;&gt;</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">)</span><span style="color: #5D478B;">;</span>    <span style="color: #00008B; font-style: italic;">// el resultado es 2 + (-4/4) = 1, 4'b0001</span><br/>
 </div></div>
 <h3>Operador de concatenación</h3><p>El operador de concatenación se representa con llaves<span class="marked">{，}</span>para concatenar múltiples operandos (vectores) en un nuevo operando (vector); las señales se separan con comas.</p>
 <p>Los operandos del operador de concatenación deben especificar el ancho de bits; incluso las constantes también deben especificar el ancho de bits. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-A <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">4'b1010</span> <span style="color: #5D478B;">;</span><br/>
-B <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
-Y1 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>B<span style="color: #5D478B;">,</span> A<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">2</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> A<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">4'h3</span> <span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y1='b1100_0011</span><br/>
-Y2 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span><span style="color: #ff0055;">4</span><span style="color: #9F79EE;">{</span>B<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">,</span> <span style="color: #ff0055;">3'd4</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y2=7'b111_1100</span><br/>
-Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span><span style="color: #ff0055;">32</span><span style="color: #9F79EE;">{</span><span style="color: #ff0055;">1'b0</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y3=32h0, comúnmente utilizado para asignar el valor inicial que coincide con el ancho de bits en la inicialización de registros</span><br/>
+A <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">4'b1010</span> <span style="color: #5D478B;">;</span><br/>
+B <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">1'b1</span> <span style="color: #5D478B;">;</span><br/>
+Y1 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>B<span style="color: #5D478B;">,</span> A<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">3</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">2</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> A<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #9F79EE;">]</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">4'h3</span> <span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y1='b1100_0011</span><br/>
+Y2 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span><span style="color: #FF0055;">4</span><span style="color: #9F79EE;">{</span>B<span style="color: #9F79EE;">}</span><span style="color: #5D478B;">,</span> <span style="color: #FF0055;">3'd4</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y2=7'b111_1100</span><br/>
+Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span><span style="color: #FF0055;">32</span><span style="color: #9F79EE;">{</span><span style="color: #FF0055;">1'b0</span><span style="color: #9F79EE;">}</span><span style="color: #9F79EE;">}</span><span style="color: #5D478B;">;</span>  <span style="color: #00008B; font-style: italic;">//El resultado es Y3=32h0, comúnmente utilizado para asignar el valor inicial que coincide con el ancho de bits en la inicialización de registros</span><br/>
 </div></div>
 <h3>Operador condicional</h3>
 <p>La expresión condicional tiene 3 operandos, y su estructura se describe de la siguiente manera:</p>
@@ -275,10 +275,10 @@ Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>
 <p>En realidad, la expresión condicional es similar a un selector de 2 vías (o múltiples vías), y su forma de descripción puede reemplazarse completamente con sentencias if-else.</p>
 <p>Por supuesto, el operador condicional también puede anidarse para implementar una lógica de selección múltiple. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">assign</span>   hsel <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">2'b00</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p1 <span style="color: #5D478B;">:</span> <br/>
-                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">2'b01</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p2 <span style="color: #5D478B;">:</span><br/>
-                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">2'b10</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p3 <span style="color: #5D478B;">:</span><br/>
-                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #ff0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #ff0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #ff0055;">2'b11</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p4 <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">assign</span>   hsel <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">2'b00</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p1 <span style="color: #5D478B;">:</span> <br/>
+                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">2'b01</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p2 <span style="color: #5D478B;">:</span><br/>
+                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">2'b10</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p3 <span style="color: #5D478B;">:</span><br/>
+                <span style="color: #9F79EE;">(</span>addr<span style="color: #9F79EE;">[</span><span style="color: #FF0055;">9</span><span style="color: #5D478B;">:</span><span style="color: #FF0055;">8</span><span style="color: #9F79EE;">]</span> <span style="color: #5D478B;">==</span> <span style="color: #FF0055;">2'b11</span><span style="color: #9F79EE;">)</span> <span style="color: #5D478B;">?</span> hsel_p4 <span style="color: #5D478B;">;</span><br/>
 </div></div> </div>
 </div>
 <div class="previous-next-links">
@@ -304,7 +304,7 @@ Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -349,7 +349,7 @@ Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -388,7 +388,7 @@ Y3 <span style="color: #5D478B;">=</span> <span style="color: #9F79EE;">{</span>
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -599,7 +599,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

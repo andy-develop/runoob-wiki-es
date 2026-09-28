@@ -309,9 +309,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>A continuación se presentan algunas reglas básicas sobre el ámbito de variables en C#:</p>
 <h3>Variables locales</h3> <p>Las variables declaradas dentro de bloques de código como métodos, bucles, sentencias condicionales, etc., son variables locales; solo son visibles en el bloque de código donde se declaran.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">void</span> MyMethod<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
+<span style="color: #6666CC; font-weight: bold;">void</span> MyMethod<span style="color: #008000;">(</span><span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #6666cc; font-weight: bold;">int</span> localVar <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable local</span><br/>
+    <span style="color: #6666CC; font-weight: bold;">int</span> localVar <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable local</span><br/>
     <span style="color: #696969; font-style: italic;">// ...</span><br/>
 <span style="color: #008000;">}</span><br/>
 <span style="color: #696969; font-style: italic;">// localVar no es visible aquí</span><br/>
@@ -319,14 +319,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Ámbito de bloque</h3> <p>En C# 7 y versiones posteriores, se introduce el ámbito de bloque, es decir, usando llaves<span class="marked">{}</span>cualquier bloque creado puede definir el ámbito de una variable.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #6666cc; font-weight: bold;">int</span> blockVar <span style="color: #008000;">=</span> <span style="color: Maroon;">20</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Ámbito de bloque</span><br/>
+    <span style="color: #6666CC; font-weight: bold;">int</span> blockVar <span style="color: #008000;">=</span> <span style="color: Maroon;">20</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Ámbito de bloque</span><br/>
     <span style="color: #696969; font-style: italic;">// ...</span><br/>
 <span style="color: #008000;">}</span><br/>
 <span style="color: #696969; font-style: italic;">// blockVar no es visible aquí</span><br/>
 </div></div>
 <h3>Ámbito de parámetros de método</h3> <p>Los parámetros de un método también tienen su propio ámbito; son visibles en todo el método.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">void</span> MyMethod<span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> parameter<span style="color: #008000;">)</span><br/>
+<span style="color: #6666CC; font-weight: bold;">void</span> MyMethod<span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> parameter<span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #696969; font-style: italic;">// parameter es visible en todo el método</span><br/>
     <span style="color: #696969; font-style: italic;">// ...</span><br/>
@@ -334,22 +334,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <h3>Variables globales</h3> <p>Las variables definidas a nivel de miembro de una clase son variables miembro y son visibles en toda la clase; si se definen a nivel de espacio de nombres, son visibles en todo ese espacio de nombres.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">class</span> MyClass<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> MyClass<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #6666cc; font-weight: bold;">int</span> memberVar <span style="color: #008000;">=</span> <span style="color: Maroon;">30</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable miembro, visible en toda la clase</span><br/>
+    <span style="color: #6666CC; font-weight: bold;">int</span> memberVar <span style="color: #008000;">=</span> <span style="color: Maroon;">30</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable miembro, visible en toda la clase</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Ámbito de variables estáticas</h3> <p>Las variables estáticas se declaran a nivel de clase, pero su ámbito también está limitado a la clase en la que se definen.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #6666cc; font-weight: bold;">class</span> MyClass<br/>
+<span style="color: #6666CC; font-weight: bold;">class</span> MyClass<br/>
 <span style="color: #008000;">{</span><br/>
-    <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">int</span> staticVar <span style="color: #008000;">=</span> <span style="color: Maroon;">40</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable estática, visible en toda la clase</span><br/>
+    <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666CC; font-weight: bold;">int</span> staticVar <span style="color: #008000;">=</span> <span style="color: Maroon;">40</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">// Variable estática, visible en toda la clase</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h3>Ámbito de variables de bucle</h3> <p>La variable de bucle declarada en un bucle for es visible dentro del cuerpo del bucle.</p>。
 
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #05a; font-weight: bold;">for</span> <span style="color: #008000;">(</span><span style="color: #6666cc; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> <span style="color: Maroon;">5</span><span style="color: #008000;">;</span> i<span style="color: #008000;">++</span><span style="color: #008000;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">for</span> <span style="color: #008000;">(</span><span style="color: #6666CC; font-weight: bold;">int</span> i <span style="color: #008000;">=</span> <span style="color: Maroon;">0</span><span style="color: #008000;">;</span> i <span style="color: #008000;">&lt;</span> <span style="color: Maroon;">5</span><span style="color: #008000;">;</span> i<span style="color: #008000;">++</span><span style="color: #008000;">)</span><br/>
 <span style="color: #008000;">{</span><br/>
     <span style="color: #696969; font-style: italic;">// i es visible dentro del cuerpo del bucle</span><br/>
 <span style="color: #008000;">}</span><br/>
@@ -388,7 +388,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -433,7 +433,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -472,7 +472,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haga clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -691,7 +691,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

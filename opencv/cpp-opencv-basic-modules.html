@@ -341,16 +341,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// Crea una matriz de 3x3</span><br/>
-    Mat mat <span style="color: #000080;">=</span> <span style="color: #008000;">(</span>Mat_<span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span><span style="color: #0000dd;">3</span>, <span style="color: #0000dd;">3</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">2</span>, <span style="color: #0000dd;">3</span>, <span style="color: #0000dd;">4</span>, <span style="color: #0000dd;">5</span>, <span style="color: #0000dd;">6</span>, <span style="color: #0000dd;">7</span>, <span style="color: #0000dd;">8</span>, <span style="color: #0000dd;">9</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    Mat mat <span style="color: #000080;">=</span> <span style="color: #008000;">(</span>Mat_<span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span><span style="color: #0000DD;">3</span>, <span style="color: #0000DD;">3</span><span style="color: #008000;">)</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #0000DD;">1</span>, <span style="color: #0000DD;">2</span>, <span style="color: #0000DD;">3</span>, <span style="color: #0000DD;">4</span>, <span style="color: #0000DD;">5</span>, <span style="color: #0000DD;">6</span>, <span style="color: #0000DD;">7</span>, <span style="color: #0000DD;">8</span>, <span style="color: #0000DD;">9</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Muestra la matriz</span><br/>
     <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Matrix:<span style="color: #000099; font-weight: bold;">\n</span>"</span> <span style="color: #000080;">&lt;&lt;</span> mat <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Accede a los elementos de la matriz</span><br/>
-    <span style="color: #05a;">int</span> value <span style="color: #000080;">=</span> mat.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span><span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">int</span> value <span style="color: #000080;">=</span> mat.<span style="color: #007788;">at</span><span style="color: #000080;">&lt;</span><span style="color: #05a;">int</span><span style="color: #000080;">&gt;</span><span style="color: #008000;">(</span><span style="color: #0000DD;">1</span>, <span style="color: #0000DD;">1</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Value at (1, 1): "</span> <span style="color: #000080;">&lt;&lt;</span> value <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h2><strong>2. Módulo Imgproc</strong></h2>
@@ -415,7 +415,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// Lee la imagen</span><br/>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"test.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Convierte a imagen en escala de grises</span><br/>
     Mat grayImage<span style="color: #008080;">;</span><br/>
@@ -423,14 +423,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
     <span style="color: #666666;">// Filtro gaussiano</span><br/>
     Mat blurredImage<span style="color: #008080;">;</span><br/>
-    GaussianBlur<span style="color: #008000;">(</span>grayImage, blurredImage, Size<span style="color: #008000;">(</span><span style="color: #0000dd;">5</span>, <span style="color: #0000dd;">5</span><span style="color: #008000;">)</span>, <span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    GaussianBlur<span style="color: #008000;">(</span>grayImage, blurredImage, Size<span style="color: #008000;">(</span><span style="color: #0000DD;">5</span>, <span style="color: #0000DD;">5</span><span style="color: #008000;">)</span>, <span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Muestra el resultado</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Original Image"</span>, image<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Blurred Image"</span>, blurredImage<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <hr/>
@@ -471,19 +471,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// Lee la imagen</span><br/>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"test.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Crea una ventana y muestra la imagen</span><br/>
     namedWindow<span style="color: #008000;">(</span><span style="color: #a11;">"Display Window"</span>, WINDOW_AUTOSIZE<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Display Window"</span>, image<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Espera a que el usuario pulse una tecla</span><br/>
-    waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Cierra la ventana</span><br/>
     destroyAllWindows<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <hr/>
@@ -524,8 +524,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #05a;">int</span> main<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
     <span style="color: #666666;">// Abre la cámara</span><br/>
-    VideoCapture cap<span style="color: #008000;">(</span><span style="color: #0000dd;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span><span style="color: #000040;">!</span>cap.<span style="color: #007788;">isOpened</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+    VideoCapture cap<span style="color: #008000;">(</span><span style="color: #0000DD;">0</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span><span style="color: #000040;">!</span>cap.<span style="color: #007788;">isOpened</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
 <br/>
     Mat frame<span style="color: #008080;">;</span><br/>
     <span style="color: #05a;">while</span> <span style="color: #008000;">(</span><span style="color: #05a;">true</span><span style="color: #008000;">)</span> <span style="color: #008000;">{</span><br/>
@@ -537,14 +537,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         imshow<span style="color: #008000;">(</span><span style="color: #a11;">"Camera Feed"</span>, frame<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
         <span style="color: #666666;">// Presiona ESC para salir</span><br/>
-        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>waitKey<span style="color: #008000;">(</span><span style="color: #0000dd;">30</span><span style="color: #008000;">)</span> <span style="color: #000080;">==</span> <span style="color: #0000dd;">27</span><span style="color: #008000;">)</span> <span style="color: #05a;">break</span><span style="color: #008080;">;</span><br/>
+        <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>waitKey<span style="color: #008000;">(</span><span style="color: #0000DD;">30</span><span style="color: #008000;">)</span> <span style="color: #000080;">==</span> <span style="color: #0000DD;">27</span><span style="color: #008000;">)</span> <span style="color: #05a;">break</span><span style="color: #008080;">;</span><br/>
     <span style="color: #008000;">}</span><br/>
 <br/>
     <span style="color: #666666;">// Libera la cámara y cierra la ventana</span><br/>
     cap.<span style="color: #007788;">release</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     destroyAllWindows<span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <h2><strong>5. Módulo Calib3d</strong></h2>
@@ -586,7 +586,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #666666;">// Lee la imagen</span><br/>
     Mat image1 <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"left.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     Mat image2 <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"right.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image1.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000040;">||</span> image2.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image1.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #000040;">||</span> image2.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Detección y coincidencia de puntos característicos</span><br/>
     Ptr<span style="color: #000080;">&lt;</span>Feature2D<span style="color: #000080;">&gt;</span> detector <span style="color: #000080;">=</span> ORB<span style="color: #008080;">::</span><span style="color: #007788;">create</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
@@ -610,7 +610,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #666666;">// Muestra la matriz fundamental</span><br/>
     <span style="color: #05a;">cout</span> <span style="color: #000080;">&lt;&lt;</span> <span style="color: #a11;">"Fundamental Matrix:<span style="color: #000099; font-weight: bold;">\n</span>"</span> <span style="color: #000080;">&lt;&lt;</span> fundamentalMatrix <span style="color: #000080;">&lt;&lt;</span> endl<span style="color: #008080;">;</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div>
 <hr/>
@@ -648,10 +648,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
     <span style="color: #666666;">// Lee la imagen</span><br/>
     Mat image <span style="color: #000080;">=</span> imread<span style="color: #008000;">(</span><span style="color: #a11;">"test.jpg"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
-    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000dd;">1</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">if</span> <span style="color: #008000;">(</span>image.<span style="color: #007788;">empty</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span><span style="color: #008000;">)</span> <span style="color: #05a;">return</span> <span style="color: #000040;">-</span><span style="color: #0000DD;">1</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Preprocesamiento</span><br/>
-    Mat blob <span style="color: #000080;">=</span> blobFromImage<span style="color: #008000;">(</span>image, <span style="color:#800080;">1.0</span>, Size<span style="color: #008000;">(</span><span style="color: #0000dd;">300</span>, <span style="color: #0000dd;">300</span><span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color:#800080;">127.5</span>, <span style="color:#800080;">127.5</span>, <span style="color:#800080;">127.5</span><span style="color: #008000;">)</span>, <span style="color: #05a;">true</span>, <span style="color: #05a;">false</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
+    Mat blob <span style="color: #000080;">=</span> blobFromImage<span style="color: #008000;">(</span>image, <span style="color:#800080;">1.0</span>, Size<span style="color: #008000;">(</span><span style="color: #0000DD;">300</span>, <span style="color: #0000DD;">300</span><span style="color: #008000;">)</span>, Scalar<span style="color: #008000;">(</span><span style="color:#800080;">127.5</span>, <span style="color:#800080;">127.5</span>, <span style="color:#800080;">127.5</span><span style="color: #008000;">)</span>, <span style="color: #05a;">true</span>, <span style="color: #05a;">false</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
     net.<span style="color: #007788;">setInput</span><span style="color: #008000;">(</span>blob<span style="color: #008000;">)</span><span style="color: #008080;">;</span><br/>
 <br/>
     <span style="color: #666666;">// Inferencia</span><br/>
@@ -660,7 +660,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #666666;">// Procesa la salida</span><br/>
     <span style="color: #666666;">// ...</span><br/>
 <br/>
-    <span style="color: #05a;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span><br/>
+    <span style="color: #05a;">return</span> <span style="color: #0000DD;">0</span><span style="color: #008080;">;</span><br/>
 <span style="color: #008000;">}</span><br/>
 </div></div> Otras extensiones
 </div>
@@ -696,7 +696,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -741,7 +741,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -780,7 +780,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -999,7 +999,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

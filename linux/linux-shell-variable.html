@@ -209,9 +209,9 @@ variable_name=value
 variable_name = value</pre>
 <p>Además de la asignación directa y explícita, también se puede asignar un valor a una variable mediante una sentencia, como:</p>
 <div class="example"> <div class="example_code">
-<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #c20cb9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #c20cb9; font-weight: bold;">ls</span> <span style="color: #000000; font-weight: bold;">/</span>etc<span style="color: #000000; font-weight: bold;">`</span><br/>
+<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #C20CB9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #C20CB9; font-weight: bold;">ls</span> <span style="color: #000000; font-weight: bold;">/</span>etc<span style="color: #000000; font-weight: bold;">`</span><br/>
 或<br/>
-<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #c20cb9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> $<span style="color: #7a0874; font-weight: bold;">(</span><span style="color: #c20cb9; font-weight: bold;">ls</span> <span style="color: #000000; font-weight: bold;">/</span>etc<span style="color: #7a0874; font-weight: bold;">)</span><br/>
+<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #C20CB9; font-weight: bold;">file</span> <span style="color: #000000; font-weight: bold;">in</span> $<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #C20CB9; font-weight: bold;">ls</span> <span style="color: #000000; font-weight: bold;">/</span>etc<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 </div></div>
 <p>La sentencia anterior recorre los nombres de los archivos del directorio /etc.</p>
 <hr/>
@@ -219,13 +219,13 @@ variable_name = value</pre>
 <p>Para usar una variable ya definida, solo tienes que anteponer el signo de dólar al nombre de la variable, como:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">your_name</span>=<span style="color: #a10;">"qinjx"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #800000;">${your_name}</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${your_name}</span><br/>
 </div></div>
 <p>Las llaves alrededor del nombre de la variable son opcionales; se pueden poner o no. Se añaden para ayudar al intérprete a identificar los límites de la variable, como en el siguiente caso:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #c20cb9; font-weight: bold;">skill</span> <span style="color: #000000; font-weight: bold;">in</span> Ada Coffe Action Java; <span style="color: #000000; font-weight: bold;">do</span><br/>
-    <span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #a10;">"I am good at <span style="color: #007800;">${skill}</span>Script"</span><br/>
+<span style="color: #000000; font-weight: bold;">for</span> <span style="color: #C20CB9; font-weight: bold;">skill</span> <span style="color: #000000; font-weight: bold;">in</span> Ada Coffe Action Java; <span style="color: #000000; font-weight: bold;">do</span><br/>
+    <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"I am good at <span style="color: #007800;">${skill}</span>Script"</span><br/>
 <span style="color: #000000; font-weight: bold;">done</span><br/>
 </div></div>
 <p>Si no se ponen llaves alrededor de la variable skill y se escribe echo "I am good at $skillScript", el intérprete tratará $skillScript como una variable (cuyo valor está vacío), y el resultado de la ejecución del código no será el esperado.</p>
@@ -233,9 +233,9 @@ variable_name = value</pre>
 <p>Una variable ya definida puede redefinirse, como:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">your_name</span>=<span style="color: #a10;">"tom"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
 <span style="color: #007800;">your_name</span>=<span style="color: #a10;">"alibaba"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$your_name</span><br/>
 </div></div>
 <p>Esta escritura es válida, pero ten en cuenta que en la segunda asignación no se debe escribir $your_name="alibaba"; el signo de dólar ($) se añade solo al usar la variable.</p>
 <h3>Variables de solo lectura</h3>
@@ -245,7 +245,7 @@ variable_name = value</pre>
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <br/>
 <span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.google.com"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">readonly</span> myUrl<br/>
+<span style="color: #7A0874; font-weight: bold;">readonly</span> myUrl<br/>
 <span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.runoob.com"</span><br/>
 </div></div>
 <p>Al ejecutar el script, el resultado es el siguiente:</p><pre>
@@ -259,8 +259,8 @@ variable_name = value</pre>
 <span style="color: #666666; font-style: italic;">#!/bin/sh</span><br/>
 <br/>
 <span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.runoob.com"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">unset</span> myUrl<br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$myUrl</span><br/>
+<span style="color: #7A0874; font-weight: bold;">unset</span> myUrl<br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$myUrl</span><br/>
 </div></div>
 <p>La ejecución del ejemplo anterior no producirá ninguna salida.</p>
 <h3>Tipos de variables</h3>
@@ -303,7 +303,7 @@ str='this is a string'
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">your_name</span>=<span style="color: #a10;">"runoob"</span><br/>
 <span style="color: #007800;">str</span>=<span style="color: #a10;">"Hello, I know you are <span style="color: #000099; font-weight: bold;">\"</span><span style="color: #007800;">$your_name</span><span style="color: #000099; font-weight: bold;">\"</span>! <span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #660033;">-e</span> <span style="color: #007800;">$str</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #660033;">-e</span> <span style="color: #007800;">$str</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
 <pre>Hello, I know you are "runoob"! </pre>
@@ -318,12 +318,12 @@ str='this is a string'
 <span style="color: #666666; font-style: italic;"># Concatenar con comillas dobles</span><br/>
 <span style="color: #007800;">greeting</span>=<span style="color: #a10;">"hello, "</span><span style="color: #007800;">$your_name</span><span style="color: #a10;">" !"</span><br/>
 <span style="color: #007800;">greeting_1</span>=<span style="color: #a10;">"hello, <span style="color: #007800;">${your_name}</span> !"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$greeting</span>  <span style="color: #007800;">$greeting_1</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$greeting</span>  <span style="color: #007800;">$greeting_1</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Concatenar con comillas simples</span><br/>
 <span style="color: #007800;">greeting_2</span>=<span style="color: #a10;">'hello, '</span><span style="color: #007800;">$your_name</span><span style="color: #a10;">' !'</span><br/>
 <span style="color: #007800;">greeting_3</span>=<span style="color: #a10;">'hello, ${your_name} !'</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #007800;">$greeting_2</span>  <span style="color: #007800;">$greeting_3</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$greeting_2</span>  <span style="color: #007800;">$greeting_3</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
 <pre>hello, runoob ! hello, runoob !
@@ -331,25 +331,25 @@ hello, runoob ! hello, ${your_name} !</pre>
 <h3>Obtener la longitud de una cadena</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">string</span>=<span style="color: #a10;">"abcd"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #800000;">${#string}</span>   <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${#string}</span>   <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
 </div></div>
 <p>Cuando la variable es una cadena,<span class="marked">${#string}</span>es equivalente a<span class="marked">${#string[0]}</span>:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">string</span>=<span style="color: #a10;">"abcd"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #800000;">${#string[0]}</span>   <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${#string[0]}</span>   <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
 </div></div>
 <h3>Extraer subcadenas</h3>
 <p>El siguiente ejemplo comienza desde el carácter número<strong>2</strong>de la cadena y extrae<strong>4</strong>caracteres:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">string</span>=<span style="color: #a10;">"runoob is a great site"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #800000;">${string:1:4}</span> <span style="color: #666666; font-style: italic;"># Salida: unoo</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${string:1:4}</span> <span style="color: #666666; font-style: italic;"># Salida: unoo</span><br/>
 </div></div>
 <p><strong>Nota</strong>: el índice del primer carácter es<strong>0</strong>。</p>
 <h3>Buscar subcadenas</h3>
 <p>Busca la posición del carácter<strong>i</strong> 或 <strong>o</strong>(se calcula la posición de la letra que aparezca primero):</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">string</span>=<span style="color: #a10;">"runoob is a great site"</span><br/>
-<span style="color: #7a0874; font-weight: bold;">echo</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #c20cb9; font-weight: bold;">expr</span> index <span style="color: #a10;">"<span style="color: #007800;">$string</span>"</span> io<span style="color: #000000; font-weight: bold;">`</span>  <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #C20CB9; font-weight: bold;">expr</span> index <span style="color: #a10;">"<span style="color: #007800;">$string</span>"</span> io<span style="color: #000000; font-weight: bold;">`</span>  <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
 </div></div>
 <p>
 <strong>Nota:</strong>En el script anterior,<span class="marked">`</span>son comillas invertidas (backticks), no comillas simples<span class="marked">'</span>, no te confundas.</p>
@@ -427,11 +427,11 @@ echo ${array_name[@]}
 <h3>Comentarios de varias líneas</h3> <p><strong>Usar Here Document</strong></p>
 <p>Los comentarios multilínea también pueden usar el siguiente formato:</p>
 <div class="example"> <div class="example_code">
-:<span style="color: #cc0000; font-style: italic;">&lt;&lt;EOF<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>
+:<span style="color: #CC0000; font-style: italic;">&lt;&lt;EOF<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>
 EOF</span><br/>
 </div></div>En los ejemplos anteriores,<span class="marked">:</span>es un comando vacío, utilizado para ejecutar el documento Here posterior,<span class="marked">&lt;&lt;'EOF'</span>indica el inicio del documento Here; COMMENT es el identificador del documento Here. Todo el contenido entre estos dos identificadores se considera un comentario y no se ejecutará.<p>EOF también puede usar otros símbolos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-: <span style="color: #cc0000; font-style: italic;">&lt;&lt;'COMMENT'<br/>Esta es la parte del comentario.<br/>Puede tener múltiples líneas de contenido.<br/>
+: <span style="color: #CC0000; font-style: italic;">&lt;&lt;'COMMENT'<br/>Esta es la parte del comentario.<br/>Puede tener múltiples líneas de contenido.<br/>
 COMMENT</span><br/>
 <br/>
 :<span style="color: #000000; font-weight: bold;">&lt;&lt;</span><span style="color: #a10;">'<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>Contenido del comentario...<br/>
@@ -478,7 +478,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -523,7 +523,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -688,7 +688,7 @@ done</pre>
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>

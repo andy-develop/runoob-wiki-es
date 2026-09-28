@@ -380,7 +380,7 @@ white-space: pre-wrap;
 </ul>
 <h2>Uso</h2>
 <p>El árbol (tree) se define en un elemento &lt;ul&gt;. Esta etiqueta puede definir nodos hoja y nodos hijos. Los nodos serán elementos &lt;li&gt; dentro de la lista ul. A continuación se muestran los elementos que se usarán para crear nodos de árbol anidados dentro de un elemento ul.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;ul id="tt" class="easyui-tree"&gt;
     &lt;li&gt;
         &lt;span&gt;Folder&lt;/span&gt;
@@ -401,16 +401,16 @@ white-space: pre-wrap;
 &lt;/ul&gt;
 </pre>
 <p>El árbol (Tree) también puede definirse en un elemento &lt;ul&gt; vacío, y se pueden cargar datos usando javascript.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;ul id="tt"&gt;&lt;/ul&gt;
 </pre>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#tt').tree({
     url:'tree_data.json'
 });
 </pre>
 <p>Use loadFilter para procesar datos json provenientes de un servicio web ASP.NET.</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 $('#tt').tree({
     url: ...,
     loadFilter: function(data){
@@ -433,7 +433,7 @@ $('#tt').tree({
 <li>children: una matriz de nodos que define algunos nodos hijos.</li>
 </ul>
 <p>Ejemplo:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 [{
     "id":1,
     "text":"Folder1",
@@ -469,12 +469,12 @@ $('#tt').tree({
 </pre>
 <h2>Árbol asíncrono</h2>
 <p>El árbol admite un modo de carga asíncrona incorporado, por lo que el usuario puede crear un árbol vacío y luego especificar un lado del servidor que devuelva datos JSON dinámicamente, para llenar el árbol asincrónicamente según sea necesario. A continuación se muestra un ejemplo:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 &lt;ul class="easyui-tree" data-options="url:'get_data.php'"&gt;&lt;/ul&gt;
 </pre>
 <p>El árbol se carga a través de la URL 'get_data.php'. Los nodos hijos se cargan dependiendo del estado del nodo padre. Cuando se expande un nodo cerrado, si el nodo no tiene nodos hijos cargados, enviará al servidor el valor de id del nodo como parámetro de solicitud http llamado 'id' mediante la URL definida anteriormente, para recuperar los nodos hijos.</p>
 <p>Vea los datos devueltos desde el servidor:</p>
-<pre style="color:#006600">
+<pre style="color:#0053A6">
 [{
     "id": 1,
     "text": "Node 1",
@@ -553,7 +553,7 @@ $('#tt').tree({
 <tr>
 <td>data</td>
 <td>array</td>
-<td>Datos de nodo a cargar.<pre style="color:#006600">
+<td>Datos de nodo a cargar.<pre style="color:#0053A6">
 $('#tt').tree({
     data: [{
         text: 'Item1',
@@ -574,7 +574,7 @@ $('#tt').tree({
 <tr>
 <td>formatter</td>
 <td>function(node)</td>
-<td>Define cómo se presenta el texto del nodo.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Define cómo se presenta el texto del nodo.<br/>Ejemplo de código:<pre style="color:#0053A6">
 $('#tt').tree({
     formatter:function(node){
         return node.text;
@@ -618,7 +618,7 @@ $('#tt').tree({
 <tr>
 <td>onClick</td>
 <td>node</td>
-<td>Se activa cuando el usuario hace clic en un nodo. Ejemplo de código:<pre style="color:#006600">
+<td>Se activa cuando el usuario hace clic en un nodo. Ejemplo de código:<pre style="color:#0053A6">
 $('#tt').tree({
     onClick: function(node){
         alert(node.text);  // alert node text property when clicked
@@ -690,7 +690,7 @@ $('#tt').tree({
 <tr>
 <td>onContextMenu</td>
 <td>e, node</td>
-<td>Se activa al hacer clic derecho en un nodo. Ejemplo de código:<pre style="color:#006600">
+<td>Se activa al hacer clic derecho en un nodo. Ejemplo de código:<pre style="color:#0053A6">
 // right click node and then display the context menu
 $('#tt').tree({
     onContextMenu: function(e, node){
@@ -825,7 +825,7 @@ $('#tt').tree({
 <tr>
 <td>getChecked</td>
 <td>state</td>
-<td>Obtener los nodos seleccionados. Los valores de estado disponibles son: 'checked', 'unchecked', 'indeterminate'. Si no se asigna un estado, se devuelven los nodos 'checked'.<br/>Ejemplo de código:<pre style="color:#006600">
+<td>Obtener los nodos seleccionados. Los valores de estado disponibles son: 'checked', 'unchecked', 'indeterminate'. Si no se asigna un estado, se devuelven los nodos 'checked'.<br/>Ejemplo de código:<pre style="color:#0053A6">
 var nodes = $('#tt').tree('getChecked');    // get checked nodes
 var nodes = $('#tt').tree('getChecked', 'unchecked');    // get unchecked nodes
 var nodes = $('#tt').tree('getChecked', 'indeterminate');    // get indeterminate nodes
@@ -846,7 +846,7 @@ var nodes = $('#tt').tree('getChecked', ['checked','indeterminate']);    // 
 <tr>
 <td>find</td>
 <td>id</td>
-<td>Encontrar el nodo especificado y devolver el objeto del nodo. Ejemplo de código:<pre style="color:#006600">
+<td>Encontrar el nodo especificado y devolver el objeto del nodo. Ejemplo de código:<pre style="color:#0053A6">
 // find a node and then select it
 var node = $('#tt').tree('find', 12);
 $('#tt').tree('select', node.target);
@@ -902,7 +902,7 @@ $('#tt').tree('select', node.target);
 <td>append</td>
 <td>param</td>
 <td>Añadir algunos nodos hijos a un nodo padre, el parámetro param tiene dos propiedades:<br/>parent: objeto DOM, el nodo padre al que se añadirán; si no se asigna, se añaden como nodos raíz.<br/>data: array, los datos de los nodos.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 // append some nodes to the selected node
 var selected = $('#tt').tree('getSelected');
 $('#tt').tree('append', {
@@ -932,7 +932,7 @@ $('#tt').tree('append', {
 <td>insert</td>
 <td>param</td>
 <td>Insertar un nodo antes o después del nodo especificado, el parámetro param incluye las siguientes propiedades:<br/>before: objeto DOM, el nodo insertado antes.<br/>after: objeto DOM, el nodo insertado después.<br/>data: objeto, los datos del nodo.<br/>
-<br/>El siguiente código demuestra cómo insertar un nuevo nodo antes del nodo seleccionado:<pre style="color:#006600">
+<br/>El siguiente código demuestra cómo insertar un nuevo nodo antes del nodo seleccionado:<pre style="color:#0053A6">
 var node = $('#tt').tree('getSelected');
 if (node){
     $('#tt').tree('insert', {
@@ -960,7 +960,7 @@ if (node){
 <td>update</td>
 <td>param</td>
 <td>Actualizar el nodo especificado, el parámetro 'param' tiene las siguientes propiedades:<br/>target (objeto DOM, el nodo a actualizar), id, text, iconCls, checked, etc.<br/>
-<br/>Ejemplo de código:<pre style="color:#006600">
+<br/>Ejemplo de código:<pre style="color:#0053A6">
 // update the selected node text
 var node = $('#tt').tree('getSelected');
 if (node){
@@ -1033,7 +1033,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -1078,7 +1078,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -1117,7 +1117,7 @@ Lista de notas
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Envío de artículos, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -1336,7 +1336,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

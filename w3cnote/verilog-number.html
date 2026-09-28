@@ -103,15 +103,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Al declarar números, hay 4 formatos de base válidos: decimal ('d o 'D), hexadecimal ('h o 'H), binario ('b o 'B), octal ('o o 'O). Los valores pueden especificar el ancho de bits o no.</p>
 <p><strong>Especificando el ancho de bits:</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #ff0055;">4'b1011</span>         <span style="color: #00008B; font-style: italic;">// Valor de 4 bits</span><br/>
-<span style="color: #ff0055;">3</span><span style="color: #ff0055;">2'h3022_c0de</span>   <span style="color: #00008B; font-style: italic;">// Valor de 32 bits</span><br/>
+<span style="color: #FF0055;">4'b1011</span>         <span style="color: #00008B; font-style: italic;">// Valor de 4 bits</span><br/>
+<span style="color: #FF0055;">3</span><span style="color: #FF0055;">2'h3022_c0de</span>   <span style="color: #00008B; font-style: italic;">// Valor de 32 bits</span><br/>
 </div></div>
 <p>Donde, el guion bajo<span class="marked">_</span>es para mejorar la legibilidad del código.</p>
 <p><strong>Sin especificar el ancho de bits:</strong></p><p>Generalmente, al escribir números directamente, se asume representación decimal, por ejemplo, las siguientes 3 formas son equivalentes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 counter <span style="color: #5D478B;">=</span> 'd100 <span style="color: #5D478B;">;</span> <span style="color: #00008B; font-style: italic;">// Generalmente el ancho de bits se asigna automáticamente según el compilador, comúnmente 32 bits.</span><br/>
-counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">100</span> <span style="color: #5D478B;">;</span><br/>
-counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</span><span style="color: #ff0055;">2'h64</span> <span style="color: #5D478B;">;</span><br/>
+counter <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">100</span> <span style="color: #5D478B;">;</span><br/>
+counter <span style="color: #5D478B;">=</span> <span style="color: #FF0055;">3</span><span style="color: #FF0055;">2'h64</span> <span style="color: #5D478B;">;</span><br/>
 </div></div>
 <p><strong>Representación de números negativos</strong></p><p>Normalmente se añade un signo menos delante del número que indica el ancho de bits para representar números negativos. Por ejemplo:</p>
 <pre>-6'd15  
@@ -133,7 +133,7 @@ counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</
 <h3>Métodos de representación de cadenas</h3>
 <p>Una cadena es una secuencia de caracteres entre comillas dobles. Una cadena no puede escribirse en varias líneas, es decir, no puede contener caracteres de retorno de carro. Verilog trata las cadenas como una secuencia de caracteres ASCII de un solo byte. Por ejemplo, para almacenar la cadena "www.runoob.com", se necesitan 14*8bit de celdas de memoria. Por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #ff0055;">0</span><span style="color: #5D478B;">:</span> <span style="color: #ff0055;">14</span><span style="color: #5D478B;">*</span><span style="color: #ff0055;">8</span><span style="color: #5D478B;">-</span><span style="color: #ff0055;">1</span><span style="color: #9F79EE;">]</span>       str <span style="color: #5D478B;">;</span><br/>
+<span style="color: #A52A2A; font-weight: bold;">reg</span> <span style="color: #9F79EE;">[</span><span style="color: #FF0055;">0</span><span style="color: #5D478B;">:</span> <span style="color: #FF0055;">14</span><span style="color: #5D478B;">*</span><span style="color: #FF0055;">8</span><span style="color: #5D478B;">-</span><span style="color: #FF0055;">1</span><span style="color: #9F79EE;">]</span>       str <span style="color: #5D478B;">;</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
     str <span style="color: #5D478B;">=</span> <span style="color: #FF00FF;">"www.runoob.com"</span><span style="color: #5D478B;">;</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">end</span>  <br/>
@@ -163,7 +163,7 @@ counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -208,7 +208,7 @@ counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -247,7 +247,7 @@ counter <span style="color: #5D478B;">=</span> <span style="color: #ff0055;">3</
 <script src="../static.char123.com/assets/upvotejs/dist/upvotejs/upvotejs.jquery.js"></script>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style=" padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡Las notas deben ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Para enviar un artículo, haz clic aquí</a></p>
 	<p style="font-size:14px;"><a href="./runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -458,7 +458,7 @@ p.note-author {
     border-bottom: 1px solid #ddd;
     font-size: 18px;
     font-weight: bold;
-    color: #78a15a;
+    color: #5B80A6;
     padding-bottom: 2px;
     margin-bottom: 4px;
 }

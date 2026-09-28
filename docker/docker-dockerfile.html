@@ -298,16 +298,16 @@ RUN echo '这是一个本地构建的nginx镜像' &gt; /usr/share/nginx/html/ind
 <p><strong>Nota</strong>: Cada vez que se ejecuta una instrucción de Dockerfile, se crea una nueva capa en Docker. Por lo tanto, demasiadas capas innecesarias pueden hacer que la imagen se vuelva demasiado grande. Por ejemplo:</p>
 <div class="example"> <div class="example_code">
 FROM centos<br/>
-RUN <span style="color: #c20cb9; font-weight: bold;">yum</span> <span style="color: #660033;">-y</span> <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #c20cb9; font-weight: bold;">wget</span><br/>
-RUN <span style="color: #c20cb9; font-weight: bold;">wget</span> <span style="color: #660033;">-O</span> redis.tar.gz <span style="color: #a10;">"http://download.redis.io/releases/redis-5.0.3.tar.gz"</span><br/>
-RUN <span style="color: #c20cb9; font-weight: bold;">tar</span> <span style="color: #660033;">-xvf</span> redis.tar.gz<br/>
+RUN <span style="color: #C20CB9; font-weight: bold;">yum</span> <span style="color: #660033;">-y</span> <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #C20CB9; font-weight: bold;">wget</span><br/>
+RUN <span style="color: #C20CB9; font-weight: bold;">wget</span> <span style="color: #660033;">-O</span> redis.tar.gz <span style="color: #a10;">"http://download.redis.io/releases/redis-5.0.3.tar.gz"</span><br/>
+RUN <span style="color: #C20CB9; font-weight: bold;">tar</span> <span style="color: #660033;">-xvf</span> redis.tar.gz<br/>
 </div></div>
 <p>La ejecución anterior creará 3 capas de imagen. Se puede simplificar al siguiente formato:</p>
 <div class="example"> <div class="example_code">
 FROM centos<br/>
-RUN <span style="color: #c20cb9; font-weight: bold;">yum</span> <span style="color: #660033;">-y</span> <span style="color: #c20cb9; font-weight: bold;">install</span> <span style="color: #c20cb9; font-weight: bold;">wget</span> \<br/>
-    <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #c20cb9; font-weight: bold;">wget</span> <span style="color: #660033;">-O</span> redis.tar.gz <span style="color: #a10;">"http://download.redis.io/releases/redis-5.0.3.tar.gz"</span> \<br/>
-    <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #c20cb9; font-weight: bold;">tar</span> <span style="color: #660033;">-xvf</span> redis.tar.gz<br/>
+RUN <span style="color: #C20CB9; font-weight: bold;">yum</span> <span style="color: #660033;">-y</span> <span style="color: #C20CB9; font-weight: bold;">install</span> <span style="color: #C20CB9; font-weight: bold;">wget</span> \<br/>
+    <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #C20CB9; font-weight: bold;">wget</span> <span style="color: #660033;">-O</span> redis.tar.gz <span style="color: #a10;">"http://download.redis.io/releases/redis-5.0.3.tar.gz"</span> \<br/>
+    <span style="color: #000000; font-weight: bold;">&amp;&amp;</span> <span style="color: #C20CB9; font-weight: bold;">tar</span> <span style="color: #660033;">-xvf</span> redis.tar.gz<br/>
 </div></div>
 <p>Como arriba, usando<span class="marked">&amp;&amp;</span>el símbolo para conectar comandos; así, después de la ejecución, solo se creará 1 capa de imagen.</p>
 <h3>Comenzar a construir la imagen</h3>
@@ -461,7 +461,7 @@ Lista de notas
   white-space: nowrap;
   font-size: 14px;
   text-align: left;
-  background: #96b97d;
+  background: #668FB9;
   bottom: 100%;
   color: #fff;
   display: block;
@@ -506,7 +506,7 @@ Lista de notas
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-top: solid #96b97d 10px;
+  border-top: solid #668FB9 10px;
   bottom: -10px;
   content: " ";
   height: 0;
@@ -563,7 +563,7 @@ Lista de notas
 </div>
 <div class="no_webshot" id="respond">
 <div class="comment-signarea" style="display:none; padding: 20px 20px;">
-<h3 class="text-muted" id="share_code" style="color: #799961;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
+<h3 class="text-muted" id="share_code" style="color: #5B80A6;"><i aria-hidden="true" class="fa fa-pencil-square-o"></i>Haz clic para compartir notas</h3>
 <p style="font-size:14px;">¡La nota debe ser una extensión del contenido de este artículo!</p><br>
 	<p style="font-size:12px;"><a href="../tougao.html" target="_blank">Puedes hacer clic aquí para enviar un artículo</a></p>
 	<p style="font-size:14px;"><a href="../w3cnote/runoob-user-test-intro.html" target="_blank">Cómo obtener el código de invitación de registro</a></p>
@@ -782,7 +782,7 @@ function kFormatter(num) {
 </style>
 <div class="sidebar-box re-box re-box-large">
 <div class="sidebar-box recommend-here" style="margin: 0 auto;">
-<a href="#" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
+<a href="#" style="font-size: 16px; color:#5B80A6;font-weight:bold;"> <i aria-hidden="true" class="fa fa-list"></i> Navegación por categorías</a>
 </div>
 <div class="sidebar-box sidebar-cate">
 <div class="sidebar-tree">

@@ -53,7 +53,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 <link href="../computer-organization/memory-addressing.html" rel="canonical"/>
 <meta content="内存地址与寻址" name="keywords"/>
-<meta content="内存地址与寻址   /* ========== runoob 地址空间计算器演示专用样式 ========== */  /* 演示主容器 */ .addr-demo-wrap {   background: #1a1a2e;   border-radius: 14px;   padding: 28px 24px;   margin: 28px 0;   color: #e0e0e0; }  .addr-demo-wrap .addr-d.." name="description"/>
+<meta content="内存地址与寻址   /* ========== example 地址空间计算器演示专用样式 ========== */  /* 演示主容器 */ .addr-demo-wrap {   background: #1a1a2e;   border-radius: 14px;   padding: 28px 24px;   margin: 28px 0;   color: #e0e0e0; }  .addr-demo-wrap .addr-d.." name="description"/>
 </head>
 <body>
 <!--Cabecera-->
@@ -707,17 +707,17 @@ Calculadora de espacio de direcciones ejemplo — deslizador + renderizado de f�
 <p class="addr-subtitle">"Arrastra el deslizador para ajustar los bits de dirección (1~64), usa KaTeX para renderizar en tiempo real 2"<sup>n</sup>"fórmula, CSS Grid dibuja la cuadrícula de celdas de memoria (para 8 bits o menos, dibuja las 256 celdas completas)"</p>
 "Botones de ajuste preestablecido rápidos"
 <div class="addr-presets">
-<button data-preset="8" onclick="runoobAddrCalc.setBits(8)">"8 bits"</button>
-<button data-preset="16" onclick="runoobAddrCalc.setBits(16)">"16 bits"</button>
-<button data-preset="24" onclick="runoobAddrCalc.setBits(24)">"24 bits"</button>
-<button data-preset="32" onclick="runoobAddrCalc.setBits(32)">"32 bits"</button>
-<button data-preset="48" onclick="runoobAddrCalc.setBits(48)">"48 bits"</button>
-<button data-preset="64" onclick="runoobAddrCalc.setBits(64)">"64 bits"</button>
+<button data-preset="8" onclick="exampleAddrCalc.setBits(8)">"8 bits"</button>
+<button data-preset="16" onclick="exampleAddrCalc.setBits(16)">"16 bits"</button>
+<button data-preset="24" onclick="exampleAddrCalc.setBits(24)">"24 bits"</button>
+<button data-preset="32" onclick="exampleAddrCalc.setBits(32)">"32 bits"</button>
+<button data-preset="48" onclick="exampleAddrCalc.setBits(48)">"48 bits"</button>
+<button data-preset="64" onclick="exampleAddrCalc.setBits(64)">"64 bits"</button>
 </div>
 "Deslizador de bits de dirección"
 <div class="addr-controls">
 <label for="bitSlider">"Bits de dirección:"</label>
-<input id="bitSlider" max="64" min="1" oninput="runoobAddrCalc.onSliderChange(this.value)" step="1" type="range" value="8"/>
+<input id="bitSlider" max="64" min="1" oninput="exampleAddrCalc.onSliderChange(this.value)" step="1" type="range" value="8"/>
 <span class="bit-display" id="bitDisplay">8</span>
 </div>
 "Área de renderizado de fórmulas KaTeX"

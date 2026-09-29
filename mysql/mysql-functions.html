@@ -321,9 +321,9 @@ FROM Customers;</pre></td>
 <td>CHAR_LENGTH(s)</td>
 <td>Devuelve el número de caracteres de la cadena s.</td>
 <td>
-<p>Devuelve el número de caracteres de la cadena RUNOOB.</p>
+<p>Devuelve el número de caracteres de la cadena EJEMPLO.</p>
 <pre>
-SELECT CHAR_LENGTH("RUNOOB") AS LengthOfString;
+SELECT CHAR_LENGTH("EJEMPLO") AS LengthOfString;
 </pre>
 </td>
 </tr>
@@ -331,9 +331,9 @@ SELECT CHAR_LENGTH("RUNOOB") AS LengthOfString;
 <td>CHARACTER_LENGTH(s)</td>
 <td>Devuelve el número de caracteres de la cadena s, equivalente a CHAR_LENGTH(s).</td>
 <td>
-<p>Devuelve el número de caracteres de la cadena RUNOOB.</p>
+<p>Devuelve el número de caracteres de la cadena EJEMPLO.</p>
 <pre>
-SELECT CHARACTER_LENGTH("RUNOOB") AS LengthOfString;
+SELECT CHARACTER_LENGTH("EJEMPLO") AS LengthOfString;
 </pre>
 </td>
 </tr>
@@ -343,7 +343,7 @@ SELECT CHARACTER_LENGTH("RUNOOB") AS LengthOfString;
 <td>
 <p>Combina varias cadenas.</p>
 <pre>
-SELECT CONCAT("SQL ", "Runoob ", "Gooogle ", "Facebook") AS ConcatenatedString;
+SELECT CONCAT("SQL ", "Ejemplo ", "Gooogle ", "Facebook") AS ConcatenatedString;
 </pre>
 </td>
 </tr>
@@ -391,9 +391,9 @@ SELECT FORMAT(250500.5634, 2);     -- 输出 250,500.56
 <td>INSERT(s1,x,len,s2)</td>
 <td>La cadena s2 reemplaza la subcadena de s1 que comienza en la posición x y tiene una longitud de len.</td>
 <td>
-<p>Reemplaza los 6 caracteres desde la primera posición de la cadena por 'runoob':</p>
+<p>Reemplaza los 6 caracteres desde la primera posición de la cadena por 'ejemplo':</p>
 <pre>
-SELECT INSERT("google.com", 1, 6, "runoob");  -- 输出：runoob.com
+SELECT INSERT("google.com", 1, 6, "ejemplo");  -- 输出：example.com
 </pre>
 </td>
 </tr>
@@ -413,9 +413,9 @@ SELECT LOCATE('st','myteststring');  -- 5
 <td>LCASE(s)</td>
 <td>Convierte todas las letras de la cadena s a minúsculas.</td>
 <td>
-<p>Convierte la cadena RUNOOB a minúsculas:</p>
+<p>Convierte la cadena EJEMPLO a minúsculas:</p>
 <pre>
-SELECT LCASE('RUNOOB') -- runoob
+SELECT LCASE('EJEMPLO') -- ejemplo
 </pre>
 </td>
 </tr>
@@ -423,9 +423,9 @@ SELECT LCASE('RUNOOB') -- runoob
 <td>LEFT(s,n)</td>
 <td>Devuelve los primeros n caracteres de la cadena s.</td>
 <td>
-<p>Devuelve los primeros dos caracteres de la cadena 'runoob':</p>
+<p>Devuelve los primeros dos caracteres de la cadena 'ejemplo':</p>
 <pre>
-SELECT LEFT('runoob',2) -- ru
+SELECT LEFT('ejemplo',2) -- ru
 </pre>
 </td>
 </tr>
@@ -433,9 +433,9 @@ SELECT LEFT('runoob',2) -- ru
 <td>LOWER(s)</td>
 <td>Convierte todas las letras de la cadena s a minúsculas.</td>
 <td>
-<p>Convierte la cadena RUNOOB a minúsculas:</p>
+<p>Convierte la cadena EJEMPLO a minúsculas:</p>
 <pre>
-SELECT LOWER('RUNOOB') -- runoob
+SELECT LOWER('EJEMPLO') -- ejemplo
 </pre>
 </td>
 </tr>
@@ -453,9 +453,9 @@ SELECT LPAD('abc',5,'xx') -- xxabc
 <td>LTRIM(s)</td>
 <td>Elimina los espacios al inicio de la cadena s.</td>
 <td>
-<p>Elimina los espacios al inicio de la cadena RUNOOB:</p>
+<p>Elimina los espacios al inicio de la cadena EJEMPLO:</p>
 <pre>
-SELECT LTRIM("    RUNOOB") AS LeftTrimmedString;-- RUNOOB
+SELECT LTRIM("    EJEMPLO") AS LeftTrimmedString;-- EJEMPLO
 </pre>
 </td>
 </tr>
@@ -463,9 +463,9 @@ SELECT LTRIM("    RUNOOB") AS LeftTrimmedString;-- RUNOOB
 <td>MID(s,n,len)</td>
 <td>Extrae una subcadena de longitud len desde la posición n de la cadena s, igual que SUBSTRING(s,n,len).</td>
 <td>
-<p>Extrae 3 caracteres desde la segunda posición de la cadena RUNOOB:</p>
+<p>Extrae 3 caracteres desde la segunda posición de la cadena EJEMPLO:</p>
 <pre>
-SELECT MID("RUNOOB", 2, 3) AS ExtractString; -- UNO
+SELECT MID("EJEMPLO", 2, 3) AS ExtractString; -- UNO
 </pre>
 </td>
 </tr>
@@ -483,9 +483,9 @@ SELECT POSITION('b' in 'abc') -- 2
 <td>REPEAT(s,n)</td>
 <td>Repite la cadena s n veces.</td>
 <td>
-<p>Repite la cadena 'runoob' tres veces:</p>
+<p>Repite la cadena 'ejemplo' tres veces:</p>
 <pre>
-SELECT REPEAT('runoob',3) -- runoobrunoobrunoob
+SELECT REPEAT('ejemplo',3) -- ejemploejemploejemplo
 </pre>
 </td>
 </tr>
@@ -513,9 +513,9 @@ SELECT REVERSE('abc') -- cba
 <td>RIGHT(s,n)</td>
 <td>Devuelve los últimos n caracteres de la cadena s.</td>
 <td>
-<p>Devuelve los últimos dos caracteres de la cadena 'runoob':</p>
+<p>Devuelve los últimos dos caracteres de la cadena 'ejemplo':</p>
 <pre>
-SELECT RIGHT('runoob',2) -- ob
+SELECT RIGHT('ejemplo',2) -- ob
 </pre>
 </td>
 </tr>
@@ -533,9 +533,9 @@ SELECT RPAD('abc',5,'xx') -- abcxx
 <td>RTRIM(s)</td>
 <td>Elimina los espacios al final de la cadena s.</td>
 <td>
-<p>Elimina los espacios al final de la cadena RUNOOB:</p>
+<p>Elimina los espacios al final de la cadena EJEMPLO:</p>
 <pre>
-SELECT RTRIM("RUNOOB     ") AS RightTrimmedString;   -- RUNOOB
+SELECT RTRIM("EJEMPLO     ") AS RightTrimmedString;   -- EJEMPLO
 </pre>
 </td>
 </tr>
@@ -555,7 +555,7 @@ SELECT SPACE(10);
 <td>
 <p>Compara cadenas:</p>
 <pre>
-SELECT STRCMP("runoob", "runoob");  -- 0
+SELECT STRCMP("ejemplo", "ejemplo");  -- 0
 </pre>
 </td>
 </tr>
@@ -563,9 +563,9 @@ SELECT STRCMP("runoob", "runoob");  -- 0
 <td>SUBSTR(s, start, length)</td>
 <td>Extrae una subcadena de longitud length desde la posición start de la cadena s.</td>
 <td>
-<p>Extrae 3 caracteres desde la segunda posición de la cadena RUNOOB:</p>
+<p>Extrae 3 caracteres desde la segunda posición de la cadena EJEMPLO:</p>
 <pre>
-SELECT SUBSTR("RUNOOB", 2, 3) AS ExtractString; -- UNO
+SELECT SUBSTR("EJEMPLO", 2, 3) AS ExtractString; -- UNO
 </pre>
 </td>
 </tr>
@@ -573,9 +573,9 @@ SELECT SUBSTR("RUNOOB", 2, 3) AS ExtractString; -- UNO
 <td>SUBSTRING(s, start, length)</td>
 <td>Extrae una subcadena de longitud length desde la posición start de la cadena s, equivalente a SUBSTR(s, start, length).</td>
 <td>
-<p>Extrae 3 caracteres desde la segunda posición de la cadena RUNOOB:</p>
+<p>Extrae 3 caracteres desde la segunda posición de la cadena EJEMPLO:</p>
 <pre>
-SELECT SUBSTRING("RUNOOB", 2, 3) AS ExtractString; -- UNO
+SELECT SUBSTRING("EJEMPLO", 2, 3) AS ExtractString; -- UNO
 </pre>
 </td>
 </tr>
@@ -594,9 +594,9 @@ SELECT SUBSTRING_INDEX(SUBSTRING_INDEX('a*b*c*d*e','*',3),'*',-1)    -- c
 <td>TRIM(s)</td>
 <td>Elimina los espacios al inicio y al final de la cadena s.</td>
 <td>
-<p>Elimina los espacios al inicio y al final de la cadena RUNOOB:</p>
+<p>Elimina los espacios al inicio y al final de la cadena EJEMPLO:</p>
 <pre>
-SELECT TRIM('    RUNOOB    ') AS TrimmedString;
+SELECT TRIM('    EJEMPLO    ') AS TrimmedString;
 </pre>
 </td>
 </tr>
@@ -604,9 +604,9 @@ SELECT TRIM('    RUNOOB    ') AS TrimmedString;
 <td>UCASE(s)</td>
 <td>Convierte la cadena a mayúsculas.</td>
 <td>
-<p>Convierte la cadena 'runoob' a mayúsculas:</p>
+<p>Convierte la cadena 'ejemplo' a mayúsculas:</p>
 <pre>
-SELECT UCASE("runoob"); -- RUNOOB
+SELECT UCASE("ejemplo"); -- EJEMPLO
 </pre>
 </td>
 </tr>
@@ -614,9 +614,9 @@ SELECT UCASE("runoob"); -- RUNOOB
 <td>UPPER(s)</td>
 <td>Convierte la cadena a mayúsculas.</td>
 <td>
-<p>Convierte la cadena 'runoob' a mayúsculas:</p>
+<p>Convierte la cadena 'ejemplo' a mayúsculas:</p>
 <pre>
-SELECT UPPER("runoob"); -- RUNOOB
+SELECT UPPER("ejemplo"); -- EJEMPLO
 </pre>
 </td>
 </tr>
@@ -779,7 +779,7 @@ SELECT FLOOR(1.5) -- 返回1
 SELECT GREATEST(3, 12, 34, 8, 25); -- 34
 </pre>
 <p>Devuelve el valor máximo de la siguiente lista de cadenas:</p><pre>
-SELECT GREATEST("Google", "Runoob", "Apple");   -- Runoob
+SELECT GREATEST("Google", "Ejemplo", "Apple");   -- Ejemplo
 </pre>
 </td>
 </tr>
@@ -792,7 +792,7 @@ SELECT GREATEST("Google", "Runoob", "Apple");   -- Runoob
 SELECT LEAST(3, 12, 34, 8, 25); -- 3
 </pre>
 <p>Devuelve el valor mínimo de la siguiente lista de cadenas:</p><pre>
-SELECT LEAST("Google", "Runoob", "Apple");   -- Apple
+SELECT LEAST("Google", "Ejemplo", "Apple");   -- Apple
 </pre>
 </td>
 </tr>
@@ -1592,8 +1592,8 @@ SELECT BIN(15); -- 1111
 <td>Convierte la cadena s a una cadena binaria</td>
 <td>
 <pre>
-SELECT BINARY "RUNOOB";
--&gt; RUNOOB
+SELECT BINARY "EJEMPLO";
+-&gt; EJEMPLO
 </pre>
 </td>
 </tr>
@@ -1637,8 +1637,8 @@ SELECT CAST("2017-08-29" AS DATE);
 <td>Devuelve la primera expresión no nula entre los parámetros (de izquierda a derecha)</td>
 <td>
 <pre>
-SELECT COALESCE(NULL, NULL, NULL, 'runoob.com', NULL, 'google.com');
--&gt; runoob.com
+SELECT COALESCE(NULL, NULL, NULL, 'example.com', NULL, 'google.com');
+-&gt; example.com
 </pre>
 </td>
 </tr>
@@ -1691,7 +1691,7 @@ SELECT CURRENT_USER();
 <td>
 <pre>
 SELECT DATABASE();   
--&gt; runoob
+-&gt; ejemplo
 </pre>
 </td>
 </tr>

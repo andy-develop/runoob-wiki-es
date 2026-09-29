@@ -285,7 +285,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul><li><code>-c</code>Especifica la cantidad de paquetes de datos a enviar, por ejemplo,<code>-c 4</code>indica que se envían 4 paquetes de datos.</li><li><code>-i</code>Especifica el intervalo de tiempo (en segundos) entre cada envío de paquetes, por ejemplo,<code>-i 0.5</code>indica que se envía uno cada 0.5 segundos.</li><li><code>-w</code>Establece el límite de tiempo de espera para enviar paquetes; una vez superado ese tiempo, se detiene automáticamente, por ejemplo,<code>-w 5</code>indica una espera de 5 segundos.</li><li><code>-s</code>Especifica el tamaño de cada paquete (en bytes); el valor predeterminado es 56 bytes.</li><li><code>-t</code>Establece el tiempo de vida (TTL) del paquete, indicando el número de saltos de ruta.</li><li><code>-q</code>Modo silencioso: solo muestra las estadísticas iniciales y finales, sin mostrar los detalles de cada paquete.</li><li><code>-f</code>Modo flood: envía paquetes rápidamente para probar la capacidad de carga de la red; debe usarse con precaución.</li><li><code>-l</code>Especifica la cantidad de paquetes enviados de una sola vez; normalmente se usa para pruebas de carga.</li><li><code>-v</code>Muestra información de salida detallada para depuración.</li><li><code>-4</code>Fuerza el uso del protocolo IPv4.</li><li><code>-6</code>Fuerza el uso del protocolo IPv6.</li></ul>
 <h3>Ejemplos</h3>
 <p><strong>1. Comprobar la conectividad con el host:</strong></p>
-<pre># ping www.runoob.com //ping主机
+<pre># ping www.example.com //ping主机
 PING aries.m.alikunlun.com (114.80.174.110) 56(84) bytes of data.
 64 bytes from 114.80.174.110: icmp_seq=1 ttl=64 time=0.025 ms
 64 bytes from 114.80.174.110: icmp_seq=2 ttl=64 time=0.036 ms
@@ -305,7 +305,7 @@ rtt min/avg/max/mdev = 0.021/0.035/0.078/0.011 ms
 //需要手动终止Ctrl+C
 </pre>
 <p><strong>2. Limitar el número de paquetes enviados:</strong></p>
-<pre># ping -c 2 www.runoob.com
+<pre># ping -c 2 www.example.com
 PING aries.m.alikunlun.com (114.80.174.120) 56(84) bytes of data.
 64 bytes from 114.80.174.120: icmp_seq=1 ttl=54 time=6.18 ms
 64 bytes from 114.80.174.120: icmp_seq=2 ttl=54 time=15.4 ms
@@ -329,11 +329,11 @@ rtt min/avg/max/mdev = 61.959/62.843/63.984/0.894 ms, pipe 2
 </pre>
 <p><strong>4. Establecer el intervalo entre paquetes:</strong>Envía paquetes con un intervalo de 0.2 segundos. Este parámetro es adecuado para probar la estabilidad de la red en un período corto de tiempo.</p>
 <pre>
-ping -i 0.2 www.runoob.com</pre>
+ping -i 0.2 www.example.com</pre>
 <p>
 <strong>5. Especificar el tamaño del paquete:</strong>Establece el tamaño del paquete en 128 bytes; es adecuado para comprobar la estabilidad al transferir datos de mayor tamaño.</p>
 <pre>
-ping -s 128 www.runoob.com</pre>
+ping -s 128 www.example.com</pre>
 <p>
 <strong>6. Establecer el tiempo de espera de la red:</strong>El tiempo de prueba está limitado a 10 segundos; es adecuado para probar la conectividad en entornos de red inciertos.</p>
 <pre>

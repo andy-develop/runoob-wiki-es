@@ -385,7 +385,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <span style="color: #a11;">"Reclama gratis"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Haz clic para reclamar"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Oferta por tiempo limitado"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"paquete de regalo runoob"</span><span style="color: Gray;">,</span>   <span style="color: #a50"># Para pruebas; en un escenario real se puede reemplazar</span><br/>
+        <span style="color: #a11;">"paquete de regalo ejemplo"</span><span style="color: Gray;">,</span>   <span style="color: #a50"># Para pruebas; en un escenario real se puede reemplazar</span><br/>
     <span style="color: Olive;">]</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> <span style="color: #05a;">keyword</span> <span style="color: Green;font-weight:bold;">in</span> spam_keywords:<br/>
         <span style="color: Green;font-weight:bold;">if</span> <span style="color: #05a;">keyword</span> <span style="color: Green;font-weight:bold;">in</span> email_text:<br/>
@@ -394,7 +394,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <br/>
 <span style="color: #a50"># Prueba: el contenido de un correo es el siguiente</span><br/>
-test_email <span style="color: Gray;">=</span> <span style="color: #a11;">"¡Felicidades! Has recibido el paquete de regalo de runoob, ¡haz clic para reclamarlo!"</span><br/>
+test_email <span style="color: Gray;">=</span> <span style="color: #a11;">"¡Felicidades! Has recibido el paquete de regalo de ejemplo, ¡haz clic para reclamarlo!"</span><br/>
 result <span style="color: Gray;">=</span> is_spam_by_rules<span style="color: Olive;">(</span>test_email<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Resultado del método de reglas: {'correo basura' if result else 'correo normal'}"</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Salida: Resultado del método de reglas: correo basura</span><br/>
@@ -455,7 +455,7 @@ result <span style="color: Gray;">=</span> is_spam_by_rules<span style="color: O
 <span style="color: #a50"># Datos de entrenamiento: 4 correos etiquetados</span><br/>
 emails <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     <span style="color: #a11;">"Felicidades has ganado reclama gratis paquete de regalo"</span><span style="color: Gray;">,</span>           <span style="color: #a50"># Spam</span><br/>
-    <span style="color: #a11;">"Oferta por tiempo limitado haz clic para reclamar paquete de regalo runoob"</span><span style="color: Gray;">,</span>       <span style="color: #a50"># Spam</span><br/>
+    <span style="color: #a11;">"Oferta por tiempo limitado haz clic para reclamar paquete de regalo ejemplo"</span><span style="color: Gray;">,</span>       <span style="color: #a50"># Spam</span><br/>
     <span style="color: #a11;">"Reunión mañana recuerda traer informe"</span><span style="color: Gray;">,</span>                <span style="color: #a50"># Normal</span><br/>
     <span style="color: #a11;">"Fin de semana juntos comer tienes tiempo"</span><span style="color: Gray;">,</span>              <span style="color: #a50"># Normal</span><br/>
 <span style="color: Olive;">]</span><br/>

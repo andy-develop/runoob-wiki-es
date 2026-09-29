@@ -416,11 +416,11 @@ Mammal travel
 </span><span class="hl-brackets">}</span></div></div></div>
 <p>Si dentro de un paquete una clase quiere usar otra clase del mismo paquete, el nombre del paquete se puede omitir.</p>
 <p>Se puede usar la declaración import para introducir una clase específica:</p><pre>
-import com.runoob.MyClass;</pre><p>De esta manera, puedes usar directamente los métodos, variables o constantes de la clase MyClass en el archivo fuente actual.</p>
+import com.ejemplo.MyClass;</pre><p>De esta manera, puedes usar directamente los métodos, variables o constantes de la clase MyClass en el archivo fuente actual.</p>
 <p>También se puede usar el comodín<span class="marked">*</span>para importar todo el paquete o los subpaquetes del paquete:</p>
 <pre>
-import com.runoob.mypackage.*;</pre>
-<p>De esta manera, puedes importar<strong>com.runoob.mypackage</strong>todas las clases del paquete, y así usar los métodos, variables o constantes de cualquier clase de ese paquete en el archivo fuente actual. Ten en cuenta que al usar el comodín<span class="marked">*</span>al importar todo el paquete, solo se importan las clases del paquete, no los subpaquetes del paquete.</p>
+import com.ejemplo.mypackage.*;</pre>
+<p>De esta manera, puedes importar<strong>com.ejemplo.mypackage</strong>todas las clases del paquete, y así usar los métodos, variables o constantes de cualquier clase de ese paquete en el archivo fuente actual. Ten en cuenta que al usar el comodín<span class="marked">*</span>al importar todo el paquete, solo se importan las clases del paquete, no los subpaquetes del paquete.</p>
 <p>Al importar una clase o paquete, debes proporcionar el nombre completamente calificado de la clase o del paquete. El nombre completamente calificado incluye la combinación del nombre del paquete y el nombre de la clase, con un punto<span class="marked">.</span>que los separa.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.util.ArrayList</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Importa la clase ArrayList del paquete java.util</span><br/>
@@ -494,18 +494,18 @@ import com.runoob.mypackage.*;</pre>
 <li><p>Nombre de clase -&gt; vehicle.Car</p></li>
 <li><p>Ruta -&gt; vehicle\Car.java (en sistemas Windows)</p></li>
 </ul>
-<p>Normalmente, una empresa usa la forma invertida de su nombre de dominio de Internet como nombre de su paquete. Por ejemplo: si el nombre de dominio es runoob.com, todos los nombres de paquete comienzan con com.runoob. Cada parte del nombre del paquete corresponde a un subdirectorio.</p><p>Por ejemplo: hay un<strong>com.runoob.test</strong>paquete que contiene un archivo fuente llamado Runoob.java; en consecuencia, debería tener la siguiente serie de subdirectorios:</p>
+<p>Normalmente, una empresa usa la forma invertida de su nombre de dominio de Internet como nombre de su paquete. Por ejemplo: si el nombre de dominio es example.com, todos los nombres de paquete comienzan con com.ejemplo. Cada parte del nombre del paquete corresponde a un subdirectorio.</p><p>Por ejemplo: hay un<strong>com.ejemplo.test</strong>paquete que contiene un archivo fuente llamado Ejemplo.java; en consecuencia, debería tener la siguiente serie de subdirectorios:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-code">....\</span><span class="hl-identifier">com</span><span class="hl-code">\</span><span class="hl-identifier">runoob</span><span class="hl-code">\</span><span class="hl-identifier">test</span><span class="hl-code">\</span><span class="hl-identifier">Runoob</span><span class="hl-code">.</span><span class="hl-identifier">java</span></div>
+<div class="hl-main"><span class="hl-code">....\</span><span class="hl-identifier">com</span><span class="hl-code">\</span><span class="hl-identifier">ejemplo</span><span class="hl-code">\</span><span class="hl-identifier">test</span><span class="hl-code">\</span><span class="hl-identifier">Ejemplo</span><span class="hl-code">.</span><span class="hl-identifier">java</span></div>
 </div>
 </div>
 <p>Al compilar, el compilador crea un archivo de salida diferente para cada tipo (clase, interfaz, etc.) definido en el paquete. El nombre del archivo de salida es el nombre del tipo, con .class como extensión. Por ejemplo:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-comment">//</span><span class="hl-comment">Nombre de archivo: Runoob.java</span><span class="hl-comment"></span><span class="hl-code">
-</span><span class="hl-reserved">package</span><span class="hl-code"> </span><span class="hl-identifier">com</span><span class="hl-code">.</span><span class="hl-identifier">runoob</span><span class="hl-code">.</span><span class="hl-identifier">test</span><span class="hl-code">;
-</span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">Runoob</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+<div class="hl-main"><span class="hl-comment">//</span><span class="hl-comment">Nombre de archivo: Ejemplo.java</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-reserved">package</span><span class="hl-code"> </span><span class="hl-identifier">com</span><span class="hl-code">.</span><span class="hl-identifier">ejemplo</span><span class="hl-code">.</span><span class="hl-identifier">test</span><span class="hl-code">;
+</span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">Ejemplo</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">Google</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-brackets">}</span></div>
@@ -513,21 +513,21 @@ import com.runoob.mypackage.*;</pre>
 </div>
 <p>Ahora, compilemos este archivo con la opción -d, de la siguiente manera:</p>
 <pre>
-$javac -d . Runoob.java
+$javac -d . Ejemplo.java
 </pre><p>Esto colocará los archivos compilados de la siguiente manera:</p>
 <pre>
-.\com\runoob\test\Runoob.class
-.\com\runoob\test\Google.class
+.\com\ejemplo\test\Ejemplo.class
+.\com\ejemplo\test\Google.class
 </pre>
-<p>Puedes importar todos los<strong> \com\runoob\test\ </strong>tipos, como clases, interfaces, etc., definidos en él:</p>
+<p>Puedes importar todos los<strong> \com\ejemplo\test\ </strong>tipos, como clases, interfaces, etc., definidos en él:</p>
 <pre>
-import com.runoob.test.*;
+import com.ejemplo.test.*;
 </pre><p>Después de la compilación, los archivos .class, al igual que los archivos fuente .java, deben colocarse en directorios que correspondan al nombre del paquete. Sin embargo, no se requiere que la ruta de los archivos .class sea la misma que la ruta de los archivos .java correspondientes. Puedes organizar los directorios de código fuente y de clases por separado.</p>
 <pre>
-&lt;path-one&gt;\sources\com\runoob\test\Runoob.java
-&lt;path-two&gt;\classes\com\runoob\test\Google.class
+&lt;path-one&gt;\sources\com\ejemplo\test\Ejemplo.java
+&lt;path-two&gt;\classes\com\ejemplo\test\Google.class
 </pre>
-<p>De esta manera, puedes compartir tu directorio de clases con otros programadores sin revelar tu código fuente. Gestionar el código fuente y los archivos de clase de esta manera permite que el compilador y la máquina virtual de Java (JVM) encuentren todos los tipos utilizados en tu programa.</p><p>La ruta absoluta del directorio de clases se llama<strong>class path</strong>. Se establece en la variable de<strong>CLASSPATH</strong>sistema.</p><p>Si &lt;path-two&gt;\classes es el class path y el nombre del paquete es com.runoob.test, el compilador y la JVM buscarán los archivos .class en &lt;path-two&gt;\classes\com\runoob\test.</p><p>Un class path puede contener varias rutas; las múltiples rutas deben separarse con un separador. De forma predeterminada, el compilador y la JVM buscan en el directorio actual. Los archivos JAR contienen clases relacionadas con la plataforma Java, por lo que sus directorios se incluyen en el class path de forma predeterminada.</p>
+<p>De esta manera, puedes compartir tu directorio de clases con otros programadores sin revelar tu código fuente. Gestionar el código fuente y los archivos de clase de esta manera permite que el compilador y la máquina virtual de Java (JVM) encuentren todos los tipos utilizados en tu programa.</p><p>La ruta absoluta del directorio de clases se llama<strong>class path</strong>. Se establece en la variable de<strong>CLASSPATH</strong>sistema.</p><p>Si &lt;path-two&gt;\classes es el class path y el nombre del paquete es com.ejemplo.test, el compilador y la JVM buscarán los archivos .class en &lt;path-two&gt;\classes\com\ejemplo\test.</p><p>Un class path puede contener varias rutas; las múltiples rutas deben separarse con un separador. De forma predeterminada, el compilador y la JVM buscan en el directorio actual. Los archivos JAR contienen clases relacionadas con la plataforma Java, por lo que sus directorios se incluyen en el class path de forma predeterminada.</p>
 <hr/>
 <h2>Configurar la variable de sistema CLASSPATH</h2>
 <p>Muestra la variable CLASSPATH actual con el siguiente comando:</p>

@@ -291,8 +291,8 @@ val ab: A = object : A(1), B {
 <pre>
 fun main(args: Array&lt;String&gt;) {
     val site = object {
-        var name: String = "菜鸟教程"
-        var url: String = "www.runoob.com"
+        var name: String = "Ejemplo"
+        var url: String = "www.example.com"
     }
     println(site.name)
     println(site.url)
@@ -364,19 +364,19 @@ print("data1 name = ${data2.name}")
 <pre>
 object Site {
     var url:String = ""
-    val name: String = "菜鸟教程"
+    val name: String = "Ejemplo"
 }
 fun main(args: Array&lt;String&gt;) {
     var s1 =  Site
     var s2 = Site
-    s1.url = "www.runoob.com"
+    s1.url = "www.example.com"
     println(s1.url)
     println(s2.url)
 }
 </pre>
 <p>El resultado es:</p>
-<pre>www.runoob.com
-www.runoob.com
+<pre>www.example.com
+www.example.com
 </pre>
 <p>Un objeto puede tener supertipos:</p>
 <pre>
@@ -392,9 +392,9 @@ object DefaultListener : MouseAdapter() {
 </pre><p>A diferencia de las expresiones de objeto, cuando una declaración de objeto se encuentra dentro de otra clase, ese objeto no puede ser accedido mediante una instancia de la clase externa, sino solo mediante el nombre de la clase. Además, ese objeto tampoco puede acceder directamente a los métodos y variables de la clase externa.</p>
 <pre>
 class Site {
-    var name = "菜鸟教程"
+    var name = "Ejemplo"
     object DeskTop{
-        var url = "www.runoob.com"
+        var url = "www.example.com"
         fun showName(){
             print{"desk legs $name"} // 错误，不能访问到外部类的方法和变量
         }

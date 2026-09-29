@@ -93,12 +93,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul><li>array_name: el nombre del arreglo</li><li>index: el índice del arreglo</li><li>value: el valor asignado al elemento del arreglo</li></ul>
 <h3>Crear arreglos</h3><p>A continuación, veamos cómo crear arreglos y cómo acceder a los elementos del arreglo:</p>
 <pre>$ awk 'BEGIN {
-sites["runoob"]="www.runoob.com";
+sites["ejemplo"]="www.example.com";
 sites["google"]="www.google.com"
-print sites["runoob"] "\n" sites["google"]
+print sites["ejemplo"] "\n" sites["google"]
 }'</pre>
 <p>Al ejecutar el comando anterior, el resultado es:</p>
-<pre>www.runoob.com
+<pre>www.example.com
 www.google.com</pre>
 <p>En el ejemplo anterior, definimos un arreglo de sitios (sites), cuyos índices son las abreviaturas en inglés de los sitios web y los valores son las direcciones de acceso a los sitios web. Se puede acceder a los elementos del arreglo usando el siguiente formato:</p>
 <pre>array_name[index] </pre>
@@ -107,7 +107,7 @@ www.google.com</pre>
 <pre>delete array_name[index</pre>
 <p>En el siguiente ejemplo, el elemento google del arreglo se elimina (el comando de eliminación no produce salida):</p>
 <pre>$ awk 'BEGIN {
-sites["runoob"]="www.runoob.com";
+sites["ejemplo"]="www.example.com";
 sites["google"]="www.google.com"
 delete sites["google"];
 print fruits["google"]

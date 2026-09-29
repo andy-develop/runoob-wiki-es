@@ -375,7 +375,7 @@ int setvbuf(FILE *stream, char *buffer, int mode, size_t size)
    </span><span class="hl-identifier">fprintf</span><span class="hl-brackets">(</span><span class="hl-identifier">stdout</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Habilitar búfer completo</span><span class="hl-special">\</span><span class="hl-string">n</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
    </span><span class="hl-identifier">setvbuf</span><span class="hl-brackets">(</span><span class="hl-identifier">stdout</span><span class="hl-code">, </span><span class="hl-identifier">buff</span><span class="hl-code">, </span><span class="hl-identifier">_IOFBF</span><span class="hl-code">, </span><span class="hl-number">1024</span><span class="hl-brackets">)</span><span class="hl-code">;
  
-   </span><span class="hl-identifier">fprintf</span><span class="hl-brackets">(</span><span class="hl-identifier">stdout</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Aquí está runoob.com</span><span class="hl-special">\</span><span class="hl-string">n</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-identifier">fprintf</span><span class="hl-brackets">(</span><span class="hl-identifier">stdout</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Aquí está example.com</span><span class="hl-special">\</span><span class="hl-string">n</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
    </span><span class="hl-identifier">fprintf</span><span class="hl-brackets">(</span><span class="hl-identifier">stdout</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Esta salida se guardará en buff</span><span class="hl-special">\</span><span class="hl-string">n</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
    </span><span class="hl-identifier">fflush</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">stdout</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
  
@@ -389,7 +389,7 @@ int setvbuf(FILE *stream, char *buffer, int mode, size_t size)
 <p>Compilemos y ejecutemos el programa anterior, lo que producirá el siguiente resultado. Aquí, el programa guarda la salida almacenada en búfer en<b>buff</b>, hasta la primera llamada<b>fflush()</b>hasta ese momento, luego comienza a almacenar la salida en el búfer y finalmente duerme durante 5 segundos. Enviará la salida restante a STDOUT antes de que finalice el programa.</p>
 <pre>
 启用全缓冲
-这里是 runoob.com
+这里是 example.com
 该输出将保存到 buff
 这将在编程时出现
 最后休眠五秒钟

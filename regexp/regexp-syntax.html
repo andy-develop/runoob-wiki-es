@@ -169,8 +169,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Las expresiones regulares pueden buscar, reemplazar, extraer y validar patrones específicos en un texto.</p>
 <p>Por ejemplo:</p>
 <ul>
-<li><p><span class="marked">runoo+b</span>, puede hacer coincidir<strong>runoob、runooob、runoooooob</strong>etc.,<span class="marked">+</span>El signo indica que el carácter anterior debe aparecer al menos una vez (una o más veces).<a href="../try/try-regex.php.html" rel="noopener noreferrer" target="_blank"><span class="marked">Pruébalo »</span></a>。</p></li>
-<li><p><span class="marked">runoo*b</span>, puede hacer coincidir<strong>runob、runoob、runoooooob</strong>etc.,<span class="marked">*</span>El signo indica que el carácter anterior puede no aparecer, o aparecer una o más veces (0, 1 o más veces).<a href="../try/try-regex.php.html" rel="noopener noreferrer" target="_blank"><span class="marked">Pruébalo »</span></a>。</p></li>
+<li><p><span class="marked">runoo+b</span>, puede hacer coincidir<strong>ejemplo、runooob、runoooooob</strong>etc.,<span class="marked">+</span>El signo indica que el carácter anterior debe aparecer al menos una vez (una o más veces).<a href="../try/try-regex.php.html" rel="noopener noreferrer" target="_blank"><span class="marked">Pruébalo »</span></a>。</p></li>
+<li><p><span class="marked">runoo*b</span>, puede hacer coincidir<strong>runob、ejemplo、runoooooob</strong>etc.,<span class="marked">*</span>El signo indica que el carácter anterior puede no aparecer, o aparecer una o más veces (0, 1 o más veces).<a href="../try/try-regex.php.html" rel="noopener noreferrer" target="_blank"><span class="marked">Pruébalo »</span></a>。</p></li>
 <li><p><span class="marked">colou?r</span>puede hacer coincidir<strong>color</strong>o<strong>colour</strong>，<span class="marked">?</span>El signo de interrogación indica que el carácter anterior puede aparecer como máximo una vez (0 o 1 vez).<a href="../try/try-regex.php.html" rel="noopener noreferrer" target="_blank"><span class="marked">Pruébalo »</span></a>。</p></li>
 </ul>
 <p>El método para construir expresiones regulares es igual que el de crear expresiones matemáticas: se pueden combinar expresiones pequeñas con diversos metacaracteres y operadores para crear expresiones más grandes. Los componentes de una expresión regular pueden ser un solo carácter, un conjunto de caracteres, un rango de caracteres, una selección entre caracteres o cualquier combinación de todos estos componentes.</p>
@@ -187,14 +187,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tr>
 <tr>
 <td><span class="marked">[ABC]</span></td>
-<td><p>Coincide con<span class="marked">[...]</span>todos los caracteres enumerados en . Por ejemplo<span class="marked">[aeiou]</span>coincide con todas las letras e, o, u, a en la cadena "google runoob taobao".</p>
+<td><p>Coincide con<span class="marked">[...]</span>todos los caracteres enumerados en . Por ejemplo<span class="marked">[aeiou]</span>coincide con todas las letras e, o, u, a en la cadena "google ejemplo taobao".</p>
 <img decoding="async" src="../wp-content/uploads/2014/03/E691DDE1-E5CB-4EA8-8D16-759BD0D2B09D.jpg"/>
 </td>
 <td><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','');localStorage.setItem('tryit_lang','html');">Pruébalo »</a></td>
 </tr>
 <tr>
 <td><span class="marked">[^ABC]</span></td>
-<td><p>coincide con todos los caracteres excepto<span class="marked">[...]</span>los caracteres en . Por ejemplo<span class="marked">[^aeiou]</span>coincide con todos los caracteres de la cadena "google runoob taobao" excepto las letras e, o, u, a.</p>
+<td><p>coincide con todos los caracteres excepto<span class="marked">[...]</span>los caracteres en . Por ejemplo<span class="marked">[^aeiou]</span>coincide con todos los caracteres de la cadena "google ejemplo taobao" excepto las letras e, o, u, a.</p>
 <img decoding="async" src="../wp-content/uploads/2014/03/ED971D92-30F4-4768-A2C7-02A84A3A9DEB.jpg"/>
 </td>
 <td><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','');localStorage.setItem('tryit_lang','html');">Pruébalo »</a></td>
@@ -394,7 +394,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>/[1-9][0-9]{0,1}/</pre>
 <p><strong><span class="marked">*</span>y<span class="marked">+</span>Los cuantificadores son codiciosos porque intentan coincidir con tanto texto como sea posible. Agregue un<span class="marked">?</span>después de ellos para lograr una coincidencia no codiciosa o mínima.</strong></p>
 <p>Por ejemplo, es posible que busque en un documento HTML el contenido dentro de la etiqueta h1. El código HTML es el siguiente:</p>
-<pre>&amp;lt;h1&amp;gt;RUNOOB-菜鸟教程&amp;lt;/h1&amp;gt;</pre>
+<pre>&amp;lt;h1&amp;gt;EJEMPLO-Ejemplo&amp;lt;/h1&amp;gt;</pre>
 <p><strong>Codicioso:</strong>La siguiente expresión coincide con todo el contenido desde el signo menor que (&lt;) hasta el signo mayor que (&gt;) que cierra la etiqueta h1:</p>
 <pre>/&amp;lt;.*&amp;gt;/</pre>
 <p><img decoding="async" src="../wp-content/uploads/2014/03/AD8F3320-2F2E-4513-9BB5-84450D62783D.jpg"/></p>
@@ -490,13 +490,13 @@ document.<span style="color: #660066;">write</span><span style="color: #009900;"
 <p>El metacarácter de límite de palabra<span class="marked">\b</span>garantiza que solo se detecten palabras completas; de lo contrario, frases como "is issued" o "this is" no se reconocerían correctamente.</p>
 <p>La marca al final de la expresión<span class="marked">g</span>(global) especifica que la expresión se aplique a todas las coincidencias encontradas en la cadena de entrada;<span class="marked">i</span>(ignorar mayúsculas y minúsculas) especifica que no se distinga entre mayúsculas y minúsculas;<span class="marked">m</span>(multilínea) especifica que puede haber coincidencias potenciales a ambos lados de los saltos de línea.</p>
 <p>Las retroreferencias también pueden descomponer una URI en sus componentes. Supongamos que desea descomponer la siguiente URI en protocolo (ftp, http, etc.), dirección de dominio y ruta:</p>
-<pre>https://www.runoob.com:80/html/html-tutorial.html</pre>
+<pre>https://www.example.com:80/html/html-tutorial.html</pre>
 <p>La siguiente expresión regular proporciona esta funcionalidad:</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <p>Muestra todos los datos coincidentes:</p>
 <div class="example_code">
-<span style="color: #000066; font-weight: bold;">var</span> str <span style="color: #339933;">=</span> <span style="color: #3366CC;">"https://www.runoob.com:80/html/html-tutorial.html"</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">var</span> str <span style="color: #339933;">=</span> <span style="color: #3366CC;">"https://www.example.com:80/html/html-tutorial.html"</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">var</span> patt1 <span style="color: #339933;">=</span> <span style="color: #339933;">/</span><span style="color: #009900;">(</span>\w<span style="color: #339933;">+</span><span style="color: #009900;">)</span><span style="color: #339933;">:</span>\<span style="color: #339933;">/</span>\<span style="color: #339933;">/</span><span style="color: #009900;">(</span><span style="color: #009900;">[</span><span style="color: #339933;">^</span><span style="color: #009966; font-style: italic;">/:]+)(:\d*)?([^# ]*)/</span><span style="color: #339933;">;</span><br/>
 arr <span style="color: #339933;">=</span> str.<span style="color: #660066;">match</span><span style="color: #009900;">(</span>patt1<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">(</span><span style="color: #000066; font-weight: bold;">var</span> i <span style="color: #339933;">=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> arr.<span style="color: #660066;">length</span><span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
@@ -509,7 +509,7 @@ arr <span style="color: #339933;">=</span> str.<span style="color: #660066;">mat
 <p><code>str.match(patt1)</code>Devuelve una matriz que contiene 5 elementos: el índice 0 corresponde a toda la cadena coincidente, los índices 1 a 4 corresponden a cada grupo de captura entre paréntesis, y así sucesivamente.</p>
 <ul>
 <li><strong>La primera subexpresión entre paréntesis</strong>（<span class="marked">\w+</span>): captura la parte del protocolo de la dirección web, coincidiendo con cualquier palabra delante de los dos puntos y las dos barras inclinadas. Resultado:<strong>https</strong></li>
-<li><strong>La segunda subexpresión entre paréntesis</strong>（<span class="marked">[^/:]+</span>): captura la parte de la dirección de dominio, coincidiendo con uno o más caracteres que no sean : ni /. Resultado:<strong>www.runoob.com</strong></li>
+<li><strong>La segunda subexpresión entre paréntesis</strong>（<span class="marked">[^/:]+</span>): captura la parte de la dirección de dominio, coincidiendo con uno o más caracteres que no sean : ni /. Resultado:<strong>www.example.com</strong></li>
 <li><strong>La tercera subexpresión entre paréntesis</strong>（<span class="marked">:\d*</span>): captura el número de puerto (si lo hay), coincidiendo con cero o más dígitos después de los dos puntos. Resultado:<strong>:80</strong></li>
 <li><strong>La cuarta subexpresión entre paréntesis</strong>（<span class="marked">[^# ]*</span>): captura la ruta y la información de la página, coincidiendo con cualquier secuencia de caracteres que no incluya # ni espacios. Resultado:<strong>/html/html-tutorial.html</strong></li>
 </ul>

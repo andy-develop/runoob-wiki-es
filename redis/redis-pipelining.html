@@ -289,7 +289,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Ejemplo</h3>
 <p>Para ver el pipelining de Redis, solo necesita iniciar una instancia de Redis e ingresar el siguiente comando:</p>
 <pre>
-$(echo -en "PING\r\n SET runoobkey redis\r\nGET runoobkey\r\nINCR visitor\r\nINCR visitor\r\nINCR visitor\r\n"; sleep 10) | nc localhost 6379
+$(echo -en "PING\r\n SET ejemplokey redis\r\nGET ejemplokey\r\nINCR visitor\r\nINCR visitor\r\nINCR visitor\r\n"; sleep 10) | nc localhost 6379
 
 +PONG
 +OK
@@ -298,7 +298,7 @@ redis
 :2
 :3
 </pre>
-<p>En el ejemplo anterior, mediante el uso de<b>PING</b>comando para comprobar si el servicio de Redis está disponible. Después, establecimos el valor de runoobkey como 'redis', luego obtuvimos el valor de runoobkey e incrementamos 'visitor' 3 veces.</p><p>En los resultados devueltos, podemos ver que estos comandos se envían al servicio de Redis de una sola vez, y finalmente se leen todas las respuestas del servidor de una vez.</p>
+<p>En el ejemplo anterior, mediante el uso de<b>PING</b>comando para comprobar si el servicio de Redis está disponible. Después, establecimos el valor de ejemplokey como 'redis', luego obtuvimos el valor de ejemplokey e incrementamos 'visitor' 3 veces.</p><p>En los resultados devueltos, podemos ver que estos comandos se envían al servicio de Redis de una sola vez, y finalmente se leen todas las respuestas del servidor de una vez.</p>
 <hr/>
 <h2>Ventajas de la tecnología de pipelining</h2>
 <p>La ventaja más significativa de la tecnología de pipelining es que mejora el rendimiento del servicio de Redis.</p>

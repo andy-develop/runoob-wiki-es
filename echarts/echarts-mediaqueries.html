@@ -214,8 +214,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En el ejemplo usamos jQuery para cargar datos externos; al usarlo, necesitamos introducir la librería jQuery.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 $.when<span style="color: #7A0874; font-weight: bold;">(</span><br/>
-    $.getScript<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'https://www.runoob.com/static/js/timelineGDP.js'</span><span style="color: #7A0874; font-weight: bold;">)</span>,<br/>
-    $.getScript<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'https://www.runoob.com/static/js/draggable.js'</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
+    $.getScript<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'https://www.example.com/static/js/timelineGDP.js'</span><span style="color: #7A0874; font-weight: bold;">)</span>,<br/>
+    $.getScript<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'https://www.example.com/static/js/draggable.js'</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <span style="color: #7A0874; font-weight: bold;">)</span>.done<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #000000; font-weight: bold;">function</span> <span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #7A0874; font-weight: bold;">{</span><br/>
 <br/>
     draggable.init<span style="color: #7A0874; font-weight: bold;">(</span><br/>
@@ -507,8 +507,8 @@ $.when<span style="color: #7A0874; font-weight: bold;">(</span><br/>
 En realidad, hay muy pocos escenarios en los que se necesite usar un 'option compuesto' para llamar a setOption varias veces, y la práctica que recomendamos es que al usar mediaQuery, la primera llamada a setOption use un 'option compuesto', y las llamadas posteriores a setOption usen solo un 'option atómico', es decir, usar setOption únicamente para cambiar baseOption.<p>En lo siguiente usamos jQuery para cargar datos externos; al usarlo, necesitamos introducir la librería jQuery. Este ejemplo es un caso combinado con la línea de tiempo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 $.<span style="color: #660066;">when</span><span style="color: #009900;">(</span><br/>
-    $.<span style="color: #660066;">getScript</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/static/js/timelineGDP.js'</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
-    $.<span style="color: #660066;">getScript</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/static/js/draggable.js'</span><span style="color: #009900;">)</span><br/>
+    $.<span style="color: #660066;">getScript</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/static/js/timelineGDP.js'</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
+    $.<span style="color: #660066;">getScript</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/static/js/draggable.js'</span><span style="color: #009900;">)</span><br/>
 <span style="color: #009900;">)</span>.<span style="color: #660066;">done</span><span style="color: #009900;">(</span><span style="color: #000066; font-weight: bold;">function</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
 <br/>
     draggable.<span style="color: #660066;">init</span><span style="color: #009900;">(</span><br/>

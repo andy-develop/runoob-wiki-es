@@ -166,13 +166,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>C <span class="color_h1">Cadenas</span></h1>
 <p>En el lenguaje C, una cadena es en realidad una matriz unidimensional de caracteres que usa el carácter nulo<span class="marked">\0</span>como terminación. Por lo tanto,<span class="marked">\0</span>se utiliza para marcar el final de la cadena.</p>
 <p><strong>El carácter nulo (Null character</strong>) también se llama terminador, abreviado<span class="marked">NUL</span>, es un carácter de control con un valor de<span class="marked">0</span>0,<span class="marked">\0</span>es un carácter de escape, lo que significa que le dice al compilador que no es el carácter<span class="marked">0</span>, sino el carácter nulo.</p>
-<p>La siguiente declaración e inicialización crea una<strong>RUNOOB</strong>cadena. Dado que el carácter nulo se almacena al final de la matriz,<span class="marked">\0</span>el tamaño de la matriz de caracteres es mayor que la palabra en<strong>RUNOOB</strong>un carácter.</p>
+<p>La siguiente declaración e inicialización crea una<strong>EJEMPLO</strong>cadena. Dado que el carácter nulo se almacena al final de la matriz,<span class="marked">\0</span>el tamaño de la matriz de caracteres es mayor que la palabra en<strong>EJEMPLO</strong>un carácter.</p>
 <pre>
 char site[7] = {'R', 'U', 'N', 'O', 'O', 'B', '\0'};
 </pre>
 <p>De acuerdo con las reglas de inicialización de matrices, puede escribir la declaración anterior de la siguiente manera:</p>
 <pre>
-char site[] = "RUNOOB";
+char site[] = "EJEMPLO";
 </pre>
 <p>La siguiente es la representación en memoria de las cadenas definidas en C/C++:</p>
 <img alt="C/C++ 中的字符串表示" decoding="async" src="../wp-content/uploads/2014/09/c-strings-2020-12-21.png"/>
@@ -188,7 +188,7 @@ char site[] = "RUNOOB";
 </span><span class="hl-brackets">}</span></div></div></div>
 <p>Cuando el código anterior se compila y ejecuta, produce el siguiente resultado:</p>
 <pre>
-菜鸟教程: RUNOOB
+Ejemplo: EJEMPLO
 </pre>
 <p>En C hay muchas funciones para manipular cadenas:</p>
 <table class="reference">
@@ -208,7 +208,7 @@ char site[] = "RUNOOB";
 </span><span class="hl-prepro">#include</span><span class="hl-prepro"> </span><span class="hl-quotes">&lt;</span><span class="hl-string">string.h</span><span class="hl-quotes">&gt;</span><span class="hl-prepro"></span><span class="hl-code">
 </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-brackets">[</span><span class="hl-number">14</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-brackets">[</span><span class="hl-number">14</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str2</span><span class="hl-brackets">[</span><span class="hl-number">14</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str3</span><span class="hl-brackets">[</span><span class="hl-number">14</span><span class="hl-brackets">]</span><span class="hl-code">;
    </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">len</span><span class="hl-code"> ;
@@ -231,8 +231,8 @@ char site[] = "RUNOOB";
 </div>
 <p>Cuando el código anterior se compila y ejecuta, produce el siguiente resultado:</p>
 <pre>
-strcpy( str3, str1) :  runoob
-strcat( str1, str2):   runoobgoogle
+strcpy( str3, str1) :  ejemplo
+strcat( str1, str2):   ejemplogoogle
 strlen(str1) :  12
 </pre>
 <p>Puede encontrar más funciones relacionadas con cadenas en la biblioteca estándar de C.</p> Otras extensiones

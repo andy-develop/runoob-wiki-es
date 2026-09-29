@@ -324,7 +324,7 @@ WHERE [condition];</pre>
 <p>Puede incluir varias tablas en la sentencia SELECT, de manera muy similar a como se hace en una consulta SQL SELECT normal. Si se utilizan las palabras clave opcionales TEMP o TEMPORARY, la vista se creará en una base de datos temporal.</p>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -336,11 +336,11 @@ WHERE [condition];</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>Ahora, a continuación se muestra un ejemplo de creación de una vista a partir de la tabla COMPANY. La vista solo selecciona algunas columnas de la tabla COMPANY:</p>
-<pre>runoobdb=# CREATE VIEW COMPANY_VIEW AS
+<pre>ejemplodb=# CREATE VIEW COMPANY_VIEW AS
 SELECT ID, NAME, AGE
 FROM  COMPANY;</pre>
 <p>Ahora, se puede consultar COMPANY_VIEW de manera similar a como se consulta una tabla real. A continuación se muestra un ejemplo:</p>
-<pre>runoobdb# SELECT * FROM COMPANY_VIEW;</pre>
+<pre>ejemplodb# SELECT * FROM COMPANY_VIEW;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre>id | name  | age
 ----+-------+-----
@@ -354,9 +354,9 @@ FROM  COMPANY;</pre>
 (7 rows)</pre>
 <h3>DROP VIEW (Eliminar vista)</h3>
 <p>Para eliminar una vista, basta con usar la sentencia DROP VIEW con view_name. La sintaxis básica de DROP VIEW es la siguiente:</p>
-<pre>runoobdb=# DROP VIEW view_name;</pre>
+<pre>ejemplodb=# DROP VIEW view_name;</pre>
 <p>El siguiente comando eliminará la vista COMPANY_VIEW que creamos anteriormente:</p>
-runoobdb=# DROP VIEW COMPANY_VIEW;<pre>
+ejemplodb=# DROP VIEW COMPANY_VIEW;<pre>
 			<!-- 其他扩展 -->
 						
 			</pre></div>

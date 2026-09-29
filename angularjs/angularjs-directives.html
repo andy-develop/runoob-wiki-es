@@ -373,13 +373,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puedes usar la<b>.directive</b>función .directive para agregar directivas personalizadas.</p>
 <p>Para llamar a una directiva personalizada, se debe añadir el nombre de la directiva personalizada en el elemento HTML.</p>
 <p>Use el método camelCase para nombrar una directiva,<b>
-runoobDirective</b>pero al usarla, hay que separarla con<b>-</b>un guion.<b>runoob-directive</b>:</p>
+ejemploDirective</b>pero al usarla, hay que separarla con<b>-</b>un guion.<b>ejemplo-directive</b>:</p>
 <div class="example">
 <h2 class="example">Ejemplo de AngularJS</h2>
 <div class="example_code">
 <div class="htmlHigh">
-<span class="highLT">&lt;</span><span class="highELE">body</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span><span class="highGT">&gt;</span><br/><br/><span class="highLT">&lt;</span><span class="highELE">runoob-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/runoob-directive</span><span class="highGT">&gt;</span><br/><br/>
-<span class="highLT">&lt;</span><span class="highELE">script</span><span class="highGT">&gt;</span><br/>var app = angular.module("myApp", []);<br/>app.directive("runoobDirective", 
+<span class="highLT">&lt;</span><span class="highELE">body</span> <span class="highATT">ng-app=</span><span class="highVAL">"myApp"</span><span class="highGT">&gt;</span><br/><br/><span class="highLT">&lt;</span><span class="highELE">ejemplo-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/ejemplo-directive</span><span class="highGT">&gt;</span><br/><br/>
+<span class="highLT">&lt;</span><span class="highELE">script</span><span class="highGT">&gt;</span><br/>var app = angular.module("myApp", []);<br/>app.directive("ejemploDirective", 
 	function() {<br/>    return {<br/>template : "&lt;h1&gt;¡Directiva personalizada!&lt;/h1&gt;"<br/>    };<br/>
 	});<br/><span class="highLT">&lt;</span><span class="highELE">/script</span><span class="highGT">&gt;</span><br/><br/>
 <span class="highLT">&lt;</span><span class="highELE">/body</span><span class="highGT">&gt;</span></div>
@@ -396,26 +396,26 @@ runoobDirective</b>pero al usarla, hay que separarla con<b>-</b>un guion.<b>runo
 <div class="example">
 <p>Nombre de elemento</p>
 <div class="example_code">
-<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">runoob-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/runoob-directive</span><span class="highGT">&gt;</span></div>
+<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">ejemplo-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/ejemplo-directive</span><span class="highGT">&gt;</span></div>
 </div><br/><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','PHJ1bm9vYi1kaXJlY3RpdmU+PC9ydW5vb2ItZGlyZWN0aXZlPg==');localStorage.setItem('tryit_lang','html');">Pruébalo »</a>
 </div>
 <div class="example">
 <p>Atributo</p>
 <div class="example_code">
-<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">runoob-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
+<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">ejemplo-directive</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
 </div><br/><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','PGRpdiBydW5vb2ItZGlyZWN0aXZlPjwvZGl2Pg==');localStorage.setItem('tryit_lang','html');">Pruébalo »</a>
 </div>
 <div class="example">
 <p>Nombre de clase</p>
 <div class="example_code">
-<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">"runoob-directive"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
+<div class="htmlHigh"><span class="highLT">&lt;</span><span class="highELE">div</span> <span class="highATT">class=</span><span class="highVAL">"ejemplo-directive"</span><span class="highGT">&gt;</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span></div>
 </div>
 <br/><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','PGRpdiBjbGFzcz0icnVub29iLWRpcmVjdGl2ZSI+PC9kaXY+');localStorage.setItem('tryit_lang','html');">Pruébalo »</a>
 </div>
 <div class="example">
 <p>Comentario</p>
 <div class="example_code">
-<div class="htmlHigh"><span class="highCOM">&lt;!-- directive: runoob-directive --&gt;</span></div>
+<div class="htmlHigh"><span class="highCOM">&lt;!-- directive: ejemplo-directive --&gt;</span></div>
 </div><br/><a class="tryitbtn" data-lang="html" href="../try/editor.html" onclick="localStorage.setItem('tryit_code','PCEtLSBkaXJlY3RpdmU6IHJ1bm9vYi1kaXJlY3RpdmUgLS0+');localStorage.setItem('tryit_lang','html');">Pruébalo »</a>
 </div>
 <hr/>
@@ -426,7 +426,7 @@ runoobDirective</b>pero al usarla, hay que separarla con<b>-</b>un guion.<b>runo
 <p>Al agregar<b>restrict</b>el atributo restrict, y estableciendo el valor en<code>"A"</code>'A', para configurar la directiva de modo que solo se pueda invocar como atributo:</p>
 <div class="example_code">
 <div class="jsHigh">
-<span class="highELE">var</span> app = angular.module(<span class="highVAL">"myApp"</span>, []);<br/>app.directive(<span class="highVAL">"runoobDirective"</span>, 
+<span class="highELE">var</span> app = angular.module(<span class="highVAL">"myApp"</span>, []);<br/>app.directive(<span class="highVAL">"ejemploDirective"</span>, 
 	<span class="highELE">function</span>() {<br/>    <span class="highELE">return</span> {<br/>        
 	restrict : <span class="highVAL">"A"</span>,<br/>        
 	template : <span class="highVAL">"&lt;h1&gt;¡Directiva personalizada!&lt;/h1&gt;"</span><br/>    };<br/>

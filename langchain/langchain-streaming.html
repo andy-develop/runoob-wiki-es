@@ -335,13 +335,13 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Olive;">)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># stream_mode="messages" devuelve tokens uno a uno</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Salida en streaming en tiempo real:"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> msg_chunk<span style="color: Gray;">,</span> metadata <span style="color: Green;font-weight:bold;">in</span> agent.<span style="color: #05a;">stream</span><span style="color: Olive;">(</span><br/>
-    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta Runoob en una frase"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta Ejemplo en una frase"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     stream_mode<span style="color: Gray;">=</span><span style="color: #a11;">"messages"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># msg_chunk es un AIMessageChunk</span><br/>
@@ -353,8 +353,8 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-实时流式输出：
-菜鸟教程（RUNOOB）是一个面向编程初学者的免费在线学习平台，提供丰富的技术教程和实战示例。
+Salida en streaming en vivo:
+Ejemplo es una plataforma gratuita de aprendizaje en línea para principiantes de programación, con tutoriales técnicos completos y ejemplos prácticos.
 </pre>
 <h3>Entendiendo los metadatos</h3>
 <p>Los metadatos contienen información sobre el origen de este chunk:</p>
@@ -375,11 +375,11 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-查看 metadata 信息：
+Consultar metadatos:
 
-内容: 你好！我是菜
-来源节点: model
-消息类型: AIMessageChunk
+Contenido: ¡Hola! Soy un asistente de IA
+Nodo de origen: model
+Tipo de mensaje: AIMessageChunk
 </pre>
 <hr/>
 <h2>stream_mode="updates" — Ver el proceso de ejecución del Agente paso a paso</h2>
@@ -392,7 +392,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 <br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_course<span style="color: Olive;">(</span><span style="color: #05a;">keyword</span>: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Buscar cursos en Runoob"""</span><br/>
+    <span style="color: #a11;">"""Buscar cursos en Ejemplo"""</span><br/>
     courses <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
         <span style="color: #a11;">"python"</span>: <span style="color: #a11;">"Tutorial básico de Python3 (30 capítulos, 20 horas)"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"html"</span>: <span style="color: #a11;">"Tutorial básico de HTML (25 capítulos, 15 horas)"</span><span style="color: Gray;">,</span><br/>
@@ -403,7 +403,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_course<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usar el modo updates para ver cada paso</span><br/>
@@ -432,7 +432,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 
 [model] 请求调用: ['search_course']
 [tools] 工具返回 [search_course]: Python3 基础教程（30章，20小时）
-[model] 回复: 菜鸟教程 RUNOOB 中有 Python3 基础教程，共30章，学习时长约20小时，非常适合Python初学者入门学习。
+[model] Respuesta: Ejemplo tiene el tutorial básico de Python3, 30 capítulos, unas 20 horas de estudio, perfecto para principiantes de Python.
 </pre>
 <hr/>
 <h2>stream_mode="custom" — Enviar eventos personalizados</h2>
@@ -477,7 +477,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     model<span style="color: Gray;">=</span>init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_course<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>notify_before<span style="color: Gray;">,</span> notify_after<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usar stream_mode=["updates", "custom"] para recibir ambos tipos de eventos a la vez</span><br/>
@@ -500,11 +500,11 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 <pre>
 === 混合流式输出 ===
 
-[自定义事件] 状态: 正在思考...
-[自定义事件] 状态: 正在调用工具: search_course...
-[回复] 菜鸟教程 RUNOOB 中有 Python3 基础教程，共30章，学习时长约20小时。
-[自定义事件] 状态: 正在思考...
-[自定义事件] 状态: 回答已完成
+[evento personalizado] Estado: pensando...
+[evento personalizado] Estado: llamando a la herramienta: search_course...
+[respuesta] Ejemplo tiene el tutorial básico de Python3, 30 capítulos, unas 20 horas de estudio.
+[evento personalizado] Estado: pensando...
+[evento personalizado] Estado: respuesta completada
 </pre>
 <blockquote><p>Los modos de stream_mode se pueden combinar, por ejemplo stream_mode=["updates", "custom", "messages"]. Sin embargo, demasiados modos aumentan la cantidad de eventos en el flujo; se recomienda elegir según la necesidad.</p></blockquote>
 <hr/>
@@ -520,12 +520,12 @@ async <span style="color: Green;font-weight:bold;">def</span> stream_agent<span 
     <span style="color: #a11;">"""Ejecutar el Agente con streaming asíncrono"""</span><br/>
     agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
         model<span style="color: Gray;">=</span>init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-        system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Runoob."</span><span style="color: Gray;">,</span><br/>
+        system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Ejemplo."</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">)</span><br/>
 <br/>
     full_response <span style="color: Gray;">=</span> <span style="color: #a11;">""</span><br/>
     async <span style="color: Green;font-weight:bold;">for</span> msg_chunk<span style="color: Gray;">,</span> metadata <span style="color: Green;font-weight:bold;">in</span> agent.<span style="color: #05a;">astream</span><span style="color: Olive;">(</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta Runoob en una frase"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta Ejemplo en una frase"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         stream_mode<span style="color: Gray;">=</span><span style="color: #a11;">"messages"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">)</span>:<br/>
         <span style="color: Green;font-weight:bold;">if</span> msg_chunk.<span style="color: #05a;">content</span>:<br/>
@@ -552,7 +552,7 @@ asyncio.<span style="color: #05a;">run</span><span style="color: Olive;">(</span
 app <span style="color: Gray;">=</span> FastAPI<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <br/>

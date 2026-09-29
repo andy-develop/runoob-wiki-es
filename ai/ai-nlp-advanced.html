@@ -318,8 +318,8 @@ sentences <span style="color: Gray;">=</span> <span style="color: Olive;">[</spa
     <span style="color: Olive;">[</span><span style="color: #a11;">"Plátano"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ser"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Un tipo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Fruta"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">[</span><span style="color: #a11;">"gato"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ser"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Un tipo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">animal</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">[</span><span style="color: #a11;">"perro"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ser"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Un tipo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">animal</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">[</span><span style="color: #a11;">"RUNOOB"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ser"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Uno"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Sitio web"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">[</span><span style="color: #a11;">"Aprender"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ir"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"RUNOOB"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">[</span><span style="color: #a11;">"EJEMPLO"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ser"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Uno"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Sitio web"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">[</span><span style="color: #a11;">"Aprender"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ir"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"EJEMPLO"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: #a50"># Entrenar el modelo Word2Vec</span><br/>
@@ -353,8 +353,8 @@ similarity <span style="color: Gray;">=</span> model.<span style="color: #05a;">
 <span style="color: Green;font-weight:bold;">for</span> word<span style="color: Gray;">,</span> score <span style="color: Green;font-weight:bold;">in</span> model.<span style="color: #05a;">wv</span>.<span style="color: #05a;">most_similar</span><span style="color: Olive;">(</span><span style="color: #a11;">"gato"</span><span style="color: Gray;">,</span> topn<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  {word}: {score:.4f}"</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Palabras más similares a 'RUNOOB':</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">for</span> word<span style="color: Gray;">,</span> score <span style="color: Green;font-weight:bold;">in</span> model.<span style="color: #05a;">wv</span>.<span style="color: #05a;">most_similar</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB"</span><span style="color: Gray;">,</span> topn<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Palabras más similares a 'EJEMPLO':</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">for</span> word<span style="color: Gray;">,</span> score <span style="color: Green;font-weight:bold;">in</span> model.<span style="color: #05a;">wv</span>.<span style="color: #05a;">most_similar</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO"</span><span style="color: Gray;">,</span> topn<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  {word}: {score:.4f}"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># La operación clásica de word embeddings: rey - hombre + mujer ≈ reina</span><br/>
@@ -454,7 +454,7 @@ similarity <span style="color: Gray;">=</span> model.<span style="color: #05a;">
 texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     <span style="color: #a11;">"Este producto es realmente bueno, me gusta mucho"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La calidad es demasiado mala, muy decepcionado"</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">"El tutorial de RUNOOB está muy claro y es fácil de aprender"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"El tutorial de EJEMPLO está muy claro y es fácil de aprender"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La logística fue muy lenta y el embalaje también estaba dañado"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La cámara de este teléfono toma fotos excelentes"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La actitud del servicio no es buena, no volveré"</span><span style="color: Gray;">,</span><br/>
@@ -462,7 +462,7 @@ texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><b
     <span style="color: #a11;">"La película es muy aburrida, me quedé dormido viéndola"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La comida de este restaurante es deliciosa"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El juego tiene demasiados bugs, la experiencia es muy mala"</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">"El tutorial de NLP de RUNOOB es de gran ayuda"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"El tutorial de NLP de EJEMPLO es de gran ayuda"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El diseño de la interfaz de este software es muy bueno"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El repartidor fue muy amable"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La talla de la ropa no es correcta y el color tampoco"</span><span style="color: Gray;">,</span><br/>
@@ -528,7 +528,7 @@ metric <span style="color: Gray;">=</span> load_metric<span style="color: Olive;
 <span style="color: #a50"># ============================================</span><br/>
 <br/>
 training_args <span style="color: Gray;">=</span> TrainingArguments<span style="color: Olive;">(</span><br/>
-    output_dir<span style="color: Gray;">=</span><span style="color: #a11;">"./runoob-bert-sentiment"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Directorio de salida</span><br/>
+    output_dir<span style="color: Gray;">=</span><span style="color: #a11;">"./ejemplo-bert-sentiment"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Directorio de salida</span><br/>
     num_train_epochs<span style="color: Gray;">=</span><span style="color: Maroon;">3</span><span style="color: Gray;">,</span>                    <span style="color: #a50"># Número de épocas</span><br/>
     per_device_train_batch_size<span style="color: Gray;">=</span><span style="color: Maroon;">4</span><span style="color: Gray;">,</span>         <span style="color: #a50"># Tamaño del lote de entrenamiento</span><br/>
     per_device_eval_batch_size<span style="color: Gray;">=</span><span style="color: Maroon;">4</span><span style="color: Gray;">,</span>          <span style="color: #a50"># Tamaño del lote de evaluación</span><br/>
@@ -595,7 +595,7 @@ trainer <span style="color: Gray;">=</span> Trainer<span style="color: Olive;">(
 <br/>
 <span style="color: #a50"># Probar algunas oraciones</span><br/>
 test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"¡El tutorial de RUNOOB es realmente genial!"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"¡El tutorial de EJEMPLO es realmente genial!"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La calidad de este producto es muy mala"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Hoy hace buen tiempo"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"No me gusta mucho esta película"</span><span style="color: Gray;">,</span><br/>
@@ -699,7 +699,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
         <span style="color: #a11;">"El delantero de este equipo marcó un gol"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Los playoffs de la NBA son emocionantes"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"La cámara de este teléfono móvil toma fotos estupendas"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"Los tutoriales de programación de RUNOOB son muy claros"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"Los tutoriales de programación de EJEMPLO son muy claros"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"La trama de esta película es conmovedora"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Las canciones de ese álbum suenan muy bien"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
@@ -720,7 +720,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
         <span style="color: #a11;">"Las acciones bajaron y estoy de mal humor"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"El partido de baloncesto se decidió con una canasta ganadora en el último segundo"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"El nuevo portátil tiene un rendimiento muy potente"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"El nuevo tutorial de NLP de RUNOOB"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"El nuevo tutorial de NLP de EJEMPLO"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
     predictions <span style="color: Gray;">=</span> pipeline.<span style="color: #05a;">predict</span><span style="color: Olive;">(</span>test_texts<span style="color: Olive;">)</span><br/>
@@ -751,7 +751,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
         classifier <span style="color: Gray;">=</span> pipeline<span style="color: Olive;">(</span><span style="color: #a11;">"sentiment-analysis"</span><span style="color: Olive;">)</span><br/>
 <br/>
         test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-            <span style="color: #a11;">"I love RUNOOB tutorials!"</span><span style="color: Gray;">,</span><br/>
+            <span style="color: #a11;">"I love EJEMPLO tutorials!"</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"This movie is terrible."</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">]</span><br/>
 <br/>
@@ -808,7 +808,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
     test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
         <span style="color: #a11;">"Las acciones subieron y estoy muy contento"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"El Mundial de fútbol ha comenzado"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"El nuevo tutorial de programación de RUNOOB"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"El nuevo tutorial de programación de EJEMPLO"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
     categories <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Finanzas"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Deportes"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Tecnología"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Entretenimiento"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Otros"</span><span style="color: Olive;">]</span><br/>
@@ -903,7 +903,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
             grouped_entities<span style="color: Gray;">=</span><span style="color: Teal;">True</span>  <span style="color: #a50"># Combinar múltiples tokens de la misma entidad</span><br/>
         <span style="color: Olive;">)</span><br/>
 <br/>
-        test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"John Smith works at Google in New York City. He loves RUNOOB tutorials."</span><br/>
+        test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"John Smith works at Google in New York City. He loves EJEMPLO tutorials."</span><br/>
 <br/>
         results <span style="color: Gray;">=</span> ner_pipeline<span style="color: Olive;">(</span>test_text<span style="color: Olive;">)</span><br/>
 <br/>
@@ -930,7 +930,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
 <br/>
     <span style="color: #a50"># Diccionario de entidades (en la práctica sería más grande)</span><br/>
     person_names <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Zhang San"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Li Si"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Wang Xiaoming"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Liu Dehua"</span><span style="color: Olive;">]</span><br/>
-    organizations <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Google"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Microsoft"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Alibaba"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Tencent"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"RUNOOB"</span><span style="color: Olive;">]</span><br/>
+    organizations <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Google"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Microsoft"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Alibaba"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Tencent"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"EJEMPLO"</span><span style="color: Olive;">]</span><br/>
     locations <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Beijing"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Shanghai"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Shenzhen"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Nueva York"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Londres"</span><span style="color: Olive;">]</span><br/>
 <br/>
     <span style="color: #a50"># Patrones de expresiones regulares</span><br/>
@@ -963,8 +963,8 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
     test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
         <span style="color: #a11;">"Zhang San trabaja en Google, su número de móvil es 13800138000"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Wang Xiaoming fue a la empresa Microsoft en Beijing por negocios"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"Si tienes problemas, contacta support@runoob.com"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"RUNOOB es un excelente sitio web de aprendizaje"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"Si tienes problemas, contacta support@example.com"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"EJEMPLO es un excelente sitio web de aprendizaje"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">for</span> text <span style="color: Green;font-weight:bold;">in</span> test_texts:<br/>
@@ -1004,12 +1004,12 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
             entities.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><span style="color: #a11;">"text"</span>: <span style="color: #a11;">"Google"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"ORG"</span><span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"Beijing"</span> <span style="color: Green;font-weight:bold;">in</span> text:<br/>
             entities.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><span style="color: #a11;">"text"</span>: <span style="color: #a11;">"Beijing"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"LOC"</span><span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
-        <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"RUNOOB"</span> <span style="color: Green;font-weight:bold;">in</span> text:<br/>
-            entities.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><span style="color: #a11;">"text"</span>: <span style="color: #a11;">"RUNOOB"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"ORG"</span><span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"EJEMPLO"</span> <span style="color: Green;font-weight:bold;">in</span> text:<br/>
+            entities.<span style="color: #05a;">append</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><span style="color: #a11;">"text"</span>: <span style="color: #a11;">"EJEMPLO"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"ORG"</span><span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 <br/>
         <span style="color: Green;font-weight:bold;">return</span> entities<br/>
 <br/>
-    test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"Zhang San trabaja en Google en Beijing, y a menudo visita RUNOOB para aprender"</span><br/>
+    test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"Zhang San trabaja en Google en Beijing, y a menudo visita EJEMPLO para aprender"</span><br/>
     entities <span style="color: Gray;">=</span> extract_entities_with_llm<span style="color: Olive;">(</span>test_text<span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Texto: {test_text}"</span><span style="color: Olive;">)</span><br/>
@@ -1272,7 +1272,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
         <span style="color: #a11;">"El procesamiento del lenguaje natural es una rama importante de la inteligencia artificial que estudia la interacción entre las computadoras y el lenguaje humano."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Coincidencia exacta</span><br/>
         <span style="color: #a11;">"El procesamiento del lenguaje natural estudia la interacción entre las computadoras y el lenguaje humano, y es una rama importante de la inteligencia artificial."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Cambio de orden</span><br/>
         <span style="color: #a11;">"El procesamiento del lenguaje natural es una rama de la inteligencia artificial que estudia la interacción entre las computadoras y el lenguaje."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Versión abreviada</span><br/>
-        <span style="color: #a11;">"RUNOOB es un sitio web de aprendizaje de programación."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># No relacionado</span><br/>
+        <span style="color: #a11;">"EJEMPLO es un sitio web de aprendizaje de programación."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># No relacionado</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Resumen de referencia: {reference}"</span><span style="color: Olive;">)</span><br/>
@@ -1345,7 +1345,7 @@ test_texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</sp
         <span style="color: Green;font-weight:bold;">return</span> summary<br/>
 <br/>
     <span style="color: #a50"># Texto de prueba</span><br/>
-    test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>El procesamiento del lenguaje natural es una rama importante de la inteligencia artificial. Estudia cómo hacer que las computadoras comprendan y generen el lenguaje humano.<br/>Esta tecnología tiene muchas aplicaciones, incluyendo traducción automática, análisis de sentimientos, sistemas de preguntas y respuestas, etc.<br/>En los últimos años, la aparición de los grandes modelos de lenguaje ha supuesto un gran avance en el procesamiento del lenguaje natural.<br/>El sitio web RUNOOB ofrece muchos tutoriales de programación excelentes que ayudan a los desarrolladores a aprender nuevas habilidades.<br/>
+    test_text <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>El procesamiento del lenguaje natural es una rama importante de la inteligencia artificial. Estudia cómo hacer que las computadoras comprendan y generen el lenguaje humano.<br/>Esta tecnología tiene muchas aplicaciones, incluyendo traducción automática, análisis de sentimientos, sistemas de preguntas y respuestas, etc.<br/>En los últimos años, la aparición de los grandes modelos de lenguaje ha supuesto un gran avance en el procesamiento del lenguaje natural.<br/>El sitio web EJEMPLO ofrece muchos tutoriales de programación excelentes que ayudan a los desarrolladores a aprender nuevas habilidades.<br/>
 """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Texto original:"</span><span style="color: Olive;">)</span><br/>

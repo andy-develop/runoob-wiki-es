@@ -295,10 +295,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El lado izquierdo del signo igual es la variable, el lado derecho es el valor. Ejemplo:</p>
 <pre>
 $age = 25;             # 整型
-$name = "runoob";      # 字符串
+$name = "ejemplo";      # 字符串
 $salary = 1445.50;     # 浮点数
 </pre>
-<p>En el código anterior, 25, "runoob" y 1445.50 se asignan respectivamente a<i>$age</i>, <i>$name</i>y<i>$salary</i>las variables.</p>
+<p>En el código anterior, 25, "ejemplo" y 1445.50 se asignan respectivamente a<i>$age</i>, <i>$name</i>y<i>$salary</i>las variables.</p>
 <p>A continuación veremos el uso de arrays y hash.</p>
 <hr/>
 <h2>Variables escalares</h2>
@@ -308,7 +308,7 @@ $salary = 1445.50;     # 浮点数
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
 </span><span class="hl-var">$age</span><span class="hl-code"> = </span><span class="hl-number">25</span><span class="hl-code">;             </span><span class="hl-comment"># Entero</span><span class="hl-code">
-</span><span class="hl-var">$name</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">;      </span><span class="hl-comment"># Cadena</span><span class="hl-code">
+</span><span class="hl-var">$name</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">;      </span><span class="hl-comment"># Cadena</span><span class="hl-code">
 </span><span class="hl-var">$salary</span><span class="hl-code"> = </span><span class="hl-number">1445.50</span><span class="hl-code">;     </span><span class="hl-comment"># Flotante</span><span class="hl-code">
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Age = </span><span class="hl-var">$age</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Name = </span><span class="hl-var">$name</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
@@ -317,7 +317,7 @@ $salary = 1445.50;     # 浮点数
 </div><p>El resultado de ejecución del programa anterior es:</p>
 <pre>
 Age = 25
-Name = runoob
+Name = ejemplo
 Salary = 1445.5
 </pre>
 <hr/>
@@ -330,7 +330,7 @@ Salary = 1445.5
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
 </span><span class="hl-var">@ages</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-number">25</span><span class="hl-code">, </span><span class="hl-number">30</span><span class="hl-code">, </span><span class="hl-number">40</span><span class="hl-brackets">)</span><span class="hl-code">;             
-</span><span class="hl-var">@names</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">@names</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">ages[0] = </span><span class="hl-var">$ages</span><span class="hl-string">[0]</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">ages[1] = </span><span class="hl-var">$ages</span><span class="hl-string">[1]</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
@@ -345,7 +345,7 @@ $ages[0] = 25
 $ages[1] = 30
 $ages[2] = 40
 $names[0] = google
-$names[1] = runoob
+$names[1] = ejemplo
 $names[2] = taobao
 </pre>
 <p>En el programa usamos el carácter de escape (\) antes del signo $, para poder imprimir el carácter $.</p>
@@ -358,16 +358,16 @@ $names[2] = taobao
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-var">%data</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">45</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">30</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">taobao</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">40</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">%data</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">45</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">30</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">taobao</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-number">40</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">data{'google'} = </span><span class="hl-var">$data</span><span class="hl-string">{'google'}</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
-</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">data{'runoob'} = </span><span class="hl-var">$data</span><span class="hl-string">{'runoob'}</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">data{'ejemplo'} = </span><span class="hl-var">$data</span><span class="hl-string">{'ejemplo'}</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\$</span><span class="hl-string">data{'taobao'} = </span><span class="hl-var">$data</span><span class="hl-string">{'taobao'}</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
 </div>
 </div><p>El resultado de ejecución del programa anterior es:</p>
 <pre>
 $data{'google'} = 45
-$data{'runoob'} = 30
+$data{'ejemplo'} = 30
 $data{'taobao'} = 40
 </pre>
 <hr/>
@@ -379,7 +379,7 @@ $data{'taobao'} = 40
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-var">@names</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">@names</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-var">@copy</span><span class="hl-code"> = </span><span class="hl-var">@names</span><span class="hl-code">;   </span><span class="hl-comment"># Copiar array</span><span class="hl-code">
 </span><span class="hl-var">$size</span><span class="hl-code"> = </span><span class="hl-var">@names</span><span class="hl-code">;   </span><span class="hl-comment"># Asignar el array a un escalar, devuelve el número de elementos del array</span><span class="hl-code">
@@ -388,7 +388,7 @@ $data{'taobao'} = 40
 </div>
 </div><p>El resultado de ejecución del programa anterior es:</p>
 <pre>
-名字为 : google runoob taobao
+名字为 : google ejemplo taobao
 名字数为 : 3
 </pre>
 <p>En el código, @names es un array, que se usó en dos contextos diferentes. En el primero se copió a otro array, por lo que generó todos los elementos del array. En el segundo asignamos el array a un escalar, y devolvió el número de elementos del array.</p>

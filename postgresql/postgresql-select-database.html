@@ -321,24 +321,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges   
 -----------+----------+----------+---------+-------+-----------------------
  postgres  | postgres | UTF8     | C       | C     | 
- runoobdb  | postgres | UTF8     | C       | C     | 
+ ejemplodb  | postgres | UTF8     | C       | C     | 
  template0 | postgres | UTF8     | C       | C     | =c/postgres          +
            |          |          |         |       | postgres=CTc/postgres
  template1 | postgres | UTF8     | C       | C     | =c/postgres          +
            |          |          |         |       | postgres=CTc/postgres
 (4 rows)</pre>
 <p>A continuación, podemos usar<span class="marked">\c + nombre de la base de datos</span>para ingresar a la base de datos:</p>
-<pre>postgres=# \c runoobdb
-You are now connected to database "runoobdb" as user "postgres".
-runoobdb=# </pre>
+<pre>postgres=# \c ejemplodb
+You are now connected to database "ejemplodb" as user "postgres".
+ejemplodb=# </pre>
 <h3>Ventana de línea de comandos del sistema</h3>
 <p>En la línea de comandos del sistema, podemos agregar el nombre de la base de datos después del comando de conexión para seleccionar la base de datos:</p>
-<pre>$ psql -h localhost -p 5432 -U postgres runoobdb
+<pre>$ psql -h localhost -p 5432 -U postgres ejemplodb
 Password for user postgres: ****
 psql (11.3)
 Type "help" for help.
-You are now connected to database "runoobdb" as user "postgres".
-runoobdb=# </pre>
+You are now connected to database "ejemplodb" as user "postgres".
+ejemplodb=# </pre>
 <h3>Herramienta pgAdmin</h3>
 <p>La herramienta pgAdmin es aún más simple: solo haz clic en la base de datos para seleccionarla, y también puedes ver información adicional de la base de datos:</p>
 <p><img decoding="async" src="../wp-content/uploads/2019/05/029E4150-C4C3-47BE-8CCE-9267335EDBBB.jpg"/></p>

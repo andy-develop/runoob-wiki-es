@@ -280,7 +280,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puedes usar 'Sort by' para ver otras versiones de php; por defecto, es la última versión.<strong>php:latest</strong>。</p>
 <p>Además, también podemos usar el comando docker search php para ver las versiones disponibles:</p>
 <pre>
-runoob@runoob:~/php-fpm$ docker search php
+ejemplo@ejemplo:~/php-fpm$ docker search php
 NAME                      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 php                       While designed for web development, the PH...   1232      [OK]       
 richarvey/nginx-php-fpm   Container running Nginx + PHP-FPM capable ...   207                  [OK]
@@ -296,10 +296,10 @@ webdevops/php             PHP (FPM and CLI) service container             10    
 ...
 </pre>
 <p>Aquí extraemos la imagen oficial, etiquetada como 5.6-fpm</p>
-<pre>runoob@runoob:~/php-fpm$ docker pull php:5.6-fpm</pre>
+<pre>ejemplo@ejemplo:~/php-fpm$ docker pull php:5.6-fpm</pre>
 <p>Cuando se complete la descarga, podremos ver en la lista de imágenes locales la imagen cuyo REPOSITORY es php y cuya etiqueta es 5.6-fpm.</p>
 <pre>
-runoob@runoob:~/php-fpm$ docker images
+ejemplo@ejemplo:~/php-fpm$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 php                 5.6-fpm             025041cd3aa5        6 days ago          456.3 MB
 </pre>
@@ -315,7 +315,7 @@ php                 5.6-fpm             025041cd3aa5        6 days ago          
 </ul>
 <p>Crea el directorio ~/nginx/conf/conf.d:</p>
 <pre>mkdir ~/nginx/conf/conf.d </pre>
-<p>Agrega en este directorio<strong>~/nginx/conf/conf.d/runoob-test-php.conf</strong>el archivo, con el siguiente contenido:</p>
+<p>Agrega en este directorio<strong>~/nginx/conf/conf.d/ejemplo-test-php.conf</strong>el archivo, con el siguiente contenido:</p>
 <pre>server {
     listen       80;
     server_name  localhost;
@@ -343,7 +343,7 @@ php                 5.6-fpm             025041cd3aa5        6 days ago          
 <li> <strong>/www/</strong>: es<strong>myphp-fpm</strong>la ruta de almacenamiento de los archivos php en ..., mapeada al directorio local ~/nginx/www.</li>
 </ul>
 <p>Iniciar nginx:</p>
-<pre>docker run --name runoob-php-nginx -p 8083:80 -d \
+<pre>docker run --name ejemplo-php-nginx -p 8083:80 -d \
     -v ~/nginx/www:/usr/share/nginx/html:ro \
     -v ~/nginx/conf/conf.d:/etc/nginx/conf.d:ro \
     --link myphp-fpm:php \

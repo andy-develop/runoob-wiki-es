@@ -256,13 +256,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Por ejemplo, recibimos los siguientes datos del servidor:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">alexa</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-number">10000</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-quotes">"</span><span class="hl-string">www.runoob.com</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-brackets">}</span></div>
+<div class="hl-main"><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">alexa</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-number">10000</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">site</span><span class="hl-quotes">"</span><span class="hl-code">:</span><span class="hl-quotes">"</span><span class="hl-string">www.example.com</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-brackets">}</span></div>
 </div>
 </div>
 <p>Usamos el método JSON.parse() para procesar los datos anteriores y convertirlos en objetos de JavaScript:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">obj</span><span class="hl-code"> = </span><span class="hl-identifier">JSON</span><span class="hl-code">.</span><span class="hl-identifier">parse</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"runoob", "alexa":10000, "site":"www.runoob.com" }</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">obj</span><span class="hl-code"> = </span><span class="hl-identifier">JSON</span><span class="hl-code">.</span><span class="hl-identifier">parse</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"ejemplo", "alexa":10000, "site":"www.example.com" }</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
 </div>
 <blockquote>
@@ -274,7 +274,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">demo</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-var obj = JSON.parse('{ "name":"runoob", "alexa":10000, "site":"www.runoob.com" }');
+var obj = JSON.parse('{ "name":"ejemplo", "alexa":10000, "site":"www.example.com" }');
 document.getElementById("demo").innerHTML = obj.name + "：" + obj.site;
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></div>
 </div>
@@ -327,7 +327,7 @@ document.getElementById("demo").innerHTML = obj.name + "：" + obj.site;
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Runoob", "initDate":"2013-12-14", "site":"www.runoob.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
+<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Ejemplo", "initDate":"2013-12-14", "site":"www.example.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">obj</span><span class="hl-code"> = </span><span class="hl-identifier">JSON</span><span class="hl-code">.</span><span class="hl-identifier">parse</span><span class="hl-brackets">(</span><span class="hl-identifier">text</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-identifier">obj</span><span class="hl-code">.</span><span class="hl-identifier">initDate</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-builtin">Date</span><span class="hl-brackets">(</span><span class="hl-identifier">obj</span><span class="hl-code">.</span><span class="hl-identifier">initDate</span><span class="hl-brackets">)</span><span class="hl-code">;
  
@@ -339,7 +339,7 @@ document.getElementById("demo").innerHTML = obj.name + "：" + obj.site;
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Runoob", "initDate":"2013-12-14", "site":"www.runoob.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
+<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Ejemplo", "initDate":"2013-12-14", "site":"www.example.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">obj</span><span class="hl-code"> = </span><span class="hl-identifier">JSON</span><span class="hl-code">.</span><span class="hl-identifier">parse</span><span class="hl-brackets">(</span><span class="hl-identifier">text</span><span class="hl-code">, </span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-identifier">key</span><span class="hl-code">, </span><span class="hl-identifier">value</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-identifier">key</span><span class="hl-code"> == </span><span class="hl-quotes">"</span><span class="hl-string">initDate</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-builtin">Date</span><span class="hl-brackets">(</span><span class="hl-identifier">value</span><span class="hl-brackets">)</span><span class="hl-code">;
@@ -357,7 +357,7 @@ document.getElementById("demo").innerHTML = obj.name + "：" + obj.site;
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Runoob", "alexa":"function () {return 10000;}", "site":"www.runoob.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
+<div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">text</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">{ "name":"Ejemplo", "alexa":"function () {return 10000;}", "site":"www.example.com"}</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">obj</span><span class="hl-code"> = </span><span class="hl-identifier">JSON</span><span class="hl-code">.</span><span class="hl-identifier">parse</span><span class="hl-brackets">(</span><span class="hl-identifier">text</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-identifier">obj</span><span class="hl-code">.</span><span class="hl-identifier">alexa</span><span class="hl-code"> = </span><span class="hl-identifier">eval</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">(</span><span class="hl-quotes">"</span><span class="hl-code"> + </span><span class="hl-identifier">obj</span><span class="hl-code">.</span><span class="hl-identifier">alexa</span><span class="hl-code"> + </span><span class="hl-quotes">"</span><span class="hl-string">)</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
  

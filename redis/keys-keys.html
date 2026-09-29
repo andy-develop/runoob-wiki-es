@@ -295,26 +295,26 @@ redis 127.0.0.1:6379&gt; KEYS PATTERN
 <h3>Ejemplo</h3>
 <p>Primero, crea algunas claves (keys) y asígnales los valores correspondientes:</p>
 <pre>
-redis 127.0.0.1:6379&gt; SET runoob1 redis
+redis 127.0.0.1:6379&gt; SET ejemplo1 redis
 OK
-redis 127.0.0.1:6379&gt; SET runoob2 mysql
+redis 127.0.0.1:6379&gt; SET ejemplo2 mysql
 OK
-redis 127.0.0.1:6379&gt; SET runoob3 mongodb
+redis 127.0.0.1:6379&gt; SET ejemplo3 mongodb
 OK
 </pre>
-<p>Busca las claves que comiencen con runoob:</p>
+<p>Busca las claves que comiencen con ejemplo:</p>
 <pre>
-redis 127.0.0.1:6379&gt; KEYS runoob*
-1) "runoob3"
-2) "runoob1"
-3) "runoob2"
+redis 127.0.0.1:6379&gt; KEYS ejemplo*
+1) "ejemplo3"
+2) "ejemplo1"
+3) "ejemplo2"
 </pre>
 <p>Para obtener todas las claves de Redis, puedes usar:<b>*</b>。</p>
 <pre>
 redis 127.0.0.1:6379&gt; KEYS *
-1) "runoob3"
-2) "runoob1"
-3) "runoob2"
+1) "ejemplo3"
+2) "ejemplo1"
+3) "ejemplo2"
 </pre>
 <p>
 <a href="redis-keys.html" target="_top" title="Redis key(键)"> <img class="navup" decoding="async" src="../images/up.gif"/>Redis key (clave)</a></p>

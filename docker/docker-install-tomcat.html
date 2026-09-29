@@ -279,7 +279,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puede ver otras versiones de tomcat mediante Sort by; por defecto es la última versión.<strong>tomcat:latest</strong>。</p>
 <p>Además, también podemos usar en la consola<span class="marked">docker search tomcat</span>el comando para ver las versiones disponibles:</p>
 <pre>
-runoob@runoob:~/tomcat$ docker search tomcat
+ejemplo@ejemplo:~/tomcat$ docker search tomcat
 NAME                       DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 tomcat                     Apache Tomcat is an open source implementa...   744       [OK]       
 dordoka/tomcat             Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 ba...   19                   [OK]
@@ -293,16 +293,16 @@ fbrx/tomcat                Minimal Tomcat image based on Alpine Linux      2    
 jtech/tomcat               Latest Tomcat production distribution on l...   1                    [OK]
 </pre>
 <p>Aquí extraemos la imagen oficial:</p>
-<pre>runoob@runoob:~/tomcat$ docker pull tomcat</pre>
+<pre>ejemplo@ejemplo:~/tomcat$ docker pull tomcat</pre>
 <p>Una vez completada la descarga, podemos ver la imagen con REPOSITORY tomcat en la lista de imágenes locales.</p>
 <pre>
-runoob@runoob:~/tomcat$ docker images|grep tomcat
+ejemplo@ejemplo:~/tomcat$ docker images|grep tomcat
 tomcat              latest              70f819d3d2d9        7 days ago          335.8 MB
 </pre>
 <h3>Método 2: Construir mediante Dockerfile</h3>
 <p>Crear Dockerfile</p>
 <p>Primero, cree el directorio tomcat para almacenar los elementos relacionados posteriores.</p>
-<pre>runoob@runoob:~$ mkdir -p ~/tomcat/webapps ~/tomcat/logs ~/tomcat/conf</pre>
+<pre>ejemplo@ejemplo:~$ mkdir -p ~/tomcat/webapps ~/tomcat/logs ~/tomcat/conf</pre>
 <p>El directorio webapps se mapeará al directorio de aplicaciones configurado por el contenedor tomcat.</p>
 <p>El directorio logs se mapeará al directorio de registros del contenedor tomcat.</p>
 <p>Los archivos de configuración en el directorio conf se mapearán a los archivos de configuración del contenedor tomcat.</p>
@@ -471,26 +471,26 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 </pre>
 <p>Cree una imagen mediante Dockerfile y reemplácela con su propio nombre:</p>
-<pre>runoob@runoob:~/tomcat$ docker build -t tomcat .</pre>
+<pre>ejemplo@ejemplo:~/tomcat$ docker build -t tomcat .</pre>
 <p>Una vez completada la creación, podemos encontrar la imagen recién creada en la lista de imágenes locales:</p>
 <pre>
-runoob@runoob:~/tomcat$ docker images|grep tomcat
+ejemplo@ejemplo:~/tomcat$ docker images|grep tomcat
 tomcat              latest              70f819d3d2d9        7 days ago          335.8 MB
 </pre>
 <hr/>
 <h2>Usar la imagen de tomcat</h2>
 <h3>Ejecutar el contenedor</h3>
 <pre>
-runoob@runoob:~/tomcat$ docker run --name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat  
+ejemplo@ejemplo:~/tomcat$ docker run --name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat  
 acb33fcb4beb8d7f1ebace6f50f5fc204b1dbe9d524881267aa715c61cf75320
-runoob@runoob:~/tomcat$
+ejemplo@ejemplo:~/tomcat$
 </pre>
 <p>Explicación del comando:</p>
 <p><strong>-p 8080:8080：</strong>Mapea el puerto 8080 del host al puerto 8080 del contenedor.</p>
 <p><strong>-v $PWD/test:/usr/local/tomcat/webapps/test：</strong>Monta el directorio test del directorio actual del host en /test del contenedor.</p>
 <p>Ver el estado de inicio del contenedor</p>
 <pre>
-runoob@runoob:~/tomcat$ docker ps 
+ejemplo@ejemplo:~/tomcat$ docker ps 
 CONTAINER ID    IMAGE     COMMAND               ... PORTS                    NAMES
 acb33fcb4beb    tomcat    "catalina.sh run"     ... 0.0.0.0:8080-&gt;8080/tcp   tomcat
 </pre>

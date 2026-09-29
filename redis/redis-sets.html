@@ -282,21 +282,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En Redis, los conjuntos se implementan mediante tablas hash, por lo que la complejidad de agregar, eliminar y buscar es O(1).</p><p>El número máximo de miembros en un conjunto es 2^32<sup>32</sup>- 1 (4294967295, cada conjunto puede almacenar más de 4 mil millones de miembros).</p>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; SADD runoobkey redis
+redis 127.0.0.1:6379&gt; SADD ejemplokey redis
 (integer) 1
-redis 127.0.0.1:6379&gt; SADD runoobkey mongodb
+redis 127.0.0.1:6379&gt; SADD ejemplokey mongodb
 (integer) 1
-redis 127.0.0.1:6379&gt; SADD runoobkey mysql
+redis 127.0.0.1:6379&gt; SADD ejemplokey mysql
 (integer) 1
-redis 127.0.0.1:6379&gt; SADD runoobkey mysql
+redis 127.0.0.1:6379&gt; SADD ejemplokey mysql
 (integer) 0
-redis 127.0.0.1:6379&gt; SMEMBERS runoobkey
+redis 127.0.0.1:6379&gt; SMEMBERS ejemplokey
 
 1) "mysql"
 2) "mongodb"
 3) "redis"
 </pre>
-<p>En el ejemplo anterior, mediante el<b>SADD</b>comando, al conjunto llamado<strong>runoobkey</strong>se le insertaron tres elementos.</p>
+<p>En el ejemplo anterior, mediante el<b>SADD</b>comando, al conjunto llamado<strong>ejemplokey</strong>se le insertaron tres elementos.</p>
 <hr/>
 <h2>Comandos de conjuntos Redis</h2>
 <p>La siguiente tabla enumera los comandos básicos de los conjuntos Redis:</p>

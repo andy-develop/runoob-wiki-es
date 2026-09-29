@@ -331,13 +331,13 @@ CREATE SCHEMA myschema (
     ...
 );</pre><p>La sentencia anterior creará una tabla llamada mytable en el esquema myschema, y definirá una serie de columnas con sus tipos de datos.</p><p>Tenga en cuenta que datatype1, datatype2, etc., deben reemplazarse por tipos de datos reales, por ejemplo integer, varchar(255), etc.</p>
 <h3>Ejemplo</h3>
-<p>A continuación nos conectamos a runoobdb para crear el esquema myschema:</p>
-<pre>runoobdb=# create schema myschema;
+<p>A continuación nos conectamos a ejemplodb para crear el esquema myschema:</p>
+<pre>ejemplodb=# create schema myschema;
 CREATE SCHEMA
 </pre>
 <p>El resultado "CREATE SCHEMA" indica que el esquema se creó correctamente.</p>
 <p>A continuación creamos una tabla:</p>
-<pre>runoobdb=# create table myschema.company(
+<pre>ejemplodb=# create table myschema.company(
    ID   INT              NOT NULL,
    NAME VARCHAR (20)     NOT NULL,
    AGE  INT              NOT NULL,
@@ -346,7 +346,7 @@ CREATE SCHEMA
    PRIMARY KEY (ID)
 );</pre>
 <p>El comando anterior creó una tabla vacía. Usamos el siguiente SQL para verificar si la tabla se creó:</p>
-<pre>runoobdb=# select * from myschema.company;
+<pre>ejemplodb=# select * from myschema.company;
  id | name | age | address | salary 
 ----+------+-----+---------+--------
 (0 rows)</pre>

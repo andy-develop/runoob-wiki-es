@@ -321,18 +321,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 
-test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Regresión visual de la página de inicio de RUNOOB'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Regresión visual de la página de inicio de EJEMPLO'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Primera ejecución: guardar la captura de referencia</span><br/>
   <span style="color: #006600; font-style: italic;">// Ejecuciones posteriores: comparar con la captura de referencia</span><br/>
-  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveScreenshot</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob-homepage.png'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveScreenshot</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo-homepage.png'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <p>En la primera ejecución, Playwright mostrará un error y generará la captura de referencia:</p>
 <pre>
-Error: A snapshot doesn't exist at runoob-homepage-chromium-darwin.png,
+Error: A snapshot doesn't exist at ejemplo-homepage-chromium-darwin.png,
 writing actual.
 </pre>
 <p>En la segunda ejecución, se comparará automáticamente con la captura de referencia.</p>
@@ -360,7 +360,7 @@ await expect<span style="color: #009900;">(</span>page<span style="color: #00990
 <div class="example_code">
 
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Regresión visual de la barra de navegación'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Comparar solo la captura de pantalla de la barra de navegación</span><br/>
   <span style="color: #000066; font-weight: bold;">const</span> navbar <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'navigation'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -376,7 +376,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Regresi
 tests/
 ├── example.spec.ts
 └── example.spec.ts-snapshots/
-    └── runoob-homepage-chromium-darwin.png
+    └── ejemplo-homepage-chromium-darwin.png
 </pre>
 <p>El nombre del archivo incluye el nombre del navegador y el sistema operativo, lo que garantiza que las referencias de diferentes plataformas se gestionen de forma independiente.</p>
 <h3>Actualizar Golden File</h3>

@@ -274,20 +274,20 @@ delete key [noreply]
 <li><b>noreply (opcional)</b>: Este parámetro le indica al servidor que no necesita devolver datos.</li>
 </ul>
 <h3>Ejemplo</h3>
-<p>En el siguiente ejemplo, usamos runoob como key y configuramos el tiempo de expiración en 900 segundos. Luego usamos el comando delete para eliminar esa key.</p>
+<p>En el siguiente ejemplo, usamos ejemplo como key y configuramos el tiempo de expiración en 900 segundos. Luego usamos el comando delete para eliminar esa key.</p>
 <pre>
-set runoob 0 900 9
+set ejemplo 0 900 9
 memcached
 STORED
-get runoob
-VALUE runoob 0 9
+get ejemplo
+VALUE ejemplo 0 9
 memcached
 END
-delete runoob
+delete ejemplo
 DELETED
-get runoob
+get ejemplo
 END
-delete runoob
+delete ejemplo
 NOT_FOUND
 </pre>
 <h3>Salida</h3>

@@ -322,7 +322,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>
 &lt;%@ page contentType="text/html;charset=UTF-8" %&gt;
 &lt;%
-out.print("菜鸟教程 : http://www.runoob.com");
+out.print("Ejemplo : http://www.example.com");
 %&gt; 
 </pre>
 <p>Luego, accede a la dirección en el navegador<b>http://localhost:8080/test.jsp</b>y el resultado es el siguiente:</p>
@@ -377,7 +377,7 @@ out.print("菜鸟教程 : http://www.runoob.com");
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
-&lt;title&gt;菜鸟教程&lt;/title&gt;
+&lt;title&gt;Ejemplo&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;%
@@ -399,12 +399,12 @@ out.print("菜鸟教程 : http://www.runoob.com");
 <h2>Creación de un ejemplo de Servlet</h2>
 <p>También podemos usar el entorno anterior para crear un archivo Servlet. Selecciona 'File --&gt; New --&gt; Servlet':</p><p>
 <img decoding="async" src="../wp-content/uploads/2016/01/sns.png"/></p>
-<p>En el directorio /TomcatTest/src del proyecto TomcatTest, crea la clase 'HelloServlet', con el paquete 'com.runoob.test':</p>
+<p>En el directorio /TomcatTest/src del proyecto TomcatTest, crea la clase 'HelloServlet', con el paquete 'com.ejemplo.test':</p>
 <p>
 <img decoding="async" src="../wp-content/uploads/2016/01/22D8CED0-F2DD-4554-BFBD-2B19D1685FB9.jpg"/></p>
 <p>El código de HelloServlet.java es el siguiente:</p>
 <pre>
-package com.runoob.test;
+package com.ejemplo.test;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -434,7 +434,7 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 使用 GBK 设置中文正常显示
         response.setCharacterEncoding("GBK");
-        response.getWriter().write("菜鸟教程：http://www.runoob.com");
+        response.getWriter().write("Ejemplo：http://www.example.com");
     }
 
     /**
@@ -459,7 +459,7 @@ public class HelloServlet extends HttpServlet {
      &lt;!-- 类名 --&gt;  
     &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;  
     &lt;!-- 所在的包 --&gt;  
-    &lt;servlet-class&gt;com.runoob.test.HelloServlet&lt;/servlet-class&gt;  
+    &lt;servlet-class&gt;com.ejemplo.test.HelloServlet&lt;/servlet-class&gt;  
   &lt;/servlet&gt;  
   &lt;servlet-mapping&gt;  
     &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;  

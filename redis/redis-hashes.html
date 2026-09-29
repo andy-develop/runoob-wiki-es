@@ -281,9 +281,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Redis hash es una tabla de mapeo de campos (field) y valores (value) de tipo string. El hash es especialmente adecuado para almacenar objetos.</p>
 <p>Cada hash en Redis puede almacenar 2<sup>32</sup>- 1 pares clave-valor (más de 4 mil millones).<h3>Ejemplo</h3>
 <pre>
-127.0.0.1:6379&gt;  HMSET runoobkey name "redis tutorial" description "redis basic commands for caching" likes 20 visitors 23000
+127.0.0.1:6379&gt;  HMSET ejemplokey name "redis tutorial" description "redis basic commands for caching" likes 20 visitors 23000
 OK
-127.0.0.1:6379&gt;  HGETALL runoobkey
+127.0.0.1:6379&gt;  HGETALL ejemplokey
 1) "name"
 2) "redis tutorial"
 3) "description"
@@ -293,7 +293,7 @@ OK
 7) "visitors"
 8) "23000"
 </pre>
-<p>En el ejemplo anterior, configuramos cierta información de descripción de redis (name, description, likes, visitors) en la tabla hash<strong>runoobkey</strong>.</p>
+<p>En el ejemplo anterior, configuramos cierta información de descripción de redis (name, description, likes, visitors) en la tabla hash<strong>ejemplokey</strong>.</p>
 <hr/>
 <h2>Comandos de Redis hash</h2>
 <p>La siguiente tabla enumera los comandos básicos relacionados con redis hash:</p>

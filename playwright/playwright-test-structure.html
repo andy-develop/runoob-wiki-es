@@ -321,15 +321,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #FF0000;">import</span> <span style="color: #009900;">{</span> test<span style="color: #339933;">,</span> expect <span style="color: #009900;">}</span> from <span style="color: #3366CC;">'@playwright/test'</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Primer nivel de agrupación</span><br/>
-test.<span style="color: #660066;">describe</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Prueba de la página de inicio de RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
+test.<span style="color: #660066;">describe</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Prueba de la página de inicio de EJEMPLO'</span><span style="color: #339933;">,</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
 <br/>
   test<span style="color: #009900;">(</span><span style="color: #3366CC;">'El título de la página es correcto'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-    await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   test<span style="color: #009900;">(</span><span style="color: #3366CC;">'La barra de navegación existe'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #006600; font-style: italic;">// Verifica que el elemento de navegación existe</span><br/>
     await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nav'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -339,7 +339,7 @@ test.<span style="color: #660066;">describe</span><span style="color: #009900;">
 test.<span style="color: #660066;">describe</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Prueba de la función de búsqueda'</span><span style="color: #339933;">,</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
 <br/>
   test<span style="color: #009900;">(</span><span style="color: #3366CC;">'El cuadro de búsqueda es visible'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+    await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     await expect<span style="color: #009900;">(</span><br/>
       page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Buscar'</span><span style="color: #009900;">)</span><br/>
     <span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -386,7 +386,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Saltar 
   test.<span style="color: #660066;">skip</span><span style="color: #009900;">(</span>browserName <span style="color: #339933;">===</span> <span style="color: #3366CC;">'firefox'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'Firefox no admite esta funcionalidad por ahora'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// La lógica de la prueba solo se ejecuta en navegadores que no sean Firefox</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
@@ -398,7 +398,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Saltar 
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Marcado como fallo esperado (no se reportará como fallo de prueba)</span><br/>
 test.<span style="color: #660066;">fail</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Bug conocido: la función de búsqueda aún no está implementada'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #006600; font-style: italic;">// Esta aserción se espera que falle</span><br/>
   await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'.search-results'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -419,7 +419,7 @@ test.<span style="color: #660066;">fail</span><span style="color: #009900;">(</s
 <span style="color: #006600; font-style: italic;">// Durante el desarrollo/depuración, ejecutar solo la prueba actual</span><br/>
 test.<span style="color: #660066;">only</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Estoy depurando esta prueba'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Solo esta prueba se ejecutará</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Esta prueba será ignorada'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
@@ -468,7 +468,7 @@ test.<span style="color: #660066;">slow</span><span style="color: #009900;">(</s
 <br/>
 test.<span style="color: #660066;">beforeEach</span><span style="color: #009900;">(</span>async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Antes de cada prueba, navega a la misma página</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 test.<span style="color: #660066;">afterEach</span><span style="color: #009900;">(</span>async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
@@ -479,12 +479,12 @@ test.<span style="color: #660066;">afterEach</span><span style="color: #009900;"
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Primera prueba'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  <span style="color: #006600; font-style: italic;">// page ya está en la página de inicio de RUNOOB</span><br/>
-  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  <span style="color: #006600; font-style: italic;">// page ya está en la página de inicio de EJEMPLO</span><br/>
+  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Segunda prueba'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  <span style="color: #006600; font-style: italic;">// page también está ya en la página de inicio de RUNOOB</span><br/>
+  <span style="color: #006600; font-style: italic;">// page también está ya en la página de inicio de EJEMPLO</span><br/>
   <span style="color: #006600; font-style: italic;">// Este es un context completamente nuevo; las cookies/el almacenamiento de la prueba anterior no persisten</span><br/>
   await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nav'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>

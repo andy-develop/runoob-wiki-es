@@ -235,7 +235,7 @@ Resultado asíncrono: obtención de datos completada
   <span style="color: #999988; font-style: italic;">// Crear un Future</span><br/>
   Future<span style="font-weight: bold;">&lt;</span>String<span style="font-weight: bold;">&gt;</span> future <span style="font-weight: bold;">=</span> Future<span style="">(</span><span style="">(</span><span style="">)</span> <span style="">{</span><br/>
     <span style="color: #999988; font-style: italic;">// Esta función se ejecutará en algún momento futuro</span><br/>
-    <span style="font-weight: bold;">return</span> <span style="color: #d14;">'Resultado asíncrono de RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+    <span style="font-weight: bold;">return</span> <span style="color: #d14;">'Resultado asíncrono de EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   print<span style="">(</span><span style="color: #d14;">'Future se ha creado, pero aún no se ha completado'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -253,7 +253,7 @@ Resultado asíncrono: obtención de datos completada
 程序开始
 Future 已创建，但还没完成
 程序继续执行...
-收到结果: RUNOOB 异步结果
+收到结果: EJEMPLO 异步结果
 </pre>
 <p>Observa el orden de la salida: primero se imprime "El programa continúa ejecutándose" y luego "Resultado recibido".</p>
 <p>Esto indica que el callback de Future se ejecuta de forma asíncrona y no bloquea el código posterior.</p>
@@ -289,7 +289,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   <span style="font-weight: bold;">var</span> age <span style="font-weight: bold;">=</span> await fetchUserAge<span style="">(</span>id<span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Edad obtenida: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Usuario RUNOOB: $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Usuario EJEMPLO: $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #999988; font-style: italic;">// Ejecutar varias operaciones asíncronas de forma concurrente</span><br/>
@@ -305,7 +305,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   <span style="font-weight: bold;">var</span> name <span style="font-weight: bold;">=</span> results<span style="">[</span><span style="color: #009999;">0</span><span style="">]</span> <span style="font-weight: bold;">as</span> String<span style="font-weight: bold;">;</span><br/>
   <span style="font-weight: bold;">var</span> age <span style="font-weight: bold;">=</span> results<span style="">[</span><span style="color: #009999;">1</span><span style="">]</span> <span style="font-weight: bold;">as</span> <span style="color: #445588; font-weight: bold;">int</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Usuario RUNOOB (concurrente): $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Usuario EJEMPLO (concurrente): $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> async <span style="">{</span><br/>
@@ -323,10 +323,10 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 开始获取用户信息...
 获取到名称: 用户1
 获取到年龄: 21
-RUNOOB 用户: 用户1, 年龄: 21
+EJEMPLO 用户: 用户1, 年龄: 21
 ---
 开始并发获取用户信息...
-RUNOOB 用户(并发): 用户2, 年龄: 22
+EJEMPLO 用户(并发): 用户2, 年龄: 22
 </pre>
 <blockquote><p>Si varias operaciones asíncronas no tienen dependencias entre sí, se debe usar Future.wait para que se ejecuten de forma concurrente en lugar de usar await una por una. Esto mejora significativamente el rendimiento: el tiempo total es igual al de la operación más lenta, no a la suma de todas las operaciones.</p></blockquote>
 <h3>Reglas fundamentales de async/await</h3>
@@ -358,7 +358,7 @@ Future<span style="font-weight: bold;">&lt;</span>String<span style="font-weight
   print<span style="">(</span><span style="color: #d14;">'Comenzando la solicitud...'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Llamadas en cadena con then / catchError</span><br/>
-  fetchData<span style="">(</span><span style="color: #d14;">'https://runoob.com/api'</span><span style="">)</span><br/>
+  fetchData<span style="">(</span><span style="color: #d14;">'https://example.com/api'</span><span style="">)</span><br/>
       .<span style="color: #006633;">then</span><span style="">(</span><span style="">(</span>data<span style="">)</span> <span style="">{</span><br/>
         <span style="color: #999988; font-style: italic;">// Solicitud exitosa</span><br/>
         print<span style="">(</span><span style="color: #d14;">'Datos obtenidos: $data'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -384,8 +384,8 @@ Future<span style="font-weight: bold;">&lt;</span>String<span style="font-weight
 <pre>
 开始请求...
 请求已发出，程序继续...
-获取到数据: 来自 https://runoob.com/api 的数据
-处理后的: 来自 https://runoob.com/api 的数据
+获取到数据: 来自 https://example.com/api 的数据
+处理后的: 来自 https://example.com/api 的数据
 请求结束（无论成功或失败）
 </pre>
 <h3>async/await vs then/catchError: ¿cómo elegir?</h3>

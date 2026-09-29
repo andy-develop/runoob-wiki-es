@@ -331,7 +331,7 @@ $ git branch
 <pre>
 $ ls
 README
-$ echo 'runoob.com' &gt; test.txt
+$ echo 'example.com' &gt; test.txt
 $ git add .
 $ git commit -m 'add test.txt'
 [master 3e92c19] add test.txt
@@ -359,22 +359,22 @@ $ git rm test.txt
 rm 'test.txt'
 $ ls
 README
-$ touch runoob.php
+$ touch ejemplo.php
 $ git add .
-$ git commit -am 'removed test.txt、add runoob.php'
-[newtest c1501a2] removed test.txt、add runoob.php
+$ git commit -am 'removed test.txt、add ejemplo.php'
+[newtest c1501a2] removed test.txt、add ejemplo.php
  2 files changed, 1 deletion(-)
- create mode 100644 runoob.php
+ create mode 100644 ejemplo.php
  delete mode 100644 test.txt
 $ ls
-README        runoob.php
+README        ejemplo.php
 $ git checkout master
 Switched to branch 'master'
 $ ls
 README        test.txt
 
 </pre>
-<p>Como puedes ver, creamos una rama, eliminamos algunos archivos test.txt en ella y agregamos el archivo runoob.php; luego volvimos a nuestra rama principal, el archivo test.txt eliminado reapareció y el nuevo runoob.php no existe en la rama principal.</p><p>Usar ramas divide el trabajo, lo que nos permite trabajar en diferentes entornos de desarrollo y alternar entre ellos.</p>
+<p>Como puedes ver, creamos una rama, eliminamos algunos archivos test.txt en ella y agregamos el archivo ejemplo.php; luego volvimos a nuestra rama principal, el archivo test.txt eliminado reapareció y el nuevo ejemplo.php no existe en la rama principal.</p><p>Usar ramas divide el trabajo, lo que nos permite trabajar en diferentes entornos de desarrollo y alternar entre ellos.</p>
 <h3>Eliminar ramas</h3>
 <p>Comando para eliminar ramas:</p>
 <pre>git branch -d (branchname)</pre>
@@ -401,13 +401,13 @@ README        test.txt
 $ git merge newtest
 Updating 3e92c19..c1501a2
 Fast-forward
- runoob.php | 0
+ ejemplo.php | 0
  test.txt   | 1 -
  2 files changed, 1 deletion(-)
- create mode 100644 runoob.php
+ create mode 100644 ejemplo.php
  delete mode 100644 test.txt
 $ ls
-README        runoob.php
+README        ejemplo.php
 
 </pre>
 <p>En el ejemplo anterior fusionamos la rama newtest en la rama principal y el archivo test.txt fue eliminado.</p>
@@ -422,41 +422,41 @@ Deleted branch newtest (was c1501a2).</pre>
 <pre>
 $ git branch
 * master
-$ cat runoob.php
+$ cat ejemplo.php
 </pre>
-<p><strong>Nota:</strong>Si no existe runoob.php, primero debes crear este archivo; el comando puede ser<span class="marked">touch runoob.php</span>。</p>
-<p>Primero, creamos una rama llamada change_site, cambiamos a ella y modificamos el contenido de runoob.php a:</p>
+<p><strong>Nota:</strong>Si no existe ejemplo.php, primero debes crear este archivo; el comando puede ser<span class="marked">touch ejemplo.php</span>。</p>
+<p>Primero, creamos una rama llamada change_site, cambiamos a ella y modificamos el contenido de ejemplo.php a:</p>
 <pre>&lt;?php
-echo 'runoob';
+echo 'ejemplo';
 ?&gt;</pre>
 <p>Crear la rama change_site:</p>
 <pre>
 $ git checkout -b change_site
 Switched to a new branch 'change_site'
-$ vim runoob.php
-$ head -3 runoob.php
+$ vim ejemplo.php
+$ head -3 ejemplo.php
 &lt;?php
-echo 'runoob';
+echo 'ejemplo';
 ?&gt;
-$ git commit -am 'changed the runoob.php'
-[change_site 7774248] changed the runoob.php
+$ git commit -am 'changed the ejemplo.php'
+[change_site 7774248] changed the ejemplo.php
  1 file changed, 3 insertions(+)
  </pre><p>Puedes consultar las operaciones del comando vim en:<a href="../linux/linux-vim.html" target="_blank">Linux vi/vim</a>。</p>
-<p>Confirma los cambios en la rama change_site. Ahora, si cambiamos de nuevo a la rama master, podemos ver que el contenido se restauró al estado anterior a nuestra modificación (archivo vacío, sin código); modificamos nuevamente el archivo runoob.php.</p>
+<p>Confirma los cambios en la rama change_site. Ahora, si cambiamos de nuevo a la rama master, podemos ver que el contenido se restauró al estado anterior a nuestra modificación (archivo vacío, sin código); modificamos nuevamente el archivo ejemplo.php.</p>
 <pre>
 $ git checkout master
 Switched to branch 'master'
-$ cat runoob.php
-$ vim runoob.php    # 修改内容如下
-$ cat runoob.php
+$ cat ejemplo.php
+$ vim ejemplo.php    # 修改内容如下
+$ cat ejemplo.php
 &lt;?php
 echo 1;
 ?&gt;
 $ git diff
-diff --git a/runoob.php b/runoob.php
+diff --git a/ejemplo.php b/ejemplo.php
 index e69de29..ac60739 100644
---- a/runoob.php
-+++ b/runoob.php
+--- a/ejemplo.php
++++ b/ejemplo.php
 @@ -0,0 +1,3 @@
 +&lt;?php
 +echo 1;
@@ -468,45 +468,45 @@ $ git commit -am '修改代码'
 <p>Ahora estos cambios están registrados en mi rama "master". A continuación fusionamos la rama "change_site".</p>
 <pre>
 $ git merge change_site
-Auto-merging runoob.php
-CONFLICT (content): Merge conflict in runoob.php
+Auto-merging ejemplo.php
+CONFLICT (content): Merge conflict in ejemplo.php
 Automatic merge failed; fix conflicts and then commit the result.
 
-$ cat runoob.php     # 打开文件，看到冲突内容
+$ cat ejemplo.php     # 打开文件，看到冲突内容
 &lt;?php
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 echo 1;
 =======
-echo 'runoob';
+echo 'ejemplo';
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site
 ?&gt;
 </pre>
 <p>Fusionamos la rama anterior en la rama master; aparece un conflicto de fusión y a continuación debemos resolverlo manualmente.</p>
 <pre>
-$ vim runoob.php 
-$ cat runoob.php
+$ vim ejemplo.php 
+$ cat ejemplo.php
 &lt;?php
 echo 1;
-echo 'runoob';
+echo 'ejemplo';
 ?&gt;
 $ git diff
-diff --cc runoob.php
+diff --cc ejemplo.php
 index ac60739,b63d7d7..0000000
---- a/runoob.php
-+++ b/runoob.php
+--- a/ejemplo.php
++++ b/ejemplo.php
 @@@ -1,3 -1,3 +1,4 @@@
   &lt;?php
  +echo 1;
-+ echo 'runoob';
++ echo 'ejemplo';
   ?&gt;
 </pre>
 <p>En Git, podemos usar git add para indicar a Git que el conflicto del archivo se ha resuelto.</p>
 <pre>
 $ git status -s
-UU runoob.php
-$ git add runoob.php
+UU ejemplo.php
+$ git add ejemplo.php
 $ git status -s
-M  runoob.php
+M  ejemplo.php
 $ git commit
 [master 88afe0e] Merge branch 'change_site'
 </pre>

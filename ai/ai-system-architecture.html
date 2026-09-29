@@ -409,7 +409,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #3366CC;">"min_loss_scale"</span><span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><br/>
   <span style="color: #009900;">}</span><span style="color: #339933;">,</span><br/>
   <span style="color: #3366CC;">"checkpoint"</span><span style="color: #339933;">:</span> <span style="color: #009900;">{</span><br/>
-    <span style="color: #3366CC;">"tag"</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">"runoob-checkpoint"</span><span style="color: #339933;">,</span><br/>
+    <span style="color: #3366CC;">"tag"</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">"ejemplo-checkpoint"</span><span style="color: #339933;">,</span><br/>
     <span style="color: #3366CC;">"load_universal"</span><span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><br/>
   <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
@@ -470,7 +470,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> generate_shingles<span style="color: Olive;">(</span>text: <span style="color: Teal;">str</span><span style="color: Gray;">,</span> k: <span style="color: Teal;">int</span> <span style="color: Gray;">=</span> <span style="color: Maroon;">5</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> Set<span style="color: Olive;">[</span><span style="color: Teal;">str</span><span style="color: Olive;">]</span>:<br/>
-    <span style="color: #a11;">"""Generar k-shingles: secuencias de k palabras consecutivas<br/>Por ejemplo "我爱你 runoob 教程", k=2 → {"我爱", "爱 runoob", "runoob 教程"}<br/>
+    <span style="color: #a11;">"""Generar k-shingles: secuencias de k palabras consecutivas<br/>Por ejemplo "我爱你 ejemplo 教程", k=2 → {"我爱", "爱 ejemplo", "ejemplo 教程"}<br/>
     """</span><br/>
     <span style="color: #a50"># Segmentación simple (en escenarios reales se puede usar una herramienta de segmentación profesional)</span><br/>
     words <span style="color: Gray;">=</span> <span style="color: #05a;">re</span>.<span style="color: #05a;">findall</span><span style="color: Olive;">(</span>r<span style="color: #a11;">'<span style="color: #000099; font-weight: bold;">\w</span>+'</span><span style="color: Gray;">,</span> text.<span style="color: #05a;">lower</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
@@ -560,12 +560,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <br/>
 <span style="color: #a50"># ============================================</span><br/>
-<span style="color: #a50"># Probar deduplicación de datos runoob</span><br/>
+<span style="color: #a50"># Probar deduplicación de datos ejemplo</span><br/>
 <span style="color: #a50"># ============================================</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     documents <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-        <span style="color: #a11;">"Bienvenido al tutorial de runoob, este es un buen lugar para aprender programación."</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"Bienvenido al tutorial de runoob, este es un buen lugar para aprender programación."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Altamente similares</span><br/>
+        <span style="color: #a11;">"Bienvenido al tutorial de ejemplo, este es un buen lugar para aprender programación."</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"Bienvenido al tutorial de ejemplo, este es un buen lugar para aprender programación."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Altamente similares</span><br/>
         <span style="color: #a11;">"Python es un lenguaje conciso y elegante, adecuado para principiantes."</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"Python es un lenguaje de programación conciso y elegante, muy adecuado para principiantes."</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Altamente similares</span><br/>
         <span style="color: #a11;">"El aprendizaje automático permite que las computadoras aprendan patrones a partir de los datos."</span><span style="color: Gray;">,</span><br/>

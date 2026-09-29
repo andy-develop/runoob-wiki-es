@@ -383,63 +383,63 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tbody></table>
 <h3>Ejemplo</h3>
 <pre>
-runoobdb=# select 2+3;
+ejemplodb=# select 2+3;
  ?column?
 ----------
         5
 (1 row)
 
 
-runoobdb=# select 2*3;
+ejemplodb=# select 2*3;
  ?column?
 ----------
         6
 (1 row)
 
 
-runoobdb=# select 10/5;
+ejemplodb=# select 10/5;
  ?column?
 ----------
         2
 (1 row)
 
 
-runoobdb=# select 12%5;
+ejemplodb=# select 12%5;
  ?column?
 ----------
         2
 (1 row)
 
 
-runoobdb=# select 2^3;
+ejemplodb=# select 2^3;
  ?column?
 ----------
         8
 (1 row)
 
 
-runoobdb=# select |/ 25.0;
+ejemplodb=# select |/ 25.0;
  ?column?
 ----------
         5
 (1 row)
 
 
-runoobdb=# select ||/ 27.0;
+ejemplodb=# select ||/ 27.0;
  ?column?
 ----------
         3
 (1 row)
 
 
-runoobdb=# select 5 !;
+ejemplodb=# select 5 !;
  ?column?
 ----------
       120
 (1 row)
 
 
-runoobdb=# select !!5;
+ejemplodb=# select !!5;
  ?column?
 ----------
       120
@@ -492,7 +492,7 @@ runoobdb=# select !!5;
 </tbody></table>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con el siguiente contenido de datos:</p>
-<pre>runoobdb=# select * from COMPANY;
+<pre>ejemplodb=# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -504,21 +504,21 @@ runoobdb=# select !!5;
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>Leer los datos donde el campo SALARY sea mayor que 50000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE SALARY &gt; 50000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE SALARY &gt; 50000;
  id | name  | age |address    | salary
 ----+-------+-----+-----------+--------
   4 | Mark  |  25 | Rich-Mond |  65000
   5 | David |  27 | Texas     |  85000
 (2 rows)</pre>
 <p>Leer los datos donde el campo SALARY sea igual a 20000:</p>
-<pre>runoobdb=#  SELECT * FROM COMPANY WHERE SALARY = 20000;
+<pre>ejemplodb=#  SELECT * FROM COMPANY WHERE SALARY = 20000;
  id | name  | age |  address    | salary
  ----+-------+-----+-------------+--------
    1 | Paul  |  32 | California  |  20000
    3 | Teddy |  23 | Norway      |  20000
 (2 rows)</pre>
 <p>Leer los datos donde el campo SALARY no sea igual a 20000:</p>
-<pre>runoobdb=#  SELECT * FROM COMPANY WHERE SALARY != 20000;
+<pre>ejemplodb=#  SELECT * FROM COMPANY WHERE SALARY != 20000;
  id | name  | age |  address    | salary
 ----+-------+-----+-------------+--------
   2 | Allen |  25 | Texas       |  15000
@@ -528,7 +528,7 @@ runoobdb=# select !!5;
   7 | James |  24 | Houston     |  10000
 (5 rows)
 
-runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
+ejemplodb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   2 | Allen |  25 | Texas      |  15000
@@ -538,7 +538,7 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
   7 | James |  24 | Houston    |  10000
 (5 rows)</pre>
 <p>Leer los datos donde el campo SALARY sea mayor o igual a 65000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE SALARY &gt;= 65000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE SALARY &gt;= 65000;
  id | name  | age |  address  | salary
 ----+-------+-----+-----------+--------
   4 | Mark  |  25 | Rich-Mond |  65000
@@ -578,7 +578,7 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
 <table class="reference"><thead><tr><th><em class="replaceable"><code>a</code></em></th><th>NOT <em class="replaceable"><code>a</code></em></th></tr></thead><tbody><tr><td>TRUE</td><td>FALSE</td></tr><tr><td>FALSE</td><td>TRUE</td></tr><tr><td>NULL</td><td>NULL</td></tr></tbody></table>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con el siguiente contenido de datos:</p>
-<pre>runoobdb=# select * from COMPANY;
+<pre>ejemplodb=# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -590,7 +590,7 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>Leer los datos donde el campo AGE sea mayor o igual a 25 y el campo SALARY sea mayor o igual a 6500:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 6500;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 6500;
  id | name  | age |                      address                  | salary
 ----+-------+-----+-----------------------------------------------+--------
   1 | Paul  |  32 | California                                    |  20000
@@ -599,7 +599,7 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
   5 | David |  27 | Texas                                         |  85000
 (4 rows)</pre>
 <p>Leer los datos donde el campo AGE sea mayor o igual a 25 o el campo SALARY sea mayor que 6500:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 6500;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 6500;
  id | name  | age |  address    | salary
 ----+-------+-----+-------------+--------
   1 | Paul  |  32 | California  |  20000
@@ -614,7 +614,7 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
  10 | James |  45 | Texas       |   5000
 (10 rows)</pre>
 <p>Leer los datos donde el campo SALARY no sea NULL:</p>
-<pre>runoobdb=#  SELECT * FROM COMPANY WHERE SALARY IS NOT NULL;
+<pre>ejemplodb=#  SELECT * FROM COMPANY WHERE SALARY IS NOT NULL;
  id | name  | age |  address    | salary
 ----+-------+-----+-------------+--------
   1 | Paul  |  32 | California  |  20000
@@ -673,42 +673,42 @@ runoobdb=# SELECT * FROM COMPANY WHERE SALARY &lt;&gt; 20000;
 <tr><td>&gt;&gt;</td><td>Operador de desplazamiento binario a la derecha. Desplaza todos los bits de un número hacia la derecha un cierto número de posiciones; para números positivos se rellena con 0 a la izquierda, para números negativos con 1, y los bits de la derecha se descartan.</td><td>A &gt;&gt; 2 dará como resultado 15, es decir, 0000 1111</td></tr>
 </table>
 <h3>Ejemplo</h3>
-<pre>runoobdb=# select 60 | 13;
+<pre>ejemplodb=# select 60 | 13;
  ?column?
 ----------
        61
 (1 row)
 
 
-runoobdb=# select 60 &amp; 13;
+ejemplodb=# select 60 &amp; 13;
  ?column?
 ----------
        12
 (1 row)
 
 
-runoobdb=#  select  (~60);
+ejemplodb=#  select  (~60);
  ?column?
 ----------
       -61
 (1 row)
 
 
-runoobdb=# select  (60 &lt;&lt; 2);
+ejemplodb=# select  (60 &lt;&lt; 2);
  ?column?
 ----------
       240
 (1 row)
 
 
-runoobdb=# select  (60 &gt;&gt; 2);
+ejemplodb=# select  (60 &gt;&gt; 2);
  ?column?
 ----------
        15
 (1 row)
 
 
-runoobdb=#  select 60 # 13;
+ejemplodb=#  select 60 # 13;
  ?column?
 ----------
        49

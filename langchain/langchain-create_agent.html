@@ -343,7 +343,7 @@ agent = create_agent(
 <span style="color: #a50"># create_agent llamará internamente a init_chat_model() para procesarla</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Forma 2: pasar una instancia de modelo ya construida</span><br/>
@@ -351,7 +351,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0.3</span><span style="color: Gray;">,</span> max_tokens<span style="color: Gray;">=</span><span style="color: Maroon;">500</span><span style="color: Olive;">)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Forma 3: pasar una instancia de modelo con herramientas ya vinculadas</span><br/>
@@ -371,7 +371,7 @@ model_with_tools <span style="color: Gray;">=</span> init_chat_model<span style=
 <span style="color: #a50"># Formato 1: función decorada con @tool (la más común)</span><br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_course<span style="color: Olive;">(</span><span style="color: #05a;">keyword</span>: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Buscar cursos del tutorial de RUNOOB"""</span><br/>
+    <span style="color: #a11;">"""Buscar cursos del tutorial de EJEMPLO"""</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Resultados de búsqueda: cursos relacionados con {keyword}"</span><br/>
 <br/>
 <br/>
@@ -409,7 +409,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Teal;">None</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO (Tutorial para novatos)"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -429,12 +429,12 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 <span style="color: #a50"># Forma 1: cadena (simple y directa)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de RUNOOB. Responde de forma concisa, sin superar los 100 caracteres."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de EJEMPLO. Responde de forma concisa, sin superar los 100 caracteres."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Forma 2: objeto SystemMessage (reutilizable entre varios agentes)</span><br/>
 system_msg <span style="color: Gray;">=</span> SystemMessage<span style="color: Olive;">(</span><br/>
-    content<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de RUNOOB. Responde de forma concisa, sin superar los 100 caracteres."</span><br/>
+    content<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de EJEMPLO. Responde de forma concisa, sin superar los 100 caracteres."</span><br/>
 <span style="color: Olive;">)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span><br/>
@@ -483,7 +483,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     model<span style="color: Gray;">=</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>track_progress<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     state_schema<span style="color: Gray;">=</span>LearningAgentState<span style="color: Gray;">,</span>  <span style="color: #a50"># Usar estado personalizado</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de aprendizaje de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de aprendizaje de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># En tiempo de ejecución, se debe proporcionar el valor inicial del estado personalizado</span><br/>
@@ -500,9 +500,9 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-用户等级: 入门
-已完成主题: ['HTML 基础', 'Python 基础']
-回复: 已记录学习进度。当前已完成 2 个主题：HTML 基础, Python 基础
+Nivel de usuario: 入门
+Temas completados: ['HTML 基础', 'Python 基础']
+Respuesta: Progreso de aprendizaje registrado. Temas completados: 2 (Fundamentos de HTML, Fundamentos de Python)
 </pre>
 <h3>Valor de retorno: CompiledStateGraph</h3>
 <p>create_agent() devuelve un<span class="marked">CompiledStateGraph</span>objeto, que es el grafo compilado de LangGraph y proporciona múltiples formas de ejecución:</p>

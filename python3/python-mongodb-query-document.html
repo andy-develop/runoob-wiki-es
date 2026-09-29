@@ -368,14 +368,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">x</span><span class="hl-code"> = </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find_one</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">x</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}</pre>
+<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}</pre>
 <h3>Consultar todos los datos de la colección</h3>
 <p><span class="marked">find()</span>El método puede consultar todos los datos de la colección, similar a<span class="marked">SELECT *</span>la operación en SQL.</p>
 <p>El siguiente ejemplo busca<strong>sites</strong>todos los datos de la colección:</p>
@@ -385,7 +385,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-identifier">x</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">:
   </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">x</span><span class="hl-brackets">)</span></div>
@@ -393,7 +393,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <p>El resultado de salida es:</p>
 <pre>
-{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}
+{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}
 {'_id': ObjectId('5b2369cac315325f3698a1cf'), 'name': 'Google', 'alexa': '1', 'url': 'https://www.google.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb6'), 'name': 'Taobao', 'alexa': '100', 'url': 'https://www.taobao.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb7'), 'name': 'QQ', 'alexa': '101', 'url': 'https://www.qq.com'}
@@ -409,7 +409,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-identifier">x</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-code">{},{ </span><span class="hl-quotes">"</span><span class="hl-string">_id</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">0</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">1</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">alexa</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">1</span><span class="hl-code"> }</span><span class="hl-brackets">)</span><span class="hl-code">:
   </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">x</span><span class="hl-brackets">)</span></div>
@@ -417,7 +417,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <p>El resultado de salida es:</p>
 <pre>
-{'name': 'RUNOOB', 'alexa': '10000'}
+{'name': 'EJEMPLO', 'alexa': '10000'}
 {'name': 'Google', 'alexa': '1'}
 {'name': 'Taobao', 'alexa': '100'}
 {'name': 'QQ', 'alexa': '101'}
@@ -433,7 +433,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-identifier">x</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-code">{},{ </span><span class="hl-quotes">"</span><span class="hl-string">alexa</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">0</span><span class="hl-code"> }</span><span class="hl-brackets">)</span><span class="hl-code">:
   </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">x</span><span class="hl-brackets">)</span></div>
@@ -441,7 +441,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <p>El resultado de salida es:</p>
 <pre>
-{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'url': 'https://www.runoob.com'}
+{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'url': 'https://www.example.com'}
 {'_id': ObjectId('5b2369cac315325f3698a1cf'), 'name': 'Google', 'url': 'https://www.google.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb6'), 'name': 'Taobao', 'url': 'https://www.taobao.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb7'), 'name': 'QQ', 'url': 'https://www.qq.com'}
@@ -456,7 +456,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-identifier">x</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-code">{},{ </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">1</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">alexa</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-number">0</span><span class="hl-code"> }</span><span class="hl-brackets">)</span><span class="hl-code">:
   </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">x</span><span class="hl-brackets">)</span></div>
@@ -468,16 +468,16 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 ...</pre>
 <h3>Consultar según condiciones especificadas</h3>
 <p>Podemos<span class="marked">find()</span>establecer parámetros en [el método] para filtrar los datos.</p>
-<p>El siguiente ejemplo busca los datos cuyo campo name sea "RUNOOB":</p>
+<p>El siguiente ejemplo busca los datos cuyo campo name sea "EJEMPLO":</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-identifier">myquery</span><span class="hl-code"> = { </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">"</span><span class="hl-code"> }
+</span><span class="hl-identifier">myquery</span><span class="hl-code"> = { </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">"</span><span class="hl-code"> }
  
 </span><span class="hl-identifier">mydoc</span><span class="hl-code"> = </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-identifier">myquery</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-identifier">x</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">mydoc</span><span class="hl-code">:
@@ -485,7 +485,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}</pre>
+<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}</pre>
 <h3>Consulta avanzada</h3>
 <p>En las condiciones de la consulta, también podemos usar modificadores.</p>
 <p>El siguiente ejemplo se usa para leer los datos del campo name cuyo primer carácter tenga un valor ASCII mayor que "H"; la condición del modificador de "mayor que" es<span class="marked">{"$gt": "H"}</span> :</p>
@@ -495,7 +495,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">myquery</span><span class="hl-code"> = { </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: { </span><span class="hl-quotes">"</span><span class="hl-string">$gt</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">H</span><span class="hl-quotes">"</span><span class="hl-code"> } }
  
@@ -506,7 +506,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 </div>
 <p>El resultado de salida es:</p>
 <pre>
-{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}
+{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb6'), 'name': 'Taobao', 'alexa': '100', 'url': 'https://www.taobao.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb7'), 'name': 'QQ', 'alexa': '101', 'url': 'https://www.qq.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb9'), 'name': '知乎', 'alexa': '103', 'url': 'https://www.zhihu.com'}
@@ -521,7 +521,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">myquery</span><span class="hl-code"> = { </span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: { </span><span class="hl-quotes">"</span><span class="hl-string">$regex</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">^R</span><span class="hl-quotes">"</span><span class="hl-code"> } }
  
@@ -531,7 +531,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}</pre>
+<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}</pre>
 <h3>Devolver un número específico de registros</h3>
 <p>Si queremos que la consulta devuelva un número específico de registros, podemos usar<span class="marked">limit()</span>el método, que solo acepta un parámetro numérico.</p>
 <p>El siguiente ejemplo devuelve 3 documentos:</p>
@@ -540,7 +540,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 <div class="example_code">
 <div class="hl-main"><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">myresult</span><span class="hl-code"> = </span><span class="hl-identifier">mycol</span><span class="hl-code">.</span><span class="hl-identifier">find</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">.</span><span class="hl-identifier">limit</span><span class="hl-brackets">(</span><span class="hl-number">3</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-comment"># Resultado de salida</span><span class="hl-code">
@@ -549,7 +549,7 @@ pymongo.errors.OperationFailure: Projection cannot have a mix of inclusion and e
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'RUNOOB', 'alexa': '10000', 'url': 'https://www.runoob.com'}
+<pre>{'_id': ObjectId('5b23696ac315325f269f28d1'), 'name': 'EJEMPLO', 'alexa': '10000', 'url': 'https://www.example.com'}
 {'_id': ObjectId('5b2369cac315325f3698a1cf'), 'name': 'Google', 'alexa': '1', 'url': 'https://www.google.com'}
 {'_id': ObjectId('5b236aa9c315325f5236bbb6'), 'name': 'Taobao', 'alexa': '100', 'url': 'https://www.taobao.com'}</pre>
 <p><a href="../python3/python-mongodb.html"><img alt="Python Mongodb" class="navup" decoding="async" src="../images/up.gif"/> Python Mongodb</a></p> Otras extensiones

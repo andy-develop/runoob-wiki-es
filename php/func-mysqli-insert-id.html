@@ -390,15 +390,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Supongamos que la tabla "websites" tiene un campo de ID generado automáticamente. Devuelve el ID de la última consulta:</p>
 <pre>
 &lt;?php 
-// 假定数据库用户名：root，密码：123456，数据库：RUNOOB 
-$con=mysqli_connect("localhost","root","123456","RUNOOB"); 
+// 假定数据库用户名：root，密码：123456，数据库：EJEMPLO 
+$con=mysqli_connect("localhost","root","123456","EJEMPLO"); 
 if (mysqli_connect_errno($con)) 
 { 
     echo "连接 MySQL 失败: " . mysqli_connect_error(); 
 } 
 
 mysqli_query($con,"INSERT INTO websites (name,url,alexa) 
-VALUES ('菜鸟教程','http://www.runoob.com',5633)");
+VALUES ('Ejemplo','http://www.example.com',5633)");
 
 // 输出自动生成的 ID
 echo "新 id 为: " . mysqli_insert_id($con); 

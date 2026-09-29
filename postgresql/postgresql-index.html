@@ -351,7 +351,7 @@ WHERE condition;</pre>
 <p>Ahora, use<strong>\d company</strong>el comando para listar todos los índices de la tabla COMPANY:</p>
 <pre># \d company</pre>
 <p>El resultado es el siguiente: company_pkey es el índice implícito, creado cuando se creó la tabla:</p>
-<pre>runoobdb=# \d company
+<pre>ejemplodb=# \d company
                   Table "public.company"
  Column  |     Type      | Collation | Nullable | Default 
 ---------+---------------+-----------+----------+---------
@@ -364,7 +364,7 @@ Indexes:
     "company_pkey" PRIMARY KEY, btree (id)
     "salary_index" btree (salary)</pre>
 <p>Puede usar<span class="marked">\di</span>el comando para listar todos los índices de la base de datos:</p>
-<pre>runoobdb=# \di
+<pre>ejemplodb=# \di
                     List of relations
  Schema |      Name       | Type  |  Owner   |   Table    
 --------+-----------------+-------+----------+------------
@@ -378,7 +378,7 @@ Indexes:
 <p>Puede utilizar la siguiente sentencia para eliminar el índice creado anteriormente:</p>
 <pre># DROP INDEX salary_index;</pre>
 <p>Después de eliminarlo, se puede ver que salary_index ya ha sido eliminado de la lista de índices:</p>
-<pre>runoobdb=# \di
+<pre>ejemplodb=# \di
                     List of relations
  Schema |      Name       | Type  |  Owner   |   Table    
 --------+-----------------+-------+----------+------------

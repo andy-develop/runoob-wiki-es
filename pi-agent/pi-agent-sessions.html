@@ -290,7 +290,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Cada sesión se organiza internamente como una estructura de árbol, lo que significa que puedes ramificarte en cualquier nodo histórico sin perder el contenido de conversaciones anteriores.</p>
 <pre>
 ~/.pi/agent/sessions/
-└── --Users-runoob-projects-runoob-demo--/        # 目录名为项目路径，斜杠已替换为连字符
+└── --Users-ejemplo-projects-ejemplo-demo--/        # 目录名为项目路径，斜杠已替换为连字符
     ├── 2026-08-31T02-40-11-000Z_019fc2a1-93b4-7c22-8d5e-2b3c4d5e6f7a.jsonl    # 时间戳_UUID.jsonl
     ├── 2026-08-31T04-12-38-000Z_2c8f71ba-4a19-4e63-9d02-7f5a6b8c9d0e.jsonl
     └── 2026-08-31T08-55-02-000Z_5e3d92f4-8b26-47ac-a174-9c0d1e2f3a4b.jsonl
@@ -302,7 +302,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Los tipos de entrada incluyen message, compaction, branch_summary, label, custom, etc.</p>
 <p>Las sesiones creadas con /fork o /clone tienen además un campo parentSession en los metadatos de la primera línea, que apunta al archivo de sesión original.</p>
 <pre>
-{"type":"session","version":3,"id":"019fc2a1-93b4-7c22-8d5e-2b3c4d5e6f7a","timestamp":"2026-08-31T02:40:11.000Z","cwd":"/Users/runoob/projects/runoob-demo"}
+{"type":"session","version":3,"id":"019fc2a1-93b4-7c22-8d5e-2b3c4d5e6f7a","timestamp":"2026-08-31T02:40:11.000Z","cwd":"/Users/ejemplo/projects/ejemplo-demo"}
 {"type":"message","id":"m1","parentId":null,"message":{"role":"user","content":[{"type":"text","text":"帮我实现登录功能"}]}}
 {"type":"message","id":"m2","parentId":"m1","message":{"role":"assistant","content":[{"type":"text","text":"好的，我用 JWT 来实现"}]}}
 </pre>
@@ -320,7 +320,7 @@ $ pi -r
 │   def456  重构认证模块  2 小时前
 └
 
-$ pi --session ~/.pi/agent/sessions/--Users-runoob-projects-runoob-demo--/2026-08-30T09-15-04-000Z_019fbb5d-7a2e-7f31-b5c4-1a2b3c4d5e6f.jsonl
+$ pi --session ~/.pi/agent/sessions/--Users-ejemplo-projects-ejemplo-demo--/2026-08-30T09-15-04-000Z_019fbb5d-7a2e-7f31-b5c4-1a2b3c4d5e6f.jsonl
 Resumed session 019fbb5d-7a2e-7f31-b5c4-1a2b3c4d5e6f
 
 $ pi --session abc123

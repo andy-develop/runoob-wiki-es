@@ -309,22 +309,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul>
 <li><strong>database_name</strong>es el nombre de la base de datos que deseas seleccionar.</li></ul>
 <p>Después de seleccionar la base de datos, tus consultas y operaciones SQL posteriores se ejecutan<strong>database_name</strong>en la base de datos especificada.</p>
-<h3>Ejemplo</h3><p>El siguiente ejemplo selecciona la base de datos RUNOOB:</p>
+<h3>Ejemplo</h3><p>El siguiente ejemplo selecciona la base de datos EJEMPLO:</p>
 <pre>
 [root@host]# mysql -u root -p
 Enter password:******
-mysql&gt; use RUNOOB;
+mysql&gt; use EJEMPLO;
 Database changed
 mysql&gt;
 </pre>
-<p>Después de ejecutar el comando anterior, habrás seleccionado correctamente la base de datos RUNOOB, y las operaciones posteriores se ejecutarán en la base de datos RUNOOB.</p>
+<p>Después de ejecutar el comando anterior, habrás seleccionado correctamente la base de datos EJEMPLO, y las operaciones posteriores se ejecutarán en la base de datos EJEMPLO.</p>
 <p>En la línea de comandos, puedes seleccionar la base de datos de la siguiente manera:</p>
 <pre>
 mysql -u your_username -p -D your_database</pre>
 <ul>
 <li><span class="marked">-D</span>El parámetro se usa para especificar la base de datos que se desea seleccionar.</li></ul>
 <p>Por ejemplo:</p>
-<pre>mysql -u root -p -D RUNOOB</pre><p>Después de ingresar la contraseña, entrarás al prompt de MySQL, y cualquier consulta u operación posterior se ejecutará en la base de datos RUNOOB.</p>
+<pre>mysql -u root -p -D EJEMPLO</pre><p>Después de ingresar la contraseña, entrarás al prompt de MySQL, y cualquier consulta u operación posterior se ejecutará en la base de datos EJEMPLO.</p>
 <blockquote><p>Asegúrate de que la base de datos seleccionada exista; de lo contrario, recibirás un mensaje de error. Puedes usar<span class="marked">SHOW DATABASES;</span>para consultar las bases de datos disponibles, asegurándote de que la base de datos que deseas seleccionar esté en la lista.</p></blockquote>
 <hr/>
 <h2>Seleccionar la base de datos MySQL usando un script PHP</h2>
@@ -362,7 +362,7 @@ mysqli_select_db(connection,dbname);
 </span><span class="hl-reserved">die</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Conexión fallida:</span><span class="hl-quotes">'</span><span class="hl-code"> . </span><span class="hl-identifier">mysqli_error</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Conexión exitosa</span><span class="hl-quotes">'</span><span class="hl-code">;
-</span><span class="hl-identifier">mysqli_select_db</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">'</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">mysqli_select_db</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">'</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-identifier">mysqli_close</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div></div> Otras extensiones

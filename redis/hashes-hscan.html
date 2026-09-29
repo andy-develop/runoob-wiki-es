@@ -296,12 +296,12 @@ HSCAN key cursor [MATCH pattern] [COUNT count]
 <p>Cada elemento devuelto es una tupla, y cada elemento de la tupla está compuesto por un campo (field) y un valor (value).</p>
 <h3>Ejemplos</h3>
 <pre>
-&gt; HMSET sites google "google.com" runoob "runoob.com" weibo "weibo.com" 4 "taobao.com"
+&gt; HMSET sites google "google.com" ejemplo "example.com" weibo "weibo.com" 4 "taobao.com"
 OK
 &gt; HSCAN sites 0 match "run*"
 1) "0"
-2) 1) "runoob"
-2) "runoob.com"
+2) 1) "ejemplo"
+2) "example.com"
 </pre>
 <p>
 <a href="redis-hashes.html" rel="noopener noreferrer" target="_top" title="Redis 哈希(Hash)"> <img class="navup" decoding="async" src="../images/up.gif"/>Redis Hash</a>

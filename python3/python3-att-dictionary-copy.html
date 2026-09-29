@@ -376,7 +376,7 @@ dict.copy()
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
-</span><span class="hl-identifier">dict1</span><span class="hl-code"> = {</span><span class="hl-quotes">'</span><span class="hl-string">Name</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Age</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-number">7</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Class</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">First</span><span class="hl-quotes">'</span><span class="hl-code">}
+</span><span class="hl-identifier">dict1</span><span class="hl-code"> = {</span><span class="hl-quotes">'</span><span class="hl-string">Name</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Age</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-number">7</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Class</span><span class="hl-quotes">'</span><span class="hl-code">: </span><span class="hl-quotes">'</span><span class="hl-string">First</span><span class="hl-quotes">'</span><span class="hl-code">}
  
 </span><span class="hl-identifier">dict2</span><span class="hl-code"> = </span><span class="hl-identifier">dict1</span><span class="hl-code">.</span><span class="hl-identifier">copy</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">El diccionario recién copiado es:</span><span class="hl-quotes">"</span><span class="hl-code">,</span><span class="hl-identifier">dict2</span><span class="hl-brackets">)</span></div>
@@ -384,7 +384,7 @@ dict.copy()
 </div>
 <p>El resultado de salida del ejemplo anterior es:</p>
 <pre>
-新复制的字典为 :  {'Age': 7, 'Name': 'Runoob', 'Class': 'First'}
+新复制的字典为 :  {'Age': 7, 'Name': 'Ejemplo', 'Class': 'First'}
 </pre>
 <hr/>
 <h2>Diferencia entre asignación directa y copy()</h2>
@@ -394,7 +394,7 @@ dict.copy()
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
-</span><span class="hl-identifier">dict1</span><span class="hl-code"> =  {</span><span class="hl-quotes">'</span><span class="hl-string">user</span><span class="hl-quotes">'</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">num</span><span class="hl-quotes">'</span><span class="hl-code">:</span><span class="hl-brackets">[</span><span class="hl-number">1</span><span class="hl-code">,</span><span class="hl-number">2</span><span class="hl-code">,</span><span class="hl-number">3</span><span class="hl-brackets">]</span><span class="hl-code">}
+</span><span class="hl-identifier">dict1</span><span class="hl-code"> =  {</span><span class="hl-quotes">'</span><span class="hl-string">user</span><span class="hl-quotes">'</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">num</span><span class="hl-quotes">'</span><span class="hl-code">:</span><span class="hl-brackets">[</span><span class="hl-number">1</span><span class="hl-code">,</span><span class="hl-number">2</span><span class="hl-code">,</span><span class="hl-number">3</span><span class="hl-brackets">]</span><span class="hl-code">}
  
 </span><span class="hl-identifier">dict2</span><span class="hl-code"> = </span><span class="hl-identifier">dict1</span><span class="hl-code"> </span><span class="hl-comment"># Copia superficial: objeto de referencia</span><span class="hl-code">
 </span><span class="hl-identifier">dict3</span><span class="hl-code"> = </span><span class="hl-identifier">dict1</span><span class="hl-code">.</span><span class="hl-identifier">copy</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Copia superficial: copia profunda del objeto padre (primer nivel), el objeto hijo (segundo nivel) no se copia, el objeto hijo es una referencia</span><span class="hl-code">
@@ -411,7 +411,7 @@ dict.copy()
 <pre>
 {'user': 'root', 'num': [2, 3]}
 {'user': 'root', 'num': [2, 3]}
-{'user': 'runoob', 'num': [2, 3]}
+{'user': 'ejemplo', 'num': [2, 3]}
 </pre><h3>Ampliación de conocimientos</h3>
 <p><a href="../w3cnote/python-understanding-dict-copy-shallow-or-deep.html" rel="noopener" target="_blank">Análisis de asignación directa, copia superficial y copia profunda en Python</a></p>
 <hr/>

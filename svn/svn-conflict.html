@@ -255,27 +255,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h3>Causa del conflicto de versiones:</h3>
 <p>Supongamos que los usuarios A y B actualizaron el archivo kingtuns.txt cuando el número de versión era 100. El usuario A, después de completar la modificación, envía kingtuns.txt al servidor. En este momento, la confirmación es exitosa, y el número de versión del archivo kingtuns.txt ya se ha convertido en 101. Mientras tanto, el usuario B realiza modificaciones en el archivo kingtuns.txt de la versión 100. Cuando envía al servidor después de completar las modificaciones, como no se basó en la versión 101 más reciente, la confirmación falla.</p>
-<p>Ya hemos realizado el checkout del repositorio runoob01 localmente. A continuación, implementaremos el método para resolver conflictos de versión.</p>
+<p>Ya hemos realizado el checkout del repositorio ejemplo01 localmente. A continuación, implementaremos el método para resolver conflictos de versión.</p>
 <p>Encontramos que el archivo HelloWorld.html tiene errores. Necesitamos modificar el archivo y enviarlo al repositorio.</p>
-<p>Cambiamos el contenido de HelloWorld.html a "HelloWorld! https://www.runoob.com/".</p>
+<p>Cambiamos el contenido de HelloWorld.html a "HelloWorld! https://www.example.com/".</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# cat HelloWorld.html 
-HelloWorld! http://www.runoob.com/
+root@ejemplo:~/svn/ejemplo01/trunk# cat HelloWorld.html 
+HelloWorld! http://www.example.com/
 </pre>
 <p>Use el siguiente comando para ver los cambios:</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn diff 
+root@ejemplo:~/svn/ejemplo01/trunk# svn diff 
 Index: HelloWorld.html
 ===================================================================
 --- HelloWorld.html     (revision 5)
 +++ HelloWorld.html     (working copy)
 @@ -1,2 +1 @@
--HelloWorld! http://www.runoob.com/
-+HelloWorld! http://www.runoob.com/!
+-HelloWorld! http://www.example.com/
++HelloWorld! http://www.example.com/!
 </pre>
 <p>Intente usar el siguiente comando para confirmar sus cambios:</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn commit -m "change HelloWorld.html first"
+root@ejemplo:~/svn/ejemplo01/trunk# svn commit -m "change HelloWorld.html first"
 Sending        HelloWorld.html
 Transmitting file data .svn: E160028: Commit failed (details follow):
 svn: E160028: File '/trunk/HelloWorld.html' is out of date
@@ -284,7 +284,7 @@ svn: E160028: File '/trunk/HelloWorld.html' is out of date
 <p>Porque en este momento, HelloWorld.html ya ha sido modificado y enviado al repositorio por user02. Subversion no permitirá que user01 (la cuenta svn utilizada en este ejemplo) confirme los cambios, porque user02 ya ha modificado el repositorio, por lo que nuestra copia de trabajo ya no es válida.</p>
 <p>Para evitar que el código de las dos personas se sobrescriba mutuamente, Subversion no nos permite realizar esta operación. Por lo tanto, debemos actualizar la copia de trabajo antes de confirmar los cambios. Así que use el comando update, de la siguiente manera:</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn update
+root@ejemplo:~/svn/ejemplo01/trunk# svn update
 Updating '.':
 C    HelloWorld.html
 Updated to revision 6.
@@ -301,7 +301,7 @@ Summary of conflicts:
 <pre>svn update -r6</pre>
 <p>En este momento, la copia de trabajo está sincronizada con el repositorio, por lo que puede confirmar los cambios de manera segura.</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn commit -m "change HelloWorld.html second"
+root@ejemplo:~/svn/ejemplo01/trunk# svn commit -m "change HelloWorld.html second"
 Sending        HelloWorld.html
 Transmitting file data .
 Committed revision 7.

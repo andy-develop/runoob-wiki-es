@@ -307,7 +307,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 
 curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">11434</span><span style="color: #000000; font-weight: bold;">/</span>api<span style="color: #000000; font-weight: bold;">/</span>generate <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>
-  "model": "qwen3.5",<br/>"prompt": "Presenta RUNOOB (Tutorial para novatos) en una frase",<br/>
+  "model": "qwen3.5",<br/>"prompt": "Presenta EJEMPLO (Tutorial para novatos) en una frase",<br/>
   "stream": false<br/>
 }'</span><br/>
 </div>
@@ -317,7 +317,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 {
   "model": "qwen3.5",
   "created_at": "2026-08-29T03:20:00.499127Z",
-  "response": "RUNOOB（菜鸟教程）是一个面向编程初学者的免费中文教程网站。",
+  "response": "Ejemplo是一个面向编程初学者的免费中文教程网站。",
   "done": true,
   "total_duration": 10706818083,
   "load_duration": 6338219291,
@@ -365,7 +365,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 
 curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">11434</span><span style="color: #000000; font-weight: bold;">/</span>api<span style="color: #000000; font-weight: bold;">/</span>chat <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>
   "model": "qwen3.5",<br/>
-  "messages": [<br/>{ "role": "user", "content": "¿Qué es RUNOOB?" },<br/>{ "role": "assistant", "content": "Un sitio web de tutoriales en chino orientado a principiantes." },<br/>{ "role": "user", "content": "¿Es gratuito? Responde en una frase" }<br/>
+  "messages": [<br/>{ "role": "user", "content": "¿Qué es Python?" },<br/>{ "role": "assistant", "content": "Un sitio web de tutoriales en chino orientado a principiantes." },<br/>{ "role": "user", "content": "¿Es gratuito? Responde en una frase" }<br/>
   ],<br/>
   "stream": false<br/>
 }'</span><br/>
@@ -394,7 +394,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Texto único</span><br/>
 curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">11434</span><span style="color: #000000; font-weight: bold;">/</span>api<span style="color: #000000; font-weight: bold;">/</span>embed <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>
-  "model": "embeddinggemma",<br/>"input": "RUNOOB es un sitio web de tutoriales de programación"<br/>
+  "model": "embeddinggemma",<br/>"input": "EJEMPLO es un sitio web de tutoriales de programación"<br/>
 }'</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Lote: input pasa un array, devuelve múltiples vectores a la vez</span><br/>
@@ -409,8 +409,8 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 <h2>Streaming y no streaming: cómo manejar las respuestas</h2>
 <p>Las interfaces de generación devuelven por defecto en streaming, con formato NDJSON: cada línea es un objeto JSON independiente.</p>
 <pre>
-{"model":"qwen3.5","created_at":"...","response":"RUNOOB","done":false}
-{"model":"qwen3.5","created_at":"...","response":"（菜鸟教程）","done":false}
+{"model":"qwen3.5","created_at":"...","response":"EJEMPLO","done":false}
+{"model":"qwen3.5","created_at":"...","response":"（Ejemplo）","done":false}
 {"model":"qwen3.5","created_at":"...","response":"是编程初学者的入门网站。","done":false}
 {"model":"qwen3.5","created_at":"...","response":"","done":true,"done_reason":"stop"}
 </pre>
@@ -504,7 +504,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">11434</span><span style="color: #000000; font-weight: bold;">/</span>v1<span style="color: #000000; font-weight: bold;">/</span>chat<span style="color: #000000; font-weight: bold;">/</span>completions \<br/>
   <span style="color: #660033;">-H</span> <span style="color: #a10;">"Content-Type: application/json"</span> \<br/>
   <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>
-    "model": "qwen3.5",<br/>"messages": [{ "role": "user", "content": "Introduce RUNOOB en una oración" }]<br/>
+    "model": "qwen3.5",<br/>"messages": [{ "role": "user", "content": "Introduce Python en una oración" }]<br/>
   }'</span><br/>
 </div>
 </div>
@@ -536,7 +536,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
   <span style="color: #660033;">-H</span> <span style="color: #a10;">"anthropic-version: 2023-06-01"</span> \<br/>
   <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>
     "model": "qwen3.5",<br/>
-    "max_tokens": 1024,<br/>"messages": [{ "role": "user", "content": "Introduce RUNOOB en una oración" }]<br/>
+    "max_tokens": 1024,<br/>"messages": [{ "role": "user", "content": "Introduce Python en una oración" }]<br/>
   }'</span><br/>
 </div>
 </div>

@@ -461,7 +461,7 @@ console.log("Length "+uname.length)  // 输出 11</pre></td>
     this.name = name 
  } 
  var emp = new employee(123,"admin") 
- employee.prototype.email="admin@runoob.com" // 添加属性 email
+ employee.prototype.email="admin@example.com" // 添加属性 email
  console.log("员工号: "+emp.id) 
  console.log("员工姓名: "+emp.name) 
  console.log("员工邮箱: "+emp.email)</pre>
@@ -480,7 +480,7 @@ console.log("Length "+uname.length)  // 输出 11</pre></td>
 <td>charAt()
 <p>Devuelve el carácter en la posición especificada.</p></td>
 <td><pre>
-var str = new String("RUNOOB"); 
+var str = new String("EJEMPLO"); 
 console.log("str.charAt(0) 为:" + str.charAt(0)); // R
 console.log("str.charAt(1) 为:" + str.charAt(1)); // U 
 console.log("str.charAt(2) 为:" + str.charAt(2)); // N 
@@ -495,7 +495,7 @@ console.log("str.charAt(5) 为:" + str.charAt(5)); // B
 <td>charCodeAt()
 <p>Devuelve la codificación Unicode del carácter en la posición especificada.</p></td>
 <td><pre>
-var str = new String("RUNOOB"); 
+var str = new String("EJEMPLO"); 
 console.log("str.charCodeAt(0) 为:" + str.charCodeAt(0)); // 82
 console.log("str.charCodeAt(1) 为:" + str.charCodeAt(1)); // 85 
 console.log("str.charCodeAt(2) 为:" + str.charCodeAt(2)); // 78 
@@ -510,10 +510,10 @@ console.log("str.charCodeAt(5) 为:" + str.charCodeAt(5)); // 66
 <td>concat()
 <p>Concatena dos o más cadenas y devuelve una nueva cadena.</p></td>
 <td><pre>
-var str1 = new String( "RUNOOB" ); 
+var str1 = new String( "EJEMPLO" ); 
 var str2 = new String( "GOOGLE" ); 
 var str3 = str1.concat( str2 ); 
-console.log("str1 + str2 : "+str3) // RUNOOBGOOGLE
+console.log("str1 + str2 : "+str3) // EJEMPLOGOOGLE
 </pre>
 </td>
 </tr>
@@ -522,7 +522,7 @@ console.log("str1 + str2 : "+str3) // RUNOOBGOOGLE
 <td>indexOf()
 <p>Devuelve la posición de la primera aparición del valor de cadena especificado en la cadena.</p></td>
 <td><pre>
-var str1 = new String( "RUNOOB" ); 
+var str1 = new String( "EJEMPLO" ); 
 
 var index = str1.indexOf( "OO" ); 
 console.log("查找的字符串位置 :" + index );  // 3
@@ -619,9 +619,9 @@ console.log(splitted)  // [ 'Apples', 'are', 'round,' ]
 <td>substring()
 <p>Extrae los caracteres entre dos índices especificados de la cadena.</p></td>
 <td><pre>
-var str = "RUNOOB GOOGLE TAOBAO FACEBOOK"; 
+var str = "EJEMPLO GOOGLE TAOBAO FACEBOOK"; 
 console.log("(1,2): "    + str.substring(1,2));   // U
-console.log("(0,10): "   + str.substring(0, 10)); // RUNOOB GOO
+console.log("(0,10): "   + str.substring(0, 10)); // EJEMPLO GOO
 console.log("(5): "      + str.substring(5));     // B GOOGLE TAOBAO FACEBOOK
 </pre>
 </td>
@@ -631,8 +631,8 @@ console.log("(5): "      + str.substring(5));     // B GOOGLE TAOBAO FACEBOOK
 <td>toLocaleLowerCase()
 <p>Convierte la cadena a minúsculas según la configuración regional del host; solo unos pocos idiomas (como el turco) tienen asignaciones de mayúsculas y minúsculas específicas de la región.</p></td>
 <td><pre>
-var str = "Runoob Google"; 
-console.log(str.toLocaleLowerCase( ));  // runoob google
+var str = "Ejemplo Google"; 
+console.log(str.toLocaleLowerCase( ));  // ejemplo google
 </pre>
 </td>
 </tr>
@@ -641,8 +641,8 @@ console.log(str.toLocaleLowerCase( ));  // runoob google
 <td>toLocaleUpperCase()
 <p>Convierte la cadena a mayúsculas según la configuración regional del host; solo unos pocos idiomas (como el turco) tienen asignaciones de mayúsculas y minúsculas específicas de la región.</p></td>
 <td><pre>
-var str = "Runoob Google"; 
-console.log(str.toLocaleUpperCase( ));  // RUNOOB GOOGLE
+var str = "Ejemplo Google"; 
+console.log(str.toLocaleUpperCase( ));  // EJEMPLO GOOGLE
 </pre>
 </td>
 </tr>
@@ -651,8 +651,8 @@ console.log(str.toLocaleUpperCase( ));  // RUNOOB GOOGLE
 <td>toLowerCase()
 <p>Convierte la cadena a minúsculas.</p></td>
 <td><pre>
-var str = "Runoob Google"; 
-console.log(str.toLowerCase( ));  // runoob google
+var str = "Ejemplo Google"; 
+console.log(str.toLowerCase( ));  // ejemplo google
 </pre>
 </td>
 </tr>
@@ -661,8 +661,8 @@ console.log(str.toLowerCase( ));  // runoob google
 <td>toString()
 <p>Devuelve la cadena.</p></td>
 <td><pre>
-var str = "Runoob"; 
-console.log(str.toString( )); // Runoob
+var str = "Ejemplo"; 
+console.log(str.toString( )); // Ejemplo
 </pre>
 </td>
 </tr>
@@ -671,8 +671,8 @@ console.log(str.toString( )); // Runoob
 <td>toUpperCase()
 <p>Convierte la cadena a mayúsculas.</p></td>
 <td><pre>
-var str = "Runoob Google"; 
-console.log(str.toUpperCase( ));  // RUNOOB GOOGLE
+var str = "Ejemplo Google"; 
+console.log(str.toUpperCase( ));  // EJEMPLO GOOGLE
 </pre>
 </td>
 </tr>
@@ -681,8 +681,8 @@ console.log(str.toUpperCase( ));  // RUNOOB GOOGLE
 <td>valueOf()
 <p>Devuelve el valor primitivo del objeto String especificado.</p></td>
 <td><pre>
-var str = new String("Runoob"); 
-console.log(str.valueOf( ));  // Runoob
+var str = new String("Ejemplo"); 
+console.log(str.valueOf( ));  // Ejemplo
 </pre>
 </td>
 </tr>

@@ -360,7 +360,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Scrapy incluye muchas funciones útiles, como manejar solicitudes, rastrear estados, manejar errores, gestionar límites de frecuencia de solicitudes, etc. Es muy adecuado para el rastreo web eficiente y distribuido.</p>
 <p>En comparación con bibliotecas de rastreo simples (como<a href="../python3/python-requests.html" target="_blank">requests</a>y<a href="../python3/python-spider-beautifulsoup.html" target="_blank">BeautifulSoup</a>), Scrapy es un framework de rastreo con todas las funciones, altamente extensible y flexible, adecuado para tareas de rastreo web complejas y a gran escala.</p>
 <p>Sitio web oficial de Scrapy:<a href="https://scrapy.org/" target="_blank">https://scrapy.org/</a>。</p>
-<p>Características e introducción de Scrapy:<a href="../w3cnote/scrapy-detail.html" target="_blank">https://www.runoob.com/w3cnote/scrapy-detail.html</a>。</p>
+<p>Características e introducción de Scrapy:<a href="../w3cnote/scrapy-detail.html" target="_blank">https://www.example.com/w3cnote/scrapy-detail.html</a>。</p>
 <p>Diagrama de arquitectura de Scrapy (las líneas verdes son el flujo de datos):</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/10/8c591d54457bb033812a2b0364011e9c_articlex.png"/></p><p>El funcionamiento de Scrapy se basa en los siguientes componentes principales:</p>
 <ul><li><strong>Spider</strong>: Clase araña, utilizada para definir cómo extraer datos de las páginas web y cómo rastrear los enlaces de las páginas.</li><li><strong>Item</strong>: Se utiliza para definir y almacenar los datos extraídos. Equivale a un modelo de datos.</li><li><strong>Pipeline</strong>: Se utiliza para procesar los datos extraídos, comúnmente para limpiar, almacenar datos, etc.</li><li><strong>Middleware</strong>: Se utiliza para manejar solicitudes y respuestas, puede usarse para configurar proxies, gestionar cookies, user-agents, etc.</li><li><strong>Settings</strong>: Se utiliza para configurar varios ajustes del proyecto Scrapy, como el retraso de solicitudes, el número de solicitudes concurrentes, etc.</li></ul>
@@ -387,23 +387,23 @@ scrapy startproject myproject</pre>
 <h2>Escribir un simple rastreador Scrapy</h2><p>El siguiente es un ejemplo básico de rastreador Scrapy que muestra cómo extraer datos de una página web.</p>
 <p>Vamos a crear un proyecto de rastreador:</p>
 <pre>
-scrapy startproject runoob_test_spiders</pre>
+scrapy startproject ejemplo_test_spiders</pre>
 <p>Al ejecutar el comando anterior, si tiene éxito, se mostrará:</p>
-<pre>templates/project', created in:/Users/Runoob/runoob-test/runoob_test_spiders
+<pre>templates/project', created in:/Users/Ejemplo/ejemplo-test/ejemplo_test_spiders
 
 You can start your first spider with:
-    cd runoob_test_spiders
+    cd ejemplo_test_spiders
     scrapy genspider example example.com</pre>
 <p>La estructura del proyecto generado es la siguiente:</p>
 <p><img decoding="async" src="../wp-content/uploads/2024/12/scrapy-runoob-1.png"/></p>
 <p>Luego entra en ese directorio:</p>
-<pre>cd runoob_test_spiders</pre>
+<pre>cd ejemplo_test_spiders</pre>
 <p>A continuación, mediante<span class="marked">scrapy genspider</span>el comando para crear un rastreador:</p>
 <pre>
 scrapy genspider douban_spider movie.douban.com</pre>
 <p>La estructura del directorio es la siguiente:</p>
 <p><img decoding="async" src="../wp-content/uploads/2025/01/6d0f6def-dbb4-4d88-b448-0db919d7379dss.png"/></p>
-<p>En el directorio runoob_test_spiders se genera un archivo llamado douban_spider.py, con el siguiente código:</p>
+<p>En el directorio ejemplo_test_spiders se genera un archivo llamado douban_spider.py, con el siguiente código:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">import</span> scrapy<br/>
 <br/>

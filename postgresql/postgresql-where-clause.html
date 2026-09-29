@@ -321,7 +321,7 @@ FROM table_name
 WHERE [condition1]</pre>
 <p>Podemos usar operadores de comparación u operadores lógicos en la cláusula WHERE, por ejemplo<span class="marked">&gt;, &lt;, =, LIKE, NOT</span>etc.</p>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -333,7 +333,7 @@ WHERE [condition1]</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>En los siguientes ejemplos usamos operadores lógicos para leer los datos de la tabla.<h3>AND</h3>
 <p>Encuentra<strong>AGE (edad)</strong>campo sea mayor o igual a 25, y<strong>SALARY (salario)</strong>campo sea mayor o igual a 65000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 65000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 65000;
  id | name  | age |  address   | salary
 ----+-------+-----+------------+--------
   4 | Mark  |  25 | Rich-Mond  |  65000
@@ -341,7 +341,7 @@ WHERE [condition1]</pre>
 (2 rows)</pre>
 <h3>OR</h3>
 <p>Encuentra<strong>AGE (edad)</strong>campo sea mayor o igual a 25, o<strong>SALARY (salario)</strong>campo sea mayor o igual a 65000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 65000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 65000;
 id | name  | age | address     | salary
 ----+-------+-----+-------------+--------
   1 | Paul  |  32 | California  |  20000
@@ -351,7 +351,7 @@ id | name  | age | address     | salary
 (4 rows)</pre>
 <h3>NOT NULL</h3>
 <p>En la tabla COMPANY, encuentra<strong>AGE (edad)</strong>los registros donde el campo no esté vacío:</p>
-<pre>runoobdb=#  SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+<pre>ejemplodb=#  SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
   id | name  | age | address    | salary
  ----+-------+-----+------------+--------
    1 | Paul  |  32 | California |  20000
@@ -364,13 +364,13 @@ id | name  | age | address     | salary
 (7 rows)</pre>
 <h3>LIKE</h3>
 <p>En la tabla COMPANY, busca<strong>NAME (nombre)</strong>los datos cuyo campo comience con Pa:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
 id | name | age |address    | salary
 ----+------+-----+-----------+--------
   1 | Paul |  32 | California|  20000</pre>
 <h3>IN</h3>
 <p>La siguiente instrucción SELECT enumera<strong>AGE (edad)</strong>los datos cuyo campo es 25 o 27:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE IN ( 25, 27 );
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE IN ( 25, 27 );
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   2 | Allen |  25 | Texas      |  15000
@@ -379,7 +379,7 @@ id | name | age |address    | salary
 (3 rows)</pre>
 <h3>NOT IN</h3>
 <p>La siguiente instrucción SELECT enumera<strong>AGE (edad)</strong>los datos cuyo campo no es 25 ni 27:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE NOT IN ( 25, 27 );
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE NOT IN ( 25, 27 );
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   1 | Paul  |  32 | California |  20000
@@ -389,7 +389,7 @@ id | name | age |address    | salary
 (4 rows)</pre>
 <h3>BETWEEN </h3>
 <p>La siguiente instrucción SELECT enumera<strong>AGE (edad)</strong>los datos cuyo campo está entre 25 y 27:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE BETWEEN 25 AND 27;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE BETWEEN 25 AND 27;
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   2 | Allen |  25 | Texas      |  15000
@@ -398,7 +398,7 @@ id | name | age |address    | salary
 (3 rows)</pre>
 <h3>Subconsulta</h3>
 <p>La siguiente instrucción SELECT utiliza una subconsulta de SQL. La subconsulta lee<strong>SALARY (salario)</strong>los datos con campo mayor que 65000, y luego usa<strong>EXISTS</strong>el operador para determinar si devuelve filas. Si hay filas devueltas, lee todos los<strong>AGE (edad)</strong>campos.</p>
-<pre>runoobdb=# SELECT AGE FROM COMPANY
+<pre>ejemplodb=# SELECT AGE FROM COMPANY
         WHERE EXISTS (SELECT AGE FROM COMPANY WHERE SALARY &gt; 65000);
  age
 -----
@@ -411,7 +411,7 @@ id | name | age |address    | salary
   24
 (7 rows)</pre>
 <p>La siguiente instrucción SELECT también utiliza una subconsulta de SQL. La subconsulta lee<strong>SALARY (salario)</strong>los datos del campo mayor que 65000 de<strong>AGE (edad)</strong>campo, y luego usa<strong>&gt;</strong>el operador para consultar los datos mayores que ese<strong>AGE (edad)</strong>campo:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY
+<pre>ejemplodb=# SELECT * FROM COMPANY
         WHERE AGE &gt; (SELECT AGE FROM COMPANY WHERE SALARY &gt; 65000);
  id | name | age | address    | salary
 ----+------+-----+------------+--------

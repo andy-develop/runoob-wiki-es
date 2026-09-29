@@ -291,24 +291,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Arg</strong>: algunos parámetros, se puede especificar el archivo de salida.</p>
 <p><strong>&amp;</strong>: permite que el comando se ejecute en segundo plano; después de salir de la terminal, el comando continúa ejecutándose.</p>
 <h3>Ejemplos</h3>
-<p>El siguiente comando ejecuta el script runoob.sh en el directorio root en segundo plano:</p>
-<pre>nohup /root/runoob.sh &amp;</pre>
+<p>El siguiente comando ejecuta el script ejemplo.sh en el directorio root en segundo plano:</p>
+<pre>nohup /root/ejemplo.sh &amp;</pre>
 <p>Si ve la siguiente salida en la terminal, significa que la ejecución fue exitosa:</p>
 <pre>appending output to nohup.out</pre>
 <p>En este momento, si abrimos el directorio root, podemos ver que se ha generado el archivo nohup.out.</p>
 <p>Si desea detener la ejecución, necesita usar el siguiente comando para encontrar el PID del script de nohup y luego usar el comando kill para eliminarlo:</p>
-<pre>ps -aux | grep "runoob.sh" </pre>
+<pre>ps -aux | grep "ejemplo.sh" </pre>
 <p>Descripción de parámetros:</p>
 <ul><li>
 <strong>a</strong>: muestra todos los programas</li><li>
 <strong>u</strong>: muestra en formato orientado al usuario</li><li>
 <strong>x</strong>: muestra todos los programas, sin distinguir terminales</li></ul>
-<p>También se puede usar<span class="marked">ps -def | grep "runoob.sh</span>el comando para buscar.</p>
+<p>También se puede usar<span class="marked">ps -def | grep "ejemplo.sh</span>el comando para buscar.</p>
 <p>Una vez encontrado el PID, se puede usar kill PID para eliminarlo.</p>
 <pre>kill -9  进程号PID</pre>
-<p>El siguiente comando ejecuta el script runoob.sh en el directorio root en segundo plano y redirige la entrada al archivo runoob.log:</p>
-<pre>nohup /root/runoob.sh &gt; runoob.log 2&gt;&amp;1 &amp;</pre>
-<p><strong>2&gt;&amp;1</strong>Explicación:</p><p>Redirige el error estándar 2 a la salida estándar &amp;1, y la salida estándar &amp;1 se redirige al archivo runoob.log.</p>
+<p>El siguiente comando ejecuta el script ejemplo.sh en el directorio root en segundo plano y redirige la entrada al archivo ejemplo.log:</p>
+<pre>nohup /root/ejemplo.sh &gt; ejemplo.log 2&gt;&amp;1 &amp;</pre>
+<p><strong>2&gt;&amp;1</strong>Explicación:</p><p>Redirige el error estándar 2 a la salida estándar &amp;1, y la salida estándar &amp;1 se redirige al archivo ejemplo.log.</p>
 <ul><li>0 – stdin (standard input, entrada estándar)</li><li>1 – stdout (standard output, salida estándar)</li><li>2 – stderr (standard error, salida de error estándar)</li></ul>
 <p><a href="linux-command-manual.html"><img alt="Linux 命令大全" class="navup" decoding="async" src="../images/up.gif"/>Colección completa de comandos Linux</a></p>
 Otras extensiones

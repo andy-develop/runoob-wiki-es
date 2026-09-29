@@ -403,7 +403,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 <br/>
 <span style="color: #a50"># Se especifica model, se devuelve un modelo fijo</span><br/>
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0.7</span><span style="color: Olive;">)</span><br/>
-response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">Introducción a RUNOOB (tutorial para novatos)</span><span style="color: Olive;">)</span><br/>
+response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">Introducción a EJEMPLO (tutorial para novatos)</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>response.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -418,7 +418,7 @@ from langchain.chat_models import init_chat_model
 
 # 指定了 model，返回固定模型
 model = init_chat_model("deepseek:deepseek-v4-flash", temperature=0.7)
-response = model.invoke("介绍菜鸟教程 RUNOOB")
+response = model.invoke("介绍Ejemplo")
 print(response.content)</pre></blockquote>
 <h3>Modo 2: Modelo configurable</h3>
 <p>Sin especificar model (o estableciéndolo en None), se crea un modelo que puede cambiarse dinámicamente en tiempo de ejecución:</p>
@@ -433,14 +433,14 @@ configurable_model <span style="color: Gray;">=</span> init_chat_model<span styl
 <br/>
 <span style="color: #a50"># En tiempo de ejecución se especifica el modelo mediante config</span><br/>
 response <span style="color: Gray;">=</span> configurable_model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">Introducción a RUNOOB (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Introducción a EJEMPLO (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
     config<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"model"</span>: <span style="color: #a11;">"deepseek-v4-flash"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>response.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># La misma instancia de modelo puede ejecutarse con diferentes modelos</span><br/>
 response <span style="color: Gray;">=</span> configurable_model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">Introducción a RUNOOB (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Introducción a EJEMPLO (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
     config<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"model"</span>: <span style="color: #a11;">"claude-sonnet-4-5"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>response.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
@@ -498,7 +498,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
     <span style="color: #a50"># rate_limiter=MyRateLimiter(requests_per_second=5),</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">¿Qué es RUNOOB (tutorial para novatos)?</span><span style="color: Olive;">)</span><br/>
+response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">¿Qué es Python (tutorial para novatos)?</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>response.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -536,7 +536,7 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 <br/>
 <span style="color: #a50"># Sobrescribir modelo y parámetros en tiempo de ejecución (nota el prefijo my_)</span><br/>
 response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">Introducción a RUNOOB (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">Introducción a EJEMPLO (tutorial para novatos)</span><span style="color: Gray;">,</span><br/>
     config<span style="color: Gray;">=</span><span style="color: Olive;">{</span><br/>
         <span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"my_model"</span>: <span style="color: #a11;">"deepseek:deepseek-v4-pro"</span><span style="color: Gray;">,</span>       <span style="color: #a50"># Cambiar modelo</span><br/>

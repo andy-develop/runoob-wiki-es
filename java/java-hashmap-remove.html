@@ -340,12 +340,12 @@ hashmap.remove(Object key, Object value);
 <br/>
         HashMap<span style="color: #339933;">&lt;</span><span style="color: #003399;">Integer</span>, String<span style="color: #339933;">&gt;</span> sites <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> HashMap<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1</span>, <span style="color: #0000FF;">"Google"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, <span style="color: #0000FF;">"Runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, <span style="color: #0000FF;">"Ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">3</span>, <span style="color: #0000FF;">"Taobao"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"HashMap: "</span> <span style="color: #339933;">+</span> sites<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// Elimina el mapeo con clave 2</span><br/>
-        <span style="color: #003399;">String</span> siteName <span style="color: #339933;">=</span> sites.<span style="color: #006633;">remove</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// return Runoob</span><br/>
+        <span style="color: #003399;">String</span> siteName <span style="color: #339933;">=</span> sites.<span style="color: #006633;">remove</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// return Ejemplo</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Valor de retorno: "</span> <span style="color: #339933;">+</span> siteName<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"HashMap después de la eliminación: "</span> <span style="color: #339933;">+</span> sites<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span><br/>
@@ -353,8 +353,8 @@ hashmap.remove(Object key, Object value);
 </div></div>
 <p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
-HashMap: {1=Google, 2=Runoob, 3=Taobao}
-返回值: Runoob
+HashMap: {1=Google, 2=Ejemplo, 3=Taobao}
+返回值: Ejemplo
 删除后的 HashMap: {1=Google, 3=Taobao}
 </pre>
 <p>En el ejemplo anterior, creamos un HashMap llamado sites. En el código, se utilizó el método remove() para eliminar el value correspondiente a la clave especificada key de sites, y el valor de retorno es ese value.</p><p>El método remove() con dos parámetros key y value:</p>
@@ -366,7 +366,7 @@ HashMap: {1=Google, 2=Runoob, 3=Taobao}
 <br/>
         HashMap<span style="color: #339933;">&lt;</span><span style="color: #003399;">Integer</span>, String<span style="color: #339933;">&gt;</span> sites <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> HashMap<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">1</span>, <span style="color: #0000FF;">"Google"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, <span style="color: #0000FF;">"Runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">2</span>, <span style="color: #0000FF;">"Ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         sites.<span style="color: #006633;">put</span><span style="color: #009900;">(</span><span style="color: #CC66CC;">3</span>, <span style="color: #0000FF;">"Taobao"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"HashMap: "</span> <span style="color: #339933;">+</span> sites<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
@@ -382,7 +382,7 @@ HashMap: {1=Google, 2=Runoob, 3=Taobao}
 <p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>返回值 flag1: true
 返回值 flag2: false
-删除后的 HashMap: {2=Runoob, 3=Taobao}</pre>
+删除后的 HashMap: {2=Ejemplo, 3=Taobao}</pre>
 <p>En el ejemplo anterior, creamos un HashMap llamado sites, y este HashMap contiene 3 elementos. Presta atención a estas dos líneas:</p>
 <pre>Boolean flag1 = sites.remove(1, "Google");  // 存在的键值对返回 true
 Boolean flag2 = sites.remove(2, "Weibo");   // 不存在的键值对返回 false</pre><p>El método remove() incluye key y value; si el HashMap contiene ese par clave-valor key-value, devuelve true; de lo contrario, devuelve false.</p>

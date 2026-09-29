@@ -323,19 +323,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
-</span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Nombre del sitio: {name}, dirección {url}</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-identifier">name</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">Tutorial de Runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-identifier">url</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">www.runoob.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Nombre del sitio: {name}, dirección {url}</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-identifier">name</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">Tutorial de Ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-identifier">url</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">www.example.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-comment"># Establecer parámetros mediante un diccionario</span><span class="hl-code">
-</span><span class="hl-identifier">site</span><span class="hl-code"> = {</span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Tutorial de Runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">url</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">www.runoob.com</span><span class="hl-quotes">"</span><span class="hl-code">}
+</span><span class="hl-identifier">site</span><span class="hl-code"> = {</span><span class="hl-quotes">"</span><span class="hl-string">name</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">Tutorial de Ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">url</span><span class="hl-quotes">"</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">www.example.com</span><span class="hl-quotes">"</span><span class="hl-code">}
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Nombre del sitio: {name}, dirección {url}</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-code">**</span><span class="hl-identifier">site</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-comment"># Establecer parámetros mediante índice de lista</span><span class="hl-code">
-</span><span class="hl-identifier">my_list</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Tutorial de Runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">www.runoob.com</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">my_list</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Tutorial de Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">www.example.com</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Nombre del sitio: {0</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-identifier">my_list</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># "0" es obligatorio</span></div>
 </div>
 </div>
 <p>El resultado es:</p>
-<pre>网站名：菜鸟教程, 地址 www.runoob.com
-网站名：菜鸟教程, 地址 www.runoob.com
-网站名：菜鸟教程, 地址 www.runoob.com</pre>
+<pre>网站名：Ejemplo, 地址 www.example.com
+网站名：Ejemplo, 地址 www.example.com
+网站名：Ejemplo, 地址 www.example.com</pre>
 <p>También se pueden pasar<span class="marked">str.format()</span>objetos a:</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -452,11 +452,11 @@ b
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
-</span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">La posición correspondiente de {} es {{0}}</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span></div>
+</span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">La posición correspondiente de {} es {{0}}</span><span class="hl-quotes">"</span><span class="hl-code">.</span><span class="hl-identifier">format</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span></div>
 </div>
 </div><p>El resultado es:</p>
 <pre>
-runoob 对应的位置是 {0}
+ejemplo 对应的位置是 {0}
 </pre><hr/>
 <p><a href="python-strings.html"><img alt="Python 字符串" class="navup" decoding="async" src="../images/up.gif"/>Cadenas de Python</a></p>
 Otras extensiones

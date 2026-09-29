@@ -316,17 +316,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>PostgreSQL utiliza secuencias para identificar el auto-incremento de los campos, con tipos de datos smallserial, serial y bigserial. Estos atributos son similares al atributo AUTO_INCREMENT compatible con las bases de datos MySQL.</p>
 <p>La declaración para configurar el auto-incremento usando MySQL es la siguiente:</p>
 <pre>
-CREATE TABLE IF NOT EXISTS `runoob_tbl`(
-   `runoob_id` INT UNSIGNED AUTO_INCREMENT,
-   `runoob_title` VARCHAR(100) NOT NULL,
-   `runoob_author` VARCHAR(40) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ejemplo_tbl`(
+   `ejemplo_id` INT UNSIGNED AUTO_INCREMENT,
+   `ejemplo_title` VARCHAR(100) NOT NULL,
+   `ejemplo_author` VARCHAR(40) NOT NULL,
    `submission_date` DATE,
-   PRIMARY KEY ( `runoob_id` )
+   PRIMARY KEY ( `ejemplo_id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 </pre>
 <p>MySQL utiliza el atributo AUTO_INCREMENT para identificar el auto-incremento de un campo.</p>
 <p>PostgreSQL utiliza secuencias para identificar el auto-incremento de los campos:</p>
-<pre>CREATE TABLE runoob
+<pre>CREATE TABLE ejemplo
 (
     id serial NOT NULL,
     alttext text,
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `runoob_tbl`(
 );</pre>
 <h3>Ejemplo</h3>
 <p>Supongamos que queremos crear una tabla COMPANY con los siguientes campos:</p>
-<pre>runoobdb=# CREATE TABLE COMPANY(
+<pre>ejemplodb=# CREATE TABLE COMPANY(
    ID  SERIAL PRIMARY KEY,
    NAME           TEXT      NOT NULL,
    AGE            INT       NOT NULL,

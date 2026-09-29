@@ -334,7 +334,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La expresión de tabla común (CTE) tiene una ventaja importante: puede referenciarse a sí misma, creando así una CTE recursiva. Una CTE recursiva es una expresión de tabla común que ejecuta repetidamente la CTE inicial para devolver subconjuntos de datos hasta obtener el conjunto de resultados completo.</p>
 <h3>Ejemplos</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con los siguientes datos:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -399,7 +399,7 @@ INSERT INTO COMPANY1 (SELECT * FROM moved_rows);
 <p>El resultado es el siguiente:</p>
 <pre>INSERT 0 3</pre>
 <p>En este momento, los datos de las tablas COMPANY y COMPANY1 son los siguientes:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY;
+<pre>ejemplodb=# SELECT * FROM COMPANY;
  id | name  | age |  address   | salary
 ----+-------+-----+------------+--------
   1 | Paul  |  32 | California |  20000
@@ -409,7 +409,7 @@ INSERT INTO COMPANY1 (SELECT * FROM moved_rows);
 (4 rows)
 
 
-runoobdb=# SELECT * FROM COMPANY1;
+ejemplodb=# SELECT * FROM COMPANY1;
  id | name  | age | address | salary
 ----+-------+-----+-------------+--------
   4 | Mark  |  25 | Rich-Mond   |  65000

@@ -259,22 +259,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><span class="marked">[url]</span>es el proyecto que deseas copiar.</p>
 <p>Por ejemplo, copiamos un proyecto de Github:</p>
 <div class="example"> <div class="example_code">
-$ <span style="color: #C20CB9; font-weight: bold;">git clone</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>tianqixin<span style="color: #000000; font-weight: bold;">/</span>runoob-git-test<br/>
-Cloning into <span style="color: #a10;">'runoob-git-test'</span>...<br/>
+$ <span style="color: #C20CB9; font-weight: bold;">git clone</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>tianqixin<span style="color: #000000; font-weight: bold;">/</span>ejemplo-git-test<br/>
+Cloning into <span style="color: #a10;">'ejemplo-git-test'</span>...<br/>
 remote: Enumerating objects: <span style="color: #000000;">12</span>, done.<br/>
 remote: Total <span style="color: #000000;">12</span> <span style="color: #7A0874; font-weight: bold;">(</span>delta <span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">)</span>, reused <span style="color: #000000;">0</span> <span style="color: #7A0874; font-weight: bold;">(</span>delta <span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">)</span>, pack-reused <span style="color: #000000;">12</span><br/>
 Unpacking objects: <span style="color: #000000;">100</span><span style="color: #000000; font-weight: bold;">%</span> <span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #000000;">12</span><span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">12</span><span style="color: #7A0874; font-weight: bold;">)</span>, done.<br/>
 </div></div>
-<p>Después de ejecutar los pasos anteriores, Git clonará el repositorio remoto en el local y creará una carpeta con el mismo nombre que el repositorio remoto en el directorio actual (por ejemplo, la carpeta runoob-git-test del ejemplo anterior).</p>
-<p>Una vez completados los comandos anteriores, se generará un directorio runoob-git-test en el directorio actual:</p><pre>
+<p>Después de ejecutar los pasos anteriores, Git clonará el repositorio remoto en el local y creará una carpeta con el mismo nombre que el repositorio remoto en el directorio actual (por ejemplo, la carpeta ejemplo-git-test del ejemplo anterior).</p>
+<p>Una vez completados los comandos anteriores, se generará un directorio ejemplo-git-test en el directorio actual:</p><pre>
 $ cd simplegit/
 $ ls
-README.md    runoob-test.txt    test.txt
+README.md    ejemplo-test.txt    test.txt
 </pre>
 <p>La operación anterior copiará todo el historial del proyecto.</p>
 <pre>
 $ ls -a
-.        ..        .git        README.md    runoob-test.txt    test.txt
+.        ..        .git        README.md    ejemplo-test.txt    test.txt
 $ cd .git 
 $ ls
 HEAD        description    index        logs        packed-refs
@@ -282,10 +282,10 @@ config        hooks        info        objects     
 </pre>
 <p><strong>git clone</strong>El comando copiará automáticamente todas las ramas y el historial del repositorio remoto al local; puedes usar otros comandos de Git (como git checkout, git pull, etc.) para trabajar en el repositorio local.</p>
 <p>Por defecto, Git creará tu directorio de proyecto local según el nombre del proyecto al que apunta la URL proporcionada. Normalmente es el nombre del proyecto después de la última / de la URL. Si quieres un nombre diferente, puedes añadir el nombre que desees después del comando.</p>
-<p>Por ejemplo, el siguiente ejemplo copia un proyecto git remoto, y el nombre del proyecto local es<strong>another-runoob-name</strong>：</p>
+<p>Por ejemplo, el siguiente ejemplo copia un proyecto git remoto, y el nombre del proyecto local es<strong>another-ejemplo-name</strong>：</p>
 <div class="example"><div class="example_code">
-$ <span style="color: #C20CB9; font-weight: bold;">git clone</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>tianqixin<span style="color: #000000; font-weight: bold;">/</span>runoob-git-test another-runoob-name<br/>
-Cloning into <span style="color: #a10;">'another-runoob-name'</span>...<br/>
+$ <span style="color: #C20CB9; font-weight: bold;">git clone</span> https:<span style="color: #000000; font-weight: bold;">//</span>github.com<span style="color: #000000; font-weight: bold;">/</span>tianqixin<span style="color: #000000; font-weight: bold;">/</span>ejemplo-git-test another-ejemplo-name<br/>
+Cloning into <span style="color: #a10;">'another-ejemplo-name'</span>...<br/>
 remote: Enumerating objects: <span style="color: #000000;">12</span>, done.<br/>
 remote: Total <span style="color: #000000;">12</span> <span style="color: #7A0874; font-weight: bold;">(</span>delta <span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">)</span>, reused <span style="color: #000000;">0</span> <span style="color: #7A0874; font-weight: bold;">(</span>delta <span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">)</span>, pack-reused <span style="color: #000000;">12</span><br/>
 Unpacking objects: <span style="color: #000000;">100</span><span style="color: #000000; font-weight: bold;">%</span> <span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #000000;">12</span><span style="color: #000000; font-weight: bold;">/</span><span style="color: #000000;">12</span><span style="color: #7A0874; font-weight: bold;">)</span>, done.<br/>

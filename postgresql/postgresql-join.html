@@ -318,7 +318,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>A continuación, creemos dos tablas.<strong>COMPANY</strong>y<strong>DEPARTMENT</strong>。</p>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), cuyos datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -373,9 +373,9 @@ INSERT INTO DEPARTMENT (ID, DEPT, EMP_ID) VALUES (3, 'Finance', 7 );</pre>
 <p>A continuación se muestra la sintaxis básica de CROSS JOIN:</p>
 <pre>SELECT ... FROM table1 CROSS JOIN table2 ...</pre>
 <p>Basándonos en las tablas anteriores, podemos escribir una combinación cruzada (CROSS JOIN), como se muestra a continuación:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY CROSS JOIN DEPARTMENT;</pre>
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY CROSS JOIN DEPARTMENT;</pre>
 <p>Obtenemos el siguiente resultado:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY CROSS JOIN DEPARTMENT;
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY CROSS JOIN DEPARTMENT;
  emp_id | name  |       dept
 --------+-------+--------------------
       1 | Paul  | IT Billing
@@ -411,7 +411,7 @@ FROM table1
 INNER JOIN table2
 ON table1.common_filed = table2.common_field;</pre>
 <p>Basándonos en las tablas anteriores, podemos escribir una combinación interna, como se muestra a continuación:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY INNER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY INNER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
  emp_id | name  |        dept
 --------+-------+--------------
       1 | Paul  | IT Billing
@@ -424,7 +424,7 @@ ON table1.common_filed = table2.common_field;</pre>
 <p>A continuación se muestra la sintaxis básica de la combinación externa izquierda (LEFT OUTER JOIN):</p>
 <pre>SELECT ... FROM table1 LEFT OUTER JOIN table2 ON conditional_expression ...</pre>
 <p>Basándonos en las dos tablas anteriores, podemos escribir una combinación externa izquierda, como se muestra a continuación:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY LEFT OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
  emp_id | name  |      dept
 --------+-------+----------------
       1 | Paul  | IT Billing
@@ -444,7 +444,7 @@ ON table1.common_filed = table2.common_field;</pre>
 <p>A continuación se muestra la sintaxis básica de la combinación externa derecha (RIGHT OUTER JOIN):</p>
 <pre>SELECT ... FROM table1 RIGHT OUTER JOIN table2 ON conditional_expression ...</pre>
 <p>Basándonos en las dos tablas anteriores, creamos una combinación externa derecha:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY RIGHT OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY RIGHT OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
  emp_id | name  |    dept
 --------+-------+-----------------
       1 | Paul  | IT Billing
@@ -457,7 +457,7 @@ ON table1.common_filed = table2.common_field;</pre>
 <p>A continuación se muestra la sintaxis básica de la combinación externa:</p>
 <pre>SELECT ... FROM table1 FULL OUTER JOIN table2 ON conditional_expression ...</pre>
 <p>Basándonos en las dos tablas anteriores, podemos crear una combinación externa:</p>
-<pre>runoobdb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY FULL OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
+<pre>ejemplodb=# SELECT EMP_ID, NAME, DEPT FROM COMPANY FULL OUTER JOIN DEPARTMENT ON COMPANY.ID = DEPARTMENT.EMP_ID;
  emp_id | name  |      dept
 --------+-------+-----------------
       1 | Paul  | IT Billing

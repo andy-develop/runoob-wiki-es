@@ -318,21 +318,21 @@ fruits <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-we
 <p>grepl() combinado con indexación lógica puede filtrar filas en un marco de datos:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #a50;"># Datos de usuarios que contienen email</span><br/>
-<span style="color: #05a; font-weight: bold;">df</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">data.<span style="">frame</span></span><span style="color: #080;">(</span><br/>Nombre<span style="color: #170;">=</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Zhang San"</span>, <span style="color: #a11;">"Li Si"</span>, <span style="color: #a11;">"Wang Wu"</span>, <span style="color: #a11;">"Zhao Liu"</span><span style="color: #080;">)</span>,<br/>Email<span style="color: #170;">=</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"zhang@runoob.com"</span>, <span style="color: #a11;">"li@gmail.com"</span>,<br/>
-           <span style="color: #a11;">"wang@runoob.com"</span>, <span style="color: #a11;">"zhao@yahoo.com"</span><span style="color: #080;">)</span>,<br/>
+<span style="color: #05a; font-weight: bold;">df</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">data.<span style="">frame</span></span><span style="color: #080;">(</span><br/>Nombre<span style="color: #170;">=</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Zhang San"</span>, <span style="color: #a11;">"Li Si"</span>, <span style="color: #a11;">"Wang Wu"</span>, <span style="color: #a11;">"Zhao Liu"</span><span style="color: #080;">)</span>,<br/>Email<span style="color: #170;">=</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"zhang@example.com"</span>, <span style="color: #a11;">"li@gmail.com"</span>,<br/>
+           <span style="color: #a11;">"wang@example.com"</span>, <span style="color: #a11;">"zhao@yahoo.com"</span><span style="color: #080;">)</span>,<br/>
   stringsAsFactors <span style="color: #170;">=</span> FALSE<br/>
 <span style="color: #080;">)</span><br/>
 <br/>
-<span style="color: #a50;"># Filtrar usuarios con email de runoob</span><br/>
-runoob_users <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">df</span><span style="color: #080;">[</span><span style="color: #05a; font-weight: bold;">grepl</span><span style="color: #080;">(</span><span style="color: #a11;">"runoob"</span>, <span style="color: #05a; font-weight: bold;">df</span>$Email<span style="color: #080;">)</span>, <span style="color: #080;">]</span><br/>
-<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span><span style="color: #a11;">"Usuarios con email de runoob:"</span><span style="color: #080;">)</span><br/>
-<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>runoob_users<span style="color: #080;">)</span><br/>
+<span style="color: #a50;"># Filtrar usuarios con email de ejemplo</span><br/>
+ejemplo_users <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">df</span><span style="color: #080;">[</span><span style="color: #05a; font-weight: bold;">grepl</span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo"</span>, <span style="color: #05a; font-weight: bold;">df</span>$Email<span style="color: #080;">)</span>, <span style="color: #080;">]</span><br/>
+<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span><span style="color: #a11;">"Usuarios con email de ejemplo:"</span><span style="color: #080;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>ejemplo_users<span style="color: #080;">)</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
-<pre>[1] "runoob 邮箱的用户:"
+<pre>[1] "ejemplo 邮箱的用户:"
   姓名              邮箱
-1 张三 zhang@runoob.com
-3 王五  wang@runoob.com</pre>
+1 张三 zhang@example.com
+3 王五  wang@example.com</pre>
 <p><a href="../r/r-examples.html"><img alt="R 语言实例" class="navup" decoding="async" src="../images/up.gif"/>Ejemplo del lenguaje R</a></p>
 Otras extensiones
 </div>

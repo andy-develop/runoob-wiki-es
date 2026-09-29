@@ -252,7 +252,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>Etiquetas Git</h1><p>
 <p>Si alcanzas una etapa importante y deseas recordar siempre la instantánea de un commit, puedes usar<span class="marked">git tag</span>para etiquetarlo.</p>
 <p>Las etiquetas de Git (Tag) se utilizan para marcar commits específicos en el repositorio, normalmente para publicar versiones (como v1.0, v2.0).</p></p>
-<p>Por ejemplo, si queremos publicar una versión "1.0" de nuestro proyecto runoob, podemos usar<span class="marked">git tag -a v1.0</span>el comando para etiquetar el último commit (HEAD) como "v1.0".</p><strong>
+<p>Por ejemplo, si queremos publicar una versión "1.0" de nuestro proyecto ejemplo, podemos usar<span class="marked">git tag -a v1.0</span>el comando para etiquetar el último commit (HEAD) como "v1.0".</p><strong>
 <p><span class="marked">-a</span>La opción significa</p></strong>«crear una etiqueta anotada», sin usar<span class="marked">-a</span>la opción también se puede ejecutar, pero no registra cuándo se creó la etiqueta, quién la creó ni te permite añadir una anotación a la etiqueta. Recomendamos crear siempre etiquetas anotadas.
 <p><strong>Formato de sintaxis de las etiquetas:</strong></p>
 <pre>git tag &lt;tagname&gt;</pre>
@@ -267,10 +267,10 @@ $ git tag -a v1.0
 <pre>
 *   d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
 |\  
-| * 7774248 (change_site) changed the runoob.php
+| * 7774248 (change_site) changed the ejemplo.php
 * | c68142b 修改代码
 |/  
-* c1501a2 removed test.txt、add runoob.php
+* c1501a2 removed test.txt、add ejemplo.php
 * 3e92c19 add test.txt
 * 3b58100 第一次版本提交
 </pre>
@@ -281,10 +281,10 @@ $ git tag -a v0.9 85fc7e7
 $ git log --oneline --decorate --graph
 *   d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
 |\  
-| * 7774248 (change_site) changed the runoob.php
+| * 7774248 (change_site) changed the ejemplo.php
 * | c68142b 修改代码
 |/  
-* c1501a2 removed test.txt、add runoob.php
+* c1501a2 removed test.txt、add ejemplo.php
 * 3e92c19 add test.txt
 * 3b58100 (tag: v0.9) 第一次版本提交
 </pre>
@@ -311,11 +311,11 @@ git push origin --delete &lt;tagname&gt;</pre>
 <p>Sintaxis para crear etiquetas anotadas:</p>
 <pre>
 git tag -a &lt;tagname&gt; -m "message"</pre>Por ejemplo:<pre>
-git tag -a &lt;tagname&gt; -m "runoob.com标签"
+git tag -a &lt;tagname&gt; -m "example.com标签"
 </pre>
 <p>Comando para etiquetas firmadas con PGP:</p>
 <pre>
-git tag -s &lt;tagname&gt; -m "runoob.com标签"
+git tag -s &lt;tagname&gt; -m "example.com标签"
 </pre><p>Ver información de la etiqueta:</p>
 <pre>git show &lt;tagname&gt;</pre>
 <h3>Ejemplo</h3>
@@ -323,7 +323,7 @@ git tag -s &lt;tagname&gt; -m "runoob.com标签"
 <p>Crear etiquetas ligeras y etiquetas anotadas:</p>
 <pre>
 git tag v1.0
-git tag -a v1.1 -m "runoob.com标签"</pre>
+git tag -a v1.1 -m "example.com标签"</pre>
 <p>Ver etiquetas e información de etiquetas:</p>
 <pre>
 git tag

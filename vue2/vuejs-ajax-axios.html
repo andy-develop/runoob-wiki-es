@@ -285,7 +285,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </span><span class="hl-brackets">}</span><span class="hl-code">,
   </span><span class="hl-identifier">mounted</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">axios</span><span class="hl-code">
-      .</span><span class="hl-identifier">get</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">https://www.runoob.com/try/ajax/json_demo.json</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+      .</span><span class="hl-identifier">get</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">https://www.example.com/try/ajax/json_demo.json</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
       .</span><span class="hl-identifier">then</span><span class="hl-brackets">(</span><span class="hl-identifier">response</span><span class="hl-code"> =&gt; </span><span class="hl-brackets">(</span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">info</span><span class="hl-code"> = </span><span class="hl-identifier">response</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">
       .</span><span class="hl-reserved">catch</span><span class="hl-brackets">(</span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-identifier">error</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-comment">//</span><span class="hl-comment">Manejo de errores de la solicitud</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-identifier">console</span><span class="hl-code">.</span><span class="hl-identifier">log</span><span class="hl-brackets">(</span><span class="hl-identifier">error</span><span class="hl-brackets">)</span><span class="hl-code">;
@@ -314,7 +314,7 @@ new Vue({
   },
   mounted () {
     axios
-      .get('https://www.runoob.com/try/ajax/json_demo.json')
+      .get('https://www.example.com/try/ajax/json_demo.json')
       .then(response =&gt; (this.info = response.data.sites))
       .catch(function (error) { // Manejo de errores de la solicitud
         console.log(error);
@@ -357,7 +357,7 @@ new Vue({
 </span><span class="hl-brackets">}</span><span class="hl-code">,
   </span><span class="hl-identifier">mounted</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">axios</span><span class="hl-code">
-      .</span><span class="hl-identifier">post</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">https://www.runoob.com/try/ajax/demo_axios_post.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+      .</span><span class="hl-identifier">post</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">https://www.example.com/try/ajax/demo_axios_post.php</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
       .</span><span class="hl-identifier">then</span><span class="hl-brackets">(</span><span class="hl-identifier">response</span><span class="hl-code"> =&gt; </span><span class="hl-brackets">(</span><span class="hl-reserved">this</span><span class="hl-code">.</span><span class="hl-identifier">info</span><span class="hl-code"> = </span><span class="hl-identifier">response</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">
       .</span><span class="hl-reserved">catch</span><span class="hl-brackets">(</span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-identifier">error</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-comment">//</span><span class="hl-comment">Manejo de errores de la solicitud</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-identifier">console</span><span class="hl-code">.</span><span class="hl-identifier">log</span><span class="hl-brackets">(</span><span class="hl-identifier">error</span><span class="hl-brackets">)</span><span class="hl-code">;
@@ -406,7 +406,7 @@ new Vue({
 </span><span class="hl-comment">//</span><span class="hl-comment">Solicitud GET de una imagen remota</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-identifier">axios</span><span class="hl-brackets">(</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">method</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">get</span><span class="hl-quotes">'</span><span class="hl-code">,
-  </span><span class="hl-identifier">url</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">https://static.jyshare.com/images/runoob-logo.png</span><span class="hl-quotes">'</span><span class="hl-code">,
+  </span><span class="hl-identifier">url</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">https://static.jyshare.com/images/example-logo.png</span><span class="hl-quotes">'</span><span class="hl-code">,
   </span><span class="hl-identifier">responseType</span><span class="hl-code">:</span><span class="hl-quotes">'</span><span class="hl-string">stream</span><span class="hl-quotes">'</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-brackets">)</span><span class="hl-code">
   .</span><span class="hl-identifier">then</span><span class="hl-brackets">(</span><span class="hl-reserved">function</span><span class="hl-brackets">(</span><span class="hl-identifier">response</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
@@ -735,7 +735,7 @@ axios(options);</pre>
 <h3>Entorno Node.js</h3>
 <p>En node.js, puedes usar el módulo querystring:</p>
 <pre>const querystring = require('querystring');
-axios.post('https://www.runoob.com/', querystring.stringify({ foo: 'bar' }));</pre>
+axios.post('https://www.example.com/', querystring.stringify({ foo: 'bar' }));</pre>
 <p>Por supuesto, al igual que en el navegador, también puedes usar la librería qs.</p>
 <h3>Promises</h3>
 <p>Axios depende de la implementación nativa de ES6 Promise, por lo que<a href="https://caniuse.com/promises" rel="nofollow noopener noreferrer" target="_blank">es compatible.</a>。</p><p>Si tu entorno no es compatible con ES6 Promise, puedes usar<a href="https://github.com/jakearchibald/es6-promise" rel="nofollow noopener noreferrer" target="_blank">polyfill</a>。</p>

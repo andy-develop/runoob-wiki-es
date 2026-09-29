@@ -262,7 +262,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>1、svn log</h2>
 <p>Puede mostrar toda la información. Si solo desea ver la información entre dos versiones específicas, puede usar:</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn log -r 6:8
+root@ejemplo:~/svn/ejemplo01/trunk# svn log -r 6:8
 ------------------------------------------------------------------------
 r6 | user02 | 2016-11-07 02:01:26 +0800 (Mon, 07 Nov 2016) | 1 line
 
@@ -279,7 +279,7 @@ SVN readme.
 </pre>
 <p>Si solo desea ver la información de modificación de versión de un archivo específico, puede usar<strong>svn log</strong>Ruta del archivo.</p>
 <pre>
-root@runoob:~/svn/runoob01# svn log trunk/HelloWorld.html 
+root@ejemplo:~/svn/ejemplo01# svn log trunk/HelloWorld.html 
 ------------------------------------------------------------------------
 r7 | user01 | 2016-11-07 02:23:26 +0800 (Mon, 07 Nov 2016) | 1 line
 
@@ -309,7 +309,7 @@ first file
 <p>Si desea obtener información del directorio, debe agregar<strong>-v</strong>。</p>
 <p>Si desea mostrar información del directorio limitada a N registros, use<strong>svn log -l N -v</strong>。</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn log -l 5 -v 
+root@ejemplo:~/svn/ejemplo01/trunk# svn log -l 5 -v 
 ------------------------------------------------------------------------
 r6 | user02 | 2016-11-07 02:01:26 +0800 (Mon, 07 Nov 2016) | 1 line
 Changed paths:
@@ -352,7 +352,7 @@ first file
 </ul>
 <p><strong>(1) Si usa svn diff sin ningún parámetro, comparará su archivo de trabajo con la copia "original" almacenada en caché en .svn.</strong></p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn diff
+root@ejemplo:~/svn/ejemplo01/trunk# svn diff
 Index: rules.txt
 ===================================================================
 --- rules.txt (revision 3)
@@ -379,7 +379,7 @@ Everything in moderation
 <h2>4、svn list</h2>
 <p>s<strong>vn list</strong>Puede ver los archivos en el directorio sin descargarlos al directorio local:</p>
 <pre>
-$ svn list http://192.168.0.1/runoob01
+$ svn list http://192.168.0.1/ejemplo01
 README
 branches/
 clients/

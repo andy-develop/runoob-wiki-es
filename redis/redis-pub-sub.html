@@ -286,37 +286,37 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <img decoding="async" src="../wp-content/uploads/2014/11/pubsub2.png"/>
 <hr/>
 <h2>Ejemplo</h2>
-<p>El siguiente ejemplo demuestra cómo funciona Publicación/Suscripción; se necesitan abrir dos clientes redis-cli.</p><p>En nuestro ejemplo hemos creado un canal de suscripción llamado<b>runoobChat</b>:</p>
+<p>El siguiente ejemplo demuestra cómo funciona Publicación/Suscripción; se necesitan abrir dos clientes redis-cli.</p><p>En nuestro ejemplo hemos creado un canal de suscripción llamado<b>ejemploChat</b>:</p>
 <div class="example"><h2 class="example">Primer cliente redis-cli</h2> <div class="example_code">
-redis 127.0.0.1:<span style="color: #000000;">6379</span><span style="color: #000000; font-weight: bold;">&gt;</span> SUBSCRIBE runoobChat<br/>
+redis 127.0.0.1:<span style="color: #000000;">6379</span><span style="color: #000000; font-weight: bold;">&gt;</span> SUBSCRIBE ejemploChat<br/>
 <br/>
 Reading messages... <span style="color: #7A0874; font-weight: bold;">(</span>press Ctrl-C to quit<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <span style="color: #000000;">1</span><span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #a10;">"subscribe"</span><br/>
-<span style="color: #000000;">2</span><span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #a10;">"runoobChat"</span><br/>
+<span style="color: #000000;">2</span><span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #a10;">"ejemploChat"</span><br/>
 <span style="color: #000000;">3</span><span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #7A0874; font-weight: bold;">(</span>integer<span style="color: #7A0874; font-weight: bold;">)</span> <span style="color: #000000;">1</span><br/>
 </div></div>
-<p>Ahora abrimos primero otro cliente de redis y luego publicamos dos mensajes en el mismo canal runoobChat; el suscriptor podrá recibir los mensajes.</p>
+<p>Ahora abrimos primero otro cliente de redis y luego publicamos dos mensajes en el mismo canal ejemploChat; el suscriptor podrá recibir los mensajes.</p>
 <div class="example"><h2 class="example">Segundo cliente redis-cli</h2> <div class="example_code">
-redis 127.0.0.1:6379&gt; PUBLISH runoobChat "Redis PUBLISH test"<br/>
+redis 127.0.0.1:6379&gt; PUBLISH ejemploChat "Redis PUBLISH test"<br/>
 <br/>
 (integer) 1<br/>
 <br/>
-redis 127.0.0.1:6379&gt; PUBLISH runoobChat "Learn redis by runoob.com"<br/>
+redis 127.0.0.1:6379&gt; PUBLISH ejemploChat "Learn redis by example.com"<br/>
 <br/>
 (integer) 1<br/>
 <br/># El cliente del suscriptor mostrará el siguiente mensaje<br/>
  1) "message"<br/>
-2) "runoobChat"<br/>
+2) "ejemploChat"<br/>
 3) "Redis PUBLISH test"<br/>
  1) "message"<br/>
-2) "runoobChat"<br/>
-3) "Learn redis by runoob.com"<br/>
+2) "ejemploChat"<br/>
+3) "Learn redis by example.com"<br/>
 </div></div>
 <p>La demostración en gif es la siguiente:</p>
 <ul>
 <li><p>Inicie el servicio Redis local y abra dos clientes redis-cli.</p></li>
-<li><p>En<strong>Primer cliente redis-cli</strong>Ingrese<span class="marked">SUBSCRIBE runoobChat</span>, lo que significa suscribirse al<code>runoobChat</code>canal.</p></li>
-<li><p>En<strong>Segundo cliente redis-cli</strong>Ingrese<span class="marked">PUBLISH runoobChat "Redis PUBLISH test"</span>Envíe un mensaje al canal runoobChat; en este momento, en el primer cliente redis-cli verá el mensaje de prueba enviado por el segundo cliente redis-cli.</p></li>
+<li><p>En<strong>Primer cliente redis-cli</strong>Ingrese<span class="marked">SUBSCRIBE ejemploChat</span>, lo que significa suscribirse al<code>ejemploChat</code>canal.</p></li>
+<li><p>En<strong>Segundo cliente redis-cli</strong>Ingrese<span class="marked">PUBLISH ejemploChat "Redis PUBLISH test"</span>Envíe un mensaje al canal ejemploChat; en este momento, en el primer cliente redis-cli verá el mensaje de prueba enviado por el segundo cliente redis-cli.</p></li>
 </ul>
 <p><img decoding="async" src="../wp-content/uploads/2014/11/redis-pub-sub.gif"/></p>
 <hr/><h2>Comandos de Redis Publicación/Suscripción</h2>

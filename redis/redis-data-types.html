@@ -300,12 +300,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul><li><code>SET key value</code>: Establece el valor de la clave.</li><li><code>GET key</code>: Obtiene el valor de la clave.</li><li><code>INCR key</code>: Incrementa el valor de la clave en 1.</li><li><code>DECR key</code>: Decrementa el valor de la clave en 1.</li><li><code>APPEND key value</code>: Añade el valor al final del valor de la clave.</li></ul>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; SET runoob "菜鸟教程"
+redis 127.0.0.1:6379&gt; SET ejemplo "Ejemplo"
 OK
-redis 127.0.0.1:6379&gt; GET runoob
-"菜鸟教程"
+redis 127.0.0.1:6379&gt; GET ejemplo
+"Ejemplo"
 </pre>
-<p>En el ejemplo anterior usamos de Redis el<b>SET</b>y<b>GET</b>comando. La clave es runoob, y el valor correspondiente es<strong>Tutorial para novatos</strong>。</p>
+<p>En el ejemplo anterior usamos de Redis el<b>SET</b>y<b>GET</b>comando. La clave es ejemplo, y el valor correspondiente es<strong>Tutorial para novatos</strong>。</p>
 <p><b>Nota:</b>Una clave puede almacenar hasta 512 MB.</p>
 <hr/>
 <h2>Hash (hash)</h2>
@@ -314,15 +314,15 @@ redis 127.0.0.1:6379&gt; GET runoob
 <p>Cada hash puede almacenar hasta 2^32 - 1 pares clave-valor.</p>
 <ul><h3>Comandos comunes</h3><li><code>HSET key field value</code>: Establece el valor del campo en la tabla hash.</li><li><code>HGET key field</code>: Obtiene el valor del campo en la tabla hash.</li><li><code>HGETALL key</code>: Obtiene todos los campos y valores de la tabla hash.</li><li><code>HDEL key field</code>: Elimina uno o más campos de la tabla hash.</li></ul>
 <h3>Ejemplo</h3>
-<p><span class="marked">DEL runoob</span>Se utiliza para eliminar la clave utilizada anteriormente en las pruebas; de lo contrario, se producirá un error:<strong>(error) WRONGTYPE Operation against a key holding the wrong kind of value</strong></p>
+<p><span class="marked">DEL ejemplo</span>Se utiliza para eliminar la clave utilizada anteriormente en las pruebas; de lo contrario, se producirá un error:<strong>(error) WRONGTYPE Operation against a key holding the wrong kind of value</strong></p>
 <p><img decoding="async" src="../wp-content/uploads/2014/11/B104156B-7270-4D03-8EB3-B72D4022ED78.jpg"/></p>
 <pre>
-redis 127.0.0.1:6379&gt; DEL runoob
-redis 127.0.0.1:6379&gt; HMSET runoob field1 "Hello" field2 "World"
+redis 127.0.0.1:6379&gt; DEL ejemplo
+redis 127.0.0.1:6379&gt; HMSET ejemplo field1 "Hello" field2 "World"
 "OK"
-redis 127.0.0.1:6379&gt; HGET runoob field1
+redis 127.0.0.1:6379&gt; HGET ejemplo field1
 "Hello"
-redis 127.0.0.1:6379&gt; HGET runoob field2
+redis 127.0.0.1:6379&gt; HGET ejemplo field2
 "World"
 </pre>
 <p>En el ejemplo usamos Redis<strong>HMSET, HGET</strong>comando,<b>HMSET</b>establecimos dos<span class="marked">field=&gt;value</span>pares, HGET obtiene el correspondiente<strong>field</strong>correspondiente<strong>value</strong>。
@@ -334,14 +334,14 @@ redis 127.0.0.1:6379&gt; HGET runoob field2
 <ul><li><code>LPUSH key value</code>: Inserta el valor en el encabezado de la lista.</li><li><code>RPUSH key value</code>: Inserta el valor al final de la lista.</li><li><code>LPOP key</code>: Elimina y obtiene el primer elemento de la lista.</li><li><code>RPOP key</code>: Elimina y obtiene el último elemento de la lista.</li><li><code>LRANGE key start stop</code>: Obtiene los elementos de la lista dentro del rango especificado.</li></ul>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; DEL runoob
-redis 127.0.0.1:6379&gt; lpush runoob redis
+redis 127.0.0.1:6379&gt; DEL ejemplo
+redis 127.0.0.1:6379&gt; lpush ejemplo redis
 (integer) 1
-redis 127.0.0.1:6379&gt; lpush runoob mongodb
+redis 127.0.0.1:6379&gt; lpush ejemplo mongodb
 (integer) 2
-redis 127.0.0.1:6379&gt; lpush runoob rabbitmq
+redis 127.0.0.1:6379&gt; lpush ejemplo rabbitmq
 (integer) 3
-redis 127.0.0.1:6379&gt; lrange runoob 0 10
+redis 127.0.0.1:6379&gt; lrange ejemplo 0 10
 1) "rabbitmq"
 2) "mongodb"
 3) "redis"
@@ -359,16 +359,16 @@ sadd key member
 </pre>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; DEL runoob
-redis 127.0.0.1:6379&gt; sadd runoob redis
+redis 127.0.0.1:6379&gt; DEL ejemplo
+redis 127.0.0.1:6379&gt; sadd ejemplo redis
 (integer) 1
-redis 127.0.0.1:6379&gt; sadd runoob mongodb
+redis 127.0.0.1:6379&gt; sadd ejemplo mongodb
 (integer) 1
-redis 127.0.0.1:6379&gt; sadd runoob rabbitmq
+redis 127.0.0.1:6379&gt; sadd ejemplo rabbitmq
 (integer) 1
-redis 127.0.0.1:6379&gt; sadd runoob rabbitmq
+redis 127.0.0.1:6379&gt; sadd ejemplo rabbitmq
 (integer) 0
-redis 127.0.0.1:6379&gt; smembers runoob
+redis 127.0.0.1:6379&gt; smembers ejemplo
 
 1) "redis"
 2) "rabbitmq"
@@ -387,16 +387,16 @@ zadd key score member
 </pre>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; DEL runoob
-redis 127.0.0.1:6379&gt; zadd runoob 0 redis
+redis 127.0.0.1:6379&gt; DEL ejemplo
+redis 127.0.0.1:6379&gt; zadd ejemplo 0 redis
 (integer) 1
-redis 127.0.0.1:6379&gt; zadd runoob 0 mongodb
+redis 127.0.0.1:6379&gt; zadd ejemplo 0 mongodb
 (integer) 1
-redis 127.0.0.1:6379&gt; zadd runoob 0 rabbitmq
+redis 127.0.0.1:6379&gt; zadd ejemplo 0 rabbitmq
 (integer) 1
-redis 127.0.0.1:6379&gt; zadd runoob 0 rabbitmq
+redis 127.0.0.1:6379&gt; zadd ejemplo 0 rabbitmq
 (integer) 0
-redis 127.0.0.1:6379&gt; ZRANGEBYSCORE runoob 0 1000
+redis 127.0.0.1:6379&gt; ZRANGEBYSCORE ejemplo 0 1000
 1) "mongodb"
 2) "rabbitmq"
 3) "redis"

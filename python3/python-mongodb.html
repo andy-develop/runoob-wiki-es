@@ -387,14 +387,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>Crear base de datos</h2>
 <h3>Crear una base de datos</h3>
-<p>Para crear una base de datos, se necesita utilizar el objeto MongoClient y especificar la URL de conexión y el nombre de la base de datos a crear.</p><p>En el siguiente ejemplo, creamos la base de datos runoobdb:</p>
+<p>Para crear una base de datos, se necesita utilizar el objeto MongoClient y especificar la URL de conexión y el nombre de la base de datos a crear.</p><p>En el siguiente ejemplo, creamos la base de datos ejemplodb:</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span></div>
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span></div>
 </div>
 </div>
 <blockquote><p><strong>Nota:</strong>¡En MongoDB, la base de datos solo se crea después de insertar contenido! Es decir, después de crear la base de datos, se debe crear una colección (tabla de datos) e insertar un documento (registro) para que la base de datos se cree realmente.</p></blockquote>
@@ -408,7 +408,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">dblist</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-code">.</span><span class="hl-identifier">list_database_names</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-comment"># dblist = myclient.database_names() </span><span class="hl-code">
-</span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">dblist</span><span class="hl-code">:
+</span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">dblist</span><span class="hl-code">:
   </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">¡La base de datos ya existe!</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
@@ -425,7 +425,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">runoobdb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">mycol</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span></div>
 </div>
 </div>
@@ -438,7 +438,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python3</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">pymongo</span><span class="hl-code">
 </span><span class="hl-identifier">myclient</span><span class="hl-code"> = </span><span class="hl-identifier">pymongo</span><span class="hl-code">.</span><span class="hl-identifier">MongoClient</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">mongodb://localhost:27017/</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">runoobdb</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">mydb</span><span class="hl-code"> = </span><span class="hl-identifier">myclient</span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">ejemplodb</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-identifier">collist</span><span class="hl-code"> = </span><span class="hl-identifier">mydb</span><span class="hl-code">. </span><span class="hl-identifier">list_collection_names</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-comment"># collist = mydb.collection_names()</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">sites</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-reserved">in</span><span class="hl-code"> </span><span class="hl-identifier">collist</span><span class="hl-code">:   </span><span class="hl-comment"># Determinar si la colección sites existe</span><span class="hl-code">

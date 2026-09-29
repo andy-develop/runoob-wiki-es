@@ -436,7 +436,7 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 <span style="color: #a50"># ========== 1. Preparar la base de conocimiento ==========</span><br/>
 <br/>
 knowledge_base <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"El tutorial RUNOOB fue fundado en 2013 y es una plataforma líder en China para el aprendizaje gratuito de programación."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"El tutorial EJEMPLO fue fundado en 2013 y es una plataforma líder en China para el aprendizaje gratuito de programación."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La plataforma ofrece más de 300 tutoriales, que cubren Python, Java, HTML, CSS, JavaScript, entre otros."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de Python3 tiene 30 capítulos y ha superado los 5 millones de visitas de aprendizaje. El curso es completamente gratuito."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La membresía VIP cuesta ¥99/mes, ¥799/año, e incluye cursos en video y servicio de preguntas y respuestas uno a uno."</span><span style="color: Gray;">,</span><br/>
@@ -475,7 +475,7 @@ retriever <span style="color: Gray;">=</span> vector_store.<span style="color: #
 <br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_kb<span style="color: Olive;">(</span>query: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Busca en la base de conocimiento del tutorial RUNOOB para obtener información oficial sobre la plataforma, los cursos, las políticas, etc.<br/>
+    <span style="color: #a11;">"""Busca en la base de conocimiento del tutorial EJEMPLO para obtener información oficial sobre la plataforma, los cursos, las políticas, etc.<br/>
 <br/>
     Args:<br/>query: pregunta de búsqueda o palabra clave<br/>
     """</span><br/>
@@ -561,7 +561,7 @@ orders_db <span style="color: Gray;">=</span> <span style="color: Olive;">{</spa
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>AIMessage<span style="color: Olive;">(</span><br/>
             <span style="color: Teal;">id</span><span style="color: Gray;">=</span>last.<span style="color: Teal;">id</span><span style="color: Gray;">,</span><br/>
             content<span style="color: Gray;">=</span>last.<span style="color: #05a;">content</span><br/>
-            + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>---<span style="color: #000099; font-weight: bold;">\n</span>Centro de atención al cliente de RUNOOB (Tutorial para novatos) | Horario de trabajo 9:00-18:00"</span><br/>
+            + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>---<span style="color: #000099; font-weight: bold;">\n</span>Centro de atención al cliente de EJEMPLO (Tutorial para novatos) | Horario de trabajo 9:00-18:00"</span><br/>
         <span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">None</span><br/>
 <br/>
@@ -582,7 +582,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_kb<span style="color: Gray;">,</span> query_order<span style="color: Gray;">,</span> transfer_to_human<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>content_guard<span style="color: Gray;">,</span> auto_signature<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     checkpointer<span style="color: Gray;">=</span>checkpointer<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"""Eres el asistente inteligente "Xiao Cai" de RUNOOB (Tutorial para novatos).<br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"""Eres el asistente inteligente "Xiao Cai" de EJEMPLO (Tutorial para novatos).<br/>
 <br/>## Tus responsabilidades<br/>1. Atiende calurosamente a cada usuario, usa "usted" para dirigirte<br/>2. Para preguntas sobre información de la plataforma, contenido de cursos, políticas, usa search_kb para consultar<br/>3. Para consultas de pedidos, usa la herramienta query_order<br/>4. Si encuentras problemas que no puedes resolver, usa transfer_to_human para transferir a un agente humano<br/>
 <br/>## Código de conducta<br/>- Responde de forma concisa, cada vez 2-3 frases<br/>- Si no lo sabes, consulta la base de conocimiento; si no lo encuentras, dilo honestamente<br/>- Mantén un tono amable y cordial"""</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -658,25 +658,25 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 <p>Resultado de la ejecución:</p>
 <pre>
 === 测试 1：知识库查询 ===
-您好！菜鸟教程的 **Python3 基础教程共 30 章**，完全免费，累计学习人次已超 500 万哦！如需了解其他教程，也可以随时问我～
+您好！Ejemplo的 **Python3 基础教程共 30 章**，完全免费，累计学习人次已超 500 万哦！如需了解其他教程，也可以随时问我～
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 === 测试 2：订单查询 ===
 您好！您查询的订单 **ORD-2024-001** 状态为 **已完成**。订单内容是 **VIP 年费会员**，金额 **¥799**，下单日期为 **2024-01-15**。请问还有什么可以帮您的吗？
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 === 测试 3：VIP 咨询 ===
 您好！VIP 会员有 **¥99/月** 和 **¥799/年** 两种套餐，包含视频课程和一对一答疑服务哦～请问您需要办理哪种呢？
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 === 测试 4：测试记忆 ===
 您好！您刚才问了以下三个问题：
@@ -687,20 +687,20 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
 还有什么需要我帮忙的吗？
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 === 测试 5：人工转接（HITL） ===
 [需要审批] 用户请求转接人工客服，原因：用户要求投诉，需要转接人工客服处理。是否转接？
 您好！已经为您转接人工客服，预计等待约 5 分钟。您的工单号是 **TK-8823**，请稍候，客服会尽快为您处理～
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 
 ---
-菜鸟教程 RUNOOB 客服中心 | 工作时间 9:00-18:00
+Ejemplo 客服中心 | 工作时间 9:00-18:00
 </pre>
 <hr/>
 <h2>Resumen del proyecto</h2>

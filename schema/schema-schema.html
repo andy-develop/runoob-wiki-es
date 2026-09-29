@@ -291,8 +291,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 &lt;?xml version="1.0"?&gt;<br/><br/>
 &lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"<br/>
-targetNamespace="http://www.runoob.com"<br/>
-xmlns="http://www.runoob.com"<br/>
+targetNamespace="http://www.example.com"<br/>
+xmlns="http://www.example.com"<br/>
 elementFormDefault="qualified"&gt;<br/>...<br/>
 ...<br/>&lt;/xs:schema&gt;
 </div></div>
@@ -303,13 +303,13 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema"
 <p>Indica que los elementos y tipos de datos utilizados en el schema provienen del espacio de nombres "http://www.w3.org/2001/XMLSchema". También especifica que los elementos y tipos de datos del espacio de nombres "http://www.w3.org/2001/XMLSchema" deben usar el prefijo xs:</p>
 <p>Este fragmento:</p>
 <div class="code notranslate"><div>
-targetNamespace="http://www.runoob.com"
+targetNamespace="http://www.example.com"
 </div></div>
-<p>Indica que los elementos definidos por este schema (note, to, from, heading, body) provienen del espacio de nombres: "http://www.runoob.com".</p>
+<p>Indica que los elementos definidos por este schema (note, to, from, heading, body) provienen del espacio de nombres: "http://www.example.com".</p>
 <p>Este fragmento:</p>
 <div class="code notranslate"><div>
-xmlns="http://www.runoob.com"</div></div>
-<p>Señala que el espacio de nombres predeterminado es "http://www.runoob.com".</p>
+xmlns="http://www.example.com"</div></div>
+<p>Señala que el espacio de nombres predeterminado es "http://www.example.com".</p>
 <p>Este fragmento:</p>
 <div class="code notranslate"><div>
 elementFormDefault="qualified"</div></div>
@@ -320,9 +320,9 @@ elementFormDefault="qualified"</div></div>
 <div class="code notranslate"><div>
 
 &lt;?xml version="1.0"?&gt;<br/><br/>
-&lt;note xmlns="http://www.runoob.com"<br/>
+&lt;note xmlns="http://www.example.com"<br/>
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br/>
-xsi:schemaLocation="http://www.runoob.com note.xsd"&gt;<br/><br/>
+xsi:schemaLocation="http://www.example.com note.xsd"&gt;<br/><br/>
 &lt;to&gt;Tove&lt;/to&gt;<br/>
 &lt;from&gt;Jani&lt;/from&gt;<br/>
 &lt;heading&gt;Reminder&lt;/heading&gt;<br/>
@@ -331,15 +331,15 @@ xsi:schemaLocation="http://www.runoob.com note.xsd"&gt;<br/><br/>
 </div></div>
 <p>El siguiente fragmento de código:</p>
 <div class="code notranslate"><div>
-xmlns="http://www.runoob.com"</div></div>
-<p>Especifica la declaración del espacio de nombres predeterminado. Esta declaración le indicará al validador de schema que todos los elementos utilizados en este documento XML están declarados en el espacio de nombres "http://www.runoob.com".</p>
+xmlns="http://www.example.com"</div></div>
+<p>Especifica la declaración del espacio de nombres predeterminado. Esta declaración le indicará al validador de schema que todos los elementos utilizados en este documento XML están declarados en el espacio de nombres "http://www.example.com".</p>
 <p>Una vez que tenga disponible el espacio de nombres de instancia de XML Schema:</p>
 <div class="code notranslate"><div>
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 </div></div>
 <p>Puede usar el atributo schemaLocation. Este atributo tiene dos valores. El primer valor es el espacio de nombres que se necesita usar. El segundo valor es la ubicación del XML schema que se utiliza para el espacio de nombres:</p>
 <div class="code notranslate"><div>
-xsi:schemaLocation="http://www.runoob.com note.xsd"</div></div> Otras extensiones
+xsi:schemaLocation="http://www.example.com note.xsd"</div></div> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

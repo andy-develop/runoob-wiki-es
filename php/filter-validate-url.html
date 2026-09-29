@@ -390,7 +390,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <a href="php-ref-filter.html"><img alt="PHP Filter 参考手册" class="navup" decoding="async" src="../images/up.gif"/>Manual de referencia completo de PHP Filter</a>
 <div class="example"><h2 class="example">Ejemplo</h2><p>Determina si el formato de la URL es correcto:</p> <div class="example_code">
 <span style="color: #000000; ">&lt;?php</span><br/>
-<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.runoob.com"</span><span style="color: #000000;">;</span><br/>
+<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.example.com"</span><span style="color: #000000;">;</span><br/>
 <br/>
 <span style="color: #708;">if</span> <span style="color: #164;">(</span><span style="color: #990000;">filter_var</span><span style="color: #164;">(</span><span style="color: #05a;">$url</span><span style="color: #000000;">,</span> FILTER_VALIDATE_URL<span style="color: #164;">)</span><span style="color: #164;">)</span> <span style="color: #164;">{</span><br/>
     <span style="color: #708;">echo</span><span style="color: #164;">(</span><span style="color: #a11;">"<span style="color: #006699; font-weight: bold;">$url</span>es una URL válida"</span><span style="color: #164;">)</span><span style="color: #000000;">;</span><br/>
@@ -400,7 +400,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000000; ">?&gt;</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
-<pre>https://www.runoob.com 是正确的 URL</pre>
+<pre>https://www.example.com 是正确的 URL</pre>
 <hr/>
 <h2>Definición y uso</h2>
 <p>El filtro FILTER_VALIDATE_URL valida el valor como una URL.</p>
@@ -410,9 +410,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </ul>
 <p>Posibles banderas:</p>
 <ul>
-<li>FILTER_FLAG_SCHEME_REQUIRED - requiere que la URL sea una URL compatible con RFC (por ejemplo, http://runoob)</li>
-<li>FILTER_FLAG_HOST_REQUIRED - requiere que la URL contenga un nombre de host (por ejemplo, http://www.runoob.com)</li>
-<li>FILTER_FLAG_PATH_REQUIRED - requiere que la URL tenga una ruta después del dominio (por ejemplo, www.runoob.com/example1/test2/)</li>
+<li>FILTER_FLAG_SCHEME_REQUIRED - requiere que la URL sea una URL compatible con RFC (por ejemplo, http://ejemplo)</li>
+<li>FILTER_FLAG_HOST_REQUIRED - requiere que la URL contenga un nombre de host (por ejemplo, http://www.example.com)</li>
+<li>FILTER_FLAG_PATH_REQUIRED - requiere que la URL tenga una ruta después del dominio (por ejemplo, www.example.com/example1/test2/)</li>
 <li>FILTER_FLAG_QUERY_REQUIRED - requiere que la URL contenga una cadena de consulta (por ejemplo, "example.php?name=Peter&amp;age=37")</li>
 </ul>
 <hr/>
@@ -420,7 +420,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El siguiente ejemplo elimina los caracteres no válidos de la variable $url y luego comprueba si es una URL válida:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #000000; ">&lt;?php</span><br/>
-<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.runoob.com"</span><span style="color: #000000;">;</span><br/>
+<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.example.com"</span><span style="color: #000000;">;</span><br/>
 <br/>
 <span style="color: #a50; font-style: italic;">// eliminar caracteres no válidos de la url</span><br/>
 <span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #990000;">filter_var</span><span style="color: #164;">(</span><span style="color: #05a;">$url</span><span style="color: #000000;">,</span> FILTER_SANITIZE_URL<span style="color: #164;">)</span><span style="color: #000000;">;</span><br/>
@@ -434,12 +434,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000000; ">?&gt;</span><br/>
 </div></div>
 <p>La salida del código es la siguiente:</p>
-<pre>https://www.runoob.com 是正确的 URL</pre>
+<pre>https://www.example.com 是正确的 URL</pre>
 <p>Lo siguiente comprueba si la URL contiene una cadena de consulta válida:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #000000; ">&lt;?php</span><br/>
 <span style="color: #a50; font-style: italic;">// URL sin parámetros</span><br/>
-<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.runoob.com"</span><span style="color: #000000;">;</span><br/>
+<span style="color: #05a;">$url</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.example.com"</span><span style="color: #000000;">;</span><br/>
 <br/>
 <span style="color: #708;">if</span> <span style="color: #164;">(</span><span style="color: #990000;">filter_var</span><span style="color: #164;">(</span><span style="color: #05a;">$url</span><span style="color: #000000;">,</span> FILTER_VALIDATE_URL<span style="color: #000000;">,</span> FILTER_FLAG_QUERY_REQUIRED<span style="color: #164;">)</span><span style="color: #164;">)</span> <span style="color: #164;">{</span><br/>
     <span style="color: #708;">echo</span><span style="color: #164;">(</span><span style="color: #a11;">"<span style="color: #006699; font-weight: bold;">$url</span>es una URL válida"</span><span style="color: #164;">)</span><span style="color: #000000;">;</span><br/>
@@ -450,7 +450,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #708;">echo</span> PHP_EOL<span style="color: #000000;">;</span> <span style="color: #a50; font-style: italic;">// salto de línea</span><br/>
 <br/>
 <span style="color: #a50; font-style: italic;">// URL con parámetros</span><br/>
-<span style="color: #05a;">$url2</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.runoob.com?s=php"</span><span style="color: #000000;">;</span><br/>
+<span style="color: #05a;">$url2</span> <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.example.com?s=php"</span><span style="color: #000000;">;</span><br/>
 <br/>
 <span style="color: #708;">if</span> <span style="color: #164;">(</span><span style="color: #990000;">filter_var</span><span style="color: #164;">(</span><span style="color: #05a;">$url2</span><span style="color: #000000;">,</span> FILTER_VALIDATE_URL<span style="color: #000000;">,</span> FILTER_FLAG_QUERY_REQUIRED<span style="color: #164;">)</span><span style="color: #164;">)</span> <span style="color: #164;">{</span><br/>
     <span style="color: #708;">echo</span><span style="color: #164;">(</span><span style="color: #a11;">"<span style="color: #006699; font-weight: bold;">$url2</span>es una URL válida"</span><span style="color: #164;">)</span><span style="color: #000000;">;</span><br/>
@@ -460,8 +460,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000000; ">?&gt;</span><br/>
 </div></div>
 <p>La salida del código es la siguiente:</p>
-<pre>https://www.runoob.com 是错误的 URL
-https://www.runoob.com?s=php 是正确的 URL</pre>
+<pre>https://www.example.com 是错误的 URL
+https://www.example.com?s=php 是正确的 URL</pre>
 <br/><hr/>
 <a href="php-ref-filter.html"><img alt="PHP Filter 参考手册" class="navup" decoding="async" src="../images/up.gif"/>Manual de referencia completo de PHP Filter</a> Otras extensiones
 </div>

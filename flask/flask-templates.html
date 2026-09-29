@@ -340,7 +340,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> index<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># Renderiza la plantilla templates/index.html, pasando las variables title y name</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render_template<span style="color: Olive;">(</span><span style="color: #a11;">"index.html"</span><span style="color: Gray;">,</span> title<span style="color: Gray;">=</span><span style="color: #a11;">"Inicio de RUNOOB"</span><span style="color: Gray;">,</span> name<span style="color: Gray;">=</span><span style="color: #a11;">"World"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render_template<span style="color: Olive;">(</span><span style="color: #a11;">"index.html"</span><span style="color: Gray;">,</span> title<span style="color: Gray;">=</span><span style="color: #a11;">"Inicio de EJEMPLO"</span><span style="color: Gray;">,</span> name<span style="color: Gray;">=</span><span style="color: #a11;">"World"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/user/&lt;username&gt;"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> <span style="color: #05a;">profile</span><span style="color: Olive;">(</span>username<span style="color: Olive;">)</span>:<br/>
@@ -353,7 +353,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 </div>
 <p>Los archivos de plantilla se colocan en el directorio<span class="marked">templates/</span>del proyecto:</p>
 <pre>
-runoob-flask-test/
+ejemplo-flask-test/
 ├── app.py
 └── templates/
     ├── index.html
@@ -363,7 +363,7 @@ runoob-flask-test/
 &lt;!DOCTYPE html&gt;<br/>
 &lt;html&gt;<br/>
 &lt;head&gt;<br/>
-    &lt;title&gt;{{ title }} - RUNOOB&lt;/title&gt;<br/>
+    &lt;title&gt;{{ title }} - EJEMPLO&lt;/title&gt;<br/>
 &lt;/head&gt;<br/>
 &lt;body&gt;<br/>
     &lt;h1&gt;{{ title }} &lt;/h1&gt;<br/>
@@ -405,7 +405,7 @@ runoob-flask-test/
 <span style="color: #555;">&lt;!DOCTYPE html&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{{ username }} - RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{{ username }} - EJEMPLO<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Página personal de {{ username }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
@@ -509,12 +509,12 @@ runoob-flask-test/
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"utf-8"</span>&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Tutorial Flask de RUNOOB{% endblock %}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Tutorial Flask de EJEMPLO{% endblock %}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">link</span> <span style="color: #00c;">rel</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"stylesheet"</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"{{ url_for('static', filename='style.css') }}"</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Tutorial Flask de RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h1</span>&gt;</span>Tutorial Flask de EJEMPLO<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h1</span>&gt;</span><br/>
         <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
             <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span> |<br/>
             <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
@@ -527,7 +527,7 @@ runoob-flask-test/
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>main&gt;</span><br/>
 <br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span><span style="color: #DDBB00;">&amp;copy;</span> 2026 RUNOOB.com<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span><span style="color: #DDBB00;">&amp;copy;</span> 2026 example.com<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
@@ -540,11 +540,11 @@ runoob-flask-test/
 <span style="color: #808080; font-style: italic;">&lt;!-- Ruta de archivo: templates/index.html --&gt;</span><br/>
 {% extends "base.html" %}<br/>
 <br/>
-<span style="color: #808080; font-style: italic;">&lt;!-- Sobrescribe el bloque title de la plantilla padre --&gt;</span><br/>{% block title %}Tutorial RUNOOB - Inicio{% endblock %}<br/>
+<span style="color: #808080; font-style: italic;">&lt;!-- Sobrescribe el bloque title de la plantilla padre --&gt;</span><br/>{% block title %}Tutorial EJEMPLO - Inicio{% endblock %}<br/>
 <br/>
 <span style="color: #808080; font-style: italic;">&lt;!-- Rellena el bloque content de la plantilla padre --&gt;</span><br/>
 {% block content %}<br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Bienvenido a RUNOOB<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Bienvenido a EJEMPLO<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>{{ greeting }}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
 <br/>
     {% if user %}<br/>
@@ -660,9 +660,9 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: Green;font-weight:bold;">def</span> index<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># Simula los datos de artículos en la base de datos</span><br/>
     articles <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"id"</span>: <span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: #a11;">"title"</span>: <span style="color: #a11;">"Guía de introducción a Flask"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"author"</span>: <span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"views"</span>: <span style="color: Maroon;">1024</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"id"</span>: <span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: #a11;">"title"</span>: <span style="color: #a11;">"Guía de introducción a Flask"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"author"</span>: <span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"views"</span>: <span style="color: Maroon;">1024</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">{</span><span style="color: #a11;">"id"</span>: <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> <span style="color: #a11;">"title"</span>: <span style="color: #a11;">"Explicación detallada de plantillas Jinja2"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"author"</span>: <span style="color: #a11;">"admin"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"views"</span>: <span style="color: Maroon;">512</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"id"</span>: <span style="color: Maroon;">3</span><span style="color: Gray;">,</span> <span style="color: #a11;">"title"</span>: <span style="color: #a11;">"Diseño de API RESTful"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"author"</span>: <span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"views"</span>: <span style="color: Maroon;">256</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"id"</span>: <span style="color: Maroon;">3</span><span style="color: Gray;">,</span> <span style="color: #a11;">"title"</span>: <span style="color: #a11;">"Diseño de API RESTful"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"author"</span>: <span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"views"</span>: <span style="color: Maroon;">256</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> render_template<span style="color: Olive;">(</span><span style="color: #a11;">"blog.html"</span><span style="color: Gray;">,</span> articles<span style="color: Gray;">=</span>articles<span style="color: Olive;">)</span><br/>
 </div>
@@ -672,7 +672,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <div class="example_code">
 <span style="color: #808080; font-style: italic;">&lt;!-- Ruta de archivo: templates/blog.html --&gt;</span><br/>
 {% extends "base.html" %}<br/>
-<br/>{% block title %}Blog RUNOOB{% endblock %}<br/>
+<br/>{% block title %}Blog EJEMPLO{% endblock %}<br/>
 <br/>
 {% block content %}<br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>

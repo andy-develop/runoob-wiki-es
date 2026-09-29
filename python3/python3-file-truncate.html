@@ -374,19 +374,19 @@ fileObject.truncate( [ size ])
 <p>Este método no tiene valor de retorno.</p>
 <h3>Ejemplo</h3>
 <p>El siguiente ejemplo demuestra el uso del método truncate():</p>
-<p>El contenido del archivo runoob.txt es el siguiente:</p>
+<p>El contenido del archivo ejemplo.txt es el siguiente:</p>
 <pre>
-1:www.runoob.com
-2:www.runoob.com
-3:www.runoob.com
-4:www.runoob.com
-5:www.runoob.com
+1:www.example.com
+2:www.example.com
+3:www.example.com
+4:www.example.com
+5:www.example.com
 </pre>
 <p>Leer el contenido del archivo en bucle:</p>
 <pre>
 #!/usr/bin/python3
 
-fo = open("runoob.txt", "r+")
+fo = open("ejemplo.txt", "r+")
 print ("文件名: ", fo.name)
 
 line = fo.readline()
@@ -401,17 +401,17 @@ fo.close()
 </pre>
 <p>La salida del ejemplo anterior es:</p>
 <pre>
-文件名:  runoob.txt
-读取行: 1:www.runoob.com
+文件名:  ejemplo.txt
+读取行: 1:www.example.com
 
-读取行: ['2:www.runoob.com\n', '3:www.runoob.com\n', '4:www.runoob.com\n', '5:www.runoob.com\n']
+读取行: ['2:www.example.com\n', '3:www.example.com\n', '4:www.example.com\n', '5:www.example.com\n']
 </pre>
-<p>El siguiente ejemplo trunca 10 bytes del archivo runoob.txt:</p>
+<p>El siguiente ejemplo trunca 10 bytes del archivo ejemplo.txt:</p>
 <pre>
 #!/usr/bin/python3
 
 # 打开文件
-fo = open("runoob.txt", "r+")
+fo = open("ejemplo.txt", "r+")
 print ("文件名为: ", fo.name)
 
 # 截取10个字节
@@ -425,7 +425,7 @@ fo.close()
 </pre>
 <p>La salida del ejemplo anterior es:</p>
 <pre>
-文件名为:  runoob.txt
+文件名为:  ejemplo.txt
 读取数据: 1:www.runo
 </pre>
 <hr/>

@@ -321,10 +321,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2013/12/java-string-20201208.png" width="70%"/></p>
 <p>Al usar la clase StringBuffer, cada operación se realiza sobre el propio objeto StringBuffer en lugar de generar un objeto nuevo, por lo que si necesitas modificar cadenas, se recomienda usar StringBuffer.</p>
 <p>La clase StringBuilder se introdujo en Java 5. La mayor diferencia con StringBuffer es que los métodos de StringBuilder no son seguros para subprocesos (no permiten acceso sincronizado).</p><p>Dado que StringBuilder tiene ventaja de velocidad sobre StringBuffer, se recomienda usar StringBuilder en la mayoría de los casos.</p>
-<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">RunoobTest</span><span class="hl-brackets">{</span><span class="hl-code">
+<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">EjemploTest</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-types">static</span><span class="hl-code"> </span><span class="hl-types">void</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-brackets">(</span><span class="hl-identifier">String</span><span class="hl-brackets">[</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-identifier">args</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">StringBuilder</span><span class="hl-code"> </span><span class="hl-identifier">sb</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">StringBuilder</span><span class="hl-brackets">(</span><span class="hl-number">10</span><span class="hl-brackets">)</span><span class="hl-code">;
-        </span><span class="hl-identifier">sb</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Runoob..</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+        </span><span class="hl-identifier">sb</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Ejemplo..</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
         </span><span class="hl-identifier">System</span><span class="hl-code">.</span><span class="hl-identifier">out</span><span class="hl-code">.</span><span class="hl-identifier">println</span><span class="hl-brackets">(</span><span class="hl-identifier">sb</span><span class="hl-brackets">)</span><span class="hl-code">;  
         </span><span class="hl-identifier">sb</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">!</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
         </span><span class="hl-identifier">System</span><span class="hl-code">.</span><span class="hl-identifier">out</span><span class="hl-code">.</span><span class="hl-identifier">println</span><span class="hl-brackets">(</span><span class="hl-identifier">sb</span><span class="hl-brackets">)</span><span class="hl-code">; 
@@ -337,9 +337,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2013/12/2021-03-01-java-stringbuffer.svg"/></p>
 <p>El resultado de compilar y ejecutar el ejemplo anterior es el siguiente:</p>
 <pre>
-Runoob..
-Runoob..!
-Runoob..Java!
+Ejemplo..
+Ejemplo..!
+Ejemplo..Java!
 RunooJava!
 </pre>
 <p>Sin embargo, cuando la aplicación requiere seguridad para subprocesos, se debe usar la clase StringBuffer.</p>
@@ -348,9 +348,9 @@ RunooJava!
 <div class="example_code">
 <div class="hl-main"><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-reserved">class</span><span class="hl-code"> </span><span class="hl-identifier">Test</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">public</span><span class="hl-code"> </span><span class="hl-types">static</span><span class="hl-code"> </span><span class="hl-types">void</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-brackets">(</span><span class="hl-identifier">String</span><span class="hl-brackets">[</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-identifier">args</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">StringBuffer</span><span class="hl-code"> </span><span class="hl-identifier">sBuffer</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">StringBuffer</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Sitio web oficial de Runoob:</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">StringBuffer</span><span class="hl-code"> </span><span class="hl-identifier">sBuffer</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">StringBuffer</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Sitio web oficial de Ejemplo:</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
     </span><span class="hl-identifier">sBuffer</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">www</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
-    </span><span class="hl-identifier">sBuffer</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">.runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+    </span><span class="hl-identifier">sBuffer</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">.ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
     </span><span class="hl-identifier">sBuffer</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
     </span><span class="hl-identifier">System</span><span class="hl-code">.</span><span class="hl-identifier">out</span><span class="hl-code">.</span><span class="hl-identifier">println</span><span class="hl-brackets">(</span><span class="hl-identifier">sBuffer</span><span class="hl-brackets">)</span><span class="hl-code">;  
   </span><span class="hl-brackets">}</span><span class="hl-code">
@@ -359,7 +359,7 @@ RunooJava!
 </div>
 <p>El resultado de compilar y ejecutar el ejemplo anterior es el siguiente:</p>
 <pre>
-菜鸟教程官网：www.runoob.com
+Ejemplo官网：www.example.com
 </pre>
 <h2>Métodos de StringBuffer</h2>
 <p>Los siguientes son los principales métodos admitidos por la clase StringBuffer:</p>
@@ -508,7 +508,7 @@ RunooJava!
 </tbody>
 </table>
 <p>Más contenido:</p>
-<ul><li>Clase StringBuffer:<a href="../manual/jdk11api/java.base/java/lang/StringBuffer.html" rel="noopener" target="_blank">https://www.runoob.com/manual/jdk11api/java.base/java/lang/StringBuffer.html</a></li><li>Clase StringBuilder:<a href="../manual/jdk11api/java.base/java/lang/StringBuilder.html" rel="noopener" target="_blank">https://www.runoob.com/manual/jdk11api/java.base/java/lang/StringBuilder.html</a></li></ul> Otras extensiones
+<ul><li>Clase StringBuffer:<a href="../manual/jdk11api/java.base/java/lang/StringBuffer.html" rel="noopener" target="_blank">https://www.example.com/manual/jdk11api/java.base/java/lang/StringBuffer.html</a></li><li>Clase StringBuilder:<a href="../manual/jdk11api/java.base/java/lang/StringBuilder.html" rel="noopener" target="_blank">https://www.example.com/manual/jdk11api/java.base/java/lang/StringBuilder.html</a></li></ul> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

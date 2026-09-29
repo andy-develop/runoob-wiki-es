@@ -638,7 +638,7 @@ go run github.com<span style="color: #000000; font-weight: bold;">/</span>golang
 <span style="color: Green;font-weight:bold;">from</span> bs4 <span style="color: Green;font-weight:bold;">import</span> BeautifulSoup<br/>
 <br/>
 <span style="color: #a50"># Contenido HTML de ejemplo</span><br/>
-html <span style="color: Gray;">=</span> <span style="color: #a11;">'&lt;html&gt;&lt;body&gt;&lt;h1&gt;Bienvenido&lt;/h1&gt;&lt;p class="info"&gt;RUNOOB prueba&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'</span><br/>
+html <span style="color: Gray;">=</span> <span style="color: #a11;">'&lt;html&gt;&lt;body&gt;&lt;h1&gt;Bienvenido&lt;/h1&gt;&lt;p class="info"&gt;EJEMPLO prueba&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'</span><br/>
 <br/>
 <span style="color: #a50"># Parsear HTML con BeautifulSoup</span><br/>
 soup <span style="color: Gray;">=</span> BeautifulSoup<span style="color: Olive;">(</span>html<span style="color: Gray;">,</span> <span style="color: #a11;">"html.parser"</span><span style="color: Olive;">)</span><br/>
@@ -660,7 +660,7 @@ pipx run scripts<span style="color: #000000; font-weight: bold;">/</span>extract
 </div>
 </div>
 <pre>
-RUNOOB 测试
+EJEMPLO 测试
 </pre>
 <h3>Script autocontenido de Deno</h3>
 <p>Deno usa<code>npm:</code>y<code>jsr:</code>especificadores de importación para lograr la autocontención:</p>
@@ -672,7 +672,7 @@ RUNOOB 测试
 <br/>
 <span style="color: #FF0000;">import</span> <span style="color: #339933;">*</span> as cheerio from <span style="color: #3366CC;">"npm:cheerio@1.0.0"</span><span style="color: #339933;">;</span><br/>
 <br/>
-<span style="color: #000066; font-weight: bold;">const</span> html <span style="color: #339933;">=</span> `<span style="color: #339933;">&lt;</span>html<span style="color: #339933;">&gt;&lt;</span>body<span style="color: #339933;">&gt;&lt;</span>h1<span style="color: #339933;">&gt;</span>Welcome<span style="color: #339933;">&lt;/</span>h1<span style="color: #339933;">&gt;&lt;</span>p <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">"info"</span><span style="color: #339933;">&gt;</span>Test de RUNOOB<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;&lt;/</span>body<span style="color: #339933;">&gt;&lt;/</span>html<span style="color: #339933;">&gt;</span>`<span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">const</span> html <span style="color: #339933;">=</span> `<span style="color: #339933;">&lt;</span>html<span style="color: #339933;">&gt;&lt;</span>body<span style="color: #339933;">&gt;&lt;</span>h1<span style="color: #339933;">&gt;</span>Welcome<span style="color: #339933;">&lt;/</span>h1<span style="color: #339933;">&gt;&lt;</span>p <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">"info"</span><span style="color: #339933;">&gt;</span>Test de EJEMPLO<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;&lt;/</span>body<span style="color: #339933;">&gt;&lt;/</span>html<span style="color: #339933;">&gt;</span>`<span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> $ <span style="color: #339933;">=</span> cheerio.<span style="color: #660066;">load</span><span style="color: #009900;">(</span>html<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span>$<span style="color: #009900;">(</span><span style="color: #3366CC;">"p.info"</span><span style="color: #009900;">)</span>.<span style="color: #660066;">text</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
@@ -694,7 +694,7 @@ deno run scripts<span style="color: #000000; font-weight: bold;">/</span>extract
 <br/>
 <span style="color: #FF0000;">import</span> <span style="color: #339933;">*</span> as cheerio from <span style="color: #3366CC;">"cheerio@1.0.0"</span><span style="color: #339933;">;</span><br/>
 <br/>
-<span style="color: #000066; font-weight: bold;">const</span> html <span style="color: #339933;">=</span> `<span style="color: #339933;">&lt;</span>html<span style="color: #339933;">&gt;&lt;</span>body<span style="color: #339933;">&gt;&lt;</span>h1<span style="color: #339933;">&gt;</span>Welcome<span style="color: #339933;">&lt;/</span>h1<span style="color: #339933;">&gt;&lt;</span>p <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">"info"</span><span style="color: #339933;">&gt;</span>Test de RUNOOB<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;&lt;/</span>body<span style="color: #339933;">&gt;&lt;/</span>html<span style="color: #339933;">&gt;</span>`<span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">const</span> html <span style="color: #339933;">=</span> `<span style="color: #339933;">&lt;</span>html<span style="color: #339933;">&gt;&lt;</span>body<span style="color: #339933;">&gt;&lt;</span>h1<span style="color: #339933;">&gt;</span>Welcome<span style="color: #339933;">&lt;/</span>h1<span style="color: #339933;">&gt;&lt;</span>p <span style="color: #FF0000;">class</span><span style="color: #339933;">=</span><span style="color: #3366CC;">"info"</span><span style="color: #339933;">&gt;</span>Test de EJEMPLO<span style="color: #339933;">&lt;/</span>p<span style="color: #339933;">&gt;&lt;/</span>body<span style="color: #339933;">&gt;&lt;/</span>html<span style="color: #339933;">&gt;</span>`<span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> $ <span style="color: #339933;">=</span> cheerio.<span style="color: #660066;">load</span><span style="color: #009900;">(</span>html<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span>$<span style="color: #009900;">(</span><span style="color: #3366CC;">"p.info"</span><span style="color: #009900;">)</span>.<span style="color: #660066;">text</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
@@ -718,7 +718,7 @@ gemfile <span style="color:#9966CC; font-weight:bold;">do</span><br/>
   gem <span style="color:#996600;">'nokogiri'</span><br/>
 <span style="color:#9966CC; font-weight:bold;">end</span><br/>
 <br/>
-html = <span style="color:#996600;">'&lt;html&gt;&lt;body&gt;&lt;h1&gt;Bienvenido&lt;/h1&gt;&lt;p class="info"&gt;RUNOOB prueba&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'</span><br/>
+html = <span style="color:#996600;">'&lt;html&gt;&lt;body&gt;&lt;h1&gt;Bienvenido&lt;/h1&gt;&lt;p class="info"&gt;EJEMPLO prueba&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;'</span><br/>
 doc = <span style="color:#6666ff; font-weight:bold;">Nokogiri::HTML</span><span style="color:#0053A6; font-weight:bold;">(</span>html<span style="color:#0053A6; font-weight:bold;">)</span><br/>
 <span style="color:#CC0066; font-weight:bold;">puts</span> doc.<span style="color:#9900CC;">at_css</span><span style="color:#0053A6; font-weight:bold;">(</span><span style="color:#996600;">'p.info'</span><span style="color:#0053A6; font-weight:bold;">)</span>.<span style="color:#9900CC;">text</span><br/>
 </div>

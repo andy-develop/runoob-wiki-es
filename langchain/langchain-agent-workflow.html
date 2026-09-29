@@ -389,17 +389,17 @@ step <span style="color: Gray;">=</span> <span style="color: Maroon;">0</span><b
 === Agent 执行过程追踪 ===
 
 --- 步骤 1 ---
-节点: model
+Nodo: model
   → 请求调用工具: get_weather({'city': '杭州'})
   → 请求调用工具: get_time({'city': '杭州'})
 
 --- 步骤 2 ---
-节点: tools
+Nodo: tools
   → 工具结果 [get_weather]: 晴，25°C
   → 工具结果 [get_time]: 14:30
 
 --- 步骤 3 ---
-节点: model
+Nodo: model
   → AI 回复: 杭州现在天气晴朗，气温25°C，当前时间是14:30。
 </pre>
 <p>De este rastreo se puede ver que el agente ejecutó<span class="marked">3 pasos</span>：</p>
@@ -439,19 +439,19 @@ step <span style="color: Gray;">=</span> <span style="color: Maroon;">0</span><b
 <pre>
 === stream_mode='values' ===
 
-状态 0: 1 条消息
+Estado 0: 1 条消息
   [human] 杭州天气怎么样？
 
-状态 1: 2 条消息
+Estado 1: 2 条消息
   [human] 杭州天气怎么样？
   [ai]
 
-状态 2: 3 条消息
+Estado 2: 3 条消息
   [human] 杭州天气怎么样？
   [ai]
   [tool] 晴，25°C
 
-状态 3: 4 条消息
+Estado 3: 4 条消息
   [human] 杭州天气怎么样？
   [ai]
   [tool] 晴，25°C
@@ -463,7 +463,7 @@ step <span style="color: Gray;">=</span> <span style="color: Maroon;">0</span><b
 <div class="example_code">
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">=== stream_mode='messages' (efecto de escritura en streaming) ===<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> msg_chunk<span style="color: Gray;">,</span> metadata <span style="color: Green;font-weight:bold;">in</span> agent.<span style="color: #05a;">stream</span><span style="color: Olive;">(</span><br/>
-    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Presenta RUNOOB en una frase.</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Presenta EJEMPLO en una frase.</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     stream_mode<span style="color: Gray;">=</span><span style="color: #a11;">"messages"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># msg_chunk es un AIMessageChunk, cada uno contiene solo un Token</span><br/>
@@ -534,13 +534,13 @@ result <span style="color: Gray;">=</span> agent_with_tools.<span style="color: 
 <p>Resultado de la ejecución:</p>
 <pre>
 无工具场景，消息数: 2
-回复: 菜鸟教程是一个面向初学者的编程学习平台，提供丰富的教程和实例...
+Respuesta: Ejemplo es una plataforma de aprendizaje de programación para principiantes, con tutoriales y ejemplos completos...
 
 有工具场景，消息数: 4
   [human] 搜索 Python 课程
   [ai] tool_calls: ['search_course']
   [tool] 找到 python 相关课程 3 门
-  [ai] 在菜鸟教程中搜索 "Python 课程" 找到了 3 门相关课程...
+  [ai] Buscando en Ejemplo "cursos de Python" se encontraron 3 cursos relacionados...
 </pre>
 <hr/>
 <h2>Comparación entre invoke y stream</h2>

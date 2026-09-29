@@ -296,14 +296,14 @@ Devuelve 0 cuando la key no existe o no se puede establecer un tiempo de expirac
 <h3>Ejemplo</h3>
 <p>Primero, crea una key y asígnale un valor:</p>
 <pre>
-redis 127.0.0.1:6379&gt; SET runoobkey redis
+redis 127.0.0.1:6379&gt; SET ejemplokey redis
 OK
 </pre>
 <p>Establece el tiempo de expiración para la key:</p>
 <pre>
-redis 127.0.0.1:6379&gt; EXPIREAT runoobkey 1293840000
+redis 127.0.0.1:6379&gt; EXPIREAT ejemplokey 1293840000
 (integer) 1
-redis 127.0.0.1:6379&gt; EXISTS runoobkey
+redis 127.0.0.1:6379&gt; EXISTS ejemplokey
 (integer) 0
 </pre>
 <p>

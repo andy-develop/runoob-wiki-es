@@ -291,7 +291,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// Instanciación: con la palabra clave new (en Dart 2.0+ se puede omitir new)</span><br/>
   <span style="font-weight: bold;">var</span> user1 <span style="font-weight: bold;">=</span> User<span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  user1.<span style="color: #006633;">name</span> <span style="font-weight: bold;">=</span> <span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">;</span><br/>
+  user1.<span style="color: #006633;">name</span> <span style="font-weight: bold;">=</span> <span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">;</span><br/>
   user1.<span style="color: #006633;">age</span> <span style="font-weight: bold;">=</span> <span style="color: #009999;">10</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Acceder a variables miembro y métodos</span><br/>
@@ -308,8 +308,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 <pre>
-用户名: runoob
-你好，我是 runoob，今年 10 岁。
+用户名: ejemplo
+你好，我是 ejemplo，今年 10 岁。
 是否成年: false
 你好，我是 小明，今年 20 岁。
 </pre>
@@ -340,7 +340,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  <span style="font-weight: bold;">var</span> s1 <span style="font-weight: bold;">=</span> Student<span style="">(</span><span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">10</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> s1 <span style="font-weight: bold;">=</span> Student<span style="">(</span><span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">10</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="font-weight: bold;">var</span> s2 <span style="font-weight: bold;">=</span> Student<span style="">(</span><span style="color: #d14;">'Xiaoming'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">15</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   s1.<span style="color: #006633;">printInfo</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   s2.<span style="color: #006633;">printInfo</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -348,7 +348,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 <pre>
-学生: runoob, 年龄: 10
+学生: ejemplo, 年龄: 10
 学生: 小明, 年龄: 15
 </pre>
 <h3>Constructor de azúcar sintáctico</h3>
@@ -365,18 +365,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   Student<span style="">(</span><span style="font-weight: bold;">this</span>.<span style="color: #006633;">name</span><span style="font-weight: bold;">,</span> <span style="font-weight: bold;">this</span>.<span style="color: #006633;">age</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #445588; font-weight: bold;">void</span> printInfo<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'Estudiante RUNOOB: $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'Estudiante EJEMPLO: $name, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  <span style="font-weight: bold;">var</span> s <span style="font-weight: bold;">=</span> Student<span style="">(</span><span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">10</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> s <span style="font-weight: bold;">=</span> Student<span style="">(</span><span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">10</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   s.<span style="color: #006633;">printInfo</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 </div>
 </div>
 <pre>
-RUNOOB 学生: runoob, 年龄: 10
+EJEMPLO 学生: ejemplo, 年龄: 10
 </pre>
 <h3>Constructor nombrado</h3>
 <p>Una clase puede tener varios constructores nombrados, para diferentes lógicas de inicialización.</p>
@@ -409,12 +409,12 @@ RUNOOB 学生: runoob, 年龄: 10
   <span style="font-weight: bold;">var</span> p2 <span style="font-weight: bold;">=</span> Point.<span style="color: #006633;">origin</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="font-weight: bold;">var</span> p3 <span style="font-weight: bold;">=</span> Point.<span style="color: #006633;">diagonal</span><span style="">(</span><span style="color: #009999;">5</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Coordenadas RUNOOB: $p1, $p2, $p3'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Coordenadas EJEMPLO: $p1, $p2, $p3'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 </div>
 </div>
 <pre>
-RUNOOB 坐标: Point(3.0, 4.0), Point(0.0, 0.0), Point(5.0, 5.0)
+EJEMPLO 坐标: Point(3.0, 4.0), Point(0.0, 0.0), Point(5.0, 5.0)
 </pre>
 <h3>Lista de inicialización</h3>
 <p>La lista de inicialización se ejecuta antes del cuerpo del constructor; se usa para inicializar campos final o validar parámetros.</p>
@@ -433,12 +433,12 @@ RUNOOB 坐标: Point(3.0, 4.0), Point(0.0, 0.0), Point(5.0, 5.0)
         <span style="font-weight: bold;">assert</span><span style="">(</span>birthYear <span style="font-weight: bold;">&gt;</span> <span style="color: #009999;">1900</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'El año de nacimiento no es válido'</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Validación con assert</span><br/>
 <br/>
   <span style="color: #445588; font-weight: bold;">void</span> printInfo<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'Usuario RUNOOB: $name, nacimiento: $birthYear, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'Usuario EJEMPLO: $name, nacimiento: $birthYear, edad: $age'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  <span style="font-weight: bold;">var</span> p <span style="font-weight: bold;">=</span> Person<span style="">(</span><span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2016</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> p <span style="font-weight: bold;">=</span> Person<span style="">(</span><span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2016</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   p.<span style="color: #006633;">printInfo</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// La siguiente línea hará fallar el assert (en modo de desarrollo)</span><br/>
@@ -447,7 +447,7 @@ RUNOOB 坐标: Point(3.0, 4.0), Point(0.0, 0.0), Point(5.0, 5.0)
 </div>
 </div>
 <pre>
-RUNOOB 用户: runoob, 出生: 2016, 年龄: 10
+EJEMPLO 用户: ejemplo, 出生: 2016, 年龄: 10
 </pre>
 <blockquote><p>assert solo está activo en modo de desarrollo (debug mode) y se ignora en el entorno de producción (release mode). Se utiliza para detectar errores lógicos lo antes posible durante el desarrollo.</p></blockquote>
 <hr/>
@@ -491,7 +491,7 @@ RUNOOB 用户: runoob, 出生: 2016, 年龄: 10
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  <span style="font-weight: bold;">var</span> account <span style="font-weight: bold;">=</span> BankAccount<span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'6222-0000-1234'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> account <span style="font-weight: bold;">=</span> BankAccount<span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'6222-0000-1234'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   account.<span style="color: #006633;">deposit</span><span style="">(</span><span style="color: #009999;">1000</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   account.<span style="color: #006633;">withdraw</span><span style="">(</span><span style="color: #009999;">300</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -544,7 +544,7 @@ RUNOOB 用户: runoob, 出生: 2016, 年龄: 10
   <span style="font-weight: bold;">var</span> circle <span style="font-weight: bold;">=</span> Circle<span style="">(</span><span style="color: #009999;">5</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Usar el Getter (como acceder a una propiedad normal)</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'Círculo RUNOOB: ${circle.info}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Círculo EJEMPLO: ${circle.info}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Diámetro: ${circle.diameter}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Área: ${circle.area.toStringAsFixed(2)}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
@@ -558,7 +558,7 @@ RUNOOB 用户: runoob, 出生: 2016, 年龄: 10
 </div>
 </div>
 <pre>
-RUNOOB 圆形: 圆(半径: 5.0)
+EJEMPLO 圆形: 圆(半径: 5.0)
 直径: 10.0
 面积: 78.54
 修改后直径: 20.0
@@ -585,7 +585,7 @@ RUNOOB 圆形: 圆(半径: 5.0)
 <br/>
   <span style="color: #999988; font-style: italic;">// Método estático: se invoca mediante el nombre de la clase</span><br/>
   <span style="font-weight: bold;">static</span> <span style="color: #445588; font-weight: bold;">void</span> printTotal<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'Número total de instancias RUNOOB: $totalCount'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'Número total de instancias EJEMPLO: $totalCount'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Los métodos estáticos se usan a menudo para funciones de utilidad</span><br/>
@@ -612,8 +612,8 @@ RUNOOB 圆形: 圆(半径: 5.0)
 </div>
 <pre>
 标签是否有效: true
-RUNOOB 总实例数: 1
-RUNOOB 总实例数: 3
+EJEMPLO 总实例数: 1
+EJEMPLO 总实例数: 3
 最终计数: 3
 </pre>
 <blockquote><p>Los métodos estáticos no pueden acceder a miembros de instancia (porque no hay this). Los métodos estáticos son adecuados para funciones de utilidad y lógica de fábrica, pero no debes abusar de ellos: los métodos estáticos no pueden ser sobrescritos por subclases, y su uso excesivo reduce la testabilidad y flexibilidad del código.</p></blockquote>

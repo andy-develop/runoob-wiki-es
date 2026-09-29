@@ -321,7 +321,7 @@ WHERE [condition];</pre>
 <ul><li>Podemos actualizar uno o más campos al mismo tiempo.</li><li>Podemos especificar cualquier condición en la cláusula WHERE.</li></ul>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -333,7 +333,7 @@ WHERE [condition];</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo actualizará el valor del campo salary donde id es 3 en la tabla COMPANY:</p>
-<pre>runoobdb=# UPDATE COMPANY SET SALARY = 15000 WHERE ID = 3;</pre>
+<pre>ejemplodb=# UPDATE COMPANY SET SALARY = 15000 WHERE ID = 3;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre>id | name  | age | address    | salary
 ----+-------+-----+------------+--------
@@ -346,7 +346,7 @@ WHERE [condition];</pre>
   3 | Teddy |  23 | Norway     |  15000</pre>
 <p>Según el resultado, el valor del campo salary con id 3 en la tabla COMPANY ha sido modificado.</p>
 <p>El siguiente ejemplo actualizará al mismo tiempo los valores de los campos salary y address:</p>
-<pre>runoobdb=# UPDATE COMPANY SET ADDRESS = 'Texas', SALARY=20000;</pre>
+<pre>ejemplodb=# UPDATE COMPANY SET ADDRESS = 'Texas', SALARY=20000;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre>id | name  | age | address | salary
 ----+-------+-----+---------+--------

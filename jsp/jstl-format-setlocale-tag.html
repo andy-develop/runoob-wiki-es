@@ -332,7 +332,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Un archivo de resource bundle de Java contiene una serie de pares clave-valor. El método que nos interesa implica la creación de clases Java compiladas que heredan de la clase java.util.ListResourceBundle. Debe compilar estas clases y luego colocarlas en el CLASSPATH de su aplicación web.</p>
 <p>Definamos un resource bundle predeterminado:</p>
 <pre>
-package com.runoob;
+package com.ejemplo;
 
 import java.util.ListResourceBundle;
 
@@ -349,7 +349,7 @@ public class Example_En extends ListResourceBundle {
 </pre>
 <p>Ahora, definamos otro resource bundle para el locale Spanish (español):</p>
 <pre>
-package com.runoob;
+package com.ejemplo;
 
 import java.util.ListResourceBundle;
 
@@ -376,7 +376,7 @@ public class Example_es_ES extends ListResourceBundle {
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;fmt:bundle basename="com.runoob.Example"&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example"&gt;
    &lt;fmt:message key="count.one"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.two"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.three"/&gt;&lt;br/&gt;
@@ -384,7 +384,7 @@ public class Example_es_ES extends ListResourceBundle {
 
 &lt;!-- 修改地区--&gt;
 &lt;fmt:setLocale value="es_ES"/&gt;
-&lt;fmt:bundle basename="com.runoob.Example"&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example"&gt;
    &lt;fmt:message key="count.one"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.two"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.three"/&gt;&lt;br/&gt;

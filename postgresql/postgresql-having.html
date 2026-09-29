@@ -331,7 +331,7 @@ HAVING [ conditions ]
 ORDER BY column1, column2</pre>
 <h3>Ejemplos</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con los siguientes datos:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -374,7 +374,7 @@ INSERT INTO COMPANY VALUES (10, 'James', 45, 'Texas', 5000.00);</pre>
   10 | James |  45 | Texas        |   5000
 (10 rows)</pre>
 <p>El siguiente ejemplo encontrará los datos agrupados según el valor del campo name, y cuyo recuento de nombres sea mayor que 1:</p>
-<pre>runoobdb-# SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) &gt; 1;</pre>
+<pre>ejemplodb-# SELECT NAME FROM COMPANY GROUP BY name HAVING count(name) &gt; 1;</pre>
 <p>Se obtienen los siguientes resultados:</p>
 <pre> name
 -------

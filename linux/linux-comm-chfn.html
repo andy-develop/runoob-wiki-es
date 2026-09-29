@@ -199,9 +199,9 @@ chfn [选项] [用户名]
 # 交互式修改当前用户信息
 $ chfn
 Password:
-Changing the user information for runoob
+Changing the user information for ejemplo
 Enter the new value, or press ENTER for the default
-        Full Name: runoob
+        Full Name: ejemplo
         Room Number []: A-301
         Work Phone []: 010-12345678
         Home Phone []: 010-87654321</pre>
@@ -211,36 +211,36 @@ Enter the new value, or press ENTER for the default
 <p>En scripts u operaciones por lotes, se pueden utilizar opciones para omitir los avisos interactivos y especificar directamente los nuevos valores:</p>
 <pre>
 # 一次性设置用户全名和办公室号码
-$ chfn -f "Li Si" -r "B-202" runoob</pre>
-<p>Tras la ejecución, el usuario<code>runoob</code>tendrá el nombre completo establecido como "Li Si" y el número de oficina como "B-202".</p>
+$ chfn -f "Li Si" -r "B-202" ejemplo</pre>
+<p>Tras la ejecución, el usuario<code>ejemplo</code>tendrá el nombre completo establecido como "Li Si" y el número de oficina como "B-202".</p>
 <h3>Ver la información modificada</h3>
 <p>Una vez completada la modificación, se puede<code>finger</code>ver la información actualizada mediante el comando finger:</p>
 <pre>
 # 使用 finger 查看用户信息
-$ finger runoob
-Login: runoob                    Name: Li Si
-Directory: /home/runoob          Shell: /bin/bash
+$ finger ejemplo
+Login: ejemplo                    Name: Li Si
+Directory: /home/ejemplo          Shell: /bin/bash
 Office: B-202, 010-12345678      Home Phone: 010-87654321
 Last login Tue May 19 10:30 (CST) on pts/0
 No mail.
 No Plan.</pre>
-<blockquote><p>Si el sistema no tiene instalado finger<code>finger</code>, se puede usar cat<code>getent passwd runoob</code>para ver directamente<code>/etc/passwd</code>el campo GECOS en /etc/passwd.</p></blockquote>
+<blockquote><p>Si el sistema no tiene instalado finger<code>finger</code>, se puede usar cat<code>getent passwd ejemplo</code>para ver directamente<code>/etc/passwd</code>el campo GECOS en /etc/passwd.</p></blockquote>
 <h3>Verificación leyendo directamente /etc/passwd</h3>
 <p>Las distintas partes del campo GECOS están separadas por comas, con el siguiente formato:<code>Nombre completo, Oficina, Teléfono del trabajo, Teléfono de casa, Otro</code>。</p>
 <pre>
-# 查看 /etc/passwd 中 runoob 用户的 GECOS 字段
-$ grep runoob /etc/passwd
-runoob:x:1001:1001:Li Si,B-202,010-12345678,010-87654321:/home/runoob:/bin/bash</pre>
+# 查看 /etc/passwd 中 ejemplo 用户的 GECOS 字段
+$ grep ejemplo /etc/passwd
+ejemplo:x:1001:1001:Li Si,B-202,010-12345678,010-87654321:/home/ejemplo:/bin/bash</pre>
 <p>Se puede observar que el campo GECOS (el quinto elemento separado por dos puntos) registra por completo toda la información que se acaba de establecer.</p>
 <h3>Modificar un solo campo</h3>
 <p>Se puede modificar solo un campo manteniendo el resto de la información sin cambios:</p>
 <pre>
 # 只修改全名，其他信息保持不变
-$ chfn -f "Wang Wu" runoob
+$ chfn -f "Wang Wu" ejemplo
 
 # 验证修改结果
-$ finger runoob | grep Name
-Login: runoob                    Name: Wang Wu</pre>
+$ finger ejemplo | grep Name
+Login: ejemplo                    Name: Wang Wu</pre>
 <hr/>
 <h2>Archivo de configuración de chfn</h2>
 <p><code>chfn</code>El comportamiento de chfn está controlado por<code>/etc/login.defs</code>la configuración en /etc/login.defs:</p>

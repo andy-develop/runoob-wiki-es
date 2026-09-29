@@ -284,7 +284,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Usamos el siguiente programa para describir el concepto de ámbito de variables:</p><pre>
 {
     // 在声明以前，变量 s 无效
-    let s = "runoob";
+    let s = "ejemplo";
     // 这里是变量 s 的可用范围
 }
 // 变量范围已经结束，变量 s 无效</pre><p>El ámbito de una variable es un atributo de la variable que representa su región válida. Por defecto, es válido desde la declaración de la variable hasta que finaliza el ámbito en el que se encuentra.</p>
@@ -293,11 +293,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Donde hay asignación, hay liberación; un programa no puede ocupar un recurso de memoria para siempre. Por lo tanto, el factor clave que determina si los recursos se desperdician es si el recurso se libera a tiempo.</p><p>Escribimos el programa de ejemplo de la cadena de forma equivalente en C:</p>
 <div class="example"> <div class="example_code">
 <span style="color: #000;">{</span><br/>
-    <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>s <span style="color: #339933;">=</span> strdup<span style="color: #000;">(</span><span style="color: #a11;">"runoob"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>s <span style="color: #339933;">=</span> strdup<span style="color: #000;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #000066;">free</span><span style="color: #000;">(</span>s<span style="color: #000;">)</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// Liberar el recurso s</span><br/>
 <span style="color: #000;">}</span><br/>
 </div></div>
-<p>Obviamente, Rust no llama a la función free para liberar el recurso de la cadena s (sé que esto es incorrecto en C, porque "runoob" no está en el montón; aquí se supone que lo está). La razón por la que Rust no muestra explícitamente el paso de liberación es que, cuando finaliza el ámbito de la variable, el compilador de Rust añade automáticamente una llamada a la función de liberación de recursos.</p><p>Este mecanismo parece muy sencillo: no es más que ayudar al programador a añadir una llamada a una función de liberación de recursos en el lugar adecuado. Pero este mecanismo simple puede resolver eficazmente uno de los problemas de programación que más dolores de cabeza ha causado a los programadores en la historia.</p>
+<p>Obviamente, Rust no llama a la función free para liberar el recurso de la cadena s (sé que esto es incorrecto en C, porque "ejemplo" no está en el montón; aquí se supone que lo está). La razón por la que Rust no muestra explícitamente el paso de liberación es que, cuando finaliza el ámbito de la variable, el compilador de Rust añade automáticamente una llamada a la función de liberación de recursos.</p><p>Este mecanismo parece muy sencillo: no es más que ayudar al programador a añadir una llamada a una función de liberación de recursos en el lugar adecuado. Pero este mecanismo simple puede resolver eficazmente uno de los problemas de programación que más dolores de cabeza ha causado a los programadores en la historia.</p>
 <hr/>
 <h2>Formas de interacción entre variables y datos</h2>
 <p>Las principales formas de interacción entre variables y datos son el movimiento (Move) y la clonación (Clone):</p>

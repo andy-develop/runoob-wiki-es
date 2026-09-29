@@ -320,14 +320,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example_code">
 
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Operar elementos dentro del iframe'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/iframe-demo'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/iframe-demo'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Localizar el iframe y luego localizar elementos dentro de él</span><br/>
   <span style="color: #000066; font-weight: bold;">const</span> iframe <span style="color: #339933;">=</span> page.<span style="color: #660066;">frameLocator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'#my-iframe'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Operar elementos dentro del iframe</span><br/>
   await iframe.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'button'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Enviar'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-  await iframe.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await iframe.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Realizar aserciones dentro del iframe</span><br/>
   await expect<span style="color: #009900;">(</span>iframe.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Operación exitosa'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -389,7 +389,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Manejo 
       await dialog.<span style="color: #660066;">dismiss</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">(</span>dialog.<span style="color: #660066;">type</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">===</span> <span style="color: #3366CC;">'prompt'</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
       <span style="color: #006600; font-style: italic;">// Ingresar contenido personalizado</span><br/>
-      await dialog.<span style="color: #660066;">accept</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Contenido ingresado por RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+      await dialog.<span style="color: #660066;">accept</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Contenido ingresado por EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #009900;">}</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #009900;">{</span><br/>
       <span style="color: #006600; font-style: italic;">// Confirmar directamente otros tipos</span><br/>
       await dialog.<span style="color: #660066;">accept</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -428,7 +428,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Manejar
   <span style="color: #000066; font-weight: bold;">const</span> popup <span style="color: #339933;">=</span> await popupPromise<span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Operar en la nueva página</span><br/>
-  await expect<span style="color: #009900;">(</span>popup<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await expect<span style="color: #009900;">(</span>popup<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   await popup.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'button'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Aceptar'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Cerrar la nueva página</span><br/>
@@ -450,7 +450,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Escucha
     <span style="color: #006600; font-style: italic;">// Operar en la nueva página</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #006600; font-style: italic;">// Las acciones posteriores que abran nuevas ventanas activarán automáticamente el listener anterior</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>

@@ -100,13 +100,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El comando ls se utiliza para ver la lista de directorios en una ruta determinada.</p>
 <p>Formato:</p><pre>ls path</pre>
 <ul><li>
-<strong>path</strong>: representa la ruta.</li></ul>El siguiente ejemplo consulta<strong>/runoob</strong>nodo:<pre>$ ls /runoob</pre>
+<strong>path</strong>: representa la ruta.</li></ul>El siguiente ejemplo consulta<strong>/ejemplo</strong>nodo:<pre>$ ls /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-01.png"/></p>
 <h3>Comando ls2</h3>
 <p>El comando ls2 se utiliza para ver la lista de directorios en una ruta determinada; muestra más detalles que el comando ls.</p>
 <p>Formato:</p><pre>ls2 path</pre>
 <ul><li>
-<strong>path</strong>: representa la ruta.</li></ul>El siguiente ejemplo consulta<strong>/runoob</strong>nodo:<pre>$ ls2 /runoob</pre>
+<strong>path</strong>: representa la ruta.</li></ul>El siguiente ejemplo consulta<strong>/ejemplo</strong>nodo:<pre>$ ls2 /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-02.png"/></p>
 <h3>Comando get</h3>
 <p>El comando get se utiliza para obtener los datos y la información de estado de un nodo.</p>
@@ -118,10 +118,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>[watch]</strong>: escucha eventos en el nodo.</li>
 </ul><p>Para este ejemplo, abra dos terminales al mismo tiempo.</p>
 <p>Terminal 1:</p>
-<pre>$ get /runoob watch</pre>
+<pre>$ get /ejemplo watch</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-03.png"/></p>
 <p>En el terminal 2, modifique este nodo:</p>
-<pre>$ set /runoob 1</pre>
+<pre>$ set /ejemplo 1</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-04.png"/></p>
 <p>El terminal 1 muestra automáticamente el evento NodeDataChanged:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-05.png"/></p>
@@ -134,8 +134,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>
 <strong>[watch]</strong>: escucha eventos en el nodo.</li>
 </ul>
-<p>El siguiente ejemplo consulta<strong>/runoob</strong>el estado del nodo:</p>
-<pre>$ stat /runoob</pre>
+<p>El siguiente ejemplo consulta<strong>/ejemplo</strong>el estado del nodo:</p>
+<pre>$ stat /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-06.png"/></p>
 <h3>Comando create</h3>
 <p>El comando create se utiliza para crear un nodo y asignarle un valor.</p>
@@ -144,7 +144,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>
 <strong>[-s] [-e]</strong>: -s y -e son opcionales; -s representa un nodo secuencial, -e representa un nodo temporal. Tenga en cuenta que -s y -e se pueden usar al mismo tiempo, y que un nodo temporal no puede crear subnodos.</li>
 <li>
-<strong>path</strong>: especifica la ruta del nodo a crear, por ejemplo<strong>/runoob</strong>。
+<strong>path</strong>: especifica la ruta del nodo a crear, por ejemplo<strong>/ejemplo</strong>。
 </li>
 <li>
 <strong>data</strong>: los datos que se almacenarán en este nodo.</li>
@@ -152,7 +152,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>acl</strong>: relacionado con los permisos de acceso; por defecto es world, lo que significa que todo el mundo puede acceder.</li>
 </ul>
 <p>El siguiente ejemplo agrega un nodo secuencial temporal:</p>
-<pre>$ create -s -e /runoob 0</pre>
+<pre>$ create -s -e /ejemplo 0</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-07.png"/></p>
 <p>El nodo creado es a la vez secuencial y temporal.</p>
 <h3>Comando set</h3>
@@ -167,13 +167,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>[version]</strong>: opcional, número de versión (se puede usar como bloqueo optimista).</li>
 </ul>
 <p>El siguiente ejemplo abre dos terminales; también se puede operar en el mismo terminal:</p>
-<pre>$ get /runoob</pre>
+<pre>$ get /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-08.png"/></p>
 <p>Como se ve en la figura siguiente, solo con el número de versión correcto se puede configurar correctamente:</p>
-<pre>$ set /runoob 0 1
-$ set /runoob 0 2
-$ set /runoob 0 10
-$ set /runoob 0 6</pre>
+<pre>$ set /ejemplo 0 1
+$ set /ejemplo 0 2
+$ set /ejemplo 0 10
+$ set /ejemplo 0 6</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-09.png"/></p>
 <h3>Comando delete</h3>
 <p>El comando delete se utiliza para eliminar un nodo.</p>
@@ -184,11 +184,11 @@ $ set /runoob 0 6</pre>
 <li>
 <strong>[version]</strong>: opcional, número de versión (igual que en el comando set).</li>
 </ul>
-<p>El siguiente ejemplo elimina<strong>/runoob</strong>los subnodos del nodo:</p>
+<p>El siguiente ejemplo elimina<strong>/ejemplo</strong>los subnodos del nodo:</p>
 <pre>
-$ ls /runoob
-$ delete /runoob/child
-$ get /runoob/child
+$ ls /ejemplo
+$ delete /ejemplo/child
+$ get /ejemplo/child
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/bs-command-10.png"/></p>
 </div>

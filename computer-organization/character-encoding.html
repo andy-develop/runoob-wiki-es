@@ -389,7 +389,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <tr><td>tú</td><td>U+4F60</td><td>Carácter chino CJK «你»</td><td>Ideogramas unificados CJK</td></tr>
 <tr><td>Bien</td><td>U+597D</td><td>Carácter chino CJK «好»</td><td>Ideogramas unificados CJK</td></tr>
 <tr><td>hello</td><td>U+68D2</td><td>«Hola» en árabe</td><td>Escritura árabe</td></tr>
-<tr><td>runoob</td><td>U+E0001</td><td>Etiqueta de idioma</td><td>Bloque Tags</td></tr>
+<tr><td>ejemplo</td><td>U+E0001</td><td>Etiqueta de idioma</td><td>Bloque Tags</td></tr>
 </table>
 <p>Nota: Unicode es solo un «esquema de numeración» — te dice «el número del carácter X es U+XXXX».</p>
 <p>No especifica «cómo se almacena el número U+XXXX en un archivo».</p>
@@ -802,7 +802,7 @@ analyzeEncoding();
 <ol>
 <li>Ingresa texto solo en inglés y observa que cada carácter ocupa solo 1 byte.</li>
 <li>Ingresa chino y observa que cada carácter chino ocupa 3 bytes.</li>
-<li>Entrada<code>Hello RUNOOB</code>Observa si los códigos ASCII de cada letra están en orden consecutivo.</li>
+<li>Entrada<code>Hello EJEMPLO</code>Observa si los códigos ASCII de cada letra están en orden consecutivo.</li>
 <li>Compara el binario de las letras mayúsculas y minúsculas, y encuentra los pares de letras correspondientes que difieren en solo 1 bit (como A y a).</li>
 </ol>
 <hr/>
@@ -837,7 +837,7 @@ analyzeEncoding();
 <div class="example">
 <h2 class="example">Ejemplos</h2>
 <div class="example_code">
-<span style="color: #a50"># Demostración completa de codificación de caracteres (demostración de runoob)</span><br/>
+<span style="color: #a50"># Demostración completa de codificación de caracteres (demostración de ejemplo)</span><br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">sys</span><br/>
 <br/>
 <span style="color: #a50"># =============================================</span><br/>
@@ -848,7 +848,7 @@ analyzeEncoding();
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># ord() obtiene el punto de código Unicode del carácter</span><br/>
-text <span style="color: Gray;">=</span> <span style="color: #a11;">"Hello RUNOOB"</span><br/>
+text <span style="color: Gray;">=</span> <span style="color: #a11;">"Hello EJEMPLO"</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> ch <span style="color: Green;font-weight:bold;">in</span> text:<br/>
     cp <span style="color: Gray;">=</span> <span style="color: Teal;">ord</span><span style="color: Olive;">(</span>ch<span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"  '{ch}' → punto de código U+{cp:04X} (decimal {cp})"</span><span style="color: Olive;">)</span><br/>
@@ -867,7 +867,7 @@ text <span style="color: Gray;">=</span> <span style="color: #a11;">"Hello RUNOO
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración 2: cadena → secuencia de bytes UTF-8"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 <br/>
-texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"A"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Hello"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Hola"</span><span style="color: Gray;">,</span> <span style="color: #a11;">Tutorial de RUNOOB</span><span style="color: Olive;">]</span><br/>
+texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"A"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Hello"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Hola"</span><span style="color: Gray;">,</span> <span style="color: #a11;">Tutorial de EJEMPLO</span><span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">for</span> text <span style="color: Green;font-weight:bold;">in</span> texts:<br/>
     utf8_bytes <span style="color: Gray;">=</span> text.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'utf-8'</span><span style="color: Olive;">)</span><br/>
@@ -901,7 +901,7 @@ texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><s
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración 3: codificación GBK (comparación con UTF-8)"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 <br/>
-text <span style="color: Gray;">=</span> <span style="color: #a11;">"Hola RUNOOB"</span><br/>
+text <span style="color: Gray;">=</span> <span style="color: #a11;">"Hola EJEMPLO"</span><br/>
 utf8_bytes <span style="color: Gray;">=</span> text.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'utf-8'</span><span style="color: Olive;">)</span><br/>
 gbk_bytes <span style="color: Gray;">=</span> text.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'gbk'</span><span style="color: Olive;">)</span><br/>
 <br/>
@@ -956,7 +956,7 @@ decoded_latin <span style="color: Gray;">=</span> utf8_data.<span style="color: 
 <br/>
 <span style="color: #a50"># Prueba</span><br/>
 test_cases <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"Hello RUNOOB"</span>.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'utf-8'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"Hello EJEMPLO"</span>.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'utf-8'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Hola mundo"</span>.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'utf-8'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Computadora"</span>.<span style="color: #05a;">encode</span><span style="color: Olive;">(</span><span style="color: #a11;">'gbk'</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>

@@ -343,10 +343,10 @@ mongod --setParameter textSearchEnabled=true
 <p>Considera los siguientes datos de documentos de la colección posts, que contienen el contenido del artículo (post_text) y las etiquetas (tags):</p>
 <pre>
 {
-   "post_text": "enjoy the mongodb articles on Runoob",
+   "post_text": "enjoy the mongodb articles on Ejemplo",
    "tags": [
       "mongodb",
-      "runoob"
+      "ejemplo"
    ]
 }
 </pre>
@@ -356,21 +356,21 @@ mongod --setParameter textSearchEnabled=true
 </pre>
 <hr/>
 <h2>Usar un índice de texto completo</h2>
-<p>Ahora que hemos creado un índice de texto completo en post_text, podemos buscar la palabra clave runoob en el artículo:</p>
+<p>Ahora que hemos creado un índice de texto completo en post_text, podemos buscar la palabra clave ejemplo en el artículo:</p>
 <pre>
-&gt;db.posts.find({$text:{$search:"runoob"}})
+&gt;db.posts.find({$text:{$search:"ejemplo"}})
 </pre>
-<p>El siguiente comando devuelve los datos de documentos que contienen la palabra clave runoob:</p>
+<p>El siguiente comando devuelve los datos de documentos que contienen la palabra clave ejemplo:</p>
 <pre>
 { 
    "_id" : ObjectId("53493d14d852429c10000002"), 
-   "post_text" : "enjoy the mongodb articles on Runoob", 
-   "tags" : [ "mongodb", "runoob" ]
+   "post_text" : "enjoy the mongodb articles on Ejemplo", 
+   "tags" : [ "mongodb", "ejemplo" ]
 }
 </pre>
 <p>Si usas una versión anterior de MongoDB, puedes usar el siguiente comando:</p>
 <pre>
-&gt;db.posts.runCommand("text",{search:"runoob"})
+&gt;db.posts.runCommand("text",{search:"ejemplo"})
 </pre>
 <p>El uso de índices de texto completo puede mejorar la eficiencia de búsqueda.</p>
 <hr/>

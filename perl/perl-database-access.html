@@ -311,7 +311,7 @@ undef   NULL 值表示未定义
 <hr/>
 <h2>Conexión a la base de datos</h2>
 <p>A continuación, usaremos la base de datos MySQL como ejemplo para demostrar cómo Perl opera sobre la base de datos.</p>
-<p>Aquí creamos la base de datos RUNOOB en MySQL, la tabla de datos es Websites, la estructura de la tabla y los datos se muestran en la siguiente figura:</p><p>
+<p>Aquí creamos la base de datos EJEMPLO en MySQL, la tabla de datos es Websites, la estructura de la tabla y los datos se muestran en la siguiente figura:</p><p>
 <img decoding="async" src="../wp-content/uploads/2016/06/FCB5CC2E-384A-4A73-BA02-C9AC4FCC94CB.jpg"/></p>
 <p>Descargar esta tabla de datos:<a download="" href="https://static.jyshare.com/download/websites_perl.sql">https://static.jyshare.com/download/websites_perl.sql</a></p>
 <p>A continuación, usamos el siguiente código para conectar a la base de datos:</p>
@@ -324,7 +324,7 @@ undef   NULL 值表示未定义
  
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$host</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">localhost</span><span class="hl-quotes">"</span><span class="hl-code">;         </span><span class="hl-comment"># Dirección del host</span><span class="hl-code">
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$driver</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">mysql</span><span class="hl-quotes">"</span><span class="hl-code">;           </span><span class="hl-comment"># Tipo de interfaz, por defecto es localhost</span><span class="hl-code">
-</span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$database</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">"</span><span class="hl-code">;        </span><span class="hl-comment"># Base de datos</span><span class="hl-code">
+</span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$database</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">"</span><span class="hl-code">;        </span><span class="hl-comment"># Base de datos</span><span class="hl-code">
 </span><span class="hl-comment"># Manejador del objeto controlador</span><span class="hl-code">
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$dsn</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">DBI:</span><span class="hl-var">$driver</span><span class="hl-string">:database=</span><span class="hl-var">$database</span><span class="hl-string">:</span><span class="hl-var">$host</span><span class="hl-quotes">"</span><span class="hl-code">;  
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$userid</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">root</span><span class="hl-quotes">"</span><span class="hl-code">;            </span><span class="hl-comment"># Nombre de usuario de la base de datos</span><span class="hl-code">
@@ -401,7 +401,7 @@ $dbh-&gt;commit or die $DBI::errstr;
 </pre>
 <p>La aplicación también puede vincular parámetros de salida y entrada. El siguiente ejemplo ejecuta una consulta de actualización reemplazando los marcadores de posición ? con variables:</p>
 <pre>
-$name = '菜鸟教程';
+$name = 'Ejemplo';
 
 my $sth = $dbh-&gt;prepare("UPDATE Websites
                         SET   alexa = alexa + 1 

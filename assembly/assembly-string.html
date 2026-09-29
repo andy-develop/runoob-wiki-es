@@ -281,7 +281,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Método 1: Cadena estándar</span><br/>
-    str1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>     <span style="color: #666666; font-style: italic;">; Estilo C: terminada en null</span><br/>
+    str1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, ejemplo!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span>     <span style="color: #666666; font-style: italic;">; Estilo C: terminada en null</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método 2: Con salto de línea</span><br/>
     str2 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Line1'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><span style="color: #339933;">,</span> <span style="color: #7F007F;">'Line2'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
@@ -310,7 +310,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
     <span style="color: #666666; font-style: italic;">; Método A: Cálculo en tiempo de compilación (para cadenas constantes)</span><br/>
-    msg1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, RUNOOB!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    msg1 <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, EJEMPLO!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
     msg1_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg1          <span style="color: #666666; font-style: italic;">; Cálculo automático en tiempo de compilación</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">; Método B: Cadena terminada en null (cálculo en tiempo de ejecución)</span><br/>
@@ -362,7 +362,7 @@ strlen_done<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Dos implementaciones de copia de cadenas</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
-    src <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob source string'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    src <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'ejemplo source string'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
     src_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> src<br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.bss</span><br/>
@@ -422,9 +422,9 @@ copy_loop<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Comparar si dos cadenas son iguales</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
-    str_a <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
-    str_b <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
-    str_c <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    str_a <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'ejemplo'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    str_b <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'ejemplo'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
+    str_c <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'EJEMPLO'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0</span><br/>
     eq_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Strings are equal'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
     eq_len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> eq_msg<br/>
     ne_msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Strings are NOT equal'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
@@ -510,7 +510,7 @@ exit<span style="color: #339933;">:</span><br/>
 <span style="color: #666666; font-style: italic;">; Convertir las letras minúsculas de la cadena a mayúsculas</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob! Welcome to Assembly.'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, ejemplo! Welcome to Assembly.'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
     len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
@@ -560,8 +560,8 @@ next_char<span style="color: #339933;">:</span><br/>
 $ nasm -f elf32 case_convert.asm -o case_convert.o
 $ ld -m elf_i386 case_convert.o -o case_convert
 $ ./case_convert
-Hello, runoob! Welcome to Assembly.
-HELLO, RUNOOB! WELCOME TO ASSEMBLY.
+Hello, ejemplo! Welcome to Assembly.
+HELLO, EJEMPLO! WELCOME TO ASSEMBLY.
 </pre>
 <blockquote><p>El indicador de dirección DF determina la dirección de las operaciones con cadenas: cuando DF=0, ESI/EDI se incrementan (hacia adelante); cuando DF=1, se decrementan (hacia atrás). Se usa<code>CLD</code>para limpiar DF, y se usa<code>STD</code>para establecer DF. Antes de llamar a funciones C o llamadas al sistema, se debe asegurar que DF=0 (requisito de cdecl).</p></blockquote>
 Otras extensiones

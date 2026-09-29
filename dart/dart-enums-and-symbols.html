@@ -294,7 +294,7 @@ enum Status <span style="">{</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Iterar sobre todos los valores del enum</span><br/>
   <span style="font-weight: bold;">for</span> <span style="">(</span><span style="font-weight: bold;">var</span> status <span style="font-weight: bold;">in</span> Status.<span style="color: #006633;">values</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'Estado RUNOOB: $status, índice: ${status.index}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'Estado EJEMPLO: $status, índice: ${status.index}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Obtener el valor del enum a partir de una cadena</span><br/>
@@ -323,10 +323,10 @@ enum Status <span style="">{</span><br/>
 当前状态: Status.pending
 索引值: 0
 所有状态: [Status.pending, Status.approved, Status.rejected, Status.cancelled]
-RUNOOB 状态: Status.pending, 索引: 0
-RUNOOB 状态: Status.approved, 索引: 1
-RUNOOB 状态: Status.rejected, 索引: 2
-RUNOOB 状态: Status.cancelled, 索引: 3
+EJEMPLO 状态: Status.pending, 索引: 0
+EJEMPLO 状态: Status.approved, 索引: 1
+EJEMPLO 状态: Status.rejected, 索引: 2
+EJEMPLO 状态: Status.cancelled, 索引: 3
 解析出的状态: Status.approved
 订单待处理
 </pre>
@@ -372,7 +372,7 @@ enum HttpStatus <span style="">{</span><br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="font-weight: bold;">var</span> status <span style="font-weight: bold;">=</span> HttpStatus.<span style="color: #006633;">notFound</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Estado HTTP RUNOOB: $status'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Estado HTTP EJEMPLO: $status'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Código de estado: ${status.code}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Mensaje: ${status.message}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'¿Es exitoso?: ${status.isSuccess}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -390,9 +390,9 @@ enum HttpStatus <span style="">{</span><br/>
 </div>
 </div>
 <pre>
-RUNOOB HTTP 状态: HttpStatus.notFound
+EJEMPLO HTTP 状态: HttpStatus.notFound
 状态码: 404
-消息: 资源未找到
+Mensaje: 资源未找到
 是否成功: false
 是否客户端错误: true
 找到状态: 资源已创建
@@ -409,19 +409,19 @@ RUNOOB HTTP 状态: HttpStatus.notFound
 <div class="example_code">
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// Crear un Symbol usando el prefijo #</span><br/>
-  Symbol sym1 <span style="font-weight: bold;">=</span> #runoob<span style="font-weight: bold;">;</span><br/>
+  Symbol sym1 <span style="font-weight: bold;">=</span> #ejemplo<span style="font-weight: bold;">;</span><br/>
   Symbol sym2 <span style="font-weight: bold;">=</span> #helloWorld<span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Symbol 1: $sym1'</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Symbol("runoob")</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Symbol 1: $sym1'</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Symbol("ejemplo")</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Symbol 2: $sym2'</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Symbol("helloWorld")</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Comparación de Symbols</span><br/>
-  Symbol sym3 <span style="font-weight: bold;">=</span> #runoob<span style="font-weight: bold;">;</span><br/>
+  Symbol sym3 <span style="font-weight: bold;">=</span> #ejemplo<span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'sym1 == sym3: ${sym1 == sym3}'</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// true</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Symbol se puede usar como clave de un Map</span><br/>
   <span style="font-weight: bold;">var</span> metadata <span style="font-weight: bold;">=</span> <span style="">{</span><br/>
-    #author<span style="font-weight: bold;">:</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">,</span><br/>
+    #author<span style="font-weight: bold;">:</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">,</span><br/>
     #version<span style="font-weight: bold;">:</span> <span style="color: #d14;">'1.0.0'</span><span style="font-weight: bold;">,</span><br/>
     #description<span style="font-weight: bold;">:</span> <span style="color: #d14;">'Tutorial de Dart'</span><span style="font-weight: bold;">,</span><br/>
   <span style="">}</span><span style="font-weight: bold;">;</span><br/>
@@ -430,12 +430,12 @@ RUNOOB HTTP 状态: HttpStatus.notFound
 </div>
 </div>
 <pre>
-Symbol 1: Symbol("runoob")
+Symbol 1: Symbol("ejemplo")
 Symbol 2: Symbol("helloWorld")
 sym1 == sym3: true
-作者: RUNOOB
+作者: EJEMPLO
 </pre>
-<blockquote><p>Los Symbols generalmente se minifican después de la compilación de Dart, por lo que no debes depender del resultado de Symbol("runoob").toString() para tomar decisiones lógicas. El uso correcto de Symbol es realizar operaciones de reflexión mediante la librería dart:mirrors.</p></blockquote>
+<blockquote><p>Los Symbols generalmente se minifican después de la compilación de Dart, por lo que no debes depender del resultado de Symbol("ejemplo").toString() para tomar decisiones lógicas. El uso correcto de Symbol es realizar operaciones de reflexión mediante la librería dart:mirrors.</p></blockquote>
 <hr/>
 <h2>Rune y Unicode</h2>
 <p>Rune es el tipo que representa los puntos de código Unicode en Dart.</p>
@@ -446,7 +446,7 @@ sym1 == sym3: true
 <div class="example_code">
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// Obtener los puntos de código Unicode de una cadena</span><br/>
-  String text <span style="font-weight: bold;">=</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+  String text <span style="font-weight: bold;">=</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Carácter: $text'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Lista de puntos de código: ${text.runes.toList()}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
@@ -469,7 +469,7 @@ sym1 == sym3: true
 </div>
 </div>
 <pre>
-字符: RUNOOB
+字符: EJEMPLO
 码点列表: [82, 85, 78, 79, 79, 66]
 R -&gt; U+0052
 U -&gt; U+0055

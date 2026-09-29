@@ -384,7 +384,7 @@ Hello, World!
       </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-var">$key</span><span class="hl-string"> : </span><span class="hl-var">$value</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">
-</span><span class="hl-var">%hash</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> =&gt; </span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">age</span><span class="hl-quotes">'</span><span class="hl-code"> =&gt; </span><span class="hl-number">3</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-var">%hash</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> =&gt; </span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">age</span><span class="hl-quotes">'</span><span class="hl-code"> =&gt; </span><span class="hl-number">3</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-comment"># Pasar el hash</span><span class="hl-code">
 </span><span class="hl-identifier">PrintHash</span><span class="hl-brackets">(</span><span class="hl-var">%hash</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
@@ -393,7 +393,7 @@ Hello, World!
 <p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
 age : 3
-name : runoob
+name : ejemplo
 </pre>
 <hr/>
 <h2>Valor de retorno de una subrutina</h2>
@@ -466,7 +466,7 @@ sub somefunc {
 </span><span class="hl-reserved">sub</span><span class="hl-code"> </span><span class="hl-identifier">PrintHello</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-comment"># Variable privada de la función PrintHello</span><span class="hl-code">
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$string</span><span class="hl-code">;
-   </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">Hello, Runoob!</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">Hello, Ejemplo!</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Cadena dentro de la función:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-comment"># Llamar a la función</span><span class="hl-code">
@@ -475,7 +475,7 @@ sub somefunc {
 </div>
 </div><p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
-函数内字符串：Hello, Runoob!
+函数内字符串：Hello, Ejemplo!
 函数外字符串：Hello, World!
 </pre>
 <hr/>
@@ -489,13 +489,13 @@ sub somefunc {
 </span><span class="hl-comment"># Variable global</span><span class="hl-code">
 </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">Hello, World!</span><span class="hl-quotes">"</span><span class="hl-code">;
  
-</span><span class="hl-reserved">sub</span><span class="hl-code"> </span><span class="hl-identifier">PrintRunoob</span><span class="hl-brackets">{</span><span class="hl-code">
+</span><span class="hl-reserved">sub</span><span class="hl-code"> </span><span class="hl-identifier">PrintEjemplo</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-comment"># Variable privada de la función PrintHello</span><span class="hl-code">
 </span><span class="hl-reserved">local</span><span class="hl-code"> </span><span class="hl-var">$string</span><span class="hl-code">;
-   </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">Hello, Runoob!</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">Hello, Ejemplo!</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-comment"># Subrutina llamada por la subrutina</span><span class="hl-code">
 </span><span class="hl-identifier">PrintMe</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
-   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Valor de la cadena dentro de la función PrintRunoob:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Valor de la cadena dentro de la función PrintEjemplo:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">sub</span><span class="hl-code"> </span><span class="hl-identifier">PrintMe</span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Valor de la cadena dentro de la función PrintMe:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
@@ -504,14 +504,14 @@ sub somefunc {
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Valor de la cadena dentro de la función PrintHello:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-comment"># Llamada a la función</span><span class="hl-code">
-</span><span class="hl-identifier">PrintRunoob</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">PrintEjemplo</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-identifier">PrintHello</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Valor de la cadena fuera de la función:</span><span class="hl-var">$string</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
 </div>
 </div><p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
-PrintMe 函数内字符串值：Hello, Runoob!
-PrintRunoob 函数内字符串值：Hello, Runoob!
+PrintMe 函数内字符串值：Hello, Ejemplo!
+PrintEjemplo 函数内字符串值：Hello, Ejemplo!
 PrintHello 函数内字符串值：Hello, World!
 函数外部字符串值：Hello, World!
 </pre>

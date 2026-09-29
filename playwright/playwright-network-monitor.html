@@ -330,7 +330,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Monitor
     <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Imprimir todas las solicitudes</span><br/>
   console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'La página realizó un total de '</span><span style="color: #339933;">,</span> requests.<span style="color: #660066;">length</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">' solicitudes'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -352,7 +352,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Monitor
     <span style="color: #009900;">}</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
@@ -369,7 +369,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Esperan
   <span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Activar la búsqueda</span><br/>
-  await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Buscar tutorial de RUNOOB'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Playwright'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Buscar tutorial de EJEMPLO'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Playwright'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   await page.<span style="color: #660066;">keyboard</span>.<span style="color: #660066;">press</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Enter'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Esperar la respuesta de API</span><br/>
@@ -397,7 +397,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Escucha
     <span style="color: #009900;">}</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Verificar que la página no tenga errores de JavaScript</span><br/>
   expect<span style="color: #009900;">(</span>consoleErrors<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveLength</span><span style="color: #009900;">(</span><span style="color: #CC0000;">0</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -443,7 +443,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Solicit
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Solicitud POST de API'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> request <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #000066; font-weight: bold;">const</span> response <span style="color: #339933;">=</span> await request.<span style="color: #660066;">post</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://jsonplaceholder.typicode.com/posts'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
     data<span style="color: #339933;">:</span> <span style="color: #009900;">{</span><br/>
-      title<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Tutorial de RUNOOB'</span><span style="color: #339933;">,</span><br/>
+      title<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Tutorial de EJEMPLO'</span><span style="color: #339933;">,</span><br/>
       body<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Ejemplo de prueba de API con Playwright'</span><span style="color: #339933;">,</span><br/>
       userId<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span><br/>
     <span style="color: #009900;">}</span><span style="color: #339933;">,</span><br/>
@@ -452,7 +452,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Solicit
   expect<span style="color: #009900;">(</span>response.<span style="color: #660066;">status</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBe</span><span style="color: #009900;">(</span><span style="color: #CC0000;">201</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #000066; font-weight: bold;">const</span> data <span style="color: #339933;">=</span> await response.<span style="color: #660066;">json</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-  expect<span style="color: #009900;">(</span>data.<span style="color: #660066;">title</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBe</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tutorial de RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  expect<span style="color: #009900;">(</span>data.<span style="color: #660066;">title</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBe</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tutorial de EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
@@ -464,7 +464,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Solicit
 <span style="color: #FF0000;">export</span> <span style="color: #000066; font-weight: bold;">default</span> defineConfig<span style="color: #009900;">(</span><span style="color: #009900;">{</span><br/>
   use<span style="color: #339933;">:</span> <span style="color: #009900;">{</span><br/>
     <span style="color: #006600; font-style: italic;">// URL base para las solicitudes de API</span><br/>
-    baseURL<span style="color: #339933;">:</span> <span style="color: #3366CC;">'https://api.runoob.com'</span><span style="color: #339933;">,</span><br/>
+    baseURL<span style="color: #339933;">:</span> <span style="color: #3366CC;">'https://api.example.com'</span><span style="color: #339933;">,</span><br/>
 <br/>
     <span style="color: #006600; font-style: italic;">// Encabezados de solicitud predeterminados</span><br/>
     extraHTTPHeaders<span style="color: #339933;">:</span> <span style="color: #009900;">{</span><br/>
@@ -485,13 +485,13 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Solicit
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Preparación de datos con API + verificación en el navegador'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> request<span style="color: #339933;">,</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Paso 1: Crear un dato de prueba mediante la API</span><br/>
   <span style="color: #000066; font-weight: bold;">const</span> response <span style="color: #339933;">=</span> await request.<span style="color: #660066;">post</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'/api/todos'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
-    data<span style="color: #339933;">:</span> <span style="color: #009900;">{</span> title<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Tarea de prueba de RUNOOB'</span><span style="color: #339933;">,</span> completed<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">false</span> <span style="color: #009900;">}</span><span style="color: #339933;">,</span><br/>
+    data<span style="color: #339933;">:</span> <span style="color: #009900;">{</span> title<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Tarea de prueba de EJEMPLO'</span><span style="color: #339933;">,</span> completed<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">false</span> <span style="color: #009900;">}</span><span style="color: #339933;">,</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #000066; font-weight: bold;">const</span> todo <span style="color: #339933;">=</span> await response.<span style="color: #660066;">json</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Paso 2: Verificar en el navegador que los datos se muestran</span><br/>
   await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'/todos'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-  await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tarea de prueba de RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tarea de prueba de EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Paso 3: Limpiar los datos mediante la API</span><br/>
   await request.<span style="color: #000066; font-weight: bold;">delete</span><span style="color: #009900;">(</span>`<span style="color: #339933;">/</span>api<span style="color: #339933;">/</span>todos<span style="color: #339933;">/</span>$<span style="color: #009900;">{</span>todo.<span style="color: #660066;">id</span><span style="color: #009900;">}</span>`<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>

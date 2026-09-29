@@ -370,26 +370,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #006600; font-style: italic;">// Usa console.log para imprimir los eventos del ciclo de vida y observa el orden entre apply y effect</span><br/>
 <span style="color: #FF0000;">export</span> <span style="color: #000066; font-weight: bold;">function</span> apply<span style="color: #009900;">(</span>ctx<span style="color: #339933;">:</span> Context<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Se llama a apply: el complemento pasa de LOADING a ACTIVE</span><br/>
-  console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob plugin loading'</span><span style="color: #009900;">)</span><br/>
+  console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo plugin loading'</span><span style="color: #009900;">)</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Registra un efecto: la función de limpieza devuelta se ejecuta al desinstalar</span><br/>
   ctx.<span style="color: #660066;">effect</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
     <span style="color: #006600; font-style: italic;">// Registro del efecto completado (apply aún está en ejecución)</span><br/>
-    console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob effect registered'</span><span style="color: #009900;">)</span><br/>
+    console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo effect registered'</span><span style="color: #009900;">)</span><br/>
     <span style="color: #006600; font-style: italic;">// Devuelve el disposer: se llama al desinstalar el complemento</span><br/>
-    <span style="color: #000066; font-weight: bold;">return</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob effect cleaned up'</span><span style="color: #009900;">)</span><br/>
+    <span style="color: #000066; font-weight: bold;">return</span> <span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo effect cleaned up'</span><span style="color: #009900;">)</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div>
 </div>
 <p>Salida al cargar:</p>
 <pre>
-runoob plugin loading
-runoob effect registered
+ejemplo plugin loading
+ejemplo effect registered
 </pre>
 <p>Salida al desinstalar:</p>
 <pre>
-runoob effect cleaned up
+ejemplo effect cleaned up
 </pre>
 <p>Se puede ver que apply se ejecuta primero, luego se llega al registro del effect, y el disposer devuelto se llama en la fase de desinstalación.</p>
 <hr/>

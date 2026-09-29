@@ -245,12 +245,12 @@ a = 10, b = 3
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  <span style="color: #445588; font-weight: bold;">int</span> runoobScore <span style="font-weight: bold;">=</span> <span style="color: #009999;">95</span><span style="font-weight: bold;">;</span><br/>
+  <span style="color: #445588; font-weight: bold;">int</span> ejemploScore <span style="font-weight: bold;">=</span> <span style="color: #009999;">95</span><span style="font-weight: bold;">;</span><br/>
   <span style="color: #445588; font-weight: bold;">int</span> passLine <span style="font-weight: bold;">=</span> <span style="color: #009999;">60</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Puntuación: $runoobScore, línea de aprobado: $passLine'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'¿Aprobado? ${runoobScore &gt;= passLine}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'¿Puntuación perfecta? ${runoobScore == 100}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Puntuación: $ejemploScore, línea de aprobado: $passLine'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'¿Aprobado? ${ejemploScore &gt;= passLine}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'¿Puntuación perfecta? ${ejemploScore == 100}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Las cadenas también se pueden comparar</span><br/>
   String a <span style="font-weight: bold;">=</span> <span style="color: #d14;">'apple'</span><span style="font-weight: bold;">;</span><br/>
@@ -258,8 +258,8 @@ a = 10, b = 3
   print<span style="">(</span><span style="color: #d14;">"'$a' == '$b'? ${a == b}"</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// == determina si los valores son iguales</span><br/>
-  String c <span style="font-weight: bold;">=</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
-  String d <span style="font-weight: bold;">=</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+  String c <span style="font-weight: bold;">=</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
+  String d <span style="font-weight: bold;">=</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">"'$c' == '$d'? ${c == d}"</span><span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// true (el contenido es el mismo)</span><br/>
 <span style="">}</span><br/>
 </div>
@@ -269,7 +269,7 @@ a = 10, b = 3
 及格了吗? true
 满分了吗? false
 'apple' == 'banana'? false
-'RUNOOB' == 'RUNOOB'? true
+'EJEMPLO' == 'EJEMPLO'? true
 </pre>
 <blockquote><p>En Dart, == compara si los valores de dos objetos son iguales, no la dirección de referencia. Esto es diferente de Java: en Dart no necesitas usar el método equals() para comparar cadenas.</p></blockquote>
 <hr/>
@@ -368,7 +368,7 @@ a = 10, b = 3
   score <span style="font-weight: bold;">*</span><span style="font-weight: bold;">=</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Bonus duplicado: $score'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  print<span style="">(</span><span style="color: #d14;">'Puntuación final de RUNOOB: $score'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Puntuación final de EJEMPLO: $score'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 </div>
 </div>
@@ -377,7 +377,7 @@ a = 10, b = 3
 答对第2题: 20
 答错1题: 15
 奖励翻倍: 30
-RUNOOB 最终得分: 30
+EJEMPLO 最终得分: 30
 </pre>
 <hr/>
 <h2>Operadores condicionales: ?? y ??=</h2>
@@ -392,11 +392,11 @@ RUNOOB 最终得分: 30
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// ?? Fusión de nulos</span><br/>
   String<span style="font-weight: bold;">?</span> nickname<span style="font-weight: bold;">;</span><br/>
-  String displayName <span style="font-weight: bold;">=</span> nickname <span style="font-weight: bold;">??</span> <span style="color: #d14;">'Usuario de RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span>displayName<span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Usuario de RUNOOB</span><br/>
+  String displayName <span style="font-weight: bold;">=</span> nickname <span style="font-weight: bold;">??</span> <span style="color: #d14;">'Usuario de EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span>displayName<span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Usuario de EJEMPLO</span><br/>
 <br/>
   nickname <span style="font-weight: bold;">=</span> <span style="color: #d14;">'Xiao R'</span><span style="font-weight: bold;">;</span><br/>
-  displayName <span style="font-weight: bold;">=</span> nickname <span style="font-weight: bold;">??</span> <span style="color: #d14;">'Usuario de RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+  displayName <span style="font-weight: bold;">=</span> nickname <span style="font-weight: bold;">??</span> <span style="color: #d14;">'Usuario de EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span>displayName<span style="">)</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// Xiao R</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// La fusión ?? encadenada también funciona</span><br/>
@@ -416,7 +416,7 @@ RUNOOB 最终得分: 30
 </div>
 </div>
 <pre>
-RUNOOB 用户
+EJEMPLO 用户
 小R
 默认值
 0
@@ -432,7 +432,7 @@ RUNOOB 用户
 <br/>
   <span style="color: #999988; font-style: italic;">// Sintaxis: condición ? valor si es verdadero : valor si es falso</span><br/>
   String result <span style="font-weight: bold;">=</span> score <span style="font-weight: bold;">&gt;=</span> <span style="color: #009999;">60</span> <span style="font-weight: bold;">?</span> <span style="color: #d14;">'Aprobado'</span> <span style="font-weight: bold;">:</span> <span style="color: #d14;">'Reprobado'</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'Resultado del examen de RUNOOB: $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Resultado del examen de EJEMPLO: $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Se puede anidar (pero no se recomienda más de dos niveles; la legibilidad empeora)</span><br/>
   String grade <span style="font-weight: bold;">=</span> score <span style="font-weight: bold;">&gt;=</span> <span style="color: #009999;">90</span> <span style="font-weight: bold;">?</span> <span style="color: #d14;">'Excelente'</span> <span style="font-weight: bold;">:</span> score <span style="font-weight: bold;">&gt;=</span> <span style="color: #009999;">60</span> <span style="font-weight: bold;">?</span> <span style="color: #d14;">'Aprobado'</span> <span style="font-weight: bold;">:</span> <span style="color: #d14;">Suspenso</span><span style="font-weight: bold;">;</span><br/>
@@ -441,7 +441,7 @@ RUNOOB 用户
 </div>
 </div>
 <pre>
-RUNOOB 考试结果: 及格
+EJEMPLO 考试结果: 及格
 评级: 及格
 </pre>
 <hr/>
@@ -452,7 +452,7 @@ RUNOOB 考试结果: 及格
 <div class="example_code">
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// is: comprobación de tipo</span><br/>
-  <span style="font-weight: bold;">var</span> name <span style="font-weight: bold;">=</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> name <span style="font-weight: bold;">=</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'¿Es name un String? ${name is String}'</span><span style="">)</span><span style="font-weight: bold;">;</span>   <span style="color: #999988; font-style: italic;">// true</span><br/>
   print<span style="">(</span><span style="color: #d14;">'¿Es name un int? ${name is int}'</span><span style="">)</span><span style="font-weight: bold;">;</span>         <span style="color: #999988; font-style: italic;">// false</span><br/>
 <br/>

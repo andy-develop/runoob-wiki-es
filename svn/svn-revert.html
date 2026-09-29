@@ -257,18 +257,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La operación `svn revert` deshará cualquier cambio local en archivos o directorios.</p>
 <p>Modificamos el archivo `readme` y vemos el estado del archivo.<p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn status
+root@ejemplo:~/svn/ejemplo01/trunk# svn status
 M       readme
 </pre>
 <p>En este momento descubrimos que el cambio es incorrecto y queremos deshacerlo. Usamos `svn revert` en el archivo `readme` para volver al estado no modificado.</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn revert readme 
+root@ejemplo:~/svn/ejemplo01/trunk# svn revert readme 
 Reverted 'readme'
 </pre>
 <p>Volvemos a ver el estado.</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn status 
-root@runoob:~/svn/runoob01/trunk# 
+root@ejemplo:~/svn/ejemplo01/trunk# svn status 
+root@ejemplo:~/svn/ejemplo01/trunk# 
 </pre>
 <p>Después de la operación `revert`, el archivo `readme` vuelve a su estado original. La operación `revert` no solo puede restaurar un solo archivo, sino también un directorio completo. Para restaurar un directorio se usa el comando `-R`, como se muestra a continuación.</p>
 <pre>

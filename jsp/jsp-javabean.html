@@ -319,7 +319,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Una propiedad de solo lectura solo proporciona el método getPropertyName(), y una propiedad de solo escritura solo proporciona el método setPropertyName().</p><hr/>
 <h2>Ejemplo de programa JavaBean</h2><p>Este es el archivo StudentBean.java:</p>
 <pre>
-package com.runoob;
+package com.ejemplo;
 
 public class StudentsBean implements java.io.Serializable
 {
@@ -354,7 +354,7 @@ public class StudentsBean implements java.io.Serializable
 <pre>
 $ javac StudentsBean.java
 </pre>
-<p>Después de compilar, obtenga<strong>StudentBean.class</strong>el archivo, y cópielo en<strong>&lt;proyecto JSP&gt;/WebContent/WEB-INF/classes/com/runoob</strong>, como se muestra en la siguiente figura:</p>
+<p>Después de compilar, obtenga<strong>StudentBean.class</strong>el archivo, y cópielo en<strong>&lt;proyecto JSP&gt;/WebContent/WEB-INF/classes/com/ejemplo</strong>, como se muestra en la siguiente figura:</p>
 <p><img decoding="async" src="../wp-content/uploads/2014/01/DDBE2229-22EF-45A5-B64A-EA1B74C7F43E.jpg" width="70%"/></p>
 <hr/>
 <h2>Acceder a JavaBean</h2><p>La etiqueta &lt;jsp:useBean&gt; puede declarar un JavaBean en JSP y luego usarlo. Después de la declaración, el objeto JavaBean se convierte en una variable de script, que se puede acceder mediante elementos de script u otras etiquetas personalizadas. El formato de sintaxis de la etiqueta &lt;jsp:useBean&gt; es el siguiente:</p><pre>
@@ -401,7 +401,7 @@ $ javac StudentsBean.java
 &lt;body&gt;
 
 &lt;jsp:useBean id="students" 
-                    class="com.runoob.StudentsBean"&gt; 
+                    class="com.ejemplo.StudentsBean"&gt; 
    &lt;jsp:setProperty name="students" property="firstName"
                     value="小强"/&gt;
    &lt;jsp:setProperty name="students" property="lastName" 

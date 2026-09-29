@@ -338,11 +338,11 @@ $ echo "extension=mongodb.so" &gt;&gt; `/usr/local/php7/bin/php --ini | grep "Lo
 $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
 </pre>
 <h3>Insertar datos</h3>
-<p>Inserta el dato con nombre "Runoob" en la colección runoob de la base de datos test.</p>
+<p>Inserta el dato con nombre "Ejemplo" en la colección ejemplo de la base de datos test.</p>
 <pre>
 &lt;?php
 $bulk = new MongoDB\Driver\BulkWrite;
-$document = ['_id' =&gt; new MongoDB\BSON\ObjectID, 'name' =&gt; '菜鸟教程'];
+$document = ['_id' =&gt; new MongoDB\BSON\ObjectID, 'name' =&gt; 'Ejemplo'];
 
 $_id= $bulk-&gt;insert($document);
 
@@ -350,7 +350,7 @@ var_dump($_id);
 
 $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");  
 $writeConcern = new MongoDB\Driver\WriteConcern(MongoDB\Driver\WriteConcern::MAJORITY, 1000);
-$result = $manager-&gt;executeBulkWrite('test.runoob', $bulk, $writeConcern);
+$result = $manager-&gt;executeBulkWrite('test.ejemplo', $bulk, $writeConcern);
 ?&gt;
 </pre>
 <h3>Leer datos</h3>
@@ -361,7 +361,7 @@ $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
 
 // 插入数据
 $bulk = new MongoDB\Driver\BulkWrite;
-$bulk-&gt;insert(['x' =&gt; 1, 'name'=&gt;'菜鸟教程', 'url' =&gt; 'http://www.runoob.com']);
+$bulk-&gt;insert(['x' =&gt; 1, 'name'=&gt;'Ejemplo', 'url' =&gt; 'http://www.example.com']);
 $bulk-&gt;insert(['x' =&gt; 2, 'name'=&gt;'Google', 'url' =&gt; 'http://www.google.com']);
 $bulk-&gt;insert(['x' =&gt; 3, 'name'=&gt;'taobao', 'url' =&gt; 'http://www.taobao.com']);
 $manager-&gt;executeBulkWrite('test.sites', $bulk);
@@ -403,7 +403,7 @@ stdClass Object
 $bulk = new MongoDB\Driver\BulkWrite;
 $bulk-&gt;update(
     ['x' =&gt; 2],
-    ['$set' =&gt; ['name' =&gt; '菜鸟工具', 'url' =&gt; 'tool.runoob.com']],
+    ['$set' =&gt; ['name' =&gt; 'Ejemplo工具', 'url' =&gt; 'tool.example.com']],
     ['multi' =&gt; false, 'upsert' =&gt; false]
 );
 
@@ -412,7 +412,7 @@ $writeConcern = new MongoDB\Driver\WriteConcern(MongoDB\Driver\WriteConcern::MAJ
 $result = $manager-&gt;executeBulkWrite('test.sites', $bulk, $writeConcern);
 ?&gt;
 </pre>
-<p>A continuación, usamos el comando "db.sites.find()" para ver el cambio de los datos; el dato con x igual a 2 se ha convertido en "Runoob Tool":</p>
+<p>A continuación, usamos el comando "db.sites.find()" para ver el cambio de los datos; el dato con x igual a 2 se ha convertido en "Ejemplo Tool":</p>
 <p><img decoding="async" src="../wp-content/uploads/2016/06/EFFDBCDE-1E7E-40AD-BE88-37CD57070E25.jpg"/></p>
 <h3>Eliminar datos</h3>
 <p>El siguiente ejemplo elimina los datos con x igual a 1 y x igual a 2; presta atención a la diferencia del parámetro limit:</p>

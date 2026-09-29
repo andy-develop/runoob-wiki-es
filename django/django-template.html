@@ -169,7 +169,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <table class="reference"><thead><tr><th>Función</th><th>Sintaxis/Ejemplo</th><th>Caso de uso</th></tr></thead><tbody><tr><td><strong>Renderizado de variables</strong></td><td><code>{{ variable }}</code></td><td>Mostrar datos dinámicamente</td></tr><tr><td><strong>Control lógico</strong></td><td><code>{% if %}</code>, <code>{% for %}</code></td><td>Renderizado condicional/bucles</td></tr><tr><td><strong>Herencia de plantillas</strong></td><td><code>{% extends %}</code>, <code>{% block %}</code></td><td>Evitar estructuras HTML repetidas</td></tr><tr><td><strong>Archivos estáticos</strong></td><td><code>{% static 'path' %}</code></td><td>Cargar CSS/JS/imágenes</td></tr><tr><td><strong>Filtros personalizados</strong></td><td><code>@register.filter</code></td><td>Ampliar las funciones de las plantillas</td></tr></tbody></table>
 <hr/>
 <h2>Ejemplo de aplicación de plantillas</h2>
-<p>Continuando con el proyecto del capítulo anterior, crearemos el directorio templates dentro del directorio HelloWorld y el archivo runoob.html. La estructura completa del directorio es la siguiente:</p>
+<p>Continuando con el proyecto del capítulo anterior, crearemos el directorio templates dentro del directorio HelloWorld y el archivo ejemplo.html. La estructura completa del directorio es la siguiente:</p>
 <pre>
 HelloWorld/
 |-- HelloWorld
@@ -185,11 +185,11 @@ HelloWorld/
 |   `-- wsgi.pyc
 |-- manage.py
 `-- templates
-    `-- runoob.html
+    `-- ejemplo.html
 </pre>
-<p>El código del archivo runoob.html es el siguiente:</p>
+<p>El código del archivo ejemplo.html es el siguiente:</p>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">{{ hello }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span></div>
 </div>
@@ -224,10 +224,10 @@ HelloWorld/
 <h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-reserved">from</span><span class="hl-code"> </span><span class="hl-identifier">django</span><span class="hl-code">.</span><span class="hl-identifier">shortcuts</span><span class="hl-code"> </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">render</span><span class="hl-code">
-</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">runoob</span><span class="hl-brackets">(</span><span class="hl-identifier">request</span><span class="hl-brackets">)</span><span class="hl-code">:
+</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo</span><span class="hl-brackets">(</span><span class="hl-identifier">request</span><span class="hl-brackets">)</span><span class="hl-code">:
     </span><span class="hl-identifier">context</span><span class="hl-code">          = {}
     </span><span class="hl-identifier">context</span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">hello</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">Hello World!</span><span class="hl-quotes">'</span><span class="hl-code">
-</span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">render</span><span class="hl-brackets">(</span><span class="hl-identifier">request</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">runoob.html</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-identifier">context</span><span class="hl-brackets">)</span></div>
+</span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">render</span><span class="hl-brackets">(</span><span class="hl-identifier">request</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">ejemplo.html</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-identifier">context</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>Se puede ver que aquí usamos render en lugar del HttpResponse utilizado anteriormente. render también utiliza un diccionario context como parámetro.</p>
@@ -240,14 +240,14 @@ HelloWorld/
 </span><span class="hl-reserved">from</span><span class="hl-code"> . </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">views</span><span class="hl-code">
 </span><span class="hl-identifier">urlpatterns</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-code">
 </span><span class="hl-identifier">path</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">admin/</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-identifier">admin</span><span class="hl-code">.</span><span class="hl-identifier">site</span><span class="hl-code">.</span><span class="hl-identifier">urls</span><span class="hl-brackets">)</span><span class="hl-code">,
-    </span><span class="hl-identifier">path</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">runoob/</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-identifier">views</span><span class="hl-code">.</span><span class="hl-identifier">runoob</span><span class="hl-brackets">)</span><span class="hl-code">,
+    </span><span class="hl-identifier">path</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">ejemplo/</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-identifier">views</span><span class="hl-code">.</span><span class="hl-identifier">ejemplo</span><span class="hl-brackets">)</span><span class="hl-code">,
 </span><span class="hl-brackets">]</span></div>
 </div>
 </div>
 <p>A continuación, entramos en el directorio HelloWorld e ingresamos el siguiente comando para iniciar el servidor:</p>
 <pre>
 python3 manage.py runserver 0.0.0.0:8000</pre>
-<p>Visite nuevamente<strong>http://127.0.0.1:8000/runoob</strong>, podrá ver la página:</p>
+<p>Visite nuevamente<strong>http://127.0.0.1:8000/ejemplo</strong>, podrá ver la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/6BC47EC1-ABC8-4EA7-A536-756648FBBC20.jpg" width="50%"/></p>
 <p>Así completamos el uso de plantillas para generar datos, logrando la separación entre datos y vistas.</p><p>A continuación, presentaremos en detalle las reglas de sintaxis comunes en las plantillas.</p>
 <hr/>
@@ -262,45 +262,45 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>: <br/>
-  views_name <span style="color: Gray;">=</span> <span style="color: #a11;">"Runoob"</span> <br/>
-  <span style="color: Green;font-weight:bold;">return</span>  render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span><span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:views_name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>: <br/>
+  views_name <span style="color: Gray;">=</span> <span style="color: #a11;">"Ejemplo"</span> <br/>
+  <span style="color: Green;font-weight:bold;">return</span>  render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span><span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:views_name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
-<p>runoob.html en templates:</p>
+<p>ejemplo.html en templates:</p>
 <pre>&lt;p&gt;{{ name }}&lt;/p&gt;</pre>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_1.png"/></p>
-<p>Visite nuevamente http://127.0.0.1:8000/runoob, podrá ver la página:</p>
+<p>Visite nuevamente http://127.0.0.1:8000/ejemplo, podrá ver la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/3B90F88C-3E6A-48A7-AA0C-738EE10E0543.jpg"/></p>
 <h3>Listas</h3>
-<p>En runoob.html dentro de templates, se puede usar<span class="marked">.</span>el índice para obtener el elemento correspondiente.</p>
+<p>En ejemplo.html dentro de templates, se puede usar<span class="marked">.</span>el índice para obtener el elemento correspondiente.</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
-    views_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Runoob1"</span><span style="color: Gray;">,</span><span style="color: #a11;">"Runoob2"</span><span style="color: Gray;">,</span><span style="color: #a11;">"Runoob3"</span><span style="color: Olive;">]</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_list"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+    views_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Ejemplo1"</span><span style="color: Gray;">,</span><span style="color: #a11;">"Ejemplo2"</span><span style="color: Gray;">,</span><span style="color: #a11;">"Ejemplo3"</span><span style="color: Olive;">]</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_list"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">{{ views_list }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code"># Obtener toda la lista</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">{{ views_list.0 }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code"># Obtener el primer elemento de la lista</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_3.png"/></p>
 <h3>Diccionarios</h3>
-<p>En runoob.html en templates, se puede usar<span class="marked">.clave</span>para obtener el valor correspondiente.</p>
+<p>En ejemplo.html en templates, se puede usar<span class="marked">.clave</span>para obtener el valor correspondiente.</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_dict <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:<span style="color: #a11;">"Tutorial para novatos"</span><span style="color: Olive;">}</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_dict"</span>: views_dict<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_dict"</span>: views_dict<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">{{ views_dict }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span><span class="hl-code">{{ views_dict.name }}</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">p</span><span class="hl-brackets">&gt;</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_4.png"/></p>
 <h3>Filtros</h3>Sintaxis de plantillas:<pre>{{ nombre de variable | filtro: parámetro opcional }}</pre>
 <p>Los filtros de plantilla pueden modificar la variable antes de que se muestre. Los filtros usan el carácter de tubería (pipe), como se muestra a continuación:</p>
@@ -332,30 +332,30 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span><span style="color: Maroon;">0</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-code">{{ name|default:"Runoob666" }}</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<div class="hl-main"><span class="hl-code">{{ name|default:"Ejemplo666" }}</span></div></div></div>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_5.png"/></p>
 <p><strong>length</strong></p>
 <p>Devuelve la longitud del objeto, aplicable a cadenas y listas.</p><p>Para diccionarios devuelve el número de pares clave-valor; para conjuntos, devuelve la longitud después de eliminar duplicados.</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span><span style="color: #a11;">"Tutorial para novatos"</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{{ name|length}}</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_6.png"/></p>
 <p><strong>filesizeformat</strong></p>
 <p>Muestra el tamaño del archivo de una manera más legible (por ejemplo, '13 KB', '4.1 MB', '102 bytes', etc.).</p>
@@ -363,30 +363,30 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     num<span style="color: Gray;">=</span><span style="color: Maroon;">1024</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"num"</span>: num<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"num"</span>: num<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{{ num|filesizeformat}}</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_7.png"/></p>
 <p><strong>date</strong></p><p>Formatea una variable de fecha según el formato dado.</p><p>Formato<span class="marked">Y-m-d H:i:s</span>Devuelve<strong>año-mes-día hora:minuto:segundo</strong>el tiempo en el formato.</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">datetime</span><br/>
     now  <span style="color: Gray;">=</span><span style="color: #05a;">datetime</span>.<span style="color: #05a;">datetime</span>.<span style="color: #05a;">now</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"time"</span>: now<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"time"</span>: now<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{{ time|date:"Y-m-d" }}</span></div></div></div>
-<p>Visita nuevamente http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Visita nuevamente http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_9.png"/></p>
 <p><strong>truncatechars</strong></p>
 <p>Si el número total de caracteres de una cadena es mayor que la cantidad especificada, la parte final se truncará.</p>
@@ -394,15 +394,15 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_str <span style="color: Gray;">=</span> <span style="color: #a11;">"Tutorial para novatos"</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_str"</span>: views_str<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_str"</span>: views_str<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{{ views_str|truncatechars:2}}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_10.png"/></p>
 <p><strong>safe </strong></p>
 <p>Marca la cadena como segura, no requiere escape.</p><p>Solo se puede usar safe si se garantiza que los datos enviados desde views.py son absolutamente seguros.</p>
@@ -411,15 +411,15 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_str <span style="color: Gray;">=</span> <span style="color: #a11;">"&lt;a href='/index.html'&gt;haz clic para saltar&lt;/a&gt;"</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_str"</span>: views_str<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_str"</span>: views_str<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{{ views_str|safe }}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_1.gif"/></p>
 <h3>Etiquetas if/else</h3>
 <p>La sintaxis básica es la siguiente:</p>
@@ -448,12 +448,12 @@ HTML：｛｛变量名｝｝</pre>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_num <span style="color: Gray;">=</span> <span style="color: Maroon;">88</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"num"</span>: views_num<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"num"</span>: views_num<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{%</span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">num</span><span class="hl-code"> &gt; </span><span class="hl-number">90</span><span class="hl-code"> </span><span class="hl-reserved">and</span><span class="hl-code"> </span><span class="hl-identifier">num</span><span class="hl-code"> &lt;= </span><span class="hl-number">100</span><span class="hl-code">%}
 Excelente
@@ -462,7 +462,7 @@ Aprobado
 {%</span><span class="hl-reserved">else</span><span class="hl-code">%}
 Vete a jugar~
 {%</span><span class="hl-identifier">endif</span><span class="hl-code"> %}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_15.png"/></p>
 <h3>Etiqueta for</h3>
 <p>{% for %} nos permite iterar sobre una secuencia.</p>
@@ -478,17 +478,17 @@ Vete a jugar~
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Tutorial para novatos"</span><span style="color: Gray;">,</span><span style="color: #a11;">Tutorial para novatos 1</span><span style="color: Gray;">,</span><span style="color: #a11;">Tutorial para novatos 2</span><span style="color: Gray;">,</span><span style="color: #a11;">Tutorial para novatos 3</span><span style="color: Gray;">,</span><span style="color: Olive;">]</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_list"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_list"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% for i in views_list %}
 {{ i }}
 {% endfor %}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_11.png"/></p>
 <p>Añadir un reversed a la etiqueta hace que la lista se itere en orden inverso:</p>
 <pre>
@@ -497,38 +497,38 @@ Vete a jugar~
 {% endfor %}
 </pre>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% for i in views_list  reversed%}
 {{ i }}
 {% endfor %}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_12.png"/></p>
 <p><strong>Iterar sobre un diccionario</strong>: se puede usar directamente el diccionario<strong>.items</strong>método, usando el desempaquetado de variables para obtener las claves y los valores por separado.</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     views_dict <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:<span style="color: #a11;">"Tutorial para novatos"</span><span style="color: Gray;">,</span><span style="color: #a11;">"age"</span>:<span style="color: Maroon;">18</span><span style="color: Olive;">}</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_dict"</span>: views_dict<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"views_dict"</span>: views_dict<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% for i,j in views_dict.items %}
 {{ i }}---{{ j }}
 {% endfor %}</span></div></div></div>
-<p>Accede nuevamente a http://127.0.0.1:8000/runoob y verás la página:</p>
+<p>Accede nuevamente a http://127.0.0.1:8000/ejemplo y verás la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_13.png"/></p>Dentro de la etiqueta {% for %} se puede obtener el número de iteración mediante la variable {{forloop}}.<ul><li>forloop.counter: obtiene el número de iteración en orden, comenzando desde 1</li><li>forloop.counter0: obtiene el número de iteración en orden, comenzando desde 0</li><li>forloop.revcounter: obtiene el número de iteración en orden inverso, con el último número 1</li><li>forloop.revcounter0: obtiene el número de iteración en orden inverso, con el último número 0</li><li>forloop.first (normalmente se usa con la etiqueta if): devuelve True para el primer dato y False para los demás.</li><li>forloop.last (generalmente se usa con la etiqueta if): el último dato devuelve True, los demás devuelven False.</li></ul>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
      views_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"a"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"b"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"c"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"d"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"e"</span><span style="color: Olive;">]</span><br/>
-     <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"listvar"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+     <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"listvar"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% for i in listvar %}
     {{ forloop.counter }}
@@ -538,26 +538,26 @@ Vete a jugar~
     {{ forloop.first }}
     {{ forloop.last }}
 {% endfor %}</span></div></div></div>
-<p>Visite nuevamente http://127.0.0.1:8000/runoob y podrá ver la página:</p>
+<p>Visite nuevamente http://127.0.0.1:8000/ejemplo y podrá ver la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_2.gif"/></p>
 <p>
 <strong>{% empty %}</strong></p><p>La cláusula opcional {% empty %}: se ejecuta cuando el bucle está vacío (es decir, cuando el valor booleano del parámetro después de in es False).</p>
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
   views_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
-  <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"listvar"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+  <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"listvar"</span>: views_list<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% for i in listvar %}
     {{ forloop.counter0 }}
 {% empty %}
     vacío~
 {% endfor %}</span></div></div></div>
-<p>Visite nuevamente http://127.0.0.1:8000/runoob y podrá ver la página:</p>
+<p>Visite nuevamente http://127.0.0.1:8000/ejemplo y podrá ver la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/Django_14.png"/></p>
 <p>Las etiquetas {% for %} se pueden anidar:</p>
 <pre>
@@ -665,16 +665,16 @@ STATICFILES_DIRS = [
 <div class="example"><h2 class="example">Código del archivo HelloWorld/HelloWorld/views.py:</h2> <div class="example_code">
 <span style="color: Green;font-weight:bold;">from</span> django.<span style="color: #05a;">shortcuts</span> <span style="color: Green;font-weight:bold;">import</span> render<br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span><span style="color: #a11;">Tutorial para novatos</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>: name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{% load static %}
-{{name}}</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">img</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{% static 'images/runoob-logo.png' %}</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">alt</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">runoob-logo</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span></div></div></div>
-<p>Visite nuevamente http://127.0.0.1:8000/runoob y podrá ver la página:</p>
+{{name}}</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">img</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">{% static 'images/ejemplo-logo.png' %}</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">alt</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo-logo</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span></div></div></div>
+<p>Visite nuevamente http://127.0.0.1:8000/ejemplo y podrá ver la página:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/01/87493622-D5C4-4883-8229-0813B608BB4A.jpg"/></p>
 <hr/>
 <h2>Herencia de plantillas</h2>
@@ -703,7 +703,7 @@ STATICFILES_DIRS = [
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">html</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">head</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">meta</span><span class="hl-code"> </span><span class="hl-var">charset</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">utf-8</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">Tutorial para novatos (runoob.com)</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">Tutorial para novatos (example.com)</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">title</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">head</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">body</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">Hello World!</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">
@@ -717,9 +717,9 @@ STATICFILES_DIRS = [
 </div>
 <p>En el código anterior, la etiqueta block llamada mainbody es la parte que puede ser reemplazada por los herederos (plantillas hijas).</p>
 <p>Todas las etiquetas {% block %} le indican al motor de plantillas que las plantillas hijas pueden sobrescribir estas partes.</p>
-<p>runoob.html hereda de base.html y reemplaza bloques específicos. El código modificado de runoob.html es el siguiente:</p>
+<p>ejemplo.html hereda de base.html y reemplaza bloques específicos. El código modificado de ejemplo.html es el siguiente:</p>
 <div class="example">
-<h2 class="example">Código del archivo HelloWorld/templates/runoob.html:</h2>
+<h2 class="example">Código del archivo HelloWorld/templates/ejemplo.html:</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-code">{%</span><span class="hl-identifier">extends</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">base.html</span><span class="hl-quotes">"</span><span class="hl-code"> %}
  
@@ -728,8 +728,8 @@ STATICFILES_DIRS = [
 {% </span><span class="hl-identifier">endblock</span><span class="hl-code"> %}</span></div>
 </div>
 </div>
-<p>La primera línea de código indica que runoob.html hereda el archivo base.html. Puede verse que aquí las etiquetas block con el mismo nombre se utilizan para reemplazar los bloques correspondientes de base.html.</p>
-<p>Vuelva a visitar la dirección http://127.0.0.1:8000/runoob; el resultado es el siguiente:</p><p>
+<p>La primera línea de código indica que ejemplo.html hereda el archivo base.html. Puede verse que aquí las etiquetas block con el mismo nombre se utilizan para reemplazar los bloques correspondientes de base.html.</p>
+<p>Vuelva a visitar la dirección http://127.0.0.1:8000/ejemplo; el resultado es el siguiente:</p><p>
 <img decoding="async" src="../wp-content/uploads/2015/01/F54E0EF3-2E76-4B3E-B1DA-1541EDCB5CD2.jpg"/></p> Otras extensiones
 </div>
 </div>

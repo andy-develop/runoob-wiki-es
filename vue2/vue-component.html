@@ -273,13 +273,13 @@ Vue.component(tagName, options)
 <p>Todas las instancias pueden usar componentes globales.</p>
 <div class="example">
 <h2 class="example">Ejemplo de componente global</h2>
-<p>Registra un componente global simple llamado runoob y úsalo:</p>
+<p>Registra un componente global simple llamado ejemplo y úsalo:</p>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">app</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">runoob</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">runoob</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">ejemplo</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">ejemplo</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">// Registrar
-Vue.component('runoob', {
+Vue.component('ejemplo', {
   template: '</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">¡Componente personalizado!</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">h1</span><span class="hl-brackets">&gt;</span><span class="hl-code">'
 })
 // Crear la instancia raíz
@@ -294,10 +294,10 @@ new Vue({
 <p>También podemos registrar un componente local en las opciones de la instancia, de modo que el componente solo pueda usarse en esa instancia:</p>
 <div class="example">
 <h2 class="example">Ejemplo de componente local</h2>
-<p>Registra un componente local simple llamado runoob y úsalo:</p>
+<p>Registra un componente local simple llamado ejemplo y úsalo:</p>
 <div class="example_code">
 <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">app</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
-</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">runoob</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">runoob</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">ejemplo</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">ejemplo</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 var Child = {
@@ -308,8 +308,8 @@ var Child = {
 new Vue({
   el: '#app',
   components: {
-    //</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">runoob</span><span class="hl-brackets">&gt;</span><span class="hl-code">Solo estará disponible en la plantilla del padre
-    'runoob': Child
+    //</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">ejemplo</span><span class="hl-brackets">&gt;</span><span class="hl-code">Solo estará disponible en la plantilla del padre
+    'ejemplo': Child
   }
 })</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></div>
 </div>
@@ -389,7 +389,7 @@ new Vue({
   el: '#app',
   data: {
     sites: [
-      { text: 'Runoob' },
+      { text: 'Ejemplo' },
       { text: 'Google' },
       { text: 'Taobao' }
     ]

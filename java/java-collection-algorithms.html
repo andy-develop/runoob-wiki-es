@@ -399,8 +399,8 @@ Ordenamiento personalizado
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> SortExample <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> names <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"RUNOOB"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"EJEMPLO"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"apple"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         names.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"banana"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
@@ -416,8 +416,8 @@ Ordenamiento personalizado
 </div>
 <p>Resultado de salida:</p>
 <pre>
-排序前: [runoob, RUNOOB, apple, banana]
-排序后: [RUNOOB, apple, banana, runoob]
+排序前: [ejemplo, EJEMPLO, apple, banana]
+排序后: [EJEMPLO, apple, banana, ejemplo]
 </pre>
 <h3>Ordenamiento con Comparator personalizado</h3>
 <p>Usando<span class="marked">Comparator</span>se puede ordenar según cualquier regla personalizada sin necesidad de modificar la propia clase de elementos.</p>
@@ -432,7 +432,7 @@ Ordenamiento personalizado
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> CustomSortExample <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> words <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"java"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"algorithm"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"C"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -454,8 +454,8 @@ Ordenamiento personalizado
 </div>
 <p>Resultado de salida:</p>
 <pre>
-排序前: [runoob, java, algorithm, C]
-按长度排序后: [C, java, runoob, algorithm]
+排序前: [ejemplo, java, algorithm, C]
+按长度排序后: [C, java, ejemplo, algorithm]
 </pre>
 <p>Java 8+ puede usar expresiones Lambda para simplificar la escritura:</p>
 <div class="example">
@@ -602,7 +602,7 @@ Semilla fija
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> MaxMinExample <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> words <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"algorithm"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"java"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         words.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"code"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -626,7 +626,7 @@ Semilla fija
 </div>
 <p>Resultado de salida:</p>
 <pre>
-字典序最大: runoob
+字典序最大: ejemplo
 字典序最小: algorithm
 长度最长: algorithm
 长度最短: code
@@ -645,15 +645,15 @@ Semilla fija
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> FrequencyDisjointExample <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> items <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"java"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"python"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        items.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-        <span style="color: #666666; font-style: italic;">// Contar cuántas veces aparece "runoob"</span><br/>
-        <span style="color: #000066; font-weight: bold;">int</span> count <span style="color: #339933;">=</span> <span style="color: #003399;">Collections</span>.<span style="color: #006633;">frequency</span><span style="color: #009900;">(</span>items, <span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"<span style="color: #000099; font-weight: bold;">\"</span>runoob<span style="color: #000099; font-weight: bold;">\"</span>Número de apariciones:</span> <span style="color: #339933;">+</span> count<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #666666; font-style: italic;">// Contar cuántas veces aparece "ejemplo"</span><br/>
+        <span style="color: #000066; font-weight: bold;">int</span> count <span style="color: #339933;">=</span> <span style="color: #003399;">Collections</span>.<span style="color: #006633;">frequency</span><span style="color: #009900;">(</span>items, <span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"<span style="color: #000099; font-weight: bold;">\"</span>ejemplo<span style="color: #000099; font-weight: bold;">\"</span>Número de apariciones:</span> <span style="color: #339933;">+</span> count<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// Determinar si dos colecciones son disjuntas</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> groupA <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -672,7 +672,7 @@ Semilla fija
 </div>
 <p>Resultado de salida:</p>
 <pre>
-"runoob" 出现次数: 3
+"ejemplo" 出现次数: 3
 groupA 与 groupB 不相交: true
 </pre>
 <hr/>
@@ -694,7 +694,7 @@ groupA 与 groupB 不相交: true
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> WrapperExample <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
         List<span style="color: #339933;">&lt;</span>String<span style="color: #339933;">&gt;</span> original <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> ArrayList<span style="color: #339933;">&lt;&gt;</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-        original.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        original.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
         original.<span style="color: #006633;">add</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"java"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// Crear una vista inmutable</span><br/>
@@ -724,8 +724,8 @@ groupA 与 groupB 不相交: true
 </div>
 <p>Resultado de salida:</p>
 <pre>
-不可变视图: [runoob, java]
-原始修改后: [runoob, java, python]
+不可变视图: [ejemplo, java]
+原始修改后: [ejemplo, java, python]
 thread-safe
 </pre>
 <blockquote><p>La vista inmutable solo impide modificar la colección a través de esa vista; la colección subyacente sigue siendo mutable. Si se necesita una colección verdaderamente inmutable, use los métodos de Java 9+<span class="marked">List.of()</span>、<span class="marked">Set.of()</span>como estos.</p></blockquote>

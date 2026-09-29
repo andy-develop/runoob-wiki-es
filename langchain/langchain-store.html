@@ -371,14 +371,14 @@ deleted <span style="color: Gray;">=</span> store.<span style="color: #05a;">get
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-偏好设置: {'theme': 'dark', 'language': 'zh-CN', 'level': '入门'}
-学习进度: {'completed_courses': ['HTML 基础', 'Python 基础'], 'total_hours': 35}
+Preferencias: {'theme': 'dark', 'language': 'zh-CN', 'level': '入门'}
+Progreso de aprendizaje: {'completed_courses': ['HTML 基础', 'Python 基础'], 'total_hours': 35}
 
 用户的所有数据 (2 项):
   preferences: {'theme': 'dark', 'language': 'zh-CN', 'level': '入门'}
   progress: {'completed_courses': ['HTML 基础', 'Python 基础'], 'total_hours': 35}
 
-删除后: None
+Después de eliminar: None
 </pre>
 <hr/>
 <h2>Usar Store en Agent</h2>
@@ -399,13 +399,13 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 <br/>
 <span style="color: #a50"># Crear Store y preestablecer datos</span><br/>
 store <span style="color: Gray;">=</span> InMemoryStore<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"courses"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"catalog"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><br/>
+store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"courses"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"catalog"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><br/>
     <span style="color: #a11;">"Tutorial básico de Python3"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"price"</span>: <span style="color: #a11;">"Gratis"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"hours"</span>: <span style="color: Maroon;">20</span><span style="color: Gray;">,</span> <span style="color: #a11;">"level"</span>: <span style="color: #a11;">"Principiante"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Análisis de datos con Python"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"price"</span>: <span style="color: #a11;">"Miembro"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"hours"</span>: <span style="color: Maroon;">30</span><span style="color: Gray;">,</span> <span style="color: #a11;">"level"</span>: <span style="color: #a11;">"Avanzado"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Java orientado a objetos"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"price"</span>: <span style="color: #a11;">"Gratis"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"hours"</span>: <span style="color: Maroon;">25</span><span style="color: Gray;">,</span> <span style="color: #a11;">"level"</span>: <span style="color: #a11;">"Avanzado"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 <br/>
-store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"users"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"user_vip_001"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><br/>
+store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"users"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"user_vip_001"</span><span style="color: Gray;">,</span> <span style="color: Olive;">{</span><br/>
     <span style="color: #a11;">"name"</span>: <span style="color: #a11;">"Xiaoming"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"membership"</span>: <span style="color: #a11;">"VIP"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"joined"</span>: <span style="color: #a11;">"2024-01-15"</span><span style="color: Gray;">,</span><br/>
@@ -417,11 +417,11 @@ store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><
     course_name: <span style="color: Teal;">str</span><span style="color: Gray;">,</span><br/>
     store: Annotated<span style="color: Olive;">[</span>BaseStore<span style="color: Gray;">,</span> InjectedStore<span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Consulta la información detallada de los cursos en RUNOOB.<br/>
+    <span style="color: #a11;">"""Consulta la información detallada de los cursos en EJEMPLO.<br/>
 <br/>
     Args:<br/>course_name: nombre del curso<br/>
     """</span><br/>
-    item <span style="color: Gray;">=</span> store.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"courses"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"catalog"</span><span style="color: Olive;">)</span><br/>
+    item <span style="color: Gray;">=</span> store.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"courses"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> <span style="color: #a11;">"catalog"</span><span style="color: Olive;">)</span><br/>
     catalog <span style="color: Gray;">=</span> item.<span style="color: #05a;">value</span> <span style="color: Green;font-weight:bold;">if</span> item <span style="color: Green;font-weight:bold;">else</span> <span style="color: Olive;">{</span><span style="color: Olive;">}</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">if</span> course_name <span style="color: Green;font-weight:bold;">in</span> catalog:<br/>
@@ -442,7 +442,7 @@ store.<span style="color: #05a;">put</span><span style="color: Olive;">(</span><
 <br/>
     Args:<br/>user_id: ID de usuario<br/>
     """</span><br/>
-    item <span style="color: Gray;">=</span> store.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"users"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> user_id<span style="color: Olive;">)</span><br/>
+    item <span style="color: Gray;">=</span> store.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"users"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> user_id<span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">if</span> item <span style="color: Green;font-weight:bold;">is</span> <span style="color: Teal;">None</span>:<br/>
         <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"No se encontró el usuario {user_id}"</span><br/>
 <br/>
@@ -458,7 +458,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>query_course_info<span style="color: Gray;">,</span> get_user_membership<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     store<span style="color: Gray;">=</span>store<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Consultar información del curso (datos de Store)</span><br/>
@@ -476,8 +476,8 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-查询课程: 《Python3 基础教程》是免费的，学习时长约20小时，难度为入门级别。
-查询用户: 用户小明是 VIP 会员，注册日期为 2024年1月15日。
+Consulta de curso: 《Python3 基础教程》是免费的，学习时长约20小时，难度为入门级别。
+Consulta de usuario: 用户小明是 VIP 会员，注册日期为 2024年1月15日。
 </pre>
 <hr/>
 <h2>Persistencia de Store</h2>

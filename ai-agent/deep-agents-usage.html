@@ -637,11 +637,11 @@ agent <span style="color: Gray;">=</span> create_deep_agent<span style="color: O
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># thread_id es el identificador único del hilo de conversación; el mismo thread_id comparte el mismo contexto</span><br/>
-config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"runoob-session-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
+config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"ejemplo-session-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
 <br/>
 <span style="color: #a50"># Primer turno</span><br/>
 result1 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Me llamo RUNOOB, estoy aprendiendo Python."</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">{</span><span style="color: #a11;">"messages"</span>: <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Me llamo EJEMPLO, estoy aprendiendo Python."</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     config<span style="color: Gray;">=</span>config<span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Respuesta del primer turno:"</span><span style="color: Gray;">,</span> result1<span style="color: Olive;">[</span><span style="color: #a11;">"messages"</span><span style="color: Olive;">]</span><span style="color: Olive;">[</span>-<span style="color: Maroon;">1</span><span style="color: Olive;">]</span>.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
@@ -655,8 +655,8 @@ result2 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">inv
 </div>
 </div>
 <pre>
-第一轮回复：你好，RUNOOB！很高兴认识你，Python 是一门非常适合初学者的语言...
-第二轮回复：你叫 RUNOOB，你正在学习 Python！...
+Primera respuesta:你好，EJEMPLO！很高兴认识你，Python 是一门非常适合初学者的语言...
+Segunda respuesta:你叫 EJEMPLO，你正在学习 Python！...
 </pre>
 <blockquote><p><strong>Función de thread_id:</strong>Todas las llamadas bajo el mismo<code>thread_id</code>comparten el mismo historial de conversación. Diferentes<code>thread_id</code>están aislados entre sí y no se interfieren. Puede entenderse como el "número de sala de conversación".</p></blockquote>
 <hr/>
@@ -786,7 +786,7 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
             <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Por favor, ayúdame a investigar qué es LangGraph y cuáles son sus principales casos de uso."</span><br/>
         <span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
     <span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
-    config<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"runoob-research-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
+    config<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"ejemplo-research-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
@@ -869,7 +869,7 @@ agent <span style="color: Gray;">=</span> create_deep_agent<span style="color: O
     checkpointer<span style="color: Gray;">=</span>checkpointer<span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"runoob-hitl-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
+config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"ejemplo-hitl-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
 <br/>
 <span style="color: #a50"># Primera llamada: el agente se pausa al llegar a delete_file</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Iniciando agente..."</span><span style="color: Olive;">)</span><br/>

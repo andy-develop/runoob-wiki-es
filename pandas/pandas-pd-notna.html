@@ -343,13 +343,13 @@ pd.notna(obj)
 <span style="color: #a50"># 1. Detectar si un valor escalar es un valor no faltante</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"=== Detección de escalares ==="</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"pd.notna(10): {pd.notna(10)}"</span><span style="color: Olive;">)</span>              <span style="color: #a50"># Valor numérico normal -&gt; True</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"pd.notna('runoob'): {pd.notna('runoob')}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Cadena de texto normal -&gt; True</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"pd.notna('ejemplo'): {pd.notna('ejemplo')}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Cadena de texto normal -&gt; True</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"pd.notna(None): {pd.notna(None)}"</span><span style="color: Olive;">)</span>          <span style="color: #a50"># None -&gt; False</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"pd.notna(np.nan): {pd.notna(np.nan)}"</span><span style="color: Olive;">)</span>      <span style="color: #a50"># np.nan -&gt; False</span><br/>
 <br/>
 <span style="color: #a50"># 2. Detectar valores faltantes en listas</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>=== Detección de listas ==="</span><span style="color: Olive;">)</span><br/>
-data_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob'</span><span style="color: Gray;">,</span> <span style="color: Teal;">None</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5</span><span style="color: Olive;">]</span><br/>
+data_list <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo'</span><span style="color: Gray;">,</span> <span style="color: Teal;">None</span><span style="color: Gray;">,</span> <span style="color: Maroon;">5</span><span style="color: Olive;">]</span><br/>
 result <span style="color: Gray;">=</span> pd.<span style="color: #05a;">notna</span><span style="color: Olive;">(</span>data_list<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Lista original: {data_list}"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Resultado de la detección: {result.tolist()}"</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Convertir a lista para facilitar la visualización</span><br/>
@@ -359,17 +359,17 @@ result <span style="color: Gray;">=</span> pd.<span style="color: #05a;">notna</
 <pre>
 === 标量检测 ===
 pd.notna(10): True
-pd.notna('runoob'): True
+pd.notna('ejemplo'): True
 pd.notna(None): False
 pd.notna(np.nan): False
 
 === 列表检测 ===
-原始列表: [1, 2, nan, 'runoob', None, 5]
+原始列表: [1, 2, nan, 'ejemplo', None, 5]
 检测结果: [True, False, True, False, True]
 </pre>
 <p><strong>Análisis del código:</strong></p>
 <ol>
-<li><code>pd.notna(10)</code>y<code>pd.notna('runoob')</code>Detecta valores numéricos y cadenas normales, devuelve<code>True</code>。</li>
+<li><code>pd.notna(10)</code>y<code>pd.notna('ejemplo')</code>Detecta valores numéricos y cadenas normales, devuelve<code>True</code>。</li>
 <li><code>pd.notna(None)</code>y<code>pd.notna(np.nan)</code>Detecta los marcadores de valores faltantes de Python y NumPy, devuelve<code>False</code>。</li>
 <li>Al usar sobre listas<code>pd.notna()</code>se devuelve una lista booleana, y las posiciones de los valores faltantes son<code>False</code>。</li>
 </ol>
@@ -382,7 +382,7 @@ pd.notna(np.nan): False
 <span style="color: Green;font-weight:bold;">import</span> numpy <span style="color: Green;font-weight:bold;">as</span> np<br/>
 <br/>
 <span style="color: #a50"># Crear un Series con valores faltantes</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Gray;">,</span> <span style="color: Maroon;">4</span><span style="color: Gray;">,</span> <span style="color: Teal;">None</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob'</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: Maroon;">1</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Gray;">,</span> <span style="color: Maroon;">4</span><span style="color: Gray;">,</span> <span style="color: Teal;">None</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo'</span><span style="color: Gray;">,</span> np.<span style="color: #05a;">nan</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"=== Series original ==="</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>s<span style="color: Olive;">)</span><br/>
@@ -410,7 +410,7 @@ result <span style="color: Gray;">=</span> pd.<span style="color: #05a;">notna</
 2     NaN
 3       4
 4    None
-5    runoob
+5    ejemplo
 6     NaN
 dtype: object
 
@@ -438,7 +438,7 @@ dtype: bool
 0       1
 1       2
 3       4
-5    runoob
+5    ejemplo
 dtype: object
 </pre>
 <p><strong>Análisis del código:</strong></p>

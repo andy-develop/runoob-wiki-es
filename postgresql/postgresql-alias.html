@@ -326,7 +326,7 @@ FROM table_name
 WHERE [condition];</pre>
 <h3>Ejemplos</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -338,7 +338,7 @@ WHERE [condition];</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>Crear la tabla DEPARTMENT (<a href="https://static.jyshare.com/download/department.sql">descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb=# SELECT * from DEPARTMENT;
+<pre>ejemplodb=# SELECT * from DEPARTMENT;
  id | dept        | emp_id
 ----+-------------+--------
   1 | IT Billing  |      1
@@ -350,7 +350,7 @@ WHERE [condition];</pre>
   7 | Finance     |      6
 (7 rows)</pre>
 <p>A continuación usamos C y D como alias de las tablas COMPANY y DEPAERMENT respectivamente:</p>
-<pre>runoobdb=# SELECT C.ID, C.NAME, C.AGE, D.DEPT FROM COMPANY AS C, DEPARTMENT AS D WHERE  C.ID = D.EMP_ID;</pre>
+<pre>ejemplodb=# SELECT C.ID, C.NAME, C.AGE, D.DEPT FROM COMPANY AS C, DEPARTMENT AS D WHERE  C.ID = D.EMP_ID;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre> id | name  | age |  dept
 ----+-------+-----+------------
@@ -363,7 +363,7 @@ WHERE [condition];</pre>
   6 | Kim   |  22 | Finance
 (7 rows)</pre>
 <p>A continuación, usamos COMPANY_ID para la columna ID y COMPANY_NAME para la columna NAME, para mostrar el uso de alias de columna:</p>
-<pre>runoobdb=# SELECT C.ID AS COMPANY_ID, C.NAME AS COMPANY_NAME, C.AGE, D.DEPT  FROM COMPANY AS C, DEPARTMENT AS D WHERE  C.ID = D.EMP_ID;</pre>
+<pre>ejemplodb=# SELECT C.ID AS COMPANY_ID, C.NAME AS COMPANY_NAME, C.AGE, D.DEPT  FROM COMPANY AS C, DEPARTMENT AS D WHERE  C.ID = D.EMP_ID;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre>company_id | company_name | age | dept
 ------------+--------------+-----+------------

@@ -107,26 +107,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Uso de PLI</h3><p>Al escribir tareas y funciones de sistema, los usuarios pueden extender el lenguaje Verilog con PLI y programas en C. Los nombres de estas tareas y funciones de sistema definidas por el usuario deben comenzar con el símbolo de dólar '$'. En este caso, una tarea en Verilog equivale a una subrutina. Cuando se llama a una tarea, el flujo de ejecución del simulador salta a la subrutina; al completar la tarea, el flujo de ejecución regresa. Las tareas de Verilog no devuelven un valor, pero pueden tener parámetros formales de entrada, salida y bidireccionales.</p><p>Las funciones en Verilog son como las funciones en la mayoría de los lenguajes. Cuando se llama a una función, ejecuta un conjunto de instrucciones y luego devuelve un valor a la instrucción que la llamó.</p>
 <p><strong>Flujo de PLI</strong></p><p>El flujo básico para completar tareas de sistema definidas por el usuario mediante la interfaz PLI se muestra a continuación.</p>
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-pli-1.png"/></p>
-<p>A continuación se explica con el ejemplo de la tarea de sistema simple $hello_runoob. Cuando se llama a esta tarea de sistema, imprime una línea de cadena: 'Hello Runoob!'.</p>
-<p><strong>Escritura de tareas de sistema con PLI</strong></p><p>El programa de impresión descrito en C se muestra a continuación, con el archivo nombrado como<span class="marked">hello_runoob.c</span> 。</p>
+<p>A continuación se explica con el ejemplo de la tarea de sistema simple $hello_ejemplo. Cuando se llama a esta tarea de sistema, imprime una línea de cadena: 'Hello Ejemplo!'.</p>
+<p><strong>Escritura de tareas de sistema con PLI</strong></p><p>El programa de impresión descrito en C se muestra a continuación, con el archivo nombrado como<span class="marked">hello_ejemplo.c</span> 。</p>
 <p>Para explicar el flujo general de uso de PLI, este programa no llama a subrutinas TF/ACC.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #085;">#include "stdio.h" //no incluye subrutinas de la biblioteca PLI</span><br/>
-<span style="color: #993333;">int</span> hello_runoob<span style="color: #000;">(</span><span style="color: #000;">)</span><span style="color: #000;">{</span><br/>
-        <span style="color: #000066;">printf</span><span style="color: #000;">(</span><span style="color: #a11;">"Hello Runoob! <span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #993333;">int</span> hello_ejemplo<span style="color: #000;">(</span><span style="color: #000;">)</span><span style="color: #000;">{</span><br/>
+        <span style="color: #000066;">printf</span><span style="color: #000;">(</span><span style="color: #a11;">"Hello Ejemplo! <span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000;">}</span><br/>
 </div></div>
 <p><strong>Conexión de PLI con el simulador</strong></p><p>Tomando el uso de VCS como ejemplo, compile o cree los archivos relacionados con C que se necesitan durante la compilación de VCS.</p>
-<p>Compile simplemente el hello_runoob.c anterior y genere el archivo hello_runoob.o. Preste atención a la ruta relativa.</p><pre>
-gcc -c ../tb/hello_runoob.c</pre><p>Cree un archivo de tabla de enlace reconocible por VCS, con el nombre de archivo hello_runoob.tab, cuyo contenido es el siguiente.</p><pre>
-$hello_runoob call=hello_runoob</pre>
-<p><strong>Llamada a la tarea de sistema en Verilog</strong></p><p>En Verilog, llame a $hello_runoob mediante una llamada de tarea de sistema, como se describe a continuación.</p>
+<p>Compile simplemente el hello_ejemplo.c anterior y genere el archivo hello_ejemplo.o. Preste atención a la ruta relativa.</p><pre>
+gcc -c ../tb/hello_ejemplo.c</pre><p>Cree un archivo de tabla de enlace reconocible por VCS, con el nombre de archivo hello_ejemplo.tab, cuyo contenido es el siguiente.</p><pre>
+$hello_ejemplo call=hello_ejemplo</pre>
+<p><strong>Llamada a la tarea de sistema en Verilog</strong></p><p>En Verilog, llame a $hello_ejemplo mediante una llamada de tarea de sistema, como se describe a continuación.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #008800;">`timescale</span> <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">/</span><span style="color: #FF0055;">1ps</span><br/>
 <span style="color: #A52A2A; font-weight: bold;">module</span> test <span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
      <span style="color: #5D478B;">#</span><span style="color: #FF0055;">10</span> <span style="color: #5D478B;">;</span><br/>
-     $hello_runoob<span style="color: #5D478B;">;</span><br/>
+     $hello_ejemplo<span style="color: #5D478B;">;</span><br/>
    <span style="color: #A52A2A; font-weight: bold;">end</span><br/>
 <br/>
    <span style="color: #A52A2A; font-weight: bold;">initial</span> <span style="color: #A52A2A; font-weight: bold;">begin</span><br/>
@@ -139,7 +139,7 @@ $hello_runoob call=hello_runoob</pre>
 </div></div>
 <p><strong>Compilación y simulación de Verilog</strong></p><p>Compile el RTL y los archivos intermedios de PLI escritos. Para indicar que se debe enlazar el archivo de tabla de la biblioteca PLI, es necesario especificarlo con el parámetro '-P'. Por ejemplo, en esta simulación se deben agregar los siguientes parámetros en la línea de comandos de VCS (preste atención a la ruta relativa):</p>
 <pre> 
--P ../tb/hello_runoob.tab hello_runoob.o</pre>
+-P ../tb/hello_ejemplo.tab hello_ejemplo.o</pre>
 <p>En el resultado de la simulación se puede ver la información impresa; la captura de pantalla es la siguiente.</p>
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-pli-2.png"/></p>
 <h3>Descarga del código fuente de este capítulo</h3><p>

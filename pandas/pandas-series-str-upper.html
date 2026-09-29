@@ -336,7 +336,7 @@ Series.str.upper()
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crea un Series que contiene cadenas en minúsculas</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'python'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'python'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usa str.upper() para convertir todas las cadenas a mayúsculas</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">upper</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -351,20 +351,20 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <pre>原始 Series:
 0    hello
 1    world
-2    runoob
+2    ejemplo
 3    python
 dtype: object
 
 转换后的结果:
 0    HELLO
 1    WORLD
-2    RUNOOB
+2    EJEMPLO
 3    PYTHON
 dtype: object
 </pre>
 <p><strong>Explicación del código:</strong></p>
 <ol>
-<li><code>pd.Series(['hello', 'world', 'runoob', 'python'])</code>Se creó un Series que contiene cadenas en minúsculas.</li>
+<li><code>pd.Series(['hello', 'world', 'ejemplo', 'python'])</code>Se creó un Series que contiene cadenas en minúsculas.</li>
 <li><code>s.str.upper()</code>Mediante el accessor de cadenas<code>.str</code>se invoca<code>upper()</code>el método, convirtiendo todas las cadenas a mayúsculas.</li>
 <li>El resultado convertido es un nuevo Series; el Series original permanece sin cambios.</li>
 </ol>
@@ -376,7 +376,7 @@ dtype: object
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crea un Series que contiene cadenas con mayúsculas y minúsculas mixtas</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'Hello World'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob tutorial'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'PyThOn'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Pandas'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'Hello World'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo tutorial'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'PyThOn'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'Pandas'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usa str.upper() para convertir a mayúsculas</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">upper</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -390,14 +390,14 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <p><strong>Resultado de salida:</strong></p>
 <pre>原始 Series:
 0    Hello World
-1    runoob tutorial
+1    ejemplo tutorial
 2           PyThOn
 3             Pandas
 dtype: object
 
 转换后的结果:
 0    HELLO WORLD
-1    RUNOOB TUTORIAL
+1    EJEMPLO TUTORIAL
 2           PYTHON
 3             PANDAS
 </pre>
@@ -415,7 +415,7 @@ dtype: object
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crea un Series que contiene caracteres especiales</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello123'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'world@runoob'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'python!'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'a+b=c'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello123'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'world@ejemplo'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'python!'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'a+b=c'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usa str.upper() para convertir a mayúsculas</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">upper</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -429,14 +429,14 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <p><strong>Resultado de salida:</strong></p>
 <pre>原始 Series:
 0         hello123
-1    world@runoob
+1    world@ejemplo
 2           python!
 3              a+b=c
 dtype: object
 
 转换后的结果:
 0         HELLO123
-1    WORLD@RUNOOB
+1    WORLD@EJEMPLO
 2           PYTHON!
 3              A+B=C
 </pre>

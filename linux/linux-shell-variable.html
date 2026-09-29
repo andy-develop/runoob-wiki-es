@@ -167,7 +167,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En la programación Shell, una variable es un nombre utilizado para almacenar valores de datos.</p>
 <p>Al definir una variable, el nombre de la variable no lleva el signo de dólar ($, que sí se requiere en PHP), por ejemplo:</p>
 <div class="example"> <div class="example_code">
-<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"runoob"</span><br/>
+<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"ejemplo"</span><br/>
 </div></div>
 <p>Nota: no debe haber espacios entre el nombre de la variable y el signo igual; esto puede ser diferente de todos los lenguajes de programación que conoces. Además, la nomenclatura de las variables debe seguir las siguientes reglas:</p>
 <ul>
@@ -185,7 +185,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </ul>
 <p>Ejemplos de nombres de variables válidos en Shell:</p>
 <pre>
-RUNOOB="www.runoob.com"
+EJEMPLO="www.example.com"
 LD_LIBRARY_PATH="/bin/"
 _var="123"
 var2="abc"
@@ -197,7 +197,7 @@ if="some_value"
 # 避免使用 $ 等特殊符号
 variable_with_$=42
 ?var=123
-user*name=runoob
+user*name=ejemplo
 # 避免空格
 variable with space="value"
 </pre>
@@ -245,7 +245,7 @@ variable_name = value</pre>
 <br/>
 <span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.google.com"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">readonly</span> myUrl<br/>
-<span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.runoob.com"</span><br/>
+<span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.example.com"</span><br/>
 </div></div>
 <p>Al ejecutar el script, el resultado es el siguiente:</p><pre>
 /bin/sh: NAME: This variable is read only.</pre>
@@ -257,7 +257,7 @@ variable_name = value</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/sh</span><br/>
 <br/>
-<span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.runoob.com"</span><br/>
+<span style="color: #007800;">myUrl</span>=<span style="color: #a10;">"https://www.example.com"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">unset</span> myUrl<br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$myUrl</span><br/>
 </div></div>
@@ -300,12 +300,12 @@ str='this is a string'
 </ul>
 <h3>Comillas dobles</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"runoob"</span><br/>
+<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"ejemplo"</span><br/>
 <span style="color: #007800;">str</span>=<span style="color: #a10;">"Hello, I know you are <span style="color: #000099; font-weight: bold;">\"</span><span style="color: #007800;">$your_name</span><span style="color: #000099; font-weight: bold;">\"</span>! <span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #660033;">-e</span> <span style="color: #007800;">$str</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
-<pre>Hello, I know you are "runoob"! </pre>
+<pre>Hello, I know you are "ejemplo"! </pre>
 <p>Ventajas de las comillas dobles:</p>
 <ul>
 <li>Puede haber variables dentro de comillas dobles</li>
@@ -313,7 +313,7 @@ str='this is a string'
 </ul>
 <h3>Concatenar cadenas</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"runoob"</span><br/>
+<span style="color: #007800;">your_name</span>=<span style="color: #a10;">"ejemplo"</span><br/>
 <span style="color: #666666; font-style: italic;"># Concatenar con comillas dobles</span><br/>
 <span style="color: #007800;">greeting</span>=<span style="color: #a10;">"hello, "</span><span style="color: #007800;">$your_name</span><span style="color: #a10;">" !"</span><br/>
 <span style="color: #007800;">greeting_1</span>=<span style="color: #a10;">"hello, <span style="color: #007800;">${your_name}</span> !"</span><br/>
@@ -325,8 +325,8 @@ str='this is a string'
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$greeting_2</span>  <span style="color: #007800;">$greeting_3</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
-<pre>hello, runoob ! hello, runoob !
-hello, runoob ! hello, ${your_name} !</pre>
+<pre>hello, ejemplo ! hello, ejemplo !
+hello, ejemplo ! hello, ${your_name} !</pre>
 <h3>Obtener la longitud de una cadena</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #007800;">string</span>=<span style="color: #a10;">"abcd"</span><br/>
@@ -340,14 +340,14 @@ hello, runoob ! hello, ${your_name} !</pre>
 <h3>Extraer subcadenas</h3>
 <p>El siguiente ejemplo comienza desde el carácter número<strong>2</strong>de la cadena y extrae<strong>4</strong>caracteres:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #007800;">string</span>=<span style="color: #a10;">"runoob is a great site"</span><br/>
+<span style="color: #007800;">string</span>=<span style="color: #a10;">"ejemplo is a great site"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${string:1:4}</span> <span style="color: #666666; font-style: italic;"># Salida: unoo</span><br/>
 </div></div>
 <p><strong>Nota</strong>: el índice del primer carácter es<strong>0</strong>。</p>
 <h3>Buscar subcadenas</h3>
 <p>Busca la posición del carácter<strong>i</strong>o<strong>o</strong>(se calcula la posición de la letra que aparezca primero):</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #007800;">string</span>=<span style="color: #a10;">"runoob is a great site"</span><br/>
+<span style="color: #007800;">string</span>=<span style="color: #a10;">"ejemplo is a great site"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #C20CB9; font-weight: bold;">expr</span> index <span style="color: #a10;">"<span style="color: #007800;">$string</span>"</span> io<span style="color: #000000; font-weight: bold;">`</span>  <span style="color: #666666; font-style: italic;"># Salida: 4</span><br/>
 </div></div>
 <p>
@@ -410,7 +410,7 @@ echo ${array_name[@]}
 <span style="color: #666666; font-style: italic;">#--------------------------------------------</span><br/>
 <span style="color: #666666; font-style: italic;"># Este es un comentario</span><br/>
 <span style="color: #666666; font-style: italic;"># autor: Tutorial de novatos</span><br/>
-<span style="color: #666666; font-style: italic;"># site：www.runoob.com</span><br/>
+<span style="color: #666666; font-style: italic;"># site：www.example.com</span><br/>
 <span style="color: #666666; font-style: italic;"># slogan: lo que se aprende no es solo tecnología, ¡sino también sueños!</span><br/>
 <span style="color: #666666; font-style: italic;">#--------------------------------------------</span><br/>
 <span style="color: #666666; font-style: italic;">##### Inicio de la zona de configuración de usuario #####</span><br/>

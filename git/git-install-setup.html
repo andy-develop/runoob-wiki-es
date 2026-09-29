@@ -319,8 +319,8 @@ brew install git</pre><p>Si desea instalar git-gui y gitk (la GUI de confirmaci�
 <h3>Información del usuario</h3>
 <p>Configure su nombre de usuario y dirección de correo electrónico. Esto es para registrar la información del autor en cada confirmación de código:</p>
 <pre>
-git config --global user.name "runoob"
-git config --global user.email test@runoob.com
+git config --global user.name "ejemplo"
+git config --global user.email test@example.com
 </pre>
 <p>Si se usa la<strong>--global</strong>opción, el archivo de configuración que se modifica es el que se encuentra en su directorio principal. A partir de entonces, todos sus proyectos usarán por defecto la información de usuario configurada aquí.</p>
 <p>Si desea usar otro nombre o correo electrónico en un proyecto específico, solo elimine la opción --global y vuelva a configurar. La nueva configuración se guarda en el archivo .git/config del proyecto actual.</p>
@@ -341,8 +341,8 @@ git config --global merge.tool vimdiff
 <pre>
 $ git config --list
 http.postbuffer=2M
-user.name=runoob
-user.email=test@runoob.com
+user.name=ejemplo
+user.email=test@example.com
 </pre>
 <p>A veces verá nombres de variables repetidos, lo que indica que provienen de diferentes archivos de configuración (por ejemplo, /etc/gitconfig y ~/.gitconfig). Sin embargo, Git finalmente utiliza el último.</p>
 <p>Estas configuraciones también las podemos<strong>~/.gitconfig</strong>o<strong>/etc/gitconfig</strong>ver, como se muestra a continuación:</p>
@@ -354,13 +354,13 @@ vim ~/.gitconfig
 [http]
     postBuffer = 2M
 [user]
-    name = runoob
-    email = test@runoob.com
+    name = ejemplo
+    email = test@example.com
 </pre>
 <p>También puede consultar directamente la configuración de una variable de entorno. Solo necesita poner el nombre específico después, de esta manera:</p>
 <pre>
 $ git config user.name
-runoob
+ejemplo
 </pre>
 <h3>Generar clave SSH (opcional)</h3><p>Si necesita realizar operaciones de Git a través de SSH, puede generar una clave SSH y agregarla a su servicio de alojamiento de Git (como GitHub, GitLab, etc.).</p>
 <pre>

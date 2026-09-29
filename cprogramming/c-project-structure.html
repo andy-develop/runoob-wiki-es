@@ -365,7 +365,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #993333;">int</span> main<span style="color: #000;">(</span><span style="color: #993333;">int</span> argc<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>argv<span style="color: #000;">[</span><span style="color: #000;">]</span><span style="color: #000;">)</span> <span style="color: #000;">{</span><br/>
     <span style="color: #808080; font-style: italic;">/* argc: número de argumentos de la línea de comandos, argv: vector de argumentos */</span><br/>
-    <span style="color: #000066;">printf</span><span style="color: #000;">(</span><span style="color: #a11;">"RUNOOB C inicio del proyecto<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #000066;">printf</span><span style="color: #000;">(</span><span style="color: #a11;">"EJEMPLO C inicio del proyecto<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
     init_database<span style="color: #000;">(</span><span style="color: #000;">)</span><span style="color: #339933;">;</span>     <span style="color: #808080; font-style: italic;">/* Inicializar la conexión a la base de datos */</span><br/>
     print_version<span style="color: #000;">(</span><span style="color: #000;">)</span><span style="color: #339933;">;</span>     <span style="color: #808080; font-style: italic;">/* Mostrar información de versión (del módulo utils) */</span><br/>
@@ -385,7 +385,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #085;">#define UTILS_H</span><br/>
 <br/>
 <span style="color: #808080; font-style: italic;">/* Nombre del proyecto y número de versión (constantes macro, nombradas en MAYÚSCULAS) */</span><br/>
-<span style="color: #085;">#define PROJECT_NAME  "RUNOOB"</span><br/>
+<span style="color: #085;">#define PROJECT_NAME  "EJEMPLO"</span><br/>
 <span style="color: #085;">#define VERSION_MAJOR 1</span><br/>
 <span style="color: #085;">#define VERSION_MINOR 0</span><br/>
 <br/>
@@ -440,7 +440,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 CC      = <span style="color: #C20CB9; font-weight: bold;">gcc</span>                    <span style="color: #666666; font-style: italic;"># Especificar el compilador de C</span><br/>
 CFLAGS  = <span style="color: #660033;">-Wall</span> <span style="color: #660033;">-Wextra</span> <span style="color: #660033;">-g</span>      <span style="color: #666666; font-style: italic;"># Opciones de compilación: todas las advertencias + información de depuración</span><br/>
 INCLUDE = -I.<span style="color: #000000; font-weight: bold;">/</span>include           <span style="color: #666666; font-style: italic;"># Ruta de búsqueda de archivos de cabecera</span><br/>
-TARGET  = runoob_app            <span style="color: #666666; font-style: italic;"># Nombre del archivo ejecutable final</span><br/>
+TARGET  = ejemplo_app            <span style="color: #666666; font-style: italic;"># Nombre del archivo ejecutable final</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Archivos fuente y archivos objeto</span><br/>
 SRCS    = $<span style="color: #7A0874; font-weight: bold;">(</span>wildcard src<span style="color: #000000; font-weight: bold;">/*</span>.c<span style="color: #7A0874; font-weight: bold;">)</span>   <span style="color: #666666; font-style: italic;"># Recopilar automáticamente todos los archivos .c en src/</span><br/>
@@ -473,7 +473,7 @@ clean:<br/>
 <span style="color: #1F3F81; font-style: bold;">cmake_minimum_required</span><span style="color: #197D8B;">(</span><span style="color: #077807; font-sytle: italic;">VERSION</span> 3.10<span style="color: #197D8B;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Nombre del proyecto y lenguaje</span><br/>
-<span style="color: #1F3F81; font-style: bold;">project</span><span style="color: #197D8B;">(</span>runoob_app C<span style="color: #197D8B;">)</span><br/>
+<span style="color: #1F3F81; font-style: bold;">project</span><span style="color: #197D8B;">(</span>ejemplo_app C<span style="color: #197D8B;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Establecer el estándar C en C11</span><br/>
 <span style="color: #1F3F81; font-style: bold;">set</span><span style="color: #197D8B;">(</span>CMAKE_C_STANDARD 11<span style="color: #197D8B;">)</span><br/>
@@ -497,8 +497,8 @@ clean:<br/>
 $ mkdir build &amp;&amp; cd build
 $ cmake ..
 $ make
-$ ./runoob_app
-RUNOOB C 项目启动
+$ ./ejemplo_app
+EJEMPLO C 项目启动
 版本: v1.0
 </pre>
 <hr/>
@@ -559,16 +559,16 @@ $ gcc -S main.i -o main.s
 $ gcc -c main.s -o main.o
 
 # 4. 链接：将所有目标文件链接为可执行程序
-$ gcc main.o utils.o -o runoob_app
+$ gcc main.o utils.o -o ejemplo_app
 </pre>
 <hr/>
 <h2>Ejemplos comunes</h2>
 <p>A continuación se muestra un ejemplo completo de un pequeño proyecto en C, que cubre todo el flujo desde la creación del directorio hasta la compilación y ejecución.</p>
 <h3>Crear el esqueleto del proyecto</h3>
 <pre>
-$ mkdir -p runoob_project/{src,include,tests,build,lib,doc}
-$ tree runoob_project/
-runoob_project/
+$ mkdir -p ejemplo_project/{src,include,tests,build,lib,doc}
+$ tree ejemplo_project/
+ejemplo_project/
 ├── build/
 ├── doc/
 ├── include/
@@ -625,15 +625,15 @@ runoob_project/
 </div>
 <h3>Compilar y ejecutar</h3>
 <pre>
-$ cd runoob_project
+$ cd ejemplo_project
 $ mkdir build &amp;&amp; cd build
 $ cmake ..
 -- Configuring done
 -- Generating done
 $ make
-[100%] Built target runoob_app
-$ ./runoob_app
-RUNOOB 项目运行成功！
+[100%] Built target ejemplo_app
+$ ./ejemplo_app
+EJEMPLO 项目运行成功！
 Point(0,0) 到 Point(3,4) 的距离 = 5.00
 7 是质数: 是
 </pre>

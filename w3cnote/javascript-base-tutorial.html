@@ -1263,8 +1263,8 @@ function detectNum(str){
 <li>
 <strong>.indexOf()</strong>Devuelve la posición de un carácter o cadena dentro de toda la cadena. `str.indexOf('m', 5)` indica que se busca la posición del carácter 'm' comenzando desde la posición 5 en la cadena `str`. Si se usa `indexOf()` y no se encuentra, devuelve -1. Busca de izquierda a derecha. Si el segundo parámetro es negativo, se toma como 0 por defecto.</li>
 </ul>
-<pre>var str = '菜鸟教程 - 学的不仅是技术，更是梦想！'；
-var s = '菜鸟教程';
+<pre>var str = 'Ejemplo - 学的不仅是技术，更是梦想！'；
+var s = 'Ejemplo';
 var i = 0;
 
 for ( ; str.indexOf(s, i) != -1; ){
@@ -1303,7 +1303,7 @@ while(str.indexOf(s, i) != -1) {
 <strong>.join()</strong>Método que se usa para unir los elementos de un array. `var arr = ['aa', 'bb', 'cc]; arr.join(); =&gt; 'aa,bb,cc'`. Si no se escribe nada entre paréntesis en `.join()`, por defecto separa con comas. `arr.join(''); =&gt; 'aabbcc'`; `arr.join('-'); =&gt; 'aa-bb-cc'`</li>
 </ul>
 <h3 id="section-42">Resumen de operaciones con cadenas</h3>
-<pre>var str = '菜鸟教程-www.runoob.com';
+<pre>var str = 'Ejemplo-www.example.com';
 
 str.charAt(1); // 3
 str.charCodeAt(1); // 51
@@ -1315,16 +1315,16 @@ str.lastIndexOf('o'); // 25
 '1000' &lt; '2' // true
 '1000' &gt; 2 // true
 
-str.substring(0, 4); // 菜鸟教程
+str.substring(0, 4); // Ejemplo
 str.slice(-3); // .cc
 
-str.toUpperCase(); // 菜鸟教程-WWW.RUNOOB.COM
-str.toLowerCase(); // 菜鸟教程-www.runoob.com
+str.toUpperCase(); // Ejemplo-WWW.example.com
+str.toLowerCase(); // Ejemplo-www.example.com
 
-str.split('.', 2); // ["菜鸟教程-www", "runoob"]
+str.split('.', 2); // ["Ejemplo-www", "ejemplo"]
 
-var arr = ['www', 'runoob', 'com'];
-arr.join('.'); // www.runoob.com
+var arr = ['www', 'ejemplo', 'com'];
+arr.join('.'); // www.example.com
 </pre>
 <h2 id="section-43">Operaciones con arrays</h2>
 <h3 id="json">Formato de datos json y sintaxis</h3>

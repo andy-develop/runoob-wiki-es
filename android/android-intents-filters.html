@@ -261,11 +261,11 @@ startActivity(Intent.createChooser(email, "Choose an email client from..."));</p
 <p>La sintaxis anterior llama al método startActivity para abrir la actividad de correo. El resultado de la ejecución del código se ve así:</p>
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/send_email.jpg"/></p>
 <p>Por ejemplo, tienes una actividad que necesita abrir una URL en el navegador en el dispositivo Android. Para este propósito, tu actividad envía un intent ACTION_WEB_SEARCH al manejador de intents de Android para abrir la URL dada en el navegador. El manejador de intents analiza una serie de actividades y selecciona la que mejor se adapta a tu intent; en este caso, la actividad del navegador web. El manejador de intents pasa tu dirección web al navegador web y abre la actividad del navegador web.</p>
-<pre>String q = "https://www.runoob.com";
+<pre>String q = "https://www.example.com";
 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH );
 intent.putExtra(SearchManager.QUERY, q);
 startActivity(intent);</pre>
-<p>El ejemplo anterior buscará "www.runoob.com" en el motor de búsqueda de Android y mostrará los resultados de la palabra clave en una actividad.</p>
+<p>El ejemplo anterior buscará "www.example.com" en el motor de búsqueda de Android y mostrará los resultados de la palabra clave en una actividad.</p>
 <p>Cada componente (actividad, servicio, receptor de transmisiones) tiene un mecanismo independiente para pasar intents.</p>
 <table class="reference">
 <thead>
@@ -428,11 +428,11 @@ String value2 = extras.getString("Key2");</pre>
 <tbody>
 <tr>
 <td>1</td>
-<td>Cree una aplicación de Android usando el IDE de Android Studio, asígnele el nombre "Intent filter", con el paquete com.runoob.intentfilter. Al crear el proyecto, asegúrese de que el SDK de destino y la compilación se realicen con la versión más reciente del SDK de Android para usar las API avanzadas.</td>
+<td>Cree una aplicación de Android usando el IDE de Android Studio, asígnele el nombre "Intent filter", con el paquete com.ejemplo.intentfilter. Al crear el proyecto, asegúrese de que el SDK de destino y la compilación se realicen con la versión más reciente del SDK de Android para usar las API avanzadas.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Modifique el archivo src/com.runoob.intentfilter/MainActivity.java y agregue código para definir dos listeners que correspondan a los dos botones "Iniciar navegador" e "Iniciar teléfono".</td>
+<td>Modifique el archivo src/com.ejemplo.intentfilter/MainActivity.java y agregue código para definir dos listeners que correspondan a los dos botones "Iniciar navegador" e "Iniciar teléfono".</td>
 </tr>
 <tr>
 <td>3</td>
@@ -444,8 +444,8 @@ String value2 = extras.getString("Key2");</pre>
 </tr>
 </tbody>
 </table>
-<p>El contenido del archivo src/com.runoob.intentfilter/MainActivity.java es el siguiente:</p>
-<pre>package com.runoob.intentfilter;
+<p>El contenido del archivo src/com.ejemplo.intentfilter/MainActivity.java es el siguiente:</p>
+<pre>package com.ejemplo.intentfilter;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -470,7 +470,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://www.runoob.com"));
+                Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://www.example.com"));
                 startActivity(i);
             }
         });
@@ -530,7 +530,7 @@ public class MainActivity extends ActionBarActivity {
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.runoob.com"
+        android:text="www.example.com"
         android:textColor="#ff87ff09"
         android:textSize="30dp"
         android:layout_below="@+id/textView1"
@@ -583,7 +583,7 @@ public class MainActivity extends ActionBarActivity {
 <p>El siguiente es el contenido del AndroidManifest.xml predeterminado:</p>
 <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.runoob.intentfilter"
+    package="com.ejemplo.intentfilter"
     android:versionCode="1"
     android:versionName="1.0" &gt;
 
@@ -598,7 +598,7 @@ public class MainActivity extends ActionBarActivity {
         android:theme="@style/Base.Theme.AppCompat" &gt;
 
         &lt;activity
-            android:name="com.runoob.intentfilter.MainActivity"
+            android:name="com.ejemplo.intentfilter.MainActivity"
             android:label="@string/app_name" &gt;
 
             &lt;intent-filter&gt;
@@ -612,12 +612,12 @@ public class MainActivity extends ActionBarActivity {
 &lt;/manifest&gt;</pre>
 <p>Ejecutemos la aplicación Intent filter que acabamos de modificar. Supongo que ya creó un AVD al configurar el entorno. Abra el archivo de actividad de su proyecto y haga clic en el ícono en la barra de herramientas.<img alt="图片" decoding="async" src="../wp-content/uploads/2015/06/eclipse_run.png"/>Haga clic en el ícono para ejecutar la aplicación en Android Studio. Android Studio instalará la aplicación en el AVD y la iniciará. Si todo va bien, se mostrará lo siguiente en la ventana del emulador:</p>
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/android_intent_filter_1-1.png"/></p>
-<p>Ahora haga clic en el botón "Iniciar navegador". Esto iniciará un navegador según la configuración y mostrará https://www.runoob.com de la siguiente manera:</p>
+<p>Ahora haga clic en el botón "Iniciar navegador". Esto iniciará un navegador según la configuración y mostrará https://www.example.com de la siguiente manera:</p>
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/37E5423D-3693-4287-B089-6789ECCF2F3D.jpg"/></p>
 <p>De manera similar, puede hacer clic en el botón "Iniciar teléfono" para abrir la interfaz del teléfono, lo que le permitirá marcar el número de teléfono ya proporcionado.</p>
 <hr/><h2>Filtro de Intent</h2>
 <p>Ya ha visto cómo usar intents para invocar otra actividad. El sistema operativo Android usa filtros para especificar el conjunto de actividades, servicios y receptores de transmisión que manejan los intents, basándose en la acción, la categoría y el patrón de datos especificados por el intent. En el archivo manifest se usa el elemento &lt;intent-filter&gt; para listar las acciones, categorías y tipos de datos correspondientes en actividades, servicios y receptores de transmisión.</p>
-<p>El siguiente ejemplo muestra una parte del archivo AndroidManifest.xml, que especifica que una actividad com.runoob.intentfilter.CustomActivity puede ser invocada mediante la acción, la categoría y los datos configurados:</p>
+<p>El siguiente ejemplo muestra una parte del archivo AndroidManifest.xml, que especifica que una actividad com.ejemplo.intentfilter.CustomActivity puede ser invocada mediante la acción, la categoría y los datos configurados:</p>
 <pre>&lt;activity android:name=".CustomActivity"
    android:label="@string/app_name"&gt;
 
@@ -629,7 +629,7 @@ public class MainActivity extends ActionBarActivity {
    &lt;/intent-filter&gt;
 
 &lt;/activity&gt;</pre>
-<p>Cuando la actividad queda definida por el filtro anterior, otras actividades pueden invocar esta actividad de la siguiente manera: usar la acción android.intent.action.VIEW, usar la acción com.runoob.intentfilter.LAUNCH y proporcionar la categoría android.intent.category.DEFAULT.</p>
+<p>Cuando la actividad queda definida por el filtro anterior, otras actividades pueden invocar esta actividad de la siguiente manera: usar la acción android.intent.action.VIEW, usar la acción com.ejemplo.intentfilter.LAUNCH y proporcionar la categoría android.intent.category.DEFAULT.</p>
 <p><data>El elemento &lt;data&gt; especifica el tipo de datos que espera la actividad invocada. En el ejemplo anterior, los datos que espera la actividad personalizada comienzan con "http://".</data></p>
 <p>Existe el caso en que, mediante filtros, un intent se puede pasar a varias actividades o servicios, y se le preguntará al usuario qué componente iniciar. Si no se encuentra un componente de destino, se producirá una excepción.</p>
 <p>Antes de invocar una actividad, Android realiza una serie de pruebas de verificación:</p>
@@ -650,15 +650,15 @@ public class MainActivity extends ActionBarActivity {
 <tbody>
 <tr>
 <td>1</td>
-<td>Cree una aplicación de Android usando el IDE de Android Studio, asígnele el nombre "Intent filter" y el paquete com.runoob.intentfilter. Al crear el proyecto, asegúrese de que el SDK de destino y la compilación se realicen con la versión más reciente del SDK de Android para usar las API avanzadas.</td>
+<td>Cree una aplicación de Android usando el IDE de Android Studio, asígnele el nombre "Intent filter" y el paquete com.ejemplo.intentfilter. Al crear el proyecto, asegúrese de que el SDK de destino y la compilación se realicen con la versión más reciente del SDK de Android para usar las API avanzadas.</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Modifique el archivo src/com.runoob.intentfilter/MainActivity.java y agregue código para definir tres listeners que correspondan a los tres botones definidos en el archivo de diseño.</td>
+<td>Modifique el archivo src/com.ejemplo.intentfilter/MainActivity.java y agregue código para definir tres listeners que correspondan a los tres botones definidos en el archivo de diseño.</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Agregue el archivo src/com.runoob.intentfilter/CustomActivity.java para contener una actividad que pueda ser invocada por diferentes intents.</td>
+<td>Agregue el archivo src/com.ejemplo.intentfilter/CustomActivity.java para contener una actividad que pueda ser invocada por diferentes intents.</td>
 </tr>
 <tr>
 <td>4</td>
@@ -678,8 +678,8 @@ public class MainActivity extends ActionBarActivity {
 </tr>
 </tbody>
 </table>
-<p>El siguiente es el contenido de src/com.runoob.intentfilter/MainActivity.java:</p>
-<pre>package com.runoob.intentfilter;
+<p>El siguiente es el contenido de src/com.ejemplo.intentfilter/MainActivity.java:</p>
+<pre>package com.ejemplo.intentfilter;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -704,7 +704,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(android.content.Intent.ACTION_VIEW,Uri.parse("https://www.runoob.com"));
+                Intent i = new Intent(android.content.Intent.ACTION_VIEW,Uri.parse("https://www.example.com"));
                 startActivity(i);
             }
         });
@@ -714,7 +714,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent("com.runoob.intentfilter.LAUNCH",Uri.parse("https://www.runoob.com"));
+                Intent i = new Intent("com.ejemplo.intentfilter.LAUNCH",Uri.parse("https://www.example.com"));
                 startActivity(i);
             }
         });
@@ -724,7 +724,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent("com.runoob.intentfilter.LAUNCH",Uri.parse("https://www.runoob.com"));
+                Intent i = new Intent("com.ejemplo.intentfilter.LAUNCH",Uri.parse("https://www.example.com"));
                 startActivity(i);
             }
         });
@@ -752,8 +752,8 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }</pre>
-<p>El siguiente es el contenido de src/com.runoob.intentfilter/CustomActivity.java:</p>
-<pre>package com.runoob.intentfilter;
+<p>El siguiente es el contenido de src/com.ejemplo.intentfilter/CustomActivity.java:</p>
+<pre>package com.ejemplo.intentfilter;
 
 import android.app.Activity;
         import android.net.Uri;
@@ -794,7 +794,7 @@ public class CustomActivity extends Activity {
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.runoob.com"
+        android:text="www.example.com"
         android:textColor="#ff87ff09"
         android:textSize="30dp"
         android:layout_below="@+id/textView1"
@@ -871,7 +871,7 @@ public class CustomActivity extends Activity {
 <p>El siguiente es el contenido del archivo AndroidManifest.xml:</p>
 <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.runoob.intentfilter"
+    package="com.ejemplo.intentfilter"
     android:versionCode="1"
     android:versionName="1.0" &gt;
 
@@ -886,7 +886,7 @@ public class CustomActivity extends Activity {
         android:theme="@style/Base.Theme.AppCompat" &gt;
 
         &lt;activity
-            android:name="com.runoob.intentfilter.MainActivity"
+            android:name="com.ejemplo.intentfilter.MainActivity"
             android:label="@string/app_name" &gt;
 
             &lt;intent-filter&gt;
@@ -896,12 +896,12 @@ public class CustomActivity extends Activity {
 
         &lt;/activity&gt;
 
-        &lt;activity android:name="com.runoob.intentfilter.CustomActivity"
+        &lt;activity android:name="com.ejemplo.intentfilter.CustomActivity"
             android:label="@string/app_name"&gt;
 
         &lt;intent-filter&gt;
             &lt;action android:name="android.intent.action.VIEW" /&gt;
-            &lt;action android:name="com.runoob.intentfilter.LAUNCH" /&gt;
+            &lt;action android:name="com.ejemplo.intentfilter.LAUNCH" /&gt;
             &lt;category android:name="android.intent.category.DEFAULT" /&gt;
             &lt;data android:scheme="http" /&gt;
         &lt;/intent-filter&gt;
@@ -914,7 +914,7 @@ public class CustomActivity extends Activity {
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/android_intent_filter_3-1.png"/></p>
 <p>Haga clic en el primer botón "Iniciar navegador con la acción View". Aquí definimos que nuestra actividad personalizada contiene "android.intent.action.VIEW", y el sistema Android ya ha definido una actividad predeterminada que corresponde a la acción VIEW para iniciar el navegador web, por lo que Android muestra las siguientes opciones para elegir la actividad que desea iniciar:</p>
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/android_intent_filter_4-1.png"/></p>
-<p>Si elige el navegador, Android iniciará el navegador web y abrirá el sitio web www.runoob.com. Si elige la opción IntentDemo, Android iniciará CustomActivity, que no hace nada más que capturar y mostrar los datos pasados en un TextView.</p>
+<p>Si elige el navegador, Android iniciará el navegador web y abrirá el sitio web www.example.com. Si elige la opción IntentDemo, Android iniciará CustomActivity, que no hace nada más que capturar y mostrar los datos pasados en un TextView.</p>
 <p><img alt="image" decoding="async" src="../wp-content/uploads/2015/06/android_intent_filter_5-1.png"/></p>
 <p>Ahora, use el botón de retroceso para volver y haga clic en el botón "Iniciar navegador con la acción Launch". Aquí Android aplica el filtro para seleccionar la actividad definida y simplemente inicia la actividad personalizada.</p>
 <p>Use nuevamente el botón de retroceso para volver y haga clic en el botón "Condición de excepción". Aquí Android intenta encontrar un filtro válido dado el intent, pero no encuentra una actividad válida definida. Debido a que usamos https en lugar de http para los datos y proporcionamos la acción correcta, Android genera una excepción. Como se muestra a continuación:</p>

@@ -363,12 +363,12 @@ sequence <span style="color: Gray;">=</span> <span style="color: Olive;">[</span
 <br/>
 hidden_states <span style="color: Gray;">=</span> rnn.<span style="color: #05a;">forward</span><span style="color: Olive;">(</span>sequence<span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración simple de RNN de Runoob"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración simple de RNN de Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> i<span style="color: Gray;">,</span> h <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">enumerate</span><span style="color: Olive;">(</span>hidden_states<span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">Estado oculto en el paso {i+1}: {[f'{v:.4f}' for v in h]}</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># salida:</span><br/>
-<span style="color: #a50"># Demostración simple de RNN de Runoob</span><br/>
+<span style="color: #a50"># Demostración simple de RNN de Ejemplo</span><br/>
 <span style="color: #a50"># ========================================</span><br/>
 <span style="color: #a50"># Estado oculto del paso 1: ['0.0204', '-0.0434', '0.0556']</span><br/>
 <span style="color: #a50"># Paso 2 estado oculto: ['-0.0061', '-0.0529', '0.0775']</span><br/>
@@ -469,7 +469,7 @@ Attention(Q, K, V) = softmax( Q·Kᵀ / √dₖ ) · V
         <span style="color: #a11;">"""<br/>Inicializar capa de autoatención<br/>d_model: dimensión de entrada/salida<br/>d_k: dimensión de Q/K (normalmente d_k = d_model / num_heads)<br/>
         """</span><br/>
         <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">random</span><br/>
-        <span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># runoob: fijar semilla aleatoria</span><br/>
+        <span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># ejemplo: fijar semilla aleatoria</span><br/>
 <br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">d_model</span> <span style="color: Gray;">=</span> d_model<br/>
         <span style="color: Teal;">self</span>.<span style="color: #05a;">d_k</span> <span style="color: Gray;">=</span> d_k<br/>
@@ -548,7 +548,7 @@ X <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Runoob Demostración de autoatención"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Ejemplo Demostración de autoatención"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Longitud de la secuencia de entrada: {len(X)}"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Dimensión de entrada: {len(X</span><span style="color: Olive;">)</span><br/>
@@ -603,7 +603,7 @@ MultiHead(Q, K, V) = Concat(head₁, head₂, ..., headₕ) · Wₒ
 <br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">math</span><br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">random</span><br/>
-<span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># runoob: fijar semilla aleatoria</span><br/>
+<span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># ejemplo: fijar semilla aleatoria</span><br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> softmax<span style="color: Olive;">(</span>x: <span style="color: Teal;">list</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">list</span>:<br/>
@@ -748,7 +748,7 @@ X <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Runoob Demostración de atención de múltiples cabezas"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Ejemplo Demostración de atención de múltiples cabezas"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"d_model = {d_model}, num_heads = {num_heads}"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Dimensión de cada cabeza: d_k = {d_model // num_heads}"</span><span style="color: Olive;">)</span><br/>
@@ -835,7 +835,7 @@ d_model <span style="color: Gray;">=</span> <span style="color: Maroon;">8</span
 pe <span style="color: Gray;">=</span> sinusoidal_positional_encoding<span style="color: Olive;">(</span>seq_len<span style="color: Gray;">,</span> d_model<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Runoob Demostración de codificación posicional sinusoidal"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Ejemplo Demostración de codificación posicional sinusoidal"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Longitud de secuencia: {seq_len}, Dimensión: {d_model}"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -913,7 +913,7 @@ SwiGLU(x) = (x·W₁ ⊗ sigmoid(x·V₁)) · W₂
 <br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">math</span><br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">random</span><br/>
-<span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># runoob</span><br/>
+<span style="color: #05a;">random</span>.<span style="color: #05a;">seed</span><span style="color: Olive;">(</span><span style="color: Maroon;">42</span><span style="color: Olive;">)</span>  <span style="color: #a50"># ejemplo</span><br/>
 <br/>
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> relu<span style="color: Olive;">(</span>x: <span style="color: Teal;">float</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">float</span>:<br/>
@@ -1004,7 +1004,7 @@ d_ff <span style="color: Gray;">=</span> <span style="color: Maroon;">16</span><
 x <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Maroon;">0.1</span><span style="color: Gray;">,</span> -<span style="color: Maroon;">0.2</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.3</span><span style="color: Gray;">,</span> -<span style="color: Maroon;">0.4</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.5</span><span style="color: Gray;">,</span> -<span style="color: Maroon;">0.6</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.7</span><span style="color: Gray;">,</span> -<span style="color: Maroon;">0.8</span><span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de FFN de Runoob"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de FFN de Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Entrada: {[f'{v:.4f}' for v in x]}"</span><span style="color: Olive;">)</span><br/>
 <br/>
@@ -1069,7 +1069,7 @@ gamma <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><s
 beta <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Maroon;">0.0</span> <span style="color: Green;font-weight:bold;">for</span> _ <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">range</span><span style="color: Olive;">(</span>d_model<span style="color: Olive;">)</span><span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de normalización de capa de Runoob"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de normalización de capa de Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Entrada: {[f'{v:.4f}' for v in x]}"</span><span style="color: Olive;">)</span><br/>
 <br/>
@@ -1258,7 +1258,7 @@ inputs <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><
 attn <span style="color: Gray;">=</span> SimpleAttentionWithKVCache<span style="color: Olive;">(</span>d_model<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Runoob KV Cache demo"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Ejemplo KV Cache demo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <br/>
 kv_cache <span style="color: Gray;">=</span> <span style="color: Teal;">None</span><br/>

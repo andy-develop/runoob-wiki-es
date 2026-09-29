@@ -286,40 +286,40 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Todas las operaciones de paquetes se realizan mediante el comando pi, sin necesidad de editar manualmente settings.json.</p>
 <table class="reference">
 <tr><th>Comando</th><th>Función</th><th>Ejemplo</th></tr>
-<tr><td>pi install &lt;source&gt;</td><td>Instalar paquete; el parámetro -l lo instala a nivel de proyecto</td><td>pi install npm:@runoob/pi-todo-kit</td></tr>
-<tr><td>pi remove &lt;source&gt;</td><td>Eliminar paquete</td><td>pi remove npm:@runoob/pi-todo-kit</td></tr>
-<tr><td>pi uninstall &lt;source&gt;</td><td>Igual que remove</td><td>pi uninstall npm:@runoob/pi-todo-kit</td></tr>
+<tr><td>pi install &lt;source&gt;</td><td>Instalar paquete; el parámetro -l lo instala a nivel de proyecto</td><td>pi install npm:@ejemplo/pi-todo-kit</td></tr>
+<tr><td>pi remove &lt;source&gt;</td><td>Eliminar paquete</td><td>pi remove npm:@ejemplo/pi-todo-kit</td></tr>
+<tr><td>pi uninstall &lt;source&gt;</td><td>Igual que remove</td><td>pi uninstall npm:@ejemplo/pi-todo-kit</td></tr>
 <tr><td>pi list</td><td>Listar los paquetes instalados</td><td>pi list</td></tr>
 <tr><td>pi update --all</td><td>Actualizar Pi Agent y todos los paquetes</td><td>pi update --all</td></tr>
 <tr><td>pi update --extensions</td><td>Actualizar solo los paquetes instalados (sin incluir Pi Agent)</td><td>pi update --extensions</td></tr>
-<tr><td>pi update &lt;source&gt;</td><td>Actualizar un paquete específico</td><td>pi update npm:@runoob/pi-todo-kit</td></tr>
+<tr><td>pi update &lt;source&gt;</td><td>Actualizar un paquete específico</td><td>pi update npm:@ejemplo/pi-todo-kit</td></tr>
 </table>
 <p>Ejemplo de uso:</p>
 <pre>
 # 安装 npm 包
-$ pi install npm:@runoob/pi-todo-kit@1.0.0
+$ pi install npm:@ejemplo/pi-todo-kit@1.0.0
 
 # 安装 git 包
-$ pi install git:github.com/runoob/pi-todo-kit@v1
+$ pi install git:github.com/ejemplo/pi-todo-kit@v1
 
 # 安装本地包
 $ pi install ./packages/pi-todo-kit
 $ pi install ~/projects/pi-share-kit
 
 # 安装为项目级（写入 .pi/settings.json）
-$ pi install -l npm:@runoob/pi-todo-kit
+$ pi install -l npm:@ejemplo/pi-todo-kit
 
 # 临时试用包（不安装到配置中）
-$ pi -e npm:@runoob/pi-todo-kit
-$ pi -e git:github.com/runoob/pi-todo-kit
+$ pi -e npm:@ejemplo/pi-todo-kit
+$ pi -e git:github.com/ejemplo/pi-todo-kit
 </pre>
 <p>La salida de la instalación es aproximadamente la siguiente (ilustrativa), donde la cantidad de extensions y skills depende del campo pi del paquete:</p>
 <pre>
-$ pi install npm:@runoob/pi-todo-kit
-Resolving @runoob/pi-todo-kit@1.2.0
-Downloading @runoob/pi-todo-kit (12.4 kB)
-Running npm install in ~/.pi/agent/npm/@runoob/pi-todo-kit
-Installed @runoob/pi-todo-kit@1.2.0
+$ pi install npm:@ejemplo/pi-todo-kit
+Resolving @ejemplo/pi-todo-kit@1.2.0
+Downloading @ejemplo/pi-todo-kit (12.4 kB)
+Running npm install in ~/.pi/agent/npm/@ejemplo/pi-todo-kit
+Installed @ejemplo/pi-todo-kit@1.2.0
   extensions: 2
   skills:     1
   prompts:    3
@@ -355,7 +355,7 @@ pi install ssh://git@github.com/user/repo@v1
 <h3>Ruta local</h3>
 <p>Apunta a una ruta del sistema de archivos local; no copia archivos:</p>
 <pre>
-pi install /Users/runoob/.pi/agent/packages/my-kit
+pi install /Users/ejemplo/.pi/agent/packages/my-kit
 pi install ./packages/my-kit
 </pre>
 <hr/>
@@ -366,7 +366,7 @@ pi install ./packages/my-kit
 <div class="example_code">
 
 {<br/>
-  "name": "@runoob/pi-todo-kit",<br/>
+  "name": "@ejemplo/pi-todo-kit",<br/>
   "keywords": ["pi-package"],<br/>
   "pi": {<br/>
     "extensions": ["./extensions"],<br/>
@@ -402,7 +402,7 @@ pi install ./packages/my-kit
   "packages": [<br/>
     "npm:simple-pkg",<br/>
     {<br/>
-      "source": "npm:@runoob/pi-todo-kit",<br/>
+      "source": "npm:@ejemplo/pi-todo-kit",<br/>
       "extensions": ["extensions/*.ts", "!extensions/legacy.ts"],<br/>
       "skills": ["skills/brave-search"],<br/>
       "prompts": [],<br/>
@@ -454,7 +454,7 @@ $ pi config -l
 <p>La identidad del paquete se determina de las siguientes maneras; Pi Agent lo usa para decidir si dos configuraciones apuntan al mismo paquete:</p>
 <table class="reference">
 <tr><th>Origen</th><th>Identificador</th></tr>
-<tr><td>Paquete npm</td><td>Nombre del paquete (p. ej., @runoob/pi-todo-kit)</td></tr>
+<tr><td>Paquete npm</td><td>Nombre del paquete (p. ej., @ejemplo/pi-todo-kit)</td></tr>
 <tr><td>Paquete git</td><td>URL del repositorio (sin ref)</td></tr>
 <tr><td>Ruta local</td><td>Ruta absoluta resuelta</td></tr>
 </table> Otras extensiones

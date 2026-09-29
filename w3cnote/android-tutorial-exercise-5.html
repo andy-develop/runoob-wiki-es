@@ -151,7 +151,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>gradle-wrapper.properties</strong>：</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-5735-hijnbclbwrmwrq67htffny67.png"/></p>
 <p>Hay otro lugar que debe cambiarse ligeramente:<strong>SisterApi.java</strong>, cambiar<strong>beneficio</strong>por:<strong>%e7%a6%8f%e5%88%a9</strong>Esto implica el problema de la transcodificación de caracteres chinos, y HttpUrlConnection no puede abrir enlaces que contengan chino; es necesario llamar a la codificación de la parte china mediante<strong>URLEncoder.encode(parteChina,"utf-8");</strong>para transcodificar; recuerda<strong>solo</strong>
-<strong>la parte china, no toda la url</strong>¡¡¡También es necesario capturar la excepción. Como aquí solo hay un lugar que necesita transcodificación, simplemente usé una herramienta de transcodificación en línea para hacerlo:<a href="../front-end/695.html" target="_blank">https://c.runoob.com/front-end/695</a></p>
+<strong>la parte china, no toda la url</strong>¡¡¡También es necesario capturar la excepción. Como aquí solo hay un lugar que necesita transcodificación, simplemente usé una herramienta de transcodificación en línea para hacerlo:<a href="../front-end/695.html" target="_blank">https://c.example.com/front-end/695</a></p>
 <p>Resultado después de la conversión:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-6829-iuq65j5rh64ganeyeqz5hs1o.png"/></p>
 <p>Además, hay algunos otros cambios menores,<strong>buildToolsVersion 26 o superior</strong>，<strong>findViewById no necesita conversión forzada</strong>, si entras en el método lo verás; usa genéricos, así que elimina todos los findViewById:</p>

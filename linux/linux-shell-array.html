@@ -286,7 +286,7 @@ array_name=(value1 value2 ... valuen)
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># autor: Tutorial de novatos</span><br/>
-<span style="color: #666666; font-style: italic;"># url:www.runoob.com</span><br/>
+<span style="color: #666666; font-style: italic;"># url:www.example.com</span><br/>
 <br/>
 <span style="color: #007800;">my_array</span>=<span style="color: #7A0874; font-weight: bold;">(</span>A B <span style="color: #a10;">"C"</span> D<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 </div></div>
@@ -305,7 +305,7 @@ ${array_name[index]}
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># autor: Tutorial de novatos</span><br/>
-<span style="color: #666666; font-style: italic;"># url:www.runoob.com</span><br/>
+<span style="color: #666666; font-style: italic;"># url:www.example.com</span><br/>
 <br/>
 <span style="color: #007800;">my_array</span>=<span style="color: #7A0874; font-weight: bold;">(</span>A B <span style="color: #a10;">"C"</span> D<span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
@@ -330,13 +330,13 @@ $ ./test.sh
 <p>Las claves de un arreglo asociativo son únicas.</p>
 <p>En el siguiente ejemplo creamos un arreglo asociativo<strong>site</strong>y creamos diferentes pares clave-valor:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> <span style="color: #007800;">site</span>=<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span> <span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"runoob"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.runoob.com"</span> <span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
+<span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> <span style="color: #007800;">site</span>=<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span> <span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"ejemplo"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.example.com"</span> <span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 </div></div>
 <p>También podemos declarar primero un arreglo asociativo y luego establecer las claves y los valores:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> site<br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span><br/>
-site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"runoob"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.runoob.com"</span><br/>
+site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"ejemplo"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.example.com"</span><br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><br/>
 </div></div>
 <p>También se puede asignar valores mientras se define:</p>
@@ -346,18 +346,18 @@ site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color:
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> site<br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span><br/>
-site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"runoob"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.runoob.com"</span><br/>
+site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"ejemplo"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.example.com"</span><br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><br/>
 <br/>
-<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${site["runoob"]}</span><br/>
+<span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #800000;">${site["ejemplo"]}</span><br/>
 </div></div>
-<p>Ejecute el script, el resultado de salida es el siguiente:</p><pre>www.runoob.com</pre>
+<p>Ejecute el script, el resultado de salida es el siguiente:</p><pre>www.example.com</pre>
 <h3>Obtener todos los elementos del arreglo</h3>
 <p>Usando<span class="marked">@</span>o<span class="marked">*</span>se pueden obtener todos los elementos del arreglo, por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># autor: Tutorial de novatos</span><br/>
-<span style="color: #666666; font-style: italic;"># url:www.runoob.com</span><br/>
+<span style="color: #666666; font-style: italic;"># url:www.example.com</span><br/>
 <br/>
 my_array<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">]</span>=A<br/>
 my_array<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #000000;">1</span><span style="color: #7A0874; font-weight: bold;">]</span>=B<br/>
@@ -376,7 +376,7 @@ $ ./test.sh
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> site<br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span><br/>
-site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"runoob"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.runoob.com"</span><br/>
+site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"ejemplo"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.example.com"</span><br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><br/>
 <br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Los elementos del arreglo son:<span style="color: #007800;">${site[*]}</span>"</span><br/>
@@ -385,27 +385,27 @@ site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color:
 <pre>
 $ chmod +x test.sh 
 $ ./test.sh
-数组的元素为: www.google.com www.runoob.com www.taobao.com
-数组的元素为: www.google.com www.runoob.com www.taobao.com</pre>
+数组的元素为: www.google.com www.example.com www.taobao.com
+数组的元素为: www.google.com www.example.com www.taobao.com</pre>
 <p>Agregar un signo de exclamación antes del arreglo<span class="marked">!</span>permite obtener todas las claves del arreglo, por ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #7A0874; font-weight: bold;">declare</span> <span style="color: #660033;">-A</span> site<br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"google"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.google.com"</span><br/>
-site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"runoob"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.runoob.com"</span><br/>
+site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"ejemplo"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.example.com"</span><br/>
 site<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #a10;">"taobao"</span><span style="color: #7A0874; font-weight: bold;">]</span>=<span style="color: #a10;">"www.taobao.com"</span><br/>
 <br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Las claves del arreglo son:<span style="color: #007800;">${!site[*]}</span>"</span><br/>
 <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Las claves del arreglo son:<span style="color: #007800;">${!site[@]}</span>"</span><br/>
 </div></div>
 <p>Ejecute el script, el resultado de salida es el siguiente:</p>
-<pre>数组的键为: google runoob taobao
-数组的键为: google runoob taobao</pre>
+<pre>数组的键为: google ejemplo taobao
+数组的键为: google ejemplo taobao</pre>
 <h3>Obtener la longitud del arreglo</h3>
 <p>El método para obtener la longitud de un arreglo es el mismo que para obtener la longitud de una cadena, por ejemplo:<p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># autor: Tutorial de novatos</span><br/>
-<span style="color: #666666; font-style: italic;"># url:www.runoob.com</span><br/>
+<span style="color: #666666; font-style: italic;"># url:www.example.com</span><br/>
 <br/>
 my_array<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #000000;">0</span><span style="color: #7A0874; font-weight: bold;">]</span>=A<br/>
 my_array<span style="color: #7A0874; font-weight: bold;">[</span><span style="color: #000000;">1</span><span style="color: #7A0874; font-weight: bold;">]</span>=B<br/>

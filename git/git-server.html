@@ -267,16 +267,16 @@ yum -y install git-core
 $ groupadd git
 $ useradd git -g git
 </pre>
-<h3>2. Crear un repositorio desnudo</h3><p>Inicia sesión como usuario Git y crea un repositorio desnudo en su directorio home.</p><pre>$ sudo su - git</pre>Primero elegimos un directorio como repositorio Git, supongamos que es /home/gitrepo/runoob.git, y en el directorio /home/gitrepo ejecutamos el comando:<pre>
+<h3>2. Crear un repositorio desnudo</h3><p>Inicia sesión como usuario Git y crea un repositorio desnudo en su directorio home.</p><pre>$ sudo su - git</pre>Primero elegimos un directorio como repositorio Git, supongamos que es /home/gitrepo/ejemplo.git, y en el directorio /home/gitrepo ejecutamos el comando:<pre>
 $ cd /home
 $ mkdir gitrepo
 $ chown git:git gitrepo/
 $ cd gitrepo
 
-$ git init --bare runoob.git</pre>
+$ git init --bare ejemplo.git</pre>
 <p>El comando anterior crea un repositorio vacío en Git. Los repositorios Git en el servidor suelen terminar en<span class="marked">.git</span>Al final. Luego, cambia el propietario del repositorio a git (si lo operan otros usuarios, como root):</p>
 <pre>
-$ chown -R git:git runoob.git
+$ chown -R git:git ejemplo.git
 </pre>
 <h3>3. Crear inicio de sesión con certificado</h3>
 <p>Agrega tu clave pública a ~/.ssh/authorized_keys para permitir el acceso remoto.</p>
@@ -292,8 +292,8 @@ $ chmod 644 .ssh/authorized_keys
 </p>
 <h3>4. Clonar el repositorio</h3>
 <pre>
-$ git clone git@192.168.45.4:/home/gitrepo/runoob.git
-Cloning into 'runoob'...
+$ git clone git@192.168.45.4:/home/gitrepo/ejemplo.git
+Cloning into 'ejemplo'...
 warning: You appear to have cloned an empty repository.
 Checking connectivity... done.
 </pre>
@@ -333,7 +333,7 @@ ssh-keygen</pre>
 <pre>
 cat .ssh/id_rsa.pub</pre>
 <p>Muestra información similar a la siguiente:</p>
-<pre>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQVwWjF3KXmI549jDI0fuCgl+syJjjn55iMUDRRiCd/B+9TwUda3l9WXH5i7RU53QGRCsDVFZxixLOlmXr9E3VSqkf8xXBnHs/5E2z5PIOCN0nxfB9xeA1db/QxPwK4gkHisep+eNHRn9x+DpCYDoSoYQN0nBg+H3uqfOqL42mJ+tqSfkyqbhjBf1kjtDTlBfVCWtI0siu7owm+c65+8KNyPlj5/0AyJ4Aqk1OX2jv+YE4nTipucn7rHwWuowasPU86l+uBsLNwOSb+H7loJvQyhEINX2FS1KnpRU+ld20t07n+N3ErfX5xBAGfxXpoN9BKKSP+RT7rvTeXTVE**** test@runoob.com****</pre>
+<pre>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQVwWjF3KXmI549jDI0fuCgl+syJjjn55iMUDRRiCd/B+9TwUda3l9WXH5i7RU53QGRCsDVFZxixLOlmXr9E3VSqkf8xXBnHs/5E2z5PIOCN0nxfB9xeA1db/QxPwK4gkHisep+eNHRn9x+DpCYDoSoYQN0nBg+H3uqfOqL42mJ+tqSfkyqbhjBf1kjtDTlBfVCWtI0siu7owm+c65+8KNyPlj5/0AyJ4Aqk1OX2jv+YE4nTipucn7rHwWuowasPU86l+uBsLNwOSb+H7loJvQyhEINX2FS1KnpRU+ld20t07n+N3ErfX5xBAGfxXpoN9BKKSP+RT7rvTeXTVE**** test@example.com****</pre>
 <p><strong>5. Crear un proyecto</strong></p><p>En la página principal de GitLab, haz clic en la opción Create a project:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/03/gitlab-5.png"/></p>
 <p>Haz clic en Create blank project, configura Project name y Project URL, y luego haz clic en Create project:</p>

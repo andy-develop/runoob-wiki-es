@@ -195,12 +195,12 @@ import module1[, module2[,... moduleN]]
 </span><span class="hl-comment"># Importar el módulo</span><span class="hl-code">
 </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">support</span><span class="hl-code">
 </span><span class="hl-comment"># Ahora se pueden llamar las funciones contenidas en el módulo</span><span class="hl-code">
-</span><span class="hl-identifier">support</span><span class="hl-code">.</span><span class="hl-identifier">print_func</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
+</span><span class="hl-identifier">support</span><span class="hl-code">.</span><span class="hl-identifier">print_func</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado del ejemplo anterior es:</p>
 <pre>
-Hello : Runoob
+Hello : Ejemplo
 </pre>
 <p>Un módulo solo se importa una vez, sin importar cuántas veces ejecutes import. Esto evita que el módulo importado se ejecute una y otra vez.</p>
 <br/><hr/>
@@ -308,62 +308,62 @@ reload(hello)</pre>
 <h2>Paquetes en Python</h2>
 <p>Un paquete es una estructura de directorios de archivos jerárquica que define un entorno de aplicación de Python compuesto por módulos, subpaquetes, y subpaquetes dentro de subpaquetes, etc.</p>
 <p>En términos simples, un paquete es una carpeta, pero debe existir un archivo __init__.py en esa carpeta; el contenido de este archivo puede estar vacío.<strong>__init__.py</strong>Se utiliza para identificar que la carpeta actual es un paquete.</p>
-<p>Considera un<strong>package_runoob</strong>en el directorio<strong>runoob1.py、runoob2.py、__init__.py </strong>archivo; test.py es el código para probar la llamada al paquete. La estructura de directorios es la siguiente:</p>
+<p>Considera un<strong>package_ejemplo</strong>en el directorio<strong>ejemplo1.py、ejemplo2.py、__init__.py </strong>archivo; test.py es el código para probar la llamada al paquete. La estructura de directorios es la siguiente:</p>
 <pre>
 test.py
-package_runoob
+package_ejemplo
 |-- __init__.py
-|-- runoob1.py
-|-- runoob2.py
+|-- ejemplo1.py
+|-- ejemplo2.py
 </pre>El código fuente es el siguiente:
 <div class="example">
-<h2 class="example">package_runoob/runoob1.py</h2>
+<h2 class="example">package_ejemplo/ejemplo1.py</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
-</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">:
-   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">I'm in runoob1</span><span class="hl-quotes">"</span></div>
+</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">:
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">I'm in ejemplo1</span><span class="hl-quotes">"</span></div>
 </div>
 </div>
 <div class="example">
-<h2 class="example">package_runoob/runoob2.py</h2>
+<h2 class="example">package_ejemplo/ejemplo2.py</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
-</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">runoob2</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">:
-   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">I'm in runoob2</span><span class="hl-quotes">"</span></div>
+</span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo2</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">:
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">I'm in ejemplo2</span><span class="hl-quotes">"</span></div>
 </div>
 </div>
-<p>Ahora, en<strong>package_runoob</strong>crea en el directorio<strong>__init__.py</strong>：</p>
+<p>Ahora, en<strong>package_ejemplo</strong>crea en el directorio<strong>__init__.py</strong>：</p>
 <div class="example">
-<h2 class="example">package_runoob/__init__.py</h2>
+<h2 class="example">package_ejemplo/__init__.py</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">__name__</span><span class="hl-code"> == </span><span class="hl-quotes">'</span><span class="hl-string">__main__</span><span class="hl-quotes">'</span><span class="hl-code">:
     </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">como programa principal</span><span class="hl-quotes">'</span><span class="hl-code">
 </span><span class="hl-reserved">else</span><span class="hl-code">:
-    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Inicialización de package_runoob</span><span class="hl-quotes">'</span></div>
+    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Inicialización de package_ejemplo</span><span class="hl-quotes">'</span></div>
 </div>
 </div>
-<p>Luego, en<strong>package_runoob</strong> <span class="marked">el directorio del mismo nivel</span>creamos test.py para llamar<strong>package_runoob</strong>Paquete</p>
+<p>Luego, en<strong>package_ejemplo</strong> <span class="marked">el directorio del mismo nivel</span>creamos test.py para llamar<strong>package_ejemplo</strong>Paquete</p>
 <div class="example">
 <h2 class="example">test.py</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#!/usr/bin/python</span><span class="hl-code">
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
 </span><span class="hl-comment"># Importar el paquete Phone</span><span class="hl-code">
-</span><span class="hl-reserved">from</span><span class="hl-code"> </span><span class="hl-identifier">package_runoob</span><span class="hl-code">.</span><span class="hl-identifier">runoob1</span><span class="hl-code"> </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-code">
-</span><span class="hl-reserved">from</span><span class="hl-code"> </span><span class="hl-identifier">package_runoob</span><span class="hl-code">.</span><span class="hl-identifier">runoob2</span><span class="hl-code"> </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">runoob2</span><span class="hl-code">
-</span><span class="hl-identifier">runoob1</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">runoob2</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span></div>
+</span><span class="hl-reserved">from</span><span class="hl-code"> </span><span class="hl-identifier">package_ejemplo</span><span class="hl-code">.</span><span class="hl-identifier">ejemplo1</span><span class="hl-code"> </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-code">
+</span><span class="hl-reserved">from</span><span class="hl-code"> </span><span class="hl-identifier">package_ejemplo</span><span class="hl-code">.</span><span class="hl-identifier">ejemplo2</span><span class="hl-code"> </span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo2</span><span class="hl-code">
+</span><span class="hl-identifier">ejemplo1</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">ejemplo2</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado del ejemplo anterior es:</p>
 <pre>
-package_runoob 初始化
-I'm in runoob1
-I'm in runoob2
+package_ejemplo 初始化
+I'm in ejemplo1
+I'm in ejemplo2
 </pre>
 <p>Como arriba, para el ejemplo, solo colocamos una función en cada archivo, pero en realidad puedes colocar muchas funciones. También puedes definir clases de Python en estos archivos y luego crear un paquete para esas clases.</p> Otras extensiones
 </div>

@@ -285,12 +285,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Crear listas</h3>
 <p>En R, para crear una lista se usa<span class="marked">list()</span>la función.</p><p>En el siguiente ejemplo, creamos una lista que contiene una cadena, un vector y un número:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"runoob"</span>, <span style="color: #a11;">"google"</span>, <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">11</span>,<span style="color: #a11;">22</span>,<span style="color: #a11;">33</span><span style="color: #080;">)</span>, <span style="color: #a11;">123</span>, <span style="color: #a11;">51.23</span>, <span style="color: #a11;">119.1</span><span style="color: #080;">)</span><br/>
+list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo"</span>, <span style="color: #a11;">"google"</span>, <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">11</span>,<span style="color: #a11;">22</span>,<span style="color: #a11;">33</span><span style="color: #080;">)</span>, <span style="color: #a11;">123</span>, <span style="color: #a11;">51.23</span>, <span style="color: #a11;">119.1</span><span style="color: #080;">)</span><br/>
 <span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>list_data<span style="color: #080;">)</span><br/>
 </div></div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>[[1]]
-[1] "runoob"
+[1] "ejemplo"
 
 [[2]]
 [1] "google"
@@ -325,8 +325,8 @@ merged_characters <span style="color: #170;">&lt;-</span> <span style="color: #0
 <p>Podemos usar<span class="marked">names()</span>la función para nombrar los elementos de la lista:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #a50;"># La lista contiene vector, matriz, lista</span><br/>
-list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Runoob"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
-   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"runoob"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
+list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Ejemplo"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
+   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Asignar nombres a los elementos de la lista</span><br/>
 <span style="color: #05a; font-weight: bold;">names</span><span style="color: #080;">(</span>list_data<span style="color: #080;">)</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Sites"</span>, <span style="color: #a11;">"Numbers"</span>, <span style="color: #a11;">"Lists"</span><span style="color: #080;">)</span><br/>
@@ -336,7 +336,7 @@ list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font
 </div></div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>$Sites
-[1] "Google" "Runoob" "Taobao"
+[1] "Google" "Ejemplo" "Taobao"
 
 $Numbers
      [,1] [,2] [,3]
@@ -345,15 +345,15 @@ $Numbers
 
 $Lists
 $Lists[[1]]
-[1] "runoob"
+[1] "ejemplo"
 
 $Lists[[2]]
 [1] 12.3</pre>
 <h3>Acceder a las listas</h3><p>Los elementos de una lista se pueden acceder mediante índices. Si usamos la<strong>names()</strong>función para nombrarlos, también podemos acceder a ellos usando los nombres correspondientes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #a50;"># La lista contiene vector, matriz, lista</span><br/>
-list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Runoob"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
-   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"runoob"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
+list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Ejemplo"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
+   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Asignar nombres a los elementos de la lista</span><br/>
 <span style="color: #05a; font-weight: bold;">names</span><span style="color: #080;">(</span>list_data<span style="color: #080;">)</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Sites"</span>, <span style="color: #a11;">"Numbers"</span>, <span style="color: #a11;">"Lists"</span><span style="color: #080;">)</span><br/>
@@ -370,11 +370,11 @@ list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font
 <p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>
 $Sites
-[1] "Google" "Runoob" "Taobao"
+[1] "Google" "Ejemplo" "Taobao"
 
 $Lists
 $Lists[[1]]
-[1] "runoob"
+[1] "ejemplo"
 
 $Lists[[2]]
 [1] 12.3
@@ -387,8 +387,8 @@ $Lists[[2]]
 <h3>Manipular elementos de la lista</h3><p>Podemos realizar operaciones de agregar, eliminar y actualizar en la lista, como en el siguiente ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #a50;"># La lista contiene vector, matriz, lista</span><br/>
-list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Runoob"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
-   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"runoob"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
+list_data <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Ejemplo"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">matrix</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span>,<span style="color: #a11;">4</span>,<span style="color: #a11;">5</span>,<span style="color: #a11;">6</span><span style="color: #080;">)</span>, <span style="color: #05a; font-weight: bold;">nrow</span> <span style="color: #170;">=</span> <span style="color: #a11;">2</span><span style="color: #080;">)</span>,<br/>
+   <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo"</span>,<span style="color: #a11;">12.3</span><span style="color: #080;">)</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Asignar nombres a los elementos de la lista</span><br/>
 <span style="color: #05a; font-weight: bold;">names</span><span style="color: #080;">(</span>list_data<span style="color: #080;">)</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span><span style="color: #a11;">"Sites"</span>, <span style="color: #a11;">"Numbers"</span>, <span style="color: #a11;">"Lists"</span><span style="color: #080;">)</span><br/>
@@ -441,7 +441,7 @@ my_list <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-w
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #a50;"># Crear dos listas</span><br/>
 list1 <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">1</span>,<span style="color: #a11;">2</span>,<span style="color: #a11;">3</span><span style="color: #080;">)</span><br/>
-list2 <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Runoob"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span><br/>
+list2 <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">list</span><span style="color: #080;">(</span><span style="color: #a11;">"Google"</span>,<span style="color: #a11;">"Ejemplo"</span>,<span style="color: #a11;">"Taobao"</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Combinar listas</span><br/>
 merged.<span style="">list</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">c</span><span style="color: #080;">(</span>list1,list2<span style="color: #080;">)</span><br/>
@@ -463,7 +463,7 @@ merged.<span style="">list</span> <span style="color: #170;">&lt;-</span> <span 
 [1] "Google"
 
 [[5]]
-[1] "Runoob"
+[1] "Ejemplo"
 
 [[6]]
 [1] "Taobao"</pre>

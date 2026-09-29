@@ -336,7 +336,7 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 <br/>
 <span style="color: #a50"># Definir la estructura de salida esperada</span><br/>
 <span style="color: Green;font-weight:bold;">class</span> CourseInfo<span style="color: Olive;">(</span>BaseModel<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""Resultado de extracción del curso de RUNOOB Tutorial para Principiantes"""</span><br/>
+    <span style="color: #a11;">"""Resultado de extracción del curso de EJEMPLO Tutorial para Principiantes"""</span><br/>
     course_name: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> Field<span style="color: Olive;">(</span>description<span style="color: Gray;">=</span><span style="color: #a11;">"Nombre del curso"</span><span style="color: Olive;">)</span><br/>
     difficulty: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> Field<span style="color: Olive;">(</span>description<span style="color: Gray;">=</span><span style="color: #a11;">"Dificultad: Principiante/Intermedio/Avanzado"</span><span style="color: Olive;">)</span><br/>
     estimated_hours: <span style="color: Teal;">int</span> <span style="color: Gray;">=</span> Field<span style="color: Olive;">(</span>description<span style="color: Gray;">=</span><span style="color: #a11;">"Duración estimada de estudio (horas)"</span><span style="color: Olive;">)</span><br/>
@@ -347,7 +347,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     response_format<span style="color: Gray;">=</span>CourseInfo<span style="color: Gray;">,</span>  <span style="color: #a50"># Pasar el modelo Pydantic</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de cursos de RUNOOB Tutorial para Principiantes, extrae la información del curso de la descripción del usuario."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de cursos de EJEMPLO Tutorial para Principiantes, extrae la información del curso de la descripción del usuario."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># El usuario ingresa una descripción no estructurada</span><br/>
@@ -370,11 +370,11 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-课程名: Python3 基础教程
-难度: 入门
-预计时长: 20 小时
-免费: 是
-对象类型: &lt;class '__main__.CourseInfo'&gt;
+Nombre del curso: Python3 基础教程
+Dificultad: 入门
+Duración: 20 小时
+Gratis: 是
+Tipo de objeto: &lt;class '__main__.CourseInfo'&gt;
 </pre>
 <blockquote><p>El structured_response devuelto es una instancia del modelo Pydantic, no un diccionario común. Esto significa que puedes acceder mediante atributos como .course_name, y el IDE también ofrece autocompletado.</p></blockquote>
 <hr/>
@@ -392,7 +392,7 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 <br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_course<span style="color: Olive;">(</span><span style="color: #05a;">keyword</span>: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Buscar información de cursos en RUNOOB Tutorial para Principiantes"""</span><br/>
+    <span style="color: #a11;">"""Buscar información de cursos en EJEMPLO Tutorial para Principiantes"""</span><br/>
     courses <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
         <span style="color: #a11;">"python"</span>: <span style="color: #a11;">"Tutorial básico de Python3 | Principiante | Gratuito | 30 capítulos | Aprox. 20 horas"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"java"</span>: <span style="color: #a11;">"Tutorial básico de Java | Principiante | Gratuito | 35 capítulos | Aprox. 25 horas"</span><span style="color: Gray;">,</span><br/>
@@ -413,7 +413,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_course<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     response_format<span style="color: Gray;">=</span>CourseRecommendation<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de RUNOOB Tutorial para Principiantes. Primero consulta los cursos y luego haz recomendaciones."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de EJEMPLO Tutorial para Principiantes. Primero consulta los cursos y luego haz recomendaciones."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -434,9 +434,9 @@ rec <span style="color: Gray;">=</span> result<span style="color: Olive;">[</spa
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-推荐课程: Python3 基础教程
-推荐理由: 该课程免费且适合Python初学者，学习时长约20小时
-难度: 入门
+Curso recomendado: Python3 基础教程
+Razón: 该课程免费且适合Python初学者，学习时长约20小时
+Dificultad: 入门
 
 === 执行过程 ===
   调用 search_course: Python3 基础教程 | 入门 | 免费 | 30章 | 约20小时
@@ -473,7 +473,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     response_format<span style="color: Gray;">=</span>LearningPlan<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el planificador de estudios de RUNOOB Tutorial para Principiantes."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el planificador de estudios de EJEMPLO Tutorial para Principiantes."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -494,7 +494,7 @@ plan <span style="color: Gray;">=</span> result<span style="color: Olive;">[</sp
 <p>Resultado de ejecución:</p>
 <pre>
 目标: 掌握 Python 基础语法，能够独立编写简单的 Python 程序
-难度: 入门
+Dificultad: 入门
 总时长: 9.5 小时
 
 知识点列表 (6 个):
@@ -529,7 +529,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 structured_model <span style="color: Gray;">=</span> model.<span style="color: #05a;">with_structured_output</span><span style="color: Olive;">(</span>SentimentResult<span style="color: Olive;">)</span><br/>
 <br/>
 texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"¡RUNOOB Tutorial para Principiantes es realmente muy útil, lo recomiendo encarecidamente!"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"¡EJEMPLO Tutorial para Principiantes es realmente muy útil, lo recomiendo encarecidamente!"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Este tutorial tiene muy poco contenido, no vale mucho la pena."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Hoy hace buen tiempo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
@@ -542,12 +542,12 @@ texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><b
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-文本: 菜鸟教程 RUNOOB 真的太好用了，强烈推荐！...
-  情感: 积极, 强度: 0.95, 关键词: ['好用', '推荐']
-文本: 这个教程内容太少了，不太值。...
-  情感: 消极, 强度: 0.7, 关键词: ['内容太少', '不太值']
-文本: 今天天气不错。...
-  情感: 中性, 强度: 0.1, 关键词: ['不错']
+Texto: Ejemplo 真的太好用了，强烈推荐！...
+  Sentimiento: 积极, 强度: 0.95, 关键词: ['好用', '推荐']
+Texto: 这个教程内容太少了，不太值。...
+  Sentimiento: 消极, 强度: 0.7, 关键词: ['内容太少', '不太值']
+Texto: 今天天气不错。...
+  Sentimiento: 中性, 强度: 0.1, 关键词: ['不错']
 </pre>
 <blockquote><p>with_structured_output() es un método del modelo y se puede usar sin Agent. Si tu escenario es "extracción de información" en lugar de "razonamiento de múltiples pasos", usar with_structured_output() directamente es más simple y eficiente.</p></blockquote>
 Otras extensiones

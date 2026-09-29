@@ -316,41 +316,41 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Considere lo siguiente<strong>posts</strong>la estructura de documentos de la colección, que contiene el contenido del artículo y las etiquetas:</p>
 <pre>
 {
-   "post_text": "enjoy the mongodb articles on runoob",
+   "post_text": "enjoy the mongodb articles on ejemplo",
    "tags": [
       "mongodb",
-      "runoob"
+      "ejemplo"
    ]
 }
 </pre>
 <hr/>
 <h2>Uso de expresiones regulares</h2>
-<p>El siguiente comando usa expresiones regulares para buscar artículos que contengan la cadena runoob:</p>
+<p>El siguiente comando usa expresiones regulares para buscar artículos que contengan la cadena ejemplo:</p>
 <pre>
-&gt;db.posts.find({post_text:{$regex:"runoob"}})
+&gt;db.posts.find({post_text:{$regex:"ejemplo"}})
 </pre>
 <p>La consulta anterior también se puede escribir como:</p>
 <pre>
-&gt;db.posts.find({post_text:/runoob/})
+&gt;db.posts.find({post_text:/ejemplo/})
 </pre>
 <hr/>
 <h2>Expresiones regulares que no distinguen entre mayúsculas y minúsculas</h2>
 <p>Si la búsqueda no necesita distinguir entre mayúsculas y minúsculas, podemos establecer $options como $i.</p>
-<p>El siguiente comando buscará la cadena runoob sin distinguir entre mayúsculas y minúsculas:</p>
+<p>El siguiente comando buscará la cadena ejemplo sin distinguir entre mayúsculas y minúsculas:</p>
 <pre>
-&gt;db.posts.find({post_text:{$regex:"runoob",$options:"$i"}})
+&gt;db.posts.find({post_text:{$regex:"ejemplo",$options:"$i"}})
 </pre>
-<p>La colección devolverá todos los datos que contengan la cadena runoob, sin distinguir entre mayúsculas y minúsculas:</p>
+<p>La colección devolverá todos los datos que contengan la cadena ejemplo, sin distinguir entre mayúsculas y minúsculas:</p>
 <pre>
 {
    "_id" : ObjectId("53493d37d852429c10000004"),
-   "post_text" : "hey! this is my post on  runoob", 
-   "tags" : [ "runoob" ]
+   "post_text" : "hey! this is my post on  ejemplo", 
+   "tags" : [ "ejemplo" ]
 } 
 </pre>
 <hr/>
 <h2>Uso de expresiones regulares en elementos de array</h2>
-<p>También podemos usar expresiones regulares en campos de array para buscar contenido. Esto es muy útil en la implementación de etiquetas. Si necesitas buscar datos de etiquetas que comiencen con run (ru, run o runoob), puedes usar el siguiente código:</p>
+<p>También podemos usar expresiones regulares en campos de array para buscar contenido. Esto es muy útil en la implementación de etiquetas. Si necesitas buscar datos de etiquetas que comiencen con run (ru, run o ejemplo), puedes usar el siguiente código:</p>
 <pre>
 &gt;db.posts.find({tags:{$regex:"run"}})
 </pre>

@@ -396,7 +396,7 @@ $ dart test
 <span style="font-weight: bold;">import</span> <span style="color: #d14;">'package:test/test.dart'</span><span style="font-weight: bold;">;</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-  test<span style="">(</span><span style="color: #d14;">'RUNOOB ejemplos de varias aserciones'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
+  test<span style="">(</span><span style="color: #d14;">'EJEMPLO ejemplos de varias aserciones'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
     <span style="color: #999988; font-style: italic;">// Igualdad básica</span><br/>
     expect<span style="">(</span><span style="color: #009999;">2</span> <span style="font-weight: bold;">+</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">,</span> equals<span style="">(</span><span style="color: #009999;">4</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
@@ -407,16 +407,16 @@ $ dart test
     <span style="color: #999988; font-style: italic;">// Comprobación de null</span><br/>
     String<span style="font-weight: bold;">?</span> name<span style="font-weight: bold;">;</span><br/>
     expect<span style="">(</span>name<span style="font-weight: bold;">,</span> isNull<span style="">)</span><span style="font-weight: bold;">;</span><br/>
-    name <span style="font-weight: bold;">=</span> <span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">;</span><br/>
+    name <span style="font-weight: bold;">=</span> <span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">;</span><br/>
     expect<span style="">(</span>name<span style="font-weight: bold;">,</span> isNotNull<span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
     <span style="color: #999988; font-style: italic;">// Comprobación de tipo</span><br/>
-    expect<span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">,</span> isA<span style="font-weight: bold;">&lt;</span>String<span style="font-weight: bold;">&gt;</span><span style="">(</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    expect<span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">,</span> isA<span style="font-weight: bold;">&lt;</span>String<span style="font-weight: bold;">&gt;</span><span style="">(</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
     expect<span style="">(</span><span style="color: #009999;">42</span><span style="font-weight: bold;">,</span> isA<span style="font-weight: bold;">&lt;</span>int<span style="font-weight: bold;">&gt;</span><span style="">(</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
     <span style="color: #999988; font-style: italic;">// Contenidos en listas/cadenas</span><br/>
     expect<span style="">(</span><span style="">[</span><span style="color: #009999;">1</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">3</span><span style="">]</span><span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #009999;">2</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-    expect<span style="">(</span><span style="color: #d14;">'Hello, RUNOOB!'</span><span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    expect<span style="">(</span><span style="color: #d14;">'Hello, EJEMPLO!'</span><span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
     <span style="color: #999988; font-style: italic;">// Longitud</span><br/>
     expect<span style="">(</span><span style="">[</span><span style="color: #009999;">1</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">3</span><span style="">]</span><span style="font-weight: bold;">,</span> hasLength<span style="">(</span><span style="color: #009999;">3</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -437,8 +437,8 @@ $ dart test
     expect<span style="">(</span><span style="">[</span><span style="color: #009999;">1</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">3</span><span style="">]</span><span style="font-weight: bold;">,</span> equals<span style="">(</span><span style="">[</span><span style="color: #009999;">1</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">2</span><span style="font-weight: bold;">,</span> <span style="color: #009999;">3</span><span style="">]</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
     <span style="color: #999988; font-style: italic;">// Map contiene una clave</span><br/>
-    <span style="font-weight: bold;">var</span> user <span style="font-weight: bold;">=</span> <span style="">{</span><span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'age'</span><span style="font-weight: bold;">:</span> <span style="color: #009999;">10</span><span style="">}</span><span style="font-weight: bold;">;</span><br/>
-    expect<span style="">(</span>user<span style="font-weight: bold;">,</span> containsPair<span style="">(</span><span style="color: #d14;">'name'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'runoob'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    <span style="font-weight: bold;">var</span> user <span style="font-weight: bold;">=</span> <span style="">{</span><span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'age'</span><span style="font-weight: bold;">:</span> <span style="color: #009999;">10</span><span style="">}</span><span style="font-weight: bold;">;</span><br/>
+    expect<span style="">(</span>user<span style="font-weight: bold;">,</span> containsPair<span style="">(</span><span style="color: #d14;">'name'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'ejemplo'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
     expect<span style="">(</span>user.<span style="color: #006633;">keys</span><span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #d14;">'age'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
@@ -540,7 +540,7 @@ $ dart test
 <br/>
     group<span style="">(</span><span style="color: #d14;">'reverse()'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
       test<span style="">(</span><span style="color: #d14;">'Invertir una cadena normal'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
-        expect<span style="">(</span>StringUtils.<span style="color: #006633;">reverse</span><span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="">)</span><span style="font-weight: bold;">,</span> equals<span style="">(</span><span style="color: #d14;">'BOONUR'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+        expect<span style="">(</span>StringUtils.<span style="color: #006633;">reverse</span><span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="">)</span><span style="font-weight: bold;">,</span> equals<span style="">(</span><span style="color: #d14;">'BOONUR'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
       <span style="">}</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
       test<span style="">(</span><span style="color: #d14;">'Invertir una cadena palíndroma no cambia'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
@@ -638,7 +638,7 @@ $ dart test
 <br/>
     test<span style="">(</span><span style="color: #d14;">'query() consulta normal'</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
       <span style="font-weight: bold;">var</span> result <span style="font-weight: bold;">=</span> db.<span style="color: #006633;">query</span><span style="">(</span><span style="color: #d14;">'SELECT * FROM users'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-      expect<span style="">(</span>result<span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="">)</span> <span style="font-weight: bold;">?</span> result.<span style="color: #006633;">contains</span><span style="">(</span><span style="color: #d14;">'users'</span><span style="">)</span> <span style="font-weight: bold;">:</span> result.<span style="color: #006633;">contains</span><span style="">(</span><span style="color: #d14;">'users'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+      expect<span style="">(</span>result<span style="font-weight: bold;">,</span> contains<span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="">)</span> <span style="font-weight: bold;">?</span> result.<span style="color: #006633;">contains</span><span style="">(</span><span style="color: #d14;">'users'</span><span style="">)</span> <span style="font-weight: bold;">:</span> result.<span style="color: #006633;">contains</span><span style="">(</span><span style="color: #d14;">'users'</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
       <span style="color: #999988; font-style: italic;">// Aserción simplificada</span><br/>
       expect<span style="">(</span>result<span style="font-weight: bold;">,</span> isNotEmpty<span style="">)</span><span style="font-weight: bold;">;</span><br/>
     <span style="">}</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>

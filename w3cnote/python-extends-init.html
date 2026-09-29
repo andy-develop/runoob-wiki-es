@@ -100,13 +100,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-identifier">self</span><span class="hl-brackets">)</span><span class="hl-code">:
         </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Son </span><span class="hl-quotes">'</span><span class="hl-code">+</span><span class="hl-identifier">self</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">__name__</span><span class="hl-code">==</span><span class="hl-quotes">'</span><span class="hl-string">__main__</span><span class="hl-quotes">'</span><span class="hl-code">:
-    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">son</span><span class="hl-code">.</span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>name: runoob
-Son runoob</pre>
+<pre>name: ejemplo
+Son ejemplo</pre>
 <p>Si se sobrescribe<span class="marked">__init__</span>, al instanciar la subclase, no se llamará a lo ya definido por la clase padre<span class="marked">__init__</span>, el formato de sintaxis es el siguiente:</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
@@ -124,13 +124,13 @@ Son runoob</pre>
 </span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-identifier">self</span><span class="hl-brackets">)</span><span class="hl-code">:
         </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Son </span><span class="hl-quotes">'</span><span class="hl-code">+</span><span class="hl-identifier">self</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">__name__</span><span class="hl-code">==</span><span class="hl-quotes">'</span><span class="hl-string">__main__</span><span class="hl-quotes">'</span><span class="hl-code">:
-    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">son</span><span class="hl-code">.</span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado de salida es:</p>
 <pre>hi
-Son runoob</pre>
+Son ejemplo</pre>
 <p>Si se sobrescribe<span class="marked">__init__</span>y se desea heredar el constructor de la clase padre, se puede usar<span class="marked">super</span>palabra clave:</p>
 <pre>super(子类，self).__init__(参数1，参数2，....)</pre>
 <p>También existe una forma clásica de escribir:</p>
@@ -152,14 +152,14 @@ Son runoob</pre>
 </span><span class="hl-reserved">def</span><span class="hl-code"> </span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-identifier">self</span><span class="hl-brackets">)</span><span class="hl-code">:
         </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Son </span><span class="hl-quotes">'</span><span class="hl-code">+</span><span class="hl-identifier">self</span><span class="hl-code">.</span><span class="hl-identifier">name</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">__name__</span><span class="hl-code">==</span><span class="hl-quotes">'</span><span class="hl-string">__main__</span><span class="hl-quotes">'</span><span class="hl-code">:
-    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">runoob</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+    </span><span class="hl-identifier">son</span><span class="hl-code">=</span><span class="hl-identifier">Son</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">ejemplo</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">son</span><span class="hl-code">.</span><span class="hl-identifier">getName</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">)</span></div>
 </div>
 </div>
 <p>El resultado de salida es:</p>
-<pre>name: runoob
+<pre>name: ejemplo
 hi
-Son runoob</pre> </div>
+Son ejemplo</pre> </div>
 </div>
 <div class="previous-next-links">
 <div class="previous-design-link">← <a href="./sql-join-the-different-of-on-and-where.html" rel="prev">Diferencia entre on y where en SQL JOIN</a> </div>

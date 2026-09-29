@@ -280,13 +280,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Cliente Docker</h2><p>El cliente Docker es una herramienta de línea de comandos que interactúa con el demonio de Docker (Docker Daemon).</p>
 <p>El cliente docker es muy sencillo; podemos escribir directamente el comando docker para ver todas las opciones de comandos del cliente Docker.</p>
 <pre>
-runoob@runoob:~# docker
+ejemplo@ejemplo:~# docker
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker27.png"/></p>
 <p>Se puede usar el comando<strong>docker command --help</strong>para comprender más a fondo el uso de un comando específico de Docker.</p>
 <p>Por ejemplo, si queremos consultar<strong>docker stats</strong>el uso específico del comando:</p>
 <pre>
-runoob@runoob:~# docker stats --help
+ejemplo@ejemplo:~# docker stats --help
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker28.png"/></p>
 <p>Los siguientes son comandos comunes del cliente Docker:</p>
@@ -374,8 +374,8 @@ runoob@runoob:~# docker stats --help
 <p>A continuación, intentemos usar docker para construir una aplicación web.</p>
 <p>Ejecutaremos una aplicación Python Flask dentro de un contenedor docker para ejecutar una aplicación web.</p>
 <pre>
-runoob@runoob:~# docker pull training/webapp  # 载入镜像
-runoob@runoob:~# docker run -d -P training/webapp python app.py
+ejemplo@ejemplo:~# docker pull training/webapp  # 载入镜像
+ejemplo@ejemplo:~# docker run -d -P training/webapp python app.py
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker29.png"/></p>
 <p>Explicación de parámetros:</p>
@@ -387,7 +387,7 @@ runoob@runoob:~# docker run -d -P training/webapp python app.py
 <h2>Ver el contenedor de la aplicación WEB</h2>
 <p>Usa docker ps para ver los contenedores que estamos ejecutando:</p>
 <pre>
-runoob@runoob:~#  docker ps
+ejemplo@ejemplo:~#  docker ps
 CONTAINER ID        IMAGE               COMMAND             ...        PORTS                 
 d3d5e39ed9d3        training/webapp     "python app.py"     ...        0.0.0.0:32769-&gt;5000/tcp
 </pre>
@@ -401,10 +401,10 @@ PORTS
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker31.png"/></p>
 <p>También podemos usar el parámetro -p para configurar un puerto diferente:</p>
 <pre>
-runoob@runoob:~$ docker run -d -p 5000:5000 training/webapp python app.py
+ejemplo@ejemplo:~$ docker run -d -p 5000:5000 training/webapp python app.py
 </pre>
 <p><strong>docker ps</strong>Ver los contenedores en ejecución</p>
-<pre>runoob@runoob:~#  docker ps
+<pre>ejemplo@ejemplo:~#  docker ps
 CONTAINER ID        IMAGE                             PORTS                     NAMES
 bf08b7f2cd89        training/webapp     ...        0.0.0.0:5000-&gt;5000/tcp    wizardly_chandrasekhar
 d3d5e39ed9d3        training/webapp     ...        0.0.0.0:32769-&gt;5000/tcp   xenodochial_hoov
@@ -416,18 +416,18 @@ d3d5e39ed9d3        training/webapp     ...        0.0.0.0:32769-&gt;5000/tcp   
 <p>Arriba, el ID del contenedor de la aplicación web que creamos es<strong>bf08b7f2cd89</strong>El nombre es<strong>wizardly_chandrasekhar</strong>。</p>
 <p>Puedo usar<span class="marked">docker port bf08b7f2cd89</span>o<span class="marked">docker port wizardly_chandrasekhar</span>para ver la asignación de puertos del contenedor.</p>
 <pre>
-runoob@runoob:~$ docker port bf08b7f2cd89
+ejemplo@ejemplo:~$ docker port bf08b7f2cd89
 5000/tcp -&gt; 0.0.0.0:5000
 </pre>
 <pre>
-runoob@runoob:~$ docker port wizardly_chandrasekhar
+ejemplo@ejemplo:~$ docker port wizardly_chandrasekhar
 5000/tcp -&gt; 0.0.0.0:5000
 </pre>
 <hr/>
 <h2>Ver los logs de la aplicación WEB</h2>
 <p>docker logs [ID o nombre] puede ver la salida estándar dentro del contenedor.</p>
 <pre>
-runoob@runoob:~$ docker logs -f bf08b7f2cd89
+ejemplo@ejemplo:~$ docker logs -f bf08b7f2cd89
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 192.168.239.1 - - [09/May/2016 16:30:37] "GET / HTTP/1.1" 200 -
 192.168.239.1 - - [09/May/2016 16:30:37] "GET /favicon.ico HTTP/1.1" 404 -
@@ -438,7 +438,7 @@ runoob@runoob:~$ docker logs -f bf08b7f2cd89
 <h2>Ver los procesos del contenedor de la aplicación WEB</h2>
 <p>También podemos usar docker top para ver los procesos que se ejecutan dentro del contenedor.</p>
 <pre>
-runoob@runoob:~$ docker top wizardly_chandrasekhar
+ejemplo@ejemplo:~$ docker top wizardly_chandrasekhar
 UID     PID         PPID          ...       TIME                CMD
 root    23245       23228         ...       00:00:00            python app.py
 </pre>
@@ -446,7 +446,7 @@ root    23245       23228         ...       00:00:00            python app.py
 <h2>Inspeccionar la aplicación WEB</h2>
 <p>Usar<strong>docker inspect</strong>para ver la información subyacente de Docker. Devolverá un archivo JSON que registra la configuración y el estado del contenedor Docker.</p>
 <pre>
-runoob@runoob:~$ docker inspect wizardly_chandrasekhar
+ejemplo@ejemplo:~$ docker inspect wizardly_chandrasekhar
 [
     {
         "Id": "bf08b7f2cd897b5964943134aa6d373e355c286db9b9885b1f60b6e8f82b2b85",
@@ -473,14 +473,14 @@ runoob@runoob:~$ docker inspect wizardly_chandrasekhar
 <hr/>
 <h2>Detener el contenedor de la aplicación WEB</h2>
 <pre>
-runoob@runoob:~$ docker stop wizardly_chandrasekhar   
+ejemplo@ejemplo:~$ docker stop wizardly_chandrasekhar   
 wizardly_chandrasekhar
 </pre>
 <hr/>
 <h2>Reiniciar el contenedor de la aplicación WEB</h2>
 <p>Para contenedores ya detenidos, podemos usar el comando docker start para iniciarlos.</p>
 <pre>
-runoob@runoob:~$ docker start wizardly_chandrasekhar
+ejemplo@ejemplo:~$ docker start wizardly_chandrasekhar
 wizardly_chandrasekhar
 </pre>
 <p>docker ps -l consulta el último contenedor creado:</p>
@@ -492,12 +492,12 @@ bf08b7f2cd89        training/webapp     ...        0.0.0.0:5000-&gt;5000/tcp    
 <h2>Eliminar el contenedor de la aplicación WEB</h2>
 <p>Podemos usar el comando docker rm para eliminar contenedores que no necesitamos.</p>
 <pre>
-runoob@runoob:~$ docker rm wizardly_chandrasekhar  
+ejemplo@ejemplo:~$ docker rm wizardly_chandrasekhar  
 wizardly_chandrasekhar
 </pre>
 <p>Al eliminar un contenedor, este debe estar detenido; de lo contrario, se mostrará el siguiente error.</p>
 <pre>
-runoob@runoob:~$ docker rm wizardly_chandrasekhar
+ejemplo@ejemplo:~$ docker rm wizardly_chandrasekhar
 Error response from daemon: You cannot remove a running container bf08b7f2cd897b5964943134aa6d373e355c286db9b9885b1f60b6e8f82b2b85. Stop the container before attempting removal or force remove
 </pre> Otras extensiones
 </div>

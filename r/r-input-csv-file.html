@@ -288,7 +288,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>
 id,name,url,likes
 1,Google,www.google.com,111
-2,Runoob,www.runoob.com,222
+2,Ejemplo,www.example.com,222
 3,Taobao,www.taobao.com,333
 
 </pre>
@@ -310,7 +310,7 @@ In read.table(file = file, header = header, sep = sep, quote = quote,  :
 <pre>
   id   name            url likes
 1  1 Google www.google.com   111
-2  2 Runoob www.runoob.com   222
+2  2 Ejemplo www.example.com   222
 3  3 Taobao www.taobao.com   333
 </pre><p>La función read.csv() devuelve un data frame. Podemos realizar fácilmente el procesamiento estadístico de los datos. En el siguiente ejemplo, vemos el número de filas y columnas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -345,23 +345,23 @@ retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-we
 <p>El resultado de ejecutar el código anterior es:</p>
 <pre>
   id   name            url likes
-2  2 Runoob www.runoob.com   222
+2  2 Ejemplo www.example.com   222
 </pre>
 <p><strong>Nota</strong>: la declaración de condición de igualdad usa<span class="marked">==</span>。</p>
-<p>Para múltiples condiciones, use el<span class="marked">&amp;</span>separador. El siguiente ejemplo busca datos donde likes sea mayor que 1 y name sea Runoob:</p>
+<p>Para múltiples condiciones, use el<span class="marked">&amp;</span>separador. El siguiente ejemplo busca datos donde likes sea mayor que 1 y name sea Ejemplo:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">data</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"sites.csv"</span>, encoding<span style="color: #170;">=</span><span style="color: #a11;">"UTF-8"</span><span style="color: #080;">)</span><br/>
 <br/>
-<span style="color: #a50;"># Datos donde likes es mayor que 1 y name es Runoob</span><br/>
-retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">subset</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">data</span>, likes <span style="color: #170;">&gt;</span> <span style="color: #a11;">1</span> <span style="color: #170;">&amp;</span> name<span style="color: #170;">==</span><span style="color: #a11;">"Runoob"</span><span style="color: #080;">)</span><br/>
+<span style="color: #a50;"># Datos donde likes es mayor que 1 y name es Ejemplo</span><br/>
+retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">subset</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">data</span>, likes <span style="color: #170;">&gt;</span> <span style="color: #a11;">1</span> <span style="color: #170;">&amp;</span> name<span style="color: #170;">==</span><span style="color: #a11;">"Ejemplo"</span><span style="color: #080;">)</span><br/>
 <span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>retval<span style="color: #080;">)</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
 <pre>
   id   name            url likes
-2  2 Runoob www.runoob.com   222
+2  2 Ejemplo www.example.com   222
 </pre>
-<h3>Guardar como archivo CSV</h3><p>El lenguaje R puede usar la<strong>write.csv()</strong>función para guardar datos como un archivo CSV.</p><p>Continuando con el ejemplo anterior, guardamos los datos con likes igual a 222 en el archivo runoob.csv:</p>
+<h3>Guardar como archivo CSV</h3><p>El lenguaje R puede usar la<strong>write.csv()</strong>función para guardar datos como un archivo CSV.</p><p>Continuando con el ejemplo anterior, guardamos los datos con likes igual a 222 en el archivo ejemplo.csv:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">data</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"sites.csv"</span>, encoding<span style="color: #170;">=</span><span style="color: #a11;">"UTF-8"</span><span style="color: #080;">)</span><br/>
 <br/>
@@ -369,14 +369,14 @@ retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-we
 retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">subset</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">data</span>, likes <span style="color: #170;">==</span> <span style="color: #a11;">222</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Escribir en un nuevo archivo</span><br/>
-<span style="color: #05a; font-weight: bold;">write.<span style="">csv</span></span><span style="color: #080;">(</span>retval,<span style="color: #a11;">"runoob.csv"</span><span style="color: #080;">)</span><br/>
-newdata <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"runoob.csv"</span><span style="color: #080;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">write.<span style="">csv</span></span><span style="color: #080;">(</span>retval,<span style="color: #a11;">"ejemplo.csv"</span><span style="color: #080;">)</span><br/>
+newdata <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo.csv"</span><span style="color: #080;">)</span><br/>
 <span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>newdata<span style="color: #080;">)</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
 <pre>
  X id   name            url likes
-1 2  2 Runoob www.runoob.com   222
+1 2  2 Ejemplo www.example.com   222
 </pre><p>X proviene del conjunto de datos newper, y se puede eliminar con el parámetro row.names = FALSE:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #05a; font-weight: bold;">data</span> <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"sites.csv"</span>, encoding<span style="color: #170;">=</span><span style="color: #a11;">"UTF-8"</span><span style="color: #080;">)</span><br/>
@@ -385,15 +385,15 @@ newdata <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-w
 retval <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">subset</span><span style="color: #080;">(</span><span style="color: #05a; font-weight: bold;">data</span>, likes <span style="color: #170;">==</span> <span style="color: #a11;">222</span><span style="color: #080;">)</span><br/>
 <br/>
 <span style="color: #a50;"># Escribir en un nuevo archivo</span><br/>
-<span style="color: #05a; font-weight: bold;">write.<span style="">csv</span></span><span style="color: #080;">(</span>retval,<span style="color: #a11;">"runoob.csv"</span>, <span style="color: #05a; font-weight: bold;">row.<span style="">names</span></span> <span style="color: #170;">=</span> FALSE<span style="color: #080;">)</span><br/>
-newdata <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"runoob.csv"</span><span style="color: #080;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">write.<span style="">csv</span></span><span style="color: #080;">(</span>retval,<span style="color: #a11;">"ejemplo.csv"</span>, <span style="color: #05a; font-weight: bold;">row.<span style="">names</span></span> <span style="color: #170;">=</span> FALSE<span style="color: #080;">)</span><br/>
+newdata <span style="color: #170;">&lt;-</span> <span style="color: #05a; font-weight: bold;">read.<span style="">csv</span></span><span style="color: #080;">(</span><span style="color: #a11;">"ejemplo.csv"</span><span style="color: #080;">)</span><br/>
 <span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span>newdata<span style="color: #080;">)</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
 <pre>
   id   name            url likes
-1  2 Runoob www.runoob.com   222
-</pre><p>Después de la ejecución, podemos ver que se ha generado el archivo runoob.csv:</p>
+1  2 Ejemplo www.example.com   222
+</pre><p>Después de la ejecución, podemos ver que se ha generado el archivo ejemplo.csv:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/07/r-csv-1.jpeg"/></p>
 Otras extensiones
 </div>

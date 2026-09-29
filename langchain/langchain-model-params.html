@@ -319,7 +319,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: Green;font-weight:bold;">from</span> langchain.<span style="color: #05a;">chat_models</span> <span style="color: Green;font-weight:bold;">import</span> init_chat_model<br/>
 <br/>
 <span style="color: #a50"># Comparación de diferentes valores de temperature para la misma pregunta</span><br/>
-question <span style="color: Gray;">=</span> <span style="color: #a11;">"Presenta Runoob en una frase"</span><br/>
+question <span style="color: Gray;">=</span> <span style="color: #a11;">"Presenta Ejemplo en una frase"</span><br/>
 <br/>
 <span style="color: #a50"># temperature=0: salida muy determinista, casi idéntica cada vez</span><br/>
 model_low <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><br/>
@@ -340,12 +340,12 @@ resp2 <span style="color: Gray;">=</span> model_high.<span style="color: #05a;">
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-temperature=0 第1次: 菜鸟教程（RUNOOB）是一个为编程初学者提供免费教程的学习平台。
-temperature=0 第2次: 菜鸟教程（RUNOOB）是一个为编程初学者提供免费教程的学习平台。
+temperature=0 第1次: Ejemplo是一个为编程初学者提供免费教程的学习平台。
+temperature=0 第2次: Ejemplo是一个为编程初学者提供免费教程的学习平台。
 两次结果相同: True
 
-temperature=1.5 第1次: 菜鸟教程（RUNOOB）是一个简单易懂的编程与网络技术入门学习平台。
-temperature=1.5 第2次: RUNOOB（菜鸟教程）是深受编程新手喜爱的中文免费在线技术学习平台。
+temperature=1.5 第1次: Ejemplo是一个简单易懂的编程与网络技术入门学习平台。
+temperature=1.5 第2次: Ejemplo是深受编程新手喜爱的中文免费在线技术学习平台。
 </pre>
 <table class="reference">
 <tr><th>Valor de temperature</th><th>Efecto</th><th>Escenario de aplicación</th></tr>
@@ -367,7 +367,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 <br/>
 <span style="color: #a50"># max_tokens=30: limita la salida a un máximo de 30 tokens</span><br/>
 response_short <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">"Presenta en detalle la plataforma Runoob"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"Presenta en detalle la plataforma Ejemplo"</span><span style="color: Gray;">,</span><br/>
     max_tokens<span style="color: Gray;">=</span><span style="color: Maroon;">30</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Límite de 30 tokens ({len(response_short.content)} caracteres):"</span><span style="color: Olive;">)</span><br/>
@@ -376,7 +376,7 @@ response_short <span style="color: Gray;">=</span> model.<span style="color: #05
 <br/>
 <span style="color: #a50"># max_tokens=200: permite una salida más larga</span><br/>
 response_long <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">"Presenta en detalle la plataforma Runoob"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"Presenta en detalle la plataforma Ejemplo"</span><span style="color: Gray;">,</span><br/>
     max_tokens<span style="color: Gray;">=</span><span style="color: Maroon;">200</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Límite de 200 tokens ({len(response_long.content)} caracteres):"</span><span style="color: Olive;">)</span><br/>
@@ -386,12 +386,12 @@ response_long <span style="color: Gray;">=</span> model.<span style="color: #05a
 <p>Resultado de la ejecución:</p>
 <pre>
 限制 30 tokens (42 字符):
-菜鸟教程（RUNOOB）是一个面向编程初学者的在线学习平台，提供各种编程语言的教程和实例。
+Ejemplo是一个面向编程初学者的在线学习平台，提供各种编程语言的教程和实例。
 
 限制 200 tokens (306 字符):
-菜鸟教程（RUNOOB）是一个面向编程初学者的在线学习平台，提供了丰富的编程教程和参考资料。
+Ejemplo是一个面向编程初学者的在线学习平台，提供了丰富的编程教程和参考资料。
 该平台涵盖了 HTML、CSS、JavaScript、Python、Java、C、C++、PHP、SQL 等多种编程语言和技术。
-菜鸟教程的特点包括：
+Ejemplo的特点包括：
 1. 内容系统化：从基础到进阶，帮助学习者逐步掌握编程知识
 2. 实例丰富：每个知识点都配有可运行的代码示例
 3. ...
@@ -418,7 +418,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 <br/>
 <span style="color: #a50"># Simular una llamada normal</span><br/>
 <span style="color: Green;font-weight:bold;">try</span>:<br/>
-    response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"¿Qué es Runoob?"</span><span style="color: Olive;">)</span><br/>
+    response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"¿Qué es Python?"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Llamada exitosa: {response.content[:50]}..."</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">except</span> <span style="color: Teal;">Exception</span> <span style="color: Green;font-weight:bold;">as</span> e:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Error en la llamada: {e}"</span><span style="color: Olive;">)</span><br/>
@@ -483,7 +483,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
     top_p<span style="color: Gray;">=</span><span style="color: Maroon;">0.9</span><span style="color: Gray;">,</span>       <span style="color: #a50"># Solo se consideran las palabras dentro del 90% de probabilidad acumulada</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
-response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Runoob"</span><span style="color: Olive;">)</span><br/>
+response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>response.<span style="color: #05a;">content</span><span style="color: Olive;">[</span>:<span style="color: Maroon;">100</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -506,7 +506,7 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-限制 stop=['\n']: 1. 菜鸟教程（RUNOOB）
+限制 stop=['\n']: 1. Ejemplo
 </pre>
 <h3>seed: reproducibilidad (compatible con algunos modelos)</h3>
 <div class="example">
@@ -517,8 +517,8 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 <span style="color: #a50"># Algunos modelos admiten el parámetro seed para obtener una salida determinista</span><br/>
 <span style="color: #a50"># Mismo seed + misma entrada = misma salida</span><br/>
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> seed<span style="color: Gray;">=</span><span style="color: Maroon;">42</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><br/>
-resp1 <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Runoob"</span><span style="color: Olive;">)</span><br/>
-resp2 <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Runoob"</span><span style="color: Olive;">)</span><br/>
+resp1 <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Ejemplo"</span><span style="color: Olive;">)</span><br/>
+resp2 <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"seed=42, resultados idénticos: {resp1.content == resp2.content}"</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>

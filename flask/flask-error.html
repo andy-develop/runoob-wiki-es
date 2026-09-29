@@ -390,7 +390,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: Green;font-weight:bold;">def</span> handle_http_exception<span style="color: Olive;">(</span>error<span style="color: Olive;">)</span>:<br/>
     <span style="color: #a11;">"""Maneja de forma unificada todas las excepciones HTTP (como 400, 401, 403, 404, etc.)"""</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"""<br/>&lt;h1&gt;Error HTTP {error.code}&lt;/h1&gt;<br/>
-    &lt;p&gt;{error.description}&lt;/p&gt;<br/>&lt;p&gt;&lt;a href="/"&gt;Volver a la página de inicio de RUNOOB&lt;/a&gt;&lt;/p&gt;<br/>
+    &lt;p&gt;{error.description}&lt;/p&gt;<br/>&lt;p&gt;&lt;a href="/"&gt;Volver a la página de inicio de EJEMPLO&lt;/a&gt;&lt;/p&gt;<br/>
     """</span><span style="color: Gray;">,</span> error.<span style="color: #05a;">code</span><br/>
 </div>
 </div>
@@ -486,7 +486,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <br/>
 <span style="color: #a50"># Configurar el handler de archivos de log: rotación automática cuando el archivo alcanza 10MB</span><br/>
 handler <span style="color: Gray;">=</span> RotatingFileHandler<span style="color: Olive;">(</span><br/>
-    <span style="color: #a11;">"runoob_app.log"</span><span style="color: Gray;">,</span>     <span style="color: #a50"># Ruta del archivo de log</span><br/>
+    <span style="color: #a11;">"ejemplo_app.log"</span><span style="color: Gray;">,</span>     <span style="color: #a50"># Ruta del archivo de log</span><br/>
     maxBytes<span style="color: Gray;">=</span><span style="color: Maroon;">10</span> * <span style="color: Maroon;">1024</span> * <span style="color: Maroon;">1024</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Tamaño máximo por archivo: 10MB</span><br/>
     backupCount<span style="color: Gray;">=</span><span style="color: Maroon;">5</span>          <span style="color: #a50"># Conservar las últimas 5 copias de respaldo</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -515,7 +515,7 @@ app.<span style="color: #05a;">logger</span>.<span style="color: #05a;">setLevel
     app.<span style="color: #05a;">logger</span>.<span style="color: #05a;">error</span><span style="color: Olive;">(</span><span style="color: #a11;">"Error interno del servidor:<span style="color: #000099; font-weight: bold;">\n</span>%s"</span><span style="color: Gray;">,</span> <span style="color: #05a;">traceback</span>.<span style="color: #05a;">format_exc</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Mostrar al usuario una página de error amigable</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"""<br/>&lt;h1&gt;500 - Error interno del servidor&lt;/h1&gt;<br/>&lt;p&gt;Lo sentimos, el servidor encontró un error inesperado. Hemos registrado el problema, por favor inténtalo de nuevo más tarde.&lt;/p&gt;<br/>&lt;p&gt;Si el problema persiste, contacta con el soporte técnico de RUNOOB.&lt;/p&gt;<br/>
+    <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"""<br/>&lt;h1&gt;500 - Error interno del servidor&lt;/h1&gt;<br/>&lt;p&gt;Lo sentimos, el servidor encontró un error inesperado. Hemos registrado el problema, por favor inténtalo de nuevo más tarde.&lt;/p&gt;<br/>&lt;p&gt;Si el problema persiste, contacta con el soporte técnico de EJEMPLO.&lt;/p&gt;<br/>
     """</span><span style="color: Gray;">,</span> <span style="color: Maroon;">500</span><br/>
 </div>
 </div>

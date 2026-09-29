@@ -410,27 +410,27 @@ bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
 <p><strong>name：</strong>Parámetro obligatorio: el nombre de la constante, es decir, el identificador.</p></li><li>
 <p><strong>value：</strong>Parámetro obligatorio: el valor de la constante.</p></li><li>
 <p><strong>case_insensitive </strong>: parámetro opcional. Si se establece en TRUE, la constante no distinguirá entre mayúsculas y minúsculas; por defecto, distingue entre mayúsculas y minúsculas.</p><p class="important"><strong>Nota:</strong>Desde PHP 7.3.0, la definición de constantes que no distinguen entre mayúsculas y minúsculas ha quedado obsoleta. Desde PHP 8.0.0, solo false es un valor aceptable; pasar true generará una advertencia.</p></li></ul>
-<p>En el siguiente ejemplo creamos una<strong>constante sensible a mayúsculas y minúsculas</strong>(no recomendado después de PHP 7.3), cuyo valor es "Bienvenido a Runoob.com":</p>
+<p>En el siguiente ejemplo creamos una<strong>constante sensible a mayúsculas y minúsculas</strong>(no recomendado después de PHP 7.3), cuyo valor es "Bienvenido a example.com":</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-inlinetags">&lt;?php</span><span class="hl-code">
 </span><span class="hl-comment">//</span><span class="hl-comment">Nombre de constante sensible a mayúsculas y minúsculas</span><span class="hl-comment"></span><span class="hl-code">
-</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a Runoob.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
-</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">GREETING</span><span class="hl-code">;    </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a Runoob.com"</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a example.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">GREETING</span><span class="hl-code">;    </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a example.com"</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">&lt;br&gt;</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">greeting</span><span class="hl-code">;   </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "greeting", pero hay un mensaje de advertencia que indica que la constante no está definida.</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div>
 </div>
-<p>En el siguiente ejemplo creamos una<strong>constante que no distingue entre mayúsculas y minúsculas</strong>, cuyo valor es "Bienvenido a Runoob.com":</p>
+<p>En el siguiente ejemplo creamos una<strong>constante que no distingue entre mayúsculas y minúsculas</strong>, cuyo valor es "Bienvenido a example.com":</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-inlinetags">&lt;?php</span><span class="hl-code">
 </span><span class="hl-comment">//</span><span class="hl-comment">Nombre de constante que no distingue entre mayúsculas y minúsculas</span><span class="hl-comment"></span><span class="hl-code">
-</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a Runoob.com</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-reserved">true</span><span class="hl-brackets">)</span><span class="hl-code">;
-</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">greeting</span><span class="hl-code">;  </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a Runoob.com"</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a example.com</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-reserved">true</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">greeting</span><span class="hl-code">;  </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a example.com"</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div>
 </div>
@@ -442,12 +442,12 @@ bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-inlinetags">&lt;?php</span><span class="hl-code">
-</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a Runoob.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">define</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">GREETING</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">Bienvenido a example.com</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-reserved">function</span><span class="hl-code"> </span><span class="hl-identifier">myTest</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">GREETING</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
-</span><span class="hl-identifier">myTest</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;    </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a Runoob.com"</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-identifier">myTest</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;    </span><span class="hl-comment">//</span><span class="hl-comment">Muestra "Bienvenido a example.com"</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div>
 </div><hr/>
@@ -455,8 +455,8 @@ bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
 <pre>
 const CONSTANT_NAME = "value";</pre><p>A continuación se muestra un ejemplo de definición de una constante con la palabra clave const:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #000000; ">const</span> SITE_URL <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.runoob.com"</span><span style="color: #000000;">;</span><br/>
-<span style="color: #708;">echo</span> SITE_URL<span style="color: #000000;">;</span> <span style="color: #a50; font-style: italic;">// Muestra "https://www.runoob.com"</span><br/>
+<span style="color: #000000; ">const</span> SITE_URL <span style="color: #000000;">=</span> <span style="color: #a11;">"https://www.example.com"</span><span style="color: #000000;">;</span><br/>
+<span style="color: #708;">echo</span> SITE_URL<span style="color: #000000;">;</span> <span style="color: #a50; font-style: italic;">// Muestra "https://www.example.com"</span><br/>
 </div></div>
 <hr/>
 <h2>Constantes predefinidas</h2><p>PHP proporciona algunas constantes predefinidas que se pueden utilizar directamente en el script. Estas constantes se utilizan normalmente para obtener información de configuración de PHP, información de versión, etc. Las constantes predefinidas comunes son:</p><ul><li><code>PHP_VERSION</code>: la versión actual del intérprete de PHP.</li><li><code>PHP_OS</code>: el sistema operativo del servidor.</li><li><code>PHP_INT_MAX</code>: el valor entero más grande.</li><li><code>E_ERROR</code>、<code>E_WARNING</code>、<code>E_PARSE</code>etc.: nivel de informe de errores.</li></ul>

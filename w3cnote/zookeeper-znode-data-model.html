@@ -101,25 +101,25 @@ $ ls /zookeeper
 $ ls /zookeeper/quota
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/data-model-01.png"/></p>
-<p>Vemos intuitivamente que los datos almacenados en este momento tienen dos nodos, runoob y zookeeper, en el directorio raíz, y debajo del nodo zookeeper existe el nodo quota.</p>
+<p>Vemos intuitivamente que los datos almacenados en este momento tienen dos nodos, ejemplo y zookeeper, en el directorio raíz, y debajo del nodo zookeeper existe el nodo quota.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/data-model-02.png"/></p>
-<p>El nodo runoob fue creado en el capítulo anterior, y se le estableció el valor 0 mediante el cliente Java. Ahora en la terminal de línea de comandos ejecutamos<span class="marked">get /runoob</span>para mostrar los atributos de este nodo.</p>
-<pre>$ get /runoob</pre>
+<p>El nodo ejemplo fue creado en el capítulo anterior, y se le estableció el valor 0 mediante el cliente Java. Ahora en la terminal de línea de comandos ejecutamos<span class="marked">get /ejemplo</span>para mostrar los atributos de este nodo.</p>
+<pre>$ get /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/data-model-03.png"/></p>
 <p>El 0 que se muestra en la primera línea es el valor de ese nodo.</p>
 <h3>Atributos de estado de Znode</h3>
 <table class="reference"><thead><tr><th>cZxid</th><th>ID de transacción al crear el nodo</th></tr></thead><tbody><tr><td>ctime</td><td>Hora de creación del nodo</td></tr><tr><td>mZxid</td><td>ID de transacción de la última modificación del nodo</td></tr><tr><td>mtime</td><td>Hora de la última modificación del nodo</td></tr><tr><td>pZxid</td><td>Indica el ID de transacción de la última modificación de la lista de nodos hijos. Agregar o eliminar nodos hijos afecta la lista de nodos hijos, pero modificar el contenido de datos de los nodos hijos no afecta este ID.<strong>(Nota: solo los cambios en la lista de nodos hijos modifican pzxid; los cambios en el contenido de los nodos hijos no afectan a pzxid).</strong></td></tr><tr><td>cversion</td><td>Número de versión de los nodos hijos; cada modificación de un nodo hijo incrementa el número de versión en 1.</td></tr><tr><td>dataversion</td><td>Número de versión de datos; cada modificación de datos incrementa este número de versión en 1.</td></tr><tr><td>aclversion</td><td>Número de versión de permisos; cada modificación de permisos incrementa este número de versión en 1.</td></tr><tr><td>ephemeralOwner</td><td>El sessionID de la sesión que creó este nodo temporal.<strong>（*</strong>*Si el nodo es persistente, entonces el valor de este atributo es 0)**</td></tr><tr><td>dataLength</td><td>La longitud de los datos del nodo.</td></tr><tr><td>numChildren</td><td>La cantidad de nodos hijos que posee el nodo.<strong>(Solo se cuenta el número de nodos hijos directos)</strong></td></tr></tbody></table>
-<p>Después de comprender los valores de los atributos de estado anteriores, nosotros<strong>/runoob</strong>realizamos una modificación al nodo, ejecutamos el comando<span class="marked">set /runoob 1</span>, como se muestra en la siguiente figura:</p>
-<pre>$ set /runoob 1</pre>
+<p>Después de comprender los valores de los atributos de estado anteriores, nosotros<strong>/ejemplo</strong>realizamos una modificación al nodo, ejecutamos el comando<span class="marked">set /ejemplo 1</span>, como se muestra en la siguiente figura:</p>
+<pre>$ set /ejemplo 1</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/data-model-04.png"/></p>
 <p>Comparando los resultados anteriores, se puede ver que mZxid, mtime y dataVersion han cambiado.</p>
-<p>En<strong>/runoob</strong>Debajo del nodo, agregamos un nodo hijo más, ejecutamos:</p>
-<pre>$ create -e  /runoob/child  0
-$ get /runoob</pre>
+<p>En<strong>/ejemplo</strong>Debajo del nodo, agregamos un nodo hijo más, ejecutamos:</p>
+<pre>$ create -e  /ejemplo/child  0
+$ get /ejemplo</pre>
 <p><strong>Consejo:</strong>El uso de más comandos se explicará en detalle en capítulos posteriores.</p>
 <p>Después de ejecutar el comando en la terminal, se muestra:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/data-model-05.png"/></p>
-<p>Se puede ver<strong>/runoob</strong>Los valores pZxid, cversion y numChildren del nodo han cambiado correspondientemente.</p>
+<p>Se puede ver<strong>/ejemplo</strong>Los valores pZxid, cversion y numChildren del nodo han cambiado correspondientemente.</p>
 </div>
 </div>
 <div class="previous-next-links">

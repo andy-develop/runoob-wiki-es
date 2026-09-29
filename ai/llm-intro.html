@@ -283,7 +283,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Este artículo conecta estos conceptos en el orden de "qué es un modelo → cómo se entrena → cómo se usa → cómo se optimiza", ayudando a los desarrolladores principiantes a establecer un marco de conocimiento claro.</p>
 <blockquote>
 <p>Este artículo no es solo una "explicación de términos", sino que también demuestra cómo se implementan estos conceptos con código Python real y ejecutable.</p>
-<p>Todos los ejemplos se basan en el protocolo compatible con OpenAI; se pueden cambiar a proveedores como Bailian de Alibaba Cloud, DeepSeek, etc., solo modificando la dirección de la interfaz y la clave.</p><p>Referencia de Python OpenAI:<a href="../python3/python-openai.html" target="_blank">https://www.runoob.com/python3/python-openai.html</a></p>
+<p>Todos los ejemplos se basan en el protocolo compatible con OpenAI; se pueden cambiar a proveedores como Bailian de Alibaba Cloud, DeepSeek, etc., solo modificando la dirección de la interfaz y la clave.</p><p>Referencia de Python OpenAI:<a href="../python3/python-openai.html" target="_blank">https://www.example.com/python3/python-openai.html</a></p>
 </blockquote>
 <hr/>
 <h2>Cadena técnica general</h2>
@@ -412,7 +412,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
         <span style="color: #a50"># System Prompt: define de antemano el rol y las reglas de comportamiento del modelo</span><br/>
         <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"system"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Eres un asistente profesional de programación en Python y solo respondes preguntas relacionadas con tecnología."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a50"># Mensaje de usuario: la pregunta real</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¿Qué es runoob?"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¿Qué es Python?"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0.7</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Temperatura de generación, rango 0~2, cuanto mayor sea, más diverso (ver más abajo)</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -426,7 +426,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
 </div>
 <p>Resultado de salida:</p>
 <pre>
-回答：runoob（菜鸟教程）是一个提供编程教程的中文学习网站……
+回答：ejemplo（Ejemplo）是一个提供编程教程的中文学习网站……
 输入 Token 数：33
 输出 Token 数：18
 </pre>
@@ -498,7 +498,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <br/>
 <span style="color: #a50"># Simula una "base de conocimiento" muy pequeña: varios documentos</span><br/>
 documents <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"runoob es un sitio web chino de aprendizaje que ofrece tutoriales de programación."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"ejemplo es un sitio web chino de aprendizaje que ofrece tutoriales de programación."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"RAG reduce eficazmente la alucinación de los modelos grandes al recuperar información real antes de generar."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"Python usa la indentación para representar bloques de código; normalmente se recomienda indentar 4 espacios por nivel."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
@@ -508,7 +508,7 @@ doc_resp <span style="color: Gray;">=</span> client.<span style="color: #05a;">e
 doc_vectors <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>d.<span style="color: #05a;">embedding</span> <span style="color: Green;font-weight:bold;">for</span> d <span style="color: Green;font-weight:bold;">in</span> doc_resp.<span style="color: #05a;">data</span><span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: #a50"># Segundo paso: vectorizar la pregunta del usuario</span><br/>
-question <span style="color: Gray;">=</span> <span style="color: #a11;">"¿Qué es runoob?"</span><br/>
+question <span style="color: Gray;">=</span> <span style="color: #a11;">"¿Qué es Python?"</span><br/>
 query_vector <span style="color: Gray;">=</span> client.<span style="color: #05a;">embeddings</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
     <span style="color: Teal;">input</span><span style="color: Gray;">=</span>question<span style="color: Gray;">,</span> model<span style="color: Gray;">=</span><span style="color: #a11;">"text-embedding-3-small"</span><br/>
 <span style="color: Olive;">)</span>.<span style="color: #05a;">data</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span>.<span style="color: #05a;">embedding</span><br/>
@@ -535,8 +535,8 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
 </div>
 <p>Resultado de salida:</p>
 <pre>
-检索到的资料：runoob 是一个提供编程教程的中文学习网站。
-回答：runoob（菜鸟教程）是一个提供编程教程的中文学习网站。
+检索到的资料：ejemplo 是一个提供编程教程的中文学习网站。
+回答：ejemplo（Ejemplo）是一个提供编程教程的中文学习网站。
 </pre>
 <p>En proyectos reales, solo hay que reemplazar «calcular la similitud en memoria» del tercer paso por «llamar a una base de datos vectorial para la recuperación»; el flujo es exactamente el mismo.</p>
 <h3>Function Calling (llamada a funciones)</h3>

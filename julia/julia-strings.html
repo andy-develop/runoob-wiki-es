@@ -265,9 +265,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>
 c = 'x'
 
-str = "RUNOOB"
+str = "EJEMPLO"
 
-runoob = """菜鸟教程 "RUNOOB"，包含了单个引号"""
+ejemplo = """Ejemplo "EJEMPLO"，包含了单个引号"""
 </pre>
 <p>Características de los tipos de cadena de Julia:</p>
 <ul><li>El tipo concreto incorporado en Julia para cadenas (y literales de cadena) es String.</li><li>Los tipos de cadena de Julia son subtipos del tipo abstracto AbstractString.</li><li>Julia tiene un excelente tipo para representar un solo carácter, llamado AbstractChar. Char es un subtipo incorporado de AbstractChar, un tipo primitivo de 32 bits que puede representar cualquier carácter Unicode (basado en la codificación UTF-8).</li><li>Las cadenas de Julia son inmutables: el valor de cualquier objeto AbstractString no se puede cambiar.</li></ul>
@@ -316,11 +316,11 @@ julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">'A'
 <h2>Cadenas</h2>
 <p>Las cadenas en Julia se pueden declarar con comillas dobles<span class="marked">"</span>o tres comillas dobles<span class="marked">"""</span>para declararlas. Si necesita usar comillas en alguna parte de la cadena, puede usar las tres comillas dobles para hacerlo, como se muestra a continuación:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
-<span style="color: #C93D39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"EJEMPLO"</span><br/>
+<span style="color: #C93D39;">"EJEMPLO"</span><br/>
 <br/>
-julia<span style="color: #6BAB5B;">&gt;</span> runoob = <span style="color: #C93D39;">"""Tutorial de novatos "RUNOOB", contiene una comilla"""</span><br/>
-<span style="color: #C93D39;">"Tutorial de novatos<span style="color: #000099; font-weight: bold;">\"</span>RUNOOB<span style="color: #000099; font-weight: bold;">\"</span>, contiene una comilla"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> ejemplo = <span style="color: #C93D39;">"""Tutorial de novatos "EJEMPLO", contiene una comilla"""</span><br/>
+<span style="color: #C93D39;">"Tutorial de novatos<span style="color: #000099; font-weight: bold;">\"</span>EJEMPLO<span style="color: #000099; font-weight: bold;">\"</span>, contiene una comilla"</span><br/>
 </div></div>
 <p>Si la cadena es demasiado larga, podemos usar una barra invertida<span class="marked">\</span>para dividirla:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -329,8 +329,8 @@ julia<span style="color: #6BAB5B;">&gt;</span> <span style="color: #C93D39;">"Th
 <span style="color: #C93D39;">"This is a long line"</span><br/>
 </div></div>Las cadenas de Julia también pueden usar índices, como los arreglos, para leer el carácter en una posición específica o extraer la subcadena en una posición determinada. La posición inicial del índice es<span class="marked">1</span>o<span class="marked">begin</span>, la posición final es<span class="marked">end</span> ：
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
-<span style="color: #C93D39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"EJEMPLO"</span><br/>
+<span style="color: #C93D39;">"EJEMPLO"</span><br/>
 <br/>
 julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin<span style="color: #3B972E;">]</span><br/>
 <span style="color: #C93D39;">'R'</span>: ASCII/Unicode U+0052 <span style="color: #3B972E;">(</span>category Lu: Letter, <span style="color: #0000A8;font-weight:bold;">uppercase</span><span style="color: #3B972E;">)</span><br/>
@@ -349,11 +349,11 @@ julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">
 </div></div>
 <p>Podemos usar índices de rango para extraer subcadenas:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"RUNOOB"</span><br/>
-<span style="color: #C93D39;">"RUNOOB"</span><br/>
+julia<span style="color: #6BAB5B;">&gt;</span> str = <span style="color: #C93D39;">"EJEMPLO"</span><br/>
+<span style="color: #C93D39;">"EJEMPLO"</span><br/>
 <br/>
 julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin:<span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #3B972E;">]</span><br/>
-<span style="color: #C93D39;">"RUNOOB"</span><br/>
+<span style="color: #C93D39;">"EJEMPLO"</span><br/>
 <br/>
 julia<span style="color: #6BAB5B;">&gt;</span> str<span style="color: #3B972E;">[</span>begin:end-<span style="color: black;">1</span><span style="color: #3B972E;">]</span><br/>
 <span style="color: #C93D39;">"RUNOO"</span><br/>

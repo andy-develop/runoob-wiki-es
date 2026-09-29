@@ -342,38 +342,38 @@ public String intern()
 <ul><li><p>En JDK 6 y anteriores, el grupo constante de cadenas se almacenaba en el área de métodos (generación permanente), con capacidad limitada; el uso excesivo de intern() puede provocar OutOfMemoryError.</p></li><li><p>En JDK 7 y posteriores, el grupo constante de cadenas se movió a la memoria heap, lo que permite almacenar más datos.</p></li></ul>
 <h3>Ejemplo</h3><p>El siguiente ejemplo demuestra la aplicación del método intern():</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> RunoobTest <span style="color: #009900;">{</span><br/>
+<span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> EjemploTest <span style="color: #009900;">{</span><br/>
     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span> args<span style="color: #009900;">[</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
-        <span style="color: #666666; font-style: italic;">// str1 se asigna directamente con el literal de cadena "Runoob", que se almacena en el grupo constante de cadenas (String Pool)</span><br/>
-        <span style="color: #003399;">String</span> str1 <span style="color: #339933;">=</span> <span style="color: #0000FF;">"Runoob"</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #666666; font-style: italic;">// str1 se asigna directamente con el literal de cadena "Ejemplo", que se almacena en el grupo constante de cadenas (String Pool)</span><br/>
+        <span style="color: #003399;">String</span> str1 <span style="color: #339933;">=</span> <span style="color: #0000FF;">"Ejemplo"</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// str2 se crea con la palabra clave new, y se almacena en la memoria heap</span><br/>
-        <span style="color: #003399;">String</span> str2 <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">String</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Runoob"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+        <span style="color: #003399;">String</span> str2 <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> <span style="color: #003399;">String</span><span style="color: #009900;">(</span><span style="color: #0000FF;">"Ejemplo"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// str3 es la referencia obtenida después de que str2 llama al método intern()</span><br/>
-        <span style="color: #666666; font-style: italic;">// El método intern() colocará "Runoob" en el grupo constante de cadenas y devolverá la referencia del grupo</span><br/>
+        <span style="color: #666666; font-style: italic;">// El método intern() colocará "Ejemplo" en el grupo constante de cadenas y devolverá la referencia del grupo</span><br/>
         <span style="color: #003399;">String</span> str3 <span style="color: #339933;">=</span> str2.<span style="color: #006633;">intern</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// Comparación de str1 y str2</span><br/>
-        <span style="color: #666666; font-style: italic;">// str1 apunta a "Runoob" en el grupo constante, str2 apunta al objeto en la memoria heap</span><br/>
+        <span style="color: #666666; font-style: italic;">// str1 apunta a "Ejemplo" en el grupo constante, str2 apunta al objeto en la memoria heap</span><br/>
         <span style="color: #666666; font-style: italic;">// Como sus direcciones son diferentes, el resultado es false</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>str1 <span style="color: #339933;">==</span> str2<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// false</span><br/>
 <br/>
         <span style="color: #666666; font-style: italic;">// Comparación de str1 y str3</span><br/>
-        <span style="color: #666666; font-style: italic;">// str3 es la referencia devuelta después de que str2 llama al método intern(), apunta a "Runoob" en el grupo constante</span><br/>
-        <span style="color: #666666; font-style: italic;">// Y str1 también apunta a "Runoob" en el grupo constante, por lo que sus direcciones son iguales y el resultado es true</span><br/>
+        <span style="color: #666666; font-style: italic;">// str3 es la referencia devuelta después de que str2 llama al método intern(), apunta a "Ejemplo" en el grupo constante</span><br/>
+        <span style="color: #666666; font-style: italic;">// Y str1 también apunta a "Ejemplo" en el grupo constante, por lo que sus direcciones son iguales y el resultado es true</span><br/>
         <span style="color: #003399;">System</span>.<span style="color: #006633;">out</span>.<span style="color: #006633;">println</span><span style="color: #009900;">(</span>str1 <span style="color: #339933;">==</span> str3<span style="color: #009900;">)</span><span style="color: #339933;">;</span>  <span style="color: #666666; font-style: italic;">// true</span><br/>
     <span style="color: #009900;">}</span><br/>
 <span style="color: #009900;">}</span><br/>
 </div></div>
 <p><strong>Explicación del código:</strong></p>
-<p><code>String str1 = "Runoob";</code></p>
+<p><code>String str1 = "Ejemplo";</code></p>
 <ul>
 <li>
-<p><strong>Asignar directamente un literal de cadena</strong> <code>"Runoob"</code>, este se<strong>almacena automáticamente en el grupo constante de cadenas</strong>(String Pool).</p>
+<p><strong>Asignar directamente un literal de cadena</strong> <code>"Ejemplo"</code>, este se<strong>almacena automáticamente en el grupo constante de cadenas</strong>(String Pool).</p>
 </li>
 </ul>
-<p><code>String str2 = new String("Runoob");</code></p>
+<p><code>String str2 = new String("Ejemplo");</code></p>
 <ul>
 <li>
 <p>Debido al uso de la<code>new</code>palabra clave, este<strong>crea un nuevo objeto de cadena en la memoria heap</strong>, es decir,<code>str2</code> <strong>no apunta al grupo constante</strong>, sino que apunta a una nueva dirección de memoria.</p>
@@ -382,7 +382,7 @@ public String intern()
 <p><code>String str3 = str2.intern();</code></p>
 <ul>
 <li>
-<p><code>intern()</code>El método verifica si la cadena<code>"Runoob"</code>ya está<strong>presente en el grupo constante de cadenas</strong>：</p>
+<p><code>intern()</code>El método verifica si la cadena<code>"Ejemplo"</code>ya está<strong>presente en el grupo constante de cadenas</strong>：</p>
 <ul>
 <li><p><strong>Si existe</strong>, devuelve la referencia de la cadena;</p></li>
 <li><p><strong>Si no existe</strong>, la agrega al grupo constante y devuelve la referencia del grupo.</p></li>

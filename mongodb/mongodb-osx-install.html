@@ -336,14 +336,14 @@ export PATH=/usr/local/mongodb/bin:$PATH
 <p>Ruta de almacenamiento de datos:</p><pre>sudo mkdir -p /usr/local/var/mongodb</pre></li><li>
 <p>Ruta del archivo de registro:</p><pre>sudo mkdir -p /usr/local/var/log/mongodb</pre></li></ul>
 <p>A continuación, asegúrate de que el usuario actual tenga permisos de lectura y escritura en los dos directorios anteriores:</p>
-<pre>sudo chown runoob /usr/local/var/mongodb
-sudo chown runoob /usr/local/var/log/mongodb
+<pre>sudo chown ejemplo /usr/local/var/mongodb
+sudo chown ejemplo /usr/local/var/log/mongodb
 </pre><p>Crear archivo de registro:</p>
 <pre>
 sudo touch /usr/local/var/log/mongodb/mongo.log
-sudo chown runoob /usr/local/var/log/mongodb/mongo.log
+sudo chown ejemplo /usr/local/var/log/mongodb/mongo.log
 </pre>
-<p>Lo anterior<strong>runoob</strong>es el usuario en mi computadora; por tu parte, debes modificarlo según tu nombre de usuario actual.</p>
+<p>Lo anterior<strong>ejemplo</strong>es el usuario en mi computadora; por tu parte, debes modificarlo según tu nombre de usuario actual.</p>
 <p>A continuación, usamos el siguiente comando para iniciar MongoDB en segundo plano:</p>
 <pre>mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork</pre>
 <ul><li><strong>--dbpath</strong>Establecer el directorio de almacenamiento de datos</li><li>

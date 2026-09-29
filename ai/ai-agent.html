@@ -587,7 +587,7 @@ calculator_tool <span style="color: Gray;">=</span> <span style="color: Olive;">
             query <span style="color: Gray;">=</span> parameters<span style="color: Olive;">[</span><span style="color: #a11;">"query"</span><span style="color: Olive;">]</span><br/>
             <span style="color: #a50"># Resultado de búsqueda simulado</span><br/>
             results <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
-                <span style="color: #a11;">"runoob"</span>: <span style="color: #a11;">Tutorial para novatos (runoob) es un sitio web de aprendizaje de programación que ofrece una gran cantidad de tutoriales y ejemplos.</span><span style="color: Gray;">,</span><br/>
+                <span style="color: #a11;">"ejemplo"</span>: <span style="color: #a11;">Tutorial para novatos (ejemplo) es un sitio web de aprendizaje de programación que ofrece una gran cantidad de tutoriales y ejemplos.</span><span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"Clima en Beijing el 18 de junio de 2024"</span>: <span style="color: #a11;">"Beijing 2024-06-18: despejado, 25°C, humedad 45%."</span><span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"Población de Shanghái"</span>: <span style="color: #a11;">"La población residente de Shanghái en 2024 es de aproximadamente 24,89 millones."</span><span style="color: Gray;">,</span><br/>
             <span style="color: Olive;">}</span><br/>
@@ -624,7 +624,7 @@ calculator_tool <span style="color: Gray;">=</span> <span style="color: Olive;">
             <span style="color: #a50"># Extraer término de búsqueda (simulación simple)</span><br/>
             query <span style="color: Gray;">=</span> user_input.<span style="color: #05a;">replace</span><span style="color: Olive;">(</span><span style="color: #a11;">"Buscar"</span><span style="color: Gray;">,</span> <span style="color: #a11;">""</span><span style="color: Olive;">)</span>.<span style="color: #05a;">replace</span><span style="color: Olive;">(</span><span style="color: #a11;">"Consulta"</span><span style="color: Gray;">,</span> <span style="color: #a11;">""</span><span style="color: Olive;">)</span>.<span style="color: #05a;">replace</span><span style="color: Olive;">(</span><span style="color: #a11;">"Qué es"</span><span style="color: Gray;">,</span> <span style="color: #a11;">""</span><span style="color: Olive;">)</span>.<span style="color: #05a;">strip</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
             <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> query:<br/>
-                query <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob"</span><br/>
+                query <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo"</span><br/>
             <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">{</span><br/>
                 <span style="color: #a11;">"action"</span>: <span style="color: #a11;">"call_tool"</span><span style="color: Gray;">,</span><br/>
                 <span style="color: #a11;">"tool"</span>: <span style="color: #a11;">"web_search"</span><span style="color: Gray;">,</span><br/>
@@ -681,7 +681,7 @@ calculator_tool <span style="color: Gray;">=</span> <span style="color: Olive;">
 agent <span style="color: Gray;">=</span> SimpleAgent<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
-response1 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><span style="color: #a11;">"Buscar qué es runoob"</span><span style="color: Olive;">)</span><br/>
+response1 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">run</span><span style="color: Olive;">(</span><span style="color: #a11;">"Buscar qué es ejemplo"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"[Respuesta del Agent]"<span style="color: #000099; font-weight: bold;">\n</span>{response1}"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span> * <span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
@@ -846,7 +846,7 @@ response3 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">r
 <hr/>
 <h2>Práctica: construir un Agent de recopilación automática de información</h2>
 <p>Ahora vamos a conectar todos los puntos que hemos visto antes y escribir un agente que realmente funcione.</p>
-<p>Este agente que vamos a crear se llama<strong>runoob-researcher</strong>— dale un tema, y automáticamente buscará, organizará y generará un informe de investigación.</p>
+<p>Este agente que vamos a crear se llama<strong>ejemplo-researcher</strong>— dale un tema, y automáticamente buscará, organizará y generará un informe de investigación.</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
@@ -882,7 +882,7 @@ response3 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">r
             <span style="color: #a11;">"Gran modelo de lenguaje"</span>: <span style="color: #a11;">"Un gran modelo de lenguaje (LLM) es un modelo de IA basado en la arquitectura Transformer, entrenado con enormes cantidades de texto, capaz de comprender y generar lenguaje humano."</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"Agent"</span>: <span style="color: #a11;">"Un agente de IA es un sistema que puede percibir su entorno de forma autónoma, tomar decisiones y actuar; normalmente se compone de cuatro partes: LLM, herramientas, memoria y planificación."</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"Transformer"</span>: <span style="color: #a11;">"Transformer es una arquitectura de red neuronal propuesta por Google en 2017, base de los LLM modernos; su núcleo es el mecanismo de atención."</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"runoob"</span>: <span style="color: #a11;">"El sitio de tutoriales para novatos (runoob) se creó en 2013 y es un sitio web centrado en tutoriales de programación que ofrece recursos de aprendizaje para múltiples lenguajes de programación."</span><span style="color: Gray;">,</span><br/>
+            <span style="color: #a11;">"ejemplo"</span>: <span style="color: #a11;">"El sitio de tutoriales para novatos (ejemplo) se creó en 2013 y es un sitio web centrado en tutoriales de programación que ofrece recursos de aprendizaje para múltiples lenguajes de programación."</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">}</span><br/>
 <br/>
         <span style="color: #a50"># Buscar el conocimiento más relevante</span><br/>
@@ -938,7 +938,7 @@ response3 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">r
     <span style="color: Green;font-weight:bold;">def</span> _generate_report<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> topic: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
         <span style="color: #a11;">"""Generar el informe basado en la información recopilada"""</span><br/>
         report <span style="color: Gray;">=</span> f<span style="color: #a11;">"# Informe de investigación sobre {topic}<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
-        report +<span style="color: Gray;">=</span> f<span style="color: #a11;">"&gt; Este informe ha sido generado automáticamente por runoob-researcher<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
+        report +<span style="color: Gray;">=</span> f<span style="color: #a11;">"&gt; Este informe ha sido generado automáticamente por ejemplo-researcher<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
         report +<span style="color: Gray;">=</span> <span style="color: #a11;">"---<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
         report +<span style="color: Gray;">=</span> <span style="color: #a11;">"## Puntos clave<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><br/>
 <br/>
@@ -954,7 +954,7 @@ response3 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">r
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> run<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> topic: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
         <span style="color: #a11;">"""Ejecutar el agente de investigación"""</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">" ¡runoob-researcher iniciado!"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">" ¡ejemplo-researcher iniciado!"</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">" Tema de investigación: {topic}"</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"-"</span> * <span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 <br/>

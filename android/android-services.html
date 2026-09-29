@@ -307,7 +307,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tbody>
 </table>
 <p>El siguiente servicio principal demuestra el ciclo de vida de cada método:</p>
-<pre>package com.runoob.androidservices;
+<pre>package com.ejemplo.androidservices;
 
 import android.app.Service;
 import android.os.IBinder;
@@ -374,7 +374,7 @@ public class HelloService extends Service {
 <tbody>
 <tr>
 <td>1</td>
-<td>Usa el IDE Android Studio para crear una aplicación de Android y nómbrala androidservices en el paquete com.runoob.androidservices. Similar al capítulo de ejemplo Hello World.</td>
+<td>Usa el IDE Android Studio para crear una aplicación de Android y nómbrala androidservices en el paquete com.ejemplo.androidservices. Similar al capítulo de ejemplo Hello World.</td>
 </tr>
 <tr>
 <td>2</td>
@@ -382,7 +382,7 @@ public class HelloService extends Service {
 </tr>
 <tr>
 <td>3</td>
-<td>Crea un nuevo archivo Java MyService.java en el paquete com.runoob.androidservices. Este archivo implementará los métodos relacionados con los servicios de Android.</td>
+<td>Crea un nuevo archivo Java MyService.java en el paquete com.ejemplo.androidservices. Este archivo implementará los métodos relacionados con los servicios de Android.</td>
 </tr>
 <tr>
 <td>4</td>
@@ -402,8 +402,8 @@ public class HelloService extends Service {
 </tr>
 </tbody>
 </table>
-<p>A continuación se muestra el contenido modificado del archivo de la actividad principal src/com.runoob.androidservices/MainActivity.java. Este archivo contiene todos los métodos básicos del ciclo de vida. Hemos añadido los métodos startService() y stopService() para iniciar y detener el servicio.</p>
-<pre>package com.runoob.androidservices;
+<p>A continuación se muestra el contenido modificado del archivo de la actividad principal src/com.ejemplo.androidservices/MainActivity.java. Este archivo contiene todos los métodos básicos del ciclo de vida. Hemos añadido los métodos startService() y stopService() para iniciar y detener el servicio.</p>
+<pre>package com.ejemplo.androidservices;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -437,8 +437,8 @@ public class MainActivity extends Activity {
         stopService(new Intent(getBaseContext(), MyService.class));
     }
 }</pre>
-<p>A continuación se muestra el contenido de src/com.runoob.androidservices/MyService.java. Este archivo puede implementar uno o más métodos relacionados con el servicio según los requisitos. Para los principiantes, solo implementamos onStartCommand() y onDestroy():</p>
-<pre>package com.runoob.androidservices;
+<p>A continuación se muestra el contenido de src/com.ejemplo.androidservices/MyService.java. Este archivo puede implementar uno o más métodos relacionados con el servicio según los requisitos. Para los principiantes, solo implementamos onStartCommand() y onDestroy():</p>
+<pre>package com.ejemplo.androidservices;
 
 import android.app.Service;
 import android.content.Intent;
@@ -468,7 +468,7 @@ public class MyService extends Service {
 <p>A continuación se modificará el archivo AndroidManifest.xml. Aquí se añade la etiqueta &lt;service.../&gt; para incluir nuestro servicio:</p>
 <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.runoob.androidservices"
+    package="com.ejemplo.androidservices"
     android:versionCode="1"
     android:versionName="1.0"&gt;
 
@@ -518,7 +518,7 @@ public class MyService extends Service {
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.runoob.com"
+        android:text="www.example.com"
         android:textColor="#ff87ff09"
         android:textSize="30dp"
         android:layout_above="@+id/imageButton"

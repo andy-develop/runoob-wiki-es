@@ -314,14 +314,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>use DATABASE_NAME</pre>
 <p>Si la base de datos no existe, se crea; de lo contrario, se cambia a la base de datos especificada.</p>
 <h3>Ejemplo</h3>
-<p>En el siguiente ejemplo creamos la base de datos runoob:</p>
+<p>En el siguiente ejemplo creamos la base de datos ejemplo:</p>
 <pre>
-&gt; use runoob
-switched to db runoob
+&gt; use ejemplo
+switched to db ejemplo
 &gt; db
-runoob
+ejemplo
 &gt; 
-</pre><p>Después de ejecutar el<span class="marked">use runoob</span>comando, MongoDB creará una nueva base de datos llamada runoob. En este momento, puedes comenzar a crear colecciones e insertar documentos en esta base de datos.</p>
+</pre><p>Después de ejecutar el<span class="marked">use ejemplo</span>comando, MongoDB creará una nueva base de datos llamada ejemplo. En este momento, puedes comenzar a crear colecciones e insertar documentos en esta base de datos.</p>
 <p>Si deseas ver todas las bases de datos, puedes usar el<strong>show dbs</strong>comando:</p>
 <pre>
 &gt; show dbs
@@ -330,15 +330,15 @@ config  0.000GB
 local   0.000GB
 &gt; 
 </pre>
-<p>Se puede ver que la base de datos runoob que acabamos de crear no está en la lista de bases de datos. Para mostrarla, necesitamos insertar algunos datos en la base de datos runoob.</p>
+<p>Se puede ver que la base de datos ejemplo que acabamos de crear no está en la lista de bases de datos. Para mostrarla, necesitamos insertar algunos datos en la base de datos ejemplo.</p>
 <pre>
-&gt; db.runoob.insertOne({"name":"菜鸟教程"})
+&gt; db.ejemplo.insertOne({"name":"Ejemplo"})
 WriteResult({ "nInserted" : 1 })
 &gt; show dbs
 admin   0.000GB
 config  0.000GB
 local   0.000GB
-runoob  0.000GB
+ejemplo  0.000GB
 </pre>
 <h3>Crear colección</h3><p>Después de crear una base de datos, normalmente es necesario crear colecciones en ella para almacenar documentos.</p><p>Las colecciones son similares a las tablas en bases de datos relacionales. A continuación se muestran los pasos para crear una colección:</p>
 <p>Usa el comando use para especificar la base de datos.</p><p>Usa el método db.createCollection() para crear la colección.</p>

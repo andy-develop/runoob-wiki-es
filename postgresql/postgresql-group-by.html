@@ -323,7 +323,7 @@ ORDER BY column1, column2....columnN</pre>
 <p>En la cláusula GROUP BY, puedes agrupar por una o más columnas, pero las columnas agrupadas deben existir en la lista de columnas.</p>
 <h3>Ejemplos</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -335,7 +335,7 @@ ORDER BY column1, column2....columnN</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo agrupará por el valor del campo NAME para encontrar el salario total de cada persona:</p>
-<pre>runoobdb=# SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME;</pre>
+<pre>ejemplodb=# SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME;</pre>
 <p>Se obtiene el siguiente resultado:</p>
 <pre>  name  |  sum
  -------+-------
@@ -366,7 +366,7 @@ INSERT INTO COMPANY VALUES (10, 'James', 45, 'Texas', 5000.00);</pre>
   10 | James |  45 | Texas        |   5000
 (10 rows)</pre>
 <p>Ahora agrupamos nuevamente por el valor del campo NAME para encontrar el salario total de cada cliente:</p>
-<pre>runoobdb=# SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME;</pre>
+<pre>ejemplodb=# SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME;</pre>
 <p>El resultado obtenido es el siguiente:</p>
 <pre>name  |  sum
 -------+-------
@@ -379,7 +379,7 @@ INSERT INTO COMPANY VALUES (10, 'James', 45, 'Texas', 5000.00);</pre>
  Teddy | 20000
 (7 rows)</pre>
 <p>El siguiente ejemplo usa la cláusula ORDER BY junto con la cláusula GROUP BY:</p>
-<pre>runoobdb=#  SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME DESC;</pre>
+<pre>ejemplodb=#  SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME DESC;</pre>
 <p>Se obtiene el siguiente resultado:</p>
 <pre>name  |  sum
 -------+-------

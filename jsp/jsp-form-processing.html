@@ -290,7 +290,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>Método GET</h2>
 <p>El método GET añade la información codificada de la solicitud después de la URL; la URL y la información codificada se separan mediante el signo "?". Como se muestra a continuación:</p>
-<pre>http://www.runoob.com/hello?key1=value1&amp;key2=value2</pre>
+<pre>http://www.example.com/hello?key1=value1&amp;key2=value2</pre>
 <p>El método GET es el método predeterminado del navegador para transmitir parámetros. Para información sensible, como contraseñas, se recomienda no usar el método GET.</p>
 <p>Al usar GET, el tamaño de los datos transmitidos está limitado (tenga en cuenta que no es el número de parámetros lo que está limitado), con un máximo de 1024 bytes.</p>
 <hr/>
@@ -308,7 +308,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>Ejemplo del método GET usando URL</h2>
 <p>La siguiente es una URL simple, y se usa el método GET para transmitir los parámetros en la URL:</p>
-<pre>http://localhost:8080/testjsp/main.jsp?name=菜鸟教程&amp;url=http://ww.runoob.com</pre>
+<pre>http://localhost:8080/testjsp/main.jsp?name=Ejemplo&amp;url=http://ww.example.com</pre>
 <p>testjsp es la dirección del proyecto.</p>
 <p>A continuación se muestra el programa JSP del archivo main.jsp que se utiliza para procesar los datos de formulario enviados por el cliente; usamos el método getParameter() para obtener los datos enviados:</p>
 <pre>
@@ -319,7 +319,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;使用 GET 方法读取数据&lt;/h1&gt;
@@ -334,7 +334,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>A continuación, accedemos a través del navegador a<strong><em>http://localhost:8080/testjsp/main.jsp?name=菜鸟教程&amp;url=http://ww.runoob.com</em></strong>El resultado de salida es el siguiente:</p>
+<p>A continuación, accedemos a través del navegador a<strong><em>http://localhost:8080/testjsp/main.jsp?name=Ejemplo&amp;url=http://ww.example.com</em></strong>El resultado de salida es el siguiente:</p>
 <p><img decoding="async" src="../wp-content/uploads/2014/01/D47A8578-B8F3-4C46-A58E-98EDFF012158.jpg" width="70%"/></p>
 <hr/>
 <h2>Ejemplo del método GET usando un formulario</h2>
@@ -344,7 +344,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -373,7 +373,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;使用 POST 方法读取数据&lt;/h1&gt;
@@ -399,7 +399,7 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -424,13 +424,13 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;form action="main.jsp" method="POST" target="_blank"&gt;
 &lt;input type="checkbox" name="google" checked="checked" /&gt; Google
-&lt;input type="checkbox" name="runoob"  /&gt; 菜鸟教程
+&lt;input type="checkbox" name="ejemplo"  /&gt; Ejemplo
 &lt;input type="checkbox" name="taobao" checked="checked" /&gt; 淘宝
 &lt;input type="submit" value="选择网站" /&gt;
 &lt;/form&gt;
@@ -448,7 +448,7 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;从复选框中读取数据&lt;/h1&gt;
@@ -456,8 +456,8 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;li&gt;&lt;p&gt;&lt;b&gt;Google 是否选中:&lt;/b&gt;
    &lt;%= request.getParameter("google")%&gt;
 &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;b&gt;菜鸟教程是否选中:&lt;/b&gt;
-   &lt;%= request.getParameter("runoob")%&gt;
+&lt;li&gt;&lt;p&gt;&lt;b&gt;Ejemplo是否选中:&lt;/b&gt;
+   &lt;%= request.getParameter("ejemplo")%&gt;
 &lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;b&gt;淘宝是否选中:&lt;/b&gt;
    &lt;%= request.getParameter("taobao")%&gt;
@@ -480,7 +480,7 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;读取所有表单参数&lt;/h1&gt;
@@ -508,13 +508,13 @@ String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
-&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+&lt;title&gt;Ejemplo(example.com)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;form action="main.jsp" method="POST" target="_blank"&gt;
 &lt;input type="checkbox" name="google" checked="checked" /&gt; Google
-&lt;input type="checkbox" name="runoob"  /&gt; 菜鸟教程
+&lt;input type="checkbox" name="ejemplo"  /&gt; Ejemplo
 &lt;input type="checkbox" name="taobao" checked="checked" /&gt; 
                                                 淘宝
 &lt;input type="submit" value="选择网站" /&gt;

@@ -328,7 +328,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <span style="color: #3366CC;">"messages"</span><span style="color: #339933;">:</span> <span style="color: #009900;">[</span><br/>
         <span style="color: #009900;">{</span><br/>
             <span style="color: #3366CC;">"role"</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">"user"</span><span style="color: #339933;">,</span><br/>
-            <span style="color: #3366CC;">"content"</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">Hola, por favor preséntame RUNOOB.</span><br/>
+            <span style="color: #3366CC;">"content"</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">Hola, por favor preséntame EJEMPLO.</span><br/>
         <span style="color: #009900;">}</span><br/>
     <span style="color: #009900;">]</span><span style="color: #339933;">,</span><br/>
     <span style="color: #3366CC;">"temperature"</span><span style="color: #339933;">:</span> <span style="color: #CC0000;">0.7</span><span style="color: #339933;">,</span><br/>
@@ -426,7 +426,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
     messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Rol: 'user' representa al usuario</span><br/>
-            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">Presenta el tutorial RUNOOB para novatos en una sola frase</span>  <span style="color: #a50"># Contenido ingresado por el usuario</span><br/>
+            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">Presenta el tutorial EJEMPLO para novatos en una sola frase</span>  <span style="color: #a50"># Contenido ingresado por el usuario</span><br/>
         <span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -460,7 +460,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
     messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Rol: user representa al usuario</span><br/>
-            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta RUNOOB, el tutorial para novatos, en una frase"</span>  <span style="color: #a50"># Contenido ingresado por el usuario</span><br/>
+            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta EJEMPLO, el tutorial para novatos, en una frase"</span>  <span style="color: #a50"># Contenido ingresado por el usuario</span><br/>
         <span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -483,7 +483,7 @@ python first_api_call.py</pre>
 完整响应：
 ChatCompletion(
   id='chatcmpl-xxx',
-  choices=[Choice(finish_reason='stop', index=0, message=ChatMessage(content='RUNOOB 菜鸟教程是一个专注于提供编程技术教程的学习平台...', role='assistant'))],
+  choices=[Choice(finish_reason='stop', index=0, message=ChatMessage(content='Ejemplo是一个专注于提供编程技术教程的学习平台...', role='assistant'))],
   model='gpt-3.5-turbo',
   usage=CompletionUsage(completion_tokens=30, prompt_tokens=18, total_tokens=48)
 )
@@ -491,7 +491,7 @@ ChatCompletion(
 ==================================================
 
 AI 回复：
-RUNOOB 菜鸟教程是一个专注于提供编程技术教程的学习平台，涵盖多种编程语言和技术领域。
+Ejemplo是一个专注于提供编程技术教程的学习平台，涵盖多种编程语言和技术领域。
 </pre>
 <p>¡Felicitaciones! Has llamado correctamente a una API de IA una vez.</p>
 <h3>Explicación detallada de los parámetros de solicitud</h3>
@@ -527,7 +527,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
     <span style="color: Green;font-weight:bold;">return</span> response.<span style="color: #05a;">choices</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span>.<span style="color: #05a;">message</span>.<span style="color: #05a;">content</span><br/>
 <br/>
 <span style="color: #a50"># La misma pregunta, hecha tres veces con diferentes temperature</span><br/>
-question <span style="color: Gray;">=</span> <span style="color: #a11;">"Crea un eslogan para RUNOOB"</span><br/>
+question <span style="color: Gray;">=</span> <span style="color: #a11;">"Crea un eslogan para EJEMPLO"</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"--- temperature=0 (más determinista, los resultados son casi iguales cada vez) ---"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>ask_ai<span style="color: Olive;">(</span><span style="color: Maroon;">0.0</span><span style="color: Gray;">,</span> question<span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
@@ -581,7 +581,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">m
     messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta RUNOOB (el tutorial para novatos) en tres frases"</span><br/>
+            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta EJEMPLO (el tutorial para novatos) en tres frases"</span><br/>
         <span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -613,7 +613,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">m
     messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta RUNOOB (el tutorial para novatos) en tres frases"</span><br/>
+            <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta EJEMPLO (el tutorial para novatos) en tres frases"</span><br/>
         <span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -713,7 +713,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <br/>
 <span style="color: #a50"># Ejemplo de uso</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
-    bot <span style="color: Gray;">=</span> ChatBot<span style="color: Olive;">(</span>system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres un asistente de programación, especializado en responder preguntas sobre RUNOOB y Python"</span><span style="color: Olive;">)</span><br/>
+    bot <span style="color: Gray;">=</span> ChatBot<span style="color: Olive;">(</span>system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres un asistente de programación, especializado en responder preguntas sobre EJEMPLO y Python"</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"=== Demostración de conversación de múltiples turnos ==="</span><span style="color: Olive;">)</span><br/>
 <br/>
@@ -730,8 +730,8 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Tercera ronda</span><br/>
-    r3 <span style="color: Gray;">=</span> bot.<span style="color: #05a;">chat</span><span style="color: Olive;">(</span><span style="color: #a11;">"¿Hay algún tutorial de Python en RUNOOB?"</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Usuario: ¿Hay algún tutorial de Python en RUNOOB?"</span><span style="color: Olive;">)</span><br/>
+    r3 <span style="color: Gray;">=</span> bot.<span style="color: #05a;">chat</span><span style="color: Olive;">(</span><span style="color: #a11;">"¿Hay algún tutorial de Python en EJEMPLO?"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Usuario: ¿Hay algún tutorial de Python en EJEMPLO?"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"AI："</span><span style="color: Gray;">,</span> r3<span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -827,8 +827,8 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 sample_history <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¿Cómo me llamo?"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"assistant"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Lo siento, no sé cómo te llamas. Puedes decírmelo."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Me llamo Xiao Ming, estoy aprendiendo Python en RUNOOB."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
-    <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"assistant"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¡Hola Xiao Ming! Encantado de conocerte. RUNOOB es una excelente plataforma de aprendizaje."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Me llamo Xiao Ming, estoy aprendiendo Python en EJEMPLO."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+    <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"assistant"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¡Hola Xiao Ming! Encantado de conocerte. EJEMPLO es una excelente plataforma de aprendizaje."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Quiero aprender listas, ¿puedes enseñarme?"</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"assistant"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¡Por supuesto! Las listas de Python son..."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
@@ -865,14 +865,14 @@ summary <span style="color: Gray;">=</span> summarize_conversation<span style="c
 client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</span>api_key<span style="color: Gray;">=</span><span style="color: #a11;">"your-api-key-here"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"=== Demostración de salida en streaming ==="</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Pregunta: escribe una introducción sobre RUNOOB<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Pregunta: escribe una introducción sobre EJEMPLO<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Respuesta: "</span><span style="color: Gray;">,</span> end<span style="color: Gray;">=</span><span style="color: #a11;">""</span><span style="color: Gray;">,</span> flush<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Parámetro clave: stream=True</span><br/>
 response <span style="color: Gray;">=</span> client.<span style="color: #05a;">chat</span>.<span style="color: #05a;">completions</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
     messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Escribe una introducción sobre RUNOOB, el tutorial para novatos"</span><span style="color: Olive;">}</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Escribe una introducción sobre EJEMPLO, el tutorial para novatos"</span><span style="color: Olive;">}</span><br/>
     <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     stream<span style="color: Gray;">=</span><span style="color: Teal;">True</span>  <span style="color: #a50"># Habilitar la salida en streaming</span><br/>
 <span style="color: Olive;">)</span><br/>
@@ -936,7 +936,7 @@ client <span style="color: Gray;">=</span> anthropic.<span style="color: #05a;">
 <li>
 <p>"Hello, mundo" — aproximadamente 3-4 tokens</p></li>
 <li>
-<p>El tutorial de RUNOOB es excelente</p></li></ul>
+<p>El tutorial de EJEMPLO es excelente</p></li></ul>
 <p>Método de facturación:</p>
 <pre>Prompt tokens（你发给 AI 的） + Completion tokens（AI 返回给你的）= 总 tokens</pre>
 <p>Los precios varían según el modelo, por ejemplo, gpt-3.5-turbo cuesta $0.0015/1k tokens de prompt y $0.002/1k tokens de completion.</p>
@@ -1003,7 +1003,7 @@ MODEL_PRICES <span style="color: Gray;">=</span> <span style="color: Olive;">{</
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     result <span style="color: Gray;">=</span> chat_with_cost_tracking<span style="color: Olive;">(</span><br/>
         model<span style="color: Gray;">=</span><span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
-        messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta RUNOOB"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
+        messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta EJEMPLO"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
     <span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Respuesta de IA:"</span><span style="color: Gray;">,</span> result<span style="color: Olive;">[</span><span style="color: #a11;">"reply"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
@@ -1095,7 +1095,7 @@ cache <span style="color: Gray;">=</span> SimpleCache<span style="color: Olive;"
 <br/>
 <span style="color: #a50"># Prueba</span><br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
-    messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¿Qué sitio web es RUNOOB?"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
+    messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"¿Qué sitio web es EJEMPLO?"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Primera llamada..."</span><span style="color: Olive;">)</span><br/>
     r1 <span style="color: Gray;">=</span> chat_with_cache<span style="color: Olive;">(</span><span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span> messages<span style="color: Olive;">)</span><br/>
@@ -1218,7 +1218,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     result <span style="color: Gray;">=</span> chat_with_retry<span style="color: Olive;">(</span><br/>
         model<span style="color: Gray;">=</span><span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
-        messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Hola, RUNOOB"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
+        messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Hola, EJEMPLO"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
     <span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">if</span> result<span style="color: Olive;">[</span><span style="color: #a11;">"success"</span><span style="color: Olive;">]</span>:<br/>
@@ -1260,7 +1260,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <span style="color: Green;font-weight:bold;">try</span>:<br/>
     reply <span style="color: Gray;">=</span> chat_with_tenacity<span style="color: Olive;">(</span><br/>
         <span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta RUNOOB"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
+        <span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Presenta EJEMPLO"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><br/>
     <span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>reply<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">except</span> <span style="color: Teal;">Exception</span> <span style="color: Green;font-weight:bold;">as</span> e:<br/>
@@ -1273,8 +1273,8 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #a50"># Ruta del archivo: runoob_chatbot.py</span><br/>
-<span style="color: #a50"># Robot de chat RUNOOB AI - Herramienta completa de línea de comandos</span><br/>
+<span style="color: #a50"># Ruta del archivo: ejemplo_chatbot.py</span><br/>
+<span style="color: #a50"># Robot de chat EJEMPLO AI - Herramienta completa de línea de comandos</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">sys</span><br/>
 <span style="color: Green;font-weight:bold;">import</span> json<br/>
@@ -1283,7 +1283,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <span style="color: Green;font-weight:bold;">from</span> openai <span style="color: Green;font-weight:bold;">import</span> OpenAI<br/>
 <br/>
 <br/>
-<span style="color: Green;font-weight:bold;">class</span> RunoobChatBot:<br/>
+<span style="color: Green;font-weight:bold;">class</span> EjemploChatBot:<br/>
     <span style="color: #a11;">"""Un robot de chat de línea de comandos con todas las funciones"""</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> config_file: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"config.json"</span><span style="color: Olive;">)</span>:<br/>
@@ -1304,7 +1304,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
         default_config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"api_key"</span>: <span style="color: #a11;">"your-api-key-here"</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"model"</span>: <span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"system_prompt"</span>: <span style="color: #a11;">"Eres un asistente AI servicial, con soporte técnico de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+            <span style="color: #a11;">"system_prompt"</span>: <span style="color: #a11;">"Eres un asistente AI servicial, con soporte técnico de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"max_history"</span>: <span style="color: Maroon;">20</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"stream"</span>: <span style="color: Teal;">True</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"temperature"</span>: <span style="color: Maroon;">0.7</span><br/>
@@ -1450,7 +1450,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <span style="color: Green;font-weight:bold;">def</span> print_help<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a11;">"""Imprimir información de ayuda"""</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span>*<span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Herramienta de chat RUNOOB AI - Lista de comandos"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Herramienta de chat EJEMPLO AI - Lista de comandos"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"/help      - Mostrar ayuda"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"/clear     - Borrar historial de conversación"</span><span style="color: Olive;">)</span><br/>
@@ -1465,11 +1465,11 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <br/>
 <span style="color: Green;font-weight:bold;">def</span> main<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"  Herramienta de chat RUNOOB AI"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"  Herramienta de chat EJEMPLO AI"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">40</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Escribe /help para ver comandos, escribe texto directamente para empezar a chatear"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
 <br/>
-    bot <span style="color: Gray;">=</span> RunoobChatBot<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
+    bot <span style="color: Gray;">=</span> EjemploChatBot<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">while</span> <span style="color: Teal;">True</span>:<br/>
         <span style="color: Green;font-weight:bold;">try</span>:<br/>
@@ -1552,23 +1552,23 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 {
     "api_key": "your-api-key-here",
     "model": "gpt-3.5-turbo",
-    "system_prompt": "你是一个乐于助人的 AI 助手，由 RUNOOB 提供技术支持。",
+    "system_prompt": "你是一个乐于助人的 AI 助手，由 EJEMPLO 提供技术支持。",
     "max_history": 20,
     "stream": true,
     "temperature": 0.7
 }</pre>
 <p>Ahora puedes ejecutar esta herramienta de chat:</p>
 <pre>
-python runoob_chatbot.py</pre>
+python ejemplo_chatbot.py</pre>
 <p>Verás:</p>
 <pre>
 ========================================
-  RUNOOB AI 聊天工具
+  EJEMPLO AI 聊天工具
 ========================================
 输入 /help 查看命令，直接输入文字开始聊天
 
 你：你好
-AI：你好！很高兴见到你。我是由 RUNOOB 提供技术支持的 AI 助手，有什么可以帮你的吗？
+AI：你好！很高兴见到你。我是由 EJEMPLO 提供技术支持的 AI 助手，有什么可以帮你的吗？
 
 你：/stats
 

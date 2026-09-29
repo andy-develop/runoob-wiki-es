@@ -286,7 +286,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>1. Trabajos ejecutados por el sistema:</strong>Trabajos que el sistema debe realizar periódicamente, como respaldar datos del sistema, limpiar caché.</li><li>
 <strong>2. Trabajos ejecutados por el usuario:</strong>Trabajos que un usuario debe realizar periódicamente, como revisar cada 10 minutos si el servidor de correo tiene nuevos mensajes. Estos trabajos pueden ser configurados por cada usuario.</li></ul>
 <blockquote><p>Herramienta en línea para expresiones Cron:<a href="https://www.jyshare.com/front-end/9444/" rel="noopener" target="_blank">https://www.jyshare.com/front-end/9444/</a></p>
-<p>Tareas programadas Cron en Linux:<a href="../w3cnote/linux-cron-task.html" target="_blank">https://www.runoob.com/w3cnote/linux-cron-task.html</a></p>
+<p>Tareas programadas Cron en Linux:<a href="../w3cnote/linux-cron-task.html" target="_blank">https://www.example.com/w3cnote/linux-cron-task.html</a></p>
 </blockquote>
 <h3>Sintaxis</h3><pre>crontab [ -u user ] file</pre>
 <p>o</p>
@@ -362,7 +362,7 @@ crontab -u username -e</pre>
 30 6 */10 * * ls  意思是每月的1、11、21、31日是的6：30执行一次ls命令
 </pre>
 <p><b>Nota:</b>Cuando el programa se ejecuta en el tiempo especificado, el sistema envía un correo electrónico al usuario actual con el contenido de la ejecución. Si no deseas recibir dichos correos, agrega un espacio en cada línea y añade<span class="marked">&gt; /dev/null 2&gt;&amp;1</span>y listo, por ejemplo:</p>
-<pre>20 03 * * * . /etc/profile;/bin/sh /var/www/runoob/test.sh &gt; /dev/null 2&gt;&amp;1 </pre>
+<pre>20 03 * * * . /etc/profile;/bin/sh /var/www/ejemplo/test.sh &gt; /dev/null 2&gt;&amp;1 </pre>
 <h3>Problema: el script no se ejecuta</h3>
 <p>Si usamos crontab para ejecutar un script programado y este no se ejecuta, pero al ejecutarlo directamente mediante un comando (por ejemplo, ./test.sh) funciona correctamente, se debe principalmente a que no se pueden leer las variables de entorno.</p>
 <p><strong>Solución:</strong></p>
@@ -376,7 +376,7 @@ crontab -u username -e</pre>
 . ~/.bash_profile</pre>
 </li><li>
 <p>3. En<strong>/etc/crontab</strong>agrega variables de entorno, y antes del comando ejecutable agrega el comando<span class="marked">. /etc/profile;/bin/sh</span>, para que las variables de entorno tengan efecto, por ejemplo:</p>
-<pre>20 03 * * * . /etc/profile;/bin/sh /var/www/runoob/test.sh</pre>
+<pre>20 03 * * * . /etc/profile;/bin/sh /var/www/ejemplo/test.sh</pre>
 </li></ul>
 <p><a href="linux-command-manual.html"><img alt="Linux 命令大全" class="navup" decoding="async" src="../images/up.gif"/>Manual completo de comandos Linux</a></p>
 Otras extensiones

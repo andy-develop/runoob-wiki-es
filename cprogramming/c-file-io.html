@@ -696,14 +696,14 @@ size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
 <span style="color: #000;">}</span><br/>
 <br/>
 <span style="color: #993333;">int</span> main<span style="color: #000;">(</span><span style="color: #000;">)</span> <span style="color: #000;">{</span><br/>
-    <span style="color: #666666; font-style: italic;">// Ejemplo de uso: copiar el archivo de prueba runoob</span><br/>
-    copy_file<span style="color: #000;">(</span><span style="color: #a11;">"runoob_input.bin"</span><span style="color: #339933;">,</span> <span style="color: #a11;">"runoob_output.bin"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #666666; font-style: italic;">// Ejemplo de uso: copiar el archivo de prueba ejemplo</span><br/>
+    copy_file<span style="color: #000;">(</span><span style="color: #a11;">"ejemplo_input.bin"</span><span style="color: #339933;">,</span> <span style="color: #a11;">"ejemplo_output.bin"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
     <span style="color: #708;">return</span> <span style="color: #164;">0</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000;">}</span><br/>
 </div>
 </div>
 <pre>
-文件复制成功: runoob_input.bin -&gt; runoob_output.bin
+文件复制成功: ejemplo_input.bin -&gt; ejemplo_output.bin
 </pre>
 <p>La clave de este patrón es que<span class="tag1">fread</span>devuelve el número real de bytes leídos, y luego se usa<span class="tag1">fwrite</span>solo se escribe el número real de bytes leídos, evitando escribir datos sobrantes al final.</p>
 <h3>Consideraciones clave</h3>
@@ -812,7 +812,7 @@ size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);</pre>
     BadStudent bs<span style="color: #339933;">;</span><br/>
     bs.<span style="color: #202020;">id</span> <span style="color: #339933;">=</span> <span style="color: #164;">1</span><span style="color: #339933;">;</span><br/>
     bs.<span style="color: #202020;">name</span> <span style="color: #339933;">=</span> <span style="color: #000066;">malloc</span><span style="color: #000;">(</span><span style="color: #164;">50</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
-    <span style="color: #000066;">strcpy</span><span style="color: #000;">(</span>bs.<span style="color: #202020;">name</span><span style="color: #339933;">,</span> <span style="color: #a11;">"RUNOOB"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
+    <span style="color: #000066;">strcpy</span><span style="color: #000;">(</span>bs.<span style="color: #202020;">name</span><span style="color: #339933;">,</span> <span style="color: #a11;">"EJEMPLO"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
     <span style="color: #666666; font-style: italic;">// Escribir BadStudent: en este momento se escribe la dirección del puntero name, pero no el contenido de la cadena</span><br/>
     FILE <span style="color: #339933;">*</span>fp <span style="color: #339933;">=</span> <span style="color: #000066;">fopen</span><span style="color: #000;">(</span><span style="color: #a11;">"bad.bin"</span><span style="color: #339933;">,</span> <span style="color: #a11;">"wb"</span><span style="color: #000;">)</span><span style="color: #339933;">;</span><br/>
@@ -912,7 +912,7 @@ fclose 也会自动刷新缓冲区
 <pre>
 文件大小: 6000 字节
 包含 100 条学生记录
-第 6 条记录: id=106, name=RUNOOB
+第 6 条记录: id=106, name=EJEMPLO
 </pre>
 <h3>Resumen de errores comunes</h3>
 <p>La siguiente tabla resume los problemas más habituales al usar fread/fwrite y las prácticas correctas:</p>

@@ -284,7 +284,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Formato de obtención de valor:<span class="marked">objeto.método</span>。</p>
 <p><span class="marked">get()</span>: devuelve una cadena; si la clave tiene varios valores, devuelve el último valor de esa clave.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span> request.<span style="color: #05a;">GET</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"name"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">'Nombre: {}'</span>.<span style="color: #05a;">format</span><span style="color: Olive;">(</span>name<span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 </div></div>
@@ -295,27 +295,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Formato de obtención de valor:<span class="marked">objeto.método</span>。</p>
 <p><span class="marked">get()</span>: devuelve una cadena; si la clave tiene varios valores, devuelve el último valor de esa clave.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span> request.<span style="color: #05a;">POST</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"name"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">'Nombre: {}'</span>.<span style="color: #05a;">format</span><span style="color: Olive;">(</span>name<span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 </div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django_2.png"/></p>
 <h3>3、body</h3><p>El tipo de datos es un flujo de bytes binarios, que es el contenido de los parámetros en el cuerpo de la solicitud original. En HTTP se usa para POST, porque GET no tiene cuerpo de solicitud.</p>
 <p>No se usa comúnmente en HTTP, pero es muy útil al procesar mensajes de formas no HTTP, por ejemplo: imágenes binarias, XML, Json, etc.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span> request.<span style="color: #05a;">body</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>name<span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">Tutorial para novatos</span><span style="color: Olive;">)</span><br/>
 </div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django_3.png"/></p>
 <h3>4、path</h3><p>Obtiene la parte de la ruta de la URL; el tipo de datos es cadena.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-def runoob(request):<br/>
+def ejemplo(request):<br/>
     name = request.path<br/>
     print(name)<br/>return HttpResponse("Tutorial para novatos")<br/>
 </div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django_4.png"/></p>
 <h3>5、method</h3><p>Obtiene el método de la solicitud actual; el tipo de datos es cadena y el resultado está en mayúsculas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span> request.<span style="color: #05a;">method</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>name<span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">Tutorial para novatos</span><span style="color: Olive;">)</span><br/>
@@ -324,20 +324,20 @@ def runoob(request):<br/>
 <h2>Objeto de respuesta: objeto HttpResponse</h2><p>El objeto de respuesta tiene principalmente tres formas: HttpResponse(), render() y redirect().</p>
 <p><strong>HttpResponse():</strong>Devuelve texto; el parámetro es una cadena en la que se escribe el contenido del texto. Si el parámetro es una cadena que contiene etiquetas HTML, también se puede renderizar.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a50"># return HttpResponse("Tutorial de Runoob")</span><br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+    <span style="color: #a50"># return HttpResponse("Tutorial de Ejemplo")</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;a href='/index.html'&gt;Tutorial de novatos&lt;/a&gt;"</span><span style="color: Olive;">)</span><br/>
 </div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django_6.png"/></p>
 <p><strong>render():</strong>Devuelve texto; el primer parámetro es request, el segundo parámetro es una cadena (nombre de la página), y el tercer parámetro es un diccionario (parámetro opcional, parámetros pasados a la página: la clave es el nombre del parámetro de la página, el valor es el nombre del parámetro de views).</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     name <span style="color: Gray;">=</span><span style="color: #a11;">Tutorial para novatos</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span><span style="color: #a11;">"runoob.html"</span><span style="color: Gray;">,</span><span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render<span style="color: Olive;">(</span>request<span style="color: Gray;">,</span><span style="color: #a11;">"ejemplo.html"</span><span style="color: Gray;">,</span><span style="color: Olive;">{</span><span style="color: #a11;">"name"</span>:name<span style="color: Olive;">}</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <p><img decoding="async" src="../wp-content/uploads/2020/05/63474478-68C3-4156-A5D2-17EEE425DDD1.jpg"/></p>
 <p><strong>redirect()</strong>: redirección, salta a una nueva página. El parámetro es una cadena; en la cadena se escribe la ruta de la página. Generalmente se usa después de enviar un formulario para saltar a una nueva página.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">def</span> runoob<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo<span style="color: Olive;">(</span>request<span style="color: Olive;">)</span>:<br/>
     <span style="color: Green;font-weight:bold;">return</span> redirect<span style="color: Olive;">(</span><span style="color: #a11;">"/index/"</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <p>render y redirect están encapsulados sobre la base de HttpResponse:</p>

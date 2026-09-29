@@ -360,7 +360,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span>&gt;</span><br/>
 export default {<br/>
   data() {<br/>
-    return {<br/>count: 0,          // datos del contador<br/>username: 'runoob' // datos del nombre de usuario<br/>
+    return {<br/>count: 0,          // datos del contador<br/>username: 'ejemplo' // datos del nombre de usuario<br/>
     }<br/>
   },<br/>
   computed: {<br/>doubled() {          // el doble de count<br/>
@@ -382,7 +382,7 @@ export default {<br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">script</span> setup&gt;</span><br/>
 import { ref, computed } from 'vue'<br/>
 <br/>// Los datos reactivos se declaran directamente, sin necesidad de return<br/>const count = ref(0)          // ref envuelve tipos primitivos<br/>
-const username = ref('runoob')<br/>
+const username = ref('ejemplo')<br/>
 <br/>// Propiedad computada<br/>
 const doubled = computed(() =&gt; count.value * 2)<br/>
 <br/>// Los métodos se definen directamente como funciones<br/>
@@ -414,13 +414,13 @@ count.<span style="color: #660066;">value</span> <span style="color: #339933;">=
 <span style="color: #006600; font-style: italic;">// reactive: adecuado para objetos y arrays</span><br/>
 <span style="color: #006600; font-style: italic;">// Se accede directamente a las propiedades, sin .value</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> user <span style="color: #339933;">=</span> reactive<span style="color: #009900;">(</span><span style="color: #009900;">{</span><br/>
-  name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'RUNOOB'</span><span style="color: #339933;">,</span><br/>
+  name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #339933;">,</span><br/>
   age<span style="color: #339933;">:</span> <span style="color: #CC0000;">18</span><span style="color: #339933;">,</span><br/>
   skills<span style="color: #339933;">:</span> <span style="color: #009900;">[</span><span style="color: #3366CC;">'vue'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'typescript'</span><span style="color: #009900;">]</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// En Vue3 se pueden añadir nuevas propiedades a un objeto y la reactividad funciona con normalidad</span><br/>
-user.<span style="color: #660066;">email</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">'runoob@example.com'</span>  <span style="color: #006600; font-style: italic;">// En Vue2 esta operación no dispara la actualización de la vista</span><br/>
+user.<span style="color: #660066;">email</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">'ejemplo@example.com'</span>  <span style="color: #006600; font-style: italic;">// En Vue2 esta operación no dispara la actualización de la vista</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// También se pueden modificar directamente los elementos de un array</span><br/>
 user.<span style="color: #660066;">skills</span><span style="color: #009900;">[</span><span style="color: #CC0000;">0</span><span style="color: #009900;">]</span> <span style="color: #339933;">=</span> <span style="color: #3366CC;">'vue3'</span>  <span style="color: #006600; font-style: italic;">// En Vue2 esta operación no dispara la actualización de la vista</span><br/>
@@ -601,7 +601,7 @@ interface User {<br/>
 <br/>// ref infiere el tipo automáticamente según el valor inicial, también se puede especificar explícitamente<br/>
 const user = ref<span style="color: #170;">&lt;User&gt;</span>({<br/>
   id: 1,<br/>
-  name: 'RUNOOB',<br/>
+  name: 'EJEMPLO',<br/>
 })<br/>
 <br/>// defineProps: declara e infiere los tipos de las props<br/>
 const props = defineProps<span style="color: #170;">&lt;<span style="color: #66CC66;">{</span></span><br/>

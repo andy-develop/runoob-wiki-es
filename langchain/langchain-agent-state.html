@@ -371,8 +371,8 @@ result <span style="color: Gray;">=</span> add_messages<span style="color: Olive
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-合并前: 2 条
-合并后: 3 条
+Antes de fusionar: 2 条
+Después de fusionar: 3 条
   [human] 你好
   [ai] 你好！
   [ai] 有什么可以帮你的？
@@ -420,7 +420,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>check_question<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asistente de RUNOOB (el tutorial para novatos).</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asistente de EJEMPLO (el tutorial para novatos).</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Pregunta normal</span><br/>
@@ -438,9 +438,9 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-正常问题: Python 入门可以从以下几个方面开始：1. 安装 Python 环境...
+Pregunta normal: Python 入门可以从以下几个方面开始：1. 安装 Python 环境...
 
-敏感问题: 抱歉，出于安全原因，不能回答关于密码的问题。
+Pregunta sensible: 抱歉，出于安全原因，不能回答关于密码的问题。
 </pre>
 <table class="reference">
 <tr><th>Valor de jump_to</th><th>Saltar a</th><th>Efecto</th></tr>
@@ -472,7 +472,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     response_format<span style="color: Gray;">=</span>CourseRecommendation<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asesor de aprendizaje de RUNOOB (el tutorial para novatos).</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asesor de aprendizaje de EJEMPLO (el tutorial para novatos).</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -492,9 +492,9 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-推荐课程: Python3 基础教程
-推荐理由: Python 语法简洁，适合零基础入门，应用范围广泛
-难度等级: 入门
+Curso recomendado: Python3 基础教程
+Razón: Python 语法简洁，适合零基础入门，应用范围广泛
+Nivel: 入门
 </pre>
 <hr/>
 <h2>Extensión de State personalizado</h2>
@@ -555,7 +555,7 @@ agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>add_to_cart<span style="color: Gray;">,</span> view_cart<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
     state_schema<span style="color: Gray;">=</span>ShoppingAgentState<span style="color: Gray;">,</span>  <span style="color: #a50"># Usar estado personalizado</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de compras de la tienda RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de compras de la tienda EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># El estado inicial contiene un carrito vacío</span><br/>
@@ -572,9 +572,9 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-购物车: ['Python 教程']
-总价: ¥49.90
-回复: 已将《Python 教程》（¥49.90）添加到购物车。当前购物车共 1 件商品，总价 ¥49.90。
+Carrito: ['Python 教程']
+Total: ¥49.90
+Respuesta: 已将《Python 教程》（¥49.90）添加到购物车。当前购物车共 1 件商品，总价 ¥49.90。
 </pre>
 <hr/>
 <h2>state_schema vs middleware state_schema</h2>

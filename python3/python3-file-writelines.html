@@ -377,7 +377,7 @@ fileObject.writelines( [ sequence ])
 <span style="color: #a50"># Usar la declaración with para abrir el archivo, asegurando que se cierre correctamente</span><br/>
 <span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">"test.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"w"</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> fo:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Nombre del archivo: "</span><span style="color: Gray;">,</span> fo.<span style="color: #05a;">name</span><span style="color: Olive;">)</span><br/>
-    seq <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Runoob 1<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Runoob 2"</span><span style="color: Olive;">]</span><br/>
+    seq <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"Ejemplo 1<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Ejemplo 2"</span><span style="color: Olive;">]</span><br/>
     fo.<span style="color: #05a;">writelines</span><span style="color: Olive;">(</span>seq<span style="color: Olive;">)</span><br/>
 </div></div>
 <p>El resultado del ejemplo anterior es:</p>
@@ -387,8 +387,8 @@ fileObject.writelines( [ sequence ])
 <p>Ver el contenido del archivo:</p>
 <pre>
 $ cat test.txt 
-菜鸟教程 1
-菜鸟教程 2
+Ejemplo 1
+Ejemplo 2
 </pre>
 <h3>Notas</h3>
 <ol><li><p><strong>No agrega saltos de línea automáticamente</strong>：</p><ul><li><p><code>writelines()</code>No agrega automáticamente saltos de línea al final de cada línea. Si necesita saltos de línea, debe agregarlos explícitamente en cada cadena.<code>\n</code>。</p></li></ul></li><li><p><strong>Modo de archivo</strong>：</p><ul><li><p>Si el archivo se abre en modo de solo lectura (<code>"r"</code>), al llamar<code>writelines()</code>se lanzará<code>io.UnsupportedOperation</code>una excepción.</p></li><li><p>Si el archivo se abre en modo de escritura (<code>"w"</code>o<code>"w+"</code>), el contenido del archivo se borrará y luego se escribirá el nuevo contenido.</p></li><li><p>Si el archivo se abre en modo de añadido (<code>"a"</code>o<code>"a+"</code>), el contenido escrito se añadirá al final del archivo.</p></li></ul></li><li><p><strong>Puntero de archivo</strong>：</p><ul><li><p>La operación de escritura comienza desde la posición actual del puntero del archivo. Si necesita escribir desde el principio del archivo o desde una posición específica, puede usar<code>seek()</code>el método para mover el puntero del archivo.</p></li></ul></li><li><p><strong>Objeto iterable</strong>：</p><ul><li><p><code>sequence</code>Puede ser cualquier objeto iterable (como listas, tuplas, generadores, etc.), pero cada elemento debe ser una cadena.</p></li></ul></li></ol>

@@ -87,7 +87,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <p>Supongamos que el archivo a leer es test.txt en el directorio actual, con el siguiente contenido:</p>
 <pre>Google 
-Runoob
+Ejemplo
 Taobao</pre>
 <div class="example"><h2 class="example">Ejemplo 1</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
@@ -99,7 +99,7 @@ Taobao</pre>
 </div></div>
 <p>El resultado de la ejecución es:</p>
 <pre>Google
-Runoob
+Ejemplo
 Taobao</pre>
 <div class="example"><h2 class="example">Ejemplo 2</h2> <div class="example_code">
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
@@ -111,7 +111,7 @@ Taobao</pre>
 </div></div>
 <p>El resultado de la ejecución es:</p>
 <pre>Google
-Runoob
+Ejemplo
 Taobao</pre>
 <div class="example"><h2 class="example">Ejemplo 3</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">for</span> line <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #000000; font-weight: bold;">`</span><span style="color: #C20CB9; font-weight: bold;">cat</span>  test.txt<span style="color: #000000; font-weight: bold;">`</span><br/>
@@ -121,24 +121,24 @@ Taobao</pre>
 </div></div>
 <p>El resultado de la ejecución es:</p>
 <pre>Google
-Runoob
+Ejemplo
 Taobao</pre>
 <p>Hay una diferencia entre la lectura línea por línea con for y con while, como:</p>
 <div class="example"> <div class="example_code">
 $ <span style="color: #C20CB9; font-weight: bold;">cat</span> test.txt<br/>
 Google <br/>
-Runoob<br/>
+Ejemplo<br/>
 Taobao<br/>
 <br/>
 $ <span style="color: #C20CB9; font-weight: bold;">cat</span> test.txt <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #000000; font-weight: bold;">while</span> <span style="color: #C20CB9; font-weight: bold;">read</span> line; <span style="color: #000000; font-weight: bold;">do</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$line</span>; <span style="color: #000000; font-weight: bold;">done</span><br/>
 Google<br/>
-Runoob<br/>
+Ejemplo<br/>
 Taobao<br/>
 <br/>
 <br/>
 $ <span style="color: #000000; font-weight: bold;">for</span> line <span style="color: #000000; font-weight: bold;">in</span> $<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #000000; font-weight: bold;">&lt;</span>test.txt<span style="color: #7A0874; font-weight: bold;">)</span>; <span style="color: #000000; font-weight: bold;">do</span> <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #007800;">$line</span>; <span style="color: #000000; font-weight: bold;">done</span><br/>
 Google<br/>
-Runoob<br/>
+Ejemplo<br/>
 Taobao<br/>
 </div></div>
 </div>

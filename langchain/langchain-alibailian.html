@@ -347,7 +347,7 @@ set DASHSCOPE_API_KEY=sk-你的百炼APIKey</pre>
 <p>Cree el archivo .env en la raíz del proyecto:</p>
 <pre>
 # 文件路径：项目根目录/.env
-DASHSCOPE_API_KEY=sk-你的百炼APIKey</pre><p>Por ejemplo, en nuestro proyecto de prueba<span class="marked">runoob-langchain-test</span>cree<span class="marked">.env</span>el archivo y agregue la configuración:</p>
+DASHSCOPE_API_KEY=sk-你的百炼APIKey</pre><p>Por ejemplo, en nuestro proyecto de prueba<span class="marked">ejemplo-langchain-test</span>cree<span class="marked">.env</span>el archivo y agregue la configuración:</p>
 <p><img decoding="async" src="../wp-content/uploads/2026/08/runooob_1785638976963.png"/></p>
 <p>Instale python-dotenv:</p>
 <pre>
@@ -578,7 +578,7 @@ pip install langchain-community dashscope</pre>
 load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Cargar variables de entorno como claves desde el .env en la raíz del proyecto</span><br/>
 <br/>
 <span style="color: #a50"># Simular la lista de textos candidatos devuelta por la recuperación</span><br/>
-sequence <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"runoob es un sitio chino de aprendizaje que ofrece tutoriales de programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text2"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text3"</span><span style="color: Olive;">]</span><br/>
+sequence <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: #a11;">"ejemplo es un sitio chino de aprendizaje que ofrece tutoriales de programación"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text2"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text3"</span><span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: #a50"># Crear una instancia del modelo de reranking</span><br/>
 reranker <span style="color: Gray;">=</span> DashScopeRerank<span style="color: Olive;">(</span><br/>
@@ -586,7 +586,7 @@ reranker <span style="color: Gray;">=</span> DashScopeRerank<span style="color: 
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Reordenar los textos candidatos según la consulta y devolver el top_n con mayor puntuación</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>reranker.<span style="color: #05a;">rerank</span><span style="color: Olive;">(</span>documents<span style="color: Gray;">=</span>sequence<span style="color: Gray;">,</span> query<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué es runoob?"</span><span style="color: Gray;">,</span> top_n<span style="color: Gray;">=</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>reranker.<span style="color: #05a;">rerank</span><span style="color: Olive;">(</span>documents<span style="color: Gray;">=</span>sequence<span style="color: Gray;">,</span> query<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué es Python?"</span><span style="color: Gray;">,</span> top_n<span style="color: Gray;">=</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <p>El método rerank vuelve a puntuar y ordenar los documentos candidatos según la query; top_n especifica el número de elementos devueltos y se usa comúnmente en la etapa de refinamiento posterior a la recuperación en RAG.</p>

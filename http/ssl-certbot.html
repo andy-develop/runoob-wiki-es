@@ -279,8 +279,8 @@ brew install certbot</pre>
 <p>Una vez completada la instalación, usa el siguiente comando para ver la versión instalada de certbot:</p>
 <pre>
 certbot --version</pre><hr/>
-<h2>Solicitud y renovación de certificados</h2><p>Después de instalar certbot, puedes usar el siguiente comando para solicitar un certificado. Ten en cuenta que *.runoob.com debe reemplazarse por tu propio dominio:</p>
-<pre>certbot certonly  -d *.runoob.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory </pre>
+<h2>Solicitud y renovación de certificados</h2><p>Después de instalar certbot, puedes usar el siguiente comando para solicitar un certificado. Ten en cuenta que *.example.com debe reemplazarse por tu propio dominio:</p>
+<pre>certbot certonly  -d *.example.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory </pre>
 <p>Después de ejecutar el comando anterior, completa la información:</p>
 <pre>Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Enter email address (used for urgent renewal and security notices)
@@ -303,12 +303,12 @@ EFF news, campaigns, and ways to support digital freedom.
 (Y)es/(N)o: Y       # 输入 Y
 
 Account registered.
-Requesting a certificate for *.runoob.com
+Requesting a certificate for *.example.com
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Please deploy a DNS TXT record under the name:
 
-xxxxxxx.runoob.com. # 这里需要设置域名解析，需要到域名后台填写信息，参考下图
+xxxxxxx.example.com. # 这里需要设置域名解析，需要到域名后台填写信息，参考下图
 
 with the following value:
 
@@ -317,7 +317,7 @@ aIwqY00CZtziVwr-xxxxxxxxxxxxxx  # 这里是域名解析的内容，参考下图
 Before continuing, verify the TXT record has been deployed. Depending on the DNS
 provider, this may take some time, from a few seconds to multiple minutes. You can
 check if it has finished deploying with aid of online tools, such as the Google
-Admin Toolbox: https://toolbox.googleapps.com/apps/dig/#TXT/_acme-challenge.runoob.com.
+Admin Toolbox: https://toolbox.googleapps.com/apps/dig/#TXT/_acme-challenge.example.com.
 Look for one or more bolded line(s) below the line ';ANSWER'. It should show the
 value(s) you've just added.
 
@@ -325,8 +325,8 @@ value(s) you've just added.
 Press Enter to Continue  # 参考下图设置完域名解析后，按回车就可以生成了，记住一定要先解析设置完成后再回车，然后生成的证书信息如下：
 
 Successfully received certificate.
-Certificate is saved at: /etc/letsencrypt/live/runoob.com/fullchain.pem
-Key is saved at:         /etc/letsencrypt/live/runoob.com/privkey.pem
+Certificate is saved at: /etc/letsencrypt/live/example.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/example.com/privkey.pem
 This certificate expires on 2024-12-21.
 These files will be updated when the certificate renews.
 
@@ -340,7 +340,7 @@ If you like Certbot, please consider supporting our work by:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</pre>
 <p>Configurar la resolución del dominio para verificar el certificado:</p><p><img decoding="async" src="../wp-content/uploads/2024/09/certbot-2.png" style="width:60%"/></p>
 <p>Los certificados emitidos por Let's Encrypt tienen una validez de 90 días. Puedes usar el siguiente comando para renovar el certificado:</p>
-<pre>certbot certonly --force-renewal --manual -d '*.runoob.com' \
+<pre>certbot certonly --force-renewal --manual -d '*.example.com' \
 --preferred-challenges dns \
 --server https://acme-v02.api.letsencrypt.org/directory</pre><p>Después de ejecutar el comando de renovación anterior, se nos pedirá actualizar el registro de resolución DNS:</p>
 <pre>Saving debug log to /var/log/letsencrypt/letsencrypt.log

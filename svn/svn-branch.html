@@ -259,22 +259,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Entonces, podemos crear una rama para el grupo 2. La rama es en realidad una copia de la versión trunk (línea principal), pero también tiene capacidades de control de versiones y es independiente de la línea principal. Por supuesto, al final podemos usar la función de fusión (merge) para fusionar la rama en trunk, y así finalmente convertirla en un solo proyecto.</p>
 <p>En nuestra copia local creamos una<strong>my_branch</strong>rama.</p>
 <pre>
-root@runoob:~/svn/runoob01# ls
+root@ejemplo:~/svn/ejemplo01# ls
 branches  tags  trunk
-root@runoob:~/svn/runoob01# svn copy trunk/ branches/my_branch
+root@ejemplo:~/svn/ejemplo01# svn copy trunk/ branches/my_branch
 A         branches/my_branch
-root@runoob:~/svn/runoob01# 
+root@ejemplo:~/svn/ejemplo01# 
 </pre>
 <p>Ver el estado:</p>
 <pre>
-root@runoob:~/svn/runoob01# svn status
+root@ejemplo:~/svn/ejemplo01# svn status
 A  +    branches/my_branch
 A  +    branches/my_branch/HelloWorld.html
 A  +    branches/my_branch/readme
 </pre>
 <p>Enviar la nueva rama al repositorio.</p>
 <pre>
-root@runoob:~/svn/runoob01# svn commit -m "add my_branch" 
+root@ejemplo:~/svn/ejemplo01# svn commit -m "add my_branch" 
 Adding         branches/my_branch
 Replacing      branches/my_branch/HelloWorld.html
 Adding         branches/my_branch/readme
@@ -283,24 +283,24 @@ Committed revision 9.
 </pre>
 <p>A continuación, vamos a la rama my_branch para desarrollar, cambiamos a la ruta de la rama y creamos el archivo index.html.</p>
 <pre>
-root@runoob:~/svn/runoob01# cd branches/my_branch/
-root@runoob:~/svn/runoob01/branches/my_branch# ls
+root@ejemplo:~/svn/ejemplo01# cd branches/my_branch/
+root@ejemplo:~/svn/ejemplo01/branches/my_branch# ls
 HelloWorld.html  index.html  readme
 </pre>
 <p>Agregar index.html al control de versiones y enviarlo al repositorio.</p>
 <pre>
-root@runoob:~/svn/runoob01/branches/my_branch# svn status
+root@ejemplo:~/svn/ejemplo01/branches/my_branch# svn status
 ?       index.html
-root@runoob:~/svn/runoob01/branches/my_branch# svn add index.html 
+root@ejemplo:~/svn/ejemplo01/branches/my_branch# svn add index.html 
 A         index.html
-root@runoob:~/svn/runoob01/branches/my_branch# svn commit -m "add index.html"
+root@ejemplo:~/svn/ejemplo01/branches/my_branch# svn commit -m "add index.html"
 Adding         index.html
 Transmitting file data .
 Committed revision 10.
 </pre>
 Cambiar a trunk, ejecutar svn update y luego fusionar la rama my_branch en trunk.
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn merge ../branches/my_branch/
+root@ejemplo:~/svn/ejemplo01/trunk# svn merge ../branches/my_branch/
 --- Merging r10 into '.':
 A    index.html
 --- Recording mergeinfo for merge of r10 into '.':
@@ -308,7 +308,7 @@ A    index.html
 </pre>
 <p>Al revisar el directorio, se puede ver que trunk ya contiene el archivo index.html adicional creado por la rama my_branch.</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# ll
+root@ejemplo:~/svn/ejemplo01/trunk# ll
 total 16
 drwxr-xr-x 2 root root 4096 Nov  7 03:52 ./
 drwxr-xr-x 6 root root 4096 Jul 21 19:19 ../
@@ -318,7 +318,7 @@ drwxr-xr-x 6 root root 4096 Jul 21 19:19 ../
 </pre>
 <p>Enviar el trunk fusionado al repositorio.</p>
 <pre>
-root@runoob:~/svn/runoob01/trunk# svn commit -m "add index.html"
+root@ejemplo:~/svn/ejemplo01/trunk# svn commit -m "add index.html"
 Adding         index.html
 Transmitting file data .
 Committed revision 11.

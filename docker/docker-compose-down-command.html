@@ -396,7 +396,7 @@ services</span>:<span style="color: #007F45;"><br/>
   db</span>:<span style="color: green;"><br/>
     image</span><span style="font-weight: bold; color: brown;">: </span>mysql:<span style="">8.0</span><span style="color: #007F45;"><br/>
     environment</span>:<span style="color: green;"><br/>
-      MYSQL_ROOT_PASSWORD</span><span style="font-weight: bold; color: brown;">: </span>runoob123<span style="color: #007F45;"><br/>
+      MYSQL_ROOT_PASSWORD</span><span style="font-weight: bold; color: brown;">: </span>ejemplo123<span style="color: #007F45;"><br/>
     volumes</span><span style="font-weight: bold; color: brown;">:<br/>
 </span>      - db_data:/var/lib/mysql    <span style="color: blue;"># Volumen de datos con nombre</span><br/>
 <span style="color: #007F45;"><br/>
@@ -468,13 +468,13 @@ $ docker image prune -a  # 清理未使用的镜像
 <span style="color: #666666; font-style: italic;">#!/bin/bash</span><br/>
 <span style="color: #666666; font-style: italic;"># Script de limpieza seguro: primero confirma que el proyecto esté en ejecución y luego ejecuta down</span><br/>
 <br/>
-<span style="color: #007800;">PROJECT_DIR</span>=<span style="color: #a10;">"/opt/runoob-app"</span><br/>
+<span style="color: #007800;">PROJECT_DIR</span>=<span style="color: #a10;">"/opt/ejemplo-app"</span><br/>
 <br/>
 <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #7A0874; font-weight: bold;">[</span> <span style="color: #660033;">-f</span> <span style="color: #a10;">"<span style="color: #007800;">$PROJECT_DIR</span>/docker-compose.yml"</span> <span style="color: #7A0874; font-weight: bold;">]</span>; <span style="color: #000000; font-weight: bold;">then</span><br/>
     <span style="color: #7A0874; font-weight: bold;">cd</span> <span style="color: #a10;">"<span style="color: #007800;">$PROJECT_DIR</span>"</span><br/>
     <span style="color: #666666; font-style: italic;"># Primero usa ps para comprobar si hay servicios en ejecución</span><br/>
     <span style="color: #000000; font-weight: bold;">if</span> docker compose <span style="color: #C20CB9; font-weight: bold;">ps</span> <span style="color: #660033;">--status</span> running <span style="color: #000000; font-weight: bold;">|</span> <span style="color: #C20CB9; font-weight: bold;">grep</span> <span style="color: #660033;">-q</span> .; <span style="color: #000000; font-weight: bold;">then</span><br/>
-        <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Deteniendo el proyecto RUNOOB..."</span><br/>
+        <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Deteniendo el proyecto EJEMPLO..."</span><br/>
         docker compose down <span style="color: #660033;">--remove-orphans</span><br/>
         <span style="color: #7A0874; font-weight: bold;">echo</span> <span style="color: #a10;">"Limpieza completada"</span><br/>
     <span style="color: #000000; font-weight: bold;">else</span><br/>

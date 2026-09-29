@@ -321,7 +321,7 @@ FROM table_name
 WHERE [condition1] AND [condition2]...AND [conditionN];</pre>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -333,7 +333,7 @@ WHERE [condition1] AND [condition2]...AND [conditionN];</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo lee todos los registros donde el campo AGE es mayor que 25 y el campo SALARY es mayor o igual que 65000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 65000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 AND SALARY &gt;= 65000;
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   4 | Mark  |  25 | Rich-Mond  |  65000
@@ -346,7 +346,7 @@ WHERE [condition1] AND [condition2]...AND [conditionN];</pre>
 FROM table_name
 WHERE [condition1] OR [condition2]...OR [conditionN]</pre>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -358,7 +358,7 @@ WHERE [condition1] OR [condition2]...OR [conditionN]</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo lee todos los registros donde el campo AGE es mayor o igual que 25 o el campo SALARY es mayor o igual que 65000:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 65000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE AGE &gt;= 25 OR SALARY &gt;= 65000;
  id | name  | age | address    | salary
 ----+-------+-----+------------+--------
   1 | Paul  |  32 | California |  20000

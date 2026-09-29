@@ -181,7 +181,7 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><br/>
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Primera ronda</span><br/>
@@ -218,7 +218,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     checkpointer<span style="color: Gray;">=</span>checkpointer<span style="color: Gray;">,</span>  <span style="color: #a50"># Pasa el Checkpointer</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usa thread_id para identificar el hilo de conversación</span><br/>
@@ -241,8 +241,8 @@ result2 <span style="color: Gray;">=</span> agent.<span style="color: #05a;">inv
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-第一轮: 你好小明！Python 是一门很好的入门语言，有什么需要帮助的吗？
-第二轮: 你叫小明，你正在学习 Python。有什么具体问题我可以帮你吗？
+Ronda 1: ¡Hola Xiaoming! Python es un gran idioma para empezar. ¿En qué puedo ayudarte?
+Ronda 2: Te llamas Xiaoming y estás aprendiendo Python. ¿Hay algo específico en lo que pueda ayudarte?
 </pre>
 <blockquote><p>thread_id es la clave. Las conversaciones bajo el mismo thread_id son continuas, mientras que las conversaciones con diferentes thread_id están totalmente aisladas. Esto te permite atender a varios usuarios simultáneamente con una única instancia del Agent.</p></blockquote>
 <hr/>
@@ -267,7 +267,7 @@ checkpointer <span style="color: Gray;">=</span> InMemorySaver<span style="color
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     checkpointer<span style="color: Gray;">=</span>checkpointer<span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"demo-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>
@@ -295,20 +295,20 @@ questions <span style="color: Gray;">=</span> <span style="color: Olive;">[</spa
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-第 1 轮后:
-  消息数: 2
-  下一步: ()
-  回复: 你好小明！很高兴认识你。
+Después de la ronda 1:
+  Número de mensajes: 2
+  Siguiente paso: ()
+  Respuesta: ¡Hola Xiaoming! Encantado de conocerte.
 
-第 2 轮后:
-  消息数: 4
-  下一步: ()
-  回复: Python 是一门非常流行的编程语言，简单易学。
+Después de la ronda 2:
+  Número de mensajes: 4
+  Siguiente paso: ()
+  Respuesta: Python es un lenguaje de programación muy popular, sencillo y fácil de aprender.
 
-第 3 轮后:
-  消息数: 6
-  下一步: ()
-  回复: 根据我们的对话，你的信息如下：你叫小明，正在学习 Python。
+Después de la ronda 3:
+  Número de mensajes: 6
+  Siguiente paso: ()
+  Respuesta: Según nuestra conversación, tu información es: te llamas Xiaoming y estás aprendiendo Python.
 </pre>
 <hr/>
 <h2>Tipos de Checkpointer</h2>
@@ -365,7 +365,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
     agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
         model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
         checkpointer<span style="color: Gray;">=</span>checkpointer<span style="color: Gray;">,</span><br/>
-        system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial RUNOOB."</span><span style="color: Gray;">,</span><br/>
+        system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente del tutorial EJEMPLO."</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">)</span><br/>
 <br/>
     config <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><span style="color: #a11;">"configurable"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"thread_id"</span>: <span style="color: #a11;">"user-001"</span><span style="color: Olive;">}</span><span style="color: Olive;">}</span><br/>

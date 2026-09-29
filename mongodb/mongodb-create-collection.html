@@ -351,22 +351,22 @@ db.<span style="color: #660066;">createCollection</span><span style="color: #009
 </div></div><p>Este ejemplo crea una colección con las siguientes características:</p>
 <ul><li>Tamaño fijo, máximo 10MB, almacena hasta 5000 documentos.</li><li>Los documentos deben contener<code>name</code>y<code>email</code>el campo, donde<code>name</code>debe ser una cadena,<code>email</code>debe ser un formato de correo electrónico válido.</li><li>El nivel de validación es estricto; si falla la validación, se bloqueará la inserción o actualización.</li><li>Usa el motor de almacenamiento WiredTiger, con compresor de bloques zstd.</li><li>Utiliza la regla de ordenamiento en inglés por defecto.</li></ul>
 <h3>Ejemplo</h3>
-<p>Crear la colección runoob en la base de datos test:</p>
+<p>Crear la colección ejemplo en la base de datos test:</p>
 <pre>&gt; use test
 switched to db test
-&gt; db.createCollection("runoob")
+&gt; db.createCollection("ejemplo")
 { "ok" : 1 }
 &gt;</pre>
 <p>Para ver las colecciones existentes, puedes usar el<span class="marked">show collections</span>o<span class="marked">show tables</span>comando:</p>
 <pre>&gt; show collections
-runoob
+ejemplo
 system.indexes</pre>
 <p>A continuación se muestra el uso de createCollection() con varios parámetros clave:</p>
 <p>Crea una colección de tamaño fijo, con un tamaño máximo de 5MB (5242880 bytes), que almacena hasta 5000 documentos.</p>
 <pre>db.createCollection("myCappedCollection", { capped: true, size: 5242880, max: 5000 });
 </pre>
 <p>En MongoDB, no necesitas crear la colección; al insertar algunos documentos, MongoDB crea la colección automáticamente.</p>
-<pre>&gt; db.mycol2.insert({"name" : "菜鸟教程"})
+<pre>&gt; db.mycol2.insert({"name" : "Ejemplo"})
 &gt; show collections
 mycol2
 ...</pre>

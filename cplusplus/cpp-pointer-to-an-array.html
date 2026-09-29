@@ -422,16 +422,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puede omitir este capítulo por ahora, y volver a estudiarlo después de comprender el concepto de punteros en C++.</p>
 <p>Si ya tiene algún conocimiento sobre el concepto de punteros en C++, puede comenzar a estudiar este capítulo. El nombre del array es un puntero constante al primer elemento del array. Por lo tanto, en la siguiente declaración:</p>
 <pre>
-double runoobAarray[50];
+double ejemploAarray[50];
 </pre>
-<p><b>runoobAarray</b>es un puntero a &amp;runoobAarray<b>p</b>asigna<b>runoobAarray</b>la dirección del primer elemento de:</p>
+<p><b>ejemploAarray</b>es un puntero a &amp;ejemploAarray<b>p</b>asigna<b>ejemploAarray</b>la dirección del primer elemento de:</p>
 <pre>
 double *p;
-double runoobAarray[10];
+double ejemploAarray[10];
 
-p = runoobAarray;
+p = ejemploAarray;
 </pre>
-<p>Usar el nombre del array como un puntero constante es legal, y viceversa. Por lo tanto, *(runoobAarray + 4) es una forma legal de acceder a los datos de runoobAarray</p>
+<p>Usar el nombre del array como un puntero constante es legal, y viceversa. Por lo tanto, *(ejemploAarray + 4) es una forma legal de acceder a los datos de ejemploAarray</p>
 <p>Una vez que almacene la dirección del primer elemento en p, puede usar *p, *(p+1), *(p+2), etc. para acceder a los elementos del array. El siguiente ejemplo demuestra estos conceptos discutidos anteriormente:</p>
 <div class="example">
 <h2 class="example">Ejemplos</h2>
@@ -442,10 +442,10 @@ p = runoobAarray;
 </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-comment">// Un array de tipo double con 5 elementos</span><span class="hl-comment"></span><span class="hl-code">
-</span><span class="hl-types">double</span><span class="hl-code"> </span><span class="hl-identifier">runoobAarray</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-brackets">{</span><span class="hl-number">1000</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">2</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">3</span><span class="hl-number">.4</span><span class="hl-code">, </span><span class="hl-number">17</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">50</span><span class="hl-number">.0</span><span class="hl-brackets">}</span><span class="hl-code">;
+</span><span class="hl-types">double</span><span class="hl-code"> </span><span class="hl-identifier">ejemploAarray</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-brackets">{</span><span class="hl-number">1000</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">2</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">3</span><span class="hl-number">.4</span><span class="hl-code">, </span><span class="hl-number">17</span><span class="hl-number">.0</span><span class="hl-code">, </span><span class="hl-number">50</span><span class="hl-number">.0</span><span class="hl-brackets">}</span><span class="hl-code">;
    </span><span class="hl-types">double</span><span class="hl-code"> *</span><span class="hl-identifier">p</span><span class="hl-code">;
  
-   </span><span class="hl-identifier">p</span><span class="hl-code"> = </span><span class="hl-identifier">runoobAarray</span><span class="hl-code">;
+   </span><span class="hl-identifier">p</span><span class="hl-code"> = </span><span class="hl-identifier">ejemploAarray</span><span class="hl-code">;
  
    </span><span class="hl-comment">// Imprime el valor de cada elemento del array</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">Valores del array usando punteros</span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">; 
@@ -454,11 +454,11 @@ p = runoobAarray;
 </span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">*(p + </span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">i</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">) : </span><span class="hl-quotes">"</span><span class="hl-code">;
        </span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; *</span><span class="hl-brackets">(</span><span class="hl-identifier">p</span><span class="hl-code"> + </span><span class="hl-identifier">i</span><span class="hl-brackets">)</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">;
    </span><span class="hl-brackets">}</span><span class="hl-code">
-</span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">Valores del array usando runoobAarray como dirección</span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">;
+</span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">Valores del array usando ejemploAarray como dirección</span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">;
    </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">i</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">; </span><span class="hl-identifier">i</span><span class="hl-code"> &lt; </span><span class="hl-number">5</span><span class="hl-code">; </span><span class="hl-identifier">i</span><span class="hl-code">++ </span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">*(runoobAarray + </span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">i</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">) : </span><span class="hl-quotes">"</span><span class="hl-code">;
-       </span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; *</span><span class="hl-brackets">(</span><span class="hl-identifier">runoobAarray</span><span class="hl-code"> + </span><span class="hl-identifier">i</span><span class="hl-brackets">)</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">;
+</span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">*(ejemploAarray + </span><span class="hl-quotes">"</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">i</span><span class="hl-code"> &lt;&lt; </span><span class="hl-quotes">"</span><span class="hl-string">) : </span><span class="hl-quotes">"</span><span class="hl-code">;
+       </span><span class="hl-identifier">cout</span><span class="hl-code"> &lt;&lt; *</span><span class="hl-brackets">(</span><span class="hl-identifier">ejemploAarray</span><span class="hl-code"> + </span><span class="hl-identifier">i</span><span class="hl-brackets">)</span><span class="hl-code"> &lt;&lt; </span><span class="hl-identifier">endl</span><span class="hl-code">;
    </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span></div>
@@ -472,12 +472,12 @@ p = runoobAarray;
 *(p + 2) : 3.4
 *(p + 3) : 17
 *(p + 4) : 50
-使用 runoobAarray 作为地址的数组值 
-*(runoobAarray + 0) : 1000
-*(runoobAarray + 1) : 2
-*(runoobAarray + 2) : 3.4
-*(runoobAarray + 3) : 17
-*(runoobAarray + 4) : 50
+使用 ejemploAarray 作为地址的数组值 
+*(ejemploAarray + 0) : 1000
+*(ejemploAarray + 1) : 2
+*(ejemploAarray + 2) : 3.4
+*(ejemploAarray + 3) : 17
+*(ejemploAarray + 4) : 50
 </pre>
 <p>En el ejemplo anterior, p es un puntero a double, lo que significa que puede almacenar una variable de tipo double. Una vez que tenemos la dirección en p,<b>*p</b>dará el valor almacenado en la dirección correspondiente en p, como se demostró en el ejemplo anterior.</p>
 <p><a href="cpp-arrays.html"><img alt="C++ 数组" class="navup" decoding="async" src="../images/up.gif"/>C++ Arrays</a></p> Otras extensiones

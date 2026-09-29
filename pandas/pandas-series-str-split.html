@@ -363,7 +363,7 @@ Series.str.split(pat=None, n=-1, expand=False)
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crear una Series que contenga oraciones</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob python'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'pandas data analysis'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo python'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'pandas data analysis'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Dividir por caracteres de espacio en blanco (comportamiento predeterminado)</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">split</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -378,13 +378,13 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <pre>
 原始 Series:
 0         hello world
-1      runoob python
+1      ejemplo python
 2    pandas data analysis
 dtype: object
 
 拆分后的结果:
 0         [hello, world]
-1    [runoob, python]
+1    [ejemplo, python]
 2    [pandas, data, analysis]
 </pre>
 <p><strong>Análisis del código:</strong></p>
@@ -522,7 +522,7 @@ DataFrame 类型: &amp;lt;class 'pandas.core.frame.DataFrame'&amp;gt;
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crear una Series que contenga diferentes separadores</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello-world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob_python'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'pandas#tutorial'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'hello-world'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo_python'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'pandas#tutorial'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Dividir por expresión regular (coincide con cualquiera de -, _, #)</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">split</span><span style="color: Olive;">(</span>r<span style="color: #a11;">'[-_#]'</span><span style="color: Olive;">)</span><br/>
@@ -537,13 +537,13 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <pre>
 原始 Series:
 0     hello-world
-1   runoob_python
+1   ejemplo_python
 2    pandas#tutorial
 dtype: object
 
 按正则表达式拆分:
 0       [hello, world]
-1       [runoob, python]
+1       [ejemplo, python]
 2    [pandas, tutorial]
 </pre>
 <p><strong>Análisis del código:</strong></p>

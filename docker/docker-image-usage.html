@@ -283,7 +283,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Listar imágenes</h2>
 <p>Podemos usar<strong>docker images</strong>para listar las imágenes en el host local.</p>
 <pre>
-runoob@runoob:~$ docker images           
+ejemplo@ejemplo:~$ docker images           
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              14.04               90d5884b1ee0        5 days ago          188 MB
 php                 5.6                 f40e9e0f10c8        9 days ago          444.8 MB
@@ -304,7 +304,7 @@ training/webapp     latest              6fae60ef3446        11 months ago       
 <p>La misma fuente de repositorio puede tener múltiples TAG, que representan diferentes versiones de la fuente del repositorio. Por ejemplo, en la fuente del repositorio ubuntu hay varias versiones como 15.10, 14.04, etc. Usamos REPOSITORY:TAG para definir diferentes imágenes.</p>
 <p>Por lo tanto, si queremos usar la imagen del sistema ubuntu versión 15.10 para ejecutar un contenedor, el comando es el siguiente:</p>
 <pre>
-runoob@runoob:~$ docker run -t -i ubuntu:15.10 /bin/bash 
+ejemplo@ejemplo:~$ docker run -t -i ubuntu:15.10 /bin/bash 
 root@d77ccb2e5cca:/#
 </pre>
 <p>Descripción de parámetros:</p>
@@ -315,7 +315,7 @@ root@d77ccb2e5cca:/#
 <strong>/bin/bash</strong>: Lo que va después del nombre de la imagen es el comando; aquí queremos un shell interactivo, por lo que usamos /bin/bash.</li></ul>
 <p>Si queremos usar la imagen del sistema ubuntu versión 14.04 para ejecutar un contenedor, el comando es el siguiente:</p>
 <pre>
-runoob@runoob:~$ docker run -t -i ubuntu:14.04 /bin/bash 
+ejemplo@ejemplo:~$ docker run -t -i ubuntu:14.04 /bin/bash 
 root@39e968165990:/# 
 </pre>
 <p>Si no especificas una etiqueta de versión de imagen, por ejemplo si solo usas ubuntu, Docker usará por defecto la imagen ubuntu:latest.</p>
@@ -323,7 +323,7 @@ root@39e968165990:/#
 <h2>Obtener una nueva imagen</h2>
 <p>Cuando usamos una imagen que no existe en el host local, Docker la descargará automáticamente. Si queremos descargar la imagen de antemano, podemos usar el comando docker pull para descargarla.</p>
 <pre>
-Crunoob@runoob:~$ docker pull ubuntu:13.10
+Cejemplo@ejemplo:~$ docker pull ubuntu:13.10
 13.10: Pulling from library/ubuntu
 6599cadaf950: Pull complete 
 23eda618d451: Pull complete 
@@ -339,7 +339,7 @@ Status: Downloaded newer image for ubuntu:13.10
 <p>Podemos buscar imágenes en el sitio web Docker Hub. La URL de Docker Hub es:<strong><a href="https://hub.docker.com/" rel="noopener noreferrer" target="_blank">https://hub.docker.com/</a></strong></p>
 <p>También podemos usar el comando docker search para buscar imágenes. Por ejemplo, si necesitamos una imagen de httpd para nuestro servicio web, podemos usar el comando docker search para buscar httpd y encontrar la imagen adecuada.</p>
 <pre>
-runoob@runoob:~$  docker search httpd
+ejemplo@ejemplo:~$  docker search httpd
 </pre>
 <p>Haz clic en la imagen para verla en grande:</p>
 <p><a href="../wp-content/uploads/2016/05/423F2A2C-287A-4B03-855E-6A78E125B346.jpg" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2016/05/423F2A2C-287A-4B03-855E-6A78E125B346.jpg"/></a></p>
@@ -352,7 +352,7 @@ runoob@runoob:~$  docker search httpd
 <h2>Descargar imágenes</h2>
 <p>Decidimos usar la imagen de la versión oficial de httpd de la figura anterior. Usamos el comando docker pull para descargar la imagen.</p>
 <pre>
-runoob@runoob:~$ docker pull httpd
+ejemplo@ejemplo:~$ docker pull httpd
 Using default tag: latest
 latest: Pulling from library/httpd
 8b87079b7a06: Pulling fs layer 
@@ -364,7 +364,7 @@ be44112b72c7: Waiting
 </pre>
 <p>Una vez completada la descarga, ya podemos usar esta imagen.</p>
 <pre>
-runoob@runoob:~$ docker run httpd
+ejemplo@ejemplo:~$ docker run httpd
 </pre>
 <hr/>
 <h2>Eliminar imágenes</h2>
@@ -381,7 +381,7 @@ runoob@runoob:~$ docker run httpd
 <h3>Actualizar imágenes</h3>
 <p>Antes de actualizar la imagen, necesitamos usar la imagen para crear un contenedor.</p>
 <pre>
-runoob@runoob:~$ docker run -t -i ubuntu:15.10 /bin/bash
+ejemplo@ejemplo:~$ docker run -t -i ubuntu:15.10 /bin/bash
 </pre>
 <p>Después de entrar al contenedor, actualiza el sistema:</p>
 <pre>apt-get update
@@ -390,19 +390,19 @@ apt-get upgrade -y</pre>
 <pre>exit</pre>
 <p>En este momento, el contenedor con ID e218edb10161 es el contenedor modificado según nuestras necesidades. Podemos usar el comando docker commit para confirmar (commit) una copia del contenedor.</p>
 <pre>
-runoob@runoob:~$ docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
+ejemplo@ejemplo:~$ docker commit -m="has update" -a="ejemplo" e218edb10161 ejemplo/ubuntu:v2
 sha256:70bf1840fd7c0d2d8ef0a42a817eb29f854c1af8f7c59fc03ac7bdee9545aff8
 </pre>
 <p>Descripción de cada parámetro:</p><ul><li>
 <p><strong>-m:</strong>Descripción de la confirmación (commit)</p></li><li>
 <p><strong>-a:</strong>Especifica el autor de la imagen</p></li><li>
 <p><strong>e218edb10161：</strong>ID del contenedor</p></li><li>
-<p><strong>runoob/ubuntu:v2:</strong>Especifica el nombre de la imagen de destino que se va a crear</p></li></ul>
-<p>Podemos usar<strong>docker images</strong>el comando para ver nuestra nueva imagen<strong>runoob/ubuntu:v2</strong>：
+<p><strong>ejemplo/ubuntu:v2:</strong>Especifica el nombre de la imagen de destino que se va a crear</p></li></ul>
+<p>Podemos usar<strong>docker images</strong>el comando para ver nuestra nueva imagen<strong>ejemplo/ubuntu:v2</strong>：
 <pre>
-runoob@runoob:~$ docker images
+ejemplo@ejemplo:~$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-runoob/ubuntu       v2                  70bf1840fd7c        15 seconds ago      158.5 MB
+ejemplo/ubuntu       v2                  70bf1840fd7c        15 seconds ago      158.5 MB
 ubuntu              14.04               90d5884b1ee0        5 days ago          188 MB
 php                 5.6                 f40e9e0f10c8        9 days ago          444.8 MB
 nginx               latest              6f8d099c3adc        12 days ago         182.7 MB
@@ -412,21 +412,21 @@ ubuntu              15.10               4e3b13c8a266        4 weeks ago         
 hello-world         latest              690ed74de00f        6 months ago        960 B
 training/webapp     latest              6fae60ef3446        12 months ago       348.8 MB
 </pre>
-<p>Usar nuestra nueva imagen<strong>runoob/ubuntu</strong>para iniciar un contenedor</p>
+<p>Usar nuestra nueva imagen<strong>ejemplo/ubuntu</strong>para iniciar un contenedor</p>
 <pre>
-runoob@runoob:~$ docker run -t -i runoob/ubuntu:v2 /bin/bash                            
+ejemplo@ejemplo:~$ docker run -t -i ejemplo/ubuntu:v2 /bin/bash                            
 root@1a9fbdeb5da3:/#
 </pre>
 <h3>Construir imágenes</h3>
 <p>Usamos el comando<strong>docker build</strong>, para crear una nueva imagen desde cero. Para ello, necesitamos crear un archivo Dockerfile que contenga un conjunto de instrucciones para indicar a Docker cómo construir nuestra imagen.</p>
 <pre>
-runoob@runoob:~$ cat Dockerfile 
+ejemplo@ejemplo:~$ cat Dockerfile 
 FROM    centos:6.7
 MAINTAINER      Fisher "fisher@sudops.com"
 
 RUN     /bin/echo 'root:123456' |chpasswd
-RUN     useradd runoob
-RUN     /bin/echo 'runoob:123456' |chpasswd
+RUN     useradd ejemplo
+RUN     /bin/echo 'ejemplo:123456' |chpasswd
 RUN     /bin/echo -e "LANG=\"en_US.UTF-8\"" &gt;/etc/default/local
 EXPOSE  22
 EXPOSE  80
@@ -437,7 +437,7 @@ CMD     /usr/sbin/sshd -D
 <p>La instrucción RUN le dice a Docker que ejecute comandos dentro de la imagen, qué se instala, etc.</p>
 <p>Luego, usamos el archivo Dockerfile y el comando docker build para construir una imagen.</p>
 <pre>
-runoob@runoob:~$ docker build -t runoob/centos:6.7 .
+ejemplo@ejemplo:~$ docker build -t ejemplo/centos:6.7 .
 Sending build context to Docker daemon 17.92 kB
 Step 1 : FROM centos:6.7
  ---&amp;gt; d95b5ca17cc3
@@ -447,17 +447,17 @@ Step 2 : MAINTAINER Fisher "fisher@sudops.com"
 Step 3 : RUN /bin/echo 'root:123456' |chpasswd
  ---&amp;gt; Using cache
  ---&amp;gt; 0397ce2fbd0a
-Step 4 : RUN useradd runoob
+Step 4 : RUN useradd ejemplo
 ......
 </pre><p>Descripción de parámetros:</p><ul><li>
 <p><strong>-t</strong>: Especifica el nombre de la imagen de destino que se va a crear</p></li><li>
 <p><strong>.</strong>: El directorio donde se encuentra el archivo Dockerfile; se puede especificar la ruta absoluta del Dockerfile</p></li></ul>
 <p>Usa docker images para ver que la imagen creada ya existe en la lista, con ID de imagen 860c279d2fec.</p>
 <pre>
-runoob@runoob:~$ docker images 
+ejemplo@ejemplo:~$ docker images 
 REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
-runoob/centos       6.7                 860c279d2fec        About a minute ago   190.6 MB
-runoob/ubuntu       v2                  70bf1840fd7c        17 hours ago         158.5 MB
+ejemplo/centos       6.7                 860c279d2fec        About a minute ago   190.6 MB
+ejemplo/ubuntu       v2                  70bf1840fd7c        17 hours ago         158.5 MB
 ubuntu              14.04               90d5884b1ee0        6 days ago           188 MB
 php                 5.6                 f40e9e0f10c8        10 days ago          444.8 MB
 nginx               latest              6f8d099c3adc        12 days ago          182.7 MB
@@ -470,24 +470,24 @@ training/webapp     latest              6fae60ef3446        12 months ago       
 </pre>
 <p>Podemos usar la nueva imagen para crear un contenedor</p>
 <pre>
-runoob@runoob:~$ docker run -t -i runoob/centos:6.7  /bin/bash
-[root@41c28d18b5fb /]# id runoob
-uid=500(runoob) gid=500(runoob) groups=500(runoob)
+ejemplo@ejemplo:~$ docker run -t -i ejemplo/centos:6.7  /bin/bash
+[root@41c28d18b5fb /]# id ejemplo
+uid=500(ejemplo) gid=500(ejemplo) groups=500(ejemplo)
 </pre>
-<p>Como se ve arriba, la nueva imagen ya incluye el usuario runoob que creamos.</p>
+<p>Como se ve arriba, la nueva imagen ya incluye el usuario ejemplo que creamos.</p>
 <h3>Establecer etiquetas de imagen</h3>
 <p>Podemos usar el comando docker tag para agregar una nueva etiqueta a la imagen.</p>
 <pre>
-runoob@runoob:~$ docker tag 860c279d2fec runoob/centos:dev
+ejemplo@ejemplo:~$ docker tag 860c279d2fec ejemplo/centos:dev
 </pre>
 <p>docker tag ID de la imagen, aquí es 860c279d2fec, nombre de usuario, nombre del repositorio y nuevo nombre de etiqueta (tag).</p>
 <p>Usando el comando docker images se puede ver que la imagen con ID 860c279d2fec tiene una etiqueta más.</p>
 <pre>
-runoob@runoob:~$ docker images
+ejemplo@ejemplo:~$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-runoob/centos       6.7                 860c279d2fec        5 hours ago         190.6 MB
-runoob/centos       dev                 860c279d2fec        5 hours ago         190.6 MB
-runoob/ubuntu       v2                  70bf1840fd7c        22 hours ago        158.5 MB
+ejemplo/centos       6.7                 860c279d2fec        5 hours ago         190.6 MB
+ejemplo/centos       dev                 860c279d2fec        5 hours ago         190.6 MB
+ejemplo/ubuntu       v2                  70bf1840fd7c        22 hours ago        158.5 MB
 ubuntu              14.04               90d5884b1ee0        6 days ago          188 MB
 php                 5.6                 f40e9e0f10c8        10 days ago         444.8 MB
 nginx               latest              6f8d099c3adc        13 days ago         182.7 MB

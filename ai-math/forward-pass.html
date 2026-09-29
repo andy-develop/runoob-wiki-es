@@ -429,7 +429,7 @@ o &amp;= \text{Sigmoid}(h W_2 + b_2) \quad &amp; (m \times 6) \cdot (6 \times 2)
     <span style="color: Green;font-weight:bold;">return</span> z<br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB Escenario 1: muestra única, 4 dimensiones -&gt; 3 dimensiones"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO Escenario 1: muestra única, 4 dimensiones -&gt; 3 dimensiones"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
 X <span style="color: Gray;">=</span> np.<span style="color: #05a;">array</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: Olive;">[</span><span style="color: Maroon;">1.0</span><span style="color: Gray;">,</span> <span style="color: Maroon;">2.0</span><span style="color: Gray;">,</span> <span style="color: Maroon;">0.5</span><span style="color: Gray;">,</span> -<span style="color: Maroon;">1.0</span><span style="color: Olive;">]</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>     <span style="color: #a50"># (1, 4)</span><br/>
 W <span style="color: Gray;">=</span> np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span><span style="color: Maroon;">4</span><span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">0.5</span>            <span style="color: #a50"># (4, 3)</span><br/>
@@ -439,7 +439,7 @@ y <span style="color: Gray;">=</span> dense_layer<span style="color: Olive;">(</
       <span style="color: #a11;">"  -&gt;  y.shape:"</span><span style="color: Gray;">,</span> y.<span style="color: #05a;">shape</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB Escenario 2: lote de 8 muestras, mismos pesos"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO Escenario 2: lote de 8 muestras, mismos pesos"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
 X_batch <span style="color: Gray;">=</span> np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span><span style="color: Maroon;">8</span><span style="color: Gray;">,</span> <span style="color: Maroon;">4</span><span style="color: Olive;">)</span>            <span style="color: #a50"># (8, 4)</span><br/>
 y_batch <span style="color: Gray;">=</span> dense_layer<span style="color: Olive;">(</span>X_batch<span style="color: Gray;">,</span> W<span style="color: Gray;">,</span> b<span style="color: Gray;">,</span> activation<span style="color: Gray;">=</span><span style="color: #a11;">"relu"</span><span style="color: Olive;">)</span><br/>
@@ -448,7 +448,7 @@ y_batch <span style="color: Gray;">=</span> dense_layer<span style="color: Olive
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"El tamaño del lote (8) no cambia; las características pasan de 4 -&gt; 3"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB Escenario 3: apilar una red de dos capas"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO Escenario 3: apilar una red de dos capas"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Primera capa: 4 dimensiones -&gt; 6 dimensiones + ReLU</span><br/>
 W1 <span style="color: Gray;">=</span> np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span><span style="color: Maroon;">4</span><span style="color: Gray;">,</span> <span style="color: Maroon;">6</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">0.5</span><br/>
@@ -466,7 +466,7 @@ out <span style="color: Gray;">=</span> dense_layer<span style="color: Olive;">(
 <br/>
 <span style="color: #a50"># Verificación: ¿qué sucede si las dimensiones no coinciden?</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB Escenario 4: la falta de coincidencia de dimensiones genera un error"</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO Escenario 4: la falta de coincidencia de dimensiones genera un error"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span> * <span style="color: Maroon;">55</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">try</span>:<br/>
     W_wrong <span style="color: Gray;">=</span> np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span><span style="color: Maroon;">5</span><span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">0.5</span>  <span style="color: #a50"># El número de filas es incorrecto</span><br/>
@@ -480,25 +480,25 @@ out <span style="color: Gray;">=</span> dense_layer<span style="color: Olive;">(
 </div>
 <pre>
 =======================================================
-RUNOOB 场景 1：单样本，4 维 -&gt; 3 维
+EJEMPLO 场景 1：单样本，4 维 -&gt; 3 维
 =======================================================
 X.shape: (1, 4)   W.shape: (4, 3)   -&gt;  y.shape: (1, 3)
 
 =======================================================
-RUNOOB 场景 2：8 个样本批量，同权重
+EJEMPLO 场景 2：8 个样本批量，同权重
 =======================================================
 X_batch.shape: (8, 4)   -&gt;  y_batch.shape: (8, 3)
 批大小 8 不变，特征维度 4 -&gt; 3
 
 =======================================================
-RUNOOB 场景 3：堆叠两层网络
+EJEMPLO 场景 3：堆叠两层网络
 =======================================================
 输入层: (8, 4)
 隐藏层: (8, 6)  (4-&gt;6, W1=(4,6))
 输出层: (8, 2)  (6-&gt;2, W2=(6,2))
 
 =======================================================
-RUNOOB 场景 4：维度不匹配会报错
+EJEMPLO 场景 4：维度不匹配会报错
 =======================================================
 报错原因：X_batch 有 4 列，W_wrong 有 5 行 -&gt; 无法相乘
   正确做法：W 的行数 (5) 应等于 X 的列数 (4)

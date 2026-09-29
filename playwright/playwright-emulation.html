@@ -326,7 +326,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #000066; font-weight: bold;">const</span> context <span style="color: #339933;">=</span> await browser.<span style="color: #660066;">newContext</span><span style="color: #009900;">(</span>devices<span style="color: #009900;">[</span><span style="color: #3366CC;">'iPhone 15'</span><span style="color: #009900;">]</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> page <span style="color: #339933;">=</span> await context.<span style="color: #660066;">newPage</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #006600; font-style: italic;">// La página se renderizará con el viewport y la UA de iPhone 15</span><br/>
 </div>
 </div>
@@ -378,7 +378,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Simular
     longitude<span style="color: #339933;">:</span> <span style="color: #CC0000;">116.4074</span><span style="color: #339933;">,</span><br/>
   <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/map'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/map'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
   <span style="color: #006600; font-style: italic;">// La página obtendrá la información de ubicación de Pekín</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
@@ -474,9 +474,9 @@ await context.<span style="color: #660066;">clearPermissions</span><span style="
 <span style="color: #006600; font-style: italic;">// Agregar cookie</span><br/>
 await context.<span style="color: #660066;">addCookies</span><span style="color: #009900;">(</span><span style="color: #009900;">[</span><br/>
   <span style="color: #009900;">{</span><br/>
-    name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'runoob_session'</span><span style="color: #339933;">,</span><br/>
+    name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'ejemplo_session'</span><span style="color: #339933;">,</span><br/>
     value<span style="color: #339933;">:</span> <span style="color: #3366CC;">'session_token_value'</span><span style="color: #339933;">,</span><br/>
-    domain<span style="color: #339933;">:</span> <span style="color: #3366CC;">'www.runoob.com'</span><span style="color: #339933;">,</span><br/>
+    domain<span style="color: #339933;">:</span> <span style="color: #3366CC;">'www.example.com'</span><span style="color: #339933;">,</span><br/>
     path<span style="color: #339933;">:</span> <span style="color: #3366CC;">'/'</span><span style="color: #339933;">,</span><br/>
     httpOnly<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span><br/>
     secure<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span><br/>
@@ -489,7 +489,7 @@ await context.<span style="color: #660066;">addCookies</span><span style="color:
 console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span>cookies<span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Obtener cookies de una URL específica</span><br/>
-<span style="color: #000066; font-weight: bold;">const</span> siteCookies <span style="color: #339933;">=</span> await context.<span style="color: #660066;">cookies</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">const</span> siteCookies <span style="color: #339933;">=</span> await context.<span style="color: #660066;">cookies</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Eliminar todas las cookies</span><br/>
 await context.<span style="color: #660066;">clearCookies</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -515,14 +515,14 @@ await context.<span style="color: #660066;">clearCookies</span><span style="colo
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Establecer localStorage</span><br/>
 await page.<span style="color: #660066;">evaluate</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  localStorage.<span style="color: #660066;">setItem</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_key'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'runoob_value'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  localStorage.<span style="color: #660066;">setItem</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_key'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'ejemplo_value'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Leer localStorage</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> value <span style="color: #339933;">=</span> await page.<span style="color: #660066;">evaluate</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  <span style="color: #000066; font-weight: bold;">return</span> localStorage.<span style="color: #660066;">getItem</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_key'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  <span style="color: #000066; font-weight: bold;">return</span> localStorage.<span style="color: #660066;">getItem</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_key'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span>value<span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// 'runoob_value'</span><br/>
+console.<span style="color: #660066;">log</span><span style="color: #009900;">(</span>value<span style="color: #009900;">)</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// 'ejemplo_value'</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Limpiar localStorage</span><br/>
 await page.<span style="color: #660066;">evaluate</span><span style="color: #009900;">(</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>

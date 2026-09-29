@@ -333,9 +333,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     └── Main.class</pre>
 <p>En el siguiente ejemplo, usamos la función de JAR compatible con múltiples versiones para generar dos versiones del paquete jar a partir del archivo Tester.java: una con jdk 7 y otra con jdk 9, y luego lo ejecutamos en diferentes entornos.</p>
 <p><strong>Paso 1</strong></p>
-<p>Crea la carpeta c:/test/java7/com/runoob y, dentro de esa carpeta, crea el archivo Test.java con el siguiente código:</p>
+<p>Crea la carpeta c:/test/java7/com/ejemplo y, dentro de esa carpeta, crea el archivo Test.java con el siguiente código:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.runoob</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.ejemplo</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Tester <span style="color: #009900;">{</span><br/>
    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
@@ -344,9 +344,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #009900;">}</span><br/>
 </div></div>
 <p><strong>Paso 2</strong></p>
-<p>Crea la carpeta c:/test/java9/com/runoob y, dentro de esa carpeta, crea el archivo Test.java con el siguiente código:</p>
+<p>Crea la carpeta c:/test/java9/com/ejemplo y, dentro de esa carpeta, crea el archivo Test.java con el siguiente código:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.runoob</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.ejemplo</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> Tester <span style="color: #009900;">{</span><br/>
    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">static</span> <span style="color: #000066; font-weight: bold;">void</span> main<span style="color: #009900;">(</span><span style="color: #003399;">String</span><span style="color: #009900;">[</span><span style="color: #009900;">]</span> args<span style="color: #009900;">)</span> <span style="color: #009900;">{</span><br/>
@@ -355,18 +355,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #009900;">}</span><br/>
 </div></div>
 <p>Compilar el código fuente:</p>
-<pre>C:\test &gt; javac --release 9 java9/com/runoob/Tester.java
+<pre>C:\test &gt; javac --release 9 java9/com/ejemplo/Tester.java
 
-C:\JAVA &gt; javac --release 7 java7/com/runoob/Tester.java</pre>
+C:\JAVA &gt; javac --release 7 java7/com/ejemplo/Tester.java</pre>
 <p>Crear un paquete jar compatible con múltiples versiones</p>
 <pre>C:\JAVA &gt; jar -c -f test.jar -C java7 . --release 9 -C java9 .
-Warning: entry META-INF/versions/9/com/runoob/Tester.java, 
+Warning: entry META-INF/versions/9/com/ejemplo/Tester.java, 
    multiple resources with same name</pre>
 <p>Ejecutar con JDK 7:</p>
-<pre>C:\JAVA &gt; java -cp test.jar com.runoob.Tester
+<pre>C:\JAVA &gt; java -cp test.jar com.ejemplo.Tester
 Inside Java 7</pre>
 <p>Ejecutar con JDK 9:</p>
-<pre>C:\JAVA &gt; java -cp test.jar com.runoob.Tester
+<pre>C:\JAVA &gt; java -cp test.jar com.ejemplo.Tester
 Inside Java 9</pre>
 <p><a href="java9-new-features.html"><img alt="Java 9 新特性" class="navup" decoding="async" src="../images/up.gif"/>Novedades de Java 9</a></p> Otras extensiones
 </div>

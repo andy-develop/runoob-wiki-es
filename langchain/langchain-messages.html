@@ -330,16 +330,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: Green;font-weight:bold;">from</span> langchain.<span style="color: #05a;">chat_models</span> <span style="color: Green;font-weight:bold;">import</span> init_chat_model<br/>
 <br/>
 <span style="color: #a50"># Crear un mensaje de usuario</span><br/>
-msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué es RUNOOB?"</span><span style="color: Olive;">)</span><br/>
+msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué es Python?"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Tipo: {msg.type}"</span><span style="color: Olive;">)</span>        <span style="color: #a50"># human</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Contenido: {msg.content}"</span><span style="color: Olive;">)</span>      <span style="color: #a50"># ¿Qué es RUNOOB?</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Contenido: {msg.content}"</span><span style="color: Olive;">)</span>      <span style="color: #a50"># ¿Qué es Python?</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Rol: {msg.role}"</span><span style="color: Olive;">)</span>         <span style="color: #a50"># user</span><br/>
 <br/>
 <span style="color: #a50"># Crear una lista de mensajes (representa el historial de conversación de varias rondas)</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Hola"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué cursos tiene RUNOOB?"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"¿Qué cursos tiene EJEMPLO?"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"¿El curso de Python es adecuado para principiantes sin experiencia?"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
@@ -350,12 +350,12 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-类型: human
-内容: 菜鸟教程 RUNOOB 是什么？
-角色: user
+Tipo: human
+Contenido: ¿Qué es Python?
+Rol: user
 
-模型回复: 菜鸟教程（RUNOOB）是一个面向编程初学者的学习网站，提供丰富的编程教程。
-它的 Python 课程非常适合零基础学习者，从环境配置到基础语法再到实战项目都有覆盖。
+Respuesta del modelo: Python es un lenguaje de programación de alto nivel e interpretado, conocido por su sintaxis clara y legible, ampliamente utilizado en muchos campos.
+Su rico ecosistema y su diseño amigable para principiantes lo convierten en una excelente opción para quienes empiezan desde cero.
 </pre>
 <h3>Formas rápidas de crear HumanMessage</h3>
 <p>Al construir listas de mensajes, se pueden usar tuplas o diccionarios como atajos:</p>
@@ -387,7 +387,7 @@ msg4 <span style="color: Gray;">=</span> <span style="color: Olive;">{</span><sp
 <span style="color: Green;font-weight:bold;">from</span> langchain.<span style="color: #05a;">messages</span> <span style="color: Green;font-weight:bold;">import</span> AIMessage<br/>
 <br/>
 <span style="color: #a50"># Respuesta de IA normal (sin llamada a herramienta)</span><br/>
-ai_msg <span style="color: Gray;">=</span> AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"RUNOOB es una plataforma de aprendizaje de programación"</span><span style="color: Olive;">)</span><br/>
+ai_msg <span style="color: Gray;">=</span> AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"EJEMPLO es una plataforma de aprendizaje de programación"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Respuesta de IA con llamada a herramienta</span><br/>
 ai_with_tools <span style="color: Gray;">=</span> AIMessage<span style="color: Olive;">(</span><br/>
@@ -419,7 +419,7 @@ ai_with_tools <span style="color: Gray;">=</span> AIMessage<span style="color: O
 <span style="color: Green;font-weight:bold;">from</span> langchain.<span style="color: #05a;">chat_models</span> <span style="color: Green;font-weight:bold;">import</span> init_chat_model<br/>
 <br/>
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Olive;">)</span><br/>
-response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta RUNOOB"</span><span style="color: Olive;">)</span><br/>
+response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta EJEMPLO"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># AIMessage contiene metadatos enriquecidos</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Contenido: {response.content}"</span><span style="color: Olive;">)</span><br/>
@@ -436,13 +436,13 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-内容: 菜鸟教程（RUNOOB）是一个面向初学者的免费编程学习平台...
-消息ID: msg_abc123def456
-模型名: deepseek-v4-flash
-完成原因: stop
-输入 tokens: 19
-输出 tokens: 47
-总计 tokens: 66
+Contenido: Ejemplo es una plataforma gratuita de aprendizaje de programación para principiantes...
+ID del mensaje: msg_abc123def456
+Nombre del modelo: deepseek-v4-flash
+Motivo de finalización: stop
+Tokens de entrada: 19
+Tokens de salida: 47
+Tokens totales: 66
 </pre>
 <hr/>
 <h2>SystemMessage: instrucciones del sistema</h2>
@@ -456,14 +456,14 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 model <span style="color: Gray;">=</span> init_chat_model<span style="color: Olive;">(</span><span style="color: #a11;">"deepseek:deepseek-v4-flash"</span><span style="color: Gray;">,</span> temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0.7</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Respuesta sin instrucciones del sistema</span><br/>
-messages_no_system <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta RUNOOB"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><br/>
+messages_no_system <span style="color: Gray;">=</span> <span style="color: Olive;">[</span>HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta EJEMPLO"</span><span style="color: Olive;">)</span><span style="color: Olive;">]</span><br/>
 response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span>messages_no_system<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Sin instrucciones del sistema: {response.content[:80]}..."</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Respuesta con instrucciones del sistema</span><br/>
 messages_with_system <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     SystemMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Eres un blogger de estilo Xiaohongshu, las respuestas deben ser animadas, usar emojis y llevar hashtags"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
-    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta RUNOOB"</span><span style="color: Olive;">)</span><br/>
+    HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">"Presenta EJEMPLO"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Olive;">]</span><br/>
 response <span style="color: Gray;">=</span> model.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span>messages_with_system<span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>Con instrucciones del sistema: {response.content}"</span><span style="color: Olive;">)</span><br/>
@@ -471,12 +471,12 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-无系统指令: 菜鸟教程是一个面向初学者的在线编程学习平台，提供丰富的教程和实例...
+Sin instrucción del sistema: Ejemplo es una plataforma en línea de aprendizaje de programación para principiantes, con tutoriales y ejemplos completos...
 
-有系统指令: 宝藏网站！给所有想学编程的新手安利菜鸟教程 RUNOOB！
-超全面的免费教程，从 HTML 到 Python 全部都有唷～
-实例超多上手超快，绝对是编程小白的入门神器！
-#编程学习 #免费教程 #零基础入门 #菜鸟教程
+Con instrucción del sistema: ¡Sitio increíble! Recomiendo Ejemplo a todo principiante que quiera aprender a programar.
+Tutoriales gratuitos y completos, ¡de HTML a Python, de todo!
+Muchísimos ejemplos y muy rápido de empezar: ¡la herramienta perfecta para novatos en programación!
+#AprenderProgramación #TutorialesGratis #DesdeCero #Ejemplo
 </pre>
 <hr/>
 <h2>ToolMessage: resultado devuelto por la herramienta</h2>
@@ -515,7 +515,7 @@ response <span style="color: Gray;">=</span> model.<span style="color: #05a;">in
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-模型基于工具结果的回复: 杭州今天天气晴朗，气温25°C，湿度60%，适合户外活动。
+Respuesta del modelo basada en el resultado de la herramienta: Hoy hace sol en Hangzhou, 25 °C, humedad 60 %, ideal para actividades al aire libre.
 </pre>
 <blockquote><p>El tool_call_id de ToolMessage debe coincidir exactamente con el id del tool_call en AIMessage. Si no coincide, el modelo puede ignorar este resultado de herramienta o producir un comportamiento confuso.</p></blockquote>
 <hr/>
@@ -530,7 +530,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proceso de salida en streaming:"</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># stream() devuelve un iterador de AIMessageChunk</span><br/>
-<span style="color: Green;font-weight:bold;">for</span> <span style="color: #05a;">chunk</span> <span style="color: Green;font-weight:bold;">in</span> model.<span style="color: #05a;">stream</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta RUNOOB en una frase"</span><span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">for</span> <span style="color: #05a;">chunk</span> <span style="color: Green;font-weight:bold;">in</span> model.<span style="color: #05a;">stream</span><span style="color: Olive;">(</span><span style="color: #a11;">"Presenta EJEMPLO en una frase"</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># Cada chunk es un pequeño fragmento de texto</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #05a;">chunk</span>.<span style="color: #05a;">content</span><span style="color: Gray;">,</span> end<span style="color: Gray;">=</span><span style="color: #a11;">""</span><span style="color: Gray;">,</span> flush<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salto de línea</span><br/>
@@ -538,8 +538,8 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-流式输出过程：
-菜鸟教程（RUNOOB）是一个面向编程初学者的免费在线学习平台，提供丰富的编程教程和实例。
+Salida en streaming:
+Ejemplo es una plataforma gratuita de aprendizaje en línea para principiantes de programación, con tutoriales y ejemplos completos.
 </pre>
 <hr/>
 <h2>Tabla de referencia rápida de tipos de mensajes</h2>
@@ -615,7 +615,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 image_data <span style="color: Gray;">=</span> encode_image<span style="color: Olive;">(</span><span style="color: #a11;">"screenshot.png"</span><span style="color: Olive;">)</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-        <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">Por favor, describe el contenido de esta captura de pantalla del sitio web oficial de RUNOOB.</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+        <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">Por favor, describe el contenido de esta captura de pantalla del sitio web oficial de EJEMPLO.</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">{</span><br/>
             <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"image_url"</span><span style="color: Gray;">,</span><br/>
             <span style="color: #a11;">"image_url"</span>: <span style="color: Olive;">{</span><br/>
@@ -646,7 +646,7 @@ messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span
             <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">¿Qué describe esta imagen?</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
             <span style="color: Olive;">{</span><br/>
                 <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"image_url"</span><span style="color: Gray;">,</span><br/>
-                <span style="color: #a11;">"image_url"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"url"</span>: <span style="color: #a11;">"https://www.runoob.com/wp-content/uploads/2024/01/logo.png"</span><span style="color: Olive;">}</span><br/>
+                <span style="color: #a11;">"image_url"</span>: <span style="color: Olive;">{</span><span style="color: #a11;">"url"</span>: <span style="color: #a11;">"https://www.example.com/wp-content/uploads/2024/01/logo.png"</span><span style="color: Olive;">}</span><br/>
             <span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">]</span><br/>
     <span style="color: Olive;">}</span><br/>
@@ -738,7 +738,7 @@ response <span style="color: Gray;">=</span> model_with_tools.<span style="color
 <br/>
 <span style="color: #a50"># Simular un historial de conversación muy largo</span><br/>
 messages <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    SystemMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asistente de IA de RUNOOB.</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
+    SystemMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">Eres el asistente de IA de EJEMPLO.</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Cómo empezar con Python?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     AIMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">La introducción a Python puede comenzar desde los conceptos básicos...</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     HumanMessage<span style="color: Olive;">(</span>content<span style="color: Gray;">=</span><span style="color: #a11;">¿Tienes algún IDE recomendado?</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
@@ -772,13 +772,13 @@ trimmed <span style="color: Gray;">=</span> trim_messages<span style="color: Oli
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-裁剪前: 10 条消息
-裁剪后: 5 条消息
-  [system] 你是菜鸟教程 RUNOOB 的 AI 助手...
-  [human] 如何安装第三方库？...
-  [ai] 使用 pip install 命令...
-  [human] NumPy 是什么？...
-  [ai] NumPy 是一个科学计算库...
+Antes de recortar: 10 mensajes
+Después de recortar: 5 mensajes
+  [system] Eres el asistente de IA de Ejemplo...
+  [human] ¿Cómo instalo bibliotecas de terceros?...
+  [ai] Usa el comando pip install...
+  [human] ¿Qué es NumPy?...
+  [ai] NumPy es una biblioteca de computación científica...
 </pre>
 <table class="reference">
 <tr><th>Estrategia</th><th>Descripción</th><th>Escenario de aplicación</th></tr>
@@ -835,13 +835,13 @@ msg <span style="color: Gray;">=</span> HumanMessage<span style="color: Olive;">
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-content: 你好，菜鸟教程
+content: Hola, mundo
 type: human
 id: 00000000-0000-4000-8000-000000000000
-text: 你好，菜鸟教程
-美化输出:
+text: Hola, mundo
+Salida formateada:
 ================================ Human Message =================================
-你好，菜鸟教程
+Hola, mundo
 </pre> Otras extensiones
 </div>
 </div>

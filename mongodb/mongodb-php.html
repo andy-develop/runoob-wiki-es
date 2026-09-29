@@ -183,7 +183,7 @@ $db = $m-&gt;test; // 获取名称为 "test" 的数据库
 &lt;?php
 $m = new MongoClient(); // 连接
 $db = $m-&gt;test; // 获取名称为 "test" 的数据库
-$collection = $db-&gt;createCollection("runoob");
+$collection = $db-&gt;createCollection("ejemplo");
 echo "集合创建成功";
 ?&gt;
 </pre>
@@ -197,13 +197,13 @@ echo "集合创建成功";
 &lt;?php
 $m = new MongoClient();    // 连接到mongodb
 $db = $m-&gt;test;            // 选择一个数据库
-$collection = $db-&gt;runoob; // 选择集合
+$collection = $db-&gt;ejemplo; // 选择集合
 $document = array( 
     "title" =&gt; "MongoDB", 
     "description" =&gt; "database", 
     "likes" =&gt; 100,
-    "url" =&gt; "http://www.runoob.com/mongodb/",
-    "by", "菜鸟教程"
+    "url" =&gt; "http://www.example.com/mongodb/",
+    "by", "Ejemplo"
 );
 $collection-&gt;insert($document);
 echo "数据插入成功";
@@ -211,7 +211,7 @@ echo "数据插入成功";
 </pre>
 <p>Al ejecutar el programa anterior, el resultado de salida es el siguiente:</p>
 <pre>Datos insertados con éxito</pre>
-<p>Luego, en el cliente de mongo, usamos<b>db.runoob.find().pretty();</b>el comando para ver los datos:</p>
+<p>Luego, en el cliente de mongo, usamos<b>db.ejemplo.find().pretty();</b>el comando para ver los datos:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/09/D1BA0B68-F33C-4597-AAEC-DF3F09BD0C0E.jpg" width="70%"/></p>
 <hr/>
 <h2>Buscar documento</h2>
@@ -221,7 +221,7 @@ echo "数据插入成功";
 &lt;?php
 $m = new MongoClient();    // 连接到mongodb
 $db = $m-&gt;test;            // 选择一个数据库
-$collection = $db-&gt;runoob; // 选择集合
+$collection = $db-&gt;ejemplo; // 选择集合
 
 $cursor = $collection-&gt;find();
 // 迭代显示文档标题
@@ -243,7 +243,7 @@ MongoDB
 &lt;?php
 $m = new MongoClient();    // 连接到mongodb
 $db = $m-&gt;test;            // 选择一个数据库
-$collection = $db-&gt;runoob; // 选择集合
+$collection = $db-&gt;ejemplo; // 选择集合
 // 更新文档
 $collection-&gt;update(array("title"=&gt;"MongoDB"), array('$set'=&gt;array("title"=&gt;"MongoDB 教程")));
 // 显示更新后的文档
@@ -258,7 +258,7 @@ foreach ($cursor as $document) {
 <pre>
 MongoDB 教程
 </pre>
-<p>Luego, en el cliente de mongo, usamos<b>db.runoob.find().pretty();</b>el comando para ver los datos:</p>
+<p>Luego, en el cliente de mongo, usamos<b>db.ejemplo.find().pretty();</b>el comando para ver los datos:</p>
 <p><img decoding="async" src="../wp-content/uploads/2015/09/D1BA0B68-F33C-4597-AAEC-DF3F09BD0C0E.jpg" width="70%"/></p>
 <hr/>
 <h2>Eliminar documento</h2>
@@ -268,7 +268,7 @@ MongoDB 教程
 &lt;?php
 $m = new MongoClient();    // 连接到mongodb
 $db = $m-&gt;test;            // 选择一个数据库
-$collection = $db-&gt;runoob; // 选择集合
+$collection = $db-&gt;ejemplo; // 选择集合
    
 // 移除文档
 $collection-&gt;remove(array("title"=&gt;"MongoDB 教程"), array("justOne" =&gt; true));

@@ -392,7 +392,7 @@ close(DATA) || die "无法关闭文件";
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">¿URL de Runoob?</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">¿URL de Ejemplo?</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-var">$name</span><span class="hl-code"> = &lt;</span><span class="hl-identifier">STDIN</span><span class="hl-code">&gt;;
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">URL:</span><span class="hl-var">$name</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
 </div>
@@ -479,11 +479,11 @@ print "Hello World!\n";
 </div>
 </div>
 <h3>Renombrar archivos</h3>
-<p>En el siguiente ejemplo, renombraremos el archivo existente file1.txt a file2.txt; el directorio especificado es /usr/runoob/test/:</p>
+<p>En el siguiente ejemplo, renombraremos el archivo existente file1.txt a file2.txt; el directorio especificado es /usr/ejemplo/test/:</p>
 <pre>
 #!/usr/bin/perl
 
-rename ("/usr/runoob/test/file1.txt", "/usr/runoob/test/file2.txt" );
+rename ("/usr/ejemplo/test/file1.txt", "/usr/ejemplo/test/file2.txt" );
 </pre>
 <p>Función<b>renames</b>Solo acepta dos parámetros y solo renombra archivos que ya existen.</p>
 <h3>Eliminar archivos</h3>
@@ -492,7 +492,7 @@ rename ("/usr/runoob/test/file1.txt", "/usr/runoob/test/file2.txt" );
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-reserved">unlink</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">/usr/runoob/test/file1.txt</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</span><span class="hl-reserved">unlink</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">/usr/ejemplo/test/file1.txt</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
 </div>
 <hr/>
@@ -524,13 +524,13 @@ seek DATA, 256, 0;
 <p>Podemos crear primero el archivo file1.txt, con el siguiente contenido:</p>
 <pre>
 $ cat file1.txt 
-www.runoob.com
+www.example.com
 </pre>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-comment">#/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$file</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">/usr/test/runoob/file1.txt</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-var">$file</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">/usr/test/ejemplo/file1.txt</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-reserved">my</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-var">@description</span><span class="hl-code">, </span><span class="hl-var">$size</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code">-</span><span class="hl-identifier">e</span><span class="hl-code"> </span><span class="hl-var">$file</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">

@@ -282,7 +282,7 @@ class Box&lt;T&gt;(t : T) {
 
 fun main(args: Array&lt;String&gt;) {
     var boxInt = Box&lt;Int&gt;(10)
-    var boxString = Box&lt;String&gt;("Runoob")
+    var boxString = Box&lt;String&gt;("Ejemplo")
 
     println(boxInt.value)
     println(boxString.value)
@@ -290,7 +290,7 @@ fun main(args: Array&lt;String&gt;) {
 </pre>
 <p>El resultado es:</p>
 <pre>10
-Runoob</pre>
+Ejemplo</pre>
 <p>Al definir variables de tipos genéricos, se pueden escribir los parámetros de tipo completos; si el compilador puede inferir automáticamente los parámetros de tipo, también se pueden omitir.</p><p>La declaración de funciones genéricas en Kotlin es igual que en Java: los parámetros de tipo deben colocarse antes del nombre de la función:</p>
 <pre>
 fun &lt;T&gt; boxIn(value: T) = Box(value)
@@ -304,7 +304,7 @@ val box5 = boxIn(1)     // 编译器会进行类型推断
 <pre>
 fun main(args: Array&lt;String&gt;) {
     val age = 23
-    val name = "runoob"
+    val name = "ejemplo"
     val bool = true
 
     doPrintln(age)    // 整型
@@ -323,7 +323,7 @@ fun &lt;T&gt; doPrintln(content: T) {
 </pre>
 <p>El resultado es:</p>
 <pre>整型数字为 23
-字符串转换为大写：RUNOOB
+字符串转换为大写：EJEMPLO
 T 不是整型，也不是字符串
 </pre>
 <hr/>
@@ -358,29 +358,29 @@ fun &lt;T&gt; copyWhenGreater(list: List&lt;T&gt;, threshold: T): List&lt;String
 <p>Usar out hace que un parámetro de tipo sea covariante. Los parámetros de tipo covariantes solo pueden usarse como salida; pueden ser tipos de retorno pero no tipos de entrada:</p>
 <pre>
 // 定义一个支持协变的类
-class Runoob&lt;out A&gt;(val a: A) {
+class Ejemplo&lt;out A&gt;(val a: A) {
     fun foo(): A {
         return a
     }
 }
 
 fun main(args: Array&lt;String&gt;) {
-    var strCo: Runoob&lt;String&gt; = Runoob("a")
-    var anyCo: Runoob&lt;Any&gt; = Runoob&lt;Any&gt;("b")
+    var strCo: Ejemplo&lt;String&gt; = Ejemplo("a")
+    var anyCo: Ejemplo&lt;Any&gt; = Ejemplo&lt;Any&gt;("b")
     anyCo = strCo
     println(anyCo.foo())   // 输出 a
 }
 </pre><p>Usar in hace que un parámetro de tipo sea contravariante. Los parámetros de tipo contravariantes solo pueden usarse como entrada; pueden ser tipos de parámetros de entrada pero no tipos de retorno:</p>
 <pre>
 // 定义一个支持逆变的类
-class Runoob&lt;in A&gt;(a: A) {
+class Ejemplo&lt;in A&gt;(a: A) {
     fun foo(a: A) {
     }
 }
 
 fun main(args: Array&lt;String&gt;) {
-    var strDCo = Runoob("a")
-    var anyDCo = Runoob&lt;Any&gt;("b")
+    var strDCo = Ejemplo("a")
+    var anyDCo = Ejemplo&lt;Any&gt;("b")
     strDCo = anyDCo
 }
 </pre>

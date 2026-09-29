@@ -447,8 +447,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </span><span class="hl-comment"># Convertir el diccionario de Python a objeto JSON</span><span class="hl-code">
 </span><span class="hl-identifier">data</span><span class="hl-code"> = {
     </span><span class="hl-quotes">'</span><span class="hl-string">no</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-number">1</span><span class="hl-code">,
-    </span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">,
-    </span><span class="hl-quotes">'</span><span class="hl-string">url</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">https://www.runoob.com</span><span class="hl-quotes">'</span><span class="hl-code">
+    </span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">,
+    </span><span class="hl-quotes">'</span><span class="hl-string">url</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">https://www.example.com</span><span class="hl-quotes">'</span><span class="hl-code">
 }
  
 </span><span class="hl-identifier">json_str</span><span class="hl-code"> = </span><span class="hl-identifier">json</span><span class="hl-code">.</span><span class="hl-identifier">dumps</span><span class="hl-brackets">(</span><span class="hl-identifier">data</span><span class="hl-brackets">)</span><span class="hl-code">
@@ -458,8 +458,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>
-Python 原始数据： {'no': 1, 'name': 'Runoob', 'url': 'https://www.runoob.com'}
-JSON 对象： {"no": 1, "name": "Runoob", "url": "https://www.runoob.com"}
+Python 原始数据： {'no': 1, 'name': 'Ejemplo', 'url': 'https://www.example.com'}
+JSON 对象： {"no": 1, "name": "Ejemplo", "url": "https://www.example.com"}
 </pre>
 <p>Según el resultado de salida, se puede observar que los tipos simples, después de codificarse, son muy similares a su salida repr() original.</p>
 <p>Continuando con el ejemplo anterior, podemos convertir una cadena codificada en JSON de vuelta a una estructura de datos de Python:</p>
@@ -471,8 +471,8 @@ JSON 对象： {"no": 1, "name": "Runoob", "url": "https://www.runoob.com"}
 </span><span class="hl-comment"># Convertir el diccionario de Python a objeto JSON</span><span class="hl-code">
 </span><span class="hl-identifier">data1</span><span class="hl-code"> = {
     </span><span class="hl-quotes">'</span><span class="hl-string">no</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-number">1</span><span class="hl-code">,
-    </span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">,
-    </span><span class="hl-quotes">'</span><span class="hl-string">url</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">http://www.runoob.com</span><span class="hl-quotes">'</span><span class="hl-code">
+    </span><span class="hl-quotes">'</span><span class="hl-string">name</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">,
+    </span><span class="hl-quotes">'</span><span class="hl-string">url</span><span class="hl-quotes">'</span><span class="hl-code"> : </span><span class="hl-quotes">'</span><span class="hl-string">http://www.example.com</span><span class="hl-quotes">'</span><span class="hl-code">
 }
  
 </span><span class="hl-identifier">json_str</span><span class="hl-code"> = </span><span class="hl-identifier">json</span><span class="hl-code">.</span><span class="hl-identifier">dumps</span><span class="hl-brackets">(</span><span class="hl-identifier">data1</span><span class="hl-brackets">)</span><span class="hl-code">
@@ -486,10 +486,10 @@ JSON 对象： {"no": 1, "name": "Runoob", "url": "https://www.runoob.com"}
 </div>
 <p>Al ejecutar el código anterior, el resultado es:</p>
 <pre>
-Python 原始数据： {'name': 'Runoob', 'no': 1, 'url': 'http://www.runoob.com'}
-JSON 对象： {"name": "Runoob", "no": 1, "url": "http://www.runoob.com"}
-data2['name']:  Runoob
-data2['url']:  http://www.runoob.com
+Python 原始数据： {'name': 'Ejemplo', 'no': 1, 'url': 'http://www.example.com'}
+JSON 对象： {"name": "Ejemplo", "no": 1, "url": "http://www.example.com"}
+data2['name']:  Ejemplo
+data2['url']:  http://www.example.com
 </pre>
 <p>Si lo que necesitas manejar es un archivo en lugar de una cadena, puedes usar<b>json.dump()</b>y<b>json.load()</b>para codificar y decodificar datos JSON. Por ejemplo:</p>
 <div class="example">

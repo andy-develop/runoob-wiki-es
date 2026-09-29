@@ -337,7 +337,7 @@ docs <span style="color: Gray;">=</span> loader.<span style="color: #05a;">load<
 <span style="color: #a50"># pip install langchain-community beautifulsoup4</span><br/>
 <span style="color: Green;font-weight:bold;">from</span> langchain_community.<span style="color: #05a;">document_loaders</span> <span style="color: Green;font-weight:bold;">import</span> WebBaseLoader<br/>
 <br/>
-loader <span style="color: Gray;">=</span> WebBaseLoader<span style="color: Olive;">(</span><span style="color: #a11;">"https://www.runoob.com/python/python-tutorial.html"</span><span style="color: Olive;">)</span><br/>
+loader <span style="color: Gray;">=</span> WebBaseLoader<span style="color: Olive;">(</span><span style="color: #a11;">"https://www.example.com/python/python-tutorial.html"</span><span style="color: Olive;">)</span><br/>
 docs <span style="color: Gray;">=</span> loader.<span style="color: #05a;">load</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"Contenido web: {docs</span><span style="color: Olive;">)</span><br/>
 </div>
@@ -359,7 +359,7 @@ text_splitter <span style="color: Gray;">=</span> RecursiveCharacterTextSplitter
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Documento de ejemplo</span><br/>
-long_text <span style="color: Gray;">=</span> <span style="color: #a11;">"""Tutorial para novatos (RUNOOB) es una plataforma gratuita de aprendizaje de programación.<br/>
+long_text <span style="color: Gray;">=</span> <span style="color: #a11;">"""Tutorial para novatos (EJEMPLO) es una plataforma gratuita de aprendizaje de programación.<br/>
 <br/>La plataforma ofrece completos tutoriales de lenguajes de programación, incluyendo, entre otros:<br/>- Tutorial de Python: desde sintaxis básica hasta análisis de datos<br/>- Tutorial de Java: desde programación orientada a objetos hasta el framework Spring<br/>- Tutorial de front-end: HTML, CSS, JavaScript y sus frameworks<br/>
 <br/>Todos los tutoriales incluyen ejemplos de código detallados y un entorno de ejecución en línea.<br/>Los estudiantes pueden dominar rápidamente habilidades de programación aprendiendo y practicando simultáneamente."""</span><br/>
 <br/>
@@ -377,11 +377,11 @@ chunks <span style="color: Gray;">=</span> text_splitter.<span style="color: #05
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-原文长度: 153 字
-切分后: 3 块
+Longitud original: 153 字
+Fragmentos tras dividir: 3 块
 
 --- 块 1 (54 字) ---
-菜鸟教程（RUNOOB）是一个免费的编程学习平台。
+Ejemplo es una plataforma gratuita de aprendizaje de programación.
 平台提供了丰富的编程语言教程，包括但不限于：
 
 --- 块 2 (49 字) ---
@@ -414,12 +414,12 @@ chunks <span style="color: Gray;">=</span> text_splitter.<span style="color: #05
 <br/>
 <br/>
 <span style="color: #a50"># Proceso 1: Carga</span><br/>
-<span style="color: #a50"># loader = TextLoader("runoob_knowledge.txt", encoding="utf-8")</span><br/>
+<span style="color: #a50"># loader = TextLoader("ejemplo_knowledge.txt", encoding="utf-8")</span><br/>
 <span style="color: #a50"># docs = loader.load()</span><br/>
 <br/>
 <span style="color: #a50"># Para la demostración, se utiliza texto de ejemplo directamente</span><br/>
 docs <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"Tutorial para novatos (RUNOOB) es un sitio web gratuito de aprendizaje de programación."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"Tutorial para novatos (EJEMPLO) es un sitio web gratuito de aprendizaje de programación."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El sitio ofrece tutoriales de varios lenguajes de programación como Python, Java, HTML, etc."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de Python3 tiene 30 capítulos, adecuado para principiantes sin conocimientos previos."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de HTML tiene 25 capítulos, incluye formularios, multimedia, etc."</span><span style="color: Gray;">,</span><br/>
@@ -438,7 +438,7 @@ embeddings <span style="color: Gray;">=</span> OpenAIEmbeddings<span style="colo
 vector_store <span style="color: Gray;">=</span> Chroma.<span style="color: #05a;">from_documents</span><span style="color: Olive;">(</span><br/>
     documents<span style="color: Gray;">=</span>chunks<span style="color: Gray;">,</span><br/>
     embedding<span style="color: Gray;">=</span>embeddings<span style="color: Gray;">,</span><br/>
-    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./runoob_db"</span><span style="color: Gray;">,</span><br/>
+    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./ejemplo_db"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Índice creado: {len(chunks)} fragmentos de documentos"</span><span style="color: Olive;">)</span><br/>
@@ -451,9 +451,9 @@ results <span style="color: Gray;">=</span> vector_store.<span style="color: #05
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-已建立索引：5 个文档块
-检索结果: Python3 基础教程共 30 章，适合零基础入门学习。
-检索结果: 菜鸟教程（RUNOOB）是一个免费的编程学习网站。
+Índice creado:5 个文档块
+Resultado de búsqueda: Python3 基础教程共 30 章，适合零基础入门学习。
+Resultado de búsqueda: Ejemplo es un sitio web gratuito de aprendizaje de programación.
 </pre>
 Otras extensiones
 </div>

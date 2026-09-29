@@ -280,7 +280,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Puedes ver otras versiones de httpd mediante Sort by; por defecto es la última versión.<strong>httpd:latest</strong>。</p>
 <p>Además, también podemos usar el comando docker search httpd para ver las versiones disponibles:</p>
 <pre>
-runoob@runoob:~/apache$ docker search httpd
+ejemplo@ejemplo:~/apache$ docker search httpd
 NAME                           DESCRIPTION                  STARS  OFFICIAL AUTOMATED
 httpd                          The Apache HTTP Server ..    524     [OK]       
 centos/httpd                                                7                [OK]
@@ -300,11 +300,11 @@ alizarion/httpd                httpd on centos with mo...   0                [OK
 </pre>
 <p>Aquí extraemos la imagen oficial.</p>
 <pre>
-runoob@runoob:~/apache$ docker pull httpd
+ejemplo@ejemplo:~/apache$ docker pull httpd
 </pre>
 <p>Cuando la descarga haya terminado, podemos ver la imagen con REPOSITORY httpd en la lista de imágenes locales.</p>
 <pre>
-runoob@runoob:~/apache$ docker images httpd
+ejemplo@ejemplo:~/apache$ docker images httpd
 REPOSITORY     TAG        IMAGE ID        CREATED           SIZE
 httpd          latest     da1536b4ef14    23 seconds ago    195.1 MB
 </pre>
@@ -312,7 +312,7 @@ httpd          latest     da1536b4ef14    23 seconds ago    195.1 MB
 <p><b>Crear Dockerfile</b></p>
 <p>Primero, crea el directorio apache para guardar los archivos relacionados posteriores.</p>
 <pre>
-runoob@runoob:~$ mkdir -p  ~/apache/www ~/apache/logs ~/apache/conf 
+ejemplo@ejemplo:~$ mkdir -p  ~/apache/www ~/apache/logs ~/apache/conf 
 </pre>
 <p>El directorio www se mapeará como el directorio de aplicaciones configurado en el contenedor apache.</p>
 <p>El directorio logs se mapeará como el directorio de registros del contenedor apache.</p>
@@ -405,12 +405,12 @@ rm -f /usr/local/apache2/logs/httpd.pid
 exec httpd -DFOREGROUND
 </pre>
 <p>Otorga permisos de ejecución al archivo httpd-foreground.</p>
-<pre>runoob@runoob:~/apache$ chmod +x httpd-foreground</pre>
+<pre>ejemplo@ejemplo:~/apache$ chmod +x httpd-foreground</pre>
 <p>Crea una imagen mediante el Dockerfile y reemplaza el nombre por el tuyo propio.</p>
-<pre>runoob@runoob:~/apache$ docker build -t httpd .</pre>
+<pre>ejemplo@ejemplo:~/apache$ docker build -t httpd .</pre>
 <p>Una vez completada la creación, podemos encontrar la imagen recién creada en la lista de imágenes locales.</p>
 <pre>
-runoob@runoob:~/apache$ docker images httpd
+ejemplo@ejemplo:~/apache$ docker images httpd
 REPOSITORY     TAG        IMAGE ID        CREATED           SIZE
 httpd          latest     da1536b4ef14    23 seconds ago    195.1 MB
 </pre>
@@ -428,7 +428,7 @@ docker run -p 80:80 -v $PWD/www/:/usr/local/apache2/htdocs/ -v $PWD/conf/httpd.c
 <p>Referencia más detallada de comandos:<a href="../docker/docker-run-command.html" rel="noopener" target="_blank">Comando Docker run</a></p>
 <p>Ver el estado de inicio del contenedor:</p>
 <pre>
-runoob@runoob:~/apache$ docker ps
+ejemplo@ejemplo:~/apache$ docker ps
 CONTAINER ID  IMAGE   COMMAND             ... PORTS               NAMES
 79a97f2aac37  httpd   "httpd-foreground"  ... 0.0.0.0:80-&gt;80/tcp  sharp_swanson
 </pre>

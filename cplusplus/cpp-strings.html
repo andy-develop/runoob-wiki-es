@@ -427,13 +427,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <h2 class="tutheader">Cadenas de estilo C</h2>
 <p>Las cadenas de estilo C se originaron en el lenguaje C y continúan siendo compatibles en C++. Las cadenas son en realidad un array unidimensional de caracteres que usa<b>null</b>un carácter nulo<span class="marked">\0</span>como terminación.</p>
-<p>La siguiente declaración e inicialización crea una<strong>RUNOOB</strong>cadena. Dado que se almacena un carácter nulo al final del array, el tamaño del array de caracteres es una unidad mayor que el<strong>RUNOOB</strong>número de caracteres de la palabra.</p>
+<p>La siguiente declaración e inicialización crea una<strong>EJEMPLO</strong>cadena. Dado que se almacena un carácter nulo al final del array, el tamaño del array de caracteres es una unidad mayor que el<strong>EJEMPLO</strong>número de caracteres de la palabra.</p>
 <pre>
 char site[7] = {'R', 'U', 'N', 'O', 'O', 'B', '\0'};
 </pre>
 <p>De acuerdo con las reglas de inicialización de arrays, puede escribir la declaración anterior de la siguiente manera:</p>
 <pre>
-char site[] = "RUNOOB";
+char site[] = "EJEMPLO";
 </pre>
 <p>La siguiente es la representación en memoria de las cadenas definidas en C/C++:</p>
 <img alt="C/C++ 中的字符串表示" decoding="async" src="../wp-content/uploads/2014/09/c-strings-2020-12-21.png"/>
@@ -457,14 +457,14 @@ char site[] = "RUNOOB";
 </div>
 <p>Cuando el código anterior se compila y ejecuta, produce el siguiente resultado:</p>
 <pre>
-菜鸟教程: RUNOOB
+Ejemplo: EJEMPLO
 </pre>
 <p>C++ tiene una gran cantidad de funciones para manipular cadenas terminadas en null:</p>
 <table class="reference">
 <tr><th style="width:5%">No.</th><th>Función y propósito</th></tr>
 <tr><td>1</td><td><b>strcpy(s1, s2);</b><br/>Copia la cadena s2 en la cadena s1.</td></tr>
 <tr><td>2</td><td><b>strcat(s1, s2);</b><br/>Concatena la cadena s2 al final de la cadena s1. Las cadenas también se pueden concatenar usando el<span class="marked">+</span>signo +, por ejemplo:<br/>
-<pre>string str1 = "runoob";
+<pre>string str1 = "ejemplo";
 string str2 = "google";
 string str = str1 + str2;</pre>
 </td></tr>
@@ -483,7 +483,7 @@ string str = str1 + str2;</pre>
  
 </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-brackets">[</span><span class="hl-number">13</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-brackets">[</span><span class="hl-number">13</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str2</span><span class="hl-brackets">[</span><span class="hl-number">13</span><span class="hl-brackets">]</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-types">char</span><span class="hl-code"> </span><span class="hl-identifier">str3</span><span class="hl-brackets">[</span><span class="hl-number">13</span><span class="hl-brackets">]</span><span class="hl-code">;
    </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">len</span><span class="hl-code"> ;
@@ -506,8 +506,8 @@ string str = str1 + str2;</pre>
 </div>
 <p>Cuando el código anterior se compila y ejecuta, produce el siguiente resultado:</p>
 <pre>
-strcpy( str3, str1) : runoob
-strcat( str1, str2): runoobgoogle
+strcpy( str3, str1) : ejemplo
+strcat( str1, str2): ejemplogoogle
 strlen(str1) : 12
 </pre>
 <h2 class="tutheader">La clase String en C++</h2>
@@ -522,7 +522,7 @@ strlen(str1) : 12
  
 </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">string</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-identifier">string</span><span class="hl-code"> </span><span class="hl-identifier">str1</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-identifier">string</span><span class="hl-code"> </span><span class="hl-identifier">str2</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">;
    </span><span class="hl-identifier">string</span><span class="hl-code"> </span><span class="hl-identifier">str3</span><span class="hl-code">;
    </span><span class="hl-types">int</span><span class="hl-code"> </span><span class="hl-identifier">len</span><span class="hl-code"> ;
@@ -545,8 +545,8 @@ strlen(str1) : 12
 </div>
 <p>Cuando el código anterior se compila y ejecuta, produce el siguiente resultado:</p>
 <pre>
-str3 : runoob
-str1 + str2 : runoobgoogle
+str3 : ejemplo
+str1 + str2 : ejemplogoogle
 str3.size() :  12
 </pre> Otras extensiones
 </div>

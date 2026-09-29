@@ -290,11 +290,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La etiqueta &lt;fmt:bundle&gt; hace que el paquete de recursos especificado esté disponible para las etiquetas &lt;fmt:message&gt; que aparecen dentro de la etiqueta &lt;fmt:bundle&gt;. Esto le ahorra muchos pasos al especificar el paquete de recursos para cada etiqueta &lt;fmt:message&gt;.</p>
 <p>Por ejemplo, los siguientes dos bloques &lt;fmt:bundle&gt; producirán la misma salida:</p>
 <pre>
-&lt;fmt:bundle basename="com.runoob.Example"&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example"&gt;
     &lt;fmt:message key="count.one"/&gt;
 &lt;/fmt:bundle&gt;
 
-&lt;fmt:bundle basename="com.runoob.Example" prefix="count."&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example" prefix="count."&gt;
     &lt;fmt:message key="title"/&gt;
 &lt;/fmt:bundle&gt;
 </pre>
@@ -333,7 +333,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Un archivo de paquete de recursos de Java contiene una serie de pares clave-valor. El método que nos interesa implica crear clases de Java compiladas que hereden de la clase java.util.ListResourceBundle. Debe compilar estas clases y colocarlas en el CLASSPATH de su aplicación web.</p>
 <p>Definamos un paquete de recursos predeterminado:</p>
 <pre>
-package com.runoob;
+package com.ejemplo;
 
 import java.util.ListResourceBundle;
 
@@ -360,7 +360,7 @@ public class Example_En extends ListResourceBundle {
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;fmt:bundle basename="com.runoob.Example" prefix="count."&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example" prefix="count."&gt;
    &lt;fmt:message key="one"/&gt;&lt;br/&gt;
    &lt;fmt:message key="two"/&gt;&lt;br/&gt;
    &lt;fmt:message key="three"/&gt;&lt;br/&gt;
@@ -387,7 +387,7 @@ Three
 &lt;/head&gt;
 &lt;body&gt;
 
-&lt;fmt:bundle basename="com.runoob.Example"&gt;
+&lt;fmt:bundle basename="com.ejemplo.Example"&gt;
    &lt;fmt:message key="count.one"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.two"/&gt;&lt;br/&gt;
    &lt;fmt:message key="count.three"/&gt;&lt;br/&gt;

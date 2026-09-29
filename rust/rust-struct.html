@@ -173,9 +173,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }</pre><p>Nota: si sueles usar C/C++, recuerda que en Rust la declaración `struct` solo se usa para definir, no para declarar instancias, y no necesita<span class="marked">;</span>símbolo al final, y después de cada definición de campo se usa<span class="marked">,</span>para separar.</p>
 <h3>Instancia de estructura</h3><p>Rust está influenciado por JavaScript en muchos aspectos; al instanciar estructuras, utiliza la sintaxis de objetos JSON<span class="marked">key: value</span>para realizar la definición:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-let runoob <span style="color: #339933;">=</span> Site <span style="color: #009900;">{</span><br/>
-    domain<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"www.runoob.com"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
-    name<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"RUNOOB"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
+let ejemplo <span style="color: #339933;">=</span> Site <span style="color: #009900;">{</span><br/>
+    domain<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"www.example.com"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
+    name<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"EJEMPLO"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
     nation<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"China"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
     found<span style="color: #339933;">:</span> <span style="color: #CC0000;">2013</span><br/>
 <span style="color: #009900;">}</span><span style="color: #339933;">;</span><br/>
@@ -185,9 +185,9 @@ let runoob <span style="color: #339933;">=</span> Site <span style="color: #
     ...
 }</pre><p>La ventaja de esto es que no solo hace el programa más intuitivo, sino que tampoco necesitas ingresar los valores de los miembros en el orden de definición.</p><p>Si la estructura que se está instanciando tiene nombres de campos iguales a los nombres de variables existentes, se puede simplificar la escritura:</p><div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <br/>
-let domain <span style="color: #339933;">=</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"www.runoob.com"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-let name <span style="color: #339933;">=</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"RUNOOB"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-let runoob <span style="color: #339933;">=</span> Site <span style="color: #009900;">{</span><br/>
+let domain <span style="color: #339933;">=</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"www.example.com"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+let name <span style="color: #339933;">=</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"EJEMPLO"</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+let ejemplo <span style="color: #339933;">=</span> Site <span style="color: #009900;">{</span><br/>
     domain<span style="color: #339933;">,</span>  <span style="color: #006600; font-style: italic;">// equivalente a domain: domain,</span><br/>
     name<span style="color: #339933;">,</span>    <span style="color: #006600; font-style: italic;">// equivalente a name: name,</span><br/>
     nation<span style="color: #339933;">:</span> <span style="">String</span><span style="color: #339933;">::</span>from<span style="color: #009900;">(</span><span style="color: #3366CC;">"China"</span><span style="color: #009900;">)</span><span style="color: #339933;">,</span><br/>
@@ -196,10 +196,10 @@ let runoob <span style="color: #339933;">=</span> Site <span style="color: #
 </div></div>
 <p>Hay una situación así: quieres crear una nueva instancia de una estructura, donde la mayoría de las propiedades deben establecerse igual que las de una estructura existente, y solo necesitas cambiar el valor de uno o dos campos. Puedes usar la sintaxis de actualización de estructuras:</p>
 <pre>let site = Site {
-    domain: String::from("www.runoob.com"),
-    name: String::from("RUNOOB"),
-    ..runoob
-};</pre><p>Nota:<span class="marked">..runoob</span>Después de `..` no puede haber coma. Esta sintaxis no permite copiar exactamente otra instancia de estructura, es decir, al menos debes reasignar el valor de un campo para poder hacer referencia a los valores de otra instancia.</p>
+    domain: String::from("www.example.com"),
+    name: String::from("EJEMPLO"),
+    ..ejemplo
+};</pre><p>Nota:<span class="marked">..ejemplo</span>Después de `..` no puede haber coma. Esta sintaxis no permite copiar exactamente otra instancia de estructura, es decir, al menos debes reasignar el valor de un campo para poder hacer referencia a los valores de otra instancia.</p>
 <h3>Estructura de tupla</h3><p>Hay una forma más simple de definir y usar estructuras:<strong>Estructura de tupla</strong>。</p>
 <p>Una estructura de tupla es una estructura que tiene la forma de una tupla.</p><p>La diferencia con una tupla es que tiene un nombre y un formato de tipo fijo. Su razón de ser es manejar datos simples que necesitan definirse como tipo (de uso frecuente) sin ser demasiado complejos:</p><pre>
 struct Color(u8, u8, u8);

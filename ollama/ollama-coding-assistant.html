@@ -282,7 +282,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-body">
 <div class="article-intro" id="content">
 <h1>Ollama Asistente de Programación IA Local</h1>
-<p>En este capítulo se personalizará un modelo local dedicado a codificación, runoob-coder, y se integrará en VS Code y Claude Code para crear un asistente de programación totalmente offline y sin gasto de tokens.</p>
+<p>En este capítulo se personalizará un modelo local dedicado a codificación, ejemplo-coder, y se integrará en VS Code y Claude Code para crear un asistente de programación totalmente offline y sin gasto de tokens.</p>
 <p>El trabajo principal son tres cosas: elegir el modelo de código adecuado, escribir bien el Modelfile de codificación e integrarlo en la herramienta que te resulte cómoda.</p>
 <hr/>
 <h2>Primer paso: elegir el modelo de código, la memoria de video manda</h2>
@@ -311,7 +311,7 @@ ollama pull qwen3.5:9b         # 16GB 内存</pre>
 <span style="color: #666666; font-style: italic;"># Con 24GB+ de memoria de video, cambia el modelo base a qwen3-coder</span><br/>
 FROM qwen3.5:9b<br/>
 <br/>
-SYSTEM <span style="color: #a10;">""</span><span style="color: #a10;">"<br/>Eres el asistente de programación del equipo RUNOOB. Cumple las siguientes normas:<br/>1. Prioriza dar código completo y directamente ejecutable, en lugar de fragmentos<br/>2. Escribe comentarios en chino en cada paso clave, explicando el "</span>porqué<span style="color: #a10;">"<br/>3. Sigue PEP 8 (Python) o el estilo oficial del lenguaje<br/>4. Cuando se traten APIs desconocidas, recuerda consultar la documentación oficial; no inventes interfaces<br/>5. Estructura de la respuesta: una frase de idea - código - notas<br/>
+SYSTEM <span style="color: #a10;">""</span><span style="color: #a10;">"<br/>Eres el asistente de programación del equipo EJEMPLO. Cumple las siguientes normas:<br/>1. Prioriza dar código completo y directamente ejecutable, en lugar de fragmentos<br/>2. Escribe comentarios en chino en cada paso clave, explicando el "</span>porqué<span style="color: #a10;">"<br/>3. Sigue PEP 8 (Python) o el estilo oficial del lenguaje<br/>4. Cuando se traten APIs desconocidas, recuerda consultar la documentación oficial; no inventes interfaces<br/>5. Estructura de la respuesta: una frase de idea - código - notas<br/>
 "</span><span style="color: #a10;">""</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Los escenarios de código requieren estabilidad; reduce la aleatoriedad</span><br/>
@@ -323,7 +323,7 @@ PARAMETER num_ctx <span style="color: #000000;">65536</span><br/>
 </div>
 <p>Construye el modelo de codificación exclusivo:</p>
 <pre>
-ollama create runoob-coder -f Modelfile</pre>
+ollama create ejemplo-coder -f Modelfile</pre>
 <p>Para verificar si está bien "ajustado", pruébalo con tres tareas estándar: hacer que una función sea directamente utilizable (para ver la integridad), explicar un fragmento de código antiguo con trampas (para ver la comprensión) y pedir que escriba pruebas unitarias (para ver el seguimiento de normas). Solo conéctalo al editor si aprueba las tres.</p>
 <blockquote><p>num_ctx 65536 está pensado para escenarios de editor y agente: ellos meten todo el archivo o incluso varios archivos en el contexto. Cuando la memoria de video esté justa, redúcelo a 32768 y usa ollama ps para observar si PROCESSOR sigue siendo 100% GPU.</p></blockquote>
 <hr/>
@@ -331,18 +331,18 @@ ollama create runoob-coder -f Modelfile</pre>
 <p>Para las herramientas, un modelo personalizado y un modelo base no tienen diferencias; el método de integración es exactamente el mismo que en el capítulo 11.</p>
 <p><img alt="编码助手三层结构：工具层、协议层、模型层" decoding="async" src="../wp-content/uploads/2026/08/coder-layers.svg" style="max-width:100%;"/></p>
 <h3>Integración con VS Code Chat</h3>
-<p>Tras instalar la extensión oficial de Ollama, basta con seleccionar runoob-coder en el selector de modelos de Chat; no se necesita ninguna otra configuración.</p>
+<p>Tras instalar la extensión oficial de Ollama, basta con seleccionar ejemplo-coder en el selector de modelos de Chat; no se necesita ninguna otra configuración.</p>
 <h3>Integración con Claude Code</h3>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Método con un clic</span><br/>
-ollama launch claude <span style="color: #660033;">--model</span> runoob-coder<br/>
+ollama launch claude <span style="color: #660033;">--model</span> ejemplo-coder<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Método manual: las variables de entorno apuntan a local y el nombre del modelo usa el modelo personalizado</span><br/>
 <span style="color: #7A0874; font-weight: bold;">export</span> <span style="color: #007800;">ANTHROPIC_AUTH_TOKEN</span>=ollama<br/>
 <span style="color: #7A0874; font-weight: bold;">export</span> <span style="color: #007800;">ANTHROPIC_BASE_URL</span>=http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">11434</span><br/>
-claude <span style="color: #660033;">--model</span> runoob-coder<br/>
+claude <span style="color: #660033;">--model</span> ejemplo-coder<br/>
 </div>
 </div>
 <p>Tras la integración, la edición de archivos, la ejecución de comandos y la capacidad de refactorización en múltiples turnos de Claude Code son impulsadas por el modelo local. Antes de ejecutar tareas largas, recuerda confirmar que la ventana de contexto se ha configurado según lo indicado arriba.</p>
@@ -354,7 +354,7 @@ claude <span style="color: #660033;">--model</span> runoob-coder<br/>
 <tr><th>Tipo de tarea</th><th>Modelo recomendado</th><th>Razón</th></tr>
 </thead>
 <tbody>
-<tr><td>Autocompletado de funciones, explicación de código, escritura de pruebas unitarias</td><td>runoob-coder (local)</td><td>Rápido, gratuito y privado</td></tr>
+<tr><td>Autocompletado de funciones, explicación de código, escritura de pruebas unitarias</td><td>ejemplo-coder (local)</td><td>Rápido, gratuito y privado</td></tr>
 <tr><td>Refactorización entre archivos, depuración compleja</td><td>qwen3-coder o la versión insignia en la nube</td><td>Se necesita una comprensión de contexto largo más potente</td></tr>
 <tr><td>Generación por lotes, procesamiento mediante scripts</td><td>Modelo pequeño local + API</td><td>Ejecutar gran volumen a costo cero</td></tr>
 </tbody>

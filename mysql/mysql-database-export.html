@@ -323,14 +323,14 @@ WHERE your_conditions;</pre>
 </div></div>
 <p>En la declaración SQL anterior, seleccionamos las columnas id, name y email de la tabla users y escribimos el resultado en el archivo /tmp/user_data.csv. FIELDS TERMINATED BY ',' especifica el delimitador entre columnas (coma) y LINES TERMINATED BY '\n' especifica el delimitador entre líneas (salto de línea).</p>
 <p>Ten en cuenta que para ejecutar<span class="marked">SELECT...INTO OUTFILE</span>se necesitan los permisos correspondientes, y el directorio del archivo de salida debe ser un lugar donde el servidor MySQL pueda escribir.</p>
-<p>En el siguiente ejemplo exportamos los datos de la tabla runoob_tbl al archivo /tmp/runoob.txt:</p>
+<p>En el siguiente ejemplo exportamos los datos de la tabla ejemplo_tbl al archivo /tmp/ejemplo.txt:</p>
 <pre>
-mysql&gt; SELECT * FROM runoob_tbl 
-    -&gt; INTO OUTFILE '/tmp/runoob.txt';
+mysql&gt; SELECT * FROM ejemplo_tbl 
+    -&gt; INTO OUTFILE '/tmp/ejemplo.txt';
 </pre>
 <p>Puedes configurar el formato de salida de los datos mediante las opciones del comando. El siguiente ejemplo exporta en formato CSV:</p>
 <pre>
-mysql&gt; SELECT * FROM passwd INTO OUTFILE '/tmp/runoob.txt'
+mysql&gt; SELECT * FROM passwd INTO OUTFILE '/tmp/ejemplo.txt'
     -&gt; FIELDS TERMINATED BY ',' ENCLOSED BY '"'
     -&gt; LINES TERMINATED BY '\r\n';
 </pre>
@@ -358,10 +358,10 @@ FROM test_table;
 <p>Uso básico de mysqldump:</p>
 <pre>mysqldump -u username -p password -h hostname database_name &gt; output_file.sql</pre><p><strong>Descripción de parámetros:</strong></p>
 <ul><li><code>-u</code>: especifica el nombre de usuario de MySQL.</li><li><code>-p</code>: solicita ingresar la contraseña.</li><li><code>-h</code>: especifica el nombre del host de MySQL.</li><li><code>database_name</code>: el nombre de la base de datos a exportar.</li><li><code>output_file.sql</code>: el archivo donde se guardarán los datos exportados.</li></ul>
-<p>El siguiente ejemplo exporta la tabla runoob_tbl al directorio /tmp:</p>
+<p>El siguiente ejemplo exporta la tabla ejemplo_tbl al directorio /tmp:</p>
 <pre>
 $ mysqldump -u root -p --no-create-info \
-            --tab=/tmp RUNOOB runoob_tbl
+            --tab=/tmp EJEMPLO ejemplo_tbl
 password ******
 </pre><h3>Ejemplo de mysqldump</h3>
 <p><strong>1. Exportar toda la base de datos</strong></p>
@@ -382,44 +382,44 @@ mysqldump -u username -p password -h hostname database_name | gzip &gt; output_f
 <h3>Exportar datos en formato SQL</h3>
 <p>Exporta los datos en formato SQL a un archivo específico, como se muestra a continuación:</p>
 <pre>
-$ mysqldump -u root -p RUNOOB runoob_tbl &gt; dump.txt
+$ mysqldump -u root -p EJEMPLO ejemplo_tbl &gt; dump.txt
 password ******
 </pre>
 <p>El contenido del archivo creado por el comando anterior es el siguiente:</p>
 <pre>
 -- MySQL dump 8.23
 --
--- Host: localhost    Database: RUNOOB
+-- Host: localhost    Database: EJEMPLO
 ---------------------------------------------------------
 -- Server version       3.23.58
 
 --
--- Table structure for table `runoob_tbl`
+-- Table structure for table `ejemplo_tbl`
 --
 
-CREATE TABLE runoob_tbl (
-  runoob_id int(11) NOT NULL auto_increment,
-  runoob_title varchar(100) NOT NULL default '',
-  runoob_author varchar(40) NOT NULL default '',
+CREATE TABLE ejemplo_tbl (
+  ejemplo_id int(11) NOT NULL auto_increment,
+  ejemplo_title varchar(100) NOT NULL default '',
+  ejemplo_author varchar(40) NOT NULL default '',
   submission_date date default NULL,
-  PRIMARY KEY  (runoob_id),
-  UNIQUE KEY AUTHOR_INDEX (runoob_author)
+  PRIMARY KEY  (ejemplo_id),
+  UNIQUE KEY AUTHOR_INDEX (ejemplo_author)
 ) TYPE=MyISAM;
 
 --
--- Dumping data for table `runoob_tbl`
+-- Dumping data for table `ejemplo_tbl`
 --
 
-INSERT INTO runoob_tbl 
+INSERT INTO ejemplo_tbl 
        VALUES (1,'Learn PHP','John Poul','2007-05-24');
-INSERT INTO runoob_tbl 
+INSERT INTO ejemplo_tbl 
        VALUES (2,'Learn MySQL','Abdul S','2007-05-24');
-INSERT INTO runoob_tbl 
+INSERT INTO ejemplo_tbl 
        VALUES (3,'JAVA Tutorial','Sanjay','2007-05-06');
 </pre>
 <p>Si necesitas exportar los datos de toda la base de datos, puedes usar el siguiente comando:</p>
 <pre>
-$ mysqldump -u root -p RUNOOB &gt; database_dump.txt
+$ mysqldump -u root -p EJEMPLO &gt; database_dump.txt
 password ******
 </pre>
 <p>Si necesitas hacer una copia de seguridad de todas las bases de datos, puedes usar el siguiente comando:</p>

@@ -88,7 +88,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En este capítulo aprenderemos a usar JS/CSS para implementar la función de autocompletar en el cuadro de búsqueda.</p>
 <p>Primero veamos el efecto a continuación:</p>
 <p><img decoding="async" src="../wp-content/uploads/2021/07/E82E4C04-A418-4EAD-B88E-F58C2D4538FE.jpg"/></p>
-<p>Ver el ejemplo en línea:<a href="../codedemo/6190.html" rel="noopener" target="_blank">https://c.runoob.com/codedemo/6190</a></p>
+<p>Ver el ejemplo en línea:<a href="../codedemo/6190.html" rel="noopener" target="_blank">https://c.example.com/codedemo/6190</a></p>
 <h3>Código HTML básico</h3>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-comment">&lt;!--</span><span class="hl-comment">autocomplete="off" asegura que el formulario tenga desactivada la función de autocompletar:</span><span class="hl-comment">--&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">form</span><span class="hl-code"> </span><span class="hl-var">autocomplete</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">off</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">action</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">/index.php</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
@@ -98,7 +98,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">submit</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
 </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">form</span><span class="hl-brackets">&gt;</span></div></div></div>
 <p>Luego preparamos los datos de prueba básicos de búsqueda, que son un array de JavaScript:</p>
-<pre>var sites = ["Google","Taobao","Runoob","Wiki","Zhihu","Baidu","Sina","Tmall","JD","Alibaba","QQ","Weixin"];</pre>
+<pre>var sites = ["Google","Taobao","Ejemplo","Wiki","Zhihu","Baidu","Sina","Tmall","JD","Alibaba","QQ","Weixin"];</pre>
 <p>A continuación, los estilos del cuadro de búsqueda y del menú de sugerencias:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-identifier">*</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code"> </span><span class="hl-reserved">box-sizing:</span><span class="hl-code"> </span><span class="hl-code">border-box</span><span class="hl-reserved"></span><span class="hl-code">; </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-identifier">body</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">

@@ -406,19 +406,19 @@ mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int
 <p>Si se encuentra una coincidencia, se devuelve el subject reemplazado; en otros casos, se devuelve el subject sin cambios. Si ocurre un error, se devuelve NULL.</p>
 <h3>Ejemplos</h3>
 <div class="example">
-<h2 class="example">Reemplazar google por runoob</h2>
+<h2 class="example">Reemplazar google por ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-inlinetags">&lt;?php</span><span class="hl-code">
 </span><span class="hl-var">$string</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">google 123, 456</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-var">$pattern</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">/(\w+) (\d+), (\d+)/i</span><span class="hl-quotes">'</span><span class="hl-code">;
-</span><span class="hl-var">$replacement</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">runoob ${2},$3</span><span class="hl-quotes">'</span><span class="hl-code">;
+</span><span class="hl-var">$replacement</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">ejemplo ${2},$3</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-identifier">preg_replace</span><span class="hl-brackets">(</span><span class="hl-var">$pattern</span><span class="hl-code">, </span><span class="hl-var">$replacement</span><span class="hl-code">, </span><span class="hl-var">$string</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div>
 </div>
 <p>El resultado de la ejecución es el siguiente:</p>
 <pre>
-runoob 123,456
+ejemplo 123,456
 </pre>
 <hr/>
 <div class="example">
@@ -427,14 +427,14 @@ runoob 123,456
 <div class="hl-main"><span class="hl-inlinetags">&lt;?php</span><span class="hl-code">
 </span><span class="hl-var">$str</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">runo o   b</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-var">$str</span><span class="hl-code"> = </span><span class="hl-identifier">preg_replace</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">/\s+/</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-var">$str</span><span class="hl-brackets">)</span><span class="hl-code">;
-</span><span class="hl-comment">//</span><span class="hl-comment">cambiará a 'runoob'</span><span class="hl-comment"></span><span class="hl-code">
+</span><span class="hl-comment">//</span><span class="hl-comment">cambiará a 'ejemplo'</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-var">$str</span><span class="hl-code">;
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div>
 </div>
 <p>El resultado de la ejecución es el siguiente:</p>
 <pre>
-runoob
+ejemplo
 </pre>
 <hr/>
 <div class="example">

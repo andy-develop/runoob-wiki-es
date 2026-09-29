@@ -288,11 +288,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </pre>
 <p>De forma predeterminada, el parámetro requirepass está vacío, lo que significa que puedes conectarte al servicio Redis sin verificación de contraseña.</p><p>Puedes modificar este parámetro mediante el siguiente comando:</p>
 <pre>
-127.0.0.1:6379&gt; CONFIG set requirepass "runoob"
+127.0.0.1:6379&gt; CONFIG set requirepass "ejemplo"
 OK
 127.0.0.1:6379&gt; CONFIG get requirepass
 1) "requirepass"
-2) "runoob"
+2) "ejemplo"
 </pre>
 <p>Después de establecer la contraseña, los clientes deben verificar la contraseña para conectarse al servicio Redis; de lo contrario, no podrán ejecutar comandos.</p>
 <h3>Sintaxis</h3>
@@ -302,7 +302,7 @@ OK
 </pre>
 <h3>Ejemplo</h3>
 <pre>
-127.0.0.1:6379&gt; AUTH "runoob"
+127.0.0.1:6379&gt; AUTH "ejemplo"
 OK
 127.0.0.1:6379&gt; SET mykey "Test value"
 OK

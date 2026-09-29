@@ -349,7 +349,7 @@ Series.str.strip(to_strip=None)
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crear una Series que contiene caracteres de espacio en blanco</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'  hello  '</span><span style="color: Gray;">,</span> <span style="color: #a11;">'tworldt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'nrunoobn'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'  python  '</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'  hello  '</span><span style="color: Gray;">,</span> <span style="color: #a11;">'tworldt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'nejemplon'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'  python  '</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Usar str.strip() para eliminar los espacios en blanco de ambos extremos</span><br/>
 result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">strip</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
@@ -364,14 +364,14 @@ result <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</spa
 <pre>原始 Series:
 0     '  hello  '
 1     'tworldt'
-2      'nrunoobn'
+2      'nejemplon'
 3     '  python  '
 dtype: object
 
 去除空白后的结果:
 0    hello
 1    world
-2    runoob
+2    ejemplo
 3    python
 </pre>
 <p><strong>Análisis del código:</strong></p>
@@ -389,7 +389,7 @@ dtype: object
 <span style="color: Green;font-weight:bold;">import</span> pandas <span style="color: Green;font-weight:bold;">as</span> pd<br/>
 <br/>
 <span style="color: #a50"># Crear una Series que contiene caracteres específicos</span><br/>
-s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'xxxhello xxx'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'yyyworldyyy'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'zzzrunoobzzz'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
+s <span style="color: Gray;">=</span> pd.<span style="color: #05a;">Series</span><span style="color: Olive;">(</span><span style="color: Olive;">[</span><span style="color: #a11;">'xxxhello xxx'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'yyyworldyyy'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'zzzejemplozzz'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Eliminar el carácter 'x' en ambos extremos</span><br/>
 result_x <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</span>.<span style="color: #05a;">strip</span><span style="color: Olive;">(</span><span style="color: #a11;">'x'</span><span style="color: Olive;">)</span><br/>
@@ -412,23 +412,23 @@ result_z <span style="color: Gray;">=</span> s.<span style="color: Teal;">str</s
 <pre>原始 Series:
 0    xxxhello xxx
 1    yyyworldyyy
-2    zzzrunoobzzz
+2    zzzejemplozzz
 dtype: object
 
 去除 'x' 后的结果:
 0    hello xxx
 1    yyyworldyyy
-2    zzzrunoobzzz
+2    zzzejemplozzz
 
 去除 'y' 后的结果:
 0    xxxhello xxx
 1    worldyyy
-2    zzzrunoobzzz
+2    zzzejemplozzz
 
 去除 'z' 后的结果:
 0    xxxhello xxx
 1    yyyworldyyy
-2    runoobzzz
+2    ejemplozzz
 </pre>
 <p><strong>Análisis del código:</strong></p>
 <ul>

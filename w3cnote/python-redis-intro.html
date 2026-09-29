@@ -134,14 +134,14 @@ True
 <span style="color: Green;font-weight:bold;">import</span> redis   <span style="color: #a50"># Importar el módulo redis</span><br/>
 <br/>
 r <span style="color: Gray;">=</span> redis.<span style="color: #05a;">Redis</span><span style="color: Olive;">(</span>host<span style="color: Gray;">=</span><span style="color: #a11;">'localhost'</span><span style="color: Gray;">,</span> port<span style="color: Gray;">=</span><span style="color: Maroon;">6379</span><span style="color: Gray;">,</span> decode_responses<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span>   <br/>
-r.<span style="color: Teal;">set</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob'</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Establecer el valor correspondiente a 'name'</span><br/>
+r.<span style="color: Teal;">set</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo'</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Establecer el valor correspondiente a 'name'</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>r<span style="color: Olive;">[</span><span style="color: #a11;">'name'</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>r.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 取出Tecla name correspondienteValor -&gt; # Obtener el valor correspondiente a la clave 'name'</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Teal;">type</span><span style="color: Olive;">(</span>r.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Ver el tipo</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
-<pre>runoob
-runoob
+<pre>ejemplo
+ejemplo
 &lt;class 'str'&gt;</pre>
 <hr/>
 <h2>Grupo de conexiones</h2>
@@ -152,7 +152,7 @@ runoob
 <br/>
 pool <span style="color: Gray;">=</span> redis.<span style="color: #05a;">ConnectionPool</span><span style="color: Olive;">(</span>host<span style="color: Gray;">=</span><span style="color: #a11;">'localhost'</span><span style="color: Gray;">,</span> port<span style="color: Gray;">=</span><span style="color: Maroon;">6379</span><span style="color: Gray;">,</span> decode_responses<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
 r <span style="color: Gray;">=</span> redis.<span style="color: #05a;">Redis</span><span style="color: Olive;">(</span>host<span style="color: Gray;">=</span><span style="color: #a11;">'localhost'</span><span style="color: Gray;">,</span> port<span style="color: Gray;">=</span><span style="color: Maroon;">6379</span><span style="color: Gray;">,</span> decode_responses<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span>   <br/>
-r.<span style="color: Teal;">set</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'runoob'</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Establecer el valor correspondiente a 'name'</span><br/>
+r.<span style="color: Teal;">set</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'ejemplo'</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Establecer el valor correspondiente a 'name'</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>r.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">'name'</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># 取出Tecla name correspondienteValor -&gt; # Obtener el valor correspondiente a la clave 'name'</span><br/>
 </div></div>
 <hr/>

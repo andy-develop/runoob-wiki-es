@@ -303,12 +303,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <p>Después de iniciar sesión en el servicio MySQL, podemos usar<span class="marked">create</span>el comando para crear una base de datos, la sintaxis es la siguiente:</p>
 <pre>CREATE DATABASE 数据库名;</pre>
-<p>El siguiente comando demuestra brevemente el proceso de creación de una base de datos, el nombre de la base de datos es RUNOOB:</p>
+<p>El siguiente comando demuestra brevemente el proceso de creación de una base de datos, el nombre de la base de datos es EJEMPLO:</p>
 <pre>
 [root@host]# mysql -u root -p   
 Enter password:******  # 登录后进入终端
 
-mysql&gt; create DATABASE RUNOOB;
+mysql&gt; create DATABASE EJEMPLO;
 </pre>
 <p>La sintaxis básica para crear una base de datos es la siguiente:</p>
 <pre>CREATE DATABASE [IF NOT EXISTS] database_name
@@ -330,12 +330,12 @@ mysql&gt; create DATABASE RUNOOB;
 <ul><li><code>-u</code>El parámetro se usa para especificar el nombre de usuario de MySQL.</li><li><code>-p</code>El parámetro indica que se debe ingresar la contraseña.</li><li><code>create</code>Es la operación a ejecutar, que indica la creación de la base de datos.</li><li><code>your_database</code>Es el nombre de la base de datos a crear.</li></ul><p>Con un usuario normal, es posible que necesites permisos específicos para crear o eliminar bases de datos MySQL.</p>
 <p>Aquí usamos el usuario root para iniciar sesión; el usuario root tiene los máximos privilegios y puede usar mysql<span class="marked">mysqladmin</span>el comando para crear la base de datos.</p>
 <p>Después de ejecutar el comando anterior, el sistema te pedirá que ingreses la contraseña; ingresa la contraseña y presiona Enter.</p>
-<p>El siguiente comando demuestra brevemente el proceso de creación de una base de datos, el nombre de la base de datos es RUNOOB:</p>
+<p>El siguiente comando demuestra brevemente el proceso de creación de una base de datos, el nombre de la base de datos es EJEMPLO:</p>
 <pre>
-[root@host]# mysqladmin -u root -p create RUNOOB
+[root@host]# mysqladmin -u root -p create EJEMPLO
 Enter password:******
 </pre>
-<p>Después de ejecutar correctamente el comando anterior, se creará la base de datos MySQL RUNOOB.</p>
+<p>Después de ejecutar correctamente el comando anterior, se creará la base de datos MySQL EJEMPLO.</p>
 <p>Si deseas especificar el conjunto de caracteres y el ordenamiento al crear la base de datos, puedes usar<span class="marked">-default-character-set</span>y<span class="marked">-default-collation</span>el parámetro:</p>
 <pre>mysqladmin -u your_username -p create your_database \
   --default-character-set=utf8mb4 \
@@ -391,13 +391,13 @@ mysqli_query(connection,query,resultmode);
 </span><span class="hl-reserved">die</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Error de conexión:</span><span class="hl-quotes">'</span><span class="hl-code"> . </span><span class="hl-identifier">mysqli_error</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">Conexión exitosa&lt;br /&gt;</span><span class="hl-quotes">'</span><span class="hl-code">;
-</span><span class="hl-var">$sql</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">CREATE DATABASE RUNOOB</span><span class="hl-quotes">'</span><span class="hl-code">;
+</span><span class="hl-var">$sql</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">CREATE DATABASE EJEMPLO</span><span class="hl-quotes">'</span><span class="hl-code">;
 </span><span class="hl-var">$retval</span><span class="hl-code"> = </span><span class="hl-identifier">mysqli_query</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-code">,</span><span class="hl-var">$sql</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code">! </span><span class="hl-var">$retval</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">die</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Error al crear la base de datos:</span><span class="hl-quotes">'</span><span class="hl-code"> . </span><span class="hl-identifier">mysqli_error</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span><span class="hl-code">
-</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Base de datos RUNOOB creada exitosamente</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-reserved">echo</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">Base de datos EJEMPLO creada exitosamente</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-identifier">mysqli_close</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-inlinetags">?&gt;</span></div>
 </div></div>

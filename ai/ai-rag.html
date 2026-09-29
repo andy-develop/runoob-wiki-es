@@ -481,7 +481,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Es el método de recuperación más común: calcula la similitud entre el vector de la pregunta y los vectores de todos los documentos, y devuelve los K más relevantes.</p>
 <p>Ventajas: entiende la semántica, puede igualar sinónimos y palabras relacionadas.</p>
 <p>Desventajas: puede ser menos preciso que la recuperación por palabras clave para términos exactos y nombres propios.</p>
-<p>Por ejemplo, si el usuario pregunta "tutorial de Python de runoob", la recuperación vectorial entiende que "tutorial" y "curso" son similares, pero si el usuario pregunta "documentación de Python3.10 de runoob", la recuperación por palabras clave puede ser más precisa.</p>
+<p>Por ejemplo, si el usuario pregunta "tutorial de Python de ejemplo", la recuperación vectorial entiende que "tutorial" y "curso" son similares, pero si el usuario pregunta "documentación de Python3.10 de ejemplo", la recuperación por palabras clave puede ser más precisa.</p>
 <h3>Búsqueda por palabras clave (BM25)</h3>
 <p>Es el método utilizado por los motores de búsqueda tradicionales: compara palabras clave y puntúa según la frecuencia de términos, la frecuencia inversa de documentos, etc.</p>
 <ul>
@@ -579,19 +579,19 @@ OPENAI_API_KEY=你的-api-key-在这里</pre>
     """</span><br/>
     documents <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
         Document<span style="color: Olive;">(</span><br/>
-            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""El sitio web de tutoriales RUNOOB fue fundado en 2013, creado por el equipo de Rookie Tutorial.<br/>El objetivo del sitio web es proporcionar tutoriales de programación simples y fáciles de entender para principiantes en programación.<br/>Ofrecemos tutoriales para múltiples lenguajes de programación como HTML, CSS, JavaScript, Python, Java, C++, etc."""</span><span style="color: Gray;">,</span><br/>
-            metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"runoob_intro.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"page"</span>: <span style="color: Maroon;">1</span><span style="color: Olive;">}</span><br/>
+            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""El sitio web de tutoriales EJEMPLO fue fundado en 2013, creado por el equipo de Rookie Tutorial.<br/>El objetivo del sitio web es proporcionar tutoriales de programación simples y fáciles de entender para principiantes en programación.<br/>Ofrecemos tutoriales para múltiples lenguajes de programación como HTML, CSS, JavaScript, Python, Java, C++, etc."""</span><span style="color: Gray;">,</span><br/>
+            metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"ejemplo_intro.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"page"</span>: <span style="color: Maroon;">1</span><span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
         Document<span style="color: Olive;">(</span><br/>
-            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""El tutorial de Python de RUNOOB cubre todos los puntos de conocimiento importantes de Python.<br/>Incluye: sintaxis básica de Python, tipos de datos, sentencias de control, funciones, módulos, operaciones de archivos, etc.<br/>El tutorial proporciona una gran cantidad de ejemplos de código, cada uno cuidadosamente diseñado y probado.<br/>También ofrecemos un editor de Python en línea, donde puedes ejecutar código directamente en tu navegador."""</span><span style="color: Gray;">,</span><br/>
+            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""El tutorial de Python de EJEMPLO cubre todos los puntos de conocimiento importantes de Python.<br/>Incluye: sintaxis básica de Python, tipos de datos, sentencias de control, funciones, módulos, operaciones de archivos, etc.<br/>El tutorial proporciona una gran cantidad de ejemplos de código, cada uno cuidadosamente diseñado y probado.<br/>También ofrecemos un editor de Python en línea, donde puedes ejecutar código directamente en tu navegador."""</span><span style="color: Gray;">,</span><br/>
             metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"python_tutorial.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"page"</span>: <span style="color: Maroon;">1</span><span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
         Document<span style="color: Olive;">(</span><br/>
-            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""Las características de los tutoriales de RUNOOB son contenido conciso, ejemplos abundantes y énfasis en la práctica.<br/>Creemos que "la mejor manera de aprender a programar es escribir código".<br/>Por lo tanto, cada punto de conocimiento viene con ejemplos de código ejecutables, para que puedas practicar mientras lees.<br/>Nuestros tutoriales son completamente gratuitos y cualquier persona puede acceder y aprender."""</span><span style="color: Gray;">,</span><br/>
+            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""Las características de los tutoriales de EJEMPLO son contenido conciso, ejemplos abundantes y énfasis en la práctica.<br/>Creemos que "la mejor manera de aprender a programar es escribir código".<br/>Por lo tanto, cada punto de conocimiento viene con ejemplos de código ejecutables, para que puedas practicar mientras lees.<br/>Nuestros tutoriales son completamente gratuitos y cualquier persona puede acceder y aprender."""</span><span style="color: Gray;">,</span><br/>
             metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"features.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"page"</span>: <span style="color: Maroon;">1</span><span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
         Document<span style="color: Olive;">(</span><br/>
-            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""Además de los tutoriales de texto, RUNOOB también ofrece tutoriales en video.<br/>Los tutoriales en video son más intuitivos y adecuados para usuarios que aprenden visualmente.<br/>Nuestros tutoriales en video cubren temas populares como Python, desarrollo web y análisis de datos.<br/>Puedes encontrar nuestros videos en Bilibili y YouTube."""</span><span style="color: Gray;">,</span><br/>
+            page_content<span style="color: Gray;">=</span><span style="color: #a11;">"""Además de los tutoriales de texto, EJEMPLO también ofrece tutoriales en video.<br/>Los tutoriales en video son más intuitivos y adecuados para usuarios que aprenden visualmente.<br/>Nuestros tutoriales en video cubren temas populares como Python, desarrollo web y análisis de datos.<br/>Puedes encontrar nuestros videos en Bilibili y YouTube."""</span><span style="color: Gray;">,</span><br/>
             metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"video_course.txt"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"page"</span>: <span style="color: Maroon;">1</span><span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">)</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
@@ -639,7 +639,7 @@ OPENAI_API_KEY=你的-api-key-在这里</pre>
     <span style="color: #a11;">"""Crear cadena de preguntas y respuestas RAG"""</span><br/>
 <br/>
     <span style="color: #a50"># Plantilla de Prompt personalizada</span><br/>
-    template <span style="color: Gray;">=</span> <span style="color: #a11;">"""Eres un asistente de servicio al cliente profesional de RUNOOB.<br/>Responde a la pregunta del usuario basándote en el siguiente contexto. Si no hay información relevante en el contexto, di "Lo siento, no he encontrado información relevante".<br/>Las respuestas deben ser concisas y claras, en chino.<br/>
+    template <span style="color: Gray;">=</span> <span style="color: #a11;">"""Eres un asistente de servicio al cliente profesional de EJEMPLO.<br/>Responde a la pregunta del usuario basándote en el siguiente contexto. Si no hay información relevante en el contexto, di "Lo siento, no he encontrado información relevante".<br/>Las respuestas deben ser concisas y claras, en chino.<br/>
 <br/>Contexto:<br/>
 {context}<br/>
 <br/>Pregunta del usuario: {question}<br/>
@@ -689,11 +689,11 @@ OPENAI_API_KEY=你的-api-key-在这里</pre>
 <br/>
     <span style="color: #a50"># 5. Probar consultas</span><br/>
     test_questions <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-        <span style="color: #a11;">"¿Cuándo fue fundado RUNOOB?"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"¿Cuáles son las características del tutorial de Python de RUNOOB?"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"¿RUNOOB tiene tutoriales en video?"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"¿Cómo aprender C++ en RUNOOB?"</span><span style="color: Gray;">,</span><br/>
-        <span style="color: #a11;">"¿Los tutoriales de RUNOOB requieren pago?"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"¿Cuándo fue fundado EJEMPLO?"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"¿Cuáles son las características del tutorial de Python de EJEMPLO?"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"¿EJEMPLO tiene tutoriales en video?"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"¿Cómo aprender C++ en EJEMPLO?"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"¿Los tutoriales de EJEMPLO requieren pago?"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">for</span> question <span style="color: Green;font-weight:bold;">in</span> test_questions:<br/>
@@ -724,26 +724,26 @@ OPENAI_API_KEY=你的-api-key-在这里</pre>
 向量数据库已创建，共 4 条记录
 
 ============================================================
-问题：RUNOOB 是什么时候创立的？
+问题：EJEMPLO 是什么时候创立的？
 ============================================================
-回答：RUNOOB 教程网站创立于 2013 年。
+回答：EJEMPLO 教程网站创立于 2013 年。
 
 参考来源：
-  [1] runoob_intro.txt (第 1 页)
-      片段：RUNOOB 教程网站创立于 2013 年，由菜鸟教程团队创建。...
+  [1] ejemplo_intro.txt (第 1 页)
+      片段：EJEMPLO 教程网站创立于 2013 年，由Ejemplo团队创建。...
   [2] features.txt (第 1 页)
-      片段：除了文字教程，RUNOOB 还提供了视频教程。...
+      片段：除了文字教程，EJEMPLO 还提供了视频教程。...
 
 ============================================================
-问题：RUNOOB 的 Python 教程有什么特点？
+问题：EJEMPLO 的 Python 教程有什么特点？
 ============================================================
-回答：RUNOOB 的 Python 教程涵盖了 Python 的所有重要知识点，包括基础语法、数据类型、控制语句、函数、模块、文件操作等，并且提供了大量经过精心设计和测试的代码示例，还提供了在线 Python 编辑器，可以直接在浏览器中运行代码。
+回答：EJEMPLO 的 Python 教程涵盖了 Python 的所有重要知识点，包括基础语法、数据类型、控制语句、函数、模块、文件操作等，并且提供了大量经过精心设计和测试的代码示例，还提供了在线 Python 编辑器，可以直接在浏览器中运行代码。
 
 参考来源：
   [1] python_tutorial.txt (第 1 页)
-      片段：RUNOOB 的 Python 教程涵盖了 Python 的所有重要知识点。...
+      片段：EJEMPLO 的 Python 教程涵盖了 Python 的所有重要知识点。...
   [2] features.txt (第 1 页)
-      片段：RUNOOB 教程的特点是内容简洁、示例丰富、注重实践。...</pre>
+      片段：EJEMPLO 教程的特点是内容简洁、示例丰富、注重实践。...</pre>
 <p>¡Felicitaciones! Has construido con éxito un sistema completo de preguntas y respuestas sobre documentos RAG.</p>
 <hr/>
 <h2>Optimización avanzada: Re-ranking, HyDE</h2>
@@ -762,8 +762,8 @@ OPENAI_API_KEY=你的-api-key-在这里</pre>
 <p>¿Por qué funciona esto? Porque las preguntas suelen ser cortas y con baja densidad de información; mientras que las respuestas hipotéticas son más largas, más parecidas al estilo de los documentos, y tienen mayor similitud con los documentos reales.</p>
 <p>Por ejemplo:</p>
 <ul>
-<li>Pregunta del usuario: "¿Cuándo fue fundado RUNOOB?"</li>
-<li>Respuesta hipotética: "El sitio web de tutoriales RUNOOB fue fundado en 2013, creado por el equipo de Rookie Tutorial, con el objetivo de proporcionar tutoriales de calidad para principiantes en programación."</li>
+<li>Pregunta del usuario: "¿Cuándo fue fundado EJEMPLO?"</li>
+<li>Respuesta hipotética: "El sitio web de tutoriales EJEMPLO fue fundado en 2013, creado por el equipo de Rookie Tutorial, con el objetivo de proporcionar tutoriales de calidad para principiantes en programación."</li>
 </ul>
 <p>Usar la respuesta hipotética para la recuperación suele encontrar documentos más relevantes.</p>
 Otras extensiones

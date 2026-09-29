@@ -348,7 +348,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>limit_context<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Simular una conversación de varios turnos</span><br/>
@@ -369,8 +369,8 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-消息数: 8
-回复: 你好！看起来你正在进行多轮对话测试。有什么可以帮你的吗？
+Número de mensajes: 8
+Respuesta: ¡Hola! Parece que estás probando una conversación de varios turnos. ¿En qué puedo ayudarte?
 </pre>
 <h3>Escenario 2: Filtrado de contenido — Bloquear palabras sensibles</h3>
 <div class="example">
@@ -410,7 +410,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>content_filter<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Pregunta normal</span><br/>
@@ -429,9 +429,9 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 <p>Resultado de la ejecución:</p>
 <pre>
 [拦截] 检测到敏感词: 银行卡号
-正常问题: Python 入门可以从安装 Python 环境开始...
+Pregunta normal: Python 入门可以从安装 Python 环境开始...
 
-敏感问题: 抱歉，为了安全，不能处理包含「银行卡号」的请求。
+Pregunta sensible: 抱歉，为了安全，不能处理包含「银行卡号」的请求。
 </pre>
 <hr/>
 <h2>@after_model — Procesamiento posterior a la llamada del modelo</h2>
@@ -478,7 +478,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>response_audit<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -514,7 +514,7 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
                 AIMessage<span style="color: Olive;">(</span><br/>
                     content<span style="color: Gray;">=</span><span style="color: Olive;">(</span><br/>
                         last_msg.<span style="color: #05a;">content</span><br/>
-                        + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>---<span style="color: #000099; font-weight: bold;">\n</span>*El contenido anterior es generado por el asistente de IA de RUNOOB, solo como referencia.*</span><br/>
+                        + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>---<span style="color: #000099; font-weight: bold;">\n</span>*El contenido anterior es generado por el asistente de IA de EJEMPLO, solo como referencia.*</span><br/>
                     <span style="color: Olive;">)</span><br/>
                 <span style="color: Olive;">)</span><br/>
             <span style="color: Olive;">]</span><br/>
@@ -527,7 +527,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     middleware<span style="color: Gray;">=</span><span style="color: Olive;">[</span>append_disclaimer<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asistente de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invoke</span><span style="color: Olive;">(</span><span style="color: Olive;">{</span><br/>
@@ -540,7 +540,7 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 <pre>
 Python 是一门非常适合初学者的编程语言，它的语法简洁、贴近自然语言...
 ---
-*以上内容由菜鸟教程 RUNOOB AI 助手生成，仅供参考。*
+*El contenido anterior fue generado por el asistente de IA de Ejemplo y es solo de referencia.*
 </pre>
 <hr/>
 <h2>can_jump_to — Control de salto de flujo</h2>

@@ -313,17 +313,17 @@ $ gdb --version
 GNU gdb (Ubuntu 12.1-0ubuntu1) 12.1
 </pre>
 <hr/>
-<h2>Primer programa en ensamblador: Hello, runoob</h2>
+<h2>Primer programa en ensamblador: Hello, ejemplo</h2>
 <p>Crea un nuevo archivo<code>hello.asm</code>e introduce el siguiente contenido:</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;">; Ruta del archivo: hello.asm</span><br/>
-<span style="color: #666666; font-style: italic;">; Primer programa en ensamblador: imprime Hello, runoob!</span><br/>
+<span style="color: #666666; font-style: italic;">; Primer programa en ensamblador: imprime Hello, ejemplo!</span><br/>
 <span style="color: #666666; font-style: italic;">; Sintaxis de NASM, Linux de 32 bits</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span>                       <span style="color: #666666; font-style: italic;">; Segmento de datos: almacena datos inicializados</span><br/>
-    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, runoob!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span>    <span style="color: #666666; font-style: italic;">; Define la cadena msg, 0xA es el salto de línea</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'Hello, ejemplo!'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span>    <span style="color: #666666; font-style: italic;">; Define la cadena msg, 0xA es el salto de línea</span><br/>
     len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg                 <span style="color: #666666; font-style: italic;">; Calcula la longitud de la cadena: dirección actual - dirección inicial de msg</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span>                       <span style="color: #666666; font-style: italic;">; Segmento de código: almacena instrucciones ejecutables</span><br/>
@@ -352,7 +352,7 @@ _start<span style="color: #339933;">:</span>                        
 $ nasm -f elf32 hello.asm -o hello.o    # 汇编：将 .asm 转为 .o 目标文件
 $ ld -m elf_i386 hello.o -o hello       # 链接：将 .o 转为可执行文件
 $ ./hello                               # 运行程序
-Hello, runoob!
+Hello, ejemplo!
 </pre>
 <p>La función de cada uno de los tres comandos anteriores:</p>
 <table class="reference">
@@ -368,7 +368,7 @@ Hello, runoob!
 $ nasm -f elf32 hello.asm -o hello.o
 $ gcc -m32 hello.o -o hello -nostartfiles
 $ ./hello
-Hello, runoob!
+Hello, ejemplo!
 </pre>
 <p><code>-nostartfiles</code>La opción le indica a GCC que no añada el código de inicio predeterminado, porque nosotros mismos definimos<code>_start</code>el punto de entrada.</p>
 <hr/>
@@ -377,7 +377,7 @@ Hello, runoob!
 <table class="reference">
 <tr><th>Sección</th><th>Código</th><th>Descripción</th></tr>
 <tr><td>Declaración del segmento de datos</td><td><code>section .data</code></td><td>Declara el segmento de datos para almacenar variables y constantes</td></tr>
-<tr><td>Definición de la cadena</td><td><code>msg db 'Hello, runoob!', 0xA</code></td><td>db define una secuencia de bytes; 0xA es el código ASCII del salto de línea</td></tr>
+<tr><td>Definición de la cadena</td><td><code>msg db 'Hello, ejemplo!', 0xA</code></td><td>db define una secuencia de bytes; 0xA es el código ASCII del salto de línea</td></tr>
 <tr><td>Cálculo de longitud</td><td><code>len equ $ - msg</code></td><td>$ representa la dirección actual; al restarle la dirección de msg se obtiene la longitud de la cadena</td></tr>
 <tr><td>Declaración del segmento de código</td><td><code>section .text</code></td><td>Declara el segmento de código para almacenar instrucciones</td></tr>
 <tr><td>Declaración de entrada</td><td><code>global _start</code></td><td>Exporta _start como símbolo global; el enlazador lo necesita</td></tr>

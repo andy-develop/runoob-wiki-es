@@ -189,50 +189,50 @@ func funcname(形参) -&gt; returntype
 }
 </pre>
 <h3>Ejemplo</h3>
-<p>A continuación definimos una función llamada `runoob`, con un parámetro formal de tipo `String` y un valor de retorno también de tipo `String`:</p>
+<p>A continuación definimos una función llamada `ejemplo`, con un parámetro formal de tipo `String` y un valor de retorno también de tipo `String`:</p>
 <pre>
 import Cocoa
 
-func runoob(site: String) -&gt; String {
+func ejemplo(site: String) -&gt; String {
     return (site)
 }
-print(runoob(site: "www.runoob.com"))
+print(ejemplo(site: "www.example.com"))
 </pre>
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-www.runoob.com
+www.example.com
 </pre>
 <hr/>
 <h2>Llamada a la función</h2>
 <p>Podemos llamar a la función mediante el nombre y los valores de parámetros del tipo correspondiente. El orden de paso de los parámetros de la función debe ser el mismo que el de la lista de parámetros.</p>
-<p>A continuación definimos una función llamada `runoob`, cuyo parámetro formal `site` es de tipo `String`. Luego, el argumento real que pasamos al llamar a la función también debe ser de tipo `String`. Una vez que el argumento entra en el cuerpo de la función, se devuelve directamente, y el tipo de dato devuelto es `String`.</p>
+<p>A continuación definimos una función llamada `ejemplo`, cuyo parámetro formal `site` es de tipo `String`. Luego, el argumento real que pasamos al llamar a la función también debe ser de tipo `String`. Una vez que el argumento entra en el cuerpo de la función, se devuelve directamente, y el tipo de dato devuelto es `String`.</p>
 <pre>
 import Cocoa
 
-func runoob(site: String) -&gt; String {
+func ejemplo(site: String) -&gt; String {
     return (site)
 }
-print(runoob(site: "www.runoob.com"))
+print(ejemplo(site: "www.example.com"))
 </pre>
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-www.runoob.com
+www.example.com
 </pre>
 <hr/>
 <h2>Parámetros de la función</h2>
 <p>Una función puede aceptar uno o más parámetros. Estos parámetros se incluyen entre paréntesis de la función y se separan por comas.</p>
-<p>En el siguiente ejemplo, se pasan a la función `runoob` el nombre del sitio `name` y la dirección del sitio `site`:</p>
+<p>En el siguiente ejemplo, se pasan a la función `ejemplo` el nombre del sitio `name` y la dirección del sitio `site`:</p>
 <pre>
 import Cocoa
 
-func runoob(name: String, site: String) -&gt; String {
+func ejemplo(name: String, site: String) -&gt; String {
     return name + site
 }
-print(runoob(name: "菜鸟教程：", site: "www.runoob.com"))
-print(runoob(name: "Google：", site: "www.google.com"))
+print(ejemplo(name: "Ejemplo：", site: "www.example.com"))
+print(ejemplo(name: "Google：", site: "www.google.com"))
 </pre><p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-菜鸟教程：www.runoob.com
+Ejemplo：www.example.com
 Google：www.google.com
 </pre>
 <hr/>
@@ -249,7 +249,7 @@ func funcname() -&gt; datatype {
 import Cocoa
 
 func sitename() -&gt; String {
-    return "菜鸟教程"
+    return "Ejemplo"
 }
 print(sitename())
 </pre><p>El resultado de la ejecución del programa anterior es:</p>
@@ -316,18 +316,18 @@ if let bounds = minMax(array: [8, -6, 2, 109, 3, 71]) {
 </pre>
 <hr/>
 <h2>Funciones sin valor de retorno</h2>
-<p>A continuación se muestra otra versión de la función `runoob(_:)`. Esta función recibe como parámetro la dirección web oficial de Runoob, no especifica un tipo de valor de retorno y genera directamente el valor `String` en lugar de devolverlo:</p>
+<p>A continuación se muestra otra versión de la función `ejemplo(_:)`. Esta función recibe como parámetro la dirección web oficial de Ejemplo, no especifica un tipo de valor de retorno y genera directamente el valor `String` en lugar de devolverlo:</p>
 <pre>
 import Cocoa
 
-func runoob(site: String) {
-    print("菜鸟教程官网：\(site)")
+func ejemplo(site: String) {
+    print("Ejemplo官网：\(site)")
 }
-runoob(site: "http://www.runoob.com")
+ejemplo(site: "http://www.example.com")
 </pre>
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-菜鸟教程官网：http://www.runoob.com
+Ejemplo官网：http://www.example.com
 </pre>
 <hr/>
 <h2>Nombres de los parámetros de la función</h2>
@@ -387,7 +387,7 @@ func vari&lt;N&gt;(members: N...){
 }
 vari(members: 4,3,5)
 vari(members: 4.5, 3.1, 5.6)
-vari(members: "Google", "Baidu", "Runoob")
+vari(members: "Google", "Baidu", "Ejemplo")
 </pre><p>El resultado de la ejecución del programa anterior es:</p><pre>
 4
 3
@@ -397,7 +397,7 @@ vari(members: "Google", "Baidu", "Runoob")
 5.6
 Google
 Baidu
-Runoob
+Ejemplo
 </pre>
 <hr/>
 <h2>Constantes, variables y parámetros de E/S</h2>
@@ -467,15 +467,15 @@ func inputstr(name: String) -&gt; String {
 import Cocoa
 
 func inputstr() {
-   print("菜鸟教程")
-   print("www.runoob.com")
+   print("Ejemplo")
+   print("www.example.com")
 }
 inputstr()
 </pre>
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-菜鸟教程
-www.runoob.com
+Ejemplo
+www.example.com
 </pre>
 <h3>Usar tipos de función
 <p>En Swift, usar un tipo de función es igual que usar otros tipos. Por ejemplo, puedes definir una constante o variable cuyo tipo sea una función y asignarle la función adecuada:</p>

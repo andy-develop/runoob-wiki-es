@@ -334,7 +334,7 @@ add<span style="color: Olive;">(</span><span style="color: Maroon;">2</span><spa
 <hr/><h2>Múltiples valores de retorno</h2>
 <p>Las funciones de Lua pueden devolver múltiples valores de resultado, como string.find, que devuelve los índices de inicio y fin de la cadena coincidente (si no existe una coincidencia, devuelve nil).</p>
 <pre>
-&gt; s, e = string.find("www.runoob.com", "runoob") 
+&gt; s, e = string.find("www.example.com", "ejemplo") 
 &gt; print(s, e)
 5    10
 </pre>
@@ -413,12 +413,12 @@ print(add(3,4,5,6,7))  ---&gt;25</pre>
     <span style="color: Green; font-weight: bold;">return</span> <span style="color: #05a;">io.write</span><span style="color: Olive;">(</span><span style="color: #05a;">string.format</span><span style="color: Olive;">(</span>fmt<span style="color: #Gray;">,</span> <span style="color: #Gray;">...</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>     <br/>
 <span style="color: Green; font-weight: bold;">end</span><br/>
 <br/>
-fwrite<span style="color: Olive;">(</span><span style="color: #a11;">"runoob<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span>       <span style="color: #a50; font-style: italic;">---&gt;fmt = "runoob", no hay parámetros variables.</span><br/>
+fwrite<span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span>       <span style="color: #a50; font-style: italic;">---&gt;fmt = "ejemplo", no hay parámetros variables.</span><br/>
 fwrite<span style="color: Olive;">(</span><span style="color: #a11;">"%d%d<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: #Gray;">,</span> <span style="color: Maroon;">2</span><span style="color: Olive;">)</span>   <span style="color: #a50; font-style: italic;">---&gt;fmt = "%d%d", los parámetros variables son 1 y 2</span><br/>
 </div></div>
 <p>El resultado de salida es:</p>
 <pre>
-runoob
+ejemplo
 12
 </pre>
 <p>Normalmente, para iterar sobre los parámetros variables, solo se necesita usar<span class="marked">{…}</span>, sin embargo, los parámetros variables pueden contener algunos<span class="marked">nil</span>, entonces se puede usar<strong>select</strong>la función para acceder a los parámetros variables:<strong>select('#', …)</strong>o<strong>select(n, …)</strong></p>

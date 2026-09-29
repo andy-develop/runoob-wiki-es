@@ -478,7 +478,7 @@ comparison_data <span style="color: Gray;">=</span> <span style="color: Olive;">
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Objetivo del entrenamiento del modelo de recompensa:"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"  Hacer que el modelo dé una puntuación más alta a las respuestas preferidas por los humanos."</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"  Usar runoob como palabra clave de prueba para verificar el modelo."</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"  Usar ejemplo como palabra clave de prueba para verificar el modelo."</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <hr/>
@@ -640,7 +640,7 @@ comparison_data <span style="color: Gray;">=</span> <span style="color: Olive;">
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">learning_rate (tasa de aprendizaje): controla la velocidad de aprendizaje</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Usar la palabra clave runoob como prueba para verificar el proceso de entrenamiento</span><span style="color: Olive;">)</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">Usar la palabra clave ejemplo como prueba para verificar el proceso de entrenamiento</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <hr/>
@@ -723,9 +723,9 @@ L_DPO(π_θ) = -E_{(x,y_w,y_l)~D} [
             <span style="color: #a11;">"rejected"</span>: <span style="color: #a11;">Claro, envíame los ejercicios y te los hago.</span><br/>
         <span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
         <span style="color: Olive;">{</span><br/>
-            <span style="color: #a11;">"prompt"</span>: <span style="color: #a11;">Presenta runoob</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"chosen"</span>: <span style="color: #a11;">runoob (Tutorial para novatos) es un sitio web de aprendizaje de programación que ofrece tutoriales de varios lenguajes de programación.</span><span style="color: Gray;">,</span><br/>
-            <span style="color: #a11;">"rejected"</span>: <span style="color: #a11;">¿Qué es runoob? No lo sé.</span><br/>
+            <span style="color: #a11;">"prompt"</span>: <span style="color: #a11;">Presenta ejemplo</span><span style="color: Gray;">,</span><br/>
+            <span style="color: #a11;">"chosen"</span>: <span style="color: #a11;">ejemplo (Tutorial para novatos) es un sitio web de aprendizaje de programación que ofrece tutoriales de varios lenguajes de programación.</span><span style="color: Gray;">,</span><br/>
+            <span style="color: #a11;">"rejected"</span>: <span style="color: #a11;">¿Qué es Python? No lo sé.</span><br/>
         <span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>
@@ -752,7 +752,7 @@ L_DPO(π_θ) = -E_{(x,y_w,y_l)~D} [
     <span style="color: #a50"># ============================================</span><br/>
 <br/>
     model_name <span style="color: Gray;">=</span> <span style="color: #a11;">"gpt2"</span>  <span style="color: #a50"># Usar un modelo pequeño para la demostración; en la práctica se puede usar un modelo más grande.</span><br/>
-    output_dir <span style="color: Gray;">=</span> <span style="color: #a11;">"./dpo-runoob-model"</span><br/>
+    output_dir <span style="color: Gray;">=</span> <span style="color: #a11;">"./dpo-ejemplo-model"</span><br/>
 <br/>
     <span style="color: #a50"># ============================================</span><br/>
     <span style="color: #a50"># 2. Cargar modelo y tokenizador</span><br/>
@@ -841,7 +841,7 @@ L_DPO(π_θ) = -E_{(x,y_w,y_l)~D} [
 <br/>
     <span style="color: #a50"># Probar algunos prompts</span><br/>
     test_prompts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-        <span style="color: #a11;">"Presenta runoob"</span><span style="color: Gray;">,</span><br/>
+        <span style="color: #a11;">"Presenta ejemplo"</span><span style="color: Gray;">,</span><br/>
         <span style="color: #a11;">"¿Soy un fracaso?"</span><span style="color: Gray;">,</span><br/>
     <span style="color: Olive;">]</span><br/>
 <br/>

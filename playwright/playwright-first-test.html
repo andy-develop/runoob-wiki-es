@@ -343,12 +343,12 @@ Running 6 tests using 4 workers
 <span style="color: #006600; font-style: italic;">// test(name, callback) define una prueba</span><br/>
 <span style="color: #006600; font-style: italic;">// name: el nombre de la prueba, que se muestra en el informe de pruebas</span><br/>
 <span style="color: #006600; font-style: italic;">// El parámetro { page } de callback es el fixture (accesorio) proporcionado por Playwright</span><br/>
-test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Visita la página de inicio de RUNOOB y comprueba el título'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
+test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Visita la página de inicio de EJEMPLO y comprueba el título'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Navega a la URL especificada</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
-  <span style="color: #006600; font-style: italic;">// Aserción: el título de la página contiene "RUNOOB"</span><br/>
-  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  <span style="color: #006600; font-style: italic;">// Aserción: el título de la página contiene "EJEMPLO"</span><br/>
+  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
@@ -360,7 +360,7 @@ npx playwright test tests/first-test.spec.ts
 <pre>
 Running 1 test using 1 worker
 
-  ✓  1 [chromium] › tests/first-test.spec.ts:4:1 › 访问 RUNOOB 首页并检查标题 (2.5s)
+  ✓  1 [chromium] › tests/first-test.spec.ts:4:1 › 访问 EJEMPLO 首页并检查标题 (2.5s)
 
   1 passed (2.5s)
 </pre>
@@ -409,10 +409,10 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Nombre 
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Uso básico</span><br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Navegación con opciones</span><br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
   <span style="color: #006600; font-style: italic;">// Espera hasta que se dispare el evento 'load' (valor por defecto)</span><br/>
   waitUntil<span style="color: #339933;">:</span> <span style="color: #3366CC;">'load'</span><span style="color: #339933;">,</span><br/>
   <span style="color: #006600; font-style: italic;">// Tiempo de espera de la operación (milisegundos)</span><br/>
@@ -439,13 +439,13 @@ await page.<span style="color: #000066; font-weight: bold;">goto</span><span sty
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Aserción del título de la página</span><br/>
-await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Aserción de la URL de la página</span><br/>
-await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveURL</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveURL</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Aserción de visibilidad de un elemento</span><br/>
-await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <p>Las aserciones de Playwright tienen una característica clave:<span class="marked">Reintento automático</span>。</p>
@@ -460,14 +460,14 @@ await expect<span style="color: #009900;">(</span>page.<span style="color: #6600
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Forma correcta</span><br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Ejemplo correcto'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Forma incorrecta (falta await)</span><br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Ejemplo incorrecto'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>        <span style="color: #006600; font-style: italic;">// ¡Sin await!</span><br/>
-  expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>           <span style="color: #006600; font-style: italic;">// ¡Sin await!</span><br/>
+  page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>        <span style="color: #006600; font-style: italic;">// ¡Sin await!</span><br/>
+  expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>           <span style="color: #006600; font-style: italic;">// ¡Sin await!</span><br/>
 <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
@@ -484,7 +484,7 @@ test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Ejemplo
 <span style="color: #FF0000;">import</span> <span style="color: #009900;">{</span> test<span style="color: #339933;">,</span> expect <span style="color: #009900;">}</span> from <span style="color: #3366CC;">'@playwright/test'</span><span style="color: #339933;">;</span><br/>
 <br/>
 test<span style="color: #009900;">(</span><span style="color: #3366CC;">'Una prueba que falla a propósito'</span><span style="color: #339933;">,</span> async <span style="color: #009900;">(</span><span style="color: #009900;">{</span> page <span style="color: #009900;">}</span><span style="color: #009900;">)</span> <span style="color: #339933;">=&gt;</span> <span style="color: #009900;">{</span><br/>
-  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+  await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
   <span style="color: #006600; font-style: italic;">// Se verifica que el título contenga un contenido inexistente; se espera que falle</span><br/>
   await expect<span style="color: #009900;">(</span>page<span style="color: #009900;">)</span>.<span style="color: #660066;">toHaveTitle</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/texto inexistente/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>

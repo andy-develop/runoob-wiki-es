@@ -205,10 +205,10 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 <tr><td>ollama show &lt;model&gt;</td><td>Muestra los detalles del modelo: parámetros, plantilla, aviso del sistema, etc.</td><td>ollama show qwen3.5</td></tr>
 <tr><td>ollama ps</td><td>Muestra los modelos cargados en memoria y el tiempo de vida restante</td><td>ollama ps</td></tr>
 <tr><td>ollama stop &lt;model&gt;</td><td>Detiene y descarga inmediatamente el modelo en ejecución</td><td>ollama stop qwen3.5</td></tr>
-<tr><td>ollama cp &lt;src&gt; &lt;dst&gt;</td><td>Copia o renombra un modelo</td><td>ollama cp qwen3.5 runoob-clone</td></tr>
+<tr><td>ollama cp &lt;src&gt; &lt;dst&gt;</td><td>Copia o renombra un modelo</td><td>ollama cp qwen3.5 ejemplo-clone</td></tr>
 <tr><td>ollama rm &lt;model&gt;</td><td>Elimina un modelo local y libera espacio en disco</td><td>ollama rm qwen3.5:0.8b</td></tr>
-<tr><td>ollama create &lt;name&gt; -f &lt;file&gt;</td><td>Crea un modelo personalizado basado en un Modelfile</td><td>ollama create runoob-coder -f Modelfile</td></tr>
-<tr><td>ollama push &lt;model&gt;</td><td>Envía el modelo a un repositorio remoto; requiere iniciar sesión primero</td><td>ollama push myteam/runoob-coder</td></tr>
+<tr><td>ollama create &lt;name&gt; -f &lt;file&gt;</td><td>Crea un modelo personalizado basado en un Modelfile</td><td>ollama create ejemplo-coder -f Modelfile</td></tr>
+<tr><td>ollama push &lt;model&gt;</td><td>Envía el modelo a un repositorio remoto; requiere iniciar sesión primero</td><td>ollama push myteam/ejemplo-coder</td></tr>
 <tr><td>ollama serve</td><td>Inicia el servicio en segundo plano, normalmente se ejecuta automáticamente con el sistema</td><td>ollama serve</td></tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ curl http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<s
 ollama pull qwen3.5:0.8b<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Crea una copia y cambia su nombre</span><br/>
-ollama <span style="color: #C20CB9; font-weight: bold;">cp</span> qwen3.5 runoob-clone<br/>
+ollama <span style="color: #C20CB9; font-weight: bold;">cp</span> qwen3.5 ejemplo-clone<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Después de confirmar que la copia se hizo correctamente, elimina la especificación que ya no se necesita</span><br/>
 ollama <span style="color: #C20CB9; font-weight: bold;">rm</span> qwen3.5:0.8b<br/>
@@ -239,7 +239,7 @@ ollama <span style="color: #C20CB9; font-weight: bold;">rm</span> qwen3.5:0.8b<b
 ollama run qwen3.5<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Pregunta y respuesta única: el aviso sigue al nombre del modelo, y sale automáticamente después de responder</span><br/>
-ollama run qwen3.5 <span style="color: #a10;">"Presenta runoob (Tutorial para novatos) en una frase"</span><br/>
+ollama run qwen3.5 <span style="color: #a10;">"Presenta ejemplo (Tutorial para novatos) en una frase"</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Muestra estadísticas de tokens: tiempo total, tokens por segundo y otras métricas de rendimiento</span><br/>
 ollama run qwen3.5 <span style="color: #660033;">--verbose</span><br/>
@@ -294,10 +294,10 @@ PARAMETER num_ctx <span style="color: #000000;">8192</span><br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Construye un nuevo modelo con Modelfile</span><br/>
-ollama create runoob-coder <span style="color: #660033;">-f</span> Modelfile<br/>
+ollama create ejemplo-coder <span style="color: #660033;">-f</span> Modelfile<br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Ejecuta como un modelo normal</span><br/>
-ollama run runoob-coder <span style="color: #a10;">"Escribe un quicksort, con pruebas"</span><br/>
+ollama run ejemplo-coder <span style="color: #a10;">"Escribe un quicksort, con pruebas"</span><br/>
 </div>
 </div>
 <p>Para importar pesos GGUF locales solo necesitas apuntar `FROM` a la ruta del archivo; se usa a menudo para ejecutar archivos de modelo descargados de la comunidad de código abierto.</p>
@@ -383,14 +383,14 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <br/>
 resp <span style="color: Gray;">=</span> client.<span style="color: #05a;">chat</span>.<span style="color: #05a;">completions</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span><span style="color: #a11;">"qwen3.5"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Nombre del modelo descargado localmente</span><br/>
-    messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Hola, por favor cuéntame sobre runoob"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
+    messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Hola, por favor cuéntame sobre ejemplo"</span><span style="color: Olive;">}</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>resp.<span style="color: #05a;">choices</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span>.<span style="color: #05a;">message</span>.<span style="color: #05a;">content</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <pre>
 $ python3 openai_compat.py
-你好！runoob（菜鸟教程）是一个面向初学者的编程学习网站，提供大量免费的基础技术教程。
+你好！ejemplo（Ejemplo）是一个面向初学者的编程学习网站，提供大量免费的基础技术教程。
 </pre>
 <hr/>
 <h2>Referencia rápida de variables de entorno</h2>

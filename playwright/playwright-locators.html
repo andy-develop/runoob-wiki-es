@@ -348,7 +348,7 @@ await submitBtn.<span style="color: #660066;">click</span><span style="color: #0
 await homeLink.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Localizar un encabezado — mediante el rol "heading"</span><br/>
-<span style="color: #000066; font-weight: bold;">const</span> mainTitle <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'heading'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Bienvenido a RUNOOB'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">const</span> mainTitle <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'heading'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Bienvenido a EJEMPLO'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Localizar un cuadro de texto — mediante el rol "textbox"</span><br/>
 <span style="color: #000066; font-weight: bold;">const</span> searchBox <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'textbox'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Buscar'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -360,7 +360,7 @@ await searchBox.<span style="color: #660066;">fill</span><span style="color: #00
 <tr><th>Role</th><th>Elemento HTML correspondiente</th><th>Ejemplo de uso</th></tr>
 <tr><td><code>'button'</code></td><td><code>&lt;button&gt;</code>、<code>role="button"</code></td><td><code>getByRole('button', { name: '登录' })</code></td></tr>
 <tr><td><code>'link'</code></td><td><code>&lt;a&gt;</code></td><td><code>getByRole('link', { name: '了解更多' })</code></td></tr>
-<tr><td><code>'heading'</code></td><td><code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code></td><td><code>getByRole('heading', { name: 'RUNOOB 教程' })</code></td></tr>
+<tr><td><code>'heading'</code></td><td><code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code></td><td><code>getByRole('heading', { name: 'EJEMPLO 教程' })</code></td></tr>
 <tr><td><code>'textbox'</code></td><td><code>&lt;input type="text"&gt;</code>、<code>&lt;textarea&gt;</code></td><td><code>getByRole('textbox', { name: '用户名' })</code></td></tr>
 <tr><td><code>'checkbox'</code></td><td><code>&lt;input type="checkbox"&gt;</code></td><td><code>getByRole('checkbox', { name: '记住我' })</code></td></tr>
 <tr><td><code>'radio'</code></td><td><code>&lt;input type="radio"&gt;</code></td><td><code>getByRole('radio', { name: '男' })</code></td></tr>
@@ -384,7 +384,7 @@ page.<span style="color: #660066;">getByRole</span><span style="color: #009900;"
 page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'button'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Cerrar diálogo'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Coincidencia con expresión regular</span><br/>
-page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'link'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #009966; font-style: italic;">/RUNOOB|novato/</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+page.<span style="color: #660066;">getByRole</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'link'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> name<span style="color: #339933;">:</span> <span style="color: #009966; font-style: italic;">/EJEMPLO|novato/</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>Opciones de estado</h3>
@@ -415,20 +415,20 @@ page.<span style="color: #660066;">getByRole</span><span style="color: #009900;"
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Coincidencia exacta de texto</span><br/>
-page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Bienvenido a RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Bienvenido a EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Coincidencia parcial (por defecto)</span><br/>
-page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Forzar coincidencia exacta</span><br/>
-page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> exact<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> exact<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Coincidencia con expresión regular</span><br/>
-page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/RUNOOB|tutorial para novatos/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/EJEMPLO|tutorial para novatos/</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
-<p><code>getByText</code>Coincide con el contenido de texto completo del elemento, por lo tanto<code>getByText('RUNOOB', { exact: true })</code>solo coincidirá con elementos cuyo contenido de texto sea exactamente "RUNOOB".</p>
-<p>Cuando no se usa coincidencia exacta por defecto, basta con la coincidencia de subcadena (por ejemplo,<code>getByText('RUNOOB')</code>coincidirá con "Bienvenido a RUNOOB").</p>
+<p><code>getByText</code>Coincide con el contenido de texto completo del elemento, por lo tanto<code>getByText('EJEMPLO', { exact: true })</code>solo coincidirá con elementos cuyo contenido de texto sea exactamente "EJEMPLO".</p>
+<p>Cuando no se usa coincidencia exacta por defecto, basta con la coincidencia de subcadena (por ejemplo,<code>getByText('EJEMPLO')</code>coincidirá con "Bienvenido a EJEMPLO").</p>
 <hr/>
 <h2>Localizar por etiqueta: getByLabel()</h2>
 <p><code>getByLabel()</code>Se utiliza para localizar<code>&lt;label&gt;</code>los controles de formulario asociados.</p>
@@ -440,7 +440,7 @@ page.<span style="color: #660066;">getByText</span><span style="color: #009900;"
 <span style="color: #006600; font-style: italic;">// &lt;input id="username" type="text" /&gt;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Localizar el input mediante el texto de la label</span><br/>
-await page.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Estructura HTML:</span><br/>
 <span style="color: #006600; font-style: italic;">// &lt;label&gt;contraseña &lt;input type="password" /&gt;&lt;/label&gt;</span><br/>
@@ -460,7 +460,7 @@ await page.<span style="color: #660066;">getByLabel</span><span style="color: #0
 await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Ingrese la palabra clave de búsqueda'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Playwright'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Estructura HTML: &lt;textarea placeholder="Cuéntanos lo que piensas..."&gt;&lt;/textarea&gt;</span><br/>
-await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Cuéntanos lo que piensas...'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'¡Los tutoriales de RUNOOB son increíbles!'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Cuéntanos lo que piensas...'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'¡Los tutoriales de EJEMPLO son increíbles!'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>Elección entre getByLabel y getByPlaceholder</h3>
@@ -478,8 +478,8 @@ await page.<span style="color: #660066;">getByPlaceholder</span><span style="col
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
-<span style="color: #006600; font-style: italic;">// HTML：&lt;img src="logo.png" alt="RUNOOB Logo" /&gt;</span><br/>
-await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByAltText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB Logo'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #006600; font-style: italic;">// HTML：&lt;img src="logo.png" alt="EJEMPLO Logo" /&gt;</span><br/>
+await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByAltText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO Logo'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Coincidencia con expresión regular</span><br/>
 await expect<span style="color: #009900;">(</span>page.<span style="color: #660066;">getByAltText</span><span style="color: #009900;">(</span><span style="color: #009966; font-style: italic;">/logo/i</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span>.<span style="color: #660066;">toBeVisible</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -539,7 +539,7 @@ await expect<span style="color: #009900;">(</span>items<span style="color: #0099
 await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'.submit-btn'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Mediante el ID</span><br/>
-await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'#username'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'#username'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Mediante el atributo</span><br/>
 await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'[data-type="primary"]'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
@@ -562,7 +562,7 @@ await page.<span style="color: #660066;">locator</span><span style="color: #0099
 await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'xpath=//button[@type="submit"]'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Localizar por texto</span><br/>
-await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'xpath=//h1[contains(text(), "RUNOOB")]'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">locator</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'xpath=//h1[contains(text(), "EJEMPLO")]'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">click</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <blockquote>
@@ -629,8 +629,8 @@ page<br/>
   .<span style="color: #660066;">and</span><span style="color: #009900;">(</span>page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Enviar'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Cumplir cualquiera de las condiciones</span><br/>
-<span style="color: #000066; font-weight: bold;">const</span> target <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB'</span><span style="color: #009900;">)</span><br/>
-  .<span style="color: #660066;">or</span><span style="color: #009900;">(</span>page.<span style="color: #660066;">getByTitle</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'RUNOOB'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000066; font-weight: bold;">const</span> target <span style="color: #339933;">=</span> page.<span style="color: #660066;">getByText</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #009900;">)</span><br/>
+  .<span style="color: #660066;">or</span><span style="color: #009900;">(</span>page.<span style="color: #660066;">getByTitle</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'EJEMPLO'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <hr/>

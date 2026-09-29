@@ -318,7 +318,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <tbody>
 <tr>
 <td>1</td>
-<td>Crea una aplicación de Android con Android Studio y asígnala el nombre Content Provider, en el paquete com.runoob.contentprovider, y crea una actividad vacía.</td>
+<td>Crea una aplicación de Android con Android Studio y asígnala el nombre Content Provider, en el paquete com.ejemplo.contentprovider, y crea una actividad vacía.</td>
 </tr>
 <tr>
 <td>2</td>
@@ -326,7 +326,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tr>
 <tr>
 <td>3</td>
-<td>Crea un nuevo archivo Java StudentsProvider.java en el paquete com.runoob.contentprovider para definir el proveedor real y asociar los métodos.</td>
+<td>Crea un nuevo archivo Java StudentsProvider.java en el paquete com.ejemplo.contentprovider para definir el proveedor real y asociar los métodos.</td>
 </tr>
 <tr>
 <td>4</td>
@@ -346,8 +346,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tr>
 </tbody>
 </table>
-<p>A continuación se muestra el contenido del archivo de actividad principal modificado src/com.runoob.contentprovider/MainActivity.java. Este archivo contiene cada método básico del ciclo de vida. Hemos agregado dos nuevos métodos, onClickAddName() y onClickRetrieveStudents(), para que la aplicación maneje la interacción del usuario.</p>
-<pre>package com.runoob.contentprovider;
+<p>A continuación se muestra el contenido del archivo de actividad principal modificado src/com.ejemplo.contentprovider/MainActivity.java. Este archivo contiene cada método básico del ciclo de vida. Hemos agregado dos nuevos métodos, onClickAddName() y onClickRetrieveStudents(), para que la aplicación maneje la interacción del usuario.</p>
+<pre>package com.ejemplo.contentprovider;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -359,7 +359,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.runoob.contentprovider.R;
+import com.ejemplo.contentprovider.R;
 
 public class MainActivity extends Activity {
 
@@ -411,9 +411,9 @@ public class MainActivity extends Activity {
         }
     }
 }</pre>
-<p>Crea el nuevo archivo StudentsProvider.java en el paquete com.runoob.contentprovider. A continuación se muestra el contenido de src/com.runoob.contentprovider/StudentsProvider.java.</p>
+<p>Crea el nuevo archivo StudentsProvider.java en el paquete com.ejemplo.contentprovider. A continuación se muestra el contenido de src/com.ejemplo.contentprovider/StudentsProvider.java.</p>
 <pre>
-package com.runoob.contentprovider;
+package com.ejemplo.contentprovider;
 
 import java.util.HashMap;
 
@@ -622,7 +622,7 @@ public class StudentsProvider extends ContentProvider {
 <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.runoob.contentprovider"
+    package="com.ejemplo.contentprovider"
     android:versionCode="1"
     android:versionName="1.0" &gt;
 
@@ -637,7 +637,7 @@ public class StudentsProvider extends ContentProvider {
         android:theme="@style/AppTheme" &gt;
 
         &lt;activity
-            android:name="com.runoob.contentprovider.MainActivity"
+            android:name="com.ejemplo.contentprovider.MainActivity"
             android:label="@string/app_name" &gt;
 
             &lt;intent-filter&gt;
@@ -677,7 +677,7 @@ public class StudentsProvider extends ContentProvider {
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.runoob.com"
+        android:text="www.example.com"
         android:textColor="#ff87ff09"
         android:textSize="30dp"
         android:layout_below="@+id/textView1"

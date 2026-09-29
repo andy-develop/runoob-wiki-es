@@ -360,16 +360,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>with</strong>La sentencia hace que el código sea más claro y legible, simplifica la gestión de recursos comunes como flujos de archivos.</p>
 <p>Usar la palabra clave with al manejar objetos de archivo es una buena práctica.</p>Podemos ver los siguientes ejemplos de código:<p>No usar<strong>with</strong>, y tampoco usar<strong>try…except…finally</strong></p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Teal;">file</span> <span style="color: Gray;">=</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_runoob.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span><br/>
+<span style="color: Teal;">file</span> <span style="color: Gray;">=</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_ejemplo.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span><br/>
 <span style="color: Teal;">file</span>.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">'hello world !'</span><span style="color: Olive;">)</span><br/>
 <span style="color: Teal;">file</span>.<span style="color: #05a;">close</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <p>En el código anterior, si ocurre una excepción durante la llamada a write, el método close no se ejecutará, por lo que el recurso será ocupado por el programa y no podrá liberarse.</p>
 <blockquote>
-<p>Más referencias sobre la palabra clave with en Python:<a href="../python3/python3-with-keyword.html" target="_blank">https://www.runoob.com/python3/python3-with-keyword.html</a></p></blockquote>
+<p>Más referencias sobre la palabra clave with en Python:<a href="../python3/python3-with-keyword.html" target="_blank">https://www.example.com/python3/python3-with-keyword.html</a></p></blockquote>
 <p>A continuación, podemos usar<strong>try…except…finally</strong>para mejorar el código:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Teal;">file</span> <span style="color: Gray;">=</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_runoob.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span><br/>
+<span style="color: Teal;">file</span> <span style="color: Gray;">=</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_ejemplo.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">try</span>:<br/>
     <span style="color: Teal;">file</span>.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">'hello world'</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">finally</span>:<br/>
@@ -378,11 +378,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En el código anterior, capturamos con try el código donde pueden ocurrir excepciones; cuando ocurre una excepción, se ejecuta el bloque except; el bloque finally se ejecuta siempre, por lo que el archivo se cerrará y no ocupará recursos debido a la excepción.</p>
 <p>Usar<strong>with</strong>la palabra clave:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_runoob.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> <span style="color: Teal;">file</span>:<br/>
+<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_ejemplo.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> <span style="color: Teal;">file</span>:<br/>
     <span style="color: Teal;">file</span>.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">'hello world !'</span><span style="color: Olive;">)</span><br/>
 </div></div>
 <p>Usando<strong>with</strong>la palabra clave, el sistema llama automáticamente al método f.close(); el efecto de with es equivalente al de la sentencia try/finally.</p>Podemos comprobar si el archivo está cerrado después de ejecutar la palabra clave with:<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_runoob.txt'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> f:<br/>
+<span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_ejemplo.txt'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> f:<br/>
 ...     <span style="color: #05a;">read_data</span> <span style="color: Gray;">=</span> f.<span style="color: #05a;">read</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: #a50"># Verificar si el archivo está cerrado</span><br/>
@@ -394,10 +394,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El uso de la sentencia with asegura que el método __exit__ se llame al final del bloque anidado.</p>
 <p>Este concepto es similar al uso del bloque try...finally.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_runoob.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> my_file:<br/>
+<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">'./test_ejemplo.txt'</span><span style="color: Gray;">,</span> <span style="color: #a11;">'w'</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> my_file:<br/>
     my_file.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">'hello world!'</span><span style="color: Olive;">)</span><br/>
 </div></div>
-<p>El ejemplo anterior escribe<strong>hello world!</strong>en el archivo ./test_runoob.txt.</p>
+<p>El ejemplo anterior escribe<strong>hello world!</strong>en el archivo ./test_ejemplo.txt.</p>
 <p>En el objeto de archivo se definen los métodos __enter__ y __exit__, es decir, el objeto de archivo también implementa el administrador de contexto. Primero se llama al método __enter__, luego se ejecuta el código dentro de la sentencia with y finalmente se llama al método __exit__. Incluso si ocurre un error, se llamará al método __exit__, es decir, se cerrará el flujo de archivo.</p>
 <h3>Ejemplo</h3>
 <p>El siguiente código de Python es una herramienta sencilla de gestión de planes de viaje. Lee la lista de ciudades del archivo 5A.txt y ofrece las siguientes funciones:</p>

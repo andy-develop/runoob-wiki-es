@@ -395,7 +395,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Lee la imagen local y la codifica como cadena base64</span><br/>
-<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob-logo.png"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"rb"</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> f:<br/>
+<span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo-logo.png"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"rb"</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> f:<br/>
     b64 <span style="color: Gray;">=</span> <span style="color: #05a;">base64</span>.<span style="color: #05a;">b64encode</span><span style="color: Olive;">(</span>f.<span style="color: #05a;">read</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">decode</span><span style="color: Olive;">(</span><span style="color: #a11;">"utf-8"</span><span style="color: Olive;">)</span><br/>
 <br/>
 response <span style="color: Gray;">=</span> client.<span style="color: #05a;">chat</span>.<span style="color: #05a;">completions</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
@@ -422,7 +422,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">c
 </div>
 <p>Salida de ejecución:</p>
 <pre>
-图片中的文字是 "RUNOOB"。
+图片中的文字是 "EJEMPLO"。
 </pre>
 <h3>Método 2: URL externa</h3>
 <p>La imagen está desplegada en un servidor de acceso público. La solicitud solo envía una cadena URL, por lo que el cuerpo de la solicitud es muy pequeño.</p>
@@ -439,7 +439,7 @@ curl https:<span style="color: #000000; font-weight: bold;">//</span>api.deepsee
     {<br/>
       "role": "user",<br/>
       "content": [<br/>{"type": "text", "text": "Resume la tendencia de este gráfico en un párrafo"},<br/>
-        {"type": "image_url", "image_url": {"url": "https://static.runoob.com/images/chart-demo.png"}}<br/>
+        {"type": "image_url", "image_url": {"url": "https://static.example.com/images/chart-demo.png"}}<br/>
       ]<br/>
     }<br/>
   ]<br/>
@@ -482,7 +482,7 @@ curl https:<span style="color: #000000; font-weight: bold;">//</span>api.deepsee
           "type": "image",<br/>
           "source": {<br/>
             "type": "url",<br/>
-            "url": "https://static.runoob.com/images/code-screenshot.png"<br/>
+            "url": "https://static.example.com/images/code-screenshot.png"<br/>
           }<br/>
         },<br/>{"type": "text", "text": "Este código dará error al ejecutarse, ¿en qué línea está el problema?"}<br/>
       ]<br/>
@@ -507,7 +507,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">r
                 <span style="color: Olive;">{</span><span style="color: #a11;">"type"</span>: <span style="color: #a11;">"input_text"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"text"</span>: <span style="color: #a11;">"Convierte las tablas de la captura de pantalla en Markdown".</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
                 <span style="color: Olive;">{</span><br/>
                     <span style="color: #a11;">"type"</span>: <span style="color: #a11;">"input_image"</span><span style="color: Gray;">,</span><br/>
-                    <span style="color: #a11;">"image_url"</span>: <span style="color: #a11;">"https://static.runoob.com/images/table.png"</span><br/>
+                    <span style="color: #a11;">"image_url"</span>: <span style="color: #a11;">"https://static.example.com/images/table.png"</span><br/>
                 <span style="color: Olive;">}</span><br/>
             <span style="color: Olive;">]</span><br/>
         <span style="color: Olive;">}</span><br/>
@@ -532,7 +532,7 @@ response <span style="color: Gray;">=</span> client.<span style="color: #05a;">r
 curl https:<span style="color: #000000; font-weight: bold;">//</span>api.deepseek.com<span style="color: #000000; font-weight: bold;">/</span>files \<br/>
   <span style="color: #660033;">-H</span> <span style="color: #a10;">"Authorization: Bearer <span style="color: #007800;">${DEEPSEEK_API_KEY}</span>"</span> \<br/>
   <span style="color: #660033;">-F</span> <span style="color: #a10;">"purpose=user_data"</span> \<br/>
-  <span style="color: #660033;">-F</span> <span style="color: #a10;">"file=@runoob-chart.png"</span><br/>
+  <span style="color: #660033;">-F</span> <span style="color: #a10;">"file=@ejemplo-chart.png"</span><br/>
 </div>
 </div>
 <p>Tras subir con éxito, la plataforma devuelve la metainformación del archivo.</p>
@@ -543,7 +543,7 @@ curl https:<span style="color: #000000; font-weight: bold;">//</span>api.deepsee
 {<br/>
   "id": "file-api-qw3x8v2m6n",<br/>
   "object": "file",<br/>
-  "filename": "runoob-chart.png",<br/>
+  "filename": "ejemplo-chart.png",<br/>
   "purpose": "user_data",<br/>
   "bytes": 154320,<br/>
   "created_at": 1787300000,<br/>

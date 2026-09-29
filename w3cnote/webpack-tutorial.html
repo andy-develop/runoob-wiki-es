@@ -106,9 +106,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="hl-main"><span class="hl-identifier">mkdir</span><span class="hl-code"> </span><span class="hl-identifier">app</span></div>
 </div>
 </div>
-<p>Añade el archivo runoob1.js en el directorio app, el código es el siguiente:</p>
+<p>Añade el archivo ejemplo1.js en el directorio app, el código es el siguiente:</p>
 <div class="example">
-<h2 class="example">archivo app/runoob1.js</h2>
+<h2 class="example">archivo app/ejemplo1.js</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">It works.</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
@@ -130,50 +130,50 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>A continuación, usamos el comando webpack para empaquetar:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span></div>
+<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span></div>
 </div>
 </div>
-<p>Al ejecutar el comando anterior se compilará el archivo runoob1.js y se generará el archivo bundle.js. Si tiene éxito, la información de salida es la siguiente:</p><pre>
+<p>Al ejecutar el comando anterior se compilará el archivo ejemplo1.js y se generará el archivo bundle.js. Si tiene éxito, la información de salida es la siguiente:</p><pre>
 Hash: a41c6217554e666594cb
 Version: webpack 1.12.13
 Time: 50ms
     Asset     Size  Chunks             Chunk Names
 bundle.js  1.42 kB       0  [emitted]  main
-   [0] ./runoob1.js 29 bytes {0} [built]
+   [0] ./ejemplo1.js 29 bytes {0} [built]
 </pre>
 <p>Abre index.html en el navegador, el resultado se muestra a continuación:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/01/08C6036B-1B89-444A-94D7-4A920105E21B.jpg"/></p>
 <h3>Crear un segundo archivo JS</h3>
-<p>A continuación, creamos otro archivo js, runoob2.js, como se muestra a continuación:</p>
+<p>A continuación, creamos otro archivo js, ejemplo2.js, como se muestra a continuación:</p>
 <div class="example">
-<h2 class="example">archivo app/runoob2.js</h2>
+<h2 class="example">archivo app/ejemplo2.js</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">module</span><span class="hl-code">.</span><span class="hl-identifier">exports</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">It works from runoob2.js.</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
+<div class="hl-main"><span class="hl-identifier">module</span><span class="hl-code">.</span><span class="hl-identifier">exports</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">It works from ejemplo2.js.</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
 </div>
 </div>
-<p>Actualiza el archivo runoob1.js, el código es el siguiente:</p>
+<p>Actualiza el archivo ejemplo1.js, el código es el siguiente:</p>
 <div class="example">
-<h2 class="example">archivo app/runoob1.js</h2>
+<h2 class="example">archivo app/ejemplo1.js</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">./runoob2.js</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+<div class="hl-main"><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">./ejemplo2.js</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
 </div><p>A continuación, usamos el comando webpack para empaquetar:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code">
+<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code">
 </span><span class="hl-identifier">Hash</span><span class="hl-code">: </span><span class="hl-identifier">dcf55acff639ebfe1677</span><span class="hl-code">
 </span><span class="hl-identifier">Version</span><span class="hl-code">: </span><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-number">1.12</span><span class="hl-number">.13</span><span class="hl-code">
 </span><span class="hl-identifier">Time</span><span class="hl-code">: </span><span class="hl-number">52</span><span class="hl-identifier">ms</span><span class="hl-code">
 </span><span class="hl-identifier">Asset</span><span class="hl-code"> </span><span class="hl-identifier">Size</span><span class="hl-code"> </span><span class="hl-identifier">Chunks</span><span class="hl-code"> </span><span class="hl-identifier">Chunk</span><span class="hl-code"> </span><span class="hl-identifier">Names</span><span class="hl-code">
 </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">1.55</span><span class="hl-code"> </span><span class="hl-identifier">kB</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">emitted</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">41</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">1</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span></div>
+</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">41</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-number">1</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span></div>
 </div>
 </div>
 <p>Accede en el navegador, el resultado se muestra a continuación:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/01/40F7221F-417F-493B-BD47-1C5D03D39370.jpg"/></p>
 <p>webpack realiza un análisis estático según las dependencias de los módulos; estos archivos (módulos) se incluirán en el archivo bundle.js. Webpack asigna a cada módulo un id único y, a través de este id, indexa y accede a los módulos.  
-Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás módulos se ejecutan cuando se ejecuta require.</p>
+Al iniciar la página, primero se ejecuta el código de ejemplo1.js; los demás módulos se ejecutan cuando se ejecuta require.</p>
 <hr/>
 <h2>LOADER</h2>
 <p>Webpack por sí solo solo puede procesar módulos de JavaScript. Si se necesitan procesar otros tipos de archivos, se debe usar loader para convertirlos.</p>
@@ -194,41 +194,41 @@ Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás m
 </span><span class="hl-brackets">}</span></div>
 </div>
 </div>
-<p>Modifica el archivo runoob1.js, el código es el siguiente:</p>
+<p>Modifica el archivo ejemplo1.js, el código es el siguiente:</p>
 <div class="example">
-<h2 class="example">archivo app/runoob1.js</h2>
+<h2 class="example">archivo app/ejemplo1.js</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-identifier">require</span><span class="hl-code">("!</span><span class="hl-identifier">style-loader</span><span class="hl-code">!</span><span class="hl-identifier">css-loader</span><span class="hl-code">!./</span><span class="hl-identifier">style</span><span class="hl-identifier">.css</span><span class="hl-code">");
-</span><span class="hl-identifier">document</span><span class="hl-identifier">.write</span><span class="hl-code">(</span><span class="hl-identifier">require</span><span class="hl-code">("./</span><span class="hl-identifier">runoob2</span><span class="hl-identifier">.js</span><span class="hl-code">"));</span></div>
+</span><span class="hl-identifier">document</span><span class="hl-identifier">.write</span><span class="hl-code">(</span><span class="hl-identifier">require</span><span class="hl-code">("./</span><span class="hl-identifier">ejemplo2</span><span class="hl-identifier">.js</span><span class="hl-code">"));</span></div>
 </div>
 </div><p>A continuación, usamos el comando webpack para empaquetar:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code">
+<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code">
 </span><span class="hl-identifier">Hash</span><span class="hl-code">: </span><span class="hl-identifier">a9ef45165f81c89a4363</span><span class="hl-code">
 </span><span class="hl-identifier">Version</span><span class="hl-code">: </span><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-number">1.12</span><span class="hl-number">.13</span><span class="hl-code">
 </span><span class="hl-identifier">Time</span><span class="hl-code">: </span><span class="hl-number">619</span><span class="hl-identifier">ms</span><span class="hl-code">
 </span><span class="hl-identifier">Asset</span><span class="hl-code"> </span><span class="hl-identifier">Size</span><span class="hl-code"> </span><span class="hl-identifier">Chunks</span><span class="hl-code"> </span><span class="hl-identifier">Chunk</span><span class="hl-code"> </span><span class="hl-identifier">Names</span><span class="hl-code">
 </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">11.8</span><span class="hl-code"> </span><span class="hl-identifier">kB</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">emitted</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">76</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">76</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
     + </span><span class="hl-number">4</span><span class="hl-code"> </span><span class="hl-identifier">hidden</span><span class="hl-code"> </span><span class="hl-identifier">modules</span></div>
 </div>
 </div>
 <p>Accede en el navegador, el resultado se muestra a continuación:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/01/9ABEBA1F-DF8C-4019-BC6A-5B8D2A3A7BA4.jpg"/></p>
-<p>Al hacer require de archivos CSS, siempre hay que escribir el prefijo loader.<b>!style-loader!css-loader!</b>Por supuesto, podemos enlazar automáticamente el loader necesario según el tipo de módulo (extensión). En runoob1.js, la línea<b>require("!style-loader!css-loader!./style.css")</b>se modifica a<b>require("./style.css")</b> ：</p>
+<p>Al hacer require de archivos CSS, siempre hay que escribir el prefijo loader.<b>!style-loader!css-loader!</b>Por supuesto, podemos enlazar automáticamente el loader necesario según el tipo de módulo (extensión). En ejemplo1.js, la línea<b>require("!style-loader!css-loader!./style.css")</b>se modifica a<b>require("./style.css")</b> ：</p>
 <div class="example">
-<h2 class="example">archivo app/runoob1.js</h2>
+<h2 class="example">archivo app/ejemplo1.js</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">./style.css</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
-</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">./runoob2.js</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">write</span><span class="hl-brackets">(</span><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">./ejemplo2.js</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
 </div>
 <p>Luego ejecuta:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> --</span><span class="hl-identifier">module</span><span class="hl-code">-</span><span class="hl-identifier">bind</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">css=style-loader!css-loader</span><span class="hl-quotes">'</span></div>
+<div class="hl-main"><span class="hl-identifier">webpack</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> --</span><span class="hl-identifier">module</span><span class="hl-code">-</span><span class="hl-identifier">bind</span><span class="hl-code"> </span><span class="hl-quotes">'</span><span class="hl-string">css=style-loader!css-loader</span><span class="hl-quotes">'</span></div>
 </div>
 </div>
 <p>Accede en el navegador, el resultado se muestra a continuación:</p>
@@ -242,7 +242,7 @@ Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás m
 <h2 class="example">archivo app/webpack.config.js</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-identifier">module</span><span class="hl-code">.</span><span class="hl-identifier">exports</span><span class="hl-code"> = </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">entry</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">./runoob1.js</span><span class="hl-quotes">"</span><span class="hl-code">,
+</span><span class="hl-identifier">entry</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">./ejemplo1.js</span><span class="hl-quotes">"</span><span class="hl-code">,
     </span><span class="hl-identifier">output</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">path</span><span class="hl-code">: </span><span class="hl-identifier">__dirname</span><span class="hl-code">,
         </span><span class="hl-identifier">filename</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">bundle.js</span><span class="hl-quotes">"</span><span class="hl-code">
@@ -264,8 +264,8 @@ Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás m
 </span><span class="hl-identifier">Time</span><span class="hl-code">: </span><span class="hl-number">576</span><span class="hl-identifier">ms</span><span class="hl-code">
 </span><span class="hl-identifier">Asset</span><span class="hl-code"> </span><span class="hl-identifier">Size</span><span class="hl-code"> </span><span class="hl-identifier">Chunks</span><span class="hl-code"> </span><span class="hl-identifier">Chunk</span><span class="hl-code"> </span><span class="hl-identifier">Names</span><span class="hl-code">
 </span><span class="hl-identifier">bundle</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">11.8</span><span class="hl-code"> </span><span class="hl-identifier">kB</span><span class="hl-code"> </span><span class="hl-number">0</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">emitted</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-identifier">main</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">65</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">runoob2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-number">0</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo1</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">65</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-number">5</span><span class="hl-brackets">]</span><span class="hl-code"> ./</span><span class="hl-identifier">ejemplo2</span><span class="hl-code">.</span><span class="hl-identifier">js</span><span class="hl-code"> </span><span class="hl-number">46</span><span class="hl-code"> </span><span class="hl-identifier">bytes</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-number">0</span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-brackets">[</span><span class="hl-identifier">built</span><span class="hl-brackets">]</span><span class="hl-code">
     + </span><span class="hl-number">4</span><span class="hl-code"> </span><span class="hl-identifier">hidden</span><span class="hl-code"> </span><span class="hl-identifier">modules</span></div>
 </div>
 </div>
@@ -288,7 +288,7 @@ Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás m
 <div class="hl-main"><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">webpack</span><span class="hl-code">=</span><span class="hl-identifier">require</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">webpack</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-identifier">module</span><span class="hl-code">.</span><span class="hl-identifier">exports</span><span class="hl-code"> = </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">entry</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">./runoob1.js</span><span class="hl-quotes">"</span><span class="hl-code">,
+</span><span class="hl-identifier">entry</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">./ejemplo1.js</span><span class="hl-quotes">"</span><span class="hl-code">,
     </span><span class="hl-identifier">output</span><span class="hl-code">: </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">path</span><span class="hl-code">: </span><span class="hl-identifier">__dirname</span><span class="hl-code">,
         </span><span class="hl-identifier">filename</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">bundle.js</span><span class="hl-quotes">"</span><span class="hl-code">
@@ -299,7 +299,7 @@ Al iniciar la página, primero se ejecuta el código de runoob1.js; los demás m
 </span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">,
     </span><span class="hl-identifier">plugins</span><span class="hl-code">:</span><span class="hl-brackets">[</span><span class="hl-code">
-</span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">webpack</span><span class="hl-code">.</span><span class="hl-identifier">BannerPlugin</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo de webpack de Runoob</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">webpack</span><span class="hl-code">.</span><span class="hl-identifier">BannerPlugin</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo de webpack de Ejemplo</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">;</span></div>
 </div>

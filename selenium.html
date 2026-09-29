@@ -267,7 +267,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ol><li><p><strong>Aprende los fundamentos de programación</strong>(como Python o Java).</p></li><li><p><strong>Aprende los fundamentos de desarrollo web</strong>（HTML、CSS、JavaScript）。</p></li><li><p><strong>Familiarízate con las herramientas de desarrollo del navegador</strong>。</p></li><li><p><strong>Aprende los fundamentos de Selenium</strong>(configuración del entorno, localización de elementos, manipulación de elementos).</p></li><li><p><strong>Proyectos prácticos</strong>(como inicio de sesión automatizado, envío de formularios, extracción de datos, etc.).</p></li><li><p><strong>Aprende temas avanzados</strong>(como mecanismos de espera, operaciones del navegador, integración con marcos de prueba).</p></li></ol>
 <hr/>
 <h2>Escribir tu primer script de Selenium</h2>
-<p>A continuación se muestra un ejemplo sencillo de un script de Selenium escrito en Python. Este script abrirá el navegador Chrome, visitará la página principal de Baidu, escribirá "Runoob" en el cuadro de búsqueda y hará clic en el botón de búsqueda.</p>
+<p>A continuación se muestra un ejemplo sencillo de un script de Selenium escrito en Python. Este script abrirá el navegador Chrome, visitará la página principal de Baidu, escribirá "Ejemplo" en el cuadro de búsqueda y hará clic en el botón de búsqueda.</p>
 <div class="example">
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
@@ -283,8 +283,8 @@ driver.<span style="color: #05a;">get</span><span style="color: Olive;">(</span>
 <span style="color: #a50"># Encuentra el elemento del cuadro de búsqueda</span><br/>
 search_box <span style="color: Gray;">=</span> driver.<span style="color: #05a;">find_element_by_name</span><span style="color: Olive;">(</span><span style="color: #a11;">"wd"</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: #a50"># Escribe "Runoob" en el cuadro de búsqueda</span><br/>
-search_box.<span style="color: #05a;">send_keys</span><span style="color: Olive;">(</span><span style="color: #a11;">"Runoob"</span><span style="color: Olive;">)</span><br/>
+<span style="color: #a50"># Escribe "Ejemplo" en el cuadro de búsqueda</span><br/>
+search_box.<span style="color: #05a;">send_keys</span><span style="color: Olive;">(</span><span style="color: #a11;">"Ejemplo"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Simula presionar la tecla Enter</span><br/>
 search_box.<span style="color: #05a;">send_keys</span><span style="color: Olive;">(</span>Keys.<span style="color: #05a;">RETURN</span><span style="color: Olive;">)</span><br/>
@@ -298,7 +298,7 @@ driver.<span style="color: #05a;">quit</span><span style="color: Olive;">(</span
 <li><code>webdriver.Chrome()</code>: Crea una instancia de Chrome WebDriver.</li>
 <li><code>driver.get("https://www.baidu.com")</code>: Abre la página principal de Baidu.</li>
 <li><code>driver.find_element_by_name("wd")</code>: Busca el elemento con atributo name "wd" en la página (es decir, el cuadro de búsqueda).</li>
-<li><code>search_box.send_keys("Runoob")</code>: Escribe "Runoob" en el cuadro de búsqueda.</li>
+<li><code>search_box.send_keys("Ejemplo")</code>: Escribe "Ejemplo" en el cuadro de búsqueda.</li>
 <li><code>search_box.send_keys(Keys.RETURN)</code>: Simula presionar la tecla Enter para activar la búsqueda.</li>
 <li><code>driver.quit()</code>: Cierra el navegador.</li>
 </ul>

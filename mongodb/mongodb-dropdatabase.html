@@ -313,25 +313,25 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>db.dropDatabase()</pre>
 <p>Elimina la base de datos actual, cuyo valor predeterminado es `test`; puedes usar el comando `db` para ver el nombre de la base de datos actual.</p>
 <h3>Ejemplo</h3>
-<p>En el siguiente ejemplo eliminamos la base de datos `runoob`.</p>
+<p>En el siguiente ejemplo eliminamos la base de datos `ejemplo`.</p>
 <p>Primero, ve todas las bases de datos:</p>
 <pre>
 &gt; show dbs
 admin   0.000GB
 config  0.000GB
 local   0.000GB
-runoob  0.000GB
+ejemplo  0.000GB
 </pre>
-<p>A continuación, cambiamos a la base de datos `runoob`:</p>
+<p>A continuación, cambiamos a la base de datos `ejemplo`:</p>
 <pre>
-&gt; use runoob
-switched to db runoob
+&gt; use ejemplo
+switched to db ejemplo
 &gt; 
 </pre>
 <p>Ejecuta el comando de eliminación:</p>
 <pre>
 &gt; db.dropDatabase()
-{ "dropped" : "runoob", "ok" : 1 }
+{ "dropped" : "ejemplo", "ok" : 1 }
 </pre>
 <p>Finalmente, usamos el comando `show dbs` para verificar si la base de datos se eliminó correctamente:</p>
 <pre>
@@ -345,14 +345,14 @@ local   0.000GB
 <pre>
 db.collection.drop()
 </pre>
-<p>El siguiente ejemplo elimina la colección `site` de la base de datos `runoob`:</p>
+<p>El siguiente ejemplo elimina la colección `site` de la base de datos `ejemplo`:</p>
 <pre>
-&gt; use runoob
-switched to db runoob
-&gt; db.createCollection("runoob")     # 先创建集合，类似数据库中的表
+&gt; use ejemplo
+switched to db ejemplo
+&gt; db.createCollection("ejemplo")     # 先创建集合，类似数据库中的表
 &gt; show tables             # show collections 命令会更加准确点
-runoob
-&gt; db.runoob.drop()
+ejemplo
+&gt; db.ejemplo.drop()
 true
 &gt; show tables
 &gt; 

@@ -339,7 +339,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> index<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># render_template('nombre_de_plantilla', nombre_variable=valor, ...)</span><br/>
-    <span style="color: Green;font-weight:bold;">return</span> render_template<span style="color: Olive;">(</span><span style="color: #a11;">'index.html'</span><span style="color: Gray;">,</span> title<span style="color: Gray;">=</span><span style="color: #a11;">'Blog RUNOOB'</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> render_template<span style="color: Olive;">(</span><span style="color: #a11;">'index.html'</span><span style="color: Gray;">,</span> title<span style="color: Gray;">=</span><span style="color: #a11;">'Blog EJEMPLO'</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <p>Flask, por defecto, en el directorio raíz del proyecto,<code>templates/</code>busca plantillas en la carpeta `templates`.</p>
@@ -391,7 +391,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">charset</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"UTF-8"</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">meta</span> <span style="color: #00c;">name</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"viewport"</span> <span style="color: #00c;">content</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"width=device-width, initial-scale=1.0"</span>&gt;</span><br/>
     <span style="color: #808080; font-style: italic;">&lt;!-- block title: la plantilla hija puede sobrescribir el título de la página --&gt;</span><br/>
-    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Blog RUNOOB{% endblock %}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
+    <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">title</span>&gt;</span>{% block title %}Blog EJEMPLO{% endblock %}<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">title</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">style</span>&gt;</span><br/>
         * { margin: 0; padding: 0; box-sizing: border-box; }<br/>
         body {<br/>
@@ -413,7 +413,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">head</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">header</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"navbar"</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>Blog RUNOOB (Flask)<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"logo"</span>&gt;</span>Blog EJEMPLO (Flask)<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
         <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">nav</span>&gt;</span><br/>
             <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/"</span>&gt;</span>Inicio<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
             <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">a</span> <span style="color: #00c;">href</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"/about"</span>&gt;</span>Acerca de<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">a</span>&gt;</span><br/>
@@ -427,7 +427,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span>main&gt;</span><br/>
 <br/>
     <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">footer</span> <span style="color: #00c;">class</span><span style="color: #66CC66;">=</span><span style="color: #a11;">"footer"</span>&gt;</span><br/>
-        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>© 2024 Blog RUNOOB. Funciona con Flask.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
+        <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">p</span>&gt;</span>© 2024 Blog EJEMPLO. Funciona con Flask.<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">p</span>&gt;</span><br/>
     <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">footer</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">body</span>&gt;</span><br/>
 <span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">html</span>&gt;</span><br/>
@@ -439,7 +439,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <div class="example_code">
 <span style="color: #808080; font-style: italic;">&lt;!-- Ruta del archivo: templates/index.html --&gt;</span><br/>
 {% extends 'base.html' %}<br/>
-<br/>{% block title %}Blog RUNOOB - Inicio{% endblock %}<br/>
+<br/>{% block title %}Blog EJEMPLO - Inicio{% endblock %}<br/>
 <br/>
 {% block content %}<br/>
 <span style="color: #170;">&lt;<span style="color: #170; font-weight: bold;">h2</span>&gt;</span>Artículos recientes<span style="color: #170;">&lt;<span style="color: #66CC66;">/</span><span style="color: #170; font-weight: bold;">h2</span>&gt;</span><br/>

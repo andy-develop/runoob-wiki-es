@@ -282,7 +282,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #666666; font-style: italic;">; Uso básico de la instrucción LOOP: repetir la salida 5 veces</span><br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.data</span><br/>
-    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'runoob'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
+    msg <span style="color: #0000FF; font-weight: bold;">db</span> <span style="color: #7F007F;">'ejemplo'</span><span style="color: #339933;">,</span> <span style="color: #FF0000;">0xA</span><br/>
     len <span style="color: #0000FF; font-weight: bold;">equ</span> <span style="color: #0000FF; font-weight: bold;">$</span> <span style="color: #339933;">-</span> msg<br/>
 <br/>
 <span style="color: #0000FF; font-weight: bold;">section</span> <span style="color: #0000FF; font-weight: bold;">.text</span><br/>
@@ -316,11 +316,11 @@ repeat<span style="color: #339933;">:</span><br/>
 $ nasm -f elf32 loop_basic.asm -o loop_basic.o
 $ ld -m elf_i386 loop_basic.o -o loop_basic
 $ ./loop_basic
-runoob
-runoob
-runoob
-runoob
-runoob
+ejemplo
+ejemplo
+ejemplo
+ejemplo
+ejemplo
 </pre>
 <blockquote><p><code>loop</code>Por defecto se usa ECX (32 bits) como contador. En modo de 16 bits se usa CX, y en modo de 64 bits se usa RCX. Asegúrate de establecer correctamente el valor de ECX antes de loop.</p></blockquote>
 <hr/>

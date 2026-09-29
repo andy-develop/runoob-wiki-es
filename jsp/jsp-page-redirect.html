@@ -295,7 +295,7 @@ throws IOException
 <p>Este método envía el código de estado y la nueva ubicación de la página al navegador como respuesta. También puede utilizar los métodos setStatus() y setHeader() para obtener el mismo efecto:</p>
 <pre>
 ....
-String site = "http://www.runoob.com" ;
+String site = "http://www.example.com" ;
 response.setStatus(response.SC_MOVED_TEMPORARILY);
 response.setHeader("Location", site); 
 ....
@@ -318,7 +318,7 @@ response.setHeader("Location", site);
 
 &lt;%
    // 重定向到新地址
-   String site = new String("http://www.runoob.com");
+   String site = new String("http://www.example.com");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
    response.setHeader("Location", site); 
 %&gt;
@@ -326,7 +326,7 @@ response.setHeader("Location", site);
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>Guarde el código anterior en el archivo PageRedirecting.jsp y luego acceda a http://localhost:8080/PageRedirect.jsp, lo llevará a<a href="../index.html" target="_blank">http://www.runoob.com/</a>。</p>
+<p>Guarde el código anterior en el archivo PageRedirecting.jsp y luego acceda a http://localhost:8080/PageRedirect.jsp, lo llevará a<a href="../index.html" target="_blank">http://www.example.com/</a>。</p>
 Otras extensiones
 </div>
 </div>

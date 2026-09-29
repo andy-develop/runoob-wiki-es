@@ -398,7 +398,7 @@ X <span style="color: Gray;">=</span> np.<span style="color: #05a;">hstack</span
     base * <span style="color: Maroon;">1.5</span> + np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span>n<span style="color: Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">0.3</span><span style="color: Gray;">,</span>  <span style="color: #a50"># columna x2</span><br/>
     np.<span style="color: #05a;">random</span>.<span style="color: #05a;">randn</span><span style="color: Olive;">(</span>n<span style="color: Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: Olive;">)</span> * <span style="color: Maroon;">0.2</span><span style="color: Gray;">,</span>               <span style="color: #a50"># columna x3 (ruido)</span><br/>
 <span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"RUNOOB Forma de los datos originales:"</span><span style="color: Gray;">,</span> X.<span style="color: #05a;">shape</span><span style="color: Gray;">,</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"EJEMPLO Forma de los datos originales:"</span><span style="color: Gray;">,</span> X.<span style="color: #05a;">shape</span><span style="color: Gray;">,</span><br/>
       <span style="color: #a11;">"(300 muestras, cada muestra de 3 dimensiones)"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># 2. PCA manual (cuatro pasos)</span><br/>
@@ -422,7 +422,7 @@ X <span style="color: Gray;">=</span> np.<span style="color: #05a;">hstack</span
 <br/>
 X_reduced<span style="color: Gray;">,</span> eigvals<span style="color: Gray;">,</span> explained_ratio <span style="color: Gray;">=</span> pca<span style="color: Olive;">(</span>X<span style="color: Gray;">,</span> n_components<span style="color: Gray;">=</span><span style="color: Maroon;">2</span><span style="color: Olive;">)</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>RUNOOB Tres valores propios (magnitud de varianza):"</span><span style="color: Gray;">,</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>EJEMPLO Tres valores propios (magnitud de varianza):"</span><span style="color: Gray;">,</span><br/>
       np.<span style="color: Teal;">round</span><span style="color: Olive;">(</span>eigvals<span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Proporción de varianza explicada por los primeros 2 componentes principales:"</span><span style="color: Gray;">,</span><br/>
       np.<span style="color: Teal;">round</span><span style="color: Olive;">(</span>explained_ratio<span style="color: Gray;">,</span> <span style="color: Maroon;">3</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
@@ -432,20 +432,20 @@ X_reduced<span style="color: Gray;">,</span> eigvals<span style="color: Gray;">,
       <span style="color: #a11;">"(Se redujo de 3 dimensiones a 2 dimensiones)"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># 3. Observación clave: el tercer valor propio es muy pequeño</span><br/>
-<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>RUNOOB El tercer valor propio es solo {eigvals</span><br/>
+<span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>EJEMPLO El tercer valor propio es solo {eigvals</span><br/>
       f<span style="color: #a11;">"mucho menor que los dos primeros ({eigvals</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Indica que la tercera dimensión casi no tiene información: ¡se puede descartar de forma segura!"</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <pre>
-RUNOOB 原始数据形状: (300, 3) (300 个样本，每个样本 3 维)
+EJEMPLO 原始数据形状: (300, 3) (300 个样本，每个样本 3 维)
 
-RUNOOB 三个特征值 (方差大小): [9.569 2.267 0.04 ]
+EJEMPLO 三个特征值 (方差大小): [9.569 2.267 0.04 ]
 前 2 个主成分解释的方差比例: [0.806 0.191]
 累计保留信息: 99.7 %
 降维后数据形状: (300, 2) (从 3 维降到了 2 维)
 
-RUNOOB 第三个特征值只有 0.0404，远小于前两个 (9.57, 2.27)
+EJEMPLO 第三个特征值只有 0.0404，远小于前两个 (9.57, 2.27)
 说明第三维几乎没有信息量——可以安全丢掉！
 </pre>
 <hr/>

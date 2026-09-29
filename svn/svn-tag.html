@@ -257,24 +257,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Los tags, o etiquetas, se utilizan principalmente para hitos en el desarrollo de proyectos. Por ejemplo, al alcanzar una determinada etapa de desarrollo, se puede crear una versión independiente como lanzamiento. A menudo representan una versión completa y fija, lo que es aproximadamente lo mismo que el Tag en VSS.</p>
 <p>Creamos un tag en nuestra copia de trabajo local.</p>
 <pre>
-root@runoob:~/svn/runoob01# svn copy trunk/ tags/v1.0
+root@ejemplo:~/svn/ejemplo01# svn copy trunk/ tags/v1.0
 A         tags/v1.0
 </pre>
 <p>Si el código anterior se completa con éxito, el nuevo directorio se creará en el directorio de tags.</p>
 <pre>
-root@runoob:~/svn/runoob01# ls tags/
+root@ejemplo:~/svn/ejemplo01# ls tags/
 v1.0
-root@runoob:~/svn/runoob01# ls tags/v1.0/
+root@ejemplo:~/svn/ejemplo01# ls tags/v1.0/
 HelloWorld.html  readme
 </pre>
 <p>Ver el estado.</p>
 <pre>
-root@runoob:~/svn/runoob01# svn status
+root@ejemplo:~/svn/ejemplo01# svn status
 A  +    tags/v1.0
 </pre>
 <p>Enviar (commit) el contenido del tag.</p>
 <pre>
-root@runoob:~/svn/runoob01# svn commit -m "tags v1.0" 
+root@ejemplo:~/svn/ejemplo01# svn commit -m "tags v1.0" 
 Adding         tags/v1.0
 Transmitting file data ..
 Committed revision 14.

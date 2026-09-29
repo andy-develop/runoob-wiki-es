@@ -345,7 +345,7 @@ ON table_name
 ];</pre>
 <h3>Ejemplo</h3>
 <p>Supongamos una situación en la que queremos mantener una auditoría para cada registro insertado en la tabla COMPANY recién creada (si ya existe, se elimina y se vuelve a crear):</p>
-<pre>runoobdb=# CREATE TABLE COMPANY(
+<pre>ejemplodb=# CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
@@ -353,12 +353,12 @@ ON table_name
    SALARY         REAL
 );</pre>
 <p>Para mantener la auditoría, crearemos una nueva tabla llamada AUDIT. Cada vez que haya un nuevo registro en la tabla COMPANY, se insertará un mensaje de registro en ella:</p>
-<pre>runoobdb=# CREATE TABLE AUDIT(
+<pre>ejemplodb=# CREATE TABLE AUDIT(
    EMP_ID INT NOT NULL,
    ENTRY_DATE TEXT NOT NULL
 );</pre>
 <p>Aquí, ID es el ID del registro AUDIT, EMP_ID es el ID de la tabla COMPANY, y DATE mantendrá la marca de tiempo de cuando se creó el registro en COMPANY. Así que ahora creemos un disparador en la tabla COMPANY, como se muestra a continuación:</p>
-<pre>runoobdb=# CREATE TRIGGER example_trigger AFTER INSERT ON COMPANY FOR EACH ROW EXECUTE PROCEDURE auditlogfunc();</pre>
+<pre>ejemplodb=# CREATE TRIGGER example_trigger AFTER INSERT ON COMPANY FOR EACH ROW EXECUTE PROCEDURE auditlogfunc();</pre>
 <p>auditlogfunc() es una función de PostgreSQL, cuya definición es la siguiente:</p>
 <pre>CREATE OR REPLACE FUNCTION auditlogfunc() RETURNS TRIGGER AS $example_table$
    BEGIN
@@ -367,7 +367,7 @@ ON table_name
    END;
 $example_table$ LANGUAGE plpgsql;</pre>
 <p>Ahora, comencemos a insertar datos en la tabla COMPANY:</p>
-<pre>runoobdb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'California', 20000.00 );</pre>
+<pre>ejemplodb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Paul', 32, 'California', 20000.00 );</pre>
 <p>En este momento, se insertó un registro en la tabla COMPANY:</p>
 <p>Al mismo tiempo, también se insertó un registro en la tabla AUDIT, porque creamos un disparador al insertar en la tabla COMPANY. De manera similar, también podemos crear disparadores para actualizaciones y eliminaciones según sea necesario:</p>
 <pre>emp_id |          entry_date
@@ -376,9 +376,9 @@ $example_table$ LANGUAGE plpgsql;</pre>
 (1 row)</pre>
 <h3>Listar disparadores</h3>
 <p>Puedes listar todos los disparadores de la base de datos actual desde la tabla pg_trigger:</p>
-<pre>runoobdb=# SELECT * FROM pg_trigger;</pre>
+<pre>ejemplodb=# SELECT * FROM pg_trigger;</pre>
 <p>Si deseas listar los disparadores de una tabla específica, la sintaxis es la siguiente:</p>
-<pre>runoobdb=# SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname='company';</pre>
+<pre>ejemplodb=# SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname='company';</pre>
 <p>El resultado es el siguiente:</p>
 <pre> tgname
 -----------------

@@ -270,15 +270,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2018/07/changeLANG.gif"/></p>
 <hr/>
 <h2>Uso de TortoiseSVN</h2>
-<h3>Crear un directorio de trabajo runoob01</h3>
-<p>El llamado directorio runoob01 es simplemente el lugar donde usted guarda habitualmente sus archivos de trabajo. Normalmente esperamos a que nuestro trabajo esté en un punto de corte para hacer una copia de seguridad. Así que normalmente trabajamos en el directorio runoob01 y, cuando llega el momento adecuado, hacemos commit al repositorio. Por ejemplo, queremos crear un directorio llamado runoob01 en la unidad D. Primero creamos ese directorio.</p><p>
+<h3>Crear un directorio de trabajo ejemplo01</h3>
+<p>El llamado directorio ejemplo01 es simplemente el lugar donde usted guarda habitualmente sus archivos de trabajo. Normalmente esperamos a que nuestro trabajo esté en un punto de corte para hacer una copia de seguridad. Así que normalmente trabajamos en el directorio ejemplo01 y, cuando llega el momento adecuado, hacemos commit al repositorio. Por ejemplo, queremos crear un directorio llamado ejemplo01 en la unidad D. Primero creamos ese directorio.</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/create.png"/></p>
 <p>Entre al directorio creado, haga clic derecho en un área vacía (puede hacerlo sobre el icono del directorio MyWork, o entrando al directorio MyWork y haciendo clic en un espacio en blanco) y seleccione<span class="marked">SVN checkout</span>。</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/001.png"/></p>
 <p>A continuación verá la siguiente pantalla:</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/002.png"/></p>
-<p>Primero debemos completar la ubicación del repositorio. Para SVN, la ubicación del repositorio siempre es una URL. En URL del repositorio, introduzca la dirección del repositorio de pruebas.<strong>svn://10.0.4.17/runoob01</strong>。</p>
-<p>A continuación, revise el Checkout directory (directorio de checkout). Este campo debe apuntar a su directorio runoob01.</p>
+<p>Primero debemos completar la ubicación del repositorio. Para SVN, la ubicación del repositorio siempre es una URL. En URL del repositorio, introduzca la dirección del repositorio de pruebas.<strong>svn://10.0.4.17/ejemplo01</strong>。</p>
+<p>A continuación, revise el Checkout directory (directorio de checkout). Este campo debe apuntar a su directorio ejemplo01.</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/003.png"/></p>
 <p>Después de confirmar, pulse el botón OK. Debería ver la siguiente ventana de información.</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/004.png"/></p>
@@ -298,7 +298,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Para colocar realmente estos archivos en el repositorio, haga clic derecho en un área vacía y seleccione SVN commit (confirmar). A continuación, verá la siguiente ventana:</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/010-1.png"/></p>
 <p>Aquí puede ver claramente qué archivos se van a confirmar (commit) en el repositorio. Del mismo modo, si hay archivos que no desea confirmar en este momento, puede desmarcarlos y no se confirmarán en el repositorio. En el cuadro de texto "Mensaje" puede escribir una descripción para esta confirmación.</p>
-<p>Después de hacer clic en "Aceptar" se completa la acción de commit. Luego puede ir al directorio runoob y comprobar si todos los iconos de archivos tienen la marca de verificación verde como la siguiente; esto indica que sus archivos se han guardado correctamente en el repositorio.</p><p>
+<p>Después de hacer clic en "Aceptar" se completa la acción de commit. Luego puede ir al directorio ejemplo y comprobar si todos los iconos de archivos tienen la marca de verificación verde como la siguiente; esto indica que sus archivos se han guardado correctamente en el repositorio.</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/011.png"/></p>
 <hr/>
 <h3>Actualizar archivos y directorios (update)</h3>
@@ -309,18 +309,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2018/07/004.png"/></p>
 <hr/>
 <h3>Copiar archivos y directorios (branch)</h3>
-<p>Muchas veces querrá tener otro directorio copiado para realizar nuevas modificaciones. Una vez que esté seguro de que las modificaciones de esta rama están completas, podrá fusionarlas con la versión de desarrollo principal original. Por ejemplo, actualmente tenemos los siguientes directorios y archivos en runoob01/trunk:</p>
+<p>Muchas veces querrá tener otro directorio copiado para realizar nuevas modificaciones. Una vez que esté seguro de que las modificaciones de esta rama están completas, podrá fusionarlas con la versión de desarrollo principal original. Por ejemplo, actualmente tenemos los siguientes directorios y archivos en ejemplo01/trunk:</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/012.png"/></p>
-<p>Ahora vamos a crear una rama (branch) para el directorio trunk. Supongamos que queremos que este directorio esté en D:\runoob01\branch. Primero podemos hacer clic derecho en un área vacía dentro del directorio trunk, o directamente sobre el icono de trunk, y seleccionar la opción Branch/Tag… (rama/etiqueta). Verá el siguiente cuadro de diálogo.</p>
+<p>Ahora vamos a crear una rama (branch) para el directorio trunk. Supongamos que queremos que este directorio esté en D:\ejemplo01\branch. Primero podemos hacer clic derecho en un área vacía dentro del directorio trunk, o directamente sobre el icono de trunk, y seleccionar la opción Branch/Tag… (rama/etiqueta). Verá el siguiente cuadro de diálogo.</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/013.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/014.png"/></p>
 <p>Primero asegúrese de que el directorio en From WC at URL (desde copia de trabajo/URL) sea el directorio de origen que desea copiar. Luego, en To URL (hasta la ruta), introduzca la ruta de destino. Normalmente agrupamos todas las ramas en un solo directorio. En el ejemplo anterior, los archivos de la rama se concentran en el subdirectorio branch. En To URL solo necesita introducir el directorio deseado. Si el directorio no existe, SVN lo creará por usted. Tenga en cuenta especialmente que SVN usa la barra diagonal (/) como separador de directorios, no la barra invertida (\). Luego, en Log message (mensaje de registro), introduzca el propósito de esta rama. Pulse OK para finalizar.</p>
 <p>Si tiene éxito, verá la siguiente pantalla:</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/015.png"/></p>
-<p>Pulse OK para cerrar esta ventana. Si va inmediatamente al subdirectorio branch del directorio runoob01, se decepcionará al descubrir que no existe el directorio que acaba de especificar. Esto se debe a que la parte del directorio runoob01 aún es antigua. Solo necesita hacer SVN update en el subdirectorio branch para ver el nuevo directorio. El nuevo directorio ya no tiene relación con el original. Puede editarlo libremente. Cuando haya confirmado que todo el trabajo necesario en la rama está completo, puede optar por fusionar (merge) esta rama de vuelta al directorio trunk original, o mantenerla en la rama.</p>
+<p>Pulse OK para cerrar esta ventana. Si va inmediatamente al subdirectorio branch del directorio ejemplo01, se decepcionará al descubrir que no existe el directorio que acaba de especificar. Esto se debe a que la parte del directorio ejemplo01 aún es antigua. Solo necesita hacer SVN update en el subdirectorio branch para ver el nuevo directorio. El nuevo directorio ya no tiene relación con el original. Puede editarlo libremente. Cuando haya confirmado que todo el trabajo necesario en la rama está completo, puede optar por fusionar (merge) esta rama de vuelta al directorio trunk original, o mantenerla en la rama.</p>
 <hr/>
 <h3>Acción de fusionar (merge)</h3>
-<p>Si hemos modificado o agregado archivos en la rama branch y queremos fusionarlos de vuelta al directorio trunk, el método es muy sencillo. En el ejemplo anterior, hacemos clic derecho en un área vacía del directorio D:\runoob01\trunk y seleccionamos Merge (fusionar):</p>
+<p>Si hemos modificado o agregado archivos en la rama branch y queremos fusionarlos de vuelta al directorio trunk, el método es muy sencillo. En el ejemplo anterior, hacemos clic derecho en un área vacía del directorio D:\ejemplo01\trunk y seleccionamos Merge (fusionar):</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/016.png"/></p>
 <p>Esta pantalla se divide principalmente en tres partes. Los campos From: y To: le preguntan desde qué versión de la rama hasta qué versión desea fusionar de vuelta al directorio trunk original. Por lo tanto, los campos URL de From y To deben apuntar al directorio de la rama original. El resto es especificar el rango de revisiones que se van a fusionar. En el ejemplo anterior, fusionamos desde la Revisión 7 de la rama hasta la última versión de la rama. Puede usar el botón Try run para probar una fusión. Esta fusión solo mostrará algunos mensajes, no actualizará realmente el directorio trunk. Solo después de pulsar el botón Merge se fusionarán realmente los archivos de la rama con los del trunk.</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/007.gif"/></p>
@@ -328,7 +328,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h3>Crear un Tag o un Release</h3>
 <p>Los llamados Tag o Release son una versión especial, porque esta versión puede tener un significado especial. Por ejemplo: esta versión es un Milestone especial o una versión lanzada para el cliente. En realidad, el método de Tag y Release es exactamente el mismo que el de Branch. Solo que Branch puede necesitar fusionarse (merge) de vuelta al trunk original, mientras que tag y release en su mayoría no necesitan fusionarse de vuelta al trunk.</p><p>Por ejemplo, hoy nuestro trunk hizo una versión, y esta versión fue reconocida como la versión 1.0 del software.
-La versión 1.0 es un hito muy importante para el desarrollo. Así que tenemos que hacerle una marca especial, es decir, un Tag. Supongamos que esta versión 1.0 se va a lanzar oficialmente (release) al cliente o a los vendor relacionados, tenemos que poder hacerle una marca de Release. Básicamente, SVN solo tiene el concepto de directorio, no tiene un uso específico de Tag. Por eso verá que en el menú de SVN, Branch y Tag son el mismo elemento. Tomando este ejemplo de 1.0, creamos un directorio tags bajo el directorio runoob01 para almacenar las versiones etiquetadas, y lo enviamos al repositorio, luego en Trunk, hacemos clic derecho y seleccionamos el elemento Branch/Tag:</p><p>
+La versión 1.0 es un hito muy importante para el desarrollo. Así que tenemos que hacerle una marca especial, es decir, un Tag. Supongamos que esta versión 1.0 se va a lanzar oficialmente (release) al cliente o a los vendor relacionados, tenemos que poder hacerle una marca de Release. Básicamente, SVN solo tiene el concepto de directorio, no tiene un uso específico de Tag. Por eso verá que en el menú de SVN, Branch y Tag son el mismo elemento. Tomando este ejemplo de 1.0, creamos un directorio tags bajo el directorio ejemplo01 para almacenar las versiones etiquetadas, y lo enviamos al repositorio, luego en Trunk, hacemos clic derecho y seleccionamos el elemento Branch/Tag:</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/013.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/020-1.png"/></p>
 <p>Si tiene éxito, habrá creado un directorio v1.0 bajo el directorio Tag correspondiente. Por supuesto, si va al directorio Tag en este momento, no verá este directorio; necesita hacer update en el directorio Tag para poder verlo.</p><p>

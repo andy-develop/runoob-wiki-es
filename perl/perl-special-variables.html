@@ -290,7 +290,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-var">$_</span><span class="hl-code">;
     </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span></div>
@@ -299,7 +299,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
 Google
-Runoob
+Ejemplo
 Taobao
 </pre>
 <p>En el siguiente ejemplo no usamos $_ para mostrar contenido:</p>
@@ -307,7 +307,7 @@ Taobao
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
-</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-reserved">print</span><span class="hl-code">;
     </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
 </span><span class="hl-brackets">}</span></div>
@@ -316,10 +316,10 @@ Taobao
 <p>Al ejecutar el programa anterior, el resultado es:</p>
 <pre>
 Google
-Runoob
+Ejemplo
 Taobao
 </pre>
-<p>En el ejemplo, primero se imprime "Google", luego "Runoob" y finalmente "Taobao".</p>
+<p>En el ejemplo, primero se imprime "Google", luego "Ejemplo" y finalmente "Taobao".</p>
 <p>En los bucles de iteración, la cadena actual del bucle se coloca en $_ y luego se imprime con print. Además, print utiliza $_ por defecto cuando no se especifica una variable de salida.</p>
 <p>A continuación se muestran algunos lugares donde Perl asume $_ incluso si no se especifica explícitamente:</p>
 <ul class="list"><li>Varias funciones unarias, incluidas funciones como ord() e int(), y todas las operaciones de prueba de archivos excepto "-t" ("-f", "-d"); "-t" opera sobre STDIN por defecto.</li><li>Varias funciones de lista, como print() y unlink().</li><li>Las operaciones de coincidencia de patrones "m//", "s///" y "tr///" cuando no se usa el operador "=~".</li><li>Es la variable de iteración predeterminada del bucle "foreach" cuando no se proporciona otra variable.</li><li>Es la variable de iteración implícita para las funciones grep() y map().</li><li>Cuando "while" tiene solo una condición y esa condición es probar el resultado de la operación "&lt;&gt;", $_ es la ubicación predeterminada para almacenar el registro de entrada. Esto no ocurre fuera de la condición de prueba de "while". (Regla mnemotécnica: el guion bajo se puede omitir en ciertas operaciones).</li>

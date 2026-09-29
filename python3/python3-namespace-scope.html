@@ -369,9 +369,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>Nombres locales (local names</strong>), nombres definidos en una función, que registran las variables de la función, incluyendo los parámetros de la función y las variables definidas localmente. (También los definidos en una clase).</li></ul>
 <p><img decoding="async" src="../wp-content/uploads/2014/05/types_namespace-1.png" width="50%"/></p>
 <p>Orden de búsqueda en los espacios de nombres:</p>
-<p>Supongamos que queremos usar la variable runoob; entonces el orden de búsqueda de Python es:<strong>Espacio de nombres local -&gt; Espacio de nombres global -&gt; Espacio de nombres integrado</strong>。</p>
-<p>Si no se encuentra la variable runoob, abandonará la búsqueda y lanzará una excepción NameError:</p>
-<pre>NameError: name 'runoob' is not defined。</pre>
+<p>Supongamos que queremos usar la variable ejemplo; entonces el orden de búsqueda de Python es:<strong>Espacio de nombres local -&gt; Espacio de nombres global -&gt; Espacio de nombres integrado</strong>。</p>
+<p>Si no se encuentra la variable ejemplo, abandonará la búsqueda y lanzará una excepción NameError:</p>
+<pre>NameError: name 'ejemplo' is not defined。</pre>
 <p>Ciclo de vida de los espacios de nombres:</p>
 <p>El ciclo de vida de un espacio de nombres depende del ámbito del objeto; si el objeto termina de ejecutarse, el ciclo de vida de ese espacio de nombres finaliza.</p>
 <p>Por lo tanto, no podemos acceder a los objetos de un espacio de nombres interno desde un espacio de nombres externo.</p>
@@ -419,17 +419,17 @@ def outer():
 <p>En Python solo los módulos, las clases y las funciones (def, lambda) introducen un nuevo ámbito; otros bloques de código (como if/elif/else, try/except, for/while, etc.) no introducen un nuevo ámbito. Es decir, las variables definidas dentro de estas sentencias también son accesibles desde fuera, como en el siguiente código:</p>
 <pre>
 &gt;&gt;&gt; if True:
-...  msg = 'I am from Runoob'
+...  msg = 'I am from Ejemplo'
 ... 
 &gt;&gt;&gt; msg
-'I am from Runoob'
+'I am from Ejemplo'
 &gt;&gt;&gt; 
 </pre>
 <p>En el ejemplo, la variable msg está definida dentro del bloque de la sentencia if, pero aún así se puede acceder a ella desde fuera.</p>
 <p>Si msg se define dentro de una función, entonces es una variable local y no se puede acceder desde fuera:</p>
 <pre>
 &gt;&gt;&gt; def test():
-...     msg_inner = 'I am from Runoob'
+...     msg_inner = 'I am from Ejemplo'
 ... 
 &gt;&gt;&gt; msg_inner
 Traceback (most recent call last):

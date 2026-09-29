@@ -478,7 +478,7 @@ pid-file=/var/run/mysqld/mysqld.pid
 <ul>
 <li><p><strong>USE <em>Nombre de la base de datos</em></strong> :<br/>Seleccione la base de datos MySQL sobre la que se va a operar. Después de usar este comando, todos los comandos MySQL se aplicarán únicamente a esa base de datos.</p>
 <pre>
-mysql&gt; use RUNOOB;
+mysql&gt; use EJEMPLO;
 Database changed
 </pre>
 </li>
@@ -489,7 +489,7 @@ mysql&gt; SHOW DATABASES;
 | Database           |
 +--------------------+
 | information_schema |
-| RUNOOB             |
+| EJEMPLO             |
 | cdcol              |
 | mysql              |
 | onethink           |
@@ -504,14 +504,14 @@ mysql&gt; SHOW DATABASES;
 </li>
 <li><p><strong>SHOW TABLES:</strong><br/>Muestra todas las tablas de la base de datos especificada. Antes de usar este comando, se debe usar el comando `use` para seleccionar la base de datos sobre la que se va a operar.</p>
 <pre>
-mysql&gt; use RUNOOB;
+mysql&gt; use EJEMPLO;
 Database changed
 mysql&gt; SHOW TABLES;
 +------------------+
-| Tables_in_runoob |
+| Tables_in_ejemplo |
 +------------------+
 | employee_tbl     |
-| runoob_tbl       |
+| ejemplo_tbl       |
 | tcount_tbl       |
 +------------------+
 3 rows in set (0.00 sec)
@@ -519,13 +519,13 @@ mysql&gt; SHOW TABLES;
 </li>
 <li><p><strong>SHOW COLUMNS FROM <em>Tabla de datos</em>:</strong><br/>Muestra los atributos de la tabla, el tipo de atributo, la información de la clave primaria, si es NULL, el valor predeterminado y otra información.</p>
 <pre>
-mysql&gt; SHOW COLUMNS FROM runoob_tbl;
+mysql&gt; SHOW COLUMNS FROM ejemplo_tbl;
 +-----------------+--------------+------+-----+---------+-------+
 | Field           | Type         | Null | Key | Default | Extra |
 +-----------------+--------------+------+-----+---------+-------+
-| runoob_id       | int(11)      | NO   | PRI | NULL    |       |
-| runoob_title    | varchar(255) | YES  |     | NULL    |       |
-| runoob_author   | varchar(255) | YES  |     | NULL    |       |
+| ejemplo_id       | int(11)      | NO   | PRI | NULL    |       |
+| ejemplo_title    | varchar(255) | YES  |     | NULL    |       |
+| ejemplo_author   | varchar(255) | YES  |     | NULL    |       |
 | submission_date | date         | YES  |     | NULL    |       |
 +-----------------+--------------+------+-----+---------+-------+
 4 rows in set (0.01 sec)
@@ -533,21 +533,21 @@ mysql&gt; SHOW COLUMNS FROM runoob_tbl;
 </li>
 <li><p><strong>SHOW INDEX FROM <em>Tabla de datos</em>:</strong><br/>Muestra la información detallada de los índices de la tabla, incluida la clave primaria (PRIMARY KEY).</p>
 <pre>
-mysql&gt; SHOW INDEX FROM runoob_tbl;
+mysql&gt; SHOW INDEX FROM ejemplo_tbl;
 +------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 | Table      | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
 +------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
-| runoob_tbl |          0 | PRIMARY  |            1 | runoob_id   | A         |           2 |     NULL | NULL   |      | BTREE      |         |               |
+| ejemplo_tbl |          0 | PRIMARY  |            1 | ejemplo_id   | A         |           2 |     NULL | NULL   |      | BTREE      |         |               |
 +------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
 1 row in set (0.00 sec)
 </pre>
 </li>
 <li><p><strong>SHOW TABLE STATUS [FROM db_name] [LIKE 'pattern'] \G:</strong> <br/>Este comando muestra el rendimiento y las estadísticas del sistema de gestión de bases de datos MySQL.</p>
 <pre>
-mysql&gt; SHOW TABLE STATUS  FROM RUNOOB;   # 显示数据库 RUNOOB 中所有表的信息
+mysql&gt; SHOW TABLE STATUS  FROM EJEMPLO;   # 显示数据库 EJEMPLO 中所有表的信息
 
-mysql&gt; SHOW TABLE STATUS from RUNOOB LIKE 'runoob%';     # 表名以runoob开头的表的信息
-mysql&gt; SHOW TABLE STATUS from RUNOOB LIKE 'runoob%'\G;   # 加上 \G，查询结果按列打印
+mysql&gt; SHOW TABLE STATUS from EJEMPLO LIKE 'ejemplo%';     # 表名以ejemplo开头的表的信息
+mysql&gt; SHOW TABLE STATUS from EJEMPLO LIKE 'ejemplo%'\G;   # 加上 \G，查询结果按列打印
 </pre>
 </li>
 </ul>

@@ -335,21 +335,21 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #a50"># Un ejemplo simple de SQLite (sin usar Flask)</span><br/>
 <span style="color: Green;font-weight:bold;">import</span> sqlite3<br/>
 <br/>
-<span style="color: #a50"># Conectar a la base de datos (se crea automáticamente si runoob.db no existe)</span><br/>
-conn <span style="color: Gray;">=</span> sqlite3.<span style="color: #05a;">connect</span><span style="color: Olive;">(</span><span style="color: #a11;">"runoob.db"</span><span style="color: Olive;">)</span><br/>
+<span style="color: #a50"># Conectar a la base de datos (se crea automáticamente si ejemplo.db no existe)</span><br/>
+conn <span style="color: Gray;">=</span> sqlite3.<span style="color: #05a;">connect</span><span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo.db"</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># row_factory permite acceder a los resultados de la consulta por nombre de campo, como un diccionario</span><br/>
 conn.<span style="color: #05a;">row_factory</span> <span style="color: Gray;">=</span> sqlite3.<span style="color: #05a;">Row</span><br/>
 <br/>
 <span style="color: #a50"># Crear tabla</span><br/>
 conn.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span><span style="color: #a11;">"CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)"</span><span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Insertar datos</span><br/>
-conn.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span><span style="color: #a11;">"INSERT INTO user (username, password) VALUES (?, ?)"</span><span style="color: Gray;">,</span> <span style="color: Olive;">(</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"pass123"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
+conn.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span><span style="color: #a11;">"INSERT INTO user (username, password) VALUES (?, ?)"</span><span style="color: Gray;">,</span> <span style="color: Olive;">(</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"pass123"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 conn.<span style="color: #05a;">commit</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Consultar datos</span><br/>
 rows <span style="color: Gray;">=</span> conn.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span><span style="color: #a11;">"SELECT * FROM user"</span><span style="color: Olive;">)</span>.<span style="color: #05a;">fetchall</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">for</span> row <span style="color: Green;font-weight:bold;">in</span> rows:<br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Teal;">dict</span><span style="color: Olive;">(</span>row<span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: {'id': 1, 'username': 'runoob', 'password': 'pass123'}</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: Teal;">dict</span><span style="color: Olive;">(</span>row<span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: {'id': 1, 'username': 'ejemplo', 'password': 'pass123'}</span><br/>
 <br/>
 conn.<span style="color: #05a;">close</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 </div>
@@ -369,7 +369,7 @@ conn.<span style="color: #05a;">close</span><span style="color: Olive;">(</span>
     <span style="color: #a11;">"""Obtener la conexión de base de datos, reutilizada dentro de la misma petición"""</span><br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"db"</span> <span style="color: Green;font-weight:bold;">not</span> <span style="color: Green;font-weight:bold;">in</span> g:<br/>
         <span style="color: #a50"># Leer la ruta de la base de datos desde la configuración</span><br/>
-        db_path <span style="color: Gray;">=</span> current_app.<span style="color: #05a;">config</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"DATABASE"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.db"</span><span style="color: Olive;">)</span><br/>
+        db_path <span style="color: Gray;">=</span> current_app.<span style="color: #05a;">config</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"DATABASE"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.db"</span><span style="color: Olive;">)</span><br/>
         g.<span style="color: #05a;">db</span> <span style="color: Gray;">=</span> sqlite3.<span style="color: #05a;">connect</span><span style="color: Olive;">(</span>db_path<span style="color: Olive;">)</span><br/>
         g.<span style="color: #05a;">db</span>.<span style="color: #05a;">row_factory</span> <span style="color: Gray;">=</span> sqlite3.<span style="color: #05a;">Row</span>  <span style="color: #a50"># Hacer que los resultados admitan acceso por nombre de campo</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> g.<span style="color: #05a;">db</span><br/>
@@ -426,7 +426,7 @@ conn.<span style="color: #05a;">close</span><span style="color: Olive;">(</span>
 <br/>
     <span style="color: #a50"># Configurar la ruta de la base de datos (almacenada en la carpeta instance)</span><br/>
     <span style="color: Green;font-weight:bold;">import</span> <span style="color: #05a;">os</span><br/>
-    app.<span style="color: #05a;">config</span><span style="color: Olive;">[</span><span style="color: #a11;">"DATABASE"</span><span style="color: Olive;">]</span> <span style="color: Gray;">=</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span>app.<span style="color: #05a;">instance_path</span><span style="color: Gray;">,</span> <span style="color: #a11;">"runoob.db"</span><span style="color: Olive;">)</span><br/>
+    app.<span style="color: #05a;">config</span><span style="color: Olive;">[</span><span style="color: #a11;">"DATABASE"</span><span style="color: Olive;">]</span> <span style="color: Gray;">=</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span>app.<span style="color: #05a;">instance_path</span><span style="color: Gray;">,</span> <span style="color: #a11;">"ejemplo.db"</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Asegurarse de que la carpeta instance exista</span><br/>
     <span style="color: #05a;">os</span>.<span style="color: #05a;">makedirs</span><span style="color: Olive;">(</span>app.<span style="color: #05a;">instance_path</span><span style="color: Gray;">,</span> exist_ok<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
@@ -538,12 +538,12 @@ $ curl http://127.0.0.1:5000/api/posts
 # 创建文章
 $ curl -X POST http://127.0.0.1:5000/api/posts \
   -H "Content-Type: application/json" \
-  -d '{"title":"RUNOOB 教程","body":"Flask 入门教程内容","author_id":1}'
+  -d '{"title":"EJEMPLO 教程","body":"Flask 入门教程内容","author_id":1}'
 
 # 更新文章
 $ curl -X PUT http://127.0.0.1:5000/api/posts/1 \
   -H "Content-Type: application/json" \
-  -d '{"title":"RUNOOB 教程（修订版）","body":"更新后的内容"}'
+  -d '{"title":"EJEMPLO 教程（修订版）","body":"更新后的内容"}'
 
 # 删除文章
 $ curl -X DELETE http://127.0.0.1:5000/api/posts/1
@@ -557,7 +557,7 @@ $ curl -X DELETE http://127.0.0.1:5000/api/posts/1
 (.venv) $ flask init-db
 
 # 验证表已创建
-(.venv) $ sqlite3 instance/runoob.db ".tables"
+(.venv) $ sqlite3 instance/ejemplo.db ".tables"
 post  user
 </pre>
 <hr/>
@@ -587,7 +587,7 @@ db.<span style="color: #05a;">execute</span><span style="color: Olive;">(</span>
 <span style="color: Green;font-weight:bold;">from</span> flask_sqlalchemy <span style="color: Green;font-weight:bold;">import</span> SQLAlchemy<br/>
 <br/>
 app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span>__name__<span style="color: Olive;">)</span><br/>
-app.<span style="color: #05a;">config</span><span style="color: Olive;">[</span><span style="color: #a11;">"SQLALCHEMY_DATABASE_URI"</span><span style="color: Olive;">]</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"sqlite:///runoob.db"</span><br/>
+app.<span style="color: #05a;">config</span><span style="color: Olive;">[</span><span style="color: #a11;">"SQLALCHEMY_DATABASE_URI"</span><span style="color: Olive;">]</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"sqlite:///ejemplo.db"</span><br/>
 db <span style="color: Gray;">=</span> SQLAlchemy<span style="color: Olive;">(</span>app<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Definir el modelo de datos (la estructura de la tabla se representa con clases de Python)</span><br/>
@@ -604,13 +604,13 @@ db <span style="color: Gray;">=</span> SQLAlchemy<span style="color: Olive;">(</
     db.<span style="color: #05a;">create_all</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Crear usuario</span><br/>
-<span style="color: #05a;">user</span> <span style="color: Gray;">=</span> User<span style="color: Olive;">(</span>username<span style="color: Gray;">=</span><span style="color: #a11;">"runoob"</span><span style="color: Gray;">,</span> <span style="color: #05a;">email</span><span style="color: Gray;">=</span><span style="color: #a11;">"test@runoob.com"</span><span style="color: Olive;">)</span><br/>
+<span style="color: #05a;">user</span> <span style="color: Gray;">=</span> User<span style="color: Olive;">(</span>username<span style="color: Gray;">=</span><span style="color: #a11;">"ejemplo"</span><span style="color: Gray;">,</span> <span style="color: #05a;">email</span><span style="color: Gray;">=</span><span style="color: #a11;">"test@example.com"</span><span style="color: Olive;">)</span><br/>
 db.<span style="color: #05a;">session</span>.<span style="color: #05a;">add</span><span style="color: Olive;">(</span><span style="color: #05a;">user</span><span style="color: Olive;">)</span><br/>
 db.<span style="color: #05a;">session</span>.<span style="color: #05a;">commit</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Consultar usuario</span><br/>
 users <span style="color: Gray;">=</span> User.<span style="color: #05a;">query</span>.<span style="color: Teal;">all</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
-runoob_user <span style="color: Gray;">=</span> User.<span style="color: #05a;">query</span>.<span style="color: #05a;">filter_by</span><span style="color: Olive;">(</span>username<span style="color: Gray;">=</span><span style="color: #a11;">"runoob"</span><span style="color: Olive;">)</span>.<span style="color: #05a;">first</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
+ejemplo_user <span style="color: Gray;">=</span> User.<span style="color: #05a;">query</span>.<span style="color: #05a;">filter_by</span><span style="color: Olive;">(</span>username<span style="color: Gray;">=</span><span style="color: #a11;">"ejemplo"</span><span style="color: Olive;">)</span>.<span style="color: #05a;">first</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
 <blockquote><p>Este capítulo utiliza SQLite nativo para no introducir dependencias adicionales, adecuado para el aprendizaje y proyectos pequeños. Para proyectos de producción reales, se recomienda usar SQLAlchemy o un ORM similar, lo que reduce significativamente el código repetido y mejora la seguridad.</p></blockquote> Otras extensiones

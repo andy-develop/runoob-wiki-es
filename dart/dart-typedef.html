@@ -288,7 +288,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> logMessage<span style="">(</span>String msg<span style="font-weight: bold;">,</span> MessageCallback callback<span style="">)</span> <span style="">{</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Preparando para mostrar mensaje...'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  callback<span style="">(</span><span style="color: #d14;">'[RUNOOB] $msg'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  callback<span style="">(</span><span style="color: #d14;">'[EJEMPLO] $msg'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 <br/>
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
@@ -315,7 +315,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 10 × 5 = 50
 20 ÷ 4 = 5
 准备输出消息...
-收到消息: [RUNOOB] 操作完成
+收到消息: [EJEMPLO] 操作完成
 </pre>
 <p>Sin typedef, tendrías que repetir la firma de tipo de función en cada posición de parámetro.</p>
 <p>Con typedef, las declaraciones de tipo se vuelven claras y uniformes, y solo necesitas modificar un lugar al cambiar.</p>
@@ -351,7 +351,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   processNumbers<span style="">(</span><br/>
     scores<span style="font-weight: bold;">,</span><br/>
     <span style="">(</span>n<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> n <span style="font-weight: bold;">&gt;=</span> <span style="color: #009999;">60</span><span style="font-weight: bold;">,</span>                    <span style="color: #999988; font-style: italic;">// Condición de filtro</span><br/>
-    <span style="">(</span>n<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> <span style="color: #d14;">'Puntuación RUNOOB: $n puntos'</span><span style="font-weight: bold;">,</span>       <span style="color: #999988; font-style: italic;">// Formatear</span><br/>
+    <span style="">(</span>n<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> <span style="color: #d14;">'Puntuación EJEMPLO: $n puntos'</span><span style="font-weight: bold;">,</span>       <span style="color: #999988; font-style: italic;">// Formatear</span><br/>
   <span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   print<span style="">(</span><span style="color: #d14;">'--- Puntuación alta (&gt; 80) ---'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -371,10 +371,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <pre>
 --- 及格分数 ---
-RUNOOB 分数: 78 分
-RUNOOB 分数: 92 分
-RUNOOB 分数: 60 分
-RUNOOB 分数: 88 分
+EJEMPLO 分数: 78 分
+EJEMPLO 分数: 92 分
+EJEMPLO 分数: 60 分
+EJEMPLO 分数: 88 分
 --- 高分（&gt; 80）---
 高分: 92 分
 高分: 88 分
@@ -402,10 +402,10 @@ RUNOOB 分数: 88 分
   print<span style="">(</span><span style="color: #d14;">'Obteniendo datos del usuario...'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Simular éxito/fracaso</span><br/>
-  <span style="font-weight: bold;">if</span> <span style="">(</span>userId <span style="font-weight: bold;">==</span> <span style="color: #d14;">'runoob'</span><span style="">)</span> <span style="">{</span><br/>
+  <span style="font-weight: bold;">if</span> <span style="">(</span>userId <span style="font-weight: bold;">==</span> <span style="color: #d14;">'ejemplo'</span><span style="">)</span> <span style="">{</span><br/>
     <span style="font-weight: bold;">var</span> data <span style="font-weight: bold;">=</span> <span style="">{</span><br/>
-      <span style="color: #d14;">'id'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span><br/>
-      <span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'Usuario RUNOOB'</span><span style="font-weight: bold;">,</span><br/>
+      <span style="color: #d14;">'id'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span><br/>
+      <span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'Usuario EJEMPLO'</span><span style="font-weight: bold;">,</span><br/>
       <span style="color: #d14;">'level'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'VIP'</span><span style="font-weight: bold;">,</span><br/>
     <span style="">}</span><span style="font-weight: bold;">;</span><br/>
     onSuccess<span style="">(</span>data<span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -417,7 +417,7 @@ RUNOOB 分数: 88 分
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// Usar callback para manejar el resultado</span><br/>
   fetchUserData<span style="">(</span><br/>
-    <span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span><br/>
+    <span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span><br/>
     onSuccess<span style="font-weight: bold;">:</span> <span style="">(</span>data<span style="">)</span> <span style="">{</span><br/>
       print<span style="">(</span><span style="color: #d14;">'¡Obtención exitosa!'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
       print<span style="">(</span><span style="color: #d14;">'Nombre de usuario: ${data['</span>name<span style="color: #d14;">']}'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -446,7 +446,7 @@ RUNOOB 分数: 88 分
 <pre>
 正在获取用户数据...
 获取成功！
-用户名: RUNOOB 用户
+用户名: EJEMPLO 用户
 等级: VIP
 ---
 正在获取用户数据...
@@ -498,7 +498,7 @@ RUNOOB 分数: 88 分
 <span style="color: #445588; font-weight: bold;">void</span> main<span style="">(</span><span style="">)</span> <span style="">{</span><br/>
   <span style="color: #999988; font-style: italic;">// Usar el alias JsonMap</span><br/>
   JsonMap userData <span style="font-weight: bold;">=</span> <span style="">{</span><br/>
-    <span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'runoob'</span><span style="font-weight: bold;">,</span><br/>
+    <span style="color: #d14;">'name'</span><span style="font-weight: bold;">:</span> <span style="color: #d14;">'ejemplo'</span><span style="font-weight: bold;">,</span><br/>
     <span style="color: #d14;">'age'</span><span style="font-weight: bold;">:</span> <span style="color: #009999;">10</span><span style="font-weight: bold;">,</span><br/>
     <span style="color: #d14;">'isVip'</span><span style="font-weight: bold;">:</span> <span style="font-weight: bold;">true</span><span style="font-weight: bold;">,</span><br/>
   <span style="">}</span><span style="font-weight: bold;">;</span><br/>
@@ -517,17 +517,17 @@ RUNOOB 分数: 88 分
     <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">null</span><span style="font-weight: bold;">;</span>  <span style="color: #999988; font-style: italic;">// null indica que la validación es exitosa</span><br/>
   <span style="">}</span><span style="font-weight: bold;">;</span><br/>
 <br/>
-  validateAndPrint<span style="">(</span><span style="color: #d14;">'RUNOOB'</span><span style="font-weight: bold;">,</span> nameValidator<span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  validateAndPrint<span style="">(</span><span style="color: #d14;">'EJEMPLO'</span><span style="font-weight: bold;">,</span> nameValidator<span style="">)</span><span style="font-weight: bold;">;</span><br/>
   validateAndPrint<span style="">(</span><span style="color: #d14;">'AB'</span><span style="font-weight: bold;">,</span> nameValidator<span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 </div>
 </div>
 <pre>
-处理 JSON: {name: runoob, age: 10, isVip: true}
+处理 JSON: {name: ejemplo, age: 10, isVip: true}
 键的数量: 3
-成功: 操作成功
+Éxito: 操作成功
 失败: 网络连接超时
-验证通过: RUNOOB
+验证通过: EJEMPLO
 验证失败: 名称至少 3 个字符
 </pre>
 <p>Los alias de tipo de Dart 3.0 reducen considerablemente las declaraciones de tipo largas, haciendo que el código sea más conciso y legible.</p>

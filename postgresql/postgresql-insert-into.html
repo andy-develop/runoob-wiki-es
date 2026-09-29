@@ -343,8 +343,8 @@ VALUES (value1, value2, value3,...valueN);</pre>
 </tr>
 </tbody></table>
 <h3>Ejemplo</h3>
-<p>Crear la tabla COMPANY en la base de datos runoobdb:</p>
-<pre>runoobdb=# CREATE TABLE COMPANY(
+<p>Crear la tabla COMPANY en la base de datos ejemplodb:</p>
+<pre>ejemplodb=# CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
@@ -353,19 +353,19 @@ VALUES (value1, value2, value3,...valueN);</pre>
    JOIN_DATE      DATE
 );</pre>
 <p>Insertar los siguientes datos en la tabla COMPANY:</p>
-<pre>runoobdb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (1, 'Paul', 32, 'California', 20000.00,'2001-07-13');
+<pre>ejemplodb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (1, 'Paul', 32, 'California', 20000.00,'2001-07-13');
 INSERT 0 1</pre>
 <p>La siguiente sentencia de inserción ignora el campo SALARY:</p>
-<pre>runoobdb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,JOIN_DATE) VALUES (2, 'Allen', 25, 'Texas', '2007-12-13');
+<pre>ejemplodb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,JOIN_DATE) VALUES (2, 'Allen', 25, 'Texas', '2007-12-13');
 INSERT 0 1</pre>
 <p>La siguiente sentencia de inserción usa la cláusula DEFAULT para establecer un valor predeterminado en el campo JOIN_DATE, en lugar de especificar un valor:</p>
-<pre>runoobdb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+<pre>ejemplodb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
 INSERT 0 1</pre>
 <p>El siguiente ejemplo inserta varias filas:</p>
-<pre>runoobdb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00, '2007-12-13' ), (5, 'David', 27, 'Texas', 85000.00, '2007-12-13');
+<pre>ejemplodb=# INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00, '2007-12-13' ), (5, 'David', 27, 'Texas', 85000.00, '2007-12-13');
 INSERT 0 2</pre>
 <p>Use la sentencia SELECT para consultar los datos de la tabla:</p>
-<pre>runoobdb=# SELECT * FROM company;
+<pre>ejemplodb=# SELECT * FROM company;
 
 ID        NAME        AGE        ADDRESS     SALARY   JOIN_DATE
 ----      ----------  -----      ----------  -------      --------

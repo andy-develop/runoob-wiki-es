@@ -330,7 +330,7 @@ lock_mode</pre>
 <p>Por ejemplo, un uso común de los bloqueos de asesoramiento es simular la estrategia de bloqueo pesimista típica de los sistemas de gestión de datos de "archivos planos". Aunque se pueden usar banderas almacenadas en la tabla con el mismo propósito, los bloqueos de asesoramiento son más rápidos, evitan el aumento innecesario de la tabla y el servidor los limpia automáticamente al final de la sesión.</p>
 <h3>Ejemplo</h3>
 <p>Cree la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">descargar el archivo SQL de COMPANY</a>), los datos son los siguientes:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -341,9 +341,9 @@ lock_mode</pre>
   6 | Kim   |  22 | South-Hall|  45000
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
-<p>El siguiente ejemplo bloquea la tabla COMPANY en la base de datos runoobdb con el modo ACCESS EXCLUSIVE.</p>
+<p>El siguiente ejemplo bloquea la tabla COMPANY en la base de datos ejemplodb con el modo ACCESS EXCLUSIVE.</p>
 <p>La declaración LOCK solo funciona en modo transacción.</p>
-<pre>runoobdb=#BEGIN;
+<pre>ejemplodb=#BEGIN;
 LOCK TABLE company1 IN ACCESS EXCLUSIVE MODE;</pre>
 <p>La operación anterior producirá el siguiente resultado:</p>
 <pre>LOCK TABLE</pre>

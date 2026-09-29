@@ -183,9 +183,9 @@ finger [选项] [用户@主机]
 <table class="reference">
 <tr><th>Opción</th><th>Función</th><th>Ejemplo</th></tr>
 <tr><td><code>-s</code></td><td>Muestra la información del usuario en formato breve</td><td><code>finger -s</code></td></tr>
-<tr><td><code>-l</code></td><td>Muestra la información del usuario en formato largo detallado</td><td><code>finger -l runoob</code></td></tr>
-<tr><td><code>-p</code></td><td>No muestra el contenido de los archivos .plan y .project</td><td><code>finger -p runoob</code></td></tr>
-<tr><td><code>-m</code></td><td>Desactiva la búsqueda de coincidencias para el nombre de usuario</td><td><code>finger -m runoob</code></td></tr>
+<tr><td><code>-l</code></td><td>Muestra la información del usuario en formato largo detallado</td><td><code>finger -l ejemplo</code></td></tr>
+<tr><td><code>-p</code></td><td>No muestra el contenido de los archivos .plan y .project</td><td><code>finger -p ejemplo</code></td></tr>
+<tr><td><code>-m</code></td><td>Desactiva la búsqueda de coincidencias para el nombre de usuario</td><td><code>finger -m ejemplo</code></td></tr>
 </table>
 <hr/>
 <h2>Uso detallado</h2>
@@ -196,16 +196,16 @@ finger [选项] [用户@主机]
 $ finger
 Login     Name           Tty      Idle  Login Time   Office     Office Phone
 root      root           tty1           May 19 09:00
-runoob    Zhang San      pts/0      3  May 19 10:30  A-301      010-12345678
+ejemplo    Zhang San      pts/0      3  May 19 10:30  A-301      010-12345678
 </pre>
 <p>La salida incluye información como nombre de inicio de sesión, nombre completo, terminal, tiempo de inactividad, hora de inicio de sesión, oficina y teléfono.</p>
 <h3>Ver información detallada de un usuario específico</h3>
 <p>Especificar un nombre de usuario permite ver la información completa de ese usuario.</p>
 <pre>
-# 查看 runoob 用户的详细信息
-$ finger runoob
-Login: runoob                    Name: Zhang San
-Directory: /home/runoob          Shell: /bin/bash
+# 查看 ejemplo 用户的详细信息
+$ finger ejemplo
+Login: ejemplo                    Name: Zhang San
+Directory: /home/ejemplo          Shell: /bin/bash
 Office: A-301, 010-12345678      Home Phone: 010-87654321
 Last login Tue May 19 10:30 (CST) on pts/0
 Mail last read Tue May 19 09:00 2026 (CST)
@@ -217,25 +217,25 @@ No Plan.
 <p>Usando la<code>-s</code>opción, se pueden mostrar solo los campos clave, ideal para una consulta rápida.</p>
 <pre>
 # 以简短格式查看用户信息
-$ finger -s runoob
+$ finger -s ejemplo
 Login     Name           Tty      Idle  Login Time   Office     Office Phone
-runoob    Zhang San      pts/0      3  May 19 10:30  A-301      010-12345678
+ejemplo    Zhang San      pts/0      3  May 19 10:30  A-301      010-12345678
 </pre>
 <p>El formato breve omite detalles como el directorio principal, el shell y la última hora de inicio de sesión, y la salida es una tabla de una sola línea.</p>
 <h3>Prohibir coincidencia difusa</h3>
 <p>De forma predeterminada,<code>finger</code>se intenta hacer coincidir todos los nombres de usuario, nombres completos y otra información que contengan la cadena especificada.<code>-m</code>Se puede desactivar este comportamiento para que solo se corresponda exactamente con el nombre de usuario.</p>
 <pre>
 # 精确匹配用户名，不搜索全名和其他字段
-$ finger -m runoob
+$ finger -m ejemplo
 </pre>
 <p>Cuando en el sistema existen nombres completos o alias similares al nombre de usuario objetivo,<code>-m</code>se pueden evitar resultados inesperados.</p>
 <h3>Ver múltiples usuarios</h3>
 <p>Se pueden especificar varios nombres de usuario a la vez para ver la información de múltiples usuarios de una sola vez.</p>
 <pre>
 # 同时查看多个用户
-$ finger runoob root
-Login: runoob                    Name: Zhang San
-Directory: /home/runoob          Shell: /bin/bash
+$ finger ejemplo root
+Login: ejemplo                    Name: Zhang San
+Directory: /home/ejemplo          Shell: /bin/bash
 Office: A-301, 010-12345678      Home Phone: 010-87654321
 Last login Tue May 19 10:30 (CST) on pts/0
 No Plan.
@@ -249,9 +249,9 @@ No Plan.
 <p><code>finger</code>Permite consultar usuarios en un host remoto, con el formato<code>nombre de usuario@dirección de host</code>。</p>
 <pre>
 # 查看远程主机上的用户信息（需要远程主机开启 fingerd 服务）
-$ finger runoob@192.168.1.100
-Login: runoob                    Name: Zhang San
-Directory: /home/runoob          Shell: /bin/bash
+$ finger ejemplo@192.168.1.100
+Login: ejemplo                    Name: Zhang San
+Directory: /home/ejemplo          Shell: /bin/bash
 Last login Tue May 19 08:00 (CST) on pts/1
 No Plan.
 </pre>
@@ -260,26 +260,26 @@ No Plan.
 <p>El usuario puede crear en su directorio principal<code>.plan</code>y<code>.project</code>archivos para mostrar información personalizada.</p>
 <pre>
 # 创建 .project 文件（单行项目说明）
-$ echo "RUNOOB Platform Development" &gt; ~/.project
+$ echo "EJEMPLO Platform Development" &gt; ~/.project
 
 # 创建 .plan 文件（多行计划或简介）
 $ cat &gt; ~/.plan &amp;lt;&amp;lt; 'EOF'
 当前任务：
-1. 负责 RUNOOB 后端 API 开发
+1. 负责 EJEMPLO 后端 API 开发
 2. 维护数据库迁移脚本
 3. Code Review 本周三之前完成
 EOF
 
 # 再次查看用户信息
-$ finger runoob
-Login: runoob                    Name: Zhang San
-Directory: /home/runoob          Shell: /bin/bash
+$ finger ejemplo
+Login: ejemplo                    Name: Zhang San
+Directory: /home/ejemplo          Shell: /bin/bash
 Office: A-301, 010-12345678      Home Phone: 010-87654321
 Last login Tue May 19 10:30 (CST) on pts/0
-Project: RUNOOB Platform Development
+Project: EJEMPLO Platform Development
 Plan:
 当前任务：
-1. 负责 RUNOOB 后端 API 开发
+1. 负责 EJEMPLO 后端 API 开发
 2. 维护数据库迁移脚本
 3. Code Review 本周三之前完成
 </pre>

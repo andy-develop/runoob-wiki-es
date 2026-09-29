@@ -481,7 +481,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n
 <li>
 <p>1. Visita el sitio web oficial de ChatGPT y haz clic en "Explore" → "Create a GPT".</p></li><li>
 <p>2. En la pestaña "Create", describe con lenguaje natural el asistente que deseas.</p></li><li>
-<p>Por ejemplo: "Eres un editor de documentación técnica de runoob, encargado de explicar conceptos técnicos complejos de forma clara y comprensible para principiantes."</p></li><li>
+<p>Por ejemplo: "Eres un editor de documentación técnica de ejemplo, encargado de explicar conceptos técnicos complejos de forma clara y comprensible para principiantes."</p></li><li>
 <p>3. En la pestaña "Configure", ajusta configuraciones más detalladas.</p></li><li>
 <p>4. Añade archivos a la base de conocimiento (opcional).</p></li><li>
 <p>5. Configura funciones (por ejemplo, búsqueda en internet, intérprete de código).</p></li><li>
@@ -515,7 +515,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n
 <p>Restricciones: qué está prohibido y qué precauciones tomar.</p></li></ul>
 <p>Ejemplo de instrucción:</p>
 <pre>
-你是 runoob 的技术文档助手。
+你是 ejemplo 的技术文档助手。
 
 你的任务是把复杂的技术概念解释得通俗易懂，适合初学者。
 
@@ -588,7 +588,7 @@ openai.<span style="color: #05a;">api_key</span> <span style="color: Gray;">=</s
     response <span style="color: Gray;">=</span> openai.<span style="color: #05a;">ChatCompletion</span>.<span style="color: #05a;">create</span><span style="color: Olive;">(</span><br/>
         model<span style="color: Gray;">=</span><span style="color: #a11;">"gpt-3.5-turbo"</span><span style="color: Gray;">,</span><br/>
         messages<span style="color: Gray;">=</span><span style="color: Olive;">[</span><br/>
-            <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"system"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Eres el asistente de análisis de contenido de runoob."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
+            <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"system"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: <span style="color: #a11;">"Eres el asistente de análisis de contenido de ejemplo."</span><span style="color: Olive;">}</span><span style="color: Gray;">,</span><br/>
             <span style="color: Olive;">{</span><span style="color: #a11;">"role"</span>: <span style="color: #a11;">"user"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"content"</span>: prompt<span style="color: Olive;">}</span><br/>
         <span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
         temperature<span style="color: Gray;">=</span><span style="color: Maroon;">0.7</span><br/>
@@ -670,7 +670,7 @@ openai.<span style="color: #05a;">api_key</span> <span style="color: Gray;">=</s
 <span style="color: #666666; font-style: italic;"># Enviar una solicitud Webhook de prueba</span><br/>
 curl <span style="color: #660033;">-X</span> POST http:<span style="color: #000000; font-weight: bold;">//</span>localhost:<span style="color: #000000;">5000</span><span style="color: #000000; font-weight: bold;">/</span>webhook \<br/>
   <span style="color: #660033;">-H</span> <span style="color: #a10;">"Content-Type: application/json"</span> \<br/>
-  <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>"content": "¡Los tutoriales de runoob son geniales! Sería mejor si hubiera más ejemplos prácticos de flujos de trabajo con IA."<br/>
+  <span style="color: #660033;">-d</span> <span style="color: #a10;">'{<br/>"content": "¡Los tutoriales de ejemplo son geniales! Sería mejor si hubiera más ejemplos prácticos de flujos de trabajo con IA."<br/>
   }'</span><br/>
 </div>
 </div>

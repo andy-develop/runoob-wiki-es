@@ -277,15 +277,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h1>Rust: salida a la línea de comandos</h1><p>Antes de aprender formalmente el lenguaje Rust, necesitamos aprender primero cómo imprimir texto en la línea de comandos. Esta es casi una habilidad imprescindible antes de aprender cualquier lenguaje, porque imprimir en la línea de comandos es casi la única forma en que los programas expresan resultados durante la fase de aprendizaje del lenguaje.</p>
 <p>En el programa Hello, World anterior, ya se mostró aproximadamente la forma de generar cadenas, pero no es completa. Quizás te preguntes por qué después de println en println!("Hello World") hay además un<span class="marked">!</span>símbolo. ¿Acaso todas las funciones de Rust llevan un signo de exclamación? Claramente no es así. println no es una función, sino una regla de macro. Aquí no es necesario profundizar en qué es una regla de macro; se presentará específicamente en capítulos posteriores, y no afecta el siguiente tramo de estudio.</p>
 <p>Las principales formas de generar texto en Rust son dos:<span class="marked">println!()</span>y<span class="marked">print!()</span>. Estas dos «funciones» son métodos para generar cadenas en la línea de comandos; la única diferencia es que el primero añade un carácter de nueva línea al final de la salida. Cuando se usan estas dos «funciones» para generar información, el primer parámetro es la cadena de formato, seguido de una serie de parámetros variables que corresponden a los «marcadores de posición» en la cadena de formato. Esto es muy similar a la función printf del lenguaje C. Sin embargo, los marcadores de posición en la cadena de formato de Rust no son<strong>"% + letra"</strong>de la forma, sino un par de<strong>{}</strong>。 </p>
-<div class="example"><h2 class="example">Ejemplo: archivo runoob.rs</h2> <div class="example_code">
+<div class="example"><h2 class="example">Ejemplo: archivo ejemplo.rs</h2> <div class="example_code">
 <span style="color: #708;">fn</span> main<span style="">(</span><span style="">)</span> <span style="">{</span> <br/>
     <span style="color: #708;">let</span> a <span style="">=</span> <span style="color: #0000DD;">12</span><span style="">;</span> <br/>
     println<span style="">!</span><span style="">(</span><span style="color: #a11;">"a is {}"</span><span style="">,</span> a<span style="">)</span><span style="">;</span> <br/>
 <span style="">}</span> <br/>
 </div></div>
-<p>Use<span class="marked">rustc</span>el comando para compilar el archivo runoob.rs:</p><pre>$ rustc runoob.rs   # 编译 runoob.rs 文件</pre>
-<p>Después de compilar, se generará<strong>runoob</strong>archivo ejecutable:</p>
-<pre>$ ./runoob    # 执行 runoob
+<p>Use<span class="marked">rustc</span>el comando para compilar el archivo ejemplo.rs:</p><pre>$ rustc ejemplo.rs   # 编译 ejemplo.rs 文件</pre>
+<p>Después de compilar, se generará<strong>ejemplo</strong>archivo ejecutable:</p>
+<pre>$ ./ejemplo    # 执行 ejemplo
 </pre>
 <p>El resultado de salida del programa anterior es:</p>
 <pre>a is 12 </pre>

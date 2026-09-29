@@ -444,7 +444,7 @@ json_encode</h2>
 </pre>
 <div class="example"><h2 class="example">Usar la opción JSON_UNESCAPED_UNICODE</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">&lt;</span>?php<br/>
-   <span style="color: #007800;">$arr</span> = array<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'runoob'</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #a10;">'Tutorial de Runoob'</span>, <span style="color: #a10;">'taobao'</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #a10;">'Taobao'</span><span style="color: #7A0874; font-weight: bold;">)</span>;<br/>
+   <span style="color: #007800;">$arr</span> = array<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">'ejemplo'</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #a10;">'Tutorial de Ejemplo'</span>, <span style="color: #a10;">'taobao'</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #a10;">'Taobao'</span><span style="color: #7A0874; font-weight: bold;">)</span>;<br/>
    <span style="color: #7A0874; font-weight: bold;">echo</span> json_encode<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #007800;">$arr</span><span style="color: #7A0874; font-weight: bold;">)</span>; <span style="color: #000000; font-weight: bold;">//</span>Codificar chino<br/>
    <span style="color: #7A0874; font-weight: bold;">echo</span> PHP_EOL;  <span style="color: #000000; font-weight: bold;">//</span>Salto de línea<br/>
    <span style="color: #7A0874; font-weight: bold;">echo</span> json_encode<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #007800;">$arr</span>, JSON_UNESCAPED_UNICODE<span style="color: #7A0874; font-weight: bold;">)</span>;  <span style="color: #000000; font-weight: bold;">//</span>No codificar chino<br/>
@@ -452,8 +452,8 @@ json_encode</h2>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
 <pre>
-{"runoob":"\u83dc\u9e1f\u6559\u7a0b","taobao":"\u6dd8\u5b9d\u7f51"}
-{"runoob":"菜鸟教程","taobao":"淘宝网"}
+{"ejemplo":"\u83dc\u9e1f\u6559\u7a0b","taobao":"\u6dd8\u5b9d\u7f51"}
+{"ejemplo":"Ejemplo","taobao":"淘宝网"}
 </pre>
 <hr/>
 <h2>json_decode</h2>

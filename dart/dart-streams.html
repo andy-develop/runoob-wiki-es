@@ -297,7 +297,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   <span style="font-weight: bold;">var</span> subscription <span style="font-weight: bold;">=</span> stream.<span style="color: #006633;">listen</span><span style="">(</span><br/>
     <span style="">(</span>data<span style="">)</span> <span style="">{</span><br/>
       <span style="color: #999988; font-style: italic;">// Se llama cada vez que llegan nuevos datos</span><br/>
-      print<span style="">(</span><span style="color: #d14;">'RUNOOB recibió datos: $data'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+      print<span style="">(</span><span style="color: #d14;">'EJEMPLO recibió datos: $data'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
     <span style="">}</span><span style="font-weight: bold;">,</span><br/>
     onError<span style="font-weight: bold;">:</span> <span style="">(</span>error<span style="">)</span> <span style="">{</span><br/>
       <span style="color: #999988; font-style: italic;">// Se llama cuando el Stream produce un error</span><br/>
@@ -319,11 +319,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <pre>
 开始监听 Stream...
-RUNOOB 收到数据: 1
-RUNOOB 收到数据: 2
-RUNOOB 收到数据: 3
-RUNOOB 收到数据: 4
-RUNOOB 收到数据: 5
+EJEMPLO 收到数据: 1
+EJEMPLO 收到数据: 2
+EJEMPLO 收到数据: 3
+EJEMPLO 收到数据: 4
+EJEMPLO 收到数据: 5
 已取消订阅
 </pre>
 <p>listen() devuelve un objeto StreamSubscription, que puedes usar para controlar la suscripción:</p>
@@ -354,7 +354,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 <br/>
   <span style="color: #999988; font-style: italic;">// await for: espera a que llegue cada dato y lo procesa uno por uno</span><br/>
   await <span style="font-weight: bold;">for</span> <span style="">(</span><span style="font-weight: bold;">var</span> value <span style="font-weight: bold;">in</span> countStream<span style="">(</span><span style="color: #009999;">5</span><span style="">)</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'RUNOOB contador: $value'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'EJEMPLO contador: $value'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <br/>
   print<span style="">(</span><span style="color: #d14;">'Stream consumido por completo'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -363,11 +363,11 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 </div>
 <pre>
 开始用 await for 消费 Stream...
-RUNOOB 计数: 1
-RUNOOB 计数: 2
-RUNOOB 计数: 3
-RUNOOB 计数: 4
-RUNOOB 计数: 5
+EJEMPLO 计数: 1
+EJEMPLO 计数: 2
+EJEMPLO 计数: 3
+EJEMPLO 计数: 4
+EJEMPLO 计数: 5
 Stream 消费完毕
 </pre>
 <p>Características de await for:</p>
@@ -435,7 +435,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   <span style="color: #999988; font-style: italic;">// Se suscribe a los eventos de cuenta regresiva</span><br/>
   timer.<span style="color: #006633;">tickStream</span>.<span style="color: #006633;">listen</span><span style="">(</span><br/>
     <span style="">(</span>remaining<span style="">)</span> <span style="">{</span><br/>
-      print<span style="">(</span><span style="color: #d14;">'RUNOOB cuenta regresiva: $remaining segundos'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+      print<span style="">(</span><span style="color: #d14;">'EJEMPLO cuenta regresiva: $remaining segundos'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
     <span style="">}</span><span style="font-weight: bold;">,</span><br/>
     onError<span style="font-weight: bold;">:</span> <span style="">(</span>error<span style="">)</span> <span style="">{</span><br/>
       print<span style="">(</span><span style="color: #d14;">'Error: $error'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -454,12 +454,12 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 </div>
 </div>
 <pre>
-RUNOOB 倒计时: 5 秒
-RUNOOB 倒计时: 4 秒
-RUNOOB 倒计时: 3 秒
-RUNOOB 倒计时: 2 秒
-RUNOOB 倒计时: 1 秒
-RUNOOB 倒计时: 0 秒
+EJEMPLO 倒计时: 5 秒
+EJEMPLO 倒计时: 4 秒
+EJEMPLO 倒计时: 3 秒
+EJEMPLO 倒计时: 2 秒
+EJEMPLO 倒计时: 1 秒
+EJEMPLO 倒计时: 0 秒
 倒计时结束！
 </pre>
 <h3>Funciones generadoras async*</h3>
@@ -470,7 +470,7 @@ RUNOOB 倒计时: 0 秒
 <span style="color: #999988; font-style: italic;">// async* marca esta función como una función generadora asíncrona</span><br/>
 <span style="color: #999988; font-style: italic;">// El tipo de retorno debe ser Stream</span><br/>
 Stream<span style="font-weight: bold;">&lt;</span>String<span style="font-weight: bold;">&gt;</span> readLinesAsync<span style="">(</span><span style="">)</span> async<span style="font-weight: bold;">*</span> <span style="">{</span><br/>
-  <span style="font-weight: bold;">var</span> lines <span style="font-weight: bold;">=</span> <span style="">[</span><span style="color: #d14;">'Primera línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'Segunda línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'Tercera línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'RUNOOB'</span><span style="">]</span><span style="font-weight: bold;">;</span><br/>
+  <span style="font-weight: bold;">var</span> lines <span style="font-weight: bold;">=</span> <span style="">[</span><span style="color: #d14;">'Primera línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'Segunda línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'Tercera línea'</span><span style="font-weight: bold;">,</span> <span style="color: #d14;">'EJEMPLO'</span><span style="">]</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="font-weight: bold;">for</span> <span style="">(</span><span style="font-weight: bold;">var</span> line <span style="font-weight: bold;">in</span> lines<span style="">)</span> <span style="">{</span><br/>
     await Future.<span style="color: #006633;">delayed</span><span style="">(</span>Duration<span style="">(</span>milliseconds<span style="font-weight: bold;">:</span> <span style="color: #009999;">500</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -513,7 +513,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   第一行
   第二行
   第三行
-  RUNOOB
+  EJEMPLO
 
 带错误的生成器：
   数字: 1
@@ -554,11 +554,11 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 <br/>
   <span style="color: #999988; font-style: italic;">// Múltiples suscriptores pueden escuchar al mismo tiempo</span><br/>
   controller.<span style="color: #006633;">stream</span>.<span style="color: #006633;">listen</span><span style="">(</span><br/>
-    <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'RUNOOB Suscriptor A: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
+    <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'EJEMPLO Suscriptor A: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
   <span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   controller.<span style="color: #006633;">stream</span>.<span style="color: #006633;">listen</span><span style="">(</span><br/>
-    <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'RUNOOB Suscriptor B: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
+    <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'EJEMPLO Suscriptor B: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
   <span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// Envía datos; ambos suscriptores los recibirán</span><br/>
@@ -569,7 +569,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   <span style="color: #999988; font-style: italic;">// Una suscripción tardía también puede recibir datos posteriores (pero no los anteriores)</span><br/>
   Future.<span style="color: #006633;">delayed</span><span style="">(</span>Duration<span style="">(</span>seconds<span style="font-weight: bold;">:</span> <span style="color: #009999;">1</span><span style="">)</span><span style="font-weight: bold;">,</span> <span style="">(</span><span style="">)</span> <span style="">{</span><br/>
     controller.<span style="color: #006633;">stream</span>.<span style="color: #006633;">listen</span><span style="">(</span><br/>
-      <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'RUNOOB Suscriptor C tardío: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
+      <span style="">(</span>data<span style="">)</span> <span style="font-weight: bold;">=&gt;</span> print<span style="">(</span><span style="color: #d14;">'EJEMPLO Suscriptor C tardío: recibido $data'</span><span style="">)</span><span style="font-weight: bold;">,</span><br/>
     <span style="">)</span><span style="font-weight: bold;">;</span><br/>
     controller.<span style="color: #006633;">add</span><span style="">(</span><span style="color: #009999;">4</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
     controller.<span style="color: #006633;">close</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -578,15 +578,15 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 </div>
 </div>
 <pre>
-RUNOOB 订阅者A: 收到 1
-RUNOOB 订阅者B: 收到 1
-RUNOOB 订阅者A: 收到 2
-RUNOOB 订阅者B: 收到 2
-RUNOOB 订阅者A: 收到 3
-RUNOOB 订阅者B: 收到 3
-RUNOOB 订阅者A: 收到 4
-RUNOOB 订阅者B: 收到 4
-RUNOOB 迟到的订阅者C: 收到 4
+EJEMPLO 订阅者A: 收到 1
+EJEMPLO 订阅者B: 收到 1
+EJEMPLO 订阅者A: 收到 2
+EJEMPLO 订阅者B: 收到 2
+EJEMPLO 订阅者A: 收到 3
+EJEMPLO 订阅者B: 收到 3
+EJEMPLO 订阅者A: 收到 4
+EJEMPLO 订阅者B: 收到 4
+EJEMPLO 迟到的订阅者C: 收到 4
 </pre>
 <p>Comparación de los dos tipos de Stream:</p>
 <table class="reference">
@@ -628,7 +628,7 @@ RUNOOB 迟到的订阅者C: 收到 4
   <span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Solo toma los primeros 3:'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   await <span style="font-weight: bold;">for</span> <span style="">(</span><span style="font-weight: bold;">var</span> n <span style="font-weight: bold;">in</span> infinite.<span style="color: #006633;">take</span><span style="">(</span><span style="color: #009999;">3</span><span style="">)</span><span style="">)</span> <span style="">{</span><br/>
-    print<span style="">(</span><span style="color: #d14;">'  RUNOOB: $n'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+    print<span style="">(</span><span style="color: #d14;">'  EJEMPLO: $n'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   <span style="">}</span><br/>
 <br/>
   <span style="color: #999988; font-style: italic;">// skip: omite los primeros N</span><br/>
@@ -660,9 +660,9 @@ RUNOOB 迟到的订阅者C: 收到 4
   20
   30
 只取前 3 个:
-  RUNOOB: 1
-  RUNOOB: 2
-  RUNOOB: 3
+  EJEMPLO: 1
+  EJEMPLO: 2
+  EJEMPLO: 3
 跳过前 2 个:
   3
   4

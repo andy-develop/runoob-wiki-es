@@ -286,7 +286,7 @@ func swapTwoValues&lt;T&gt;(_ a: inout T, _ b: inout T)
 </span><span class="hl-identifier">var</span><span class="hl-code"> </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code"> = </span><span class="hl-identifier">Stack</span><span class="hl-code">&lt;</span><span class="hl-identifier">String</span><span class="hl-code">&gt;</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Elementos de cadena apilados:</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">items</span><span class="hl-brackets">)</span><span class="hl-code">;
  
 </span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">deletetos</span><span class="hl-code"> = </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">pop</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
@@ -301,8 +301,8 @@ func swapTwoValues&lt;T&gt;(_ a: inout T, _ b: inout T)
 <p>El resultado de la ejecución del ejemplo es:</p>
 <pre>
 字符串元素入栈: 
-["google", "runoob"]
-出栈元素: runoob
+["google", "ejemplo"]
+出栈元素: ejemplo
 整数元素入栈: 
 [1, 2]
 </pre>
@@ -336,7 +336,7 @@ func swapTwoValues&lt;T&gt;(_ a: inout T, _ b: inout T)
 </span><span class="hl-identifier">var</span><span class="hl-code"> </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code"> = </span><span class="hl-identifier">Stack</span><span class="hl-code">&lt;</span><span class="hl-identifier">String</span><span class="hl-code">&gt;</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Elementos de cadena apilados:</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">topItem</span><span class="hl-code"> = </span><span class="hl-identifier">stackOfStrings</span><span class="hl-code">.</span><span class="hl-identifier">topItem</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">El elemento en la cima de la pila es:</span><span class="hl-special">\</span><span class="hl-string">(topItem).</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">
@@ -347,8 +347,8 @@ func swapTwoValues&lt;T&gt;(_ a: inout T, _ b: inout T)
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
 字符串元素入栈: 
-栈中的顶部元素是：runoob.
-["google", "runoob"]
+栈中的顶部元素是：ejemplo.
+["google", "ejemplo"]
 </pre>
 <p>También podemos especificar un tipo asociado extendiendo un tipo existente.</p>
 <p>Por ejemplo, el tipo Array de Swift ya proporciona el método append(_:), una propiedad count y un subíndice que acepta un valor de índice de tipo Int para acceder a sus elementos. Estas tres funcionalidades cumplen con los requisitos del protocolo Container, por lo que solo necesitas declarar que Array adopta ese protocolo para extender Array.</p>
@@ -380,16 +380,16 @@ func someFunction&lt;T: SomeClass, U: SomeProtocol&gt;(someT: T, someU: U) {
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">nil</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code">
-</span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">strings</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">weibo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">facebook</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">foundIndex</span><span class="hl-code"> = </span><span class="hl-identifier">findIndex</span><span class="hl-brackets">(</span><span class="hl-identifier">ofString</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-identifier">in</span><span class="hl-code">: </span><span class="hl-identifier">strings</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
-</span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">El índice de runoob es</span><span class="hl-special">\</span><span class="hl-string">(foundIndex)</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">strings</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">weibo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">facebook</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">let</span><span class="hl-code"> </span><span class="hl-identifier">foundIndex</span><span class="hl-code"> = </span><span class="hl-identifier">findIndex</span><span class="hl-brackets">(</span><span class="hl-identifier">ofString</span><span class="hl-code">: </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-identifier">in</span><span class="hl-code">: </span><span class="hl-identifier">strings</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
+</span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">El índice de ejemplo es</span><span class="hl-special">\</span><span class="hl-string">(foundIndex)</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">}</span></div>
 </div>
 </div>
 <p>El índice comienza desde 0.</p>
 <p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-runoob 的索引为 3
+ejemplo 的索引为 3
 </pre>
 <hr/>
 <h2>Tipos asociados</h2><p>En Swift se usa la palabra clave associatedtype para definir un tipo asociado.</p>
@@ -431,7 +431,7 @@ struct Stack&lt;Element&gt;: Container {
 
 var tos = Stack&lt;String&gt;()
 tos.push("google")
-tos.push("runoob")
+tos.push("ejemplo")
 tos.push("taobao")
 // 元素列表
 print(tos.items)
@@ -439,7 +439,7 @@ print(tos.items)
 print( tos.count)
 </pre><p>El resultado de la ejecución del programa anterior es:</p>
 <pre>
-["google", "runoob", "taobao"]
+["google", "ejemplo", "taobao"]
 3
 </pre>
 <hr/>
@@ -503,9 +503,9 @@ print( tos.count)
 </span><span class="hl-brackets">}</span><span class="hl-code">
 </span><span class="hl-identifier">var</span><span class="hl-code"> </span><span class="hl-identifier">tos</span><span class="hl-code"> = </span><span class="hl-identifier">Stack</span><span class="hl-code">&lt;</span><span class="hl-identifier">String</span><span class="hl-code">&gt;</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">tos</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">tos</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">tos</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-identifier">tos</span><span class="hl-code">.</span><span class="hl-identifier">push</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
-</span><span class="hl-identifier">var</span><span class="hl-code"> </span><span class="hl-identifier">aos</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">runoob</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-identifier">var</span><span class="hl-code"> </span><span class="hl-identifier">aos</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">"</span><span class="hl-string">google</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">ejemplo</span><span class="hl-quotes">"</span><span class="hl-code">, </span><span class="hl-quotes">"</span><span class="hl-string">taobao</span><span class="hl-quotes">"</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-identifier">allItemsMatch</span><span class="hl-brackets">(</span><span class="hl-identifier">tos</span><span class="hl-code">, </span><span class="hl-identifier">aos</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">Todos los elementos coinciden</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">}</span><span class="hl-code"> </span><span class="hl-reserved">else</span><span class="hl-code"> </span><span class="hl-brackets">{</span><span class="hl-code">

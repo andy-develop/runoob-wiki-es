@@ -342,7 +342,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #a50"># ============================================</span><br/>
-<span style="color: #a50"># Archivo: runoob_vision_demo.py</span><br/>
+<span style="color: #a50"># Archivo: ejemplo_vision_demo.py</span><br/>
 <span style="color: #a50"># Función: analizar imágenes con la API de GPT-4o Vision</span><br/>
 <span style="color: #a50"># ============================================</span><br/>
 <br/>
@@ -371,7 +371,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
     model: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"gpt-4o"</span><br/>
 <span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
     <span style="color: #a11;">"""<br/>Analizar imágenes con la API de GPT-4o Vision<br/>
-<br/>Parámetros:<br/>image_path: ruta del archivo de imagen local (por ejemplo, "runoob_test.jpg")<br/>prompt: la pregunta que quieres hacer o la tarea que quieres que la IA realice<br/>model: nombre del modelo a usar (por defecto gpt-4o)<br/>
+<br/>Parámetros:<br/>image_path: ruta del archivo de imagen local (por ejemplo, "ejemplo_test.jpg")<br/>prompt: la pregunta que quieres hacer o la tarea que quieres que la IA realice<br/>model: nombre del modelo a usar (por defecto gpt-4o)<br/>
 <br/>Retorno:<br/>Texto con el resultado del análisis de la IA<br/>
     """</span><br/>
     <span style="color: #a50"># Paso 1: codifica la imagen en Base64</span><br/>
@@ -426,7 +426,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <span style="color: Green;font-weight:bold;">def</span> extract_text_from_image<span style="color: Olive;">(</span>image_path: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
     <span style="color: #a11;">"""<br/>Especializado en OCR: extraer el texto de la imagen<br/>
     """</span><br/>
-    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Extrae todo el contenido de texto de esta imagen.<br/>Requisitos:<br/>1. Reproduce el texto con precisión, sin omitir nada<br/>2. Mantén los párrafos y el formato originales<br/>3. Si hay tablas, muéstralas en formato de tabla<br/>4. Si no hay texto en la imagen, indícalo<br/>Esta es la prueba de OCR del tutorial de RUNOOB.<br/>
+    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Extrae todo el contenido de texto de esta imagen.<br/>Requisitos:<br/>1. Reproduce el texto con precisión, sin omitir nada<br/>2. Mantén los párrafos y el formato originales<br/>3. Si hay tablas, muéstralas en formato de tabla<br/>4. Si no hay texto en la imagen, indícalo<br/>Esta es la prueba de OCR del tutorial de EJEMPLO.<br/>
     """</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> analyze_image_with_gpt4o<span style="color: Olive;">(</span>image_path<span style="color: Gray;">,</span> prompt<span style="color: Olive;">)</span><br/>
 <br/>
@@ -434,7 +434,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <span style="color: Green;font-weight:bold;">def</span> analyze_chart<span style="color: Olive;">(</span>image_path: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
     <span style="color: #a11;">"""<br/>Especializado en análisis de gráficos<br/>
     """</span><br/>
-    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Analiza este gráfico.<br/>Responde las siguientes preguntas:<br/>1. ¿Qué tipo de gráfico es (barras, líneas, circular, etc.)?<br/>2. ¿Cuál es el título del gráfico y el significado de los ejes?<br/>3. ¿Cuál es la información principal que transmite el gráfico?<br/>4. ¿Hay alguna tendencia o anomalía notable?<br/>Esta es la prueba de análisis de gráficos del tutorial de RUNOOB.<br/>
+    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Analiza este gráfico.<br/>Responde las siguientes preguntas:<br/>1. ¿Qué tipo de gráfico es (barras, líneas, circular, etc.)?<br/>2. ¿Cuál es el título del gráfico y el significado de los ejes?<br/>3. ¿Cuál es la información principal que transmite el gráfico?<br/>4. ¿Hay alguna tendencia o anomalía notable?<br/>Esta es la prueba de análisis de gráficos del tutorial de EJEMPLO.<br/>
     """</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> analyze_image_with_gpt4o<span style="color: Olive;">(</span>image_path<span style="color: Gray;">,</span> prompt<span style="color: Olive;">)</span><br/>
 <br/>
@@ -446,7 +446,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     <span style="color: #a50"># Supongamos que tenemos una imagen de prueba (necesitas preparar una imagen real)</span><br/>
     <span style="color: #a50"># Puede ser: foto de producto, captura de pantalla, foto de documento, gráfico, etc.</span><br/>
-    test_image <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob_test_image.jpg"</span><br/>
+    test_image <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo_test_image.jpg"</span><br/>
 <br/>
     <span style="color: #a50"># Comprueba si la imagen existe</span><br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">exists</span><span style="color: Olive;">(</span>test_image<span style="color: Olive;">)</span>:<br/>
@@ -478,7 +478,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>result3<span style="color: Olive;">)</span><br/>
 <br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span>*<span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Demostración del tutorial RUNOOB completada!"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Demostración del tutorial EJEMPLO completada!"</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -487,7 +487,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <li>
 <p>1. Instalar dependencias:<code>pip install requests</code></p></li>
 <li>
-<p>2. Preparar una imagen de prueba, nómbrala<code>runoob_test_image.jpg</code></p></li>
+<p>2. Preparar una imagen de prueba, nómbrala<code>ejemplo_test_image.jpg</code></p></li>
 <li>
 <p>3. Reemplaza la clave API por la tuya propia</p></li></ul>
 <blockquote>
@@ -546,7 +546,7 @@ OPENAI_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #a50"># ============================================</span><br/>
-<span style="color: #a50"># Archivo: runoob_dalle3_demo.py</span><br/>
+<span style="color: #a50"># Archivo: ejemplo_dalle3_demo.py</span><br/>
 <span style="color: #a50"># Función: generar imágenes con la API de DALL·E 3</span><br/>
 <span style="color: #a50"># ============================================</span><br/>
 <br/>
@@ -564,7 +564,7 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
     size: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"1024x1024"</span><span style="color: Gray;">,</span><br/>
     quality: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"standard"</span><span style="color: Gray;">,</span><br/>
     style: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"vivid"</span><span style="color: Gray;">,</span><br/>
-    save_dir: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob_generated_images"</span><br/>
+    save_dir: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo_generated_images"</span><br/>
 <span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">dict</span>:<br/>
     <span style="color: #a11;">"""<br/>Generar imágenes con la API de DALL·E 3<br/>
 <br/>Descripción de parámetros:<br/>prompt: descripción de texto, cuanto más detallada, mejor<br/>size: tamaño de la imagen<br/>Opciones: 1024x1024, 1024x1792 (vertical), 1792x1024 (horizontal)<br/>quality: calidad de la imagen<br/>Opciones: standard (estándar), hd (alta definición, más caro)<br/>style: estilo<br/>Opciones: vivid (vívido, más artístico), natural (natural, más realista)<br/>save_dir: directorio donde se guardan las imágenes<br/>
@@ -604,7 +604,7 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <br/>
         <span style="color: #a50"># Generar nombre de archivo con marca de tiempo</span><br/>
         timestamp <span style="color: Gray;">=</span> <span style="color: #05a;">datetime</span>.<span style="color: #05a;">now</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>.<span style="color: #05a;">strftime</span><span style="color: Olive;">(</span><span style="color: #a11;">"%Y%m%d_%H%M%S"</span><span style="color: Olive;">)</span><br/>
-        filename <span style="color: Gray;">=</span> f<span style="color: #a11;">"runoob_dalle3_{timestamp}.png"</span><br/>
+        filename <span style="color: Gray;">=</span> f<span style="color: #a11;">"ejemplo_dalle3_{timestamp}.png"</span><br/>
         filepath <span style="color: Gray;">=</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span>save_dir<span style="color: Gray;">,</span> filename<span style="color: Olive;">)</span><br/>
 <br/>
         <span style="color: #a50"># Descargar imagen</span><br/>
@@ -625,16 +625,16 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">{</span><span style="color: #a11;">"error"</span>: error_msg<span style="color: Olive;">}</span><br/>
 <br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> generate_runoob_logo_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-    <span style="color: #a11;">"""Demostración: generar un logotipo estilo RUNOOB"""</span><br/>
+<span style="color: Green;font-weight:bold;">def</span> generate_ejemplo_logo_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
+    <span style="color: #a11;">"""Demostración: generar un logotipo estilo EJEMPLO"""</span><br/>
     prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>
-    A cute and friendly robot mascot for RUNOOB tutorial website.<br/>
+    A cute and friendly robot mascot for EJEMPLO tutorial website.<br/>
     Blue and green color scheme, modern flat design, white background.<br/>
     The robot looks helpful and intelligent, with big friendly eyes.<br/>
     Simple, clean, suitable for a tech education brand.<br/>
     """</span><br/>
     <span style="color: #a50"># Los prompts en chino también funcionan; DALL·E 3 admite varios idiomas</span><br/>
-    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Diseña una mascota robot linda y amigable para el sitio web de tutoriales RUNOOB.<br/>Tonalidad verde azulada, diseño plano moderno, fondo blanco.<br/>El robot parece servicial e inteligente, con grandes ojos amigables.<br/>Sencillo y limpio, adecuado para una marca de educación tecnológica.<br/>
+    prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>Diseña una mascota robot linda y amigable para el sitio web de tutoriales EJEMPLO.<br/>Tonalidad verde azulada, diseño plano moderno, fondo blanco.<br/>El robot parece servicial e inteligente, con grandes ojos amigables.<br/>Sencillo y limpio, adecuado para una marca de educación tecnológica.<br/>
     """</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> generate_image_with_dalle3<span style="color: Olive;">(</span><br/>
         prompt<span style="color: Gray;">=</span>prompt<span style="color: Gray;">,</span><br/>
@@ -664,7 +664,7 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <span style="color: Green;font-weight:bold;">def</span> generate_banner_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a11;">"""Demostración: generar imagen de banner publicitario"""</span><br/>
     prompt <span style="color: Gray;">=</span> <span style="color: #a11;">"""<br/>
-    Web banner design for a coding tutorial website (RUNOOB).<br/>
+    Web banner design for a coding tutorial website (EJEMPLO).<br/>
     16:9 wide format. Modern gradient background from teal to blue.<br/>
     Clean layout with space for text.<br/>
     Abstract tech elements: floating code snippets, subtle grid lines.<br/>
@@ -684,12 +684,12 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de generación de imágenes con RUNOOB DALL·E 3"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"Demostración de generación de imágenes con EJEMPLO DALL·E 3"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Tarea 1: generar logotipo</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>[Tarea 1] Generando logotipo ..."</span><span style="color: Olive;">)</span><br/>
-    result1 <span style="color: Gray;">=</span> generate_runoob_logo_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
+    result1 <span style="color: Gray;">=</span> generate_ejemplo_logo_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Tarea 2: generar portada de libro</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>[Tarea 2] Generando portada de libro ..."</span><span style="color: Olive;">)</span><br/>
@@ -700,7 +700,7 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
     result3 <span style="color: Gray;">=</span> generate_banner_demo<span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Todas las tareas completadas! Revisa el directorio runoob_generated_images"</span><span style="color: Olive;">)</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Todas las tareas completadas! Revisa el directorio ejemplo_generated_images"</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -760,7 +760,7 @@ DALLE3_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"h
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #a50"># ============================================</span><br/>
-<span style="color: #a50"># Archivo: runoob_whisper_demo.py</span><br/>
+<span style="color: #a50"># Archivo: ejemplo_whisper_demo.py</span><br/>
 <span style="color: #a50"># Función: transcribir audio con la API Whisper</span><br/>
 <span style="color: #a50"># ============================================</span><br/>
 <br/>
@@ -871,7 +871,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Olive;">{</span><span style="color: #a11;">"error"</span>: response.<span style="color: #05a;">text</span><span style="color: Olive;">}</span><br/>
 <br/>
 <br/>
-<span style="color: Green;font-weight:bold;">def</span> runoob_meeting_minutes_demo<span style="color: Olive;">(</span>audio_path: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
+<span style="color: Green;font-weight:bold;">def</span> ejemplo_meeting_minutes_demo<span style="color: Olive;">(</span>audio_path: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
     <span style="color: #a11;">"""<br/>Caso práctico: generar actas de reunión<br/>Paso 1: transcribir la grabación con Whisper<br/>Paso 2: organizar las actas con GPT-4o<br/>
     """</span><br/>
     <span style="color: #a50"># Primero, transcribir</span><br/>
@@ -879,7 +879,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
     transcribe_result <span style="color: Gray;">=</span> transcribe_audio_with_whisper<span style="color: Olive;">(</span><br/>
         audio_path<span style="color: Gray;">,</span><br/>
         language<span style="color: Gray;">=</span><span style="color: #a11;">"zh"</span><span style="color: Gray;">,</span><br/>
-        prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Esta es una reunión del equipo técnico de RUNOOB, donde se discuten desarrollo de productos, avances, soluciones técnicas, etc."</span><br/>
+        prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Esta es una reunión del equipo técnico de EJEMPLO, donde se discuten desarrollo de productos, avances, soluciones técnicas, etc."</span><br/>
     <span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: #a11;">"error"</span> <span style="color: Green;font-weight:bold;">in</span> transcribe_result:<br/>
@@ -900,7 +900,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
 <br/>
 <span style="color: Green;font-weight:bold;">if</span> __name__ <span style="color: Gray;">==</span> <span style="color: #a11;">"__main__"</span>:<br/>
     <span style="color: #a50"># Preparar un archivo de audio de prueba</span><br/>
-    test_audio <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob_test_audio.mp3"</span><br/>
+    test_audio <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo_test_audio.mp3"</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">exists</span><span style="color: Olive;">(</span>test_audio<span style="color: Olive;">)</span>:<br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Consejo: prepara un archivo de audio y nómbralo {test_audio}"</span><span style="color: Olive;">)</span><br/>
@@ -929,7 +929,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
                 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"[{start}-{end}] {text}"</span><span style="color: Olive;">)</span><br/>
 <br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span> + <span style="color: #a11;">"="</span>*<span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
-        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Demostración de RUNOOB Whisper completada!"</span><span style="color: Olive;">)</span><br/>
+        <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"¡Demostración de EJEMPLO Whisper completada!"</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">50</span><span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -990,7 +990,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #a50"># ============================================</span><br/>
-<span style="color: #a50"># Archivo: runoob_image_analyzer.py</span><br/>
+<span style="color: #a50"># Archivo: ejemplo_image_analyzer.py</span><br/>
 <span style="color: #a50"># Función: una herramienta completa de análisis de imágenes multimodales</span><br/>
 <span style="color: #a50"># ============================================</span><br/>
 <br/>
@@ -1002,8 +1002,8 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
 <span style="color: Green;font-weight:bold;">from</span> typing <span style="color: Green;font-weight:bold;">import</span> Optional<span style="color: Gray;">,</span> Dict<span style="color: Gray;">,</span> Any<br/>
 <br/>
 <br/>
-<span style="color: Green;font-weight:bold;">class</span> RunoobImageAnalyzer:<br/>
-    <span style="color: #a11;">"""<br/>Analizador de imágenes RUNOOB: una clase de herramienta multimodal encapsulada<br/>
+<span style="color: Green;font-weight:bold;">class</span> EjemploImageAnalyzer:<br/>
+    <span style="color: #a11;">"""<br/>Analizador de imágenes EJEMPLO: una clase de herramienta multimodal encapsulada<br/>
     """</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">def</span> <span style="color: Navy;">__init__</span><span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> api_key: <span style="color: Teal;">str</span><span style="color: Gray;">,</span> base_url: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"https://api.openai.com/v1"</span><span style="color: Olive;">)</span>:<br/>
@@ -1094,7 +1094,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
         """</span><br/>
         <span style="color: Green;font-weight:bold;">return</span> <span style="color: Teal;">self</span>._call_vision_api<span style="color: Olive;">(</span>image_path<span style="color: Gray;">,</span> prompt<span style="color: Olive;">)</span><br/>
 <br/>
-    <span style="color: Green;font-weight:bold;">def</span> full_analysis<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> image_path: <span style="color: Teal;">str</span><span style="color: Gray;">,</span> output_dir: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob_analysis"</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> Dict<span style="color: Olive;">[</span><span style="color: Teal;">str</span><span style="color: Gray;">,</span> Any<span style="color: Olive;">]</span>:<br/>
+    <span style="color: Green;font-weight:bold;">def</span> full_analysis<span style="color: Olive;">(</span><span style="color: Teal;">self</span><span style="color: Gray;">,</span> image_path: <span style="color: Teal;">str</span><span style="color: Gray;">,</span> output_dir: <span style="color: Teal;">str</span> <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo_analysis"</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> Dict<span style="color: Olive;">[</span><span style="color: Teal;">str</span><span style="color: Gray;">,</span> Any<span style="color: Olive;">]</span>:<br/>
         <span style="color: #a11;">"""<br/>Análisis completo: generar un informe de análisis detallado<br/>
 <br/>Devolver un diccionario con todos los resultados del análisis<br/>
         """</span><br/>
@@ -1144,7 +1144,7 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
         txt_path <span style="color: Gray;">=</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span>output_dir<span style="color: Gray;">,</span> f<span style="color: #a11;">"report_{timestamp}.txt"</span><span style="color: Olive;">)</span><br/>
         <span style="color: Green;font-weight:bold;">with</span> <span style="color: Teal;">open</span><span style="color: Olive;">(</span>txt_path<span style="color: Gray;">,</span> <span style="color: #a11;">"w"</span><span style="color: Gray;">,</span> encoding<span style="color: Gray;">=</span><span style="color: #a11;">"utf-8"</span><span style="color: Olive;">)</span> <span style="color: Green;font-weight:bold;">as</span> f:<br/>
             f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span> + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
-            f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">"Informe de análisis de imágenes RUNOOB<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
+            f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">"Informe de análisis de imágenes EJEMPLO<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
             f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span><span style="color: #a11;">"="</span>*<span style="color: Maroon;">60</span> + <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
             f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Imagen: {report['image_file']}<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
             f.<span style="color: #05a;">write</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Hora: {report['analysis_time']}<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: Olive;">)</span><br/>
@@ -1176,10 +1176,10 @@ WHISPER_API_URL <span style="color: Gray;">=</span> <span style="color: #a11;">"
     api_key <span style="color: Gray;">=</span> <span style="color: #a11;">"sk-your-api-key-here"</span><br/>
 <br/>
     <span style="color: #a50"># Crear analizador</span><br/>
-    analyzer <span style="color: Gray;">=</span> RunoobImageAnalyzer<span style="color: Olive;">(</span>api_key<span style="color: Olive;">)</span><br/>
+    analyzer <span style="color: Gray;">=</span> EjemploImageAnalyzer<span style="color: Olive;">(</span>api_key<span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: #a50"># Ruta de la imagen a analizar</span><br/>
-    image_path <span style="color: Gray;">=</span> <span style="color: #a11;">"runoob_test_image.jpg"</span><br/>
+    image_path <span style="color: Gray;">=</span> <span style="color: #a11;">"ejemplo_test_image.jpg"</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">if</span> <span style="color: Green;font-weight:bold;">not</span> <span style="color: #05a;">os</span>.<span style="color: #05a;">path</span>.<span style="color: #05a;">exists</span><span style="color: Olive;">(</span>image_path<span style="color: Olive;">)</span>:<br/>
         <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Prepara primero la imagen: {image_path}"</span><span style="color: Olive;">)</span><br/>

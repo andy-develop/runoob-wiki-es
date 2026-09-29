@@ -324,7 +324,7 @@ FROM table_name
 LIMIT [no of rows] OFFSET [row num]</pre>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -336,7 +336,7 @@ LIMIT [no of rows] OFFSET [row num]</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo encontrará una cantidad limitada de datos, es decir, leerá 4 registros:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY LIMIT 4;</pre>
+<pre>ejemplodb=# SELECT * FROM COMPANY LIMIT 4;</pre>
 <p>Se obtiene el siguiente resultado:</p>
 <pre> id | name  | age | address     | salary
 ----+-------+-----+-------------+--------
@@ -347,7 +347,7 @@ LIMIT [no of rows] OFFSET [row num]</pre>
 (4 rows)</pre>
 <p>Sin embargo, en algunos casos, puede ser necesario extraer registros comenzando desde un desplazamiento específico.</p>
 <p>A continuación se muestra un ejemplo que extrae 3 registros comenzando desde la tercera posición:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY LIMIT 3 OFFSET 2;</pre>
+<pre>ejemplodb=# SELECT * FROM COMPANY LIMIT 3 OFFSET 2;</pre>
 <p>Se obtiene el siguiente resultado:</p>
 <pre> id | name  | age | address   | salary
 ----+-------+-----+-----------+--------

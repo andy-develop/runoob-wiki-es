@@ -389,32 +389,32 @@ reload(module)</pre>
 <span style="color: Gray;">&lt;</span>module <span style="color: #a11;">'sys'</span> <span style="color: Olive;">(</span>built-<span style="color: Green;font-weight:bold;">in</span><span style="color: Olive;">)</span><span style="color: Gray;">&gt;</span><br/>
 </div></div>
 <h3>Ejemplo 2</h3>
-<p>Primero, creamos un archivo runoob.py en el directorio actual:</p>
+<p>Primero, creamos un archivo ejemplo.py en el directorio actual:</p>
 <div class="example">
-<h2 class="example">Archivo runoob.py</h2>
+<h2 class="example">Archivo ejemplo.py</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-comment"># Código de prueba del archivo runoob.py</span><span class="hl-code">
-</span><span class="hl-identifier">site</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">"</span></div>
+<div class="hl-main"><span class="hl-comment"># Código de prueba del archivo ejemplo.py</span><span class="hl-code">
+</span><span class="hl-identifier">site</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">"</span></div>
 </div></div>
 <p>En el directorio actual, inicie la ventana de comandos interactiva de Python:</p>
-<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-code">&gt;&gt;&gt;</span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">runoob</span><span class="hl-code">
-&gt;&gt;&gt; </span><span class="hl-identifier">runoob</span><span class="hl-code">.</span><span class="hl-identifier">site</span><span class="hl-code">
-</span><span class="hl-quotes">'</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">'</span></div></div></div>
-<p>Luego, edite el archivo runoob.py en otra ventana (no cierre la ventana de comandos interactiva de Python anterior) y modifíquelo con el siguiente código:</p>
+<div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code"><div class="hl-main"><span class="hl-code">&gt;&gt;&gt;</span><span class="hl-reserved">import</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo</span><span class="hl-code">
+&gt;&gt;&gt; </span><span class="hl-identifier">ejemplo</span><span class="hl-code">.</span><span class="hl-identifier">site</span><span class="hl-code">
+</span><span class="hl-quotes">'</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">'</span></div></div></div>
+<p>Luego, edite el archivo ejemplo.py en otra ventana (no cierre la ventana de comandos interactiva de Python anterior) y modifíquelo con el siguiente código:</p>
 <div class="example">
-<h2 class="example">Archivo runoob.py modificado</h2>
+<h2 class="example">Archivo ejemplo.py modificado</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-comment"># Código de prueba del archivo runoob.py</span><span class="hl-code">
+<div class="hl-main"><span class="hl-comment"># Código de prueba del archivo ejemplo.py</span><span class="hl-code">
 </span><span class="hl-identifier">site</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">GOOGLE</span><span class="hl-quotes">"</span></div>
 </div></div>
 <p>Luego, vuelva a la ventana de comandos interactiva de Python:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: Gray;">&gt;&gt;&gt;</span> runoob.<span style="color: #05a;">site</span>    <span style="color: #a50"># El resultado de salida no ha cambiado</span><br/>
-<span style="color: #a11;">'RUNOOB'</span><br/>
+<span style="color: Gray;">&gt;&gt;&gt;</span> ejemplo.<span style="color: #05a;">site</span>    <span style="color: #a50"># El resultado de salida no ha cambiado</span><br/>
+<span style="color: #a11;">'EJEMPLO'</span><br/>
 <span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: Green;font-weight:bold;">from</span> importlib <span style="color: Green;font-weight:bold;">import</span> <span style="color: Teal;">reload</span>  <span style="color: #a50"># Python 3.4+</span><br/>
-<span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: Teal;">reload</span><span style="color: Olive;">(</span>runoob<span style="color: Olive;">)</span>    <span style="color: #a50"># Recargar el archivo runoob.py modificado</span><br/>
-<span style="color: Gray;">&lt;</span>module <span style="color: #a11;">'runoob'</span> <span style="color: Green;font-weight:bold;">from</span> <span style="color: #a11;">'/Users/RUNOOB/runoob-test/runoob.py'</span><span style="color: Gray;">&gt;</span><br/>
-<span style="color: Gray;">&gt;&gt;&gt;</span> runoob.<span style="color: #05a;">site</span>    <span style="color: #a50"># Ahora el resultado de salida es normal</span><br/>
+<span style="color: Gray;">&gt;&gt;&gt;</span> <span style="color: Teal;">reload</span><span style="color: Olive;">(</span>ejemplo<span style="color: Olive;">)</span>    <span style="color: #a50"># Recargar el archivo ejemplo.py modificado</span><br/>
+<span style="color: Gray;">&lt;</span>module <span style="color: #a11;">'ejemplo'</span> <span style="color: Green;font-weight:bold;">from</span> <span style="color: #a11;">'/Users/EJEMPLO/ejemplo-test/ejemplo.py'</span><span style="color: Gray;">&gt;</span><br/>
+<span style="color: Gray;">&gt;&gt;&gt;</span> ejemplo.<span style="color: #05a;">site</span>    <span style="color: #a50"># Ahora el resultado de salida es normal</span><br/>
 <span style="color: #a11;">'GOOGLE'</span><br/>
 </div></div>
 <p><a href="python3-built-in-functions.html"><img alt="Python 内置函数" class="navup" decoding="async" src="../images/up.gif"/>Funciones integradas de Python</a></p>

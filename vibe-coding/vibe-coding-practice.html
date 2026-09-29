@@ -193,7 +193,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Preparación del entorno</h2>
 <p>Solo necesitas tres cosas, y todas son gratuitas.</p>
 <h3>1. Editor VS Code</h3><p>
-<p>Dirección de descarga:<a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></p></p>Tutorial de VS Code:<a href="../vscode/vscode-tutorial.html" target="_blank">https://www.runoob.com/vscode/vscode-tutorial.html</a>
+<p>Dirección de descarga:<a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></p></p>Tutorial de VS Code:<a href="../vscode/vscode-tutorial.html" target="_blank">https://www.example.com/vscode/vscode-tutorial.html</a>
 <p>VS Code es compatible con Windows / macOS / Linux, completamente gratuito.</p>
 <h3>2. GitHub Copilot (ya integrado en VS Code, no necesita instalación)</h3>
 <p>La última versión de VS Code ya incluye GitHub Copilot integrado,<strong>no necesitas instalar ninguna extensión</strong>。</p>
@@ -208,7 +208,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Haz clic en el pequeño icono en la esquina superior derecha para abrir la ventana de chat de Copilot:</p>
 <p><img decoding="async" src="../wp-content/uploads/2025/05/6dd666d4-9a5f-4d98-b8b1-a15c6e33a875.png" style="width:60%"/></p>
 <h3>3. Node.js</h3><p>Dirección de descarga:<a href="https://nodejs.org" target="_blank">https://nodejs.org</a></p>
-<p>Tutorial de Node.js:<a href="../nodejs/nodejs-tutorial.html" target="_blank">https://www.runoob.com/nodejs/nodejs-tutorial.html</a></p>
+<p>Tutorial de Node.js:<a href="../nodejs/nodejs-tutorial.html" target="_blank">https://www.example.com/nodejs/nodejs-tutorial.html</a></p>
 <p>Elige la versión LTS, después de instalar abre la terminal y verifica:</p>
 <pre>
 node -v   # 应显示 v20.x.x 或更高
@@ -243,18 +243,18 @@ npm -v    # 应显示 10.x.x 或更高
 <tr><td>Herramienta de construcción</td><td>Vite</td><td>Inicio rápido, recomendado oficialmente por Vue</td></tr>
 <tr><td>Estilos</td><td>Tailwind CSS</td><td>No necesitas escribir archivos CSS, escribe clases de estilo directamente en el HTML</td></tr>
 <tr><td>Almacenamiento de datos</td><td>localStorage</td><td>Viene incluido en el navegador, no necesita servidor backend</td></tr>
-<tr><td>Nombre del proyecto</td><td>vibe-coding-runoob</td><td>El nombre de nuestro proyecto práctico</td></tr>
+<tr><td>Nombre del proyecto</td><td>vibe-coding-ejemplo</td><td>El nombre de nuestro proyecto práctico</td></tr>
 </table>
 <hr/>
 <h2>Primera ronda de conversación: Estructura básica</h2>
 <p>Ahora comenzamos el verdadero Vibe Coding,<strong>no se trata de contarle a la IA todos los requisitos de una vez, sino ir paso a paso.</strong></p>
 <h3>Paso 1: Crear el proyecto</h3>
 <p>Abre la terminal y crea el proyecto:</p>
-<pre>npm create vite@latest vibe-coding-runoob -- --template vue</pre>
+<pre>npm create vite@latest vibe-coding-ejemplo -- --template vue</pre>
 <p><img decoding="async" src="../wp-content/uploads/2026/06/runoob_1782644141904.png"/></p>
 <p>Abre una nueva terminal, entra en el proyecto y luego, según tailwindcss, usa<span class="marked">code .</span>el comando para abrir el proyecto en VS Code:</p>
 <pre>
-cd vibe-coding-runoob
+cd vibe-coding-ejemplo
 npm install
 npm install -D tailwindcss @tailwindcss/vite
 code .
@@ -264,7 +264,7 @@ code .
 <h3>Paso 2: Primera conversación</h3>
 <p>En el panel de Chat escribe el siguiente texto, es decir, expresa lo que quieres en lenguaje natural:</p>
 <pre>
-我在开发一个任务管理 Web App，项目名 vibe-coding-runoob。
+我在开发一个任务管理 Web App，项目名 vibe-coding-ejemplo。
 技术栈：Vue 3 + Vite + Tailwind CSS。
 
 请帮我搭建项目骨架，创建以下文件：
@@ -275,7 +275,7 @@ code .
    priority 可选值：'low' | 'medium' | 'high'
 
 2. src/App.vue — 应用主页面
-   - 顶部导航栏（标题"Vibe Coding Runoob"）
+   - 顶部导航栏（标题"Vibe Coding Ejemplo"）
    - 中间显示任务列表区域
 
 要求：
@@ -373,7 +373,7 @@ Emit 事件：toggle（切换完成状态）、delete（删除任务）
 1. 创建 src/utils/storage.ts：
    - saveTasks(tasks): 把任务数组存为 JSON
    - loadTasks(): 读取并解析 JSON，读取出错时返回空数组
-   - 存储键名：vibe-coding-runoob-tasks
+   - 存储键名：vibe-coding-ejemplo-tasks
 
 2. 更新 src/stores/taskStore.ts：
    - 用 Vue reactive 管理状态
@@ -390,7 +390,7 @@ Emit 事件：toggle（切换完成状态）、delete（删除任务）
 1. 添加几条任务
 2. 刷新页面 → 任务还在！
 3. 按 F12 打开开发者工具 → Application → Local Storage
-4. 找到 vibe-coding-runoob-tasks，查看存储的 JSON 数据
+4. 找到 vibe-coding-ejemplo-tasks，查看存储的 JSON 数据
 </pre>
 <p>Si los datos se pierden, pega el mensaje de error de la consola (F12) a la IA para que lo corrija.</p>
 <hr/>
@@ -419,7 +419,7 @@ Emit 事件：toggle（切换完成状态）、delete（删除任务）
 功能：
 - 点击按钮切换亮色/深色模式
 - 在 html 标签上添加/移除 dark class
-- 用 localStorage 记住用户选择（键名：vibe-coding-runoob-theme）
+- 用 localStorage 记住用户选择（键名：vibe-coding-ejemplo-theme）
 - 首次访问时跟随系统设置（prefers-color-scheme）
 - 按钮放在导航栏右侧
 
@@ -470,15 +470,15 @@ Enumera las operaciones que has intentado pero que no resolvieron el problema.</
 <pre>
 $ git init
 $ git add .
-$ git commit -m "feat: vibe-coding-runoob 任务管理应用"
+$ git commit -m "feat: vibe-coding-ejemplo 任务管理应用"
 # 在 github.com 创建同名仓库后：
-$ git remote add origin https://github.com/你的用户名/vibe-coding-runoob.git
+$ git remote add origin https://github.com/你的用户名/vibe-coding-ejemplo.git
 $ git push -u origin main
 </pre>
 <h3>Desplegar en Vercel</h3>
 <ol>
 <li>Accede a<a href="https://vercel.com" rel="noopener noreferrer" target="_blank">vercel.com</a>e inicia sesión con tu cuenta de GitHub</li>
-<li>Haz clic en Add New Project y selecciona el repositorio vibe-coding-runoob</li>
+<li>Haz clic en Add New Project y selecciona el repositorio vibe-coding-ejemplo</li>
 <li>En Framework selecciona Vite y haz clic directamente en Deploy</li>
 <li>Espera 1-2 minutos y obtén el dominio xxxx.vercel.app</li>
 </ol>

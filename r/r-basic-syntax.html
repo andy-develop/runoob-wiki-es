@@ -264,24 +264,24 @@ Save workspace image? [y/n/c]: y</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/07/DDF9B88F-3BBC-4679-9D93-565E4D0ABBAB.jpg"/></p>
 <h3>Script de archivo</h3>
 <p>La extensión de archivo de R es<span class="marked">.R</span>。</p>
-<p>A continuación, creamos un archivo runoob-test.R con el siguiente código:</p>
-<div class="example"><h2 class="example">Archivo runoob-test.R</h2> <div class="example_code">
-myString <span style="color: #170;">&lt;-</span> <span style="color: #a11;">"RUNOOB"</span><br/>
+<p>A continuación, creamos un archivo ejemplo-test.R con el siguiente código:</p>
+<div class="example"><h2 class="example">Archivo ejemplo-test.R</h2> <div class="example_code">
+myString <span style="color: #170;">&lt;-</span> <span style="color: #a11;">"EJEMPLO"</span><br/>
 <br/>
 <span style="color: #05a; font-weight: bold;">print</span> <span style="color: #080;">(</span> myString <span style="color: #080;">)</span><br/>
 </div></div><p>Luego usamos Rscript en la ventana de línea de comandos para ejecutar este script:</p>
-<pre>Rscript runoob-test.R</pre>
-<p>El resultado es el siguiente:</p><pre>[1] "RUNOOB"</pre>
+<pre>Rscript ejemplo-test.R</pre>
+<p>El resultado es el siguiente:</p><pre>[1] "EJEMPLO"</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/07/0E277616-7A0A-423B-A3FB-8BCF0D381C80.jpg"/></p>
 <hr/><h2>Entrada y salida</h2>
 <h3>Salida con print()</h3>
 <p><span class="marked">print()</span>es la función de salida de R.</p>
 <p>Igual que otros lenguajes de programación, R admite salida de números, caracteres, etc.</p><p>La instrucción de salida es muy sencilla:</p>
-<pre>print("RUNOOB")
+<pre>print("EJEMPLO")
 print(123)
 print(3e2)</pre>
 <p>Resultado de la ejecución:</p>
-<pre>[1] "RUNOOB"
+<pre>[1] "EJEMPLO"
 [1] 123
 [1] 300</pre>
 <p>R, al igual que node.js y Python, es un lenguaje interpretado, por lo que a menudo podemos usar R como si fuera una línea de comandos.</p><p>Si ingresamos solo un valor en una línea, R también lo genera directamente de forma estándar:</p>
@@ -319,20 +319,20 @@ print(x)</pre>
 <h3>Enviar contenido a un archivo</h3><p>R tiene métodos muy variados y convenientes para la salida a archivos.</p>
 <p>
 <span class="marked">cat()</span>La función admite la salida directa del resultado a un archivo:</p>
-<pre>cat("RUNOOB", file="/Users/runoob/runoob-test/r_test.txt")</pre>
-<p>Esta instrucción no produce resultado en la consola, sino que envía "RUNOOB" al archivo "/Users/runoob/runoob-test/r_test.txt".</p>
+<pre>cat("EJEMPLO", file="/Users/ejemplo/ejemplo-test/r_test.txt")</pre>
+<p>Esta instrucción no produce resultado en la consola, sino que envía "EJEMPLO" al archivo "/Users/ejemplo/ejemplo-test/r_test.txt".</p>
 <p>El parámetro file puede ser una ruta absoluta o relativa; se recomienda usar ruta absoluta. El formato de ruta en Windows es<span class="marked">D:\\r_test.txt</span>。</p>
-<pre>cat("RUNOOB", file="D:\\r_test.txt")</pre>
+<pre>cat("EJEMPLO", file="D:\\r_test.txt")</pre>
 <p>Nota: esta operación es una operación de "escritura sobrescrita"; úsela con cuidado, porque borrará los datos originales del archivo de salida. Si desea "escritura añadida", no olvide configurar el parámetro append:</p>
-<pre>cat("GOOGLE", file="/Users/runoob/runoob-test/r_test.txt", append=TRUE)</pre>
+<pre>cat("GOOGLE", file="/Users/ejemplo/ejemplo-test/r_test.txt", append=TRUE)</pre>
 <p>Después de ejecutar el código anterior, al abrir el archivo r_test.txt el contenido es el siguiente:</p>
-<pre>RUNOOBGOOGLE</pre>
+<pre>EJEMPLOGOOGLE</pre>
 <h3>sink()</h3>
 <p>La función sink() puede enviar directamente la salida de la consola a un archivo:</p>
-<pre>sink("/Users/runoob/runoob-test/r_test.txt")</pre><p>Después de ejecutar esta instrucción, cualquier salida en la consola se escribirá en el archivo "/Users/runoob/runoob-test/r_test.txt", y la consola no mostrará la salida.</p>
+<pre>sink("/Users/ejemplo/ejemplo-test/r_test.txt")</pre><p>Después de ejecutar esta instrucción, cualquier salida en la consola se escribirá en el archivo "/Users/ejemplo/ejemplo-test/r_test.txt", y la consola no mostrará la salida.</p>
 <p>Nota: esta operación también es de "escritura sobrescrita" y borrará directamente el contenido original del archivo.</p>
 <p>Si aún queremos mantener la salida en la consola, podemos configurar el atributo split:</p>
-<pre>sink("/Users/runoob/runoob-test/r_test.txt", split=TRUE)</pre>
+<pre>sink("/Users/ejemplo/ejemplo-test/r_test.txt", split=TRUE)</pre>
 <p>Si desea cancelar la salida al archivo, puede llamar a sink sin parámetros:</p>
 <pre>
 sink()</pre>
@@ -343,7 +343,7 @@ sink()</pre>
 <span style="color: #05a; font-weight: bold;">sink</span><span style="color: #080;">(</span><span style="color: #080;">)</span>   <span style="color: #a50;"># Cancelar la salida al archivo</span><br/>
 <br/>
 <span style="color: #05a; font-weight: bold;">sink</span><span style="color: #080;">(</span><span style="color: #a11;">"r_test.txt"</span>, <span style="color: #05a; font-weight: bold;">append</span><span style="color: #170;">=</span>TRUE<span style="color: #080;">)</span> <span style="color: #a50;"># La consola no genera, escribe añadiendo al archivo</span><br/>
-<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span><span style="color: #a11;">"RUNOOB"</span><span style="color: #080;">)</span><br/>
+<span style="color: #05a; font-weight: bold;">print</span><span style="color: #080;">(</span><span style="color: #a11;">"EJEMPLO"</span><span style="color: #080;">)</span><br/>
 </div></div>
 <p>Después de ejecutar el código anterior, se generará un archivo r_test.txt en el directorio actual. Al abrir el archivo, el contenido es el siguiente:</p>
 <pre>[1] 1
@@ -351,7 +351,7 @@ sink()</pre>
 [1] 3
 [1] 4
 [1] 5
-[1] "RUNOOB"</pre>
+[1] "EJEMPLO"</pre>
 <p>La salida en consola es:</p>
 <pre>[1] 1
 [1] 2
@@ -363,10 +363,10 @@ sink()</pre>
 <h3>Leer texto desde un archivo</h3>
 <p>R tiene ricas funciones de lectura de archivos, pero si puramente se desea leer el contenido de un archivo como una cadena, se puede usar la función readLines:</p>
 <pre>
-readLines("/Users/runoob/runoob-test/r_test.txt")</pre>
+readLines("/Users/ejemplo/ejemplo-test/r_test.txt")</pre>
 <p>Resultado de la ejecución:</p>
 <pre>
-[1] "RUNOOBGOOGLE"</pre>
+[1] "EJEMPLOGOOGLE"</pre>
 <p>El resultado de la lectura son dos cadenas, que corresponden a las dos líneas de contenido del archivo leído.</p>
 <blockquote><p><strong>Nota:</strong>Cada línea (incluida la última) del archivo de texto leído debe terminar con un carácter de nueva línea; de lo contrario, se reportará un error.</p></blockquote>
 <h3>Otros métodos</h3>
@@ -380,14 +380,14 @@ readLines("/Users/runoob/runoob-test/r_test.txt")</pre>
 print<span style="color: #7A0874; font-weight: bold;">(</span>getwd<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">)</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># establecer el directorio de trabajo actual</span><br/>
-setwd<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">"/Users/runoob/runoob-test2"</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
+setwd<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #a10;">"/Users/ejemplo/ejemplo-test2"</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 <br/>
 <span style="color: #666666; font-style: italic;"># Ver el directorio de trabajo actual</span><br/>
 print<span style="color: #7A0874; font-weight: bold;">(</span>getwd<span style="color: #7A0874; font-weight: bold;">(</span><span style="color: #7A0874; font-weight: bold;">)</span><span style="color: #7A0874; font-weight: bold;">)</span><br/>
 </div></div>
 <p>El resultado de ejecutar el código anterior es:</p>
-<pre>[1] "/Users/runoob/runoob-test"
-[1] "/Users/tianqixin/runoob-test2"</pre>
+<pre>[1] "/Users/ejemplo/ejemplo-test"
+[1] "/Users/tianqixin/ejemplo-test2"</pre>
 <hr/>
 <h2>La característica más importante de R: vectorización</h2>
 <p>Este es uno de los aspectos más potentes de R.</p>

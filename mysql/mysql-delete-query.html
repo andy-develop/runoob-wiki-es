@@ -332,15 +332,15 @@ WHERE customer_id IN (
 <strong>Nota:</strong>Al usar la sentencia DELETE, asegúrate de proporcionar suficientes condiciones para garantizar que solo se eliminen las filas que deseas. Si no se proporciona la cláusula WHERE, se eliminarán todas las filas de la tabla, lo que puede provocar resultados impredecibles.</p></blockquote>
 <hr/>
 <h2>Eliminar datos desde la línea de comandos</h2>
-<p>Aquí usaremos la cláusula WHERE en el comando DELETE para eliminar los datos seleccionados de la tabla MySQL runoob_tbl.</p>
+<p>Aquí usaremos la cláusula WHERE en el comando DELETE para eliminar los datos seleccionados de la tabla MySQL ejemplo_tbl.</p>
 <h3>Ejemplo</h3>
-<p>El siguiente ejemplo eliminará el registro con runoob_id igual a 3 en la tabla runoob_tbl:</p>
+<p>El siguiente ejemplo eliminará el registro con ejemplo_id igual a 3 en la tabla ejemplo_tbl:</p>
 <div class="example">
 <h2 class="example">Sentencia DELETE:</h2>
 <div class="example_code">
-<div class="hl-main"><span class="hl-identifier">mysql</span><span class="hl-code">&gt; </span><span class="hl-identifier">use</span><span class="hl-code"> </span><span class="hl-identifier">RUNOOB</span><span class="hl-code">;
+<div class="hl-main"><span class="hl-identifier">mysql</span><span class="hl-code">&gt; </span><span class="hl-identifier">use</span><span class="hl-code"> </span><span class="hl-identifier">EJEMPLO</span><span class="hl-code">;
 </span><span class="hl-identifier">Database</span><span class="hl-code"> </span><span class="hl-identifier">changed</span><span class="hl-code">
-</span><span class="hl-identifier">mysql</span><span class="hl-code">&gt; </span><span class="hl-reserved">DELETE</span><span class="hl-code"> </span><span class="hl-reserved">FROM</span><span class="hl-code"> </span><span class="hl-identifier">runoob_tbl</span><span class="hl-code"> </span><span class="hl-reserved">WHERE</span><span class="hl-code"> </span><span class="hl-identifier">runoob_id</span><span class="hl-code">=</span><span class="hl-number">3</span><span class="hl-code">;
+</span><span class="hl-identifier">mysql</span><span class="hl-code">&gt; </span><span class="hl-reserved">DELETE</span><span class="hl-code"> </span><span class="hl-reserved">FROM</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo_tbl</span><span class="hl-code"> </span><span class="hl-reserved">WHERE</span><span class="hl-code"> </span><span class="hl-identifier">ejemplo_id</span><span class="hl-code">=</span><span class="hl-number">3</span><span class="hl-code">;
 </span><span class="hl-identifier">Query</span><span class="hl-code"> </span><span class="hl-identifier">OK</span><span class="hl-code">, </span><span class="hl-number">1</span><span class="hl-code"> </span><span class="hl-reserved">row</span><span class="hl-code"> </span><span class="hl-identifier">affected</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-number">0.23</span><span class="hl-code"> </span><span class="hl-identifier">sec</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
@@ -348,7 +348,7 @@ WHERE customer_id IN (
 <p>PHP usa la función mysqli_query() para ejecutar sentencias SQL. Puedes usar la cláusula WHERE o no usarla en el comando DELETE.</p>
 <p>Esta función tiene el mismo efecto que<span class="marked">mysql&gt;</span>la ejecución de comandos SQL en el símbolo del sistema.</p>
 <h3>Ejemplo</h3>
-<p>El siguiente ejemplo de PHP eliminará el registro con runoob_id igual a 3 en la tabla runoob_tbl:</p>
+<p>El siguiente ejemplo de PHP eliminará el registro con ejemplo_id igual a 3 en la tabla ejemplo_tbl:</p>
 <div class="example">
 <h2 class="example">Prueba de la cláusula MySQL DELETE:</h2>
 <div class="example_code">
@@ -364,10 +364,10 @@ WHERE customer_id IN (
 </span><span class="hl-comment">//</span><span class="hl-comment">Configurar la codificación para evitar caracteres chinos ilegibles.</span><span class="hl-comment"></span><span class="hl-code">
 </span><span class="hl-identifier">mysqli_query</span><span class="hl-brackets">(</span><span class="hl-var">$conn</span><span class="hl-code"> , </span><span class="hl-quotes">"</span><span class="hl-string">set names utf8</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">;
  
-</span><span class="hl-var">$sql</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">DELETE FROM runoob_tbl
-        WHERE runoob_id=3</span><span class="hl-quotes">'</span><span class="hl-code">;
+</span><span class="hl-var">$sql</span><span class="hl-code"> = </span><span class="hl-quotes">'</span><span class="hl-string">DELETE FROM ejemplo_tbl
+        WHERE ejemplo_id=3</span><span class="hl-quotes">'</span><span class="hl-code">;
  
-</span><span class="hl-identifier">mysqli_select_db</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$conn</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">RUNOOB</span><span class="hl-quotes">'</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">mysqli_select_db</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$conn</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">EJEMPLO</span><span class="hl-quotes">'</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-var">$retval</span><span class="hl-code"> = </span><span class="hl-identifier">mysqli_query</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$conn</span><span class="hl-code">, </span><span class="hl-var">$sql</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
 </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code">! </span><span class="hl-var">$retval</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-brackets">{</span><span class="hl-code">

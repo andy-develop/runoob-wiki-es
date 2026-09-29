@@ -343,7 +343,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <span style="color: #a50"># Vincular la ruta "/hello"</span><br/>
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/hello"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> hello<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-    <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"Hello, RUNOOB!"</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"Hello, EJEMPLO!"</span><br/>
 <br/>
 <span style="color: #a50"># Diferentes rutas corresponden a diferentes funciones</span><br/>
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/about"</span><span style="color: Olive;">)</span><br/>
@@ -370,8 +370,8 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"&lt;h1&gt;Usuario: {username}&lt;/h1&gt;"</span><br/>
 <br/>
 <span style="color: #a50"># Para probar el acceso:</span><br/>
-<span style="color: #a50"># /user/runoob  →  la página muestra "Usuario: runoob"</span><br/>
-<span style="color: #a50"># /user/RUNOOB  →  la página muestra "Usuario: RUNOOB"</span><br/>
+<span style="color: #a50"># /user/ejemplo  →  la página muestra "Usuario: ejemplo"</span><br/>
+<span style="color: #a50"># /user/EJEMPLO  →  la página muestra "Usuario: EJEMPLO"</span><br/>
 </div>
 </div>
 <h3>Conversores de tipo</h3>
@@ -386,8 +386,8 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
 <tr>
 <td>string</td>
 <td>Por defecto, acepta texto que no contiene /</td>
-<td>/user/runoob</td>
-<td>username = "runoob"</td>
+<td>/user/ejemplo</td>
+<td>username = "ejemplo"</td>
 </tr>
 <tr>
 <td>int</td>
@@ -511,7 +511,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>url_for<span style="color: Olive;">(</span><span style="color: #a11;">"index"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>                    <span style="color: #a50"># Salida: /</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>url_for<span style="color: Olive;">(</span><span style="color: #a11;">"login"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>                    <span style="color: #a50"># Salida: /login</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>url_for<span style="color: Olive;">(</span><span style="color: #a11;">"login"</span><span style="color: Gray;">,</span> next<span style="color: Gray;">=</span><span style="color: #a11;">"/"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>          <span style="color: #a50"># Salida: /login?next=%2F</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>url_for<span style="color: Olive;">(</span><span style="color: #a11;">"profile"</span><span style="color: Gray;">,</span> username<span style="color: Gray;">=</span><span style="color: #a11;">"runoob"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: /user/runoob</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>url_for<span style="color: Olive;">(</span><span style="color: #a11;">"profile"</span><span style="color: Gray;">,</span> username<span style="color: Gray;">=</span><span style="color: #a11;">"ejemplo"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>  <span style="color: #a50"># Salida: /user/ejemplo</span><br/>
 </div>
 </div>
 <p><span class="marked">url_for()</span>El primer parámetro de url_for es el nombre de la función de vista (nótese que es el nombre de la función, no la ruta URL).</p>
@@ -615,7 +615,7 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"&lt;h1&gt;Hello, {name}!&lt;/h1&gt;"</span><br/>
 </div>
 </div>
-<p>Acceder<span class="marked">/hello</span>Cuando<span class="marked">name</span>Tomar el valor predeterminado<span class="marked">None</span>, acceder<span class="marked">/hello/runoob</span>Cuando<span class="marked">name</span>Para<span class="marked">"runoob"</span>。</p>
+<p>Acceder<span class="marked">/hello</span>Cuando<span class="marked">name</span>Tomar el valor predeterminado<span class="marked">None</span>, acceder<span class="marked">/hello/ejemplo</span>Cuando<span class="marked">name</span>Para<span class="marked">"ejemplo"</span>。</p>
 Otras extensiones
 </div>
 </div>

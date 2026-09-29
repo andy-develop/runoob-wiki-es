@@ -86,24 +86,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad start-->
 <!-- ad end-->
 <p>Este artículo, mediante la configuración<strong>Access-Control-Allow-Origin</strong>para lograr el acceso entre dominios.</p>
-<p>Por ejemplo: el dominio del cliente es client.runoob.com, y el dominio solicitado es server.runoob.com.</p>
+<p>Por ejemplo: el dominio del cliente es client.example.com, y el dominio solicitado es server.example.com.</p>
 <p>Si utiliza directamente ajax para acceder, se producirá el siguiente error:</p>
 <pre>
-XMLHttpRequest cannot load http://server.runoob.com/server.php. No 'Access-Control-Allow-Origin' header is present on the requested resource.Origin 'http://client.runoob.com' is therefore not allowed access.
+XMLHttpRequest cannot load http://server.example.com/server.php. No 'Access-Control-Allow-Origin' header is present on the requested resource.Origin 'http://client.example.com' is therefore not allowed access.
 </pre>
 <h2>1. Permitir el acceso de un solo dominio</h2>
-<p>Especifique un dominio (http://client.runoob.com) para acceso entre dominios, entonces solo necesita agregar el siguiente código al inicio del archivo http://server.runoob.com/server.php:</p>
+<p>Especifique un dominio (http://client.example.com) para acceso entre dominios, entonces solo necesita agregar el siguiente código al inicio del archivo http://server.example.com/server.php:</p>
 <pre>
-header('Access-Control-Allow-Origin:http://client.runoob.com');
+header('Access-Control-Allow-Origin:http://client.example.com');
 </pre>
 <h2>2. Permitir el acceso de múltiples dominios</h2>
-<p>Especifique varios dominios (http://client1.runoob.com, http://client2.runoob.com, etc.) para acceso entre dominios, entonces solo necesita agregar el siguiente código al inicio del archivo http://server.runoob.com/server.php:</p>
+<p>Especifique varios dominios (http://client1.example.com, http://client2.example.com, etc.) para acceso entre dominios, entonces solo necesita agregar el siguiente código al inicio del archivo http://server.example.com/server.php:</p>
 <pre>
 $origin = isset($_SERVER['HTTP_ORIGIN'])? $_SERVER['HTTP_ORIGIN'] : '';  
   
 $allow_origin = array(  
-    'http://client1.runoob.com',  
-    'http://client2.runoob.com'  
+    'http://client1.example.com',  
+    'http://client2.example.com'  
 );  
   
 if(in_array($origin, $allow_origin)){  
@@ -111,7 +111,7 @@ if(in_array($origin, $allow_origin)){
 } 
 </pre>
 <h2>3. Permitir el acceso de todos los dominios</h2>
-<p>Para permitir el acceso de todos los dominios, solo necesita agregar el siguiente código al inicio del archivo http://server.runoob.com/server.php:<p>
+<p>Para permitir el acceso de todos los dominios, solo necesita agregar el siguiente código al inicio del archivo http://server.example.com/server.php:<p>
 <pre>header('Access-Control-Allow-Origin:*'); </pre> </p></p></div>
 </div>
 <div class="previous-next-links">

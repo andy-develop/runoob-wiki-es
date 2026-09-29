@@ -329,14 +329,14 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 <span style="color: #a50"># Herramienta normal: el resultado se devuelve al modelo, y el modelo hace un resumen</span><br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_normal<span style="color: Olive;">(</span><span style="color: #05a;">keyword</span>: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Buscar cursos de Runoob (modo normal)"""</span><br/>
+    <span style="color: #a11;">"""Buscar cursos de Ejemplo (modo normal)"""</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Resultados de búsqueda: Tutorial básico de Python3, Análisis de datos con Python, Introducción al scraping con Python"</span><br/>
 <br/>
 <br/>
 <span style="color: #a50"># Herramienta return_direct: el resultado se usa directamente como salida final</span><br/>
 <span style="color: Gray;">@</span>tool<span style="color: Olive;">(</span>return_direct<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> search_direct<span style="color: Olive;">(</span><span style="color: #05a;">keyword</span>: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Buscar cursos de Runoob (modo de devolución directa).<br/>
+    <span style="color: #a11;">"""Buscar cursos de Ejemplo (modo de devolución directa).<br/>
 <br/>Usa esta herramienta cuando el usuario solo necesite los resultados de búsqueda, sin análisis adicional.<br/>
     """</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Resultados de búsqueda: Tutorial básico de Python3, Análisis de datos con Python, Introducción al scraping con Python"</span><br/>
@@ -348,13 +348,13 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent_normal <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_normal<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 agent_direct <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_direct<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de Runoob."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de aprendizaje de Ejemplo."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Modo normal: el modelo genera un resumen basado en los resultados de búsqueda</span><br/>
@@ -375,7 +375,7 @@ result <span style="color: Gray;">=</span> agent_direct.<span style="color: #05a
 <p>Resultado de la ejecución:</p>
 <pre>
 === 普通模式（模型会再加工）===
-在菜鸟教程 RUNOOB 中，我为您找到了以下 Python 相关课程：
+在Ejemplo 中，我为您找到了以下 Python 相关课程：
 1. Python3 基础教程 - 适合零基础入门
 2. Python 数据分析 - 进阶学习
 3. Python 爬虫入门 - 实战项目
@@ -589,7 +589,7 @@ handle_tool_error=True: 未收录城市 '北境'。可使用城市：杭州, 北
 <br/>
 <span style="color: Gray;">@</span>tool<span style="color: Olive;">(</span>handle_tool_error<span style="color: Gray;">=</span><span style="color: Teal;">True</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> book_course<span style="color: Olive;">(</span>user_name: <span style="color: Teal;">str</span><span style="color: Gray;">,</span> course_name: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Reserva un curso de RUNOOB para el usuario.<br/>
+    <span style="color: #a11;">"""Reserva un curso de EJEMPLO para el usuario.<br/>
 <br/>
     Args:<br/>user_name: nombre del usuario<br/>course_name: nombre del curso<br/>
     """</span><br/>
@@ -616,7 +616,7 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>book_course<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de RUNOOB."</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"Eres el asesor de cursos de EJEMPLO."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Llamada normal</span><br/>
@@ -639,7 +639,7 @@ result <span style="color: Gray;">=</span> agent.<span style="color: #05a;">invo
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-成功: 已经为您成功预订《Python3 基础教程》，张三同学，祝您学习愉快！
+Éxito: 已经为您成功预订《Python3 基础教程》，张三同学，祝您学习愉快！
 
 错误-用户不存在:
   [tool] 用户 '赵六' 不存在。有效用户：张三, 李四, 王五

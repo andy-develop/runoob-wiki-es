@@ -321,7 +321,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 <br/>
   <span style="color: #999988; font-style: italic;">// Espera el resultado del cálculo del nuevo Isolate</span><br/>
   <span style="font-weight: bold;">var</span> result <span style="font-weight: bold;">=</span> await receivePort.<span style="color: #006633;">first</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'Resultado RUNOOB: suma de 1 a 10000000 = $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'Resultado EJEMPLO: suma de 1 a 10000000 = $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   receivePort.<span style="color: #006633;">close</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'El Isolate principal termina'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
@@ -333,7 +333,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 主 Isolate 在等待结果的同时可以做其他事情...
 新 Isolate 开始计算...
 新 Isolate 计算完成，结果已发送
-RUNOOB 计算结果: 1 到 10000000 的和 = 50000005000000
+EJEMPLO 计算结果: 1 到 10000000 的和 = 50000005000000
 主 Isolate 结束
 </pre>
 <h3>Comparación: diferencia de rendimiento con y sin Isolate</h3>
@@ -355,7 +355,7 @@ RUNOOB 计算结果: 1 到 10000000 的和 = 50000005000000
   <span style="font-weight: bold;">var</span> result <span style="font-weight: bold;">=</span> fibonacci<span style="">(</span><span style="color: #009999;">40</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   <span style="font-weight: bold;">var</span> elapsed <span style="font-weight: bold;">=</span> DateTime.<span style="color: #006633;">now</span><span style="">(</span><span style="">)</span>.<span style="color: #006633;">difference</span><span style="">(</span>startTime<span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'RUNOOB Fibonacci(40) = $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'EJEMPLO Fibonacci(40) = $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'Tiempo: ${elapsed.inMilliseconds}ms'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
   print<span style="">(</span><span style="color: #d14;">'(Nota: durante el cálculo, el Isolate principal no puede procesar otras tareas)'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
@@ -442,7 +442,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
   <span style="">}</span><br/>
 <br/>
   mainReceivePort.<span style="color: #006633;">close</span><span style="">(</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'RUNOOB: fin de la demostración de comunicación bidireccional'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'EJEMPLO: fin de la demostración de comunicación bidireccional'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <span style="">}</span><br/>
 </div>
 </div>
@@ -456,7 +456,7 @@ Worker Isolate: 收到数据 [10, 20, 30]
 主 Isolate: 收到结果 [100, 400, 900]
 Worker Isolate: 收到退出信号，关闭
 主 Isolate: Worker 已退出
-RUNOOB 双向通信演示结束
+EJEMPLO 双向通信演示结束
 </pre>
 <h3>Simplificación con Isolate.run (Dart 3.0+)</h3>
 <p>Dart 3.0 introdujo Isolate.run(), lo que simplifica enormemente el uso para tareas de cálculo únicas.</p>
@@ -479,7 +479,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 <br/>
   <span style="color: #999988; font-style: italic;">// Isolate.run: una sola línea lo resuelve todo; crea el Isolate automáticamente, ejecuta y devuelve el resultado</span><br/>
   <span style="font-weight: bold;">var</span> result <span style="font-weight: bold;">=</span> await Isolate.<span style="color: #006633;">run</span><span style="">(</span><span style="">(</span><span style="">)</span> <span style="font-weight: bold;">=&gt;</span> complexCalculation<span style="">(</span><span style="color: #009999;">10000000</span><span style="">)</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
-  print<span style="">(</span><span style="color: #d14;">'RUNOOB: resultado del cálculo: $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
+  print<span style="">(</span><span style="color: #d14;">'EJEMPLO: resultado del cálculo: $result'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
   print<span style="">(</span><span style="color: #d14;">'Cálculo completado'</span><span style="">)</span><span style="font-weight: bold;">;</span><br/>
 <br/>
@@ -490,7 +490,7 @@ Future<span style="font-weight: bold;">&lt;</span>void<span style="font-weight: 
 </div>
 <pre>
 开始计算...
-RUNOOB 计算结果: 333333283333335000000
+EJEMPLO 计算结果: 333333283333335000000
 计算完成
 （如果在主 Isolate 中直接计算，会阻塞其他操作）
 </pre>

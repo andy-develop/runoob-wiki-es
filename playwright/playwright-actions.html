@@ -350,13 +350,13 @@ await page.<span style="color: #660066;">getByRole</span><span style="color: #00
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Navegación básica</span><br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Esperar DOMContentLoaded (estructura de la página cargada)</span><br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> waitUntil<span style="color: #339933;">:</span> <span style="color: #3366CC;">'domcontentloaded'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> waitUntil<span style="color: #339933;">:</span> <span style="color: #3366CC;">'domcontentloaded'</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 <br/>
 <span style="color: #006600; font-style: italic;">// Esperar a que la red esté inactiva (todos los datos asíncronos cargados)</span><br/>
-await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.runoob.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
+await page.<span style="color: #000066; font-weight: bold;">goto</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'https://www.example.com/'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span><br/>
   waitUntil<span style="color: #339933;">:</span> <span style="color: #3366CC;">'networkidle'</span><span style="color: #339933;">,</span>    <span style="color: #006600; font-style: italic;">// Red inactiva</span><br/>
   timeout<span style="color: #339933;">:</span> <span style="color: #CC0000;">60000</span><span style="color: #339933;">,</span>              <span style="color: #006600; font-style: italic;">// Tiempo de espera 60 segundos</span><br/>
   referer<span style="color: #339933;">:</span> <span style="color: #3366CC;">'https://google.com'</span><span style="color: #339933;">,</span> <span style="color: #006600; font-style: italic;">// Origen del Referer</span><br/>
@@ -462,9 +462,9 @@ await page.<span style="color: #660066;">getByRole</span><span style="color: #00
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Vaciar el campo de entrada y escribir un nuevo valor</span><br/>
-await page.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'runoob_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'nombre de usuario'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'ejemplo_user'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 await page.<span style="color: #660066;">getByLabel</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'contraseña'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'secure_password'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
-await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Buscar tutorial de RUNOOB'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Playwright'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">getByPlaceholder</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Buscar tutorial de EJEMPLO'</span><span style="color: #009900;">)</span>.<span style="color: #660066;">fill</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Playwright'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>locator.type() Escritura carácter a carácter</h3>
@@ -583,7 +583,7 @@ await page.<span style="color: #660066;">keyboard</span>.<span style="color: #66
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #006600; font-style: italic;">// Escribir texto en el elemento enfocado</span><br/>
-await page.<span style="color: #660066;">keyboard</span>.<span style="color: #660066;">type</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tutorial de RUNOOB'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> delay<span style="color: #339933;">:</span> <span style="color: #CC0000;">50</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
+await page.<span style="color: #660066;">keyboard</span>.<span style="color: #660066;">type</span><span style="color: #009900;">(</span><span style="color: #3366CC;">'Tutorial de EJEMPLO'</span><span style="color: #339933;">,</span> <span style="color: #009900;">{</span> delay<span style="color: #339933;">:</span> <span style="color: #CC0000;">50</span> <span style="color: #009900;">}</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span><br/>
 </div>
 </div>
 <h3>page.keyboard.insertText() Insertar directamente</h3>

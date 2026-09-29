@@ -343,14 +343,14 @@ list2[1:5]:  [2, 3, 4, 5]
 </span><span class="hl-comment"># -*- coding: UTF-8 -*-</span><span class="hl-code">
 </span><span class="hl-identifier">list</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-brackets">]</span><span class="hl-code"> </span><span class="hl-comment">## Lista vacía</span><span class="hl-code">
 </span><span class="hl-identifier">list</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment">## Agregar elementos con append()</span><span class="hl-code">
-</span><span class="hl-identifier">list</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-identifier">list</span><span class="hl-code">.</span><span class="hl-identifier">append</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-identifier">list</span></div>
 </div>
 </div>
 <p><strong>Nota:</strong>Discutiremos el uso del método append() en los siguientes capítulos.</p>
 <p>El resultado del ejemplo anterior es:</p>
 <pre>
-['Google', 'Runoob']
+['Google', 'Ejemplo']
 </pre>
 <hr/>
 <h2>Eliminar elementos de la lista</h2>
@@ -391,13 +391,13 @@ After deleting value at index 2 :
 <p>Los ejemplos de rebanado de listas de Python son los siguientes:</p>
 <div class="example">
 <div class="example_code">
-<div class="hl-main"><span class="hl-code">&gt;&gt;&gt;</span><span class="hl-identifier">L</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
+<div class="hl-main"><span class="hl-code">&gt;&gt;&gt;</span><span class="hl-identifier">L</span><span class="hl-code"> = </span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Google</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
 &gt;&gt;&gt; </span><span class="hl-identifier">L</span><span class="hl-brackets">[</span><span class="hl-number">2</span><span class="hl-brackets">]</span><span class="hl-code">
 </span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-code">
 &gt;&gt;&gt; </span><span class="hl-identifier">L</span><span class="hl-brackets">[</span><span class="hl-code">-</span><span class="hl-number">2</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">
+</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">
 &gt;&gt;&gt; </span><span class="hl-identifier">L</span><span class="hl-brackets">[</span><span class="hl-number">1</span><span class="hl-code">:</span><span class="hl-brackets">]</span><span class="hl-code">
-</span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Runoob</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
+</span><span class="hl-brackets">[</span><span class="hl-quotes">'</span><span class="hl-string">Ejemplo</span><span class="hl-quotes">'</span><span class="hl-code">, </span><span class="hl-quotes">'</span><span class="hl-string">Taobao</span><span class="hl-quotes">'</span><span class="hl-brackets">]</span><span class="hl-code">
 &gt;&gt;&gt;</span></div>
 </div>
 </div>
@@ -406,8 +406,8 @@ After deleting value at index 2 :
 <tbody><tr>
 <th style="width:33%">Expresión de Python</th><th style="width:33%">Resultado</th><th style="width:33%">Descripción</th></tr>
 <tr><td>L[2]</td><td>'Taobao'</td><td>Leer el tercer elemento de la lista</td></tr>
-<tr><td>L[-2]</td><td>'Runoob'</td><td>Leer el penúltimo elemento de la lista</td></tr>
-<tr><td>L[1:]</td><td>['Runoob', 'Taobao']</td><td>Rebanar la lista a partir del segundo elemento</td></tr>
+<tr><td>L[-2]</td><td>'Ejemplo'</td><td>Leer el penúltimo elemento de la lista</td></tr>
+<tr><td>L[1:]</td><td>['Ejemplo', 'Taobao']</td><td>Rebanar la lista a partir del segundo elemento</td></tr>
 </tbody></table>
 <hr/>
 <h2>Funciones y métodos de listas de Python</h2>

@@ -259,7 +259,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 mkdir /opt/svn
 </pre>
 <p>Usar el comando svn para crear el repositorio</p>
-<pre>svnadmin create /opt/svn/runoob</pre>
+<pre>svnadmin create /opt/svn/ejemplo</pre>
 <p>Usar el comando svnserve para iniciar el servicio<p>
 <pre>svnserve -d -r 目录 --listen-port 端口号</pre>
 <ul>
@@ -269,7 +269,7 @@ mkdir /opt/svn
 <p><strong>--listen-port:</strong>Especifica el puerto de escucha de SVN; sin este parámetro, SVN escucha en el puerto 3690 por defecto</p></li>
 <p>Debido a las diferencias en el método de configuración de -r, el inicio de SVN puede tener dos métodos de acceso diferentes</p>
 <p>Método 1: -r especifica directamente el repositorio (llamado modo svnserve de repositorio único)</p>
-<pre>svnserve -d -r /opt/svn/runoob</pre>
+<pre>svnserve -d -r /opt/svn/ejemplo</pre>
 <p>En este caso, un svnserve solo puede trabajar para un repositorio.</p>
 <p>La configuración de permisos del repositorio en el archivo de configuración authz debe escribirse así:</p>
 <pre>
@@ -280,7 +280,7 @@ dev=user2
 @admin=rw
 user2=r
 </pre>
-<p>Usa una URL como esta: svn://192.168.0.1/ para acceder al repositorio runoob</p>
+<p>Usa una URL como esta: svn://192.168.0.1/ para acceder al repositorio ejemplo</p>
 <p>Método 2: especificar el directorio superior del repositorio (llamado modo svnserve de múltiples repositorios)</p>
 <pre>svnserve -d -r /opt/svn</pre>
 <p>En este caso, un svnserve puede trabajar para múltiples repositorios<p>La configuración de permisos del repositorio en el archivo de configuración authz debe escribirse así:</p>
@@ -288,16 +288,16 @@ user2=r
 [groups]
 admin=user1
 dev=user2
-[runoob:/]
+[ejemplo:/]
 @admin=rw
 user2=r
 
-[runoob01:/]
+[ejemplo01:/]
 @admin=rw
 user2=r
 </pre>
 <p>Si en este momento todavía usas [/], indica el directorio raíz de todos los repositorios; de manera similar, [/src] indica el directorio src bajo el directorio raíz de todos los repositorios.</p>
-<p>Usa una URL como esta: svn://192.168.0.1/runoob para acceder al repositorio runoob.</p>
+<p>Usa una URL como esta: svn://192.168.0.1/ejemplo para acceder al repositorio ejemplo.</p>
 Otras extensiones
 </p></ul></p></p></div>
 </div>

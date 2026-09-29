@@ -326,7 +326,7 @@ WHERE [CONDITION | EXPRESSION];</pre>
 FROM table_name
 WHERE SINGLE VALUE MATCHTING EXPRESSION;</pre>
 <p>Cree la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con el siguiente contenido de datos:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -338,7 +338,7 @@ WHERE SINGLE VALUE MATCHTING EXPRESSION;</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>A continuación se utiliza una expresión booleana (<strong>SALARY=10000</strong>) para consultar datos:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE SALARY = 10000;
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE SALARY = 10000;
  id | name  | age | address  | salary
 ----+-------+-----+----------+--------
   7 | James |  24 | Houston  |  10000
@@ -348,7 +348,7 @@ WHERE SINGLE VALUE MATCHTING EXPRESSION;</pre>
 <pre>SELECT numerical_expression as  OPERATION_NAME
 [FROM table_name WHERE CONDITION] ;</pre>
 <p><strong>numerical_expression</strong>Es una expresión de operación matemática, por ejemplo:</p>
-<pre>runoobdb=# SELECT (17 + 6) AS ADDITION ;
+<pre>ejemplodb=# SELECT (17 + 6) AS ADDITION ;
  addition 
 ----------
        23
@@ -356,14 +356,14 @@ WHERE SINGLE VALUE MATCHTING EXPRESSION;</pre>
 <p>Además, PostgreSQL incluye algunas funciones matemáticas integradas, como:</p>
 <ul><li>avg(): devuelve el promedio de una expresión</li><li>sum(): devuelve la suma del campo especificado</li><li>count(): devuelve el número total de registros de la consulta</li></ul>
 <p>El siguiente ejemplo consulta el número total de registros de la tabla COMPANY:</p>
-<pre>runoobdb=# SELECT COUNT(*) AS "RECORDS" FROM COMPANY;
+<pre>ejemplodb=# SELECT COUNT(*) AS "RECORDS" FROM COMPANY;
  RECORDS
 ---------
        7
 (1 row)</pre>
 <h3>Expresiones de fecha</h3>
 <p>La expresión de fecha devuelve la fecha y hora actuales del sistema y puede utilizarse en diversas operaciones de datos. El siguiente ejemplo consulta la hora actual:</p>
-<pre>runoobdb=# SELECT CURRENT_TIMESTAMP;
+<pre>ejemplodb=# SELECT CURRENT_TIMESTAMP;
        current_timestamp       
 -------------------------------
  2019-06-13 10:49:06.419243+08

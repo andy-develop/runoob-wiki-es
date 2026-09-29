@@ -332,7 +332,7 @@ WHERE  column_name OPERATOR
       [WHERE])</pre>
 <h3>Ejemplo</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), con los siguientes datos:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -344,7 +344,7 @@ WHERE  column_name OPERATOR
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>Ahora, usemos una subconsulta en la sentencia SELECT:</p>
-<pre>runoobdb=# SELECT * FROM COMPANY WHERE ID IN (SELECT ID FROM COMPANY  WHERE SALARY &gt; 45000) ;</pre>
+<pre>ejemplodb=# SELECT * FROM COMPANY WHERE ID IN (SELECT ID FROM COMPANY  WHERE SALARY &gt; 45000) ;</pre>
 <p>El resultado es el siguiente:</p>
 <pre> id | name  | age |  address    | salary
 ----+-------+-----+-------------+--------
@@ -362,7 +362,7 @@ WHERE  column_name OPERATOR
    [ WHERE VALUE OPERATOR ]</pre>
 <h3>Ejemplo</h3>
 <p>Supongamos que COMPANY_BKP tiene una estructura similar a la tabla COMPANY y puede crearse con el mismo CREATE TABLE, solo que el nombre de la tabla se cambia a COMPANY_BKP. Ahora copiamos toda la tabla COMPANY a COMPANY_BKP, con la siguiente sintaxis:</p>
-<pre>runoobdb=# INSERT INTO COMPANY_BKP SELECT * FROM COMPANY  WHERE ID IN (SELECT ID FROM COMPANY) ;</pre>
+<pre>ejemplodb=# INSERT INTO COMPANY_BKP SELECT * FROM COMPANY  WHERE ID IN (SELECT ID FROM COMPANY) ;</pre>
 <hr/>
 <h2>Uso de subconsultas en sentencias UPDATE</h2>
 <p>Las subconsultas pueden combinarse con la sentencia UPDATE. Cuando se usa una subconsulta con la sentencia UPDATE, se actualizan una o más columnas de la tabla.</p>
@@ -376,7 +376,7 @@ SET column_name = new_value
 <h3>Ejemplo</h3>
 <p>Supongamos que tenemos la tabla COMPANY_BKP, que es una copia de seguridad de la tabla COMPANY.</p>
 <p>El siguiente ejemplo actualiza el SALARY de todos los clientes con AGE mayor que 27 en la tabla COMPANY a 0.50 veces el valor original:</p>
-<pre>runoobdb=# UPDATE COMPANY SET SALARY = SALARY * 0.50 WHERE AGE IN (SELECT AGE FROM COMPANY_BKP WHERE AGE &gt;= 27 );</pre>
+<pre>ejemplodb=# UPDATE COMPANY SET SALARY = SALARY * 0.50 WHERE AGE IN (SELECT AGE FROM COMPANY_BKP WHERE AGE &gt;= 27 );</pre>
 <p>Esto afectará a dos filas, y los registros finales en la tabla COMPANY son los siguientes:</p>
 <pre> id | name  | age | address     | salary
 ----+-------+-----+-------------+--------
@@ -400,7 +400,7 @@ SET column_name = new_value
 <h3>Ejemplo</h3>
 <p>Supongamos que tenemos la tabla COMPANY_BKP, que es una copia de seguridad de la tabla COMPANY.</p>
 <p>El siguiente ejemplo elimina los registros de todos los clientes con AGE mayor o igual que 27 en la tabla COMPANY:</p>
-<pre>runoobdb=# DELETE FROM COMPANY WHERE AGE IN (SELECT AGE FROM COMPANY_BKP WHERE AGE &gt; 27 );</pre>
+<pre>ejemplodb=# DELETE FROM COMPANY WHERE AGE IN (SELECT AGE FROM COMPANY_BKP WHERE AGE &gt; 27 );</pre>
 <p>Esto afectará a dos filas, y los registros finales en la tabla COMPANY son los siguientes:</p>
 <pre> id | name  | age | address     | salary
 ----+-------+-----+-------------+--------

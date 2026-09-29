@@ -108,36 +108,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 3、<strong>permissions</strong>: cadena de combinación de permisos, compuesta por cdrwa, donde cada letra representa un permiso diferente: permiso de creación create(c), permiso de eliminación delete(d), permiso de lectura read(r), permiso de escritura write(w), permiso de administración admin(a).</li></ul>
 <h3>Ejemplo world</h3><p>Consulta los permisos predeterminados del nodo y luego actualiza la parte de permisos del nodo a crwa; como resultado, la eliminación del nodo falla. Aquí world representa un permiso abierto.</p>
 <pre>
-$ getAcl /runoob/child
-$ setAcl /runoob/child world:anyone:crwa
-$ delete /runoob/child
+$ getAcl /ejemplo/child
+$ setAcl /ejemplo/child world:anyone:crwa
+$ delete /ejemplo/child
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/zk-acl-01.png"/></p>
 <h3>Ejemplo auth</h3><p>auth se utiliza para otorgar permisos; ten en cuenta que primero debe crearse el usuario.</p>
 <pre>
-$ setAcl /runoob/child auth:user1:123456:cdrwa
+$ setAcl /ejemplo/child auth:user1:123456:cdrwa
 $ addauth digest user1:123456
-$ setAcl /runoob/child auth:user1:123456:cdrwa
-$ getAcl /runoob/child
+$ setAcl /ejemplo/child auth:user1:123456:cdrwa
+$ getAcl /ejemplo/child
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/zk-acl-02.png"/></p>
 <h3>Ejemplo digest</h3><p>Sal del usuario actual y vuelve a conectar la terminal; digest se puede utilizar para iniciar sesión y verificar con cuenta y contraseña.</p>
 <pre>
-$ ls /runoob
-$ create /runoob/child01 runoob
-$ getAcl /runoob/child01
-$ setAcl /runoob/child01 digest:user1:HYGa7IZRm2PUBFiFFu8xY2pPP/s=:cdra
-$ getAcl /runoob/child01
+$ ls /ejemplo
+$ create /ejemplo/child01 ejemplo
+$ getAcl /ejemplo/child01
+$ setAcl /ejemplo/child01 digest:user1:HYGa7IZRm2PUBFiFFu8xY2pPP/s=:cdra
+$ getAcl /ejemplo/child01
 $ addauth digest user1:123456
-$ getAcl /runoob/child01
+$ getAcl /ejemplo/child01
 </pre><p><strong>Sugerencia:</strong>La contraseña cifrada se creó en el paso anterior.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/zk-acl-03.png"/></p>
 <h3>Ejemplo IP</h3><p>Limita los permisos de acceso según la dirección IP. Después de asignar los permisos a la dirección IP 192.168.3.7, la IP 192.168.3.38 ya no tiene permisos de acceso.</p>
 <pre>
-$ create /runoob/ip 0
-$ getAcl /runoob/ip
-$ setAcl /runoob/ip ip:192.168.3.7:cdrwa
-$ get /runoob/ip
+$ create /ejemplo/ip 0
+$ getAcl /ejemplo/ip
+$ setAcl /ejemplo/ip ip:192.168.3.7:cdrwa
+$ get /ejemplo/ip
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/zk-acl-04.png"/></p> </div>
 </div>

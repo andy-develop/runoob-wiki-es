@@ -276,7 +276,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Docker te permite ejecutar aplicaciones dentro de contenedores, usando<strong>docker run</strong>el comando para ejecutar una aplicación dentro de un contenedor.</p>
 <p>Salida: Hello world</p>
 <pre>
-runoob@runoob:~$ docker run ubuntu:15.10 /bin/echo "Hello world"
+ejemplo@ejemplo:~$ docker run ubuntu:15.10 /bin/echo "Hello world"
 Hello world
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker19.png"/></p>
@@ -291,7 +291,7 @@ Hello world
 <h2>Ejecutar un contenedor interactivo</h2>
 <p>Usamos los dos parámetros de docker, -i y -t, para que el contenedor ejecutado por docker tenga<strong>"diálogo"</strong>la capacidad de:</p>
 <pre>
-runoob@runoob:~$ docker run -i -t ubuntu:15.10 /bin/bash
+ejemplo@ejemplo:~$ docker run -i -t ubuntu:15.10 /bin/bash
 root@0123ce188bd8:/#
 </pre>
 <p>Explicación de los parámetros:</p>
@@ -308,13 +308,13 @@ root@0123ce188bd8:/# </pre>
 <p>Podemos salir del contenedor ejecutando el comando exit o usando CTRL+D.</p>
 <pre>root@0123ce188bd8:/#  exit
 exit
-root@runoob:~# </pre>
-<p>Observa que en la tercera línea<span class="marked">root@runoob:~#</span>indica que ya hemos salido del contenedor actual y regresado al host actual.</p>
+root@ejemplo:~# </pre>
+<p>Observa que en la tercera línea<span class="marked">root@ejemplo:~#</span>indica que ya hemos salido del contenedor actual y regresado al host actual.</p>
 <hr/>
 <h2>Iniciar el contenedor (modo en segundo plano)</h2>
 <p>Crea un contenedor que se ejecuta como proceso con el siguiente comando:</p>
 <pre>
-runoob@runoob:~$ docker run -d ubuntu:15.10 /bin/sh -c "while true; do echo hello world; sleep 1; done"
+ejemplo@ejemplo:~$ docker run -d ubuntu:15.10 /bin/sh -c "while true; do echo hello world; sleep 1; done"
 2b1b7a428627c51ab8810d541d759f072b4fc75487eed05812646b8534a2fe63
 </pre>
 <p>En la salida, no vimos el esperado "hello world", sino una cadena larga de caracteres.</p>
@@ -322,7 +322,7 @@ runoob@runoob:~$ docker run -d ubuntu:15.10 /bin/sh -c "while true; do echo hell
 <p>Esta cadena larga se llama ID del contenedor, y es única para cada contenedor. Podemos usar el ID del contenedor para ver qué le sucede al contenedor correspondiente.</p>
 <p>Primero, necesitamos confirmar que el contenedor está en ejecución. Podemos hacerlo mediante<strong>docker ps</strong>para verlo:</p>
 <pre>
-runoob@runoob:~$ docker ps
+ejemplo@ejemplo:~$ docker ps
 CONTAINER ID        IMAGE                  COMMAND              ...  
 5917eac21c36        ubuntu:15.10           "/bin/sh -c 'while t…"    ...
 </pre>
@@ -338,11 +338,11 @@ CONTAINER ID        IMAGE                  COMMAND              ...
 <p><strong>NAMES:</strong>El nombre del contenedor asignado automáticamente.</p>
 <p>En el host, use<span class="marked">docker logs</span>el comando para ver la salida estándar dentro del contenedor:</p>
 <pre>
-runoob@runoob:~$ docker logs 2b1b7a428627
+ejemplo@ejemplo:~$ docker logs 2b1b7a428627
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker23.png"/></p>
 <pre>
-runoob@runoob:~$ docker logs amazing_cori
+ejemplo@ejemplo:~$ docker logs amazing_cori
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker24.png"/></p>
 <hr/>
@@ -351,12 +351,12 @@ runoob@runoob:~$ docker logs amazing_cori
 <p><img decoding="async" src="../wp-content/uploads/2016/05/docker25.png"/></p>
 <p>Usando<span class="marked">docker ps</span>para verificar, el contenedor ya se ha detenido:</p>
 <pre>
-runoob@runoob:~$ docker ps
+ejemplo@ejemplo:~$ docker ps
 </pre>
 <p>Se puede ver que el contenedor ya no está.</p>
 <p>También se puede usar el siguiente comando para detener:</p>
 <pre>
-runoob@runoob:~$ docker stop amazing_cori
+ejemplo@ejemplo:~$ docker stop amazing_cori
 </pre>
 Otras extensiones
 </div>

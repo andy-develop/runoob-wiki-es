@@ -282,17 +282,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El conjunto se implementa mediante una tabla hash, por lo que la complejidad de agregar, eliminar y buscar es O(1). El número máximo de miembros en un conjunto es 2<sup>32</sup>- 1 (4294967295, cada conjunto puede almacenar más de 4 mil millones de miembros).</p>
 <h3>Ejemplo</h3>
 <pre>
-redis 127.0.0.1:6379&gt; ZADD runoobkey 1 redis
+redis 127.0.0.1:6379&gt; ZADD ejemplokey 1 redis
 (integer) 1
-redis 127.0.0.1:6379&gt; ZADD runoobkey 2 mongodb
+redis 127.0.0.1:6379&gt; ZADD ejemplokey 2 mongodb
 (integer) 1
-redis 127.0.0.1:6379&gt; ZADD runoobkey 3 mysql
+redis 127.0.0.1:6379&gt; ZADD ejemplokey 3 mysql
 (integer) 1
-redis 127.0.0.1:6379&gt; ZADD runoobkey 3 mysql
+redis 127.0.0.1:6379&gt; ZADD ejemplokey 3 mysql
 (integer) 0
-redis 127.0.0.1:6379&gt; ZADD runoobkey 4 mysql
+redis 127.0.0.1:6379&gt; ZADD ejemplokey 4 mysql
 (integer) 0
-redis 127.0.0.1:6379&gt; ZRANGE runoobkey 0 10 WITHSCORES
+redis 127.0.0.1:6379&gt; ZRANGE ejemplokey 0 10 WITHSCORES
 
 1) "redis"
 2) "1"

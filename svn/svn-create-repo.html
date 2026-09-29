@@ -167,8 +167,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <p>Crear un repositorio usando el comando svn:</p>
 <pre>
-[runoob@centos6 ~]# svnadmin create /opt/svn/runoob01
-[runoob@centos6 ~]# ll /opt/svn/runoob01/
+[ejemplo@centos6 ~]# svnadmin create /opt/svn/ejemplo01
+[ejemplo@centos6 ~]# ll /opt/svn/ejemplo01/
 total 24
 drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 conf
 drwxr-sr-x 6 root root 4096 2016/08/23 16:31:06 db
@@ -177,7 +177,7 @@ drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 hooks
 drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 locks
 -rw-r--r-- 1 root root  229 2016/08/23 16:31:06 README.txt
 </pre>
-<p>Entre en el directorio /opt/svn/runoob01/conf y modifique la configuración del archivo de configuración predeterminado, incluidos svnserve.conf, passwd y authz para configurar los usuarios y permisos correspondientes.</p>
+<p>Entre en el directorio /opt/svn/ejemplo01/conf y modifique la configuración del archivo de configuración predeterminado, incluidos svnserve.conf, passwd y authz para configurar los usuarios y permisos correspondientes.</p>
 <p>1. Archivo de configuración del servicio svn: svnserve.conf</p>
 <p>El archivo de configuración del servicio svn es el archivo conf/svnserve.conf en el directorio del repositorio. Este archivo consta únicamente de una sección de configuración [general].</p>
 <pre>
@@ -224,7 +224,7 @@ g_admin = admin,thinker
 thinker = rw
 * = r
 </pre>
-<p>Este ejemplo utiliza<strong>svnserve -d -r /opt/svn</strong>Iniciar SVN en modo svnserve de múltiples repositorios, por lo tanto la URL:<strong>svn://192.168.0.1/runoob01</strong>。</p>
+<p>Este ejemplo utiliza<strong>svnserve -d -r /opt/svn</strong>Iniciar SVN en modo svnserve de múltiples repositorios, por lo tanto la URL:<strong>svn://192.168.0.1/ejemplo01</strong>。</p>
 Otras extensiones
 </div>
 </div>

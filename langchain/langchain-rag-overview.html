@@ -363,7 +363,7 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 embeddings <span style="color: Gray;">=</span> OpenAIEmbeddings<span style="color: Olive;">(</span>model<span style="color: Gray;">=</span><span style="color: #a11;">"text-embedding-3-small"</span><span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Prueba: convierte un texto en vector</span><br/>
-text <span style="color: Gray;">=</span> <span style="color: #a11;">"Runoob es una plataforma de aprendizaje de programación"</span><br/>
+text <span style="color: Gray;">=</span> <span style="color: #a11;">"Ejemplo es una plataforma de aprendizaje de programación"</span><br/>
 vector <span style="color: Gray;">=</span> embeddings.<span style="color: #05a;">embed_query</span><span style="color: Olive;">(</span>text<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Texto: {text}"</span><span style="color: Olive;">)</span><br/>
@@ -373,9 +373,9 @@ vector <span style="color: Gray;">=</span> embeddings.<span style="color: #05a;"
 </div>
 <p>Resultado de la ejecución:</p>
 <pre>
-文本: 菜鸟教程 RUNOOB 是一个编程学习平台
-向量维度: 1536
-向量前 5 个值: [0.0123, -0.0045, 0.0234, -0.0012, 0.0089]
+Texto: Ejemplo 是一个编程学习平台
+Dimensión del vector: 1536
+Primeros 5 valores del vector: [0.0123, -0.0045, 0.0234, -0.0012, 0.0089]
 </pre>
 <p>Además, si no tienes la clave de OpenAI, puedes usar el servicio de embeddings de Alibaba Bailian,<span class="marked">.env</span>El archivo de configuración debe incluir la clave de Alibaba Bailian:</p>
 <pre>DASHSCOPE_API_KEY="sk-xxx"</pre><p>Código después de la configuración:</p>
@@ -410,7 +410,7 @@ embeddings <span style="color: Gray;">=</span> OpenAIEmbeddings<span style="colo
     chunk_size<span style="color: Gray;">=</span><span style="color: Maroon;">10</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <span style="color: #a50"># Prueba: convierte un texto en vector</span><br/>
-text <span style="color: Gray;">=</span> <span style="color: #a11;">"Runoob es una plataforma de aprendizaje de programación"</span><br/>
+text <span style="color: Gray;">=</span> <span style="color: #a11;">"Ejemplo es una plataforma de aprendizaje de programación"</span><br/>
 vector <span style="color: Gray;">=</span> embeddings.<span style="color: #05a;">embed_query</span><span style="color: Olive;">(</span>text<span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"Texto: {text}"</span><span style="color: Olive;">)</span><br/>
@@ -430,14 +430,14 @@ embeddings <span style="color: Gray;">=</span> OpenAIEmbeddings<span style="colo
 <br/>
 <span style="color: #a50"># Crear el almacenamiento vectorial Chroma (los datos se guardan en el directorio local)</span><br/>
 vector_store <span style="color: Gray;">=</span> Chroma<span style="color: Olive;">(</span><br/>
-    collection_name<span style="color: Gray;">=</span><span style="color: #a11;">"runoob_docs"</span><span style="color: Gray;">,</span><br/>
+    collection_name<span style="color: Gray;">=</span><span style="color: #a11;">"ejemplo_docs"</span><span style="color: Gray;">,</span><br/>
     embedding_function<span style="color: Gray;">=</span>embeddings<span style="color: Gray;">,</span><br/>
     persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./chroma_db"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Directorio de persistencia</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># Agregar documentos (la forma más simple: una lista de textos)</span><br/>
 texts <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"Runoob es un sitio web gratuito de aprendizaje de programación que ofrece tutoriales de HTML, CSS, JavaScript, Python, etc."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"Ejemplo es un sitio web gratuito de aprendizaje de programación que ofrece tutoriales de HTML, CSS, JavaScript, Python, etc."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de Python3 consta de 30 capítulos, es adecuado para principiantes sin conocimientos previos e incluye configuración del entorno, conceptos básicos de sintaxis, programación orientada a objetos, etc."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de HTML consta de 25 capítulos y cubre conocimientos básicos como etiquetas HTML, formularios, multimedia, etc."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
@@ -469,13 +469,13 @@ results <span style="color: Gray;">=</span> vector_store.<span style="color: #05
 <pre>
 搜索结果：
 
-结果 1:
-  内容: Python3 基础教程共 30 章，适合零基础入门...
-  元数据: {}
+Resultado 1:
+  Contenido: Python3 基础教程共 30 章，适合零基础入门...
+  Metadatos: {}
 
-结果 2:
-  内容: 菜鸟教程（RUNOOB）是一个免费的编程学习网站...
-  元数据: {}
+Resultado 2:
+  Contenido: Ejemplo是一个免费的编程学习网站...
+  Metadatos: {}
 </pre>
 <blockquote><p>Observa que el primer resultado de búsqueda es más relevante que el segundo; aunque el primero contiene la palabra clave "Python", se ordena por<span class="marked">similitud semántica</span>en lugar de por coincidencia de palabras clave. Esta es la ventaja de la búsqueda vectorial.</p></blockquote>
 <hr/>

@@ -315,10 +315,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </table>
 <pre>
 # Windows 打开文件
-foo = open("D://runoob-test//julia//runoob-file.txt")
+foo = open("D://ejemplo-test//julia//ejemplo-file.txt")
 
 # Linux 或 Mac 打开文件 
-foo = open("./runoob-test/julia/runoob-file.txt")
+foo = open("./ejemplo-test/julia/ejemplo-file.txt")
 </pre>
 <h3>Función close()</h3>
 <p>Después de completar las operaciones sobre el archivo, necesitamos cerrarlo; de lo contrario, se producirán problemas como fugas de recursos. Para cerrar el archivo se usa<strong>close()</strong>la función:</p>
@@ -328,41 +328,41 @@ close(foo)
 </pre>
 <p>En Julia, se recomienda envolver cualquier función de manejo de archivos en<span class="marked">do</span>un bloque de sentencias. La ventaja de envolver la función de manejo de archivos en un bloque do es que, cuando el bloque termina de ejecutarse, el archivo abierto se cerrará automáticamente, es decir, se llamará automáticamente a la función close(), como se muestra a continuación:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"./runoob-test/julia/runoob-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
+<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"./ejemplo-test/julia/ejemplo-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
    <span style="color: #888888;"># Realizar operaciones sobre el archivo</span><br/>
 <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 </div></div><p>El código anterior no necesita llamar a la función close(), porque automáticamente llama a la función close() para cerrar el archivo.</p>
 <p>A continuación, creamos un archivo test.jl, con el siguiente código:</p>
 <div class="example"><h2 class="example">Código del archivo test.jl:</h2> <div class="example_code">
-<span style="color: #888888;"># Abrir el archivo; si no existe, crear runoob-file.txt</span><br/>
-io = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span>, <span style="color: #C93D39;">"w"</span><span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span><br/>
+<span style="color: #888888;"># Abrir el archivo; si no existe, crear ejemplo-file.txt</span><br/>
+io = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span>, <span style="color: #C93D39;">"w"</span><span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
 <span style="color: #888888;"># Escribir el contenido en el archivo</span><br/>
-<span style="color: #0000A8;font-weight:bold;">write</span><span style="color: #3B972E;">(</span>io, <span style="color: #C93D39;">"Hello world!<span style="color: #000099; font-weight: bold;">\n</span>Runoob Julia Test"</span><span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span><br/>
+<span style="color: #0000A8;font-weight:bold;">write</span><span style="color: #3B972E;">(</span>io, <span style="color: #C93D39;">"Hello world!<span style="color: #000099; font-weight: bold;">\n</span>Ejemplo Julia Test"</span><span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span><br/>
 <br/>
 <span style="color: #888888;"># Cerrar el archivo</span><br/>
 <span style="color: #0000A8;font-weight:bold;">close</span><span style="color: #3B972E;">(</span>io<span style="color: #3B972E;">)</span><span style="color: #6BAB5B;">;</span><br/>
 </div></div>
 <p>Ejecute el código anterior:</p>
 <pre>$ julia test.jl</pre>
-<p>Tras la ejecución exitosa, creamos un archivo runoob-file.txt en el directorio del archivo de código actual, con el siguiente contenido:</p>
+<p>Tras la ejecución exitosa, creamos un archivo ejemplo-file.txt en el directorio del archivo de código actual, con el siguiente contenido:</p>
 <pre>Hello world!
-Runoob Julia Test</pre>
+Ejemplo Julia Test</pre>
 <p>Podemos usar<span class="marked">do</span>la sentencia, de modo que no sea necesario usar<strong>close()</strong>la función:</p>
 <div class="example"><h2 class="example">Código del archivo test.jl:</h2> <div class="example_code">
-<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span>, <span style="color: #C93D39;">"w"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> io<br/>
-    <span style="color: #0000A8;font-weight:bold;">write</span><span style="color: #3B972E;">(</span>io, <span style="color: #C93D39;">"Hello world!<span style="color: #000099; font-weight: bold;">\n</span>Runoob Julia Test<span style="color: #000099; font-weight: bold;">\n</span>Usar la sentencia do</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span>, <span style="color: #C93D39;">"w"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> io<br/>
+    <span style="color: #0000A8;font-weight:bold;">write</span><span style="color: #3B972E;">(</span>io, <span style="color: #C93D39;">"Hello world!<span style="color: #000099; font-weight: bold;">\n</span>Ejemplo Julia Test<span style="color: #000099; font-weight: bold;">\n</span>Usar la sentencia do</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #6BAB5B;">;</span><br/>
 </div></div>
 <p>Ejecute el código anterior:</p>
 <pre>$ julia test.jl</pre>
-<p>Tras la ejecución exitosa, creamos un archivo runoob-file.txt en el directorio del archivo de código actual, con el siguiente contenido:</p>
+<p>Tras la ejecución exitosa, creamos un archivo ejemplo-file.txt en el directorio del archivo de código actual, con el siguiente contenido:</p>
 <pre>Hello world!
-Runoob Julia Test
+Ejemplo Julia Test
 使用 do 语句</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Leer el contenido del archivo</span><br/>
-txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
+txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
     read<span style="color: #3B972E;">(</span>file, <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #6BAB5B;">;</span><br/>
 <span style="color: #888888;"># Salida</span><br/>
@@ -373,7 +373,7 @@ txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="col
 <pre>txt = read(foo, String)</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Abrir el archivo</span><br/>
-file = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span><br/>
+file = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span><br/>
 <br/>
 <span style="color: #888888;"># Leer el contenido del archivo</span><br/>
 txt = read<span style="color: #3B972E;">(</span>file, <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">)</span><br/>
@@ -386,7 +386,7 @@ txt = read<span style="color: #3B972E;">(</span>file, <span style="color: #0000A
 </div></div><p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ Julia test.jl
 Hello world!
-Runoob Julia Test
+Ejemplo Julia Test
 </pre>
 <p><span class="marked">do</span>En la sentencia se usa<strong>read()</strong>la función:</p>
 <pre>open(filename) do file
@@ -394,7 +394,7 @@ Runoob Julia Test
 end</pre><p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Leer el contenido del archivo</span><br/>
-txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
+txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
     read<span style="color: #3B972E;">(</span>file, <span style="color: #0000A8;font-weight:bold;">String</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #4266D5;font-weight:bold;">end</span><span style="color: #6BAB5B;">;</span><br/>
 <span style="color: #888888;"># Salida</span><br/>
@@ -403,13 +403,13 @@ txt = <span style="color: #0000A8;font-weight:bold;">open</span><span style="col
 <p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ julia test.jl
 Hello world!
-Runoob Julia Test
+Ejemplo Julia Test
 </pre><p>Podemos usar<strong>readlines()</strong>la función para poner el contenido del archivo en un arreglo por líneas, la sintaxis es la siguiente:</p>
 <pre>readlines(io::IO=stdin; keep::Bool=false)
 readlines(filename::AbstractString; keep::Bool=false)</pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Abrir el archivo</span><br/>
-file = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span><br/>
+file = <span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span><br/>
 <br/>
 <span style="color: #888888;"># Leer el contenido del archivo</span><br/>
 txt=readlines<span style="color: #3B972E;">(</span>file, keep=<span style="color: #4266D5;font-weight:bold;">true</span><span style="color: #3B972E;">)</span><br/>
@@ -421,12 +421,12 @@ txt=readlines<span style="color: #3B972E;">(</span>file, keep=<span style="color
 <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>txt<span style="color: #3B972E;">)</span><br/>
 </div></div><p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ julia test.jl
-["Hello world!\n", "Runoob Julia Test\n", "使用 do 语句"]
+["Hello world!\n", "Ejemplo Julia Test\n", "使用 do 语句"]
 </pre>
 <p>También podemos usar<strong>eachline()</strong>la función para procesar el archivo línea por línea:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #888888;"># Abrir el archivo</span><br/>
-<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
+<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> file<br/>
 <span style="color: #888888;"># Leer el contenido del archivo línea por línea</span><br/>
     <span style="color: #4266D5;font-weight:bold;">for</span> ln <span style="color: #4266D5;font-weight:bold;">in</span> <span style="color: #0000A8;font-weight:bold;">eachline</span><span style="color: #3B972E;">(</span>file<span style="color: #3B972E;">)</span><br/>
         <span style="color: #888888;"># Imprimir la longitud de la cadena y la cadena</span><br/>
@@ -437,11 +437,11 @@ txt=readlines<span style="color: #3B972E;">(</span>file, keep=<span style="color
 <p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ julia test.jl
 12, Hello world!
-17, Runoob Julia Test
+17, Ejemplo Julia Test
 8, 使用 do 语句
 </pre><p>También podemos obtener el número de línea actual:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> f<br/>
+<span style="color: #0000A8;font-weight:bold;">open</span><span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span> <span style="color: #4266D5;font-weight:bold;">do</span> f<br/>
     <span style="color: #888888;"># Establecer el número de línea</span><br/>
     line = <span style="color: black;">1</span><br/>
     <span style="color: #4266D5;font-weight:bold;">while</span> <span style="color: #6BAB5B;">!</span><span style="color: #0000A8;font-weight:bold;">eof</span><span style="color: #3B972E;">(</span>f<span style="color: #3B972E;">)</span><br/>
@@ -455,20 +455,20 @@ txt=readlines<span style="color: #3B972E;">(</span>file, keep=<span style="color
 <p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ julia test.jl
 1 Hello world!
-2 Runoob Julia Test
+2 Ejemplo Julia Test
 3 使用 do 语句
 </pre>
 <h3>Función stat()</h3>
 <p><strong>stat() </strong>La función se utiliza para obtener la información del archivo, el formato es el siguiente:</p>
 <pre>stat(pathname) </pre>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
-<span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> fieldnames<span style="color: #3B972E;">(</span>typeof<span style="color: #3B972E;">(</span>stat<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
-    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>n, <span style="color: #C93D39;">": "</span>, getfield<span style="color: #3B972E;">(</span>stat<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"runoob-file.txt"</span><span style="color: #3B972E;">)</span>,n<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+<span style="color: #4266D5;font-weight:bold;">for</span> n <span style="color: #4266D5;font-weight:bold;">in</span> fieldnames<span style="color: #3B972E;">(</span>typeof<span style="color: #3B972E;">(</span>stat<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
+    <span style="color: #0000A8;font-weight:bold;">println</span><span style="color: #3B972E;">(</span>n, <span style="color: #C93D39;">": "</span>, getfield<span style="color: #3B972E;">(</span>stat<span style="color: #3B972E;">(</span><span style="color: #C93D39;">"ejemplo-file.txt"</span><span style="color: #3B972E;">)</span>,n<span style="color: #3B972E;">)</span><span style="color: #3B972E;">)</span><br/>
 <span style="color: #4266D5;font-weight:bold;">end</span><br/>
 </div></div>
 <p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>$ julia test.jl
-desc: runoob-file.txt
+desc: ejemplo-file.txt
 device: 16777222
 inode: 35345094
 mode: 33188
@@ -490,7 +490,7 @@ ctime: 1.6524042534674733e9
 </div></div>
 <p>Ejecute el código anterior, el resultado de salida es el siguiente:</p>
 <pre>
-["/Users/RUNOOB/runoob-test/.Rhistory", "/Users/RUNOOB/runoob-test/.vscode", 
+["/Users/EJEMPLO/ejemplo-test/.Rhistory", "/Users/EJEMPLO/ejemplo-test/.vscode", 
 ...</pre>
 <h3>Más funciones</h3><p>La siguiente tabla enumera otras funciones relacionadas con el manejo de archivos:</p>
 <table class="reference">

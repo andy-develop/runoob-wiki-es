@@ -264,7 +264,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Las clases de Kotlin pueden contener: constructores y bloques de código de inicialización, funciones, propiedades, clases internas y declaraciones de objetos.</p>
 <p>En Kotlin se usa la palabra clave<span class="marked">class</span>para declarar una clase, seguida del nombre de la clase:</p>
 <pre>
-class Runoob {  // 类名为 Runoob
+class Ejemplo {  // 类名为 Ejemplo
     // 大括号内是类体构成
 }
 </pre>
@@ -274,7 +274,7 @@ class Empty
 </pre>
 <p>Se pueden definir funciones miembro en la clase:</p>
 <pre>
-class Runoob() {
+class Ejemplo() {
     fun foo() { print("Foo") } // 成员函数
 }
 </pre>
@@ -283,14 +283,14 @@ class Runoob() {
 <h3>Definición de propiedades</h3>
 <p>Las propiedades de la clase se pueden declarar con la palabra clave<span class="marked">var</span>para declararlas mutables; de lo contrario, se usa la palabra clave de solo lectura<span class="marked">val</span>para declararlas inmutables.</p>
 <pre>
-class Runoob {
+class Ejemplo {
     var name: String = ……
     var url: String = ……
     var city: String = ……
 }
 </pre>
 <p>Podemos crear una instancia de la clase usando el constructor como si fuera una función normal:</p>
-<pre>val site = Runoob() // Kotlin 中没有 new 关键字</pre>
+<pre>val site = Ejemplo() // Kotlin 中没有 new 关键字</pre>
 <p>Para usar una propiedad, basta con referenciarla por su nombre.</p>
 <pre>
 site.name           // 使用 . 号来引用
@@ -423,11 +423,11 @@ class People(val firstName: String, val lastName: String) {
 </pre>
 <p>Si el constructor tiene anotaciones o modificadores de visibilidad, la palabra clave `constructor` es obligatoria, y las anotaciones y modificadores deben colocarse antes de ella.</p>
 <h3>Ejemplo</h3>
-<p>Crea una clase `Runoob` y pasa el nombre del sitio web a través del constructor:</p>
+<p>Crea una clase `Ejemplo` y pasa el nombre del sitio web a través del constructor:</p>
 <pre>
-class Runoob  constructor(name: String) {  // 类名为 Runoob
+class Ejemplo  constructor(name: String) {  // 类名为 Ejemplo
     // 大括号内是类体构成
-    var url: String = "http://www.runoob.com"
+    var url: String = "http://www.example.com"
     var country: String = "CN"
     var siteName = name
 
@@ -441,18 +441,18 @@ class Runoob  constructor(name: String) {  // 类名为 Runoob
 }
 
 fun main(args: Array&lt;String&gt;) {
-    val runoob =  Runoob("菜鸟教程")
-    println(runoob.siteName)
-    println(runoob.url)
-    println(runoob.country)
-    runoob.printTest()
+    val ejemplo =  Ejemplo("Ejemplo")
+    println(ejemplo.siteName)
+    println(ejemplo.url)
+    println(ejemplo.country)
+    ejemplo.printTest()
 }
 </pre>
 <p>El resultado es:</p>
 <pre>
-初始化网站名: 菜鸟教程
-菜鸟教程
-http://www.runoob.com
+初始化网站名: Ejemplo
+Ejemplo
+http://www.example.com
 CN
 我是类的函数
 </pre>
@@ -486,9 +486,9 @@ class Customer(val customerName: String = "")
 </blockquote>
 <h3>Ejemplo</h3>
 <pre>
-class Runoob  constructor(name: String) {  // 类名为 Runoob
+class Ejemplo  constructor(name: String) {  // 类名为 Ejemplo
     // 大括号内是类体构成
-    var url: String = "http://www.runoob.com"
+    var url: String = "http://www.example.com"
     var country: String = "CN"
     var siteName = name
 
@@ -506,19 +506,19 @@ class Runoob  constructor(name: String) {  // 类名为 Runoob
 }
 
 fun main(args: Array&lt;String&gt;) {
-    val runoob =  Runoob("菜鸟教程", 10000)
-    println(runoob.siteName)
-    println(runoob.url)
-    println(runoob.country)
-    runoob.printTest()
+    val ejemplo =  Ejemplo("Ejemplo", 10000)
+    println(ejemplo.siteName)
+    println(ejemplo.url)
+    println(ejemplo.country)
+    ejemplo.printTest()
 }
 </pre>
 <p>El resultado es:</p>
 <pre>
-初始化网站名: 菜鸟教程
+初始化网站名: Ejemplo
 Alexa 排名 10000
-菜鸟教程
-http://www.runoob.com
+Ejemplo
+http://www.example.com
 CN
 我是类的函数
 </pre><hr/>

@@ -348,7 +348,7 @@ ollama list<br/>
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Exportar la receta completa del modelo</span><br/>
-ollama show <span style="color: #660033;">--modelfile</span> runoob-coder <span style="color: #000000; font-weight: bold;">&gt;</span> runoob-coder.modelfile<br/>
+ollama show <span style="color: #660033;">--modelfile</span> ejemplo-coder <span style="color: #000000; font-weight: bold;">&gt;</span> ejemplo-coder.modelfile<br/>
 </div>
 </div>
 <p>Ten en cuenta un detalle: en la receta exportada, la línea FROM apunta a la ruta del archivo blob local y no se puede usar directamente después de cambiar de máquina. Al restaurar, cambia FROM de vuelta al nombre del modelo base (por ejemplo, FROM qwen3.5:9b) y reconstruye.</p>
@@ -356,7 +356,7 @@ ollama show <span style="color: #660033;">--modelfile</span> runoob-coder <span 
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Después de modificar FROM y reconstruir, la receta queda restaurada</span><br/>
-ollama create runoob-coder <span style="color: #660033;">-f</span> runoob-coder.modelfile<br/>
+ollama create ejemplo-coder <span style="color: #660033;">-f</span> ejemplo-coder.modelfile<br/>
 </div>
 </div>
 <h3>Método 2: Enviar a la biblioteca de modelos para hacer una copia de seguridad en la nube</h3>
@@ -364,8 +364,8 @@ ollama create runoob-coder <span style="color: #660033;">-f</span> runoob-coder.
 <h2 class="example">Ejemplo</h2>
 <div class="example_code">
 <span style="color: #666666; font-style: italic;"># Copia con un nombre con espacio de nombres y envía (para publicación privada, consulta el capítulo de despliegue en equipo)</span><br/>
-ollama <span style="color: #C20CB9; font-weight: bold;">cp</span> runoob-coder myteam<span style="color: #000000; font-weight: bold;">/</span>runoob-coder:v1<br/>
-ollama push myteam<span style="color: #000000; font-weight: bold;">/</span>runoob-coder:v1<br/>
+ollama <span style="color: #C20CB9; font-weight: bold;">cp</span> ejemplo-coder myteam<span style="color: #000000; font-weight: bold;">/</span>ejemplo-coder:v1<br/>
+ollama push myteam<span style="color: #000000; font-weight: bold;">/</span>ejemplo-coder:v1<br/>
 </div>
 </div>
 <p>Forma de organización recomendada: guarda todos los Modelfile en un repositorio Git para gestionarlos, junto con un script para reconstruir el entorno desde cero: el hardware cambiará, el sistema se reinstalará, con la receta en mano, restaurarás todos los modelos personalizados en diez minutos.</p>

@@ -93,7 +93,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="example"><h2 class="example">Código del archivo MyWordCount.java</h2> <div class="example_code">
 <span style="color: #008000; font-style: italic; font-weight: bold;">/**<br/>* Declaración de referencias<br/>* Este programa está referenciado desde http://hadoop.apache.org/docs/r1.0.4/cn/mapred_tutorial.html<br/>
  */</span><br/>
-<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.runoob.hadoop</span><span style="color: #339933;">;</span><br/>
+<span style="color: #000000; font-weight: bold;">package</span> <span style="color: #006699;">com.ejemplo.hadoop</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.io.IOException</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.util.*</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">org.apache.hadoop.fs.Path</span><span style="color: #339933;">;</span><br/>
@@ -152,16 +152,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #009900;">}</span><br/>
 </div></div>
 <p>Guarde el contenido de este archivo Java en el contenedor NameNode. Ubicación sugerida:</p>
-<pre>/home/hadoop/MyWordCount/com/runoob/hadoop/MyWordCount.java</pre>
+<pre>/home/hadoop/MyWordCount/com/ejemplo/hadoop/MyWordCount.java</pre>
 <p><strong>Nota:</strong>Según la situación actual, algunos JDK instalados en entornos Docker no admiten chino, así que por seguridad, elimine los comentarios en chino del código anterior.</p>
 <p>Entre al directorio:</p>
 <pre>cd /home/hadoop/MyWordCount</pre>
 <p>Compile:</p>
-<pre>javac -classpath ${HADOOP_HOME}/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.1.4.jar -classpath ${HADOOP_HOME}/share/hadoop/client/hadoop-client-api-3.1.4.jar com/runoob/hadoop/MyWordCount.java</pre>
+<pre>javac -classpath ${HADOOP_HOME}/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.1.4.jar -classpath ${HADOOP_HOME}/share/hadoop/client/hadoop-client-api-3.1.4.jar com/ejemplo/hadoop/MyWordCount.java</pre>
 <p>Empaquete:</p>
 <pre>jar -cf my-word-count.jar com</pre>
 <p>Ejecute:</p>
-<pre>hadoop jar my-word-count.jar com.runoob.hadoop.MyWordCount /wordcount/input /wordcount/output2</pre>
+<pre>hadoop jar my-word-count.jar com.ejemplo.hadoop.MyWordCount /wordcount/input /wordcount/output2</pre>
 <p>Vea el resultado:</p>
 <pre>hadoop fs -cat /wordcount/output2/part-00000</pre>
 <p>Salida:</p>
@@ -169,7 +169,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 hadoop  2
 like    2
 love    2
-runoob  2</pre> </div>
+ejemplo  2</pre> </div>
 </div>
 <div class="previous-next-links">
 <div class="previous-design-link">← <a href="./mapreduce-usage.html" rel="prev">6.0 Uso de MapReduce</a> </div>

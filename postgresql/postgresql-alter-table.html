@@ -346,7 +346,7 @@ DROP CONSTRAINT MyPrimaryKey;</pre>
 DROP PRIMARY KEY;</pre>
 <h3>Ejemplos</h3>
 <p>Crear la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -358,7 +358,7 @@ DROP PRIMARY KEY;</pre>
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
 <p>El siguiente ejemplo agrega una nueva columna a esta tabla:</p>
-<pre>runoobdb=# ALTER TABLE COMPANY ADD GENDER char(1);</pre>
+<pre>ejemplodb=# ALTER TABLE COMPANY ADD GENDER char(1);</pre>
 <p>Ahora la tabla se ve así:</p>
 <pre> id | name  | age | address     | salary | gender
 ----+-------+-----+-------------+--------+--------
@@ -371,7 +371,7 @@ DROP PRIMARY KEY;</pre>
   7 | James |  24 | Houston     |  10000 |
 (7 rows)</pre>
 <p>El siguiente ejemplo elimina la columna GENDER:</p>
-<pre>runoobdb=# ALTER TABLE COMPANY DROP GENDER;</pre>
+<pre>ejemplodb=# ALTER TABLE COMPANY DROP GENDER;</pre>
 <p>El resultado es el siguiente:</p>
 <pre>id | name  | age | address   | salary
 ----+-------+-----+-----------+--------

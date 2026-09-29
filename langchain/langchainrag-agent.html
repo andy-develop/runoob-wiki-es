@@ -312,7 +312,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En los dos artículos anteriores preparamos el almacenamiento vectorial y el recuperador.</p><p>En este artículo los integramos en el Agent para construir un agente RAG completo: un asistente inteligente capaz de responder preguntas basándose en una base de conocimientos privada.</p>
 <hr/>
 <h2>Crear la herramienta Retriever</h2>
-<p>Si envolvemos el recuperador como una herramienta, el Agent podrá buscar automáticamente en la base de conocimientos cuando sea necesario.</p><p>Si no tienes una clave de OpenAI, puedes usar el servicio de Embedding de Alibaba Bailian. Consulta la configuración.<a href="../langchain/langchain-alibailian.html" target="_blank">https://www.runoob.com/langchain/langchain-alibailian.html</a>：</p>
+<p>Si envolvemos el recuperador como una herramienta, el Agent podrá buscar automáticamente en la base de conocimientos cuando sea necesario.</p><p>Si no tienes una clave de OpenAI, puedes usar el servicio de Embedding de Alibaba Bailian. Consulta la configuración.<a href="../langchain/langchain-alibailian.html" target="_blank">https://www.example.com/langchain/langchain-alibailian.html</a>：</p>
 <pre># OpenAI 的文本嵌入模型
 # 将文本转换为向量（一组浮点数）
 
@@ -341,16 +341,16 @@ load_dotenv<span style="color: Olive;">(</span><span style="color: Olive;">)</sp
 <br/>
 <span style="color: #a50"># ----- Paso 1: Preparar la base de conocimientos -----</span><br/>
 <br/>
-<span style="color: #a50"># Simular los documentos de conocimiento de RUNOOB</span><br/>
+<span style="color: #a50"># Simular los documentos de conocimiento de EJEMPLO</span><br/>
 knowledge_docs <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">RUNOOB (tutorial para novatos) fue fundado en 2013 y es una plataforma de aprendizaje de programación completamente gratuita.</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">EJEMPLO (tutorial para novatos) fue fundado en 2013 y es una plataforma de aprendizaje de programación completamente gratuita.</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La plataforma ha lanzado más de 300 tutoriales, que cubren áreas como frontend, backend, bases de datos y desarrollo móvil."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de Python3 es el curso más popular de la plataforma, con más de 5 millones de visitas de aprendizaje acumuladas."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de Python3 consta de 30 capítulos, que incluyen configuración del entorno, sintaxis básica, funciones, clases, manejo de excepciones, etc."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"El tutorial básico de HTML consta de 25 capítulos, desde la estructura básica de HTML hasta formularios y elementos multimedia."</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">"RUNOOB admite la ejecución de código en línea; los estudiantes pueden escribir y ejecutar código sin instalar ningún software."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"EJEMPLO admite la ejecución de código en línea; los estudiantes pueden escribir y ejecutar código sin instalar ningún software."</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"La plataforma está adaptada a dispositivos móviles, por lo que los usuarios pueden aprender a programar en cualquier momento y lugar desde su teléfono."</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">"El servicio de membresía de RUNOOB ofrece servicios de valor agregado como cursos en video, proyectos prácticos y consultas individuales."</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"El servicio de membresía de EJEMPLO ofrece servicios de valor agregado como cursos en video, proyectos prácticos y consultas individuales."</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: #a50"># Dividir</span><br/>
@@ -373,8 +373,8 @@ retriever <span style="color: Gray;">=</span> vector_store.<span style="color: #
 <br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_knowledge_base<span style="color: Olive;">(</span>query: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Busca información relevante en la base de conocimientos de RUNOOB.<br/>
-<br/>Cuando el usuario pregunte por información específica sobre RUNOOB (como número de cursos, historia de la plataforma, características funcionales, etc.),<br/>debes usar esta herramienta para consultar la base de conocimientos y obtener información precisa.<br/>
+    <span style="color: #a11;">"""Busca información relevante en la base de conocimientos de EJEMPLO.<br/>
+<br/>Cuando el usuario pregunte por información específica sobre EJEMPLO (como número de cursos, historia de la plataforma, características funcionales, etc.),<br/>debes usar esta herramienta para consultar la base de conocimientos y obtener información precisa.<br/>
 <br/>
     Args:<br/>query: palabra clave o pregunta de búsqueda<br/>
     """</span><br/>
@@ -395,16 +395,16 @@ model <span style="color: Gray;">=</span> init_chat_model<span style="color: Oli
 agent <span style="color: Gray;">=</span> create_agent<span style="color: Olive;">(</span><br/>
     model<span style="color: Gray;">=</span>model<span style="color: Gray;">,</span><br/>
     tools<span style="color: Gray;">=</span><span style="color: Olive;">[</span>search_knowledge_base<span style="color: Olive;">]</span><span style="color: Gray;">,</span><br/>
-    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"""Eres el asistente de atención al cliente inteligente de RUNOOB.<br/>
-<br/>## Reglas<br/>1. Cuando el usuario pregunte por información específica sobre RUNOOB, debes usar la herramienta search_knowledge_base para consultar.<br/>2. Responde basándote en la información recuperada; no inventes contenido que no esté en la base de conocimientos.<br/>3. Si la base de conocimientos no tiene información relevante, dímelo honestamente al usuario.<br/>4. Las respuestas deben ser amables, concisas y precisas."""</span><span style="color: Gray;">,</span><br/>
+    system_prompt<span style="color: Gray;">=</span><span style="color: #a11;">"""Eres el asistente de atención al cliente inteligente de EJEMPLO.<br/>
+<br/>## Reglas<br/>1. Cuando el usuario pregunte por información específica sobre EJEMPLO, debes usar la herramienta search_knowledge_base para consultar.<br/>2. Responde basándote en la información recuperada; no inventes contenido que no esté en la base de conocimientos.<br/>3. Si la base de conocimientos no tiene información relevante, dímelo honestamente al usuario.<br/>4. Las respuestas deben ser amables, concisas y precisas."""</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># ----- Paso 4: Prueba -----</span><br/>
 <br/>
 questions <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><br/>
-    <span style="color: #a11;">"¿Cuándo fue fundado RUNOOB?"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"¿Cuándo fue fundado EJEMPLO?"</span><span style="color: Gray;">,</span><br/>
     <span style="color: #a11;">"¿Cuántos capítulos tiene el tutorial básico de Python3?"</span><span style="color: Gray;">,</span><br/>
-    <span style="color: #a11;">"¿Cuántos tutoriales tiene RUNOOB en total?"</span><span style="color: Gray;">,</span><br/>
+    <span style="color: #a11;">"¿Cuántos tutoriales tiene EJEMPLO en total?"</span><span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">]</span><br/>
 <br/>
 <span style="color: Green;font-weight:bold;">for</span> q <span style="color: Green;font-weight:bold;">in</span> questions:<br/>
@@ -416,22 +416,22 @@ questions <span style="color: Gray;">=</span> <span style="color: Olive;">[</spa
 </div>
 <p>Resultado de ejecución:</p>
 <pre>
-Q: 菜鸟教程是什么时候创立的？
-A: 菜鸟教程（RUNOOB）创立于 2013 年，是一个完全免费的编程学习平台。
+Q: Ejemplo是什么时候创立的？
+A: Ejemplo创立于 2013 年，是一个完全免费的编程学习平台。
 ------------------------------------------------------------
 Q: Python3 基础教程有多少章？
 A: Python3 基础教程共 30 章，包含环境搭建、基本语法、函数、类、异常处理等内容。
 ------------------------------------------------------------
-Q: 菜鸟教程一共有多少套教程？
-A: 菜鸟教程已上线 300+ 套教程，涵盖前端、后端、数据库、移动开发等多个领域。
+Q: Ejemplo一共有多少套教程？
+A: Ejemplo已上线 300+ 套教程，涵盖前端、后端、数据库、移动开发等多个领域。
 ------------------------------------------------------------
 </pre>
 <hr/>
 <h2>Flujo de ejecución del agente RAG</h2>
-<p>Para la tercera pregunta anterior, "¿Cuántos tutoriales tiene RUNOOB en total?", el flujo de ejecución del Agent es:</p>
+<p>Para la tercera pregunta anterior, "¿Cuántos tutoriales tiene EJEMPLO en total?", el flujo de ejecución del Agent es:</p>
 <ol>
 <li>El usuario hace una pregunta</li>
-<li>El modelo determina que necesita consultar la base de conocimientos → llama a search_knowledge_base("cantidad de tutoriales de RUNOOB")</li>
+<li>El modelo determina que necesita consultar la base de conocimientos → llama a search_knowledge_base("cantidad de tutoriales de EJEMPLO")</li>
 <li>El recuperador busca en la base de datos vectorial los fragmentos de documentos semánticamente más similares.</li>
 <li>Devuelve los resultados de la recuperación al modelo.</li>
 <li>El modelo genera una respuesta precisa basada en los resultados de la recuperación.</li>
@@ -447,7 +447,7 @@ A: 菜鸟教程已上线 300+ 套教程，涵盖前端、后端、数据库、�
 <br/>
 <span style="color: Gray;">@</span>tool<br/>
 <span style="color: Green;font-weight:bold;">def</span> search_with_sources<span style="color: Olive;">(</span>query: <span style="color: Teal;">str</span><span style="color: Olive;">)</span> -<span style="color: Gray;">&gt;</span> <span style="color: Teal;">str</span>:<br/>
-    <span style="color: #a11;">"""Busca en la base de conocimientos de RUNOOB y devuelve resultados con la fuente indicada.<br/>
+    <span style="color: #a11;">"""Busca en la base de conocimientos de EJEMPLO y devuelve resultados con la fuente indicada.<br/>
 <br/>
     Args:<br/>query: palabra clave de búsqueda<br/>
     """</span><br/>
@@ -457,7 +457,7 @@ A: 菜鸟教程已上线 300+ 套教程，涵盖前端、后端、数据库、�
 <br/>
     results <span style="color: Gray;">=</span> <span style="color: Olive;">[</span><span style="color: Olive;">]</span><br/>
     <span style="color: Green;font-weight:bold;">for</span> i<span style="color: Gray;">,</span> doc <span style="color: Green;font-weight:bold;">in</span> <span style="color: Teal;">enumerate</span><span style="color: Olive;">(</span>docs<span style="color: Gray;">,</span> <span style="color: Maroon;">1</span><span style="color: Olive;">)</span>:<br/>
-        source <span style="color: Gray;">=</span> doc.<span style="color: #05a;">metadata</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"source"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Base de conocimientos de RUNOOB"</span><span style="color: Olive;">)</span><br/>
+        source <span style="color: Gray;">=</span> doc.<span style="color: #05a;">metadata</span>.<span style="color: #05a;">get</span><span style="color: Olive;">(</span><span style="color: #a11;">"source"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"Base de conocimientos de EJEMPLO"</span><span style="color: Olive;">)</span><br/>
         results.<span style="color: #05a;">append</span><span style="color: Olive;">(</span>f<span style="color: #a11;">"[Fuente {i}: {source}]<span style="color: #000099; font-weight: bold;">\n</span>{doc.page_content}"</span><span style="color: Olive;">)</span><br/>
 <br/>
     <span style="color: Green;font-weight:bold;">return</span> <span style="color: #a11;">"<span style="color: #000099; font-weight: bold;">\n</span><span style="color: #000099; font-weight: bold;">\n</span>"</span>.<span style="color: #05a;">join</span><span style="color: Olive;">(</span>results<span style="color: Olive;">)</span><br/>
@@ -466,7 +466,7 @@ A: 菜鸟教程已上线 300+ 套教程，涵盖前端、后端、数据库、�
 <span style="color: #a50"># Si necesitas conservar la información de la fuente en el documento, puedes agregar metadatos al crearlo.</span><br/>
 doc_with_meta <span style="color: Gray;">=</span> Document<span style="color: Olive;">(</span><br/>
     page_content<span style="color: Gray;">=</span><span style="color: #a11;">"El tutorial básico de Python3 tiene 30 capítulos..."</span><span style="color: Gray;">,</span><br/>
-    metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"Tutorial básico de Python3 - Introducción al curso"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"url"</span>: <span style="color: #a11;">"https://www.runoob.com/python3/"</span><span style="color: Olive;">}</span><br/>
+    metadata<span style="color: Gray;">=</span><span style="color: Olive;">{</span><span style="color: #a11;">"source"</span>: <span style="color: #a11;">"Tutorial básico de Python3 - Introducción al curso"</span><span style="color: Gray;">,</span> <span style="color: #a11;">"url"</span>: <span style="color: #a11;">"https://www.example.com/python3/"</span><span style="color: Olive;">}</span><br/>
 <span style="color: Olive;">)</span><br/>
 </div>
 </div>
@@ -481,12 +481,12 @@ embeddings <span style="color: Gray;">=</span> OpenAIEmbeddings<span style="colo
 vector_store <span style="color: Gray;">=</span> Chroma.<span style="color: #05a;">from_documents</span><span style="color: Olive;">(</span><br/>
     documents<span style="color: Gray;">=</span>chunks<span style="color: Gray;">,</span><br/>
     embedding<span style="color: Gray;">=</span>embeddings<span style="color: Gray;">,</span><br/>
-    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./runoob_vector_db"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Directorio de persistencia</span><br/>
+    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./ejemplo_vector_db"</span><span style="color: Gray;">,</span>  <span style="color: #a50"># Directorio de persistencia</span><br/>
 <span style="color: Olive;">)</span><br/>
 <br/>
 <span style="color: #a50"># En ejecuciones posteriores, carga directamente</span><br/>
 loaded_store <span style="color: Gray;">=</span> Chroma<span style="color: Olive;">(</span><br/>
-    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./runoob_vector_db"</span><span style="color: Gray;">,</span><br/>
+    persist_directory<span style="color: Gray;">=</span><span style="color: #a11;">"./ejemplo_vector_db"</span><span style="color: Gray;">,</span><br/>
     embedding_function<span style="color: Gray;">=</span>embeddings<span style="color: Gray;">,</span><br/>
 <span style="color: Olive;">)</span><br/>
 retriever <span style="color: Gray;">=</span> loaded_store.<span style="color: #05a;">as_retriever</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>

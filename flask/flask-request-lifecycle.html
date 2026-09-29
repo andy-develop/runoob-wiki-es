@@ -388,11 +388,11 @@ app <span style="color: Gray;">=</span> Flask<span style="color: Olive;">(</span
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_app.<span style="color: #05a;">name</span><span style="color: Olive;">)</span>  <span style="color: #a50"># ✓ Normal</span><br/>
     <span style="color: #a50"># print(request.method)  # ✗ Error: Working outside of request context</span><br/>
 <br/>
-<span style="color: Green;font-weight:bold;">with</span> app.<span style="color: #05a;">test_request_context</span><span style="color: Olive;">(</span><span style="color: #a11;">"/hello?name=runoob"</span><span style="color: Olive;">)</span>:<br/>
+<span style="color: Green;font-weight:bold;">with</span> app.<span style="color: #05a;">test_request_context</span><span style="color: Olive;">(</span><span style="color: #a11;">"/hello?name=ejemplo"</span><span style="color: Olive;">)</span>:<br/>
     <span style="color: #a50"># El contexto de solicitud también incluye el contexto de aplicación: ambos están disponibles</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>current_app.<span style="color: #05a;">name</span><span style="color: Olive;">)</span>     <span style="color: #a50"># ✓ Imprime el nombre de la app</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>request.<span style="color: #05a;">path</span><span style="color: Olive;">)</span>         <span style="color: #a50"># ✓ Imprime /hello</span><br/>
-    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>request.<span style="color: #05a;">args</span><span style="color: Olive;">[</span><span style="color: #a11;">"name"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span> <span style="color: #a50"># ✓ Imprime runoob</span><br/>
+    <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>request.<span style="color: #05a;">args</span><span style="color: Olive;">[</span><span style="color: #a11;">"name"</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span> <span style="color: #a50"># ✓ Imprime ejemplo</span><br/>
 </div>
 </div>
 <table class="reference">
@@ -455,7 +455,7 @@ app.<span style="color: #05a;">secret_key</span> <span style="color: Gray;">=</s
 <br/>
 <span style="color: Gray;">@</span>app.<span style="color: #05a;">route</span><span style="color: Olive;">(</span><span style="color: #a11;">"/dashboard"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">def</span> dashboard<span style="color: Olive;">(</span><span style="color: Olive;">)</span>:<br/>
-    <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Bienvenido {session['username']} a la consola de RUNOOB"</span><br/>
+    <span style="color: Green;font-weight:bold;">return</span> f<span style="color: #a11;">"Bienvenido {session['username']} a la consola de EJEMPLO"</span><br/>
 </div>
 </div>
 <h3>Cuarta fase: dispatch_request (despacho de rutas)</h3>

@@ -343,12 +343,12 @@ ON object [, ...]
 FROM { PUBLIC | GROUP groupname | username }</pre>
 <h3>Ejemplo</h3>
 <p>Para entender los permisos, crea un usuario:</p>
-<pre>runoobdb=# CREATE USER runoob WITH PASSWORD 'password';
+<pre>ejemplodb=# CREATE USER ejemplo WITH PASSWORD 'password';
 CREATE ROLE</pre>
-<p>El mensaje CREATE ROLE indica que se ha creado un usuario 'runoob'.</p>
+<p>El mensaje CREATE ROLE indica que se ha creado un usuario 'ejemplo'.</p>
 <h3>Ejemplo</h3>
 <p>Crea la tabla COMPANY (<a href="https://static.jyshare.com/download/company.sql">Descargar el archivo SQL de COMPANY</a>), el contenido de los datos es el siguiente:</p>
-<pre>runoobdb# select * from COMPANY;
+<pre>ejemplodb# select * from COMPANY;
  id | name  | age | address   | salary
 ----+-------+-----+-----------+--------
   1 | Paul  |  32 | California|  20000
@@ -359,18 +359,18 @@ CREATE ROLE</pre>
   6 | Kim   |  22 | South-Hall|  45000
   7 | James |  24 | Houston   |  10000
 (7 rows)</pre>
-<p>Ahora asigna permisos al usuario 'runoob':</p>
-<pre>runoobdb=# GRANT ALL ON COMPANY TO runoob;
+<p>Ahora asigna permisos al usuario 'ejemplo':</p>
+<pre>ejemplodb=# GRANT ALL ON COMPANY TO ejemplo;
 GRANT</pre>
-<p>El mensaje GRANT indica que todos los permisos han sido asignados a 'runoob'.</p>
-<p>A continuación, revoca los permisos del usuario 'runoob':</p>
-<pre>runoobdb=# REVOKE ALL ON COMPANY FROM runoob;
+<p>El mensaje GRANT indica que todos los permisos han sido asignados a 'ejemplo'.</p>
+<p>A continuación, revoca los permisos del usuario 'ejemplo':</p>
+<pre>ejemplodb=# REVOKE ALL ON COMPANY FROM ejemplo;
 REVOKE</pre>
 <p>El mensaje REVOKE indica que los permisos del usuario han sido revocados.</p>
 <p>También puedes eliminar el usuario:</p>
-<pre>runoobdb=# DROP USER runoob;
+<pre>ejemplodb=# DROP USER ejemplo;
 DROP ROLE</pre>
-<p>El mensaje DROP ROLE indica que el usuario 'runoob' ha sido eliminado de la base de datos.</p> Otras extensiones
+<p>El mensaje DROP ROLE indica que el usuario 'ejemplo' ha sido eliminado de la base de datos.</p> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

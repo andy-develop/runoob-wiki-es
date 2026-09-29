@@ -98,34 +98,34 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>1. Los nombres de clave de los nodos del mismo nivel son únicos</h3>
 <p>Ejemplo:</p>
 <pre>$ ls /
-$ create /runoob 2</pre>
+$ create /ejemplo 2</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-01.png"/></p>
-<p>Ya existe<strong>/runoob</strong>Nodo, al intentar crearlo nuevamente se indicará que ya existe.</p>
+<p>Ya existe<strong>/ejemplo</strong>Nodo, al intentar crearlo nuevamente se indicará que ya existe.</p>
 <h3>2. Al crear un nodo, se debe incluir la ruta completa</h3>
 <p>Ejemplo:</p>
 <pre>
-$ ls /runoob
-$ create /runoob/child 0
-$ create /runoob/child/ch01 0
+$ ls /ejemplo
+$ create /ejemplo/child 0
+$ create /ejemplo/child/ch01 0
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-02.png"/></p>
 <h3>3. Al cerrar la sesión, los nodos temporales se eliminan</h3>
 <p>Ejemplo:</p>
 <pre>
-$ ls /runoob
-$ create -e /runoob/echild 0
+$ ls /ejemplo
+$ create -e /ejemplo/echild 0
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-03.png"/></p>
 <p>Al mismo tiempo, en la terminal dos, consulta el nodo:</p>
-<pre>$ ls /runoob</pre>
+<pre>$ ls /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-04.png"/></p><p>
-<span class="marked">ctrl+c</span>Después de cerrar la conexión de la terminal uno, consulta en la terminal dos<strong>/runoob/echild</strong>El nodo desaparece.</p>
-<pre>$ ls /runoob</pre>
+<span class="marked">ctrl+c</span>Después de cerrar la conexión de la terminal uno, consulta en la terminal dos<strong>/ejemplo/echild</strong>El nodo desaparece.</p>
+<pre>$ ls /ejemplo</pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-05.png"/></p>
 <h3>4. Crear automáticamente nodos secuenciales</h3>
 <p>Ejemplo:</p>
 <pre>
-$ create -s -e /runoob 0
+$ create -s -e /ejemplo 0
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-06.png"/></p>
 <h3>5. Mecanismo de watch, escuchar los cambios de nodos</h3>
@@ -135,7 +135,7 @@ $ create -s -e /runoob 0
 <p>Ejemplo:</p>
 <pre>
 $ ls /
-$ delete /runoob
+$ delete /ejemplo
 </pre>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/node-t-07.png"/></p>
 <p><strong>Sugerencia</strong>: En las versiones nuevas se puede usar<span class="marked">deleteall</span>comando para eliminar de forma recursiva.</p>

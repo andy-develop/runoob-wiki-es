@@ -290,7 +290,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El resultado de la simulación es el siguiente:</p>
 <p>Como se puede ver en la figura, la señal sell, que representa la acción de dispensación, puede elevarse a nivel alto normalmente después de completar la inserción de monedas, y la señal change, que representa la acción de cambio, también puede generar correctamente la señal de si se debe dar cambio o no según el escenario de monedas de entrada.</p>
 <p>
-<a href="../wp-content/uploads/2020/09/ymJcSH14aenfZbDR.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/ymJcSH14aenfZbDR.png"/></a></p>
+<a href="../wp-content/uploads/2020/09/ymJcSH14aenfZbDR.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/ymJcSH14aenfZbDR.png"/></a></p>
 <h3>Modificación de la máquina de estados: estilo de 2 secciones</h3>
 <p><strong>Si se combinan las descripciones de la segunda y la tercera sección de la máquina de estados de 3 secciones, manteniendo el resto sin cambios, la máquina de estados se convierte en una descripción de 2 secciones.</strong></p>
 <p>La parte modificada es la siguiente:</p>
@@ -368,7 +368,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p><strong>Instancie el nuevo módulo modificado anteriormente en el testbench de 3 secciones para realizar la simulación; el resultado es el siguiente:</strong></p><p>Como se puede ver en la figura, la señal de dispensación sell y la señal de cambio change se adelantan un ciclo de reloj con respecto a la salida de la máquina de estados de 3 secciones. Esto se debe a que las señales de salida se asignan con asignación bloqueante.</p><p>Como se muestra en las partes del círculo rojo en la figura, las señales de salida presentan pulsos de interferencia. Esto se debe a que las señales de entrada son asíncronas y las señales de salida son salidas de lógica combinacional, sin que el reloj las impulse.</p><p>En la práctica, si todas las señales de entrada están sincronizadas con el reloj, estos pulsos de interferencia no aparecerán. Si las señales de entrada son asíncronas, primero se deben sincronizar las señales.</p>
 <p>
-<a href="../wp-content/uploads/2020/09/mLTvRsiPSEgpti4Y.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/mLTvRsiPSEgpti4Y.png"/></a></p>
+<a href="../wp-content/uploads/2020/09/mLTvRsiPSEgpti4Y.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/mLTvRsiPSEgpti4Y.png"/></a></p>
 <h3>Modificación de la máquina de estados: estilo de 1 sección (usar con precaución)</h3>
 <p><strong>Si se combinan las descripciones de la primera, segunda y tercera secciones de la máquina de estados de 3 secciones, la máquina de estados se convierte en una descripción de 1 sección.</strong></p>
 <p>La parte modificada es la siguiente:</p>
@@ -435,7 +435,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Como se puede ver en la figura, las señales de salida son exactamente iguales a las de la máquina de estados de 3 secciones.</p>
 <p>La desventaja de la máquina de estados de 1 sección es que muchos tipos de lógica se mezclan, lo que dificulta el mantenimiento posterior. Cuando el número de estados y señales de salida es pequeño, se puede intentar este método de descripción.</p>
 <p>
-<a href="../wp-content/uploads/2020/09/DCvzwVT7h58iH0aN.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/DCvzwVT7h58iH0aN.png"/></a></p>
+<a href="../wp-content/uploads/2020/09/DCvzwVT7h58iH0aN.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/DCvzwVT7h58iH0aN.png"/></a></p>
 <h3>Modificación de la máquina de estados: tipo Moore</h3><p>Si se utiliza una máquina de estados tipo Moore para describir el flujo de trabajo de la máquina expendedora, es necesario agregar 2 códigos de estado más para describir las señales de entrada y el estado de la máquina de estados en el momento en que la máquina de estados Mealy genera su salida.</p><p>El código Verilog de la máquina expendedora automática descrita con una máquina de estados de 3 secciones tipo Moore es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 <span style="color: #A52A2A; font-weight: bold;">module</span>  vending_machine_moore    <span style="color: #9F79EE;">(</span><br/>
@@ -532,7 +532,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p><strong>Instancie la máquina de estados Moore modificada anteriormente en el testbench de 3 secciones para realizar la simulación; el resultado es el siguiente:</strong></p>
 <p>Como se puede ver en la figura, las señales de salida se retrasan un ciclo de reloj en comparación con la máquina de estados de 3 secciones tipo Mealy. Esto se debe a que entrar en los estados codificados recién agregados requiere un retraso de un ciclo de reloj. En este momento, si la salida usa asignación no bloqueante, la señal de salida final se retrasará un ciclo de reloj. Esta también es una característica de la máquina de estados tipo Moore.</p>
-<a href="../wp-content/uploads/2020/09/yEY0bJksZAfFA7ob.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/yEY0bJksZAfFA7ob.png"/></a>
+<a href="../wp-content/uploads/2020/09/yEY0bJksZAfFA7ob.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/yEY0bJksZAfFA7ob.png"/></a>
 <p><strong>Si al asignar las señales de salida se usa asignación bloqueante, se puede adelantar un ciclo de reloj.</strong></p>
 <p>La lógica de salida modificada es la siguiente.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -554,7 +554,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p><strong>El resultado de la simulación con asignación bloqueante de las señales de salida es el siguiente:</strong></p>
 <p>Como se puede ver en la figura, las señales de salida ya son consistentes con la máquina de estados de 3 secciones tipo Mealy.</p>
-<a href="../wp-content/uploads/2020/09/gpEFw1qJbdvRLDhS.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/gpEFw1qJbdvRLDhS.png"/></a>
+<a href="../wp-content/uploads/2020/09/gpEFw1qJbdvRLDhS.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/gpEFw1qJbdvRLDhS.png"/></a>
 <h3>Descargar código fuente</h3>
 <p><a class="download" download="" href="../wp-content/uploads/2020/09/6.3state-machine.zip">Download</a></p> </div>
 </div>

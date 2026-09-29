@@ -287,12 +287,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Gray;">,</span> <span style="color: Teal;">type</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 ...<br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_1.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_1.gif"/></p>
 <p>Calcular la cantidad total de libros, el precio más caro y el precio más barato:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res<span style="color: Gray;">=</span>models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">aggregate</span><span style="color: Olive;">(</span>c<span style="color: Gray;">=</span>Count<span style="color: Olive;">(</span><span style="color: #a11;">"id"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><span style="color: Teal;">max</span><span style="color: Gray;">=</span>Max<span style="color: Olive;">(</span><span style="color: #a11;">"price"</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span><span style="color: Teal;">min</span><span style="color: Gray;">=</span>Min<span style="color: Olive;">(</span><span style="color: #a11;">"price"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span> <br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Gray;">,</span><span style="color: Teal;">type</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
-</div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_2.gif"/></p>
+</div></div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_2.gif"/></p>
 <hr/>
 <h2>Consulta de agrupación (annotate)</h2><p>La consulta de agrupación generalmente usa funciones de agregación, por lo que antes de usarla se deben importar Avg, Max, Min, Count, Sum desde django.db.models (con la primera letra en mayúscula).</p>
 <pre>from django.db.models import Avg,Max,Min,Count,Sum  #   引入函数</pre>
@@ -338,37 +338,37 @@ res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Publis
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span> <br/>
 </div></div> <p>En la línea de comandos se puede ver la siguiente salida:</p><pre>
 &lt;QuerySet [{'name': 'Ejemplo出版社', 'in_price': Decimal('100.00')}, {'name': '明教出版社', 'in_price': Decimal('300.00')}]&gt;</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_3.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_3.gif"/></p>
 <p>Contar el número de autores de cada libro:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">annotate</span><span style="color: Olive;">(</span>c <span style="color: Gray;">=</span> Count<span style="color: Olive;">(</span><span style="color: #a11;">"authors__name"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"title"</span><span style="color: Gray;">,</span><span style="color: #a11;">"c"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>En la línea de comandos se puede ver la siguiente salida:<pre>&lt;QuerySet [{'title': 'Ejemplo', 'c': 1}, {'title': '吸星大法', 'c': 1}, {'title': '冲灵剑法', 'c': 1}]&gt;</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_4.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_4.gif"/></p>
 <p>Contar el número de autores de los libros que comienzan con "菜":</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>title__startswith<span style="color: Gray;">=</span><span style="color: #a11;">"plato"</span><span style="color: Olive;">)</span>.<span style="color: #05a;">annotate</span><span style="color: Olive;">(</span>c <span style="color: Gray;">=</span> Count<span style="color: Olive;">(</span><span style="color: #a11;">"authors__name"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"title"</span><span style="color: Gray;">,</span><span style="color: #a11;">"c"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_5.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_5.gif"/></p>
 <p>Obtener los nombres de los libros que tienen más de un autor:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">annotate</span><span style="color: Olive;">(</span>c <span style="color: Gray;">=</span> Count<span style="color: Olive;">(</span><span style="color: #a11;">"authors__name"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>c__gt<span style="color: Gray;">=</span><span style="color: Maroon;">0</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"title"</span><span style="color: Gray;">,</span><span style="color: #a11;">"c"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>En la línea de comandos se puede ver la siguiente salida:<pre>&lt;QuerySet [{'title': 'Ejemplo', 'c': 1}, {'title': '吸星大法', 'c': 1}, {'title': '冲灵剑法', 'c': 1}]&gt;</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_6.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_6.gif"/></p>
 <p>Ordenar el QuerySet de forma descendente según la cantidad de autores de cada libro:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">annotate</span><span style="color: Olive;">(</span>c <span style="color: Gray;">=</span> Count<span style="color: Olive;">(</span><span style="color: #a11;">"authors__name"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">order_by</span><span style="color: Olive;">(</span><span style="color: #a11;">"-c"</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"title"</span><span style="color: Gray;">,</span><span style="color: #a11;">"c"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_7.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_7.gif"/></p>
 <p>Consultar el precio total de los libros publicados por cada autor:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Author</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">annotate</span><span style="color: Olive;">(</span><span style="color: Teal;">all</span> <span style="color: Gray;">=</span> Sum<span style="color: Olive;">(</span><span style="color: #a11;">"book__price"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"name"</span><span style="color: Gray;">,</span><span style="color: #a11;">"all"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_8.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_8.gif"/></p>
 <h3>Consulta F()</h3>
 <p>Una instancia de F() puede hacer referencia a campos en una consulta para comparar los valores de dos campos distintos en la misma instancia de un model.</p>
 <p>Los filtros construidos anteriormente solo comparaban el valor de un campo con una constante; si se desea comparar los valores de dos campos, es necesario usar F().</p>
@@ -384,13 +384,13 @@ res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Author
 <span style="color: #05a;">book</span><span style="color: Gray;">=</span>models.<span style="color: #05a;">Emp</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>salary__gt<span style="color: Gray;">=</span>F<span style="color: Olive;">(</span><span style="color: #a11;">"age"</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span>.<span style="color: #05a;">values</span><span style="color: Olive;">(</span><span style="color: #a11;">"name"</span><span style="color: Gray;">,</span><span style="color: #a11;">"age"</span><span style="color: Olive;">)</span><br/>
 ...<br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_9.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_9.gif"/></p>
 <p>Aumentar el precio de cada libro en 100 yuanes:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">update</span><span style="color: Olive;">(</span>price<span style="color: Gray;">=</span>F<span style="color: Olive;">(</span><span style="color: #a11;">"price"</span><span style="color: Olive;">)</span>+<span style="color: Maroon;">100</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_10.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_10.gif"/></p>
 <h3>Consulta Q()</h3>Antes de usarlo, se debe importar Q desde django.db.models:<pre>from django.db.models import Q</pre>
 <p>Uso:</p>
 <pre>Q(条件判断)</pre><p>Por ejemplo:</p><pre>Q(title__startswith="菜")</pre>
@@ -406,18 +406,18 @@ from django.db.models import Q
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span><br/>
 ...<br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_11.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_11.gif"/></p>
 <p>Consultar los libros que terminan con "菜" o que no sean de octubre de 2010:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>Q<span style="color: Olive;">(</span>title__endswith<span style="color: Gray;">=</span><span style="color: #a11;">"plato"</span><span style="color: Olive;">)</span> | <span style="color: Gray;">~</span>Q<span style="color: Olive;">(</span>Q<span style="color: Olive;">(</span>pub_date__year<span style="color: Gray;">=</span><span style="color: Maroon;">2010</span><span style="color: Olive;">)</span> &amp; Q<span style="color: Olive;">(</span>pub_date__month<span style="color: Gray;">=</span><span style="color: Maroon;">10</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span>  <br/>
-</div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_12.gif"/></p>
+</div></div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_12.gif"/></p>
 <p>Consultar los libros cuya fecha de publicación sea de 2004 o 1999 y cuyo título contenga "verdura".</p><p>Uso mixto de objetos Q y parámetros de palabra clave; los objetos Q deben ir delante de todos los parámetros de palabra clave:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
 res <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>Q<span style="color: Olive;">(</span>pub_date__year<span style="color: Gray;">=</span><span style="color: Maroon;">2004</span><span style="color: Olive;">)</span> | Q<span style="color: Olive;">(</span>pub_date__year<span style="color: Gray;">=</span><span style="color: Maroon;">1999</span><span style="color: Olive;">)</span><span style="color: Gray;">,</span> title__contains<span style="color: Gray;">=</span><span style="color: #a11;">"plato"</span><span style="color: Olive;">)</span><br/>
 <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>res<span style="color: Olive;">)</span>  <br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm3_13.gif"/></p> Otras extensiones
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm3_13.gif"/></p> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

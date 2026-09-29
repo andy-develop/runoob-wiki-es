@@ -301,7 +301,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-intro" id="content">
 <h1>Optimización de rank en Union-Find</h1>
 <p>La sección anterior presentó la optimización basada en size de Union-Find, pero en algunos escenarios también existen ciertos problemas, como se muestra en la siguiente figura, la operación union(4,2).</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/rank-01.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/rank-01.png"/></p>
 <p>Según la sección anterior, en la optimización de size, la raíz del conjunto con menos elementos apunta a la raíz del conjunto con más elementos. Después de la operación, el número de niveles se convierte en 4, un nivel más que antes, como se muestra en la siguiente figura:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/10/rank-02.png"/></p>
 <p>De esto se deduce que confiar en el size del conjunto para determinar la dirección no es del todo correcto; más precisamente, se debe determinar la dirección de la raíz según el número de niveles de los dos conjuntos: la raíz del conjunto con menos niveles apunta a la raíz del conjunto con más niveles, como se muestra en la siguiente figura. Esta es la optimización basada en rank.</p>

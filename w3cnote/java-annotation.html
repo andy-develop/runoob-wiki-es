@@ -97,7 +97,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul><li>@SafeVarargs: compatible desde Java 7, ignora las advertencias generadas por llamadas a métodos o constructores cuyos parámetros sean variables de tipo genérico.</li><li>@FunctionalInterface: compatible desde Java 8, identifica una función anónima o una interfaz funcional.</li><li>@Repeatable: compatible desde Java 8, indica que una anotación puede usarse varias veces en la misma declaración.</li></ul>
 <hr/>
 <h2>1. Arquitectura de Annotation</h2>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/28123151-d471f82eb2bc4812b46cc5ff3e9e6b82.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/28123151-d471f82eb2bc4812b46cc5ff3e9e6b82.jpg"/></p>
 <p>De esto, podemos ver:</p>
 <p><strong>(01) Una anotación está asociada con una RetentionPolicy.</strong></p>Se puede entender que: cada objeto Annotation tiene una propiedad RetentionPolicy única.<p><strong>(02) Una anotación está asociada con 1 a n ElementType.</strong></p>
 <p>Se puede entender que: cada objeto Annotation puede tener varias propiedades ElementType.</p>
@@ -208,7 +208,7 @@ public @interface Deprecated {
 <ul><li>(01) @interface -- se utiliza para modificar Deprecated, lo que significa que Deprecated implementa la interfaz java.lang.annotation.Annotation; es decir, Deprecated es una anotación.  
 (02) @Documented -- su función es indicar que la anotación puede aparecer en javadoc.</li><li>(03) @Retention(RetentionPolicy.RUNTIME) -- su función es especificar que la estrategia de Deprecated es RetentionPolicy.RUNTIME. Esto implica que el compilador conservará la información de Deprecated en el archivo .class y la máquina virtual podrá leerla.</li><li>(04) El contenido marcado con @Deprecated ya no se recomienda usarlo.</li></ul>
 <p>Por ejemplo, si un método está marcado con @Deprecated, ya no se recomienda usarlo. Si un desarrollador intenta usar o sobrescribir un método marcado con @Deprecated, el compilador mostrará el mensaje de aviso correspondiente. Ejemplo:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/28132554-8729c2663c5943a4b3302f210904e1d7.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/28132554-8729c2663c5943a4b3302f210904e1d7.jpg"/></p>
 <div class="example"><h2 class="example">DeprecatedTest.java</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.util.Date</span><span style="color: #339933;">;</span><br/>
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.util.Calendar</span><span style="color: #339933;">;</span><br/>
@@ -363,7 +363,7 @@ public @interface SuppressWarnings {
 <ul><li>TYPE significa que puede marcar "declaraciones de clase, interfaz (incluidos los tipos de anotación) o enumeración".</li><li>FIELD significa que puede marcar "declaraciones de campo".</li><li>METHOD significa que puede marcar "métodos".</li><li>PARAMETER significa que puede marcar "parámetros".</li><li>CONSTRUCTOR significa que puede marcar "constructores".</li><li>LOCAL_VARIABLE significa que puede marcar "variables locales".</li></ul>
 <p>(04) String[] value(); significa que SuppressWarnings puede especificar parámetros.</p>
 <p>(05) La función de SuppressWarnings es hacer que el compilador guarde silencio ante ciertas advertencias de "lo que marca". Por ejemplo, "@SuppressWarnings(value={"deprecation", "unchecked"})" indica guardar silencio sobre "la advertencia de que ya no se recomienda usar" y "la advertencia de conversión no verificada" en "lo que marca". El ejemplo es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/28133438-ba03c958e2c047a08d150d9abe298b73.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/28133438-ba03c958e2c047a08d150d9abe298b73.jpg"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2019/08/28133459-3f430d51736d44edb17ada87e4398808.jpg"/></p>
 <div class="example"><h2 class="example">SuppressWarningTest.java</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.util.Date</span><span style="color: #339933;">;</span><br/>
@@ -400,7 +400,7 @@ all          -- 关于以上所有情况的警告。</pre>
 <p>Por ejemplo, @SuppressWarnings, @Deprecated y @Override tienen funciones de verificación de compilación.</p>
 <p>(01) En cuanto a @SuppressWarnings y @Deprecated, ya se han detallado en la "Parte 3". No se darán más ejemplos aquí.</p>
 <p>(02) Si un método está marcado con @Override, significa que dicho método sobrescribe un método del mismo nombre en la clase padre. Si hay un método marcado con @Override, pero la clase padre no tiene un método del mismo nombre "marcado con @Override", el compilador reportará un error. El ejemplo es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/28134305-4722f5184b1d4cc0aac2c0d1223c0fcb.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/28134305-4722f5184b1d4cc0aac2c0d1223c0fcb.jpg"/></p>
 <div class="example"><h2 class="example">OverrideTest.java</h2> <div class="example_code">
 <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> OverrideTest <span style="color: #009900;">{</span><br/>
 <br/>

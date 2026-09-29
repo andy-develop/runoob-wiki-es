@@ -238,7 +238,7 @@ endmodule
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span> <span style="color: #00008B; font-style: italic;">// test</span><br/>
 </div></div>
 <p>Los resultados de la simulación son los siguientes:</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/OqEmYV4VSERyTkgu.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/OqEmYV4VSERyTkgu.png"/></p>
 <p>
 <strong>El análisis de los resultados de la simulación es el siguiente:</strong></p><p>Cuando la dirección de PAD es `input` y no hay controlador, la función `pull` se refleja a través del valor de PAD.</p><p>Dentro de los primeros 60ns, el extremo de controlador PAD_REG de PAD es `z`, por lo que se puede considerar que no hay controlador. Así, al inicio `PULL=2`, pull-down, el valor de PAD es 0; en 20ns, `PULL=3`, pull-up, el valor de PAD es 1;</p><p>En 40ns, `PULL=0`, no hay función `pull`, y el valor de entrada de PAD es `z`.</p><p>Después de 60ns~100ns, el extremo de controlador PAD_REG de PAD comienza a conducir normalmente. En este momento, equivale a que PAD esté directamente conectado a PAD_REG, por lo que el valor de PAD se mantiene consistente con su valor de controlador.</p><p>En el análisis anterior, la dirección de PAD es siempre `input`, y todas las salidas `DOUT` se mantienen consistentes con el valor de PAD.</p><p>Cuando la dirección de PAD es `output`, es decir, en 120ns `OEN=0`, el valor de PAD se mantiene consistente con el valor de entrada `DIN`.</p>
 <h3>Descarga del código fuente</h3>

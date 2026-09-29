@@ -99,15 +99,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>1. Ejemplo de uso de SharedPreferences:</h2>
 <p><strong>Diagrama de flujo de uso</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/77015718.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/77015718.jpg"/></p>
 <p><strong>Ejemplo de código de implementación</strong>：</p>
 <p><strong>Captura del resultado de ejecución</strong>：</p>
 <p>El proceso consiste en ingresar cuenta y contraseña, hacer clic en iniciar sesión, guardar la información en el archivo SharedPreferences, luego reiniciar la aplicación y ver que los datos ya se muestran en el campo de texto.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/56032594.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/56032594.jpg"/></p>
 <p>Después de guardar, podemos abrir data/data/&lt;nombre_del_paquete&gt; en el Explorador de archivos y ver que en el directorio shared_prefs se ha generado un archivo xml (como el N5 no tiene root, aquí usé una captura anterior):</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/51008434.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/51008434.jpg"/></p>
 <p>Al hacer clic en exportar al escritorio se puede ver el contenido:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/95851258.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/95851258.jpg"/></p>
 <p><strong>Implementación del código</strong>：</p>
 <p>Archivo de diseño<strong>activity_main.xml</strong>Redacción:</p>
 <pre>
@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
 <h2>2. Leer SharedPreferences de otras aplicaciones</h2>
 <blockquote><p><strong>Punto clave:</strong>Punto clave: obtener el Context de otra aplicación. Este Context representa la interfaz para acceder a la información global de esa aplicación, y el identificador único de una aplicación es su nombre de paquete, por lo que podemos obtener el Context de la aplicación correspondiente mediante su nombre de paquete. Además, hay que tener en cuenta: la premisa de que los archivos SP de otras aplicaciones puedan leerse o escribirse es que el archivo SP haya especificado permisos de lectura o escritura. Los que creamos arriba con MODE_PRIVATE no lo permiten. Por lo tanto, es muy difícil leer los datos de SP de otros. Además, algunos datos críticos, como las contraseñas guardadas en SP, generalmente se cifran, así que solo puedes escribir y usar los tuyos. Más adelante hablaremos de los métodos de cifrado MD5 más comunes.</p></blockquote>
 <p><strong>Diagrama de flujo de implementación</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/54316471.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/54316471.jpg"/></p>
 <p><strong>Ejemplo de código:</strong></p>
 <p><strong>Captura del resultado de ejecución</strong>：</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/31896879.jpg"/></p>

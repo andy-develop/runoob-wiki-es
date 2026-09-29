@@ -233,7 +233,7 @@ svg {
 <p>El Gran Modelo de Lenguaje (Large Language Model, abreviado LLM) es el cerebro de los agentes de IA; comprenderlo es la base para construir agentes inteligentes.</p>
 <p>La razón por la que un Gran Modelo de Lenguaje puede conversar contigo, escribir artículos y programar es, en esencia, que, basándose en el texto (prompt) que le proporcionas, palabra por palabra<span class="marked">adivinar</span>genera la continuación más razonable.</p>
 <p>En términos simples, un Gran Modelo de Lenguaje es un modelo de aprendizaje profundo entrenado con enormes volúmenes de datos de texto, capaz de comprender y generar lenguaje humano. Al analizar grandes cantidades de texto en Internet, aprende las reglas estadísticas del lenguaje y, cuando recibe una entrada, genera la continuación más razonable según las reglas aprendidas.</p>
-<p><img decoding="async" src="../wp-content/uploads/2026/02/runoob-llm-work.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2026/02/runoob-llm-work.png"/></p>
 <p>Podemos imaginar un Gran Modelo de Lenguaje como un<strong>estudiante extremadamente aplicado y con una memoria excepcional</strong>：</p>
 <ul>
 <li><p><strong>Fase de aprendizaje (entrenamiento)</strong>: ha leído casi todos los textos públicos de Internet (libros, artículos, páginas web, código, etc.), con un volumen de datos que puede alcanzar billones de palabras. En este proceso, no memoriza, sino que aprende un conjunto de reglas lingüísticas extremadamente complejas.</p></li>
@@ -245,7 +245,7 @@ svg {
 <li><strong>Grandes volúmenes de datos de entrenamiento</strong>: la cantidad de datos de texto utilizados para el entrenamiento es enorme e incluye lo mejor de la información pública de Internet.</li>
 </ul>
 <p>La siguiente figura muestra el proceso de generación de texto palabra por palabra en un LLM: solo predice una palabra a la vez, luego incorpora esa nueva palabra a la entrada y continúa prediciendo la siguiente, repitiendo el ciclo hasta generar una respuesta completa:</p>
-<p><img decoding="async" src="../wp-content/uploads/2026/02/d689a96f-f89a-4a55-83d7-fe5aa789d836.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2026/02/d689a96f-f89a-4a55-83d7-fe5aa789d836.png"/></p>
 <p>Demostración animada:</p>
 <div class="llm-think" id="llm-think-demo">
 <div class="llm-think__header">
@@ -570,7 +570,7 @@ svg {
 <li><strong>Comprensión del contexto (núcleo)</strong>：<strong>El mecanismo de autoatención (Self-Attention)</strong>comienza a trabajar. Permite que el modelo, al procesar cada palabra, pondere la importancia de<strong>todas las demás palabras</strong>en la oración. Este proceso es<strong>paralelo</strong>y extremadamente rápido.</li>
 <li><strong>Generación y repetición</strong>: basándose en la comprensión de todas las palabras, el modelo calcula una distribución de probabilidad y predice la siguiente palabra más probable. Tras seleccionar y generar esa palabra, la toma como nueva entrada y repite todo el proceso hasta generar una respuesta completa.</li>
 </ol>
-<p><img decoding="async" src="../wp-content/uploads/2026/02/llm-runoob-transf-scaled.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2026/02/llm-runoob-transf-scaled.png"/></p>
 <p>El mecanismo de autoatención es la innovación más clave de Transformer. Tomando como ejemplo la frase «El teléfono de Apple, la batería de él es muy grande», cuando el modelo procesa<span class="marked">ello</span>esta palabra, el mecanismo de autoatención ayuda al modelo a determinar que<span class="marked">ello</span>y<span class="marked">«Apple»</span>y<span class="marked">y «teléfono»</span>son altamente relevantes. La siguiente figura muestra la distribución de los pesos de atención en este proceso:</p>
 <svg role="img" viewbox="0 0 680 190" width="100%">
 <title>Diagrama del mecanismo de autoatención</title>
@@ -775,7 +775,7 @@ client <span style="color: Gray;">=</span> OpenAI<span style="color: Olive;">(</
 <p>El modelo Tongyi Qianwen de Alibaba Cloud Bailian admite interfaces compatibles con OpenAI. Solo necesita ajustar la API Key, BASE_URL y el nombre del modelo para migrar el código OpenAI existente al servicio Alibaba Cloud Bailian.</p>
 <p>Necesitamos activar el servicio de modelos Alibaba Cloud Bailian y obtener una API-KEY.</p>
 <p>Primero podemos usar la cuenta principal de Alibaba Cloud para acceder a la plataforma de servicios de modelos Bailian:<a href="https://bailian.console.aliyun.com/cn-beijing/?userCode=i5mn5r7m&amp;tab=globalset#/efm/api_key" target="_blank">https://bailian.console.aliyun.com/</a>, luego haga clic en "Iniciar sesión" en la esquina superior derecha. Después de iniciar sesión, haga clic en el icono de engranaje ⚙️ en la esquina superior derecha, seleccione API key, copie la API key; si no tiene una, también puede crear una API key:</p>
-<p><img decoding="async" src="../wp-content/uploads/2025/09/83536c84-3956-4679-ad14-99d53e697692-scaled.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2025/09/83536c84-3956-4679-ad14-99d53e697692-scaled.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2025/09/p994209.png"/></p>
 <p>Activar Alibaba Cloud Bailian no genera costos; solo la llamada a modelos (después de superar la cuota gratuita), el despliegue de modelos y el ajuste de modelos generarán los cargos correspondientes.</p>
 <p>Ahora, para usar la API, todo se factura por tokens. Afortunadamente, no es caro; podemos comprar primero el paquete más barato:<a href="https://www.aliyun.com/minisite/goods?userCode=i5mn5r7m" target="_blank">Plataforma de servicios de modelos grandes de Alibaba Cloud Bailian</a>。</p>

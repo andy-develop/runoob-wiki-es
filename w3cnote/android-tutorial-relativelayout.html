@@ -99,17 +99,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En la sección anterior analizamos en detalle LinearLayout. LinearLayout también es un diseño que usamos bastante; a menudo preferimos su propiedad weight (peso), que realiza una división proporcional, y es de gran ayuda para la adaptación de pantallas. Pero al usar LinearLayout también hay un problema: cuando la interfaz es relativamente compleja, se necesita anidar múltiples capas de LinearLayout, lo que reduce la eficiencia del renderizado de la UI (velocidad de renderizado). Además, si se trata de elementos (item) en listview o GridView, la eficiencia será aún menor. Asimismo, demasiadas capas de LinearLayout anidadas consumen más recursos del sistema y pueden incluso provocar stackoverflow. Sin embargo, si usamos RelativeLayout, quizá solo necesitemos una capa para completarlo; tomando como referencia el contenedor padre o los componentes hermanos, junto con margin + padding, se puede configurar la posición de visualización de los componentes. ¡Es bastante conveniente! Por supuesto, no es absoluto; ¡hay que analizar cada caso concreto! En resumen:<strong>Trata de usar RelativeLayout + la propiedad weight de LinearLayout en combinación</strong>¡Hazlo!</p>
 <hr/>
 <h2>1. Diagrama de propiedades principales</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/797932661-1.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/797932661-1.png"/></p>
 <hr/>
 <h2>2. Diagrama de propiedades de posicionamiento del contenedor padre</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/44967125.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/44967125.jpg"/></p>
 <hr/>
 <h2>3. Posicionamiento según componentes hermanos</h2>
 <p>Bien, primero expliquemos qué son los componentes hermanos. Los llamados componentes hermanos son los componentes que se encuentran en el mismo nivel de contenedor, como se muestra en la figura.</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/23853521.jpg"/></p>
 <p>Los componentes 1 y 2 en la figura son componentes hermanos, mientras que el componente 3 no es hermano del componente 1 o 2, por lo que el componente 3 no puede posicionarse mediante los componentes 1 o 2. Por ejemplo, layout_toleftof = "componente1" dará un error. ¡Recuérdalo! El ejemplo más clásico de posicionamiento de componentes hermanos es la "disposición de flor de ciruelo". A continuación, implementémoslo con código:</p>
 <p>Captura del efecto en ejecución:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/14556678.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/14556678.jpg"/></p>
 <p>Código de implementación:</p>
 <pre>&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    
     xmlns:tools="http://schemas.android.com/tools"    
@@ -212,7 +212,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>5. Un punto muy común: margin puede establecerse como un número negativo</h2>
 <p>Seguramente muchos amigos no saben esto; normalmente cuando configuramos margin estamos acostumbrados a usar números positivos, pero en realidad se pueden usar negativos. A continuación escribiremos un programa simple para demostrarlo. Simulando la entrada a una aplicación, aparece una página de anuncio emergente; el margin del botón 'cancle' en la esquina superior derecha usa un número negativo.</p>
 <p>La captura de efecto es la siguiente:</p>
-<p><img alt="此处输入图片的描述" decoding="async" src="../wp-content/uploads/2015/07/78965428.jpg"/></p>
+<p><img alt="此处输入图片的描述" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/78965428.jpg"/></p>
 <p>Aquí está el código de diseño de la Activity del anuncio. Por supuesto, si te interesa esto, puedes descargar el demo; como es solo para lograr el efecto, el código será un poco tosco.</p>
 <pre>
 &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  

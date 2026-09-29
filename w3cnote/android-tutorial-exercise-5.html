@@ -158,9 +158,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-9168-46828sb373zsxtfj01kvg9ql.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-7749-p6j1w8my03o75b0vikauotg9.png"/></p>
 <p>Finalmente, sentí que el efecto al ejecutarlo en mi Meilan E2 era un poco diferente, así que ajusté ligeramente el diseño de la página: hice que el ancho de la imagen llenara la pantalla y que la altura se adaptara automáticamente. El atributo que se usa aquí es<strong>android:adjustViewBounds = "true"</strong>, es decir, escalar el ancho y el alto proporcionalmente; además, pon el texto de "paso anterior" y "paso siguiente" en<strong>strings.xml</strong>el archivo, y ajusta ligeramente los márgenes:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928015-2216-rvay1y8if1c01xh6revn49zv.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928015-2216-rvay1y8if1c01xh6revn49zv.png"/></p>
 <p>Finalmente, veamos el resultado de ejecución de nuestro proyecto: (vaya, las chicas bonitas son agradables a la vista):<img decoding="async" src="../wp-content/uploads/2017/12/1513928016-1421-5e6f63u5hwhtt13ir1omvp2k.gif"/></p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928016-2202-s733cjuawgz3fripy2tn5kpl.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928016-2202-s733cjuawgz3fripy2tn5kpl.gif"/></p>
 <p>Luego fusiona esta rama en la rama develop. Aquí no usamos el método de fusión merge anterior, sino rebase para fusionar. El proceso concreto es el siguiente:</p>
 <pre>git add .
 git commit -m "fix code in as3.0"
@@ -182,14 +182,14 @@ git branch -d fix_code_as3.0.1  # 删除合并后的本地分支</pre>
 <p>Bien, los requisitos son los dos puntos anteriores. A continuación, nos preparamos para empezar a escribir el código. Pero antes de escribir el código, expliquemos dos cosas sobre Log; quizás la mayoría de los compañeros ya lo saben, y si lo saben pueden saltárselo:</p>
 <h3>1) Impresión rápida de Log</h3>
 <p>Abre los ajustes y haz clic en:<strong>Live Templates</strong> -&gt; <strong>AndroidLog</strong>Marca todas las opciones de impresión de registros. También puedes escribir tu propia plantilla en el Template text de abajo~</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928016-7093-f9tq60nafa3vy493pckxylfq.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928016-7093-f9tq60nafa3vy493pckxylfq.png"/></p>
 <p>Luego escribe el log... anterior en cualquier lugar del código y, con un Enter, aparecerá la sentencia Log; el TAG será directamente el nombre de tu método actual.</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928016-9802-srdif5h6klmy7voqu1o158wu.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928016-9802-srdif5h6klmy7voqu1o158wu.png"/></p>
 <hr/>
 <h3>2. Explicación sobre el uso de Log</h3>
 <p><strong>1) Comando de impresión rápida de Log</strong></p>
 <p>Abre Settings y haz clic en:<strong>Live Templates</strong> -&gt; <strong>AndroidLog</strong>Marca todas las opciones de impresión de registros. También puedes escribir tu propia plantilla en el Template text de abajo~</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928016-5655-argb5mlg120rduj1l0r1mr21473n.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928016-5655-argb5mlg120rduj1l0r1mr21473n.png"/></p>
 <p>Luego escribe el log... anterior en cualquier lugar del código y, con un Enter, aparecerá la sentencia Log~</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928019-2273--1argb9tak86apko1bikglv60814.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928020-9516-argbanqcuh91pcqb1k1evg1ctm1h.png"/></p>
@@ -213,7 +213,7 @@ git branch -d fix_code_as3.0.1  # 删除合并后的本地分支</pre>
 <h3>3) Escribir la clase de utilidades de registro</h3>
 <p>Como siempre, primero creamos una rama:<strong>bug<em>log</em>catch</strong>Esto es muy simple: se muestra en depuración, no se muestra en la versión oficial; usando<strong>BuildConfig.Debug</strong>para hacer el juicio está bien. El código es el siguiente:</p>
 <p>
-<img decoding="async" src="../wp-content/uploads/2017/12/1513928021-3638-1c1p0op3op171go0avr1fbvu8o1t.png"/></p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928021-3638-1c1p0op3op171go0avr1fbvu8o1t.png"/></p>
 <h3>4) Escribir la clase de captura de registros de fallos</h3>
 <p>La clase de captura de registros de fallos depende de<strong>Application</strong>y<strong>Thread.UncaughtExceptionHandler</strong>para implementarse. Cuando el programa, debido a<strong>excepción no capturada</strong>Cuando el hilo esté a punto de terminar y salir, se consultará el UncaughtExceptionHandler del hilo mediante Thread.UncaughtExceptionHandler y se llamará a<strong>el método uncaughtException</strong>, pasando el hilo y la excepción como parámetros. Si el hilo<strong>no tiene un UncaughtExceptionHandler establecido explícitamente</strong>, entonces se usará su<strong>ThreadGroup</strong>ThreadGroup como su UncaughtExceptionHandler, y luego se pasará al manejador de excepciones no capturadas predeterminado para que la procese. Así que solo necesitamos<strong>implementar la interfaz UncaughtExceptionHandler</strong>, sobrescribir<strong>el método uncaughtException</strong>para implementar nuestro manejo personalizado. Primero vamos a ordenar la lista de la lógica:</p>
 <ul>
@@ -224,27 +224,27 @@ git branch -d fix_code_as3.0.1  # 删除合并后的本地分支</pre>
 <li>5. Por último, el reinicio de la aplicación: establecer que la aplicación se reinicie después de 1 segundo.</li>
 </ul>
 <p>La lógica general es la anterior; vamos paso a paso. Primero los pasos 1 y 2:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928021-8209-auoo6b3768ewaexch8wru07n.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928021-8209-auoo6b3768ewaexch8wru07n.png"/></p>
 <p>A continuación, el registro de fallos se compone de varias partes: primero la hora actual,</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928021-8270-1c1pevhabe4j1fe618ijfi1ar02m.png"/></p>
 <p>luego la versión de la aplicación y la información del dispositivo. Aquí usamos un HashMap para almacenarla:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928022-1456--1c1pfvm4roassp61u8s613dci33.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928022-1456--1c1pfvm4roassp61u8s613dci33.png"/></p>
 <p>Después viene la información de la excepción. Esto es fácil: basta con pasar el objeto de la excepción y llamar a printStackTrace. Al final, todo junto queda así:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928022-9667-1c1pgn9vp1q01kegjubir01vt13g.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928022-9667-1c1pgn9vp1q01kegjubir01vt13g.png"/></p>
 <p>Escribir en el archivo también está resuelto. Luego viene el singleton del UncaughtExceptionHandler personalizado y la obtención del manejador UncaughtExceptionHandler predeterminado; se establece como UncaughtExceptionHandler personalizado y además hay que sobrescribir el método uncaughtException.</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928022-7838--1c1pgst8nqraum2bqngp81m1l3t.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928022-7838--1c1pgst8nqraum2bqngp81m1l3t.png"/></p>
 <p>A continuación, escribimos todo el conjunto del manejo de excepciones en un método. Cuando ocurre una excepción, se muestra un Toast para avisar al usuario de que la aplicación se reiniciará, y también se llama al método de escritura del registro:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928023-2375-1ph5f281ua612r716q4tch16ri4n.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928023-2375-1ph5f281ua612r716q4tch16ri4n.png"/></p>
 <p>Luego, el método uncaughtException sobrescrito hace una comprobación: si la excepción se ha procesado mediante el manejo personalizado y si el UncaughtExceptionHandler predeterminado es null, es decir:<strong>¿La excepción se ha manejado?</strong>Si no se ha manejado, se pasa al UncaughtExceptionHandler personalizado; si se ha manejado, se reinicia la aplicación.</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928023-5639-0dqouhkhhna3y5fnloefgc9c.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928023-5639-0dqouhkhhna3y5fnloefgc9c.png"/></p>
 <p>Finalmente, agregamos el código relacionado con el reinicio de la aplicación y ¡listo!:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928023-1959--1c1phd7kbcf1c59b2n1p64dmo5g.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928023-1959--1c1phd7kbcf1c59b2n1p64dmo5g.png"/></p>
 <p>Con esto, nuestra clase de herramienta de recopilación de registros de fallos está terminada. Para habilitarla, hay que añadir en el método onCreate() de DrySisterApp.java:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928023-6308-1c1phgpbd1k0rh9hmifunq14li5t.png"/></p>
 <p>Si quieres probar si funciona, es muy sencillo: basta con provocar un fallo manualmente. Por ejemplo, hago una operación de división por cero en el botón del siguiente paso:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513928023-8923-1c1phjhrv15deccc1eql44l4cg6a.png"/></p>
 <p>Después de ejecutar la aplicación y hacer clic en "Siguiente", se produce un bloqueo directo. Abre el directorio raíz del almacenamiento interno y mira si existe una carpeta Crash; si la abres y ves nuestro archivo de registro, significa que ha sido un éxito:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513928024-2285--1c1phn3or1nicvet1kcem8ehb77.png"/><img decoding="async" src="../wp-content/uploads/2017/12/1513928024-3082-e-1c1phqa9du7lk1ulle3m1a3l7k.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513928024-2285--1c1phn3or1nicvet1kcem8ehb77.png"/><img decoding="async" src="../wp-content/uploads/2017/12/1513928024-3082-e-1c1phqa9du7lk1ulle3m1a3l7k.png"/></p>
 <p>Con esto queda terminado. Fusiona la rama a develop y luego haz push al repositorio remoto:</p>
 <pre>git add .
 git commit -m "add LogUtils and CrashHandler"

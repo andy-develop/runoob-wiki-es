@@ -96,12 +96,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <h2>Introducción a esta sección:</h2>
 <blockquote><p>En la sección anterior explicamos Paint en Android<strong>API</strong>en el<strong>ColorFilter</strong>(Color Filter) primera subclase:<strong>ColorMatrixColorFilter</strong>(Color Matrix Color Filter), creo que ha ampliado la perspectiva de todos sobre el procesamiento de imágenes en Android, y en esta sección estudiaremos su segunda subclase:<strong>LightingColorFilter</strong>(Lighting Color Filter), primero presentamos la documentación oficial de la API:<a href="http://androiddoc.qiniudn.com/reference/android/graphics/LightingColorFilter.html">LightingColorFilter</a>, el contenido del documento no es mucho, lo clave está aquí:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/80384098.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/80384098.jpg"/></p>
 <p>El significado general es: un filtro de color que se puede usar para simular simples efectos de iluminación. El constructor tiene dos parámetros, uno se usa para multiplicar los valores RGB de la imagen original, y el otro se suma al resultado obtenido anteriormente. En realidad, el método de cálculo no es más que:<strong>(valor RGB * mul + Add) % 255</strong>, obteniendo así el nuevo valor RGB, donde % es el resto. Además, Alpha no participa en el cambio durante todo el proceso. ¡A continuación escribimos un ejemplo para verificar!</p></blockquote>
 <hr/>
 <h2>1. Ejemplo de código:</h2>
 <p><strong>Captura del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/75555519.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/75555519.jpg"/></p>
 <p><strong>Código de implementación</strong>：</p>
 <p>Primero un diseño simple:<strong>activity_main.xml</strong>：</p>
 <pre>

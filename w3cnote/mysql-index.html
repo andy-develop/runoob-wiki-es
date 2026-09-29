@@ -291,7 +291,7 @@ select * from dept where dname='xxx' or loc='xx' or deptno=45 --如果条件中�
 <li>SELECT * FROM `houdunwang` WHERE `uname` LIKE’后盾%’ — utiliza el índice</li>
 <li>SELECT * FROM `houdunwang` WHERE `uname` LIKE “%后盾%” — no utiliza el índice</li>
 </ul>
-<p><img decoding="async" src="../wp-content/uploads/2015/06/9dc0c2bc09374310718f0dbfd1d2ec54.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/06/9dc0c2bc09374310718f0dbfd1d2ec54.jpg"/></p>
 <p>De la figura anterior se puede ver que el type de todas las tablas es all, lo que indica un escaneo de tabla completa. Es decir, 6 6 6, con un total de 216 recorridos de consulta.</p>
 <p>Excepto la primera tabla, que representa el escaneo de tabla completa (es necesario, ya que se usa para asociar con otras tablas), las demás son de tipo range (obtenido mediante rango de índice), es decir, 6+1+1+1, con un total de solo 9 recorridos de consulta.</p>
 <p>Por lo tanto, recomendamos unir la menor cantidad de tablas posible al hacer JOIN de múltiples tablas, porque sin cuidado se convierte en un terrible escaneo de producto cartesiano. Además, también recomendamos usar LEFT JOIN tanto como sea posible, para usar la tabla pequeña al asociarse con la grande. Porque al usar JOIN, la primera tabla debe escanearse por completo; usando la tabla pequeña para asociarse con la grande se puede reducir este número de escaneos.</p>

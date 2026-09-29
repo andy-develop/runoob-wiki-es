@@ -188,7 +188,7 @@ assign, deassign</h3><p>assign (operación de asignación procedimental) y deass
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span> <span style="color: #00008B; font-style: italic;">// test</span><br/>
 </div></div>
 <p>Los resultados de la simulación son los siguientes.</p><p>Como se muestra en la figura, cuando cnt_temp es igual a 4 (80ns), cnt_temp se asigna forzosamente a 6 y cout se asigna forzosamente a 1.</p><p>Al hacer release (120ns), cnt_temp es de tipo registro y mantiene su valor original sin cambios; solo cuando el flanco de subida del reloj realiza la operación de asignación de suma, el valor cambia a 7.</p><p>Mientras que en 120ns, como cout es una variable de tipo net, su valor no puede conservarse. En el modelo counter10 del código original existe una sentencia de conducción:<span class="marked">assign  cout = (cnt_temp==4'd9)</span>, por lo que el valor de cout cambia a 0.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/Ac8sKVkjIzU0dgfI.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/Ac8sKVkjIzU0dgfI.png"/></p>
 <h3>Descargar código fuente</h3>
 <p><a class="download" download="" href="../wp-content/uploads/2020/09/4.8force-release.zip">Download</a></p> </div>
 </div>

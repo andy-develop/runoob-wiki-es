@@ -101,7 +101,7 @@ FrameLayout (Frame Layout), AbsoluteLayout (Absolute Layout), GridLayout (Grid L
 Y hoy vamos a explicar el primer layout, LinearLayout (Linear Layout). En la adaptación de pantalla, el más utilizado es el atributo weight (peso) de LinearLayout. En esta sección, analizaremos en detalle LinearLayout, incluyendo algunos atributos básicos, el uso del atributo weight y cómo calcular las proporciones. Además, mencionaremos un atributo menos utilizado: android:divider para dibujar una línea subrayada.</p>
 <hr/>
 <h2>1. Diagrama de estudio de esta sección</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/15116314.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/15116314.jpg"/></p>
 <hr/>
 <h2>2. Explicación detallada del atributo weight (peso):</h2>
 <h3>① El uso más simple:</h3>
@@ -138,7 +138,7 @@ Para dividir proporcionalmente en dirección horizontal: establece el atributo a
 <h3>② Explicación detallada del atributo weight:</h3>
 <p>Por supuesto, si no usamos el método mencionado de establecer 0dp, sino que usamos directamente wrap_content y match_parent, entonces debemos analizar el atributo weight. Hay dos casos: wrap_content y match_parent. Además, hay que tener en cuenta si la orientación de LinearLayout es horizontal o vertical, ya que esto determina en qué dirección se dividirá proporcionalmente.</p>
 <p><strong>1) wrap_content es más simple, directamente se divide en proporción.</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/2036364.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/2036364.jpg"/></p>
 <p>Código de implementación:</p>
 <pre>
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    
@@ -206,17 +206,17 @@ Para dividir proporcionalmente en dirección horizontal: establece el atributo a
 &lt;/LinearLayout&gt; 
  </pre>
 <p>Imagen del resultado de ejecución:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/6746070.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/6746070.jpg"/></p>
 <blockquote><p>En este momento surgirá la duda: ¿cómo puede ser esto? La proporción es 2:1, ¿dónde está three? En el código claramente está three, e incluso se estableció en 3. Además, la proporción de 1 y 2 tampoco es correcta; 1:2:3 se convierte en 2:1:0. ¿Cómo puede ser?
 Respuesta: En realidad, no es tan simple; necesitamos calcular. Hay varios algoritmos en Internet. Aquí presentaré uno que el autor considera más fácil de entender:<strong>step 1：</strong>Cada uno es fill_parent, pero solo hay una pantalla, entonces 1 - 3 = -2 fill_parent<strong>step 2：</strong>Las proporciones en orden son 1/6, 2/6, 3/6<strong>step 3：</strong>Por orden de llegada, primero se asigna a one, cálculo: 1 - 2 * (1/6) = 2/3 fill_parent
             Luego a two, cálculo: 1 - 2 * (2/6) = 1/3 fill_parent
             Finalmente a three, cálculo: 1 - 2 * (3/6) = 0 fill_parent<strong>step 4：</strong>Entonces el resultado final es: one ocupa dos partes, two ocupa una parte, three no ocupa nada.
 Lo anterior es la razón por la cual three no aparece. Quizás después de leerlo sigáis un poco confundidos, no pasa nada, ¡veamos algunos ejemplos más para entenderlo!</p></blockquote>
 <p><strong>Proporción: 1:1:1</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/77411800.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/77411800.jpg"/></p>
 <p>Siguiendo el método de cálculo anterior una vez, el resultado es: 1/3   1/3   1/3, correcto.</p>
 <p><strong>A continuación, probemos con: 2:3:4</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/81150547.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/81150547.jpg"/></p>
 <p>Resultado del cálculo: 5/9   3/9   1/9. Comparando con la imagen del efecto, 5:3:1, también es correcto. ¡Así que debes marcar este método de cálculo!</p>
 <h3>③ Configurar el atributo weight en código Java:</h3>
 <pre>
@@ -226,7 +226,7 @@ setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
 <hr/>
 <h2>3. Establecer una línea divisoria para LinearLayout</h2>
 <p>En el desarrollo de muchas interfaces se suelen usar subrayados o líneas divisorias para que la interfaz sea más ordenada y bonita, por ejemplo, la página de registro de Kugou Music a continuación:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/07/91165417.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/91165417.jpg"/></p>
 <p>Para este tipo de líneas, normalmente tenemos dos métodos:<strong>① Agregar directamente una vista (view) en el layout</strong>, la función de esta view es solo mostrar una línea, y el código también es muy simple:</p>
 <pre>
 &lt;View  

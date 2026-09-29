@@ -309,7 +309,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span> <br/>
 </div></div>
 <p>El resultado de la simulación es el siguiente.</p><p>Como se puede ver en la figura, los resultados de salida de los dos métodos de implementación son consistentes, pero el método de procesamiento paralelo reduce la frecuencia de trabajo a la mitad, el consumo de energía disminuirá y el área de diseño también aumentará.</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-rtl-1.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-rtl-1.png"/></p>
 <h3>Procesamiento en pipeline</h3>
 <p>En<a href="./verilog-tutorial.html" rel="noopener" target="_blank">«Tutorial de Verilog»</a>Como se mencionó en el «Tutorial de Verilog», un diseño de pipeline de N etapas trabajando continuamente mejora la eficiencia aproximadamente N veces. Al igual que con el diseño paralelo, al usar el diseño de pipeline, también se puede reducir adecuadamente la frecuencia de trabajo para disminuir el consumo de energía.</p>
 <p>Desde otro punto de vista, el diseño de pipeline puede dividir una ruta combinacional larga en N etapas de pipeline. La longitud de la ruta se reduce a 1/N de la longitud original. En este momento, si la frecuencia del reloj no cambia, en un período solo es necesario cargar y descargar la capacitancia C/N, en lugar de la capacitancia C original. Por lo tanto, bajo el mismo requisito de frecuencia, se puede usar un voltaje de alimentación más bajo para impulsar el sistema, lo que reduce el consumo de energía.</p>

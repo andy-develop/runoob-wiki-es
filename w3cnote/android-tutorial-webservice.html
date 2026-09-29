@@ -98,7 +98,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <blockquote><p>Después del aprendizaje anterior, las solicitudes de datos, el análisis de datos, la carga y descarga de archivos, etc., deberían satisfacer las necesidades básicas de interacción con el servidor. Y lo que se presenta en esta sección, Android llamando a WebService, en realidad es algo similar a algunas plataformas de datos que nos proporcionan servicios de API de datos originales, ¡como Juhe Data! WebService utiliza XML y SOAP, ¡y a través del protocolo HTTP se puede completar la interacción con máquinas remotas! Bien, sin más preámbulos, comencemos con el contenido de esta sección~</p></blockquote>
 <hr/>
 <h2>1. Introducción a WebService</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/29885464.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/29885464.jpg"/></p>
 <p>PD: Si después de leer la introducción anterior aún no queda muy claro, entonces no importa; antes en la empresa usábamos un WebService construido con C#. En esta sección no discutiremos cómo construir un WebService, solo sabremos cómo obtener el servicio que ofrece WebService, luego analizar los datos XML devueltos y mostrar los datos relevantes en nuestro dispositivo Android.</p>
 <hr/>
 <h2>2. Dónde obtener servicios WebService</h2>
@@ -106,23 +106,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>webXml</strong>：<a href="http://www.webxml.com.cn/zh_cn/index.aspx">http://www.webxml.com.cn/zh_cn/index.aspx</a></p>
 <blockquote><p>Antes era gratuito, pero ahora se ha comercializado; muchos servicios requieren pago, pero se puede probar. El sitio ofrece 16 servicios Web diferentes; puedes consultar el servicio correspondiente y llamar a diferentes interfaces según tus necesidades.</p></blockquote>
 <p><strong>Página relacionada de webXml</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/14506413.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/14506413.jpg"/></p>
 <p><strong>Descripción del número de usos relacionado</strong>:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/24990554.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/24990554.jpg"/></p>
 <p><strong>Yunju 36wu</strong>：<a href="http://www.36wu.com/Service">http://www.36wu.com/Service</a></p>
 <blockquote><p>También ofrece muchos servicios; muchas aplicaciones móviles usan sus interfaces, como Rainbow Bus (彩虹公交), Clima Móvil, etc. Sin embargo, esto también requiere pago =-=, se puede probar, pero solo se pueden enviar 20 solicitudes por hora. ¡Haz clic para solicitar el uso, obtén la clave y listo! ¡Elige cualquiera de los dos!</p></blockquote>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/2918446.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/2918446.jpg"/></p>
 <hr/>
 <h2>3. Preparación del paquete jar de terceros</h2>
 <blockquote><p>Primero, si deseas llamar a WebService en la plataforma Android, necesitas depender de la biblioteca de terceros: ksoap2. Y en la plataforma Android, se usa ksoap2 Android, un kit de desarrollo SOAP eficiente y ligero.</p><p>Dirección de descarga del paquete jar:<a href="https://code.google.com/p/ksoap2-android/wiki/HowToUse?tm=2">https://code.google.com/p/ksoap2-android/wiki/HowToUse?tm=2</a></p><p>Puede que no se pueda acceder desde China; aquí se proporcionan dos enlaces de Baidu Cloud para que todos descarguen y usen:</p><p>
 <strong>Versión 2.54</strong>：<a href="../try/download/ksoap2-android-assembly-2.5.4-jar-with-dependencies.jar.html">ksoap2-android 2.54.jar</a></p><p>
 <strong>Versión 3.30</strong>：<a href="../try/download/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar.html">ksoap2-android 3.30.jar</a></p><p>Si tienes la suerte de poder ingresar a la dirección de descarga del paquete jar, verás la siguiente interfaz:</p><p>
-<img alt="" decoding="async" src="../wp-content/uploads/2015/09/67390549.jpg"/></p><p>
-<img alt="" decoding="async" src="../wp-content/uploads/2015/09/14715990.jpg"/></p></blockquote>
+<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/67390549.jpg"/></p><p>
+<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/14715990.jpg"/></p></blockquote>
 <hr/>
 <h2>4. Obtener algunos parámetros relevantes</h2>
 <blockquote><p>Primero encuentra el servicio que necesitamos obtener y luego registra los parámetros relevantes:<strong>NameSpace</strong>(espacio de nombres),<strong>SoapAction</strong>así como<strong>URL</strong>no hace falta decirlo, los demás parámetros se buscan así:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/77830142.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/77830142.jpg"/></p>
 <p><strong>Por ejemplo, aquí buscamos los parámetros de consulta del clima; al hacer clic podemos ver un documento de parámetros como este:</strong></p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/4860400.jpg"/></p>
 <p><strong>Por ejemplo, aquí necesitamos la función de consulta del clima:</strong></p>
@@ -136,10 +136,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/30595401.jpg"/></p>
 <hr/>
 <h2>5. Registrar y habilitar el servicio WEB correspondiente</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/93886000.jpg"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/81129909.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/93886000.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/81129909.jpg"/></p>
 <p>Haz clic en 'Mi servidor web' y luego en 'Probar'; WebXML nos ofrece una prueba gratuita de cinco días, ¡activamos los dos servidores que necesitamos!</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/61530107.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/61530107.jpg"/></p>
 <p>Bien, ¡recuerda marcar nuestra propia clave!</p>
 <hr/>
 <h2>6. Ejemplo de código para llamar a WebService</h2>

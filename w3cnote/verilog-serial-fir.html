@@ -344,14 +344,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span> <br/>
 </div></div>
 <p><strong>Resultados de la simulación</strong></p><p>Según los resultados de simulación en la siguiente figura, la señal después del filtro FIR solo tiene una señal de baja frecuencia (250KHz), y la señal de alta frecuencia (7.5MHz) se ha eliminado. Para que la forma de onda sea más estética, se toman los datos filtrados a partir del decimosexto como salida válida.</p><p>
-<img decoding="async" src="../wp-content/uploads/2020/10/kkReHpOO1QNe60Rs.png"/></p><p>La forma de onda ampliada localmente se muestra en la siguiente figura. En este momento, la señal válida de datos de entrada en y la señal válida de datos de salida valid son señales de pulso con el mismo período (50MHz), no son válidas de forma continua. Pero como el reloj de trabajo es de 400MHz, la salida también se presentará como una señal sinusoidal de 250KHz a una frecuencia de muestreo de 50MHz.</p><p>
-<img decoding="async" src="../wp-content/uploads/2020/10/qeQPvnHLQpg5L9Yi.png"/></p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/kkReHpOO1QNe60Rs.png"/></p><p>La forma de onda ampliada localmente se muestra en la siguiente figura. En este momento, la señal válida de datos de entrada en y la señal válida de datos de salida valid son señales de pulso con el mismo período (50MHz), no son válidas de forma continua. Pero como el reloj de trabajo es de 400MHz, la salida también se presentará como una señal sinusoidal de 250KHz a una frecuencia de muestreo de 50MHz.</p><p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/qeQPvnHLQpg5L9Yi.png"/></p>
 <h3>Apéndice: uso de matlab (consistente con<a href="./verilog-fir.html" rel="noopener noreferrer" target="_blank">«Diseño de filtro FIR paralelo»</a>)</h3>
 <p><strong>Generar los coeficientes del filtro FIR</strong></p><p>Abra matlab y en la ventana de comandos ingrese el comando: fdatool.</p><p>Luego se abrirá la siguiente ventana; configúrela según los parámetros del filtro FIR, como se muestra a continuación.</p><p>El método de implementación de FIR elegido aquí es el de mínimos cuadrados (Least-squares); diferentes métodos de implementación producen diferentes efectos de filtrado.</p>
 <p>
-<img decoding="async" src="../wp-content/uploads/2020/10/9QnVRqsnDU7qqWn1-1.png"/></p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/9QnVRqsnDU7qqWn1-1.png"/></p>
 <p>Haga clic en File -&gt; Export</p><p>Exporte los parámetros del filtro y guárdelos en la variable coef, como se muestra en la siguiente figura.</p><p>
-<img decoding="async" src="../wp-content/uploads/2020/10/ofJimBJSeof88y1g-1.png"/></p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/ofJimBJSeof88y1g-1.png"/></p>
 <p>En este momento, la variable coef debería ser datos de tipo flotante. Multiplíquela por un cierto factor de ampliación y luego tome los datos de punto fijo aproximados como parámetros del filtro FIR en el diseño. Aquí se toma el factor de ampliación de 2048, y el resultado se muestra a continuación.</p><p>
 <img decoding="async" src="../wp-content/uploads/2020/10/CA3vJ3Bqq7INC16U-1.png"/></p>
 <p><strong>Generar la señal mixta de entrada</strong></p><p>El código de referencia para generar la señal mixta de entrada con matlab es el siguiente.</p><p>La señal es datos de punto fijo sin signo, con ancho de bits de 12 bits, almacenados en el archivo<strong>cosx0p25m7p5m12bit.txt</strong> 。</p>

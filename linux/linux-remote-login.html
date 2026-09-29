@@ -282,9 +282,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En el sistema Windows, los clientes de inicio de sesión remoto para Linux incluyen SecureCRT, Putty, SSH Secure Shell, etc. Este artículo utiliza Putty como ejemplo para iniciar sesión en un servidor remoto.</p>
 <p>Dirección de descarga de Putty:<a href="https://www.putty.org/" rel="noopener noreferrer" target="_blank">https://www.putty.org/</a></p>
 <p>Si has descargado Putty, haz doble clic en putty.exe y aparecerá la siguiente ventana.</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_1.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_1.png"/></p>
 <p>En el cuadro debajo de Host Name (or IP address), ingresa la IP del servidor remoto al que deseas iniciar sesión (puedes ver la IP del servidor con el comando ifconfig) y luego presiona Enter.</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_12.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_12.png"/></p>
 <p>En este momento, se nos solicita ingresar el nombre de usuario con el que iniciaremos sesión.</p>
 <p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_13.png"/></p>
 <p>Ingresa root y presiona Enter; luego ingresa la contraseña y podrás iniciar sesión en el sistema Linux remoto.</p>
@@ -294,13 +294,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>SSH es la abreviatura de Secure Shell, establecido por el Grupo de Trabajo de Red (Network Working Group) de la IETF.</p>
 <p>SSH es un protocolo de seguridad construido sobre la capa de aplicación y la capa de transporte.</p>
 <p>Primero, utiliza la herramienta PUTTYGEN.EXE para generar el par de claves. Después de abrir la herramienta PUTTYGEN.EXE, se muestra como en la siguiente figura:</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_15.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_15.png"/></p>
 <p>Esta herramienta puede generar claves en tres formatos: SSH-1(RSA), SSH-2(RSA) y SSH-2(DSA). Usamos el formato predeterminado, es decir, SSH-2(RSA). "Number of bits in a generated key" se refiere al tamaño de la clave generada. Cuanto mayor sea este valor, más compleja será la clave generada y mayor será la seguridad. Aquí escribimos 2048.</p>
 <p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_16.png"/></p>
 <p>Luego haz clic en Generate para comenzar a generar el par de claves:</p>
 <p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_17.png"/></p>
 <p>Ten en cuenta que durante este proceso, el mouse debe moverse de un lado a otro; de lo contrario, la barra de progreso no avanzará.</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_18.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_18.png"/></p>
 <p>En este punto, el par de claves ya se ha generado. Puedes ingresar una contraseña para tu clave (en el campo Key Passphrase) o dejarlo vacío. Luego haz clic en Save public key para guardar la clave pública y en Save private key para guardar la clave privada. El autor recomienda guardarlas en un lugar seguro, tanto para evitar que otros las vean como para evitar su eliminación accidental. A continuación, debes configurarlo en el host Linux remoto.</p>
 <p>1) Crear el directorio /root/.ssh y establecer permisos</p>
 <p>[root@localhost ~]# mkdir /root/.ssh
@@ -312,9 +312,9 @@ El comando chmod se utiliza para modificar los permisos y atributos de los archi
 El comando vim es un comando para editar archivos de texto; también se explicará en detalle en capítulos posteriores.</p>
 <p>3) Abre el archivo public key que acabas de generar. Se recomienda abrirlo con WordPad, para que se vea más cómodo. Copia todo el contenido desde el inicio con AAAA hasta la línea "---- END SSH2 PUBLIC KEY ----" y pégalo en el archivo /root/.ssh/authorized_keys, asegurándote de que todos los caracteres estén en una sola línea. (Puedes copiar primero el contenido al Bloc de notas, editarlo en una sola línea y luego pegarlo en el archivo).</p>
 <p>Aquí se explicará brevemente cómo pegar. Después de abrir ese archivo con vim, como el archivo no existe, vim lo creará automáticamente. Presiona la letra "i" y luego presiona shift + Insert al mismo tiempo para pegar (o haz clic con el botón derecho del mouse), siempre que ya lo hayas copiado al portapapeles. Después de pegar, mueve el cursor al comienzo de la línea e ingresa<strong>ssh-rsa</strong>, luego presiona la barra espaciadora. Luego presiona ESC, después ingresa dos puntos seguidos de wq, es decir, :wq, para guardar. El formato se muestra en la siguiente figura:</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_19.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_19.png"/></p>
 <p>4) Luego configura las opciones de Putty. Haz clic en SSH -&gt; Auth en el lado izquierdo de la ventana, haz clic en Browse... en el lado derecho para seleccionar la clave privada que acabas de generar, y luego haz clic en Open. En este momento, ingresa root y podrás iniciar sesión sin necesidad de ingresar la contraseña.</p>
-<p><img class="attachment-full" decoding="async" src="../wp-content/uploads/2014/06/5_20.png"/></p>
+<p><img class="attachment-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/5_20.png"/></p>
 <p>Si anteriormente configuraste una Key Passphrase, en este momento se te pedirá que ingreses la contraseña. Para mayor seguridad, se recomienda configurar una Key Passphrase.</p> Otras extensiones
 </div>
 </div>

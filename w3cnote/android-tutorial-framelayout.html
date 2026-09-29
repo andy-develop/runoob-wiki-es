@@ -132,7 +132,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <b>Análisis del código:</b>Es muy sencillo: tres TextView con diferentes tamaños y colores de fondo se superponen en orden. Luego, en la esquina inferior derecha está la imagen de primer plano. Mediante android:foreground="@drawable/logo" se establece la imagen de primer plano, y con android:foregroundGravity="right|bottom" se establece la posición de la imagen de primer plano en la esquina inferior derecha.</p>
 <h3>2) Chica linda que se mueve con el dedo</h3>
 <p>El efecto se muestra a continuación:</p>
-<img alt="18442553" class="attachment-full" decoding="async" height="730" src="../wp-content/uploads/2015/07/18442553.jpg" width="395"/>
+<img alt="18442553" class="attachment-full" decoding="async" height="730" src="https://www.runoob.com/wp-content/uploads/2015/07/18442553.jpg" width="395"/>
 <p>Análisis del proceso de implementación:</p>
 <ul>
 <li>Paso 1: Primero, establece el diseño de main.xml como un FrameLayout vacío y asígnale un fondo de imagen.</li><li>Paso 2: Crea una nueva clase de componente personalizada MeziView que herede de la clase View e inicializa las coordenadas iniciales de la vista en el método constructor.</li><li>Paso 3: Sobrescribe el método onDraw() e instancia una clase de pincel Paint vacía.</li><li>Paso 4: Llama a BitmapFactory.decodeResource() para generar un objeto de mapa de bits.</li><li>Paso 5: Llama a canvas.drawBitmap() para dibujar el mapa de bits de la chica.</li><li>Paso 6: Comprueba si la imagen ya fue reciclada; de lo contrario, recicla la imagen forzosamente.</li><li>Paso 7: En el código Java principal, obtén el objeto del diseño de marco e instancia una clase MeziView.</li><li>Paso 8: Agrega un listener de eventos táctiles al objeto mezi instanciado, sobrescribe el método onTouch, cambia las coordenadas X, Y de mezi y llama al método de redibujado invalidate().</li><li>Paso 9: Agrega el objeto mezi al diseño de marco.</li>
@@ -230,7 +230,7 @@ public class MainActivity extends Activity {
 <h3>3) Chica linda corriendo</h3>
 <p>
 <b>El efecto se muestra a continuación:</b></p>
-<img decoding="async" src="../wp-content/uploads/2015/07/3405501.jpg"/>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/07/3405501.jpg"/>
 <p><b>Proceso de implementación:</b></p>
 <ul>
 <li>Paso 1: Define un diseño FrameLayout vacío y establece la posición de la imagen de primer plano en el centro.</li><li>Paso 2: En la Activity, obtén ese diseño FrameLayout, crea un nuevo objeto Handler, sobrescribe el método handlerMessage() y llama al método de actualización de la imagen.</li><li>Paso 3: Define un método personalizado move() y, mediante switch, establece dinámicamente el mapa de bits que se muestra en la imagen de primer plano.</li><li>Paso 4: En el método onCreate(), crea un nuevo objeto temporizador Timer, sobrescribe el método run y envía un mensaje vacío al handler cada 170 milisegundos.</li>

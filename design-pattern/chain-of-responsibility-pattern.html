@@ -352,7 +352,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <ul><li><p><strong>Manejador abstracto (Handler):</strong></p><ul><li>Define una interfaz para procesar solicitudes, que generalmente incluye un método para procesar la solicitud (como<code>handleRequest</code>) y una referencia al siguiente manejador (sucesor).</li></ul></li><li><p><strong>Manejador concreto (ConcreteHandler):</strong></p><ul><li>Implementa la interfaz del manejador abstracto y es responsable de procesar la solicitud. Si puede procesarla, la maneja directamente; de lo contrario, la transmite al siguiente manejador.</li></ul></li><li><p><strong>Cliente (Client):</strong></p><ul><li>Crea los objetos manejadores y los conecta en una cadena de responsabilidad. Normalmente, el cliente solo necesita enviar la solicitud al primer manejador de la cadena, sin preocuparse por el proceso específico de manejo de la solicitud.</li></ul></li></ul>
 <h2 class="tutheader">Implementación</h2>
 <p>Creamos la clase abstracta<i>AbstractLogger</i>, con niveles detallados de registro. Luego creamos tres tipos de registradores, todos extienden<i>AbstractLogger</i>. Cada registrador verifica si el nivel del mensaje es de su propio nivel; si lo es, lo imprime en consecuencia; de lo contrario, no lo imprime y pasa el mensaje al siguiente registrador.</p>
-<img alt="责任链模式的 UML 图" decoding="async" src="../wp-content/uploads/2014/08/2021-chain-of-responsibility.svg"/>
+<img alt="责任链模式的 UML 图" decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/08/2021-chain-of-responsibility.svg"/>
 <h3>Paso 1</h3>
 <p>Crear la clase registradora abstracta.</p>
 <div class="example">

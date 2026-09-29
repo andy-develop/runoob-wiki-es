@@ -213,7 +213,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Los tipos de variables/parámetros/campos de relación deben coincidir con el tipo de campo (esto es algo a lo que no prestaba mucha atención antes)</h2>
 <p>Evite la conversión de tipos, que consume CPU adicional; el escaneo de tablas grandes que provoca es particularmente grave.</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/a46fb7e52c3107f55b1bfd1c36a53247.png"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/ff9467e29f94f87b3ce197c1424f8e36.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/06/ff9467e29f94f87b3ce197c1424f8e36.png"/></p>
 <p>Después de ver las dos imágenes anteriores, creo que no necesito explicaciones; todos deberían tenerlo claro.</p>
 <p>Si el tipo de campo de la base de datos es VARCHAR, en la aplicación es mejor especificar el tipo como AnsiString y definir claramente su longitud.</p>
 <p>Si el tipo de campo de la base de datos es CHAR, en la aplicación es mejor especificar el tipo como AnsiStringFixedLength y definir claramente su longitud.</p>
@@ -224,8 +224,8 @@ sp_executesql<br/>
 Prepared Queries<br/>
 Stored procedures</p>
 <p>Usemos una imagen para explicarlo, jaja.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/7144da91cfd453fca23ba652074acb1a.png"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/b183a02f6d1b3b30b1a7c65a4d26cb90.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/06/7144da91cfd453fca23ba652074acb1a.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/06/b183a02f6d1b3b30b1a7c65a4d26cb90.png"/></p>
 <h2>Limitar el número de JOINs</h2>
 <ul>
 <li>El número de JOIN de tablas en una sola sentencia SQL no puede exceder de 5.</li>
@@ -241,7 +241,7 @@ Stored procedures</p>
 <li>Prohibido el uso de transacciones distribuidas en bases de datos.</li>
 </ul>
 <p>Usemos una imagen para explicarlo.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/06/fd37ab47480e131d108c559c88f7b8f9.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/06/fd37ab47480e131d108c559c88f7b8f9.png"/></p>
 <p>Es decir, no deberíamos hacer commit tran después de que se hayan actualizado las 1000 filas de datos. Piensa si al actualizar estas mil filas estás ocupando exclusivamente los recursos, lo que impide que otras transacciones puedan procesarse.</p>
 <h2>Desactivar la devolución de información del recuento de filas afectadas</h2>
 <p>En las sentencias SQL, establezca explícitamente Set Nocount On para cancelar el retorno del recuento de filas afectadas y reducir el tráfico de red.</p>

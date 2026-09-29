@@ -141,10 +141,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-03.png"/></p><p>El cliente envía solicitudes al servidor a través de una conexión larga TCP para establecer el canal de red. Por defecto, la capa subyacente usa el método NIO de Java, y también se puede configurar el método de implementación con Netty.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-04.png"/></p>
 <p>Diagrama de flujo del registro del evento de escucha del watcher:</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-05.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/watcher-05.png"/></p>
 <h3>1. El cliente envía una solicitud de notificación de eventos</h3>
 <p>Cuando la clase Zookeeper llama al método exists, encapsula la creación de la escucha de eventos en el objeto request y establece el atributo watch en true. Cuando el servidor devuelve la respuesta, encapsula el evento de escucha en la clase ZKWatchManager del cliente.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-06.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/watcher-06.png"/></p>
 <h3>2. El servidor procesa la solicitud del evento watcher</h3>
 <p>La clase NIOServerCnxn del servidor se utiliza para procesar las solicitudes enviadas por el cliente, y finalmente llama a FinalRequestProcessor. Entre ellas, hay un fragmento de código fuente que agrega el evento watcher enviado por el cliente:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-07.png"/></p>
@@ -156,7 +156,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La cadena de llamadas de eliminación finalmente llega al fragmento de código de activación de la rama de eliminación de nodos en la clase DataTree:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-11.png"/></p>
 <p>Ingrese al método triggerWatch de la clase WatchManager:</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-12.png"/></p><p>Continúe rastreando e ingrese a NIOServerCnxn. Se construye un objeto ReplyHeader con xid de -1 y zxid de -1, y luego se llama al método sendResonpe.</p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/watcher-12.png"/></p><p>Continúe rastreando e ingrese a NIOServerCnxn. Se construye un objeto ReplyHeader con xid de -1 y zxid de -1, y luego se llama al método sendResonpe.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-13.png"/></p>
 <h3>4. El cliente gestiona la devolución de llamada del evento watcher</h3><p>El método readResponse de la clase SendThread del cliente recibe la notificación de eventos activada por el servidor, ingresa al flujo con xid de -1 y procesa el evento Event.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/watcher-14.png"/></p>

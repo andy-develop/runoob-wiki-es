@@ -126,7 +126,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
 </div></div>
 <p>El resultado de la simulación es el siguiente:<p></p>Como se muestra en la figura, el bloque secuencial se ejecuta en orden; en el tiempo 10ns, la señal bi_sequen recién se asigna a 8.</p><p>Mientras que en el bloque paralelo, las asignaciones de ai_paral y bi_paral se ejecutan simultáneamente, por lo que ambas se asignan en 5ns.</p><p>Y la asignación no bloqueante también puede lograr el mismo efecto de asignación que el bloque paralelo.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/4gI8EU9NUElS3wqr.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/4gI8EU9NUElS3wqr.png"/></p>
 <h3>Bloque anidado</h3><p>Los bloques secuenciales y paralelos también se pueden usar anidados.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -148,7 +148,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
 </div></div>
 <p>El resultado de la simulación es el siguiente:</p><p>Dentro del bloque paralelo, las sentencias se ejecutan en paralelo, por lo que las señales ai_paral2 y bi_paral2 se asignan en 10ns y 15ns respectivamente. Y como el tiempo de ejecución más largo en el bloque paralelo es 15ns, la señal bi_sequen2 en el bloque secuencial se asigna en 35ns.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/0wN6HFINV8IoYUCi.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/0wN6HFINV8IoYUCi.png"/></p>
 <h3>Bloque nombrado</h3><p>Podemos nombrar las estructuras de bloques de sentencias.</p><p>En un bloque nombrado se pueden declarar variables locales, y se puede acceder a las variables mediante referencias por nombre jerárquico.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -177,7 +177,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
 </div></div>
 <p>El resultado de la simulación es el siguiente:</p>
-<a href="../wp-content/uploads/2020/09/vBQIKLIBLNgPpCaH.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/vBQIKLIBLNgPpCaH.png"/></a>
+<a href="../wp-content/uploads/2020/09/vBQIKLIBLNgPpCaH.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/vBQIKLIBLNgPpCaH.png"/></a>
 <p>Un bloque nombrado también puede ser deshabilitado, representado con la palabra clave disable.</p><p>disable puede terminar la ejecución de un bloque nombrado, y puede usarse para salir de un bucle, manejar errores, etc.</p><p>Es similar a break en C, pero break solo puede salir del bucle actual, mientras que disable puede deshabilitar cualquier bloque nombrado en el diseño.</p>
 <p>El código de simulación es el siguiente:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -210,7 +210,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p>El resultado de la simulación es el siguiente:</p><p>Como se puede ver en la figura, después de que la señal i_d se acumula hasta 50, ya no se acumula más, y a partir de entonces el reloj clk ya no se genera.</p>
 <p>Se puede ver que disable sale del bloque while actual.</p>
-<p><a href="../wp-content/uploads/2020/09/4NmlNl0QZJ8DlbbZ.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/4NmlNl0QZJ8DlbbZ.png"/></a></p>
+<p><a href="../wp-content/uploads/2020/09/4NmlNl0QZJ8DlbbZ.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/4NmlNl0QZJ8DlbbZ.png"/></a></p>
 <p>Cabe señalar que cuando disable se usa en un bloque always o forever, solo puede salir de la iteración actual; la próxima sentencia aún se ejecutará en always o forever. Debido a que los bloques always y forever se ejecutan continuamente, disable en este caso es algo similar a la función continue en C.</p>
 <h3>Descarga del código fuente</h3>
 <p><a class="download" download="" href="../wp-content/uploads/2020/09/4.4sequence-fork.zip">Download</a></p> </div>

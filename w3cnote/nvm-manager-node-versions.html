@@ -144,7 +144,7 @@ sudo rm -rf /opt/local/lib/node_modules</pre>
 <pre>nvm alias default node</pre>
 <hr/><h2>Listar las instancias instaladas</h2>
 <pre>nvm ls</pre>
-<p><img decoding="async" src="../wp-content/uploads/2018/04/nvm-ls.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/04/nvm-ls.png"/></p>
 <p>La flecha verde de arriba es la versión actualmente en uso; abajo también se enumeran los alias que se han establecido.</p>
 <hr/><h2>Usar diferentes versiones de Node en un proyecto</h2><p>Podemos, creando en el directorio del proyecto un<span class="marked">.nvmrc</span>archivo para especificar la versión de Node a usar. Después, en el directorio del proyecto, ejecuta<span class="marked">nvm use</span>y listo.<span class="marked">.nvmrc</span>El contenido del archivo solo necesita seguir las reglas de versionado semántico mencionadas anteriormente. Además, hay una herramienta llamada<a href="https://github.com/wbyoung/avn" rel="external" target="_blank">avn</a>, que puede automatizar este proceso.</p><hr/>
 <h2>En múltiples entornos, ¿cómo se debe usar npm?</h2><p>Cada versión de Node viene con una versión diferente de npm; puedes usar<span class="marked">npm -v</span>para ver la versión de npm. Los paquetes npm instalados globalmente no se comparten entre diferentes entornos de Node, porque esto causaría problemas de compatibilidad. Se colocan en directorios de diferentes versiones, por ejemplo,<span class="marked">~/.nvm/versions/node/&lt;version&gt;/lib/node_modules&lt;/version&gt;</span>directorios como estos. Esto también nos ahorra, en Linux, tener que usar<span class="marked">sudo</span>dicho comando. Debido a que esta es la carpeta personal del usuario, no causará problemas de permisos.</p>

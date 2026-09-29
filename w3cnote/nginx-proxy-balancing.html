@@ -95,7 +95,7 @@ proxy_intercept_errors on;    #如果被代理服务器返回的状态码为400�
 <p>3. Establecer la versión del protocolo HTTP compatible</p>
 <pre>proxy_http_version 1.0 ; #Nginx服务器提供代理服务的http协议版本1.0，1.1，默认设置为1.0版本</pre>
 <p>4. Si tu servidor Nginx actúa como proxy para 2 servidores web y el algoritmo de equilibrio de carga usa round-robin, cuando una de tus máquinas tenga el programa web IIS cerrado, es decir, el sitio web no sea accesible, el servidor Nginx seguirá distribuyendo solicitudes a ese servidor web inaccesible. Si el tiempo de conexión de respuesta es demasiado largo, la página del cliente esperará la respuesta constantemente, y la experiencia del usuario se verá muy afectada. ¿Cómo evitar que esto suceda? Aquí incluyo una imagen para ilustrar el problema.</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/08/398358-20160219104130363-660910928.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/08/398358-20160219104130363-660910928.jpg"/></p>
 <p>Si en el equilibrio de carga ocurre esta situación en web2, Nginx primero irá a web1 para solicitar, pero si Nginx no está configurado correctamente, continuará distribuyendo solicitudes a web2 y esperará la respuesta de web2. Solo cuando se agote el tiempo de respuesta, redistribuirá la solicitud a web1. Si el tiempo de respuesta es demasiado largo, el usuario esperará más tiempo.</p>
 <p>La siguiente configuración es una de las soluciones.</p>
 <pre>proxy_connect_timeout 1;   #nginx服务器与被代理的服务器建立连接的超时时间，默认60秒

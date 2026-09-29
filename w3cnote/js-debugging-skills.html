@@ -95,7 +95,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Era la época en que Internet apenas comenzaba. El frontend de las páginas web se centraba principalmente en la exhibición de contenido, y los scripts del navegador solo podían proporcionar funciones auxiliares muy simples a la página. En ese entonces, las páginas web se ejecutaban principalmente en navegadores dominados por IE6, y la capacidad de depuración de JS era muy débil. Solo se podía depurar mediante el método alert integrado en el objeto Window. En aquel momento, probablemente se veía así:</p>
 <br/>
-<p><img alt="1465008820-3618-DRwtoQT7voibhRD94QpmhvtYwQLA" class="attachment-full size-full" decoding="async" fetchpriority="high" height="292" src="../wp-content/uploads/2016/06/1465008820-3618-DRwtoQT7voibhRD94QpmhvtYwQLA.gif" width="449"/></p>
+<p><img alt="1465008820-3618-DRwtoQT7voibhRD94QpmhvtYwQLA" class="attachment-full size-full" decoding="async" fetchpriority="high" height="292" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-3618-DRwtoQT7voibhRD94QpmhvtYwQLA.gif" width="449"/></p>
 <br/>
 <p>Cabe aclarar que el efecto que se ve aquí no es el que se veía en los navegadores IE de aquel entonces, sino el efecto en una versión superior de IE. Además, en ese entonces aparentemente no existía una consola tan avanzada, y el uso de alert se realizaba en el código JS real de la página. Aunque el método de depuración con alert es muy primitivo, en su momento tuvo un valor indeleble, e incluso hoy en día todavía tiene su lugar.</p>
 <br/>
@@ -107,7 +107,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Por lo tanto, los nuevos navegadores como Firefox, Chrome, e incluso IE, lanzaron sucesivamente consolas de depuración de JS que admiten el uso de formas como 'console.log(xxxx)' para imprimir información de depuración en la consola sin afectar directamente la visualización de la página. Tomando IE como ejemplo, se ve así:</p>
 <br/>
-<p><img alt="1465008820-2300-ogTqaJgtj02s0OsyJWuITpka96AQ" class="attachment-full size-full" decoding="async" height="292" src="../wp-content/uploads/2016/06/1465008820-2300-ogTqaJgtj02s0OsyJWuITpka96AQ.gif" width="449"/></p>
+<p><img alt="1465008820-2300-ogTqaJgtj02s0OsyJWuITpka96AQ" class="attachment-full size-full" decoding="async" height="292" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-2300-ogTqaJgtj02s0OsyJWuITpka96AQ.gif" width="449"/></p>
 <br/>
 <p>Bien, adiós a la fea ventana emergente de alert. Y los nuevos navegadores liderados por Chrome han ampliado la Console con funciones más ricas:</p>
 <br/>
@@ -129,7 +129,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>La depuración con puntos de interrupción en JS consiste en agregar puntos de interrupción al código JS en las herramientas de desarrollo del navegador, haciendo que JS se detenga en una posición específica para facilitar al desarrollador el análisis y el procesamiento lógico de ese fragmento de código. Para poder observar el efecto de la depuración con puntos de interrupción, preparamos de antemano un fragmento de código JS al azar:</p>
 <br/>
-<p><img alt="1465008820-8904-dpkouCeucc7IXxBjtRNwQswHiakA" class="attachment-full size-full" decoding="async" height="252" loading="lazy" src="../wp-content/uploads/2016/06/1465008820-8904-dpkouCeucc7IXxBjtRNwQswHiakA.gif" width="620"/></p>
+<p><img alt="1465008820-8904-dpkouCeucc7IXxBjtRNwQswHiakA" class="attachment-full size-full" decoding="async" height="252" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-8904-dpkouCeucc7IXxBjtRNwQswHiakA.gif" width="620"/></p>
 <br/>
 <p>El código es muy simple: define una función que recibe dos números, les suma un entero aleatorio cualquiera y luego devuelve la suma de ambos. Tomando las herramientas de desarrollo de Chrome como ejemplo, veamos el método básico de depuración con puntos de interrupción en JS.</p>
 <br/>
@@ -139,13 +139,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Método 1: como se mencionó antes, el más común. Ya sea usando alert o console, podemos verificar de esta manera:</p>
 <br/>
-<p><img alt="1465008820-8340-mHoUQU3TkcAOP8xLnYk2NhcUialw" class="attachment-full size-full" decoding="async" height="295" loading="lazy" src="../wp-content/uploads/2016/06/1465008820-8340-mHoUQU3TkcAOP8xLnYk2NhcUialw.gif" width="620"/></p>
+<p><img alt="1465008820-8340-mHoUQU3TkcAOP8xLnYk2NhcUialw" class="attachment-full size-full" decoding="async" height="295" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-8340-mHoUQU3TkcAOP8xLnYk2NhcUialw.gif" width="620"/></p>
 <br/>
 <p>Como se ve en la figura anterior, agregamos tres líneas de código console en el código para imprimir las variables de datos que nos interesan. Finalmente, a partir de los resultados de salida en la consola (panel Console), podemos verificar claramente si todo el proceso de cálculo es normal, cumpliendo así los requisitos de verificación planteados.</p>
 <br/>
 <p>Método 2: La desventaja evidente del método 1 es que se agrega mucho código redundante. A continuación, veamos si es más conveniente verificar usando puntos de interrupción. Primero veamos cómo agregar un punto de interrupción y qué efecto tiene:</p>
 <br/>
-<p><img alt="1465008820-9543-cLX7KYiaaTVXstsgZjALFNgxVmIQ" class="attachment-full size-full" decoding="async" height="340" loading="lazy" src="../wp-content/uploads/2016/06/1465008820-9543-cLX7KYiaaTVXstsgZjALFNgxVmIQ.gif" width="620"/></p>
+<p><img alt="1465008820-9543-cLX7KYiaaTVXstsgZjALFNgxVmIQ" class="attachment-full size-full" decoding="async" height="340" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-9543-cLX7KYiaaTVXstsgZjALFNgxVmIQ.gif" width="620"/></p>
 <br/>
 <p>Como se muestra en la figura, el flujo para agregar un punto de interrupción a un código es: 'F12 (Ctrl + Shift + I) para abrir las herramientas de desarrollo' — 'hacer clic en el menú Sources' — 'encontrar el archivo correspondiente en el árbol de la izquierda' — 'hacer clic en la columna del número de línea' para completar la operación de agregar/eliminar un punto de interrupción en la línea actual. Una vez agregado el punto de interrupción, al actualizar la página, JS se detiene en la posición del punto de interrupción. En la interfaz de Sources se verán todas las variables y valores en el ámbito actual; solo hay que verificar cada valor para cumplir los requisitos de verificación.</p>
 <br/>
@@ -171,7 +171,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Para los otros botones de función, modifiquemos un poco nuestro código de prueba y usemos una imagen gif para demostrar su uso:</p>
 <br/>
-<p><img alt="1465008820-1744-Lwm1Zm21Uzalicp2hfunoBux6KUA" class="attachment-full size-full" decoding="async" height="380" loading="lazy" src="../wp-content/uploads/2016/06/1465008820-1744-Lwm1Zm21Uzalicp2hfunoBux6KUA.gif" width="620"/></p>
+<p><img alt="1465008820-1744-Lwm1Zm21Uzalicp2hfunoBux6KUA" class="attachment-full size-full" decoding="async" height="380" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008820-1744-Lwm1Zm21Uzalicp2hfunoBux6KUA.gif" width="620"/></p>
 <br/>
 <p>Aquí hay que tener en cuenta un punto: la función de imprimir el valor de las variables directamente en el área de código es una función nueva agregada en versiones más recientes del navegador Chrome. Si todavía usas una versión anterior de Chrome, es posible que no puedas ver la información de las variables directamente en el punto de interrupción. En ese caso, puedes mover el mouse sobre el nombre de la variable y mantenerlo un momento para que aparezca su valor. También puedes seleccionar el nombre de la variable con el mouse y hacer clic derecho en 'Add to watch' para verlo en el panel Watch; este método también sirve para expresiones. Además, en un punto de interrupción, puedes cambiar al panel Console, escribir el nombre de la variable directamente en la consola y presionar Enter para ver su información. Esta parte es relativamente simple; por cuestiones de espacio, no haré una demostración con imágenes.</p>
 <br/>
@@ -181,7 +181,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Ya que, aparte de la forma de establecer el punto de interrupción, la función es la misma que la de agregar un punto de interrupción en el panel Sources, ¿por qué existe entonces esta forma? Creo que la razón debería ser esta: en el desarrollo, ocasionalmente nos encontramos con situaciones en las que se carga asincrónicamente un fragmento de HTML (que contiene código JS incrustado), y esta parte del código JS no se puede encontrar en el árbol de Sources, por lo que no se puede agregar directamente un punto de interrupción en las herramientas de desarrollo. Entonces, si se quiere agregar un punto de interrupción a un script cargado asincrónicamente, 'debugger;' juega su papel. Veamos su efecto directamente con una imagen gif:</p>
 <br/>
-<p><img alt="1465008821-1866-xQr5Nu4bh6h1njUeQaLRK1Cu6f1w" class="attachment-full size-full" decoding="async" height="338" loading="lazy" src="../wp-content/uploads/2016/06/1465008821-1866-xQr5Nu4bh6h1njUeQaLRK1Cu6f1w.gif" width="620"/></p>
+<p><img alt="1465008821-1866-xQr5Nu4bh6h1njUeQaLRK1Cu6f1w" class="attachment-full size-full" decoding="async" height="338" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008821-1866-xQr5Nu4bh6h1njUeQaLRK1Cu6f1w.gif" width="620"/></p>
 <br/>
 <h3><strong>4. Depuración de puntos de interrupción en DOM</strong></h3>
 <br/>
@@ -191,7 +191,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>En la actualidad, donde el desarrollo front-end es cada vez más complejo, hay cada vez más código JS y la lógica se vuelve más compleja. Una página web aparentemente simple suele ir acompañada de grandes bloques de código JS, que implican muchas operaciones de añadir, eliminar y modificar nodos DOM. Es inevitable encontrar situaciones en las que es difícil localizar un fragmento de código directamente mediante el código JS, pero a través del panel Elements de las herramientas de desarrollo podemos localizar rápidamente el nodo DOM relevante. En este momento, localizar el script mediante puntos de interrupción DOM resulta especialmente importante. Veamos la demostración con un GIF:</p>
 <br/>
-<p><img alt="1465008822-9630-YuxebCQCMgq4jvK5LI6jPTzlqfTQ" class="attachment-full size-full" decoding="async" height="442" loading="lazy" src="../wp-content/uploads/2016/06/1465008822-9630-YuxebCQCMgq4jvK5LI6jPTzlqfTQ.gif" width="750"/></p>
+<p><img alt="1465008822-9630-YuxebCQCMgq4jvK5LI6jPTzlqfTQ" class="attachment-full size-full" decoding="async" height="442" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008822-9630-YuxebCQCMgq4jvK5LI6jPTzlqfTQ.gif" width="750"/></p>
 <br/>
 <p>El ejemplo anterior demuestra el efecto de los puntos de interrupción que se disparan al añadir, eliminar o intercambiar el orden de los nodos secundarios (li) de ul. Pero hay que tener en cuenta que modificar atributos o contenido de los nodos secundarios no disparará un punto de interrupción.</p>
 <br/>
@@ -199,7 +199,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Por otro lado, dado que la lógica de negocio que maneja el front-end es cada vez más compleja, la dependencia del almacenamiento de ciertos datos es cada vez mayor, y almacenar datos temporales en atributos (personalizados) de los nodos DOM es, en muchos casos, la forma que los desarrolladores prefieren elegir. Especialmente después de que el estándar HTML5 mejorara el soporte de atributos personalizados (por ejemplo, dataset, data-*, etc.), la aplicación de atributos es cada vez más frecuente, por lo que las herramientas de desarrollo de Chrome también ofrecen soporte de puntos de interrupción por cambios de atributos. El efecto es aproximadamente el siguiente:</p>
 <br/>
-<p><img alt="1465008821-5906-h7u6Z0DnpHguwGwDJQZpmPj0J42w" class="attachment-full size-full" decoding="async" height="289" loading="lazy" src="../wp-content/uploads/2016/06/1465008821-5906-h7u6Z0DnpHguwGwDJQZpmPj0J42w.gif" width="750"/></p>
+<p><img alt="1465008821-5906-h7u6Z0DnpHguwGwDJQZpmPj0J42w" class="attachment-full size-full" decoding="async" height="289" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008821-5906-h7u6Z0DnpHguwGwDJQZpmPj0J42w.gif" width="750"/></p>
 <br/>
 <p>Con este método también hay que tener en cuenta que cualquier operación sobre los atributos de los nodos secundarios no disparará el punto de interrupción del nodo en sí.</p>
 <br/>
@@ -215,7 +215,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>En los últimos años, el desarrollo front-end ha cambiado drásticamente: de ser poco conocido a estar en su apogeo actual. Ajax impulsa las aplicaciones web enriquecidas y las aplicaciones móviles de una sola página (WebApp) prosperan. Todo esto es inseparable del objeto XMLHttpRequest, y los "XHR Breakpoints" son precisamente la función de depuración por puntos de interrupción creada especialmente para la asincronía.</p>
 <br/>
-<p><img alt="1465008821-4356-PYqD9PZ4YI4Xt1efKzqCJXq87woQ" class="attachment-full size-full" decoding="async" height="360" loading="lazy" src="../wp-content/uploads/2016/06/1465008821-4356-PYqD9PZ4YI4Xt1efKzqCJXq87woQ.gif" width="550"/></p>
+<p><img alt="1465008821-4356-PYqD9PZ4YI4Xt1efKzqCJXq87woQ" class="attachment-full size-full" decoding="async" height="360" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008821-4356-PYqD9PZ4YI4Xt1efKzqCJXq87woQ.gif" width="550"/></p>
 <br/>
 <p>Podemos usar el signo "+" a la derecha de "XHR Breakpoints" para añadir condiciones de punto de interrupción a los puntos de interrupción asíncronos. Cuando la URL de la petición asíncrona disparada cumple esta condición, la lógica JS generará automáticamente un punto de interrupción. En la animación de demostración no se muestra la ubicación del punto de interrupción, porque la demostración usa el método ajax encapsulado de jQuery y el código ya está comprimido, por lo que no se ve ningún efecto. De hecho, el punto de interrupción de XHR se genera en la sentencia "xhr.send()".</p>
 <br/>
@@ -225,7 +225,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <br/>
 <p>Los puntos de interrupción de escuchadores de eventos consisten en establecer puntos de interrupción según el nombre del evento. Cuando el evento se dispara, se detiene en el lugar donde está vinculado el evento. Los puntos de interrupción de escuchadores de eventos enumeran todos los eventos de página y de script, incluyendo: mouse, teclado, animación, temporizadores, XHR, etc. Reducen enormemente la dificultad de depurar la lógica de negocio relacionada con eventos.</p>
 <br/>
-<p><img alt="1465008822-3594-6rlkkFx8mygTaKLuNqrMCzEtTrVQ" class="attachment-full size-full" decoding="async" height="270" loading="lazy" src="../wp-content/uploads/2016/06/1465008822-3594-6rlkkFx8mygTaKLuNqrMCzEtTrVQ.gif" width="440"/></p>
+<p><img alt="1465008822-3594-6rlkkFx8mygTaKLuNqrMCzEtTrVQ" class="attachment-full size-full" decoding="async" height="270" loading="lazy" src="https://www.runoob.com/wp-content/uploads/2016/06/1465008822-3594-6rlkkFx8mygTaKLuNqrMCzEtTrVQ.gif" width="440"/></p>
 <br/>
 <p>El ejemplo de demostración muestra el efecto de los puntos de interrupción cuando se dispara el evento click y cuando se establece setTimeout. El ejemplo muestra que, después de seleccionar el punto de interrupción del evento click, al hacer clic en los dos botones se disparó el punto de interrupción; y cuando se establece setTimeout, se dispara el punto de interrupción "Set Timer".</p>
 <br/>

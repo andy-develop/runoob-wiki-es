@@ -106,7 +106,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>De manera similar, los últimos N/2 puntos se pueden expresar como:</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2020/10/MMmgQxwSMAEcLjjl.png"/></p><p>Por lo tanto, los valores de los últimos N/2 puntos pueden determinarse completamente a través de los valores intermedios calculados para los primeros N/2 puntos. Se continúa descomponiendo A[k] y B[k] en partes pares e impares hasta convertirlos en una DFT de 2 puntos, evitando así muchos cálculos repetidos y logrando el proceso de la Transformada Rápida de Fourier (FFT).</p>
 <p><strong>Estructura del algoritmo</strong></p><p>El diagrama de estructura del cálculo de FFT de 8 puntos es el siguiente.</p><p>Como se ve en la figura, solo se necesitan unas pocas multiplicaciones y sumas simples para completar el proceso de DFT, en lugar de realizar tediosas multiplicaciones y acumulaciones para cada dato.</p>
-<p><img decoding="async" src="../static.jyshare.com/images/mix/uuE5FKpYLflJt5EF.jpg"/></p>
+<p><img decoding="async" src="https://static.jyshare.com/images/mix/uuE5FKpYLflJt5EF.jpg"/></p>
 <p><strong>Características importantes</strong></p>
 <p>(1) Concepto de etapa</p>
 <p>Cada división se denomina una etapa de operación.</p><p>Supongamos que el número de puntos de la operación FFT es N, y hay M etapas de operación, entonces cumplen:</p>
@@ -553,7 +553,7 @@ timescale <span style="color: #FF0055;">1ns</span><span style="color: #5D478B;">
 </div></div>
 <p><strong>Resultados de la simulación</strong></p>
 <p>Se puede observar aproximadamente que los resultados de la FFT se pueden generar en pipeline.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2020/10/Ax6nfRQh1amzJmPE.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/Ax6nfRQh1amzJmPE.png"/></p>
 <p>Se utiliza la función FFT incorporada en MATLAB para operar sobre los mismos datos; los resultados FFT de los primeros 2 grupos de datos son los siguientes.</p><p>Se puede ver que cuando la primera señal de datos de entrada solo tiene válida la parte real, los resultados de la FFT son exactamente iguales.</p><p>Pero en la segunda entrada, la parte compleja de los datos también tiene señal; en este momento, los resultados entre ambos comienzan a tener errores, a veces bastante grandes.</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2020/10/aq7TX9tZrWCmGahi.png"/></p>
 <p>Al simular en MATLAB el proceso FFT implementado en Verilog, se descubre que el resultado FFT de este proceso es básicamente consistente con el resultado de la FFT implementada en Verilog.</p><p>Se comparan los valores absolutos de los dos resultados FFT con errores, como se muestra en la figura.</p><p>Se puede ver que la tendencia de los resultados FFT es aproximadamente la misma, pero en algunos puntos hay errores visibles a simple vista.</p>

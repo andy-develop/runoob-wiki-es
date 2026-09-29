@@ -96,7 +96,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <h2>1. Relación entre Activity, Window y View</h2>
 <blockquote><p>Bien, originalmente solo quería entender la relación entre ellos, y con curiosidad, comencé a estudiar su proceso de invocación... Después de dos horas, solo entendí una parte muy pequeña. Efectivamente, los que se adentran hasta el fondo del código fuente son grandes maestros, como Luo Yonghao. Aún no estoy a ese nivel. Lo siguiente es un resumen de lo que he recopilado consultando materiales y examinando algo del código fuente. Si algo está mal, ¡no dudes en señalarlo! A continuación, adjunto el diagrama de resumen:</p></blockquote>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/93497523.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/93497523.jpg"/></p>
 <p><strong>Análisis del flujo:</strong>Después de que Activity llama a startActivity, finalmente se llama al método attach. Luego, en PolicyManager se implementa una interfaz IPolicy, después se implementa un objeto Policy, y a continuación se llama al método makenewwindow(Context), que devuelve un objeto PhoneWindow. PhoneWindow es una subclase de Window. Dentro de este PhoneWindow hay una clase interna DecorView, que es la raíz View de todas las ventanas de aplicaciones, es decir, el jefe de las View, que controla directamente si la Activity se muestra (citando las palabras del veterano...). Bueno, dentro hay un LinearLayout que contiene dos FrameLayout, que se usan para contener ActionBar y CustomView respectivamente. ¡El diseño que cargamos con setContentView() se coloca en este CustomView!</p>
 <p><strong>Resumiendo la relación entre estos tres:</strong>Pongamos una analogía forzada:
 Podemos considerar estas tres clases como: el pintor, el lienzo y lo que dibuja el pincel;
@@ -117,7 +117,7 @@ Cuando el usuario pulsa la tecla Back, la Activity en la cima sale de la pila, y
 <p>Después, en la documentación oficial vi otros dos diagramas. Por curiosidad, también leí la explicación y luego discutí con la gente del grupo:</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/76132682.jpg"/> <img alt="" decoding="async" src="../wp-content/uploads/2015/08/2159561.jpg"/></p>
 <p>Y también está esta explicación:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/94874923.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/94874923.jpg"/></p>
 <p><strong>Luego saqué una conclusión:</strong></p>
 <blockquote><p>Task es una colección de Activities, es un concepto; en realidad se usa la Back Stack para almacenar las Activities. Puede haber múltiples Tasks, pero solo una pila está al frente al mismo tiempo; las demás están en segundo plano. ¿Entonces cómo se crea la pila?</p>
 <p>Respuesta: cuando abrimos una nueva aplicación tocando su icono desde la pantalla principal, se crea una nueva Task. Por ejemplo:<br/>Al abrir la aplicación tocando el icono de la app de contactos, en este momento se crea una nueva pila 1, y luego se comienzan a añadir las nuevas Activities que se generan. Puede que desde la app de contactos abramos la página de la app de SMS, pero en este momento no se crea una nueva pila, sino que se continúa añadiendo a la pila 1. Esto es un modo de experiencia de usuario que Android promueve: que el cambio entre diferentes aplicaciones haga sentir al usuario como si fuera la misma aplicación, una experiencia de usuario muy fluida; oficialmente se denomina seamless (sin costuras).
@@ -172,7 +172,7 @@ Cuando el objeto Intent pasado a startActivity() contiene la bandera FLAG_ACTIVI
 <h2>4. Explicación detallada de los cuatro modos de carga de Activity:</h2>
 <p>A continuación, explicaremos en detalle los cuatro modos de carga. Son:<strong>standard</strong>(por defecto),<strong>singleTop</strong>，<strong>singleTask</strong>，<strong>singleInstance</strong>En "Días en la red", vi una explicación ilustrada sobre los modos de inicio; es muy buena y quizás más fácil de entender. La tomo prestada aquí:</p><p>Enlace al artículo original:<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0520/2897.html">Explicación ilustrada detallada de los modos de inicio de Activity: standard, singleTop, singleTask y singleInstance</a></p><p>Texto original en inglés:<a href="http://inthecheesefactory.com/blog/understand-android-activity-launchmode/en">Understand Android Activity's launchMode: standard, singleTop, singleTask and singleInstance</a>Además, hay otro artículo que explica los modos de carga en detalle:<a href="http://blog.csdn.net/zhangjg_blog/article/details/10923643">Explicación detallada de los cuatro modos de inicio de Activity y del atributo taskAffinity en Android</a></p>
 <p><strong>Primero veamos el diagrama de resumen:</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/50179298.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/50179298.jpg"/></p>
 <p><strong>Detalle de los modos:</strong></p>
 <hr/>
 <h3>Modo standard:</h3>

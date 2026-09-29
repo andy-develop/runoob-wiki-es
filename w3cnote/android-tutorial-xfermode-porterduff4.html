@@ -102,12 +102,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>No sé si has notado un problema: cuando borramos la ropa de la chica, el borrado se hace en bloques cuadrados, pero cuando dibujamos en el tablero de dibujo, los trazos son muy suaves. ¿Hay alguna manera de combinar ambos para que al borrar la ropa también sea suave? Por supuesto que la hay: ¡usar Xfermode! En esta sección usaremos otro modo,<strong>DST_OUT</strong>¡Un modo que dibuja la imagen de destino en las zonas que no se intersecan!</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/21369612.jpg"/></p>
 <p>Si has olvidado algún modo o ni siquiera has visto los 18 modos, dirígete a:<a href="./android-tutorial-xfermode-porterduff2.html">Tutorial básico de introducción a Android: 8.3.5 Paint API — Explicación detallada de Xfermode y PorterDuff (2)</a>Además, también mostraremos el diagrama de efectos de PorterDuff.Mode:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/aHR0cHM6Ly93d3cuc.png"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/aHR0cHM6Ly93d3cuc.png"/></p>
 <p>Bien, sin más preámbulos, comencemos con el contenido de esta sección~</p></blockquote>
 <hr/>
 <h2>1. Diagrama del efecto a lograr y análisis del flujo de implementación:</h2>
 <p><strong>Diagrama del efecto a lograr</strong>：</p>
-<p><img decoding="async" src="../wp-content/uploads/2015/10/xxx-222.png" width="50%"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/xxx-222.png" width="50%"/></p>
 <blockquote><p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/31236777.jpg"/>Bueno, no sé cuántas veces has visto ese GIF. No sé si la imagen se adapta al gusto de todos. La chica fue extraída de la aplicación de otra persona. No me preguntes por el código ni me dejes tu correo electrónico ni nada, no sé nada~ Para buscar el código, pregúntale al conductor veterano del grupo: el dios Ji. Bien, analicemos el flujo de implementación~</p>
 <ul>
 <li>Hablemos del principio: en realidad son dos Bitmaps, uno delante y otro detrás. El de delante tiene la ropa puesta y el de atrás no. Luego usamos un Path para registrar la forma dibujada por el usuario y configuramos el modo DST_OUT en nuestro pincel. Así, la parte de DST (imagen de destino) que se superpone con el Path, es decir, la imagen con ropa, se volverá transparente. ¡Muy bien, es muy sencillo! Iremos detallándolo poco a poco.</li>

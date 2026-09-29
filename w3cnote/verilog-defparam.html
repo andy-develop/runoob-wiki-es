@@ -198,7 +198,7 @@ ram_4x4    u_ram_4x4<br/>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span> <span style="color: #00008B; font-style: italic;">// test</span><br/>
 </div></div>
 <p>El resultado de la simulación es el siguiente:</p><p>La parte amarilla en la figura: cuando la dirección es c por primera vez, se escribe el dato 4; cuando la dirección es c por segunda vez, se lee el dato 4; se puede ver que el comportamiento de ram es correcto, y MASK no es 3, porque el bit2 de la salida Q de ram no está enmascarado.</p><p>Cuando la dirección es 1 por primera vez, se escribe el dato 9; cuando la dirección es 1 por segunda vez, el dato leído es 1, porque en este momento MASK es 7, y el bit3 de la señal de salida Q de ram está enmascarado. De esto se puede ver que el parámetro MASK se ha sobrescrito correctamente.</p>
-<a href="../wp-content/uploads/2020/09/tnlPObwYSjF2Y5Qj.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/tnlPObwYSjF2Y5Qj.png"/></a>
+<a href="../wp-content/uploads/2020/09/tnlPObwYSjF2Y5Qj.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/tnlPObwYSjF2Y5Qj.png"/></a>
 <h3>Instanciación de módulo con parámetros</h3><p>El segundo método consiste en escribir los nuevos valores de los parámetros en la sentencia de instanciación del módulo al instanciarlo, para así sobrescribir los valores de los parámetros del módulo original.</p>
 <p>Por ejemplo, realizar una instanciación de módulo con parámetros en un módulo ram cuyos anchos de dirección y datos son ambos variables:</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -240,7 +240,7 @@ ram <span style="color: #5D478B;">#</span><span style="color: #9F79EE;">(</span>
 <span style="color: #A52A2A; font-weight: bold;">endmodule</span><br/>
 </div></div>
 <p>Para la simulación, solo es necesario, en el testbench del ejemplo anterior, reemplazar u_ram_4x4 por el módulo instanciado u_ram, o agregarlo nuevamente.</p><p>El resultado de la simulación es el siguiente. Como se puede ver en la figura, los parámetros AW y DW del módulo ram se han sobrescrito a 4, y el comportamiento de ram es correcto.</p>
-<a href="../wp-content/uploads/2020/09/ffkMeqEwZhiGqvPc.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2020/09/ffkMeqEwZhiGqvPc.png"/></a>
+<a href="../wp-content/uploads/2020/09/ffkMeqEwZhiGqvPc.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/ffkMeqEwZhiGqvPc.png"/></a>
 <h3>Diferencias y recomendaciones</h3><p>(1) Al igual que en la instanciación de puertos de módulo, en la instanciación parametrizada también se puede omitir los nombres de los parámetros originales y realizar la instanciación de parámetros en orden. Por ejemplo, la instanciación de u_ram puede describirse como:</p>
 <pre>ram #(4, 4)   u_ram (......) ;</pre>
 <p>(2) Por supuesto, con defparam también se pueden sobrescribir los parámetros declarados en la declaración de puertos del módulo, y con la instanciación parametrizada también se pueden sobrescribir los parámetros declarados en el cuerpo del módulo. Por ejemplo, la instanciación de u_ram y u_ram_4x4 puede describirse respectivamente como:</p>

@@ -96,7 +96,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <h2>Introducción a esta sección:</h2>
 <blockquote><p>¿No sabes si estás familiarizado con estas dos cosas del título? Si has implementado imágenes redondeadas o circulares por ti mismo, seguro que estos dos términos no te resultan desconocidos. ¿No los recuerdas de momento? No importa, ¿has visto alguna vez esta imagen de abajo?</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/31597067.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/31597067.jpg"/></p>
 <p>PD: En Internet todos dicen que se puede encontrar esta imagen en: \samples\android-XX\legacy\ApiDemos\src\com\example\android\apis\graphics - -, pero no es así. No sé si es porque mi sample es de android-22, solo encontré un<strong>Xfermodes.java</strong>archivo Java por aquí. Pegaré directamente el que se encuentra en Internet ~</p><p>Bueno, volviendo al tema, creo que la mayoría de amigos han visto esta imagen. Si no la han visto, no importa. En esta sección los llevaremos a aprender esta cosita poco a poco ~, volviendo a nuestro anterior<a href="./android-tutorial-drawable-tool.html">Tutorial básico de introducción a Android — 8.3.1 Explicación detallada de tres clases de herramientas de dibujo</a></p><p>
 <strong>setXfermode</strong>(Xfermode xfermode): establece el método de procesamiento cuando las figuras se superponen, como fusionar, tomar la intersección o la unión. Se usa frecuentemente para crear el efecto de borrado de la goma de borrar.</p><p>Vamos a la documentación oficial:<a href="http://androiddoc.qiniudn.com/reference/android/graphics/Xfermode.html">Xfermode</a>, descubrimos que tiene tres hijos:</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/14913136.jpg"/></p>
@@ -115,7 +115,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Ejemplo de código de uso</strong>：</p>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
 <p>Bueno, primero muestro la imagen original, el material proviene de<strong>gank.io</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/18043775.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/18043775.jpg"/></p>
 <p>A continuación, tomamos el color de algún lugar de la pared con un selector de color y luego escribimos una View simple.</p><p>PD: Es necesario agregar la desactivación de la aceleración por hardware en el nodo application de AndroidManifest.xml:<strong>android:hardwareAccelerated="false"</strong></p>
 <pre>
 /**
@@ -159,20 +159,20 @@ public class AvoidXfermodeView1 extends View {
 }
 </pre>
 <p><strong>El efecto después de ejecutar</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/84692476.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/84692476.jpg"/></p>
 <p>¿Ves ese montón de rojo menstrual en la pared? El efecto es increíble. Aquí nuestro valor de tolerancia no jugó ningún papel. Cambiémoslo para convertir la ropa blanca de la chica en rojo menstrual.</p><p>Cambiamos el contenido de la construcción de AvoidXfermode de arriba a:</p>
 <pre>
 avoidXfermode = new AvoidXfermode(0XFFD9E5F3, 25, AvoidXfermode.Mode.TARGET);
 </pre>
 <p>Entonces, la ropa blanca de la chica se convierte en rojo menstrual...<img alt="" decoding="async" src="../wp-content/uploads/2015/10/49317231.jpg"/>, con una sensación de culpa abrumadora...</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/76781638.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/76781638.jpg"/></p>
 <hr/>
 <h3>Modo 2: AvoidXfermode.Mode.AVOID</h3>
 <blockquote><p>Es lo contrario del modo TARGET de arriba. Arriba, solo se cambia el color cuando el color es el mismo; aquí, cuando el color es diferente, se cambia el color. Y el valor de tolerancia también trae el resultado contrario. Cuando el valor de tolerancia es 0, solo cuando el valor de color del píxel en la imagen es completamente diferente al valor de color configurado, se teñirá. Cuando el valor de tolerancia alcanza el máximo de 255, si hay un poco de diferencia de color, se teñirá. Solo necesitamos modificar ligeramente el ejemplo anterior; de igual manera, solo hay que modificar el contenido de la construcción de AvoidXfermode. Lo cambiamos a la siguiente frase:</p></blockquote>
 <pre>avoidXfermode = new AvoidXfermode(0XFFD9E5F3,230, AvoidXfermode.Mode.AVOID);
 </pre>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/74447975.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/74447975.jpg"/></p>
 <hr/>
 <h2>El segundo hijo: PixelXorXfermode</h2>
 <blockquote><p>Este es otro modo de composición de imágenes. Comparado con el primer hijo, es más simple. Su método constructor es el siguiente:</p><p>Documentación oficial de la API:<a href="http://androiddoc.qiniudn.com/reference/android/graphics/PixelXorXfermode.html">PixelXorXfermode</a></p>
@@ -180,7 +180,7 @@ avoidXfermode = new AvoidXfermode(0XFFD9E5F3, 25, AvoidXfermode.Mode.TARGET);
 <p>Análisis de parámetros:</p><p>Es solo un valor de color hexadecimal con transparencia. En cuanto a la función de este valor, hay un algoritmo: PixelXorXfermode internamente opera según el algoritmo XOR "opColor ^ src ^ dst", obteniendo un valor de color opaco (alpha = 255) que se aplica a la imagen. Bueno, esto es lo que busqué en Internet; el detalle no lo sé. Escribamos un ejemplo para probar el efecto.</p></blockquote>
 <p><strong>Código de ejemplo</strong>：</p>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/95700671.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/95700671.jpg"/></p>
 <p><strong>Código de implementación</strong>：</p>
 <pre>
 /**

@@ -99,7 +99,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Actualmente, el sitio web oficial de Quartus II ya no tiene paquetes de instalación para versiones inferiores a la 13.1. Pueden instalar versiones superiores a la 13.1. Las funciones son básicamente las mismas. Dirección de descarga:<a href="https://fpgasoftware.intel.com/13.1/?edition=subscription&amp;platform=windows" rel="noopener noreferrer" target="_blank">https://fpgasoftware.intel.com/13.1/?edition=subscription&amp;platform=windows</a></p>
 <p>Al descargar Quartus II 13.1 o superior, el sitio web oficial también recomienda la versión correspondiente de Modelsim; pueden descargarla junto con Quartus II.</p>
 <p>Comience la instalación, modifique la ruta de instalación y siga los demás pasos con la configuración predeterminada.</p><p>La siguiente imagen es una captura de pantalla de una instalación exitosa.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-1.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/vlg-install-1.png"/></p>
 <p>Si se solicita un archivo de licencia, como se muestra en la siguiente figura, debe especificar el archivo de licencia proporcionado al comprar el software.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-2.png"/></p>
 <p>Si el archivo de licencia necesita reemplazar el Host-ID, solo debe reemplazar el HOSTID en el archivo de licencia por cualquiera de los ID de las opciones de NIC, como se muestra en el recuadro rojo de la siguiente figura:</p>
@@ -108,20 +108,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La ruta de instalación debe seleccionar la ruta de instalación de Quartus II; en este momento, la instalación de Device puede reconocer automáticamente Quartus II.</p>
 <p>Las versiones más recientes de Quartus II (por ejemplo, la versión 2016) ya soportan la instalación integrada.</p>
 <h3>Instalación de Modelsim</h3><p>Para Modelsim, elija la versión modelsim-win64-10.1c-se.</p><p>También debe modificar la ruta de instalación y luego continuar con la configuración predeterminada.</p><p>Después de la instalación, puede que se solicite reiniciar el ordenador; reinicie.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-4.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/vlg-install-4.png"/></p>
 <h3>Crear un proyecto Quartus II</h3>
 <p><strong>Crear el proyecto</strong></p>
 <p>File-&gt;New project Wizard</p><p>Configure la ruta de trabajo, el nombre del proyecto y el nombre del módulo superior (top module).</p><p>Nota: al configurar la ruta y los nombres, no deben contener caracteres chinos.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-5.png"/></p>
 <p>
 <strong>Seleccionar el modelo de dispositivo</strong></p><p>Solo realizaremos una simulación simple, sin descargas, grabaciones, etc., por lo que no necesitamos preocuparnos por señales específicas; podemos elegir cualquiera.</p><p>Luego haga clic en Next sucesivamente hasta Finish.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-6.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/vlg-install-6.png"/></p>
 <p>
 <strong>Crear un nuevo archivo fuente Verilog</strong></p>
 <p>A continuación, se realiza una simulación simple de un contador decimal de 4 bits.</p>
 <p>Haga clic en: File-&gt;New-&gt;Verilog HDL File-&gt;OK</p><p>Haga clic en: File-&gt;Save As</p><p>Ingrese el nombre del módulo como: counter10.v</p>
 <p>Es importante tener en cuenta que el nombre del top module debe coincidir con el nombre del proyecto; de lo contrario, se producirá un error (como se muestra en la figura).</p><p>Copie el código Verilog en el archivo counter10.v y realice la compilación con un clic (en realidad incluye compilación, síntesis, ubicación y enrutamiento, etc.).</p><p>Cuando se produzcan errores, se puede hacer clic en Error log para localizar el error, modificarlo hasta que no haya errores.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-7.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/vlg-install-7.png"/></p>
 <h3>Simulación con Quartus II llamando a Modelsim</h3>
 <p>Configurar la simulación como Modelsim-altera</p>
 <p>Haga clic en: Tool-&gt;Options-&gt;EDA Tool Options</p><p>Cambie la dirección después de Modelsim a la ruta del programa de inicio de Modelsim.</p>
@@ -138,7 +138,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>Agregar el testbench al proyecto</strong></p>
 <p>Haga clic en: Assignments -&gt; Settings -&gt; Simulation</p>
 <p>En la opción Compile test bench, seleccione new, configure el Test bench name, y mediante la búsqueda de File name, agregue el archivo .vt generado en el paso anterior al proyecto.</p><p>Es importante tener en cuenta que el nombre del archivo testbench debe coincidir con el nombre del top module dentro del testbench; de lo contrario, se producirá un error al iniciar Modelsim más adelante y la simulación no funcionará correctamente.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/09/XFejkqOFS8VYO1jL.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/09/XFejkqOFS8VYO1jL.png"/></p>
 <p>
 <strong>Volver a compilar con un clic</strong></p><p>En este momento, notará que el estado de compilación en la barra Tasks se ha convertido en un signo de interrogación, y debe volver a compilar con un clic.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/09/vlg-install-12.png"/></p>

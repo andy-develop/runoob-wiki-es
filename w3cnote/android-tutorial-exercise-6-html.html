@@ -95,20 +95,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad start-->
 <!-- ad end-->
 <p>No me preguntes por qué el título es tan largo, por qué no lo hago más corto. Creo que eres...</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929732-2075-c1rh9kum13ls1r3517onbap1vg2l.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929732-2075-c1rh9kum13ls1r3517onbap1vg2l.png"/></p>
 <p>Aunque el código ya está terminado, todavía hay bastantes operaciones posteriores para la publicación, como dice el título. El contenido de esta sección se explica en el siguiente orden:<strong>Creación del icono de la aplicación</strong>，<strong>Ofuscación</strong>，<strong>Firma y empaquetado del APK</strong>，<strong>Reducción del tamaño del APK</strong>,<strong>así como</strong>publicar la aplicación en el mercado Coolapk. Hay mucho contenido, así que no me extenderé; comencemos directamente ~</p>
 <hr/>
 <h2>1. Creación de iconos</h2>
 <p>En un principio pensé en hacer uno yo mismo con Sketch, pero después de menos de 10 minutos intentándolo lo abandoné... Así que mejor usar directamente<strong>la herramienta de generación de iconos integrada en AS</strong>para generarlo con un solo clic. Los pasos son:<strong>Haz clic derecho en la carpeta drawable</strong> -&gt; <strong>new</strong> -&gt; <strong>Image Asset</strong>, elige la imagen que te guste como icono, por ejemplo, mi favorita<strong>Rem, la secundaria que ya pasó de moda</strong>, luego Next, y en la ventana emergente siguiente solo hay que pulsar Siguiente sin pensar:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929733-4065-a9p841mst2wexebw8mxshe74.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929733-4065-a9p841mst2wexebw8mxshe74.png"/></p>
 <p>Entonces AS nos genera un montón de archivos:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929733-1791-1c1ri3ufc5qh17mf1nars9ocnm3a.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929733-1791-1c1ri3ufc5qh17mf1nars9ocnm3a.png"/></p>
 <p>Al ver esto, quizás pongas cara de "???" Esta<strong>mipmap-anydpi-v26</strong>carpeta, ¿qué demonios es? ¿Y por qué cada carpeta mipmap tiene además<strong>ic<em>launcher</em>foreground</strong>y<strong>ic<em>lanucher</em>round</strong></p>
 <p><strong>La razón es</strong>：
 <blockquote>Android 8.0 (API 26) introdujo los iconos de lanzador adaptativos, que pueden mostrar diversas formas en diferentes modelos de dispositivos; en realidad consiste en dividir el icono original de una sola capa en dos capas:<strong>fondo</strong>y<strong>primer plano</strong>Luego, los diferentes lanzadores tienen<strong>Mask</strong>(traducido como máscara, aunque siento que<strong>la capa de máscara</strong>es más adecuado). Luego, las diferentes capas de máscara pueden recortar diferentes formas, como el círculo del ejemplo:</blockquote></p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929735-1771-11a4uu1jjfhts8amc5zof7w9.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929735-1771-11a4uu1jjfhts8amc5zof7w9.gif"/></p>
 <p>Además de este modo de uso, también hay<strong>soporte para efectos de animación</strong>, por ejemplo, las dos capas usan diferentes velocidades de deslizamiento:</p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929735-7017-lux8zvdif5n0h298pqsv0pyc.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929735-7017-lux8zvdif5n0h298pqsv0pyc.gif"/></p>
 <p>En Internet dicen que en Android 8.0 se puede mantener presionado el escritorio para modificar la forma del icono; lo probé en el emulador de 8.0 y no encontré la opción. Algunos dicen que es Pixel Launcher; descargué varias versiones y tampoco estaba. Supongo que solo el Launcher incluido en la serie Pixel, la "hija nativa" de Google, puede modificarla. Comparando Nova Launcher con el lanzador de 8.0 también se puede ver la diferencia:</p>
 <img decoding="async" src="../wp-content/uploads/2017/12/1513929736-9880-unwujl73b0ljbhsdgoj30kto.png"/>
 <p>Puedes ver más contenido en el sitio web oficial:<a href="https://developer.android.google.cn/guide/practices/ui_guidelines/icon_design_adaptive.html#creating_adaptive_icons_in_xml" target="_blank">Adaptive Icons</a>Basta con saber el porqué; si no te gusta, puedes eliminar todos los archivos y conservar solo un ic_launcher.png.</p>
@@ -172,17 +172,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En cuanto a la generación y empaquetado de firmas, la documentación oficial ya contiene una explicación detallada (posiblemente se necesite una VPN):</p>
 <a href="https://developer.android.com/studio/publish/app-signing.html#generate-key" target="_blank">https://developer.android.com/studio/publish/app-signing.html#generate-key</a>
 <p><strong>Generación de firma</strong>：</p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929737-1587-s2nuj9197g1b4014me15vp12r0ds.png"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929737-1587-s2nuj9197g1b4014me15vp12r0ds.png"/></p>
 <p>Una vez generada la firma, se usa la firma para empaquetar. Hay dos formas de empaquetado: una es<strong>el empaquetado manual</strong>, la otra es<strong>el empaquetado automático mediante la compilación con Gradle</strong></p>
 <p>El empaquetado manual es muy simple y también muy "low": haz clic sucesivamente en:<strong>Build</strong> -&gt; <strong>Generate Signed APK</strong></p>
-<p><img decoding="async" src="../wp-content/uploads/2017/12/1513929738-9522-s37odd1pu416ji1i5u19kf1olbe9.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929738-9522-s37odd1pu416ji1i5u19kf1olbe9.png"/></p>
 <p>Luego elige dónde almacenar el APK generado:</p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929738-5799-1s396ec1nak10k11n5vvj71dnsem.png"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929738-5799-1s396ec1nak10k11n5vvj71dnsem.png"/></p>
 <p>Después puedes ver el APK generado:</p>
 <p><img decoding="async" src="../wp-content/uploads/2017/12/1513929738-7867-1c1s3afnadg4rhh1jf9156slpef3.png"/></p>
 <p>La otra es<strong>la compilación por línea de comandos de Gradle</strong>, y también es muy sencillo. Para la versión gráfica puedes consultar la documentación oficial. Aquí pego directamente el código. Generalmente, el archivo de firma no se coloca en el proyecto; como aquí es de código abierto, así que<strong>my.jks</strong>también lo puse en el proyecto, y luego<strong>build.gradle</strong>modifícalo; en orden son la información de firma:</p>
 <p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929739-4046-1sdgh6u13l3ks810gr19o21e8kg0.png"/></p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929739-5014-1c1sdi97bc861s21leod7912drgd.png"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929739-5014-1c1sdi97bc861s21leod7912drgd.png"/></p>
 <p>Ejecuta en la línea de comandos:<strong>./gradlew clean build</strong>Compila y ejecuta; después de compilar, comprueba si se generó app-release.apk correctamente en el siguiente directorio:</p>
 <p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929738-3211-1c1sdm6dli7f1nsunfkl2s1hueh1.png"/></p>
 <hr/>
@@ -191,14 +191,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>La herramienta integrada en Android Studio<strong><code>APK Analyzer</code></strong>puede hacer un análisis cuantitativo de nuestro APK:</p>
 <p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929739-4641-c1sfjls911vubgs17bh1nta26ahe.png"/></p>
 <p>Se puede ver que res ocupa la mayor proporción, y la razón son nuestros iconos. No voy a eliminar las imágenes ni las carpetas, solo usaré una herramienta para comprimir las imágenes. Aquí recomiendo una herramienta genial:<strong>ImageOptim</strong></p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929739-1693-1c1shk5nc5avaas1sr8m3t1f8qhr.png"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929739-1693-1c1shk5nc5avaas1sr8m3t1f8qhr.png"/></p>
 <p>Después de comprimir, verás que el tamaño del APK se convierte en 1.3 MB; en este momento, analicemos de nuevo:</p>
 <p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929740-4689-c1si1mgu1nm915t1t40llq1actj5.png"/></p>
 <p>Parece que no hay un gran cambio, pero el APK simplemente se ha reducido en 0.1 MB. La compresión de los recursos de imagen es la operación más básica para reducir el APK. Sobre las otras técnicas de optimización, las discutiremos en detalle en versiones posteriores; el proyecto es pequeño y el potencial de optimización es muy bajo...</p>
 <hr/>
 <h2 id="toc_5">5. Publicación de la aplicación</h2>
 <p>No me preguntes por qué es<strong>el mercado Coolapk</strong>, los aficionados al modding de móviles suelen rondar por Coolapk ~<strong>Publicamos nuestra aplicación, luego completamos la información de descripción correspondiente y subimos capturas de pantalla; a continuación, haz clic en</strong>Versión de APK</p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929740-9774-5gsbz16gv4e6c9bwje6egfd6.png"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929740-9774-5gsbz16gv4e6c9bwje6egfd6.png"/></p>
 <p>Sube nuestro APK; aquí se validará el nombre de paquete del APK. Lo escribí mal y no lo había notado; solo después de corregirlo pude continuar.</p>
 <p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929740-5076--1c1sjv2gnu041nn1a96mlcb3hju.png"/></p>
 <p>Después de subirlo, hay que esperar la verificación; si la pasa, se puede enviar.</p>
@@ -230,7 +230,7 @@ git push origin v1.0.0 # 把TAG推送到远程仓库</pre>
 </ul>
 <p>Si has venido siguiendo el curso de manera constante, al completar este proyecto se demuestra que dominas lo de la serie de introducción; en Android también puedes considerarte<strong>apenas iniciado</strong>. A continuación, cómo entrar de verdad en el nivel y avanzar hacia el nivel superior; ¡aún queda mucho camino!</p>
 <p>Por último, agradezco a todos los grandes lectores su continuo apoyo y compañía, ¡gracias~</p>
-<p><img class="attachment-full size-full" decoding="async" src="../wp-content/uploads/2017/12/1513929741-2356-494fa1874049dd6e582cef06e5.0.jpg"/></p>
+<p><img class="attachment-full size-full" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/12/1513929741-2356-494fa1874049dd6e582cef06e5.0.jpg"/></p>
 <p>El esquema de la próxima versión está en planificación, ¡estad atentos~</p>
 <hr/>
 <p><strong>Descarga del código</strong>：</p>

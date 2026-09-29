@@ -102,7 +102,7 @@ Documentación oficial correspondiente a esta sección:<a href="http://developer
 <hr/>
 <h3>1) ¿Qué diablos son IBinder y Binder?</h3>
 <p>Veamos qué dice la documentación oficial:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/12024442.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/12024442.jpg"/></p>
 <p>Traducción:</p>
 <blockquote><p>IBinder es la interfaz básica de los objetos remotos y es la parte central de un mecanismo ligero de invocación remota diseñado para alto rendimiento. Pero no solo se utiliza para la invocación remota, sino también para la invocación dentro del proceso. Esta interfaz define el protocolo de interacción con objetos remotos. Pero no implementes esta interfaz directamente, sino que<strong>heredar</strong>(extends)<strong>Binder</strong>。</p>
 <p>La API principal de IBinder es<strong>transact()</strong>, y la API correspondiente es<strong>Binder.onTransact()</strong>. Mediante la primera, puedes enviar llamadas a objetos IBinder remotos; la segunda permite que tu objeto remoto responda a las llamadas recibidas. Las APIs de IBinder se ejecutan de forma<strong>Syncronous (síncrona)</strong>, por ejemplo,<strong>transact()</strong>hasta que la<strong>Binder.onTransact()</strong>llamada al método del otro lado haya terminado<strong>IPC</strong>antes de retornar.</p>
@@ -397,7 +397,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 </pre>
 <p>A continuación, primero inicia AIDLServivce, luego inicia AIDLClient, ingresa el número de consulta y obtendrás el nombre correspondiente. Por supuesto, también puedes iniciar AIDLClient directamente y el efecto será el mismo:</p>
 <p><strong>La captura del efecto es la siguiente:</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/16117222.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/16117222.jpg"/></p>
 <hr/>
 <h3>3) Servicio AIDL para transmitir datos complejos</h3>
 <blockquote><p>En el ejemplo anterior, solo pasamos un parámetro de tipo int y el servidor devuelve un parámetro de tipo String, lo que parece satisfacer nuestras necesidades básicas. Pero en el desarrollo real, ¡puede que necesitemos considerar el caso de transferir tipos de datos complejos! A continuación, aprendamos cómo transferir datos de tipos complejos al servidor. Antes de empezar, primero entendamos<strong>la interfaz Parcelable</strong>！</p></blockquote>
@@ -753,7 +753,7 @@ public class MainActivity extends Activity {
 } 
 </pre>
 <p><strong>Captura de ejecución:</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/20219303.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/20219303.jpg"/></p>
 <p><strong>PS：</strong>El código aquí fue escrito anteriormente con Eclipse. En Android Studio hay un problema con los tipos personalizados.  
 Todavía no he encontrado una solución. Si algún amigo lo sabe, por favor hágamelo saber. ¡¡¡Muy agradecido!!!  
 El problema que aparece es el siguiente:<img alt="" decoding="async" src="../wp-content/uploads/2015/08/96099606.jpg"/></p>
@@ -871,7 +871,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 }
 </pre>
 <p><strong>Captura de ejecución:</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/33184779.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/33184779.jpg"/></p>
 <p>El código es bastante simple, no explicaré mucho. ¡Úsalo y modifícalo tú mismo!<strong>PS</strong>: Referencia del código:<a href="http://blog.csdn.net/lmj623565791/article/details/38461079#t9">Análisis breve del framework Binder de Android AIDL</a></p>
 <hr/>
 <h2>4. Algunos aspectos a tener en cuenta sobre Service después de Android 5.0:</h2>

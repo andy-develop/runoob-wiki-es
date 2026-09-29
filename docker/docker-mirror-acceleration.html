@@ -282,7 +282,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Acelerador de Qiniu Cloud:<strong>https://reg-mirror.qiniu.com</strong></li></ul>
 <p>Después de configurar una dirección de acelerador, si descubre que no puede extraer imágenes, cambie a otra dirección de acelerador. Los principales proveedores de servicios en la nube de China ofrecen servicios de aceleración de imágenes Docker; se recomienda elegir el servicio de aceleración correspondiente según la plataforma en la nube donde se ejecuta Docker.</p>
 <p>Dirección del acelerador de imágenes de Alibaba Cloud:<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" rel="noopener noreferrer" target="_blank">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a>, después de iniciar sesión, seleccione Acelerador de imágenes en el menú de la izquierda y verá su dirección exclusiva:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/10/02F3AF04-8203-4E3B-A5AF-96973DBE515F.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/10/02F3AF04-8203-4E3B-A5AF-96973DBE515F.jpg"/></p>
 <p>Antes también existía el acelerador oficial de Docker<strong>https://registry.docker-cn.com</strong>, ahora parece que ya no se puede usar; podemos agregar varios espejos nacionales y, si alguno no se puede usar, se cambiará a un espejo que funcione para extraer las imágenes.</p>
 <h3>Ubuntu14.04、Debian7Wheezy</h3>
 <p>Para sistemas que usan upstart, edite el archivo /etc/default/docker y configure la dirección del acelerador en DOCKER_OPTS:</p>
@@ -302,7 +302,7 @@ $ <span style="color: #C20CB9; font-weight: bold;">sudo</span> systemctl restart
 <p><img decoding="async" src="../wp-content/uploads/2019/10/38507F68-E30F-4CCA-AE9D-9E9EEF60EC83.jpg"/></p>
 <h3>Mac OS X</h3>
 <p>Para usuarios de Mac OS X, haga clic en el icono de la aplicación Docker for Mac en la barra de menús -&gt; Preferences... -&gt; Daemon -&gt; Registrymirrors. En la lista, escriba la dirección del acelerador.<strong>https://reg-mirror.qiniu.com</strong>Después de realizar los cambios, haga clic en el botón Apply&amp;Restart; Docker se reiniciará y aplicará la dirección de imagen configurada.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/10/D26C96AF-8EFF-46E5-8618-4C67E72ACBAF.jpg" width="50%"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/10/D26C96AF-8EFF-46E5-8618-4C67E72ACBAF.jpg" width="50%"/></p>
 <h3>Comprobar si el acelerador surte efecto</h3>
 <p>Comprobar si el acelerador surte efecto. Después de configurar el acelerador, si la extracción de imágenes sigue siendo muy lenta, verifique manualmente si la configuración del acelerador está activa; ejecute en la línea de comandos<span class="marked">docker info</span>, si ve el siguiente contenido en el resultado, significa que la configuración se ha aplicado correctamente.</p>
 <pre>

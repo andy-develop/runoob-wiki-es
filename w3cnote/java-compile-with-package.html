@@ -118,7 +118,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 <p><img decoding="async" src="../wp-content/uploads/2018/09/1536201199-1527-20160601195649492-511471548.png"/></p>
 <p>Ahora compile A.java directamente con javac A.java. El resultado es el siguiente:</p><p>
-<img decoding="async" src="../wp-content/uploads/2018/09/1536201199-3862-20160601200145758-1121206313.png"/>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/1536201199-3862-20160601200145758-1121206313.png"/>
 </p><p>Podemos ver claramente que el archivo de código de bytes A.class ha aparecido en el directorio actual. ¿Se puede ejecutar directamente así? ¡Probemos!</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/09/1536201199-5398-20160601200339492-1508913135.png"/>
 </p><p>Apareció este error. La razón es que en A.java hay una declaración de paquete. Cuando se ejecuta el archivo fuente A.java, la máquina virtual de Java primero busca el archivo de código de bytes en el directorio actual de A.java. Aunque lo encuentra, debido a la declaración de paquete en A.java, la máquina virtual de Java busca a continuación en el directorio del paquete si existe el archivo de código de bytes A.class. Solo si lo encuentra podrá ejecutarse con éxito. ¡Si no me creen, hagamos el experimento! (Aquí también les enseño cómo compilar A.java con declaración de paquete, es decir, compilación empaquetada: javac -d . A.java)</p><p>
@@ -146,7 +146,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 <p>La compilación y ejecución son las siguientes:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/1536201416-5909-20160601203052555-142496584.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/1536201416-5909-20160601203052555-142496584.png"/></p>
 <p>El resultado, como era de esperar, es que se puede compilar y ejecutar. El proceso de ejecución es el siguiente: después de compilar Test.java, el archivo de código de bytes generado está en el directorio actual (durante la compilación, busca si hay un archivo A.class en mypack; si no lo hay, la compilación falla). Durante la ejecución, como Test.java no tiene declaración de paquete, la máquina virtual de Java primero encuentra Test.class en el directorio actual y lo ejecuta. Cuando la ejecución llega al lugar donde se hace referencia a la clase A, la máquina virtual de Java comprueba si hay un archivo de código de bytes A.class en el directorio actual. Incluso si lo encuentra, según la importación del paquete en el programa fuente, entra en el paquete para buscar A.class. Solo si lo encuentra podrá ejecutarse con éxito (de hecho, ¡ya lo buscó durante la fase de compilación!).</p>
 <p>Vamos un paso más allá: si añadimos la declaración de paquete package mypack1; a la clase de prueba Test.java,</p>
 <p>entonces hacemos una compilación empaquetada de Test.java. Aquí les explicaré dos puntos de conocimiento: 1. Al compilar en paquete, el directorio del paquete se crea automáticamente, no es necesario crear manualmente la carpeta con el nombre del paquete; 2. Cuando hay varios archivos java en el directorio actual que necesitan ser compilados o compilados en paquete,<span class="marked">javac -d . *.java</span>el comando puede compilar o compilar en paquete todos los archivos java del directorio actual según si el programa tiene declaración de paquete o no.</p>

@@ -99,14 +99,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>1. Modos de operación de archivos en Android</h2>
 <blockquote><p>Los que han estudiado Java saben que podemos crear un archivo y luego escribir datos en él, pero Android es diferente, porque Android está basado en Linux. Al leer y escribir archivos, también debemos agregar el modo de operación del archivo. Los modos de operación en Android son los siguientes:</p></blockquote>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/17587054.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/17587054.jpg"/></p>
 <hr/>
 <h2>2. Métodos de operación relacionados con archivos</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/95941036.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/95941036.jpg"/></p>
 <h2>3. Implementación de lectura y escritura de archivos</h2>
 <blockquote><p>La lectura y escritura de archivos en Android es igual que la E/S de archivos en Java, y el proceso también es muy simple. A continuación, escribamos un ejemplo sencillo:</p></blockquote>
 <p><strong>Imagen del efecto implementado:</strong></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/4082095.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/4082095.jpg"/></p>
 <p><strong>PS:</strong>Aquí se usa el emulador, porque el N5 del autor no tiene root y no se puede ver el directorio de almacenamiento de archivos. A continuación, abrimos el File Explorer de DDMS y podemos ver que en data/data/&lt;nombre del paquete&gt;/file están los archivos que escribimos:</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/40001362.jpg"/></p>
 <p>Podemos hacer clic en el icono correspondiente en la esquina superior derecha para importar el archivo a la computadora y abrirlo para verificar el contenido escrito:</p>
@@ -287,10 +287,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 </pre>
 <h2>4. Lectura de archivos en la tarjeta SD</h2>
 <p><strong>Diagrama de flujo de lectura</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/61882958.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/61882958.jpg"/></p>
 <p><strong>Ejemplo de código</strong>：</p>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/37370373.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/37370373.jpg"/></p>
 <p>De igual manera, abrimos el File Explorer de DDMS. En versiones antiguas del sistema podemos encontrarlo directamente en mmt\sdcard, pero en las versiones nuevas quizás tengamos que buscarlo nosotros. Primero, vamos a esta ruta:</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/86777176.jpg"/></p>
 <p>Hacemos clic en sdcard, pero no hay nada. Seguimos buscando, y a continuación buscamos en /storage/emulated/legacy:</p>
@@ -490,10 +490,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 <blockquote><p>Si se depura en un dispositivo real, normalmente funciona; pero en el emulador nativo hay muchos problemas. En lo anterior usamos Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED), que puede devolver false constantemente, es decir, la tarjeta SD no existe. Este es el problema principal. Ahora, las versiones nuevas del SDK, al crear un AVD, también solicitan un área de almacenamiento de tarjeta SD al mismo tiempo.</p>
 <img alt="" decoding="async" src="../wp-content/uploads/2015/09/81668082.jpg"/>
 <p>Para versiones antiguas del SDK u otras razones, puede ser necesario asociar manualmente la tarjeta SD. La configuración es la siguiente:<br/>① Encuentra la ruta de la imagen del AVD creado:<br/>Abre la interfaz de AVD, haz clic en Detail y mira el directorio de la imagen del AVD.</p>
-<img alt="" decoding="async" src="../wp-content/uploads/2015/09/10371041.jpg"/>
+<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/10371041.jpg"/>
 <p>② Ve a la ruta donde se encuentra la imagen del AVD y copia la ruta de sdcard.img:<br/>Por ejemplo, la mía: -sdcard C:\Users\Administrator.android\avd\Jay4.2.avd\sdcard.img</p>
 <p>③ Luego haz clic en<img alt="" decoding="async" src="../wp-content/uploads/2015/09/10334659.jpg"/>llega a la siguiente interfaz:</p>
-<img alt="" decoding="async" src="../wp-content/uploads/2015/09/93554732.jpg"/>
+<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/93554732.jpg"/>
 <p>Por último, haz clic en Apply y luego en Run, ¡y listo!</p></blockquote>
 <hr/>
 <h2>6. Lectura de archivos en las carpetas raw y assets</h2>

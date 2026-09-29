@@ -280,7 +280,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En Linux, normalmente usamos los siguientes dos comandos para modificar el usuario propietario y los permisos de archivos o directorios:</p>
 <ul><li>chown (change owner): modifica el usuario y el grupo propietarios.</li><li>chmod (change mode): modifica los permisos del usuario.</li></ul>
 <p>En la siguiente figura, se usa chown para autorizar al usuario y chmod para establecer el permiso de abrir la puerta para el usuario.</p>
-<p><img decoding="async" src="../wp-content/uploads/2014/06/1_151733904241.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2014/06/1_151733904241.png"/></p>
 <p>En Linux podemos usar<span class="marked">ll</span>o<span class="marked">ls –l</span>el comando para mostrar los atributos de un archivo, así como el usuario y el grupo al que pertenece, por ejemplo:</p>
 <pre>
 [root@www /]# ls -l
@@ -299,7 +299,7 @@ dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot
 <li>si es<span class="marked">c</span>se representa como un dispositivo de puerto serie dentro de los archivos de dispositivo, por ejemplo, teclado, mouse (dispositivo de lectura única).</li>
 </ul>
 <p>En los caracteres siguientes, se agrupan de tres en tres, y todos son<span class="marked">rwx</span>combinaciones de los tres parámetros. Entre ellos,<span class="marked">r</span>representa legible (read),<span class="marked">w</span>representa escribible (write),<span class="marked">x</span>representa ejecutable (execute). Hay que tener en cuenta que las posiciones de estos tres permisos no cambian; si no hay permiso, aparecerá un signo menos<span class="marked">-</span>solamente.</p>
-<p><img decoding="async" src="../wp-content/uploads/2014/06/file-llls22.jpg"/></p>
+<p></p>
 <p>Los atributos de cada archivo se determinan por los 10 caracteres de la primera parte a la izquierda (como se muestra en la figura siguiente).</p>
 <img alt="363003_1227493859FdXT" decoding="async" fetchpriority="high" height="200" src="../wp-content/uploads/2014/06/363003_1227493859FdXT.png" width="451"/>
 <p>De izquierda a derecha, se usan<strong>0-9</strong>estos números para representarlos.</p><p>ordinal<strong>0</strong>El bit determina el tipo de archivo; el<strong>1-3</strong>bit determina los permisos del propietario (el dueño del archivo) sobre el archivo.</p>Los bits 4-6 determinan los permisos del grupo propietario (usuarios del mismo grupo que el propietario) sobre el archivo; los bits 7-9 determinan los permisos de otros usuarios sobre el archivo.<p>Entre ellos, el<strong>1、4、7</strong>bit representa el permiso de lectura; si se usa el<span class="marked">r</span>carácter, hay permiso de lectura; si se usa el<span class="marked">-</span>carácter, no hay permiso de lectura;</p><p>ordinal<strong>2、5、8</strong>el bit representa el permiso de escritura; si se usa el<span class="marked">w</span>carácter, hay permiso de escritura; si se usa el<span class="marked">-</span>carácter no hay permiso de escritura; el<strong>3、6、9</strong>bit representa el permiso de ejecución; si se usa el<span class="marked">x</span>carácter, hay permiso de ejecución; si se usa el<span class="marked">-</span>carácter, no hay permiso de ejecución.</p>

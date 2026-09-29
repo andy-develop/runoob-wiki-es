@@ -355,7 +355,7 @@ app01
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Datos agregados exitosamente!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_1.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_1.gif"/></p>
 <p><strong>Método 2:</strong>Se implementa mediante el método create proporcionado por objects de ORM (recomendado)</p>
 <div class="example">
 <h2 class="example">app01/views.py: Código del archivo:</h2>
@@ -368,7 +368,7 @@ app01
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Datos agregados exitosamente!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_2.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_2.gif"/></p>
 <h3>Búsqueda</h3>
 <p>Usa<strong>all()</strong>el método para consultar todo el contenido.</p>
 <p>Lo que se devuelve son datos de tipo QuerySet, similares a una lista; dentro contienen objetos de la clase del modelo uno a uno, y se puede usar el índice para extraer los objetos de la clase del modelo.</p>
@@ -383,8 +383,8 @@ app01
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
 </div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_3.gif"/></p>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_8.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_3.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_8.png"/></p>
 <p><strong>filter()</strong>El método se usa para consultar los datos que cumplen la condición.</p><p>Lo que se devuelve son datos de tipo QuerySet, similares a list; contienen objetos de la clase del modelo que cumplen la condición, y se puede usar el índice para extraer los objetos de la clase del modelo.</p>
 <p>pk=3 significa clave primaria primary key=3, equivalente a id=3.</p>
 <p>Porque id tiene un significado especial en PyCharm; es la función incorporada id() que muestra la dirección de memoria, por lo tanto se usa pk.</p>
@@ -401,7 +401,7 @@ app01
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-code">, </span><span class="hl-builtin">type</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Tipo QuerySet, similar a list.</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_4.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_4.gif"/></p>
 <p><strong>exclude() </strong>El método se usa para consultar los datos que no cumplen la condición.</p><p>Lo que se devuelve son datos de tipo QuerySet, similares a list; contienen objetos de la clase del modelo que no cumplen la condición, y se puede usar el índice para extraer los objetos de la clase del modelo.</p>
 <div class="example">
 <h2 class="example">app01/views.py: Código del archivo:</h2>
@@ -416,7 +416,7 @@ app01
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-code">, </span><span class="hl-builtin">type</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Tipo QuerySet, similar a list.</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_5.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_5.gif"/></p>
 <p>
 <strong>get()</strong>El método se usa para consultar los que cumplen la condición; devuelve un objeto de la clase del modelo. El objeto que cumple la condición solo puede ser uno; si hay más de un objeto que cumple el criterio de filtro, o no hay ninguno, se lanzará un error.</p>
 <div class="example">
@@ -431,7 +431,7 @@ app01
 </span><span class="hl-identifier">print</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-code">, </span><span class="hl-builtin">type</span><span class="hl-brackets">(</span><span class="hl-identifier">books</span><span class="hl-brackets">)</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Objeto de la clase del modelo</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_6.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_6.gif"/></p>
 <p>
 <strong>order_by()</strong>El método se usa para ordenar los resultados de la consulta.</p><p>Lo que se devuelve son datos de tipo QuerySet, similares a list; contienen objetos de la clase del modelo ordenados, y se puede usar el índice para extraer los objetos de la clase del modelo.</p>
 <p><strong>Nota:</strong></p>
@@ -446,7 +446,7 @@ app01
 </span><span class="hl-identifier">books</span><span class="hl-code"> = </span><span class="hl-identifier">models</span><span class="hl-code">.</span><span class="hl-identifier">Book</span><span class="hl-code">.</span><span class="hl-identifier">objects</span><span class="hl-code">.</span><span class="hl-identifier">order_by</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">-price</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Consulta todos, ordenados por precio descendente</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_7.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_7.gif"/></p>
 <p>
 <strong>reverse()</strong>El método se usa para invertir los resultados de la consulta.</p><p>Lo que se devuelve son datos de tipo QuerySet, similares a list; contienen objetos de la clase del modelo invertidos, y se puede usar el índice para extraer los objetos de la clase del modelo.</p>
 <div class="example">
@@ -459,7 +459,7 @@ app01
 </span><span class="hl-identifier">books</span><span class="hl-code"> = </span><span class="hl-identifier">models</span><span class="hl-code">.</span><span class="hl-identifier">Book</span><span class="hl-code">.</span><span class="hl-identifier">objects</span><span class="hl-code">.</span><span class="hl-identifier">order_by</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">-price</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span><span class="hl-code">.</span><span class="hl-identifier">reverse</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_8.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_8.gif"/></p>
 <p>
 <strong>count() </strong>El método se usa para consultar la cantidad de datos; los datos devueltos son un entero.</p>
 <div class="example">
@@ -472,7 +472,7 @@ app01
 </span><span class="hl-identifier">books</span><span class="hl-code"> = </span><span class="hl-identifier">models</span><span class="hl-code">.</span><span class="hl-identifier">Book</span><span class="hl-code">.</span><span class="hl-identifier">objects</span><span class="hl-code">.</span><span class="hl-builtin">filter</span><span class="hl-brackets">(</span><span class="hl-identifier">price</span><span class="hl-code">=</span><span class="hl-number">200</span><span class="hl-brackets">)</span><span class="hl-code">.</span><span class="hl-identifier">count</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Consulta la cantidad de datos que cumplen la condición</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_9.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_9.gif"/></p>
 <p>
 <strong>first()</strong>El método devuelve el primer dato; el dato devuelto es un objeto de la clase del modelo, también se puede usar el índice.<span class="marked">[0]</span>。</p>
 <div class="example">
@@ -484,7 +484,7 @@ app01
     </span><span class="hl-identifier">books</span><span class="hl-code"> = </span><span class="hl-identifier">models</span><span class="hl-code">.</span><span class="hl-identifier">Book</span><span class="hl-code">.</span><span class="hl-identifier">objects</span><span class="hl-code">.</span><span class="hl-identifier">first</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Devuelve el primer dato de todos los datos</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_10.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_10.gif"/></p>
 <p>El método last() devuelve el último dato; el dato devuelto es un objeto de la clase del modelo, no se puede usar el índice.<span class="marked">[-1]</span>, ORM no tiene índice inverso.</p>
 <div class="example">
 <h2 class="example">app01/views.py: Código del archivo:</h2>
@@ -495,7 +495,7 @@ app01
     </span><span class="hl-identifier">books</span><span class="hl-code"> = </span><span class="hl-identifier">models</span><span class="hl-code">.</span><span class="hl-identifier">Book</span><span class="hl-code">.</span><span class="hl-identifier">objects</span><span class="hl-code">.</span><span class="hl-identifier">last</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code"> </span><span class="hl-comment"># Devuelve el último dato de todos los datos</span><span class="hl-code">
 </span><span class="hl-reserved">return</span><span class="hl-code"> </span><span class="hl-identifier">HttpResponse</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;</span><span class="hl-quotes">"</span><span class="hl-brackets">)</span></div>
 </div>
-</div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_11.gif"/></p>
+</div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_11.gif"/></p>
 <p><strong>exists()</strong>El método se usa para determinar si hay datos en la lista QuerySet de los resultados de la consulta.</p>
 <p>El tipo de dato devuelto es booleano: si hay, es true; si no hay, es false.</p><p>
 <strong>Nota:</strong>El tipo de dato a evaluar solo puede ser de tipo QuerySet; no puede ser un entero ni un objeto de la clase del modelo.</p>
@@ -509,7 +509,7 @@ app01
     <span style="color: #a50"># Error, el tipo de datos a juzgar solo puede ser de tipo QuerySet, no un objeto de clase de modelo.</span><br/>
     books <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">first</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>.<span style="color: #05a;">exists</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span>  <br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;"</span><span style="color: Olive;">)</span><br/>
-</div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_12.gif"/></p>
+</div></div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_12.gif"/></p>
 <p><strong>values()</strong>El método se utiliza para consultar datos de algunos campos.</p>
 <p>Devuelve datos de tipo QuerySet, similar a list; no contiene objetos de clase de modelo, sino una secuencia iterable de diccionarios, donde las claves del diccionario son los campos y los valores son los datos.</p>
 <p><strong>Nota:</strong></p>
@@ -523,7 +523,7 @@ app01
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>books<span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><span style="color: Olive;">[</span><span style="color: #a11;">"price"</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><span style="color: Teal;">type</span><span style="color: Olive;">(</span>books<span style="color: Olive;">)</span><span style="color: Olive;">)</span> <span style="color: #a50"># Se obtienen los datos del campo price del primer registro.</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;"</span><span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_13.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_13.gif"/></p>
 <p><strong>values_list()</strong>El método se utiliza para consultar datos de algunos campos.</p><p>Devuelve datos de tipo QuerySet, similar a list; no contiene objetos de clase de modelo, sino tuplas, y en cada tupla se colocan los datos correspondientes a los campos consultados.</p>
 <p><strong>Nota:</strong></p>
 <ul><li>Los nombres de campo de los parámetros deben ir entre comillas.</li><li>Si solo quieres los datos, usa values_list.</li></ul>
@@ -537,7 +537,7 @@ app01
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>books<span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">print</span><span style="color: Olive;">(</span>books<span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><span style="color: Olive;">[</span><span style="color: Maroon;">0</span><span style="color: Olive;">]</span><span style="color: Gray;">,</span><span style="color: Teal;">type</span><span style="color: Olive;">(</span>books<span style="color: Olive;">)</span><span style="color: Olive;">)</span> <span style="color: #a50"># Se obtienen los datos del campo price del primer registro.</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;"</span><span style="color: Olive;">)</span><br/>
-</div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_14.gif"/></p>
+</div></div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_14.gif"/></p>
 <p><strong>distinct() </strong>El método se utiliza para eliminar duplicados de los datos.</p>
 <p>Devuelve datos de tipo QuerySet.</p>
 <p><strong>Nota:</strong></p>
@@ -551,7 +551,7 @@ app01
     books <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: #05a;">distinct</span><span style="color: Olive;">(</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;"</span><span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_15.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_15.gif"/></p>
 <p><strong>filter()</strong>El método se basa en la consulta difusa con doble guion bajo (exclude es igual).</p>
 <p><strong>Nota:</strong>En filter, el operador solo puede ser el signo igual =, no se pueden usar el signo mayor que &gt;, el signo menor que &lt;, ni otros símbolos.</p>
 <p>__in se usa para leer un intervalo; después del signo = va una lista.</p>
@@ -562,55 +562,55 @@ app01
     <span style="color: #a50"># Consulta los datos con precio 200 o 300.</span><br/>
     books <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>price__in<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Maroon;">200</span><span style="color: Gray;">,</span><span style="color: Maroon;">300</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span><span style="color: #a11;">"&lt;p&gt;¡Búsqueda exitosa!&lt;/p&gt;"</span><span style="color: Olive;">)</span><br/>
-</div></div><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_16.gif"/></p>
+</div></div><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_16.gif"/></p>
 <p><strong>__gt</strong>Mayor que: después del signo = va un número.</p>
 <pre># 查询价格大于200的数据 
-books = models.Book.objects.filter(price__gt=200)</pre><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_17.gif"/></p>
+books = models.Book.objects.filter(price__gt=200)</pre><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_17.gif"/></p>
 <strong>__gte</strong>Mayor o igual que: después del signo = va un número.
 <pre># 查询价格大于等于200的数据 
-books = models.Book.objects.filter(price__gte=200)</pre><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_18.gif"/></p><p>
+books = models.Book.objects.filter(price__gte=200)</pre><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_18.gif"/></p><p>
 <strong>__lt</strong>Menor que: después del signo = va un número.</p>
 <pre># 查询价格小于300的数据 
-books=models.Book.objects.filter(price__lt=300)</pre><p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_19.gif"/></p><p>
+books=models.Book.objects.filter(price__lt=300)</pre><p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_19.gif"/></p><p>
 <strong>__lte</strong>Menor o igual que: después del signo = va un número.</p>
 <pre># 查询价格小于等于300的数据 
 books=models.Book.objects.filter(price__lte=300)</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_20.gif"/></p><p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_20.gif"/></p><p>
 <strong>__range</strong>Entre ... y ..., intervalo cerrado por ambos lados; después del signo = va una lista de dos elementos.</p>
 <pre>books=models.Book.objects.filter(price__range=[200,300])</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_21.gif"/></p><p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_21.gif"/></p><p>
 <strong>__contains</strong>Contiene: después del signo = va una cadena.</p>
 <pre>books=models.Book.objects.filter(title__contains="菜")</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_22.gif"/></p>
+<p></p>
 <p>
 <strong>__icontains</strong>Contiene sin distinguir mayúsculas de minúsculas: después del signo = va una cadena.</p>
 <pre>books=models.Book.objects.filter(title__icontains="python") # 不区分大小写</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_23.gif"/></p><p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_23.gif"/></p><p>
 <strong>__startswith</strong>Empieza con el carácter especificado: después del signo = va una cadena.</p>
 <pre>books=models.Book.objects.filter(title__startswith="菜")</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_24.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_24.gif"/></p>
 <p><strong>__endswith</strong>Termina con el carácter especificado: después del signo = va una cadena.</p>
 <pre>books=models.Book.objects.filter(title__endswith="教程")</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_25.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_25.gif"/></p>
 <p>
 <strong>__year</strong>Es el año del tipo de datos DateField: después del signo = va un número.</p>
 <pre>books=models.Book.objects.filter(pub_date__year=2008) </pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_26.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_26.gif"/></p>
 <p><strong>__month</strong>Es el mes del tipo de datos DateField: después del signo = va un número.</p>
 <pre>books=models.Book.objects.filter(pub_date__month=10) </pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_27.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_27.gif"/></p>
 <p><strong>__day</strong>Es el día del tipo de datos DateField: después del signo = va un número.</p>
 <pre>books=models.Book.objects.filter(pub_date__day=01)</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_28.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_28.gif"/></p>
 <h3>Eliminar</h3>
 <p><strong>Método 1:</strong>Usando la clase de modelo<span class="marked">objeto.delete()</span>。</p>
 <p><strong>Valor de retorno:</strong>Tupla, el primer elemento es el número de filas afectadas.</p><pre>
 books=models.Book.objects.filter(pk=8).first().delete()</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_29.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_29.gif"/></p>
 <p><strong>Método 2:</strong>: Usando QuerySet<span class="marked">tipo de datos.delete()</span>(Recomendado)</p>
 <p><strong>Valor de retorno:</strong>Tupla, el primer elemento es el número de filas afectadas.</p><pre>
 books=models.Book.objects.filter(pk__in=[1,2]).delete()</pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_30.gif"/></p>
+<p></p>
 <p>
 <strong>Nota:</strong></p>
 <ul><li>a. Cuando Django elimina datos, imita el comportamiento de la restricción SQL ON DELETE CASCADE; es decir, al eliminar un objeto también se eliminan los objetos de clave externa asociados a él.</li><li>b. El método delete() es un método del tipo de datos QuerySet, pero no se aplica al propio Manager. Es decir, si se desea eliminar todos los datos, no se puede omitir all.</li></ul>
@@ -626,7 +626,7 @@ books = models.Book.objects.filter(pk=7).first()
 books.price = 400 
 books.save()
 </pre>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_31.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_31.gif"/></p>
 <p><strong>Método 2:</strong>QuerySet tipo de datos.update(campo=dato modificado) (Recomendado)</p>
 <p><strong>Valor de retorno:</strong>Entero, el número de filas afectadas.</p>
 <div class="example"><h2 class="example">Ejemplo</h2> <div class="example_code">
@@ -636,7 +636,7 @@ books.save()
     books <span style="color: Gray;">=</span> models.<span style="color: #05a;">Book</span>.<span style="color: #05a;">objects</span>.<span style="color: Teal;">filter</span><span style="color: Olive;">(</span>pk__in<span style="color: Gray;">=</span><span style="color: Olive;">[</span><span style="color: Maroon;">7</span><span style="color: Gray;">,</span><span style="color: Maroon;">8</span><span style="color: Olive;">]</span><span style="color: Olive;">)</span>.<span style="color: #05a;">update</span><span style="color: Olive;">(</span>price<span style="color: Gray;">=</span><span style="color: Maroon;">888</span><span style="color: Olive;">)</span><br/>
     <span style="color: Green;font-weight:bold;">return</span> HttpResponse<span style="color: Olive;">(</span>books<span style="color: Olive;">)</span><br/>
 </div></div>
-<p><img decoding="async" src="../wp-content/uploads/2020/05/Django-orm_32.gif"/></p> Otras extensiones
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_32.gif"/></p> Otras extensiones
 </li></ul></div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

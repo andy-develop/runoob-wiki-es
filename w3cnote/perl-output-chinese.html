@@ -86,20 +86,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad start-->
 <!-- ad end-->
 <p>Creo que muchos amigos, al usar el lenguaje Perl, a menudo se encuentran con un problema: ¿Perl no admite chino? Al ingresar o generar chino en Perl, aparecen caracteres confusos. ¿Qué hacer entonces? A continuación, el editor les enseñará cómo resolver este problema.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/xcc8bae8c5bb5b3f01a9f8b37a24dd25295e7b66d.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/xcc8bae8c5bb5b3f01a9f8b37a24dd25295e7b66d.jpg"/></p>
 <h2>Método/Pasos</h2>
 <p>Tomemos como ejemplo ActivePerl en Windows.</p>
 <p>El código del editor es muy simple, solo una línea:</p>
 <pre>print "你好";</pre>
 <p>Pero aparecieron caracteres confusos, como se muestra en la figura.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x35be09a4109b2868d2ec7eac62289a34549a58ae.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x35be09a4109b2868d2ec7eac62289a34549a58ae.jpg"/></p>
 <p>Ante este problema, ¿qué debemos hacer?</p>
 <p>En realidad, es un problema de codificación de Perl, y esto tiene que ver con la codificación de nuestro sistema operativo.</p>
 <p>Abrimos el símbolo del sistema de cmd e ingresamos chcp para obtener el código del tipo de codificación.</p>
 <p>Se puede ver que el Windows del editor aquí tiene el código 936 como formato de codificación predeterminado.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x553e8168918f15cb12267053779ad837308e1db4.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x553e8168918f15cb12267053779ad837308e1db4.jpg"/></p>
 <p>Luego podemos ver que la página de códigos 936 corresponde a gb2313 (es decir, chino), o más bien a gbk.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/xb965d3e97cb3fcc77081ae6ae3f7719c689b980d.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/xb965d3e97cb3fcc77081ae6ae3f7719c689b980d.jpg"/></p>
 <p>Sabemos que nuestro Windows usa la codificación gb2312; en este caso, solo tenemos que cambiar el formato de codificación.</p>
 <p>Ingresa al inicio del código:</p>
 <pre>use utf8;
@@ -119,8 +119,8 @@ print "你好";
 </pre>
 <p>¿Ahora sí se puede generar chino correctamente?</p>
 <p>Hay que tener en cuenta un punto: si el código implica leer archivos en chino, hay que agregar<span class="marked">binmode(STDIN,":encoding(gbk)");</span>。</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x8bf07a2442f03b30b6b498f9dc6eaf5370aca669.jpg"/></p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x68dd4a12a4f42216c279d358bf55d6d3ee746d72.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x8bf07a2442f03b30b6b498f9dc6eaf5370aca669.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x68dd4a12a4f42216c279d358bf55d6d3ee746d72.jpg"/></p>
 <p>Hay otro método: para STDIN, STDOUT, STDERR (es decir, entrada estándar, salida estándar y error estándar), usar cierta codificación como formato de codificación para todos.</p>
 <p>Sigue siendo ese pequeño programa simple, print genera un carácter chino.</p>
 <p>El código es el siguiente:</p>
@@ -130,8 +130,8 @@ use open ":encoding(gbk)",":std";
 #标准输入、输出、错误皆用gbk编码格式进行编码
 
 print "你好";</pre>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x8bf07a2442f03b30b6b498f9dc6eaf5370aca669-1.jpg"/></p>
-<p><img decoding="async" src="../wp-content/uploads/2019/02/x68dd4a12a4f42216c279d358bf55d6d3ee746d72-1.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x8bf07a2442f03b30b6b498f9dc6eaf5370aca669-1.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/02/x68dd4a12a4f42216c279d358bf55d6d3ee746d72-1.jpg"/></p>
 <blockquote><p>Dirección original: https://jingyan.baidu.com/article/4f7d5712fd36301a21192744.html</p></blockquote>
 </div>
 </div>

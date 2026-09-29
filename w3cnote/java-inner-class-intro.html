@@ -364,7 +364,7 @@ public com.cxh.test2.Outter$Inner(com.cxh.test2.Outter);
 <p>Según la figura anterior, el nombre de la clase interna anónima en el método test es Test$1.</p>
 <p>En el código anterior, si se elimina cualquiera de los final delante de las variables a y b, este código no compilará. Primero consideremos la siguiente cuestión:</p>
 <p>Cuando el método test termina de ejecutarse, el ciclo de vida de la variable a finaliza. Sin embargo, es muy probable que en ese momento el ciclo de vida del objeto Thread aún no haya terminado, por lo que seguir accediendo a la variable a en el método run de Thread se vuelve imposible. Pero como se necesita lograr ese efecto, ¿qué se hace? Java adopta el método de copia para resolver este problema. Al descompilar el bytecode de este código se puede obtener el siguiente contenido:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/04/021939271846598.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/04/021939271846598.jpg"/></p>
 <p>Vemos que en el método run hay una instrucción:</p><pre>bipush 10</pre><p>Esta instrucción indica que se empuja el operando 10 a la pila, lo que significa que se está usando una variable local. Este proceso lo realiza el compilador por defecto durante la compilación. Si el valor de esta variable se puede determinar en tiempo de compilación, el compilador añadirá por defecto un literal con contenido equivalente al grupo de constantes de la clase interna anónima (o clase interna local), o directamente incrustará el bytecode correspondiente en el bytecode de ejecución. De esta manera, la variable usada por la clase interna anónima es otra variable local, solo que su valor es igual al de la variable local en el método, por lo que es completamente independiente de la variable local del método.</p><p>Veamos ahora otro ejemplo:</p>
 <pre>public class Test {
     public static void main(String[] args)  {
@@ -379,7 +379,7 @@ public com.cxh.test2.Outter$Inner(com.cxh.test2.Outter);
         }.start();
     }
 }</pre><p>La descompilación produce:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/04/021950384493440.jpg"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/04/021950384493440.jpg"/></p>
 <p>Vemos que el constructor de la clase interna anónima Test$1 tiene dos parámetros: uno es una referencia al objeto de la clase externa y el otro es una variable de tipo int. Evidentemente, aquí el parámetro formal a del método test se pasa como argumento para inicializar la copia (la copia de la variable a) dentro de la clase interna anónima.</p>
 <p>Es decir, si el valor de la variable local se puede determinar en tiempo de compilación, se crea directamente una copia dentro de la clase interna anónima. Si el valor de la variable local no se puede determinar en tiempo de compilación, entonces se inicializa la copia pasando el parámetro a través del constructor.</p>
 <p>De lo anterior se puede ver que la variable a a la que se accede en el método run no es en absoluto la variable local a del método test. De este modo se resuelve el problema de la inconsistencia de ciclos de vida mencionado antes. Pero surge un nuevo problema: dado que la variable a a la que se accede en el método run no es la misma que la variable a del método test, ¿qué ocurre si se cambia el valor de la variable a dentro del método run?</p>

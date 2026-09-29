@@ -87,13 +87,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ad end-->
 <h2>Introducción</h2>
 <p>El meme que trajo el código abierto de Android no es otro que el problema de compatibilidad entre diferentes modelos y versiones de teléfonos móviles, convirtiéndose a la vez en un desafío que todo desarrollador de Android debe enfrentar, o más bien varios problemas diversos que llegan sin previo aviso. Este artículo presentará principalmente los problemas de adaptación entre los problemas de compatibilidad.</p>
-<p><img decoding="async" src="../wp-content/uploads/2016/12/1.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2016/12/1.png"/></p>
 <hr/>
 <h2>Conceptos básicos</h2>
 <ul><li><p>Tamaño de pantalla</p><p>La longitud de la diagonal de la pantalla, generalmente expresada en “pulgadas”.</p></li><li><p>Resolución</p><p>Se refiere al número de píxeles en la pantalla del teléfono.</p></li><li><p>Densidad de píxeles de pantalla (Pixels Per Inch)</p><p>Número de píxeles por pulgada. En detalle, es el número de píxeles en la diagonal dividido por el tamaño de la pantalla.</p></li></ul>
 <p><strong>Combinando los puntos anteriores de la pantalla, el sistema Android define varios valores estándar de DPI (PPI).</strong></p>
 <table class="reference"><thead><tr><th>Densidad</th><th>ldpi</th><th>mdpi</th><th>hdpi</th><th>xhpi</th><th>xxhdpi</th><th></th></tr></thead><tbody><tr><td>Valor de densidad</td><td>120</td><td>160</td><td>240</td><td>320</td><td>480</td><td></td></tr><tr><td>Resolución</td><td>240X320</td><td>320X480</td><td>480X800</td><td>720X1280</td><td>1080X1920</td><td></td></tr></tbody></table>
-<p><img decoding="async" src="../wp-content/uploads/2016/12/2.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2016/12/2.png"/></p>
 <h3>Píxeles independientes dp</h3>
 <p>Es precisamente debido a las diferencias en la densidad de pantalla que la misma longitud en píxeles se muestra de manera diferente en diferentes pantallas. El sistema Android usa mdpi, es decir, 160dpi, como estándar; en esta pantalla 1px = 1dp. En otras pantallas se realiza la conversión proporcional: en hdpi (240dpi), 1dp = 1.5px... (es decir, ldpi:mdpi:hdpi:xhdpi:xxhdpi = 3:4:6:8:12).</p>
 <h3>Píxeles independientes sp</h3>

@@ -105,7 +105,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>PD: Una página simple de navegación de noticias que usa dos Fragments para mostrar la lista de noticias y el contenido de las noticias respectivamente;</p>
 <hr/>
 <h3>2) Diagrama del ciclo de vida de Fragment</h3>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/31722863.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/31722863.jpg"/></p>
 <hr/>
 <h3>3) Puntos clave:</h3>
 <p>A continuación, algunos puntos clave sobre el uso de Fragment:</p>
@@ -130,13 +130,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>5) ¿Usar Fragment del paquete App o del paquete v4:</h3>
 <p><strong>Resumen del problema:</strong></p>
 <p>Creo que muchos amigos encontrarán la siguiente situación al usar Fragment:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/85759370.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/85759370.jpg"/></p>
 <p>Entonces, ¿usamos Fragment en android.app o usamos Fragment en el paquete android.support.v4.app?</p>
 <blockquote><p>Respuesta: En realidad, ambos son posibles. Como se mencionó antes, Fragment se introdujo después de Android 3.0 (API 11). Entonces, ¿qué pasa si la aplicación desarrollada necesita ejecutarse en versiones anteriores a 3.0? Por ejemplo, ¡2.3 que todavía tiene una pequeña cuota de mercado! Así que el paquete v4 nació en respuesta a esta necesidad, y puede ser compatible hasta la versión 1.6. En cuanto a qué paquete usar, depende de tus necesidades. Ahora la cuota de mercado de teléfonos con versiones anteriores a 3.0 ya no es mucha; por todas partes hay teléfonos con 4.0 o superior, y 6.0 ya salió en octubre, ¿no crees? Así que en este momento, puedes usar directamente el Fragment del paquete app y llamar a los métodos correspondientes; normalmente no habrá problemas. Si tu Fragment usa el paquete app, tanto FragmentManager como FragmentTransaction también deben ser del paquete app. O usas todo del paquete app, o todo del paquete v4, de lo contrario habrá errores. Por supuesto, si quieres que tu aplicación también sea compatible con teléfonos de versiones bajas, entonces puedes elegir el paquete v4.</p></blockquote>
 <p><strong>Cosas a tener en cuenta al usar Fragment del paquete v4:</strong></p>
 <blockquote><ul>
 <li>① Si usas Fragment del paquete v4, entonces el Activity donde se encuentra debe heredar FragmentActivity. Caso: hoy cargué estáticamente el fragment en un archivo XML y sobrescribí Fragment, pero al cargar el Activity se reportó un error. El mensaje era algo así como error de Fragment o no encontrado; cambié el atributo name varias veces y seguía mal. Finalmente descubrí que era porque usé el paquete v4; solo necesitaba cambiar tu Activity a FragmentActivity.</li>
-<li>② Anteriormente escribí el siguiente código y luego reportó un error:<img alt="" decoding="async" src="../wp-content/uploads/2015/08/42421258.jpg"/>Es un poco desconcertante. Fragment, FragmentManager, FragmentTransaction todos usan el paquete v4, y Activity también hereda FragmentActivity. ¿Por qué? Cambiar todo al paquete app funcionaría, pero ¿no entra en conflicto con nuestra premisa de usar el paquete v4? En realidad, hay una solución, ¿verdad?<br/>Respuesta: solo necesitas<strong>getFragmentManager</strong>cambiar ( ) a<strong>getSupportFragmentManager</strong>( ) y listo.</li>
+<li>② Anteriormente escribí el siguiente código y luego reportó un error:<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/42421258.jpg"/>Es un poco desconcertante. Fragment, FragmentManager, FragmentTransaction todos usan el paquete v4, y Activity también hereda FragmentActivity. ¿Por qué? Cambiar todo al paquete app funcionaría, pero ¿no entra en conflicto con nuestra premisa de usar el paquete v4? En realidad, hay una solución, ¿verdad?<br/>Respuesta: solo necesitas<strong>getFragmentManager</strong>cambiar ( ) a<strong>getSupportFragmentManager</strong>( ) y listo.</li>
 </ul>
 </blockquote>
 <hr/>
@@ -173,7 +173,7 @@ public class Fragmentone extends Fragment {
 <p><strong>Proceso de implementación:</strong></p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/29546434.jpg"/></p>
 <p><strong>Código de ejemplo:</strong>Aquí se demuestra cómo cambiar Fragment cuando se rota la pantalla entre horizontal y vertical:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/23304886.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/23304886.jpg"/></p>
 <p>No publicaré el código de Fragment y el diseño; directamente publicaré el código clave de MainActivity:</p>
 <pre>
 public class MainActivity extends Activity {
@@ -202,7 +202,7 @@ public class MainActivity extends Activity {
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/97188171.jpg"/></p>
 <hr/>
 <h2>4. Interacción entre Fragment y Activity</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/45971686.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/45971686.jpg"/></p>
 <p>Puede que algunos amigos no les guste ver diagramas; a continuación lo presento en texto:</p>
 <h3>1) Obtención de componentes</h3>
 <p>Fragment obtiene los componentes en Activity:<strong>getActivity().findViewById(R.id.list)；</strong><br/>Activity obtiene los componentes en Fragment (puede ser según id y tag):<strong>getFragmentManager.findFragmentByid(R.id.fragment1);</strong></p>

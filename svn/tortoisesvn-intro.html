@@ -261,13 +261,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En el paquete de parches de idioma podemos encontrar el parche chino y descargarlo:</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/5D776921-B740-484C-B753-75AF57BEE5D5.png"/></p>
 <p>Ejecute el programa de instalación de TortoiseSVN descargado</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/07/install01.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/install01.gif"/></p>
 <p>Ejecute el paquete de idioma chino de TortoiseSVN descargado</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/07/install02.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/install02.gif"/></p>
 <p>Después de una instalación correcta, se debe reiniciar el equipo para asegurar que TortoiseSVN funcione correctamente.</p>
 <p>Cambiar el idioma predeterminado de TortoiseSVN</p>
 <p>Después de instalar TortoiseSVN, la interfaz predeterminada está en inglés. Podemos cambiarla al idioma instalado mediante la configuración.</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/07/changeLANG.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/changeLANG.gif"/></p>
 <hr/>
 <h2>Uso de TortoiseSVN</h2>
 <h3>Crear un directorio de trabajo ejemplo01</h3>
@@ -312,7 +312,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Muchas veces querrá tener otro directorio copiado para realizar nuevas modificaciones. Una vez que esté seguro de que las modificaciones de esta rama están completas, podrá fusionarlas con la versión de desarrollo principal original. Por ejemplo, actualmente tenemos los siguientes directorios y archivos en ejemplo01/trunk:</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/012.png"/></p>
 <p>Ahora vamos a crear una rama (branch) para el directorio trunk. Supongamos que queremos que este directorio esté en D:\ejemplo01\branch. Primero podemos hacer clic derecho en un área vacía dentro del directorio trunk, o directamente sobre el icono de trunk, y seleccionar la opción Branch/Tag… (rama/etiqueta). Verá el siguiente cuadro de diálogo.</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/07/013.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/013.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/014.png"/></p>
 <p>Primero asegúrese de que el directorio en From WC at URL (desde copia de trabajo/URL) sea el directorio de origen que desea copiar. Luego, en To URL (hasta la ruta), introduzca la ruta de destino. Normalmente agrupamos todas las ramas en un solo directorio. En el ejemplo anterior, los archivos de la rama se concentran en el subdirectorio branch. En To URL solo necesita introducir el directorio deseado. Si el directorio no existe, SVN lo creará por usted. Tenga en cuenta especialmente que SVN usa la barra diagonal (/) como separador de directorios, no la barra invertida (\). Luego, en Log message (mensaje de registro), introduzca el propósito de esta rama. Pulse OK para finalizar.</p>
 <p>Si tiene éxito, verá la siguiente pantalla:</p>
@@ -323,13 +323,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Si hemos modificado o agregado archivos en la rama branch y queremos fusionarlos de vuelta al directorio trunk, el método es muy sencillo. En el ejemplo anterior, hacemos clic derecho en un área vacía del directorio D:\ejemplo01\trunk y seleccionamos Merge (fusionar):</p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/016.png"/></p>
 <p>Esta pantalla se divide principalmente en tres partes. Los campos From: y To: le preguntan desde qué versión de la rama hasta qué versión desea fusionar de vuelta al directorio trunk original. Por lo tanto, los campos URL de From y To deben apuntar al directorio de la rama original. El resto es especificar el rango de revisiones que se van a fusionar. En el ejemplo anterior, fusionamos desde la Revisión 7 de la rama hasta la última versión de la rama. Puede usar el botón Try run para probar una fusión. Esta fusión solo mostrará algunos mensajes, no actualizará realmente el directorio trunk. Solo después de pulsar el botón Merge se fusionarán realmente los archivos de la rama con los del trunk.</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/07/007.gif"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/007.gif"/></p>
 <p>Si confirma que esta fusión no tiene problemas, puede usar directamente commit para confirmar estos dos archivos modificados en el repositorio SVN. Si hay problemas, puede modificar directamente estos dos archivos hasta que estén bien y luego hacer commit.</p>
 <hr/>
 <h3>Crear un Tag o un Release</h3>
 <p>Los llamados Tag o Release son una versión especial, porque esta versión puede tener un significado especial. Por ejemplo: esta versión es un Milestone especial o una versión lanzada para el cliente. En realidad, el método de Tag y Release es exactamente el mismo que el de Branch. Solo que Branch puede necesitar fusionarse (merge) de vuelta al trunk original, mientras que tag y release en su mayoría no necesitan fusionarse de vuelta al trunk.</p><p>Por ejemplo, hoy nuestro trunk hizo una versión, y esta versión fue reconocida como la versión 1.0 del software.
 La versión 1.0 es un hito muy importante para el desarrollo. Así que tenemos que hacerle una marca especial, es decir, un Tag. Supongamos que esta versión 1.0 se va a lanzar oficialmente (release) al cliente o a los vendor relacionados, tenemos que poder hacerle una marca de Release. Básicamente, SVN solo tiene el concepto de directorio, no tiene un uso específico de Tag. Por eso verá que en el menú de SVN, Branch y Tag son el mismo elemento. Tomando este ejemplo de 1.0, creamos un directorio tags bajo el directorio ejemplo01 para almacenar las versiones etiquetadas, y lo enviamos al repositorio, luego en Trunk, hacemos clic derecho y seleccionamos el elemento Branch/Tag:</p><p>
-<img decoding="async" src="../wp-content/uploads/2018/07/013.png"/></p>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/07/013.png"/></p>
 <p><img decoding="async" src="../wp-content/uploads/2018/07/020-1.png"/></p>
 <p>Si tiene éxito, habrá creado un directorio v1.0 bajo el directorio Tag correspondiente. Por supuesto, si va al directorio Tag en este momento, no verá este directorio; necesita hacer update en el directorio Tag para poder verlo.</p><p>
 <img decoding="async" src="../wp-content/uploads/2018/07/021.png"/></p>

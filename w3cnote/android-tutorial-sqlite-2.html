@@ -98,16 +98,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <blockquote><p>Después de estudiar la sección anterior, ya habrás dominado las operaciones básicas de SQLite en Android. En esta sección aprenderemos algo un poco más avanzado: transacciones de base de datos, cómo almacenar datos binarios grandes en la base de datos y cómo manejar la base de datos durante las actualizaciones de versión. ¡Bueno, comencemos con el contenido de esta sección!</p></blockquote>
 <hr/>
 <h2>1. Transacciones SQLite</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/29572776.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/29572776.jpg"/></p>
 <p>En pocas palabras: todas las operaciones de base de datos escritas en la transacción tienen éxito, la transacción se confirma; de lo contrario, la transacción se revierte, es decir, vuelve al estado anterior — el estado cuando no se habían ejecutado las operaciones de base de datos. Además, como mencionamos antes, en el directorio data/data/&lt;nombre_del_paquete&gt;/database/, además del archivo db que creamos, hay un archivo xxx.db-journal, ¡que es el archivo de registro temporal generado para que la base de datos admita transacciones!</p>
 <hr/>
 <h2>2. Almacenamiento de archivos binarios grandes en SQLite</h2>
 <p>Por supuesto, normalmente rara vez almacenamos archivos binarios grandes en la base de datos, como imágenes, audio, video, etc. Para estos, generalmente almacenamos la ruta del archivo, pero siempre hay necesidades extrañas. Un día, de repente quieres almacenar estos archivos en la base de datos. A continuación, usamos imágenes como ejemplo para guardar imágenes en SQLite y leer las imágenes de SQLite.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/83617087.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/83617087.jpg"/></p>
 <hr/>
 <h2>3. SimpleCursorAdapter para vincular datos de la base de datos</h2>
 <p>Por supuesto, esto se puede probar, pero no se recomienda usarlo, aunque es muy sencillo. De hecho, cuando hablamos de ContentProvider, ya usamos esta herramienta para vincular la lista de contactos. No escribiré un ejemplo aquí, ¡solo pondré directamente el código central! Si lo necesitas, puedes experimentar por tu cuenta. Además, ahora normalmente no escribimos cosas de base de datos nosotros mismos, sino que usamos frameworks de terceros: ormlite, greenDao, etc. En la parte avanzada, lo aprenderemos de nuevo.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/21347521.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/21347521.jpg"/></p>
 <hr/>
 <h2>4. Recopilación sobre actualizaciones de la base de datos</h2>
 <p>PD: Bueno, no tengo experiencia en este tema; siempre me ha faltado experiencia en proyectos. Los productos de la empresa son de tipo localización. Acabo de revisar el proyecto de la empresa y descubrí que el código dejado por los predecesores es: onCreate() crea la BD, luego onUpgrade() elimina la BD anterior y luego llama al método onCreate(). He visto varias versiones del código y no he encontrado operaciones de actualización de base de datos... No tengo en qué basarme, así que solo puedo consultar las prácticas de otros. Lo siguiente es un resumen del autor tras consultar materiales. Si hay algo incorrecto, bienvenido a señalarlo. Quizás algunos frameworks de terceros ya hayan resuelto esto. Por falta de tiempo, no voy a investigarlo lentamente. Si lo sabes, puedes dejar un mensaje, ¡gracias!</p>

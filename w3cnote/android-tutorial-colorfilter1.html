@@ -99,7 +99,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <strong>Filtro de color de matriz de color</strong>：<a href="http://androiddoc.qiniudn.com/reference/android/graphics/ColorMatrixColorFilter.html">ColorMatrixColorFilter</a></p><p>
 <strong>Filtro de color de iluminación</strong>：<a href="http://androiddoc.qiniudn.com/reference/android/graphics/LightingColorFilter.html">LightingColorFilter</a></p><p>
 <strong>Filtro de color de mezcla</strong><a href="http://androiddoc.qiniudn.com/reference/android/graphics/PorterDuffColorFilter.html">PorterDuffColorFilter</a></p><p>En esta sección aprenderemos el uso del primero, ColorMatrixColorFilter. Abramos la documentación de ColorMatrixColorFilter.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/39876874.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/39876874.jpg"/></p>
 <p>Básicamente dice: mediante una matriz de color de 4 x 5 se transforman los colores; se puede modificar la saturación de los píxeles, convertir YUV a RGB, etc. El ColorMatrix en el constructor es la matriz de color, que es también el núcleo de nuestro aprendizaje. A continuación, déjenme explicarlo paso a paso.</p><p>
 PS：<a href="http://androiddoc.qiniudn.com/reference/android/graphics/ColorMatrix.html">Documentación de la API de ColorMatrix</a></p></blockquote>
 <hr/>
@@ -115,16 +115,16 @@ PS：<a href="http://androiddoc.qiniudn.com/reference/android/graphics/ColorMatr
 <hr/>
 <h2>2. Interpretación de ColorMatrix</h2>
 <blockquote><p>Como dice el título, la matriz de color (4 * 5) nos permite modificar los valores de la matriz para lograr efectos como fotos en blanco y negro, fotos antiguas amarillentas, alto contraste, etc. El diagrama explicativo de la matriz de color es el siguiente:</p></blockquote>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/92928364.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/92928364.jpg"/></p>
 <p>No sé si entendiste la imagen de arriba. Si estudiaste matemáticas avanzadas, seguro que estás familiarizado con esto; no es más que multiplicación de matrices. Si no lo estudiaste, no importa; el método de cálculo es el de la esquina inferior derecha:<strong>Se toma cada fila de la matriz de color y se multiplica por cada columna de los componentes de color.</strong>！</p><p>Un ejemplo muy típico es comparar los resultados antes y después del procesamiento. También podemos hacer que un<strong>valor de color se multiplique por una constante</strong>Por ejemplo, multiplicar la tercera fila (azul) por 2, y el efecto se vuelve azulado. Por supuesto, debemos escribir código para verificar los resultados anteriores.</p>
 <hr/>
 <h2>3. Escribir código para verificar el papel de ColorMatrix</h2>
 <blockquote><p>Aquí escribiremos un ejemplo muy común: un ImageView, 4 * 5 EditText, un botón de reinicio y un botón de generar. Veamos la imagen del efecto:</p></blockquote>
 <p>En orden: imagen original, amarillenta, verdosa, rojiza, alto contraste, transformación de tono y retro amarillo.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/53679704.jpg"/> <img alt="" decoding="async" src="../wp-content/uploads/2015/10/36562322.jpg"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/93111170.jpg"/> <img alt="" decoding="async" src="../wp-content/uploads/2015/10/55826138.jpg"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/22469866.jpg"/> <img alt="" decoding="async" src="../wp-content/uploads/2015/10/71970690.jpg"/></p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/41645227.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/53679704.jpg"/> <img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/36562322.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/93111170.jpg"/> <img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/55826138.jpg"/></p>
+<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/22469866.jpg"/> <img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/71970690.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/41645227.jpg"/></p>
 <p>A continuación, escribamos el código para lograr los efectos anteriores.<strong>Implementación del código</strong>：</p>
 <p>Primero, el archivo de diseño<strong>activity_main.xml</strong>：</p>
 <pre>
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 <hr/>
 <h2>4. Usar los tres métodos de ColorMatrix para procesar imágenes</h2>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/10/48170375.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/10/48170375.jpg"/></p>
 <p><strong>Implementación del código</strong>：</p>
 <p>Primero escribimos una clase de utilidad para procesamiento de imágenes. Pasamos un Bitmap, tono, saturación y brillo; después del procesamiento, devolvemos la imagen procesada:<strong>ImageHelper.java</strong>：</p>
 <pre>

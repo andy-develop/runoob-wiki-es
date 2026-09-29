@@ -124,7 +124,7 @@ Ante este problema de escenario, es fácil pensar en definir primero una supercl
 <p>Aplicando el segundo y tercer principio de diseño, en la clase Duck combinamos las interfaces de dos variables miembro y asignamos dinámicamente sus valores en las subclases.</p>
 <p><img decoding="async" src="../wp-content/uploads/2019/08/7462071-402132cb4ef02d75.png"/></p>
 <p>El "diagrama de clases" general es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/7462071-412141c53ef6c30f.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/7462071-412141c53ef6c30f.png"/></p>
 <h3>Resumen</h3>
 <p>Esta solución resuelve perfectamente nuestro problema. Utilizando la idea del "patrón de estrategia", se extraen las partes variables y se componen dentro de la clase. Según las diferentes subclases, se pueden "set" diferentes subclases de comportamiento para lograr cambiar el comportamiento dinámicamente.</p>
 <h3>Implementación del código</h3>
@@ -274,7 +274,7 @@ Ante este problema de escenario, es fácil pensar en definir primero una supercl
 <p>El patrón de Estado permite que un objeto cambie su comportamiento cuando cambia su estado interno; el objeto parece haber modificado su clase.</p>
 <p>El patrón de Estado es muy similar al patrón de Estrategia; también encapsula el "estado" de la clase y realiza la transición automáticamente al ejecutar una acción, logrando así que la misma acción de la clase en diferentes estados muestre resultados diferentes. La diferencia con el patrón de Estrategia es que esta transición es "automática" e "inconsciente".</p>
 <p>El diagrama de clases del patrón de Estado es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/7462071-7a1433a162712a08.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/7462071-7a1433a162712a08.png"/></p>
 <p>El diagrama de clases del patrón de Estado es idéntico al del patrón de Estrategia; la diferencia radica en su intención. El patrón de Estrategia controla qué estrategia usa el objeto, mientras que el patrón de Estado cambia de estado automáticamente. Después de ver el siguiente caso, debería quedar claro.</p>
 <p>Ahora tienes delante un requisito de una máquina de dulces que debe implementarse en Java.</p>
 <p>Analicemos: las funciones de la máquina de dulces se pueden dividir en cuatro acciones y cuatro estados como se muestra en la siguiente figura:</p>
@@ -397,7 +397,7 @@ Ante este problema de escenario, es fácil pensar en definir primero una supercl
 <p>¿Qué hacer? Uno de los seis principios de diseño</p>
 <p>Identifica las partes de la aplicación que pueden necesitar cambios y sepáralas.</p>
 <p>En la máquina de dulces, el estado es la parte que cambia constantemente; diferentes estados tienen diferentes acciones. Podemos extraerlo por completo.</p>
-<p><img decoding="async" src="../wp-content/uploads/2019/08/7462071-19cddaa5a83a4e5f.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/08/7462071-19cddaa5a83a4e5f.png"/></p>
 <p><strong>La nueva idea de diseño es la siguiente:</strong></p>
 <p>Primero, definimos una interfaz State. En esta interfaz, cada acción de la máquina de dulces tiene un método correspondiente.</p>
 <p>Luego implementamos clases de estado para cada estado de la máquina; estas clases se encargarán de realizar el comportamiento de la máquina en el estado correspondiente.</p>

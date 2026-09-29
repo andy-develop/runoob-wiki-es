@@ -231,7 +231,7 @@ public class ImageListAdapter extends ArrayAdapter {
 </pre><blockquote>
 <p>La parte importante está en<b>getView()</b>este método. Por supuesto, descubrirás que el uso de Picasso no cambia mucho. Parece que no vale la pena dedicar este artículo a explicarlo, pero en realidad, detrás de escena, Picasso cancela automáticamente las solicitudes de imágenes al desplazarse, limpia las imágenes y carga la imagen correcta en<b>ImageView</b>。</p>
 </blockquote><p><strong>Nota.</strong>Más adelante explicaremos más a fondo el uso optimizado de adaptadores.<b>fit() y tags()</b>。
-<img alt="" decoding="async" src="../wp-content/uploads/2017/01/1.png"/></p>
+<img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2017/01/1.png"/></p>
 <h3>El poder de Picasso: caché</h3>
 <p>Cuando te desplazas hacia arriba y abajo repetidamente, verás que las imágenes se muestran mucho más rápido que antes. Seguramente ya lo habrás adivinado: estas imágenes provienen de la caché de alta velocidad, sin necesidad de cargarlas desde la red. Picasso carga las imágenes principalmente de tres fuentes:<b>Memoria -&gt; Disco -&gt; Red</b>Al final, cualquier cosa que necesites hacer, ¡Picasso ya lo ha hecho por ti! Incluso se puede cambiar el tamaño de la caché; esto lo explicaremos más adelante.</p><hr/>
 <h2>Manejo de null/vacíos en listas</h2>

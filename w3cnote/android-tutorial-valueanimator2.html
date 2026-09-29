@@ -108,9 +108,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>En los ejemplos, hemos usado tanto ofInt como ofFloat, que se utilizan respectivamente para realizar operaciones de animación sobre datos de tipo flotante y entero.</p>
 <p>Entonces,<strong>ofObject</strong>¿()? ¿Objeto inicial y objeto final? ¿Cómo se hace la transición? O mejor dicho, ¿cómo se usa esto?</p>
 <p>Bien, con estas dudas, primero vamos a entender una cosa: el Evaluator. En la parte de conceptos de animación de propiedades, en realidad ya mencionamos esto:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/54469594.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/54469594.jpg"/></p>
 <p><strong>Se usa para decirle al sistema de animación cómo hacer la transición del valor inicial al valor final</strong>¡Bien, nuestro punto de partida es correcto! Entremos en el código fuente de IntEvaluator y veamos qué hay dentro.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/48403251.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/48403251.jpg"/></p>
 <p>Mmm, implementa<strong>TypeEvaluator</strong>la interfaz y luego sobrescribe<strong>evaluate()</strong>el método. Hay tres parámetros, que son en orden:</p>
 <ul>
 <li><strong>fraction</strong>: el grado de finalización de la animación. Según esto calculamos cuál debería ser el valor de la animación.</li>
@@ -121,7 +121,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>De igual manera, también está FloatEvaluator. Si queremos decirle al sistema cómo pasar del objeto inicial al objeto final, entonces necesitamos implementarlo nosotros mismos<strong>TypeEvaluator</strong>la interfaz, es decir, personalizar el Evaluator. Las palabras de más no sirven; escribamos un ejemplo para verlo:</p>
 <h3><strong>2) Ejemplo de uso</strong></h3>
 <p><strong>Captura del efecto en ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/10209964.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/10209964.jpg"/></p>
 <p><strong>Implementación del código</strong>：</p>
 <p>Definir un objeto<strong>Point.java</strong>que solo tiene dos propiedades, x e y, junto con sus métodos get y set~</p>
 <pre>
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
 <h3><strong>3) Versión mejorada del ejemplo</strong></h3>
 <p>Sobre la base del ejemplo anterior, añadimos el cambio de color cuando el círculo se mueve. Aquí usamos además un ObjectAnimator para cargar la animación de cambio de color. Añadimos un campo int color en la View para controlar el color, y también escribimos los métodos getColor() y setColor(). Primero personalicemos un Evaluator~</p>
 <p><strong>Captura del efecto en ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/65529491.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/65529491.jpg"/></p>
 <p><strong>Código de implementación</strong>：</p>
 <p><strong>ColorEvaluator.java</strong>：
 </p>
@@ -359,12 +359,12 @@ public class AnimView2 extends View {
 <hr/>
 <h2>2. Interpolator (interpolador)</h2>
 <p>Mmm, ya hablamos de esto cuando explicamos las animaciones interpoladas (Tween). ¿Aún lo recuerdas?</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/73854084.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/73854084.jpg"/></p>
 <p>Los interpoladores anteriores se pueden usar tanto en animaciones interpoladas como en animaciones de propiedades. Además, las animaciones interpoladas añadieron una nueva<strong>TimeInterpolator</strong>interfaz. Esta interfaz se usa para ser compatible con el Interpolator anterior, lo que permite que todas las clases de implementación de Interpolator pasadas se puedan usar directamente en las animaciones de propiedades. ¡Podemos llamar al método setInterpolator() del objeto de animación para configurar diferentes interpoladores! Primero cambiemos algo para que la bolita caiga desde la parte superior central de la pantalla hasta la parte inferior. Luego, para nuestra animación de conjunto, llamaremos a la siguiente instrucción:<strong>animatorSet.setInterpolator(new AccelerateInterpolator(2f));</strong>El valor entre paréntesis se usa para controlar la aceleración~</p>
 <p><strong>Efecto en ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/6420198.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/6420198.jpg"/></p>
 <p>Parece un poco irracional; normalmente debería rebotar, ¿verdad? Cambiemos a<strong>BounceInterpolator</strong>para probar~</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/42165604.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/42165604.jpg"/></p>
 <p>Jeje, el efecto es bastante genial. Por supuesto, hay muchísimos Interpolator proporcionados por el sistema; pueden probarlos uno por uno. Aquí no me detendré a discutirlos con ustedes~</p>
 <p>A continuación, echemos un vistazo a:</p>
 <h3><strong>1) Mecanismo de implementación interna de Interpolator</strong></h3>
@@ -375,11 +375,11 @@ public class AnimView2 extends View {
 <p>el algoritmo en el método (), calcular un valor de retorno según el valor de input, y este valor de retorno es fraction.<strong>LinearInterpolator</strong>Podemos echar un vistazo</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/53510297.jpg"/></p>
 <p>al código en:<strong>BounceInterpolator</strong>Aquí no se procesa nada; se devuelve directamente el valor de input, es decir, el valor de fraction es igual al valor de input. Esta es la forma de implementación del Interpolator para movimiento uniforme. En realidad, no es más que una diferencia de algoritmos; esto involucra algunas cosas matemáticas. Una vez más sentimos la importancia de las matemáticas. Aquí pego otro</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/43642406.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/11/43642406.jpg"/></p>
 <p>código fuente:<strong>AccelerateDecelerateInterpolator</strong></p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/80592279.jpg"/></p>
 <p>No me preguntes por el algoritmo de aquí; yo tampoco lo sé. Busquemos uno más fácil de entender:<strong>(float)(Math.cos((input + 1) * Math.PI) / 2.0f) + 0.5f</strong>Este Interpolator tiene el efecto de primero acelerar y luego desacelerar:</p><p>Comprensión del algoritmo de:</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/11/Center.html"/></p>
+<p></p>
 <p>Solución: dado que el rango de valores de input es [0,1], se puede deducir que el rango de valores en cos es [π,2π], y los valores correspondientes son -1 y 1. Luego, al dividir este valor por 2 y sumarle 0.5, el rango del valor de retorno final del método getInterpolation() sigue siendo [0,1]. La curva correspondiente es la siguiente:</p>
 <p>Por lo tanto, es un proceso de primero acelerar y luego desacelerar.<img alt="" decoding="async" src="../wp-content/uploads/2015/11/90823139.jpg"/>Mmm, yo, como mal estudiante, ya no puedo seguir...</p>
 <h3><strong>, todo lo anterior está copiado de los artículos del tío Guo... Quiero estar tranquilo...</strong></h3>

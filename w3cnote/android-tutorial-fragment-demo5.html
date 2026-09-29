@@ -99,14 +99,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <hr/>
 <h2>1. Explicación del flujo lógico:</h2>
 <p>Precisamente, en el teléfono de prueba de la chica de pruebas de la empresa estaba instalada la app “Calle Chuchu 9.9”. Jeje, así que voy a estudiar directamente con esta.</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/45752366.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/45752366.jpg"/></p>
 <p>Jeje, hay muchas apps en el mercado con este aspecto, y esto se puede implementar con el Fragment que hemos aprendido. Quizá la animación GIF no se vea con claridad, así que dibujaré un boceto con una herramienta de prototipado de interfaz.</p>
 <p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/30802705.jpg"/></p>
 <p>Más o menos así: la zona central es un contenedor de diseño, normalmente un FrameLayout, y luego hacemos un replace de un Fragment en este contenedor, o también podemos usar add. Este Fragment contiene un ListView. Cuando hacemos clic en un elemento de este ListView, el Fragment del contenedor central será reemplazado por el Fragment correspondiente a la información detallada. Si solo hacemos replace, no se guardará el estado del primer Fragment, y el usuario tendrá que empezar a navegar desde el principio, lo cual seguramente es muy incómodo. Aquí podemos resolverlo con addToBackStack y popBackStack de la pila de Fragments. Al hacer replace, añadimos el Fragment reemplazado a la pila. Cuando el usuario pulsa el botón de retroceso, se llama a popBackStack para sacarlo de la pila. Ver el ejemplo de código a continuación para los detalles.</p>
 <hr/>
 <h2>2. Ejemplo de código: implementación de una lista simple de APP de noticias y cambio de contenido</h2>
 <p><strong>Imagen del efecto de ejecución</strong>：</p>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/09/12913566.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/09/12913566.jpg"/></p>
 <p><strong>Código de implementación</strong>：</p>
 <p><strong>Step 1</strong>: Primero, implementa los diseños de los dos Fragment y de la Activity.</p>
 <p><strong>fg_newlist.xml</strong>:</p>

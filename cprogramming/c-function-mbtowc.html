@@ -336,7 +336,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="article-body">
 <div class="article-intro" id="content">
 <h1>Función de la biblioteca C -<span class="color_h1">mbtowc()</span></h1>
-<p><a href="c-standard-library-stdlib-h.html"><img alt="C 标准库 - &lt;stdlib.h&gt;" class="navup" decoding="async" src="../images/up.gif"/>Biblioteca estándar de C - &lt;stdlib.h&gt;</a></p>
+<p><a href="c-standard-library-stdlib-h.html"><img alt="C 标准库 - &lt;stdlib.h&gt;" class="navup" decoding="async" src="https://www.runoob.com/images/up.gif"/>Biblioteca estándar de C - &lt;stdlib.h&gt;</a></p>
 <p><code>mbtowc()</code>es una función de la biblioteca estándar de C que se utiliza para convertir caracteres multibyte en caracteres anchos.</p>
 <p><code>mbtowc()</code>La declaración de ... se encuentra en<code>&lt;wchar.h&gt;</code>el archivo de cabecera, principalmente para admitir la conversión entre conjuntos de caracteres multibyte (como UTF-8) y conjuntos de caracteres anchos (como Unicode).</p><p><code>mbtowc()</code>Se utiliza para convertir un carácter multibyte (<code>mbstr</code>) a un carácter ancho (<code>wc</code>). Esta función, según la<code>LC_CTYPE</code>configuración regional (configuración del entorno) para decidir cómo interpretar los caracteres multibyte. Si el carácter multibyte es válido, se convierte en un carácter ancho. Si el carácter no es válido, devuelve<code>-1</code>。</p>
 <h3>Declaración</h3>
@@ -428,7 +428,7 @@ int mbtowc(wchar_t *wc, const char *mbstr, size_t n);
 <span style="color: #000;">}</span><br/>
 </div></div><p><strong>Explicación:</strong></p>
 <ol><li><p><strong>Conjunto de caracteres multibyte</strong>: en un conjunto de caracteres multibyte (como UTF-8), un carácter puede estar compuesto por varios bytes, mientras que un carácter en un conjunto de caracteres anchos (como Unicode) normalmente está representado por un<code>wchar_t</code>valor de tipo (en algunas plataformas, de 2 o 4 bytes).</p></li><li><p><strong>Configuración regional</strong>：<code>mbtowc()</code>El comportamiento de ... depende de la configuración regional actual del programa, especialmente<code>LC_CTYPE</code>configuración, que determina cómo interpretar el conjunto de caracteres multibyte. Por lo tanto, al usar esta función, generalmente es necesario<code>setlocale()</code>establecer la configuración regional adecuada.</p></li><li><p><strong>Manejo de errores</strong>: si el formato de la cadena multibyte de entrada no es válido, o no se puede convertir a un carácter ancho,<code>mbtowc()</code>devolverá<code>-1</code>. Es necesario comprobar el valor de retorno para asegurarse de que la conversión se realizó correctamente.</p></li></ol>
-<p><a href="c-standard-library-stdlib-h.html"><img alt="C 标准库 - &lt;stdlib.h&gt;" class="navup" decoding="async" src="../images/up.gif"/>Biblioteca estándar de C - &lt;stdlib.h&gt;</a></p> Otras extensiones
+<p><a href="c-standard-library-stdlib-h.html"><img alt="C 标准库 - &lt;stdlib.h&gt;" class="navup" decoding="async" src="https://www.runoob.com/images/up.gif"/>Biblioteca estándar de C - &lt;stdlib.h&gt;</a></p> Otras extensiones
 </div>
 </div>
 <div class="archive-list" style="display:none;font-size: 14px;line-height: 1.8;margin-top: 20px;padding: 10px;">

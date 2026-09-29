@@ -286,14 +286,14 @@ Jenkins</li></ul>
 <ul><li>
 <strong>swarm mananger</strong>: Responsable de la gestión de todo el clúster, incluida la configuración del clúster, la gestión de servicios y todos los trabajos relacionados con el clúster.</li><li>
 <strong>work node</strong>: Es el nodo disponible (available node) en la figura; se encarga principalmente de ejecutar los servicios correspondientes para realizar las tareas (task).</li></ul>
-<p><a href="../wp-content/uploads/2019/11/services-diagram.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2019/11/services-diagram.png"/></a></p>
+<p><a href="../wp-content/uploads/2019/11/services-diagram.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/11/services-diagram.png"/></a></p>
 <hr/>
 <h2>Uso</h2>
 <p>Los siguientes ejemplos se presentan con Docker Machine y VirtualBox; asegúrate de tener VirtualBox instalado en tu host.</p>
 <h3>1. Crear el nodo de gestión del clúster swarm (manager)</h3>
 <p>Crear una máquina docker:</p>
 <pre>$ docker-machine create -d virtualbox swarm-manager</pre>
-<p><a href="../wp-content/uploads/2019/11/swarm1.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2019/11/swarm1.png"/></a></p>
+<p><a href="../wp-content/uploads/2019/11/swarm1.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/11/swarm1.png"/></a></p>
 <p>Inicializa el clúster swarm. La máquina que realiza la inicialización es el nodo de gestión del clúster.</p>
 <pre>$ docker-machine ssh swarm-manager
 $ docker swarm init --advertise-addr 192.168.99.107 #这里的 IP 为创建机器时分配的 ip。</pre>
@@ -311,7 +311,7 @@ $ docker swarm init --advertise-addr 192.168.99.107 #这里的 IP 为创建机�
 <h3>3. Ver la información del clúster</h3>
 <p>Entra en el nodo de gestión y ejecuta: docker info para ver la información del clúster actual.</p>
 <pre>$ docker info</pre>
-<p><a href="../wp-content/uploads/2019/11/swarm5.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="../wp-content/uploads/2019/11/swarm5.png"/></a></p>
+<p><a href="../wp-content/uploads/2019/11/swarm5.png" rel="noopener noreferrer" target="_blank"><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2019/11/swarm5.png"/></a></p>
 <p>En la parte marcada con un círculo rojo, se puede ver que en el clúster en ejecución hay tres nodos, uno de los cuales es el nodo de gestión.</p>
 <h3>4. Desplegar servicios en el clúster</h3>
 <p><strong>Nota</strong>: Cualquier operación relacionada con la gestión del clúster se realiza en el nodo de gestión.</p>

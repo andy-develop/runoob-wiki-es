@@ -97,7 +97,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El filtro FIR (Finite Impulse Response) es un filtro de respuesta de impulso unitario de duración finita, también denominado filtro no recursivo.</p><p>El filtro FIR tiene una estricta característica de frecuencia de fase lineal; además, su respuesta unitaria es de duración finita, por lo que es un sistema estable y se utiliza ampliamente en comunicaciones digitales, procesamiento de imágenes y otros campos.</p>
 <h3>Principio del filtro FIR</h3>
 <p>El filtro FIR es un filtro de respuesta de impulso unitario de duración finita. La estructura directa es la siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/D9lZSuIQcPTnGJfB.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/D9lZSuIQcPTnGJfB.png"/></p>
 <p>En esencia, el filtro FIR es la convolución de la señal de entrada con la función de respuesta de impulso unitario, cuya expresión es la siguiente:</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/10/wa2y7ATjbJV2jmFR.png"/></p>
 <p>El filtro FIR tiene las siguientes características:</p>
@@ -345,16 +345,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div></div>
 <p><strong>Resultados de la simulación</strong></p>
 <p>A partir del resultado de la simulación en la siguiente figura, se puede ver que la señal después del filtro FIR contiene solo una señal de baja frecuencia (250KHz), y la señal de alta frecuencia (7.5MHz) ha sido eliminada. Además, la forma de onda de salida es continua y puede emitirse de forma sostenida.</p><p>Sin embargo, como se muestra en el círculo rojo, la parte inicial de la forma de onda presenta un estado irregular; se amplía esta parte.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/HtNqJpEq5lJ3xDjO.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/HtNqJpEq5lJ3xDjO.png"/></p>
 <p>Después de ampliar el extremo inicial de la forma de onda, como se muestra a continuación, se observa que el período de la forma de onda irregular, es decir, el intervalo entre las dos líneas verticales, es de 16 ciclos de reloj.</p><p>Debido a que los datos se introducen en serie y en el diseño se utilizan 16 grupos de registros de retardo, el primer punto normal después del filtrado debe retrasarse 16 ciclos de reloj respecto al momento de salida del primer dato filtrado. Es decir, la señal de datos de salida válidos (valid) debe retrasarse 16 ciclos de reloj adicionales para que la forma de onda de salida sea más perfecta.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/Uu7ivtcmfUQpkR5N.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/Uu7ivtcmfUQpkR5N.png"/></p>
 <h3>Apéndice: uso de matlab</h3>
 <p><strong>Generación de los coeficientes del filtro FIR</strong></p>
 <p>Abra matlab y escriba el comando `fdatool` en la ventana de comandos.</p>
 <p>A continuación se abrirá la siguiente ventana; configure los parámetros según el filtro FIR.</p><p>Aquí se selecciona el método de mínimos cuadrados (Least-squares) para la implementación del FIR; diferentes métodos de implementación producen diferentes efectos de filtrado.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/9QnVRqsnDU7qqWn1.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/9QnVRqsnDU7qqWn1.png"/></p>
 <p>Haga clic en File -&gt; Export</p><p>Exporte los parámetros del filtro y guárdelos en la variable `coef`, como se muestra en la siguiente figura.</p>
-<p><img decoding="async" src="../wp-content/uploads/2020/10/ofJimBJSeof88y1g.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2020/10/ofJimBJSeof88y1g.png"/></p>
 <p>En este momento, la variable `coef` debe contener datos de tipo flotante. Multiplíquela por un cierto factor para ampliarla y luego tome sus datos aproximados de tipo punto fijo como parámetros del filtro FIR en el diseño. Aquí se toma como factor de ampliación 2048; el resultado se muestra a continuación.</p>
 <p><img decoding="async" src="../wp-content/uploads/2020/10/CA3vJ3Bqq7INC16U.png"/></p>
 <p><strong>Generación de la señal mixta de entrada</strong></p>El siguiente es el código de referencia para generar la señal mixta de entrada con matlab.<p>La señal son datos de punto fijo sin signo, con un ancho de bits de 12bit, almacenados en un archivo.<strong>cosx0p25m7p5m12bit.txt</strong>。</p>

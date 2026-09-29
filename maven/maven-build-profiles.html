@@ -435,11 +435,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <pre>mvn test -Ptest</pre>
 <p>Sugerencia: el primer test es la fase del ciclo de vida de Maven, el segundo test es el<strong>perfil de construcción</strong>parámetro &lt;id&gt; especificado, y este parámetro se transmite mediante<span class="marked">-P</span>por supuesto, puede ser prod o normal, esos que tú defines<strong>&lt;id&gt;</strong>。</p>
 <p>El resultado de la ejecución es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/417876-20170509045108972-905096973.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/417876-20170509045108972-905096973.png"/></p>
 <p>Se puede observar que la tarea de AntRun se activó correctamente. Y corresponde al<strong>perfil de construcción</strong>la tarea cuyo &lt;id&gt; es test.</p>
 <p>Probemos los otros dos comandos, el resultado es el siguiente:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/417876-20170509045310191-1036132016.png"/></p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/417876-20170509045353941-271428179.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/417876-20170509045310191-1036132016.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/417876-20170509045353941-271428179.png"/></p>
 <h3>2. Activar perfiles mediante la configuración de Maven</h3>
 <p>Abrir<strong>%USER_HOME%/.m2</strong>el archivo<strong>settings.xml</strong>en el directorio, donde<strong>%USER_HOME%</strong>representa el directorio principal del usuario. Si el archivo settings.xml no existe, copia directamente<strong>%M2_HOME%/conf/settings.xml</strong>al directorio .m2, donde<strong>%M2_HOME%</strong>representa el directorio de instalación de Maven.</p>
 <p>Configura el archivo settings.xml y añade<code>&lt;activeProfiles&gt;属性：</code> </p>
@@ -461,7 +461,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Sugerencia 1:</strong>En este momento no es necesario utilizar -Ptest para introducir el parámetro, ya que el &lt;activeprofile&gt; del archivo settings.xml anterior ha especificado el parámetro test en su lugar.</p>
 <p><strong>Sugerencia 2:</strong>También se puede configurar en el archivo<strong>%M2_HOME%/conf/settings.xml</strong>, el efecto es el mismo.</p>
 <p>Resultado de la ejecución:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/417876-20170509050428441-2007100718.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/417876-20170509050428441-2007100718.png"/></p>
 <h3>3. Activar perfiles mediante variables de entorno</h3>
 <p>Primero elimina todos los valores de settings.xml de la prueba anterior.</p>
 <p>Luego, en el nodo &lt;profile&gt; cuyo &lt;id&gt; es test dentro de pom.xml, añade el nodo &lt;activation&gt;:</p>
@@ -578,7 +578,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Sugerencia 1:</strong>Arriba se utiliza -D para pasar la variable de entorno, donde env corresponde al valor &lt;name&gt; que se acaba de establecer, y test corresponde a &lt;value&gt;.</p>
 <p><strong>Sugerencia 2:</strong>En Windows 10 se probaron las variables de entorno del sistema, pero no surtieron efecto, por lo que solo se pueden pasar mediante<span class="marked">-D</span>.</p>
 <p>Resultado de la ejecución:</p>
-<p><img decoding="async" src="../wp-content/uploads/2018/09/417876-20170509051102519-322573915.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2018/09/417876-20170509051102519-322573915.png"/></p>
 <h3>4. Activar perfiles mediante el sistema operativo</h3>
 <p>El elemento activation contiene la siguiente información del sistema operativo. Cuando el sistema sea Windows XP, el perfil test se activará.</p>
 <div class="example">

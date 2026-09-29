@@ -103,7 +103,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Parece muy impresionante, pero en realidad es muy sencillo de usar. A continuación, vamos a aprender sobre ContentProvider.<strong>Documentación oficial</strong>：<a href="http://androiddoc.qiniudn.com/guide/topics/providers/content-providers.html">ContentProvider</a>En esta sección explicaremos el concepto de ContentProvider, mostraremos algunos ejemplos comunes de uso del ContentProvider del sistema y el ContentProvider personalizado.</p></blockquote>
 <hr/>
 <h2>1. Explicación del concepto de ContentProvider:</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/58811327.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/58811327.jpg"/></p>
 <hr/>
 <h2>2. Usar el ContentProvider proporcionado por el sistema</h2>
 <blockquote><p>En realidad, muchas veces cuando usamos ContentProvider no es para exponer nuestros propios datos, sino más a menudo, a través de él,<strong>ContentResolver</strong>leemos información de otras aplicaciones. Lo más común es leer las aplicaciones del sistema, mensajes, contactos, información multimedia, etc. Si quieres llamar a estos ContentProvider, necesitas consultar la documentación de la API correspondiente por tu cuenta. Además, diferentes versiones pueden corresponder a diferentes URL. Aquí te mostramos cómo obtener la URL y los campos de las tablas de la base de datos correspondientes. Tomemos como ejemplo los contactos, que es lo más común; para el resto, buscad en Google.<br/>① Ve al archivo de código fuente del sistema: all-src.rar -&gt; TeleponeProvider -&gt; AndroidManifest.xml para buscar la API correspondiente.<br/>② Abre el explorador de archivos del emulador en data/data/com.android.providers.contacts/databases/contact2.db. Después de exportarlo, usa una herramienta gráfica SQLite para verlo. Las tres tablas principales:<strong>tabla raw_contact</strong>，<strong>tabla data</strong>，<strong>tabla mimetypes</strong>！<br/>A continuación se muestran algunos ejemplos de operaciones básicas:</p></blockquote>
@@ -251,7 +251,7 @@ private void AddContact() throws RemoteException, OperationApplicationException 
 }
 </pre>
 <p><b>Resultado de la ejecución:</b></p>
-<img decoding="async" src="../wp-content/uploads/2015/08/41407183.jpg"/>
+<img decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/41407183.jpg"/>
 <p><b>No olvides los permisos:</b></p>
 <pre>
 &lt;uses-permission android:name="android.permission.WRITE_CONTACTS"/&gt;
@@ -260,7 +260,7 @@ private void AddContact() throws RemoteException, OperationApplicationException 
 <hr/>
 <h2>3. ContentProvider personalizado</h2>
 <blockquote><p>Rara vez definimos nuestro propio ContentProvider, porque muchas veces no queremos exponer los datos de nuestra aplicación a otras aplicaciones. Aun así, aprender a crear un ContentProvider es necesario; es una forma adicional de transmisión de datos, ¿verdad?<br/>Este es un diagrama de flujo que dibujé antes:</p></blockquote>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/40787698.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/40787698.jpg"/></p>
 <p>A continuación, lo implementaremos paso a paso:</p>
 <p>Antes de comenzar, primero debemos crear una clase de creación de base de datos (el contenido de la base de datos se explicará más adelante):</p>
 <p><strong>DBOpenHelper.java</strong>
@@ -403,7 +403,7 @@ public class MainActivity extends Activity {
 <p><strong>¿Cómo usarlo?</strong>Bien, el código sigue siendo bastante simple. Primero ejecuta el proyecto que actúa como ContentProvider, luego ejecuta el proyecto ContentResolver, haz clic en el botón para insertar un dato y, a continuación, abre el explorador de archivos para extraer la base de datos db del ContentProvider. Usa una herramienta de visualización gráfica para ver el dato insertado. Como no hay tiempo, no demostraré el resultado.</p>
 <hr/>
 <h2>4. Escuchar los cambios de datos de ContentProvider mediante ContentObserver</h2>
-<p><img alt="" decoding="async" src="../wp-content/uploads/2015/08/34168859.jpg"/></p>
+<p><img alt="" decoding="async" src="https://www.runoob.com/wp-content/uploads/2015/08/34168859.jpg"/></p>
 <p><strong>Guía de uso</strong>：</p>
 <blockquote><p>Después de ejecutar el programa, déjalo a un lado. Cuando recibas un SMS, podrás ver el contenido del mensaje en logcat. Según tus necesidades, puedes cambiar Activity por Service y hacer esto en segundo plano.</p></blockquote>
 <hr/>

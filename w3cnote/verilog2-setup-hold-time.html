@@ -92,12 +92,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>El tiempo de retención es el tiempo mínimo que los datos deben permanecer estables después de que llegue el evento de disparo del reloj, para que los datos puedan transmitirse con precisión por el circuito.</p><p>Se puede entender de forma sencilla: antes de que llegue el reloj, los datos deben estar preparados con antelación; después de que llegue el reloj, los datos deben permanecer estables durante un tiempo. El tiempo de establecimiento y el tiempo de retención forman la ventana de estabilidad de los datos, como se muestra en la siguiente figura.</p>
 <p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-1.png"/></p>
 <p><a href="./verilog2-gate-delay.html" rel="noopener" target="_blank">«1.3 Retardo de puertas»</a>ya se presentó un flip-flop D simple. A continuación veamos un flip-flop D típico disparado por flanco ascendente para explicar el origen del tiempo de establecimiento y del tiempo de retención.</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-2.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-2.png"/></p>
 <p>Las puertas NAND G1~G4 forman un circuito de mantenimiento-bloqueo, y G5~G6 forman un flip-flop RS.</p><p>El reloj actúa directamente sobre las puertas G2/G3. Cuando el reloj está en nivel bajo, los canales de G2/G3 están cerrados; cuando está en nivel alto, los canales se abren para realizar el muestreo y la transmisión de datos.</p><p>Pero antes de que los datos lleguen a las puertas G2/G3, pasan por las puertas NAND G4/G1, lo que introduce un retardo de tiempo. El concepto de tiempo de establecimiento se introduce para compensar el retardo de los datos en las puertas G4/G1. Es decir, antes de que llegue el reloj, los datos de entrada en los terminales G2/G3 deben estar listos para que puedan muestrearse correctamente.</p><p>Después de que los datos se muestrean por el reloj y antes de transmitirse al flip-flop RS para su latcheo, también deben pasar por las puertas G2/G3, lo que introduce retardo. El tiempo de retención se utiliza para compensar el retardo de los datos en las puertas G2/G3. Es decir, después de que llegue el reloj, se debe garantizar que los datos se transmitan correctamente a las entradas de las puertas NAND G6/G5.</p><p>Si los datos no cumplen con el tiempo de establecimiento o el tiempo de retención durante la transmisión, entrarán en un estado metaestable, lo que provocará errores de transmisión.</p>
 <hr/>
 <h2>Restricciones</h2>
 <h3>Restricción del tiempo de establecimiento</h3><p>La siguiente figura es un diagrama típico de transmisión de datos entre flip-flops. Aquí, "Comb" representa el retardo de la lógica combinacional, "Clock Skew" indica el desplazamiento del reloj, y los datos se disparan en el flanco ascendente del reloj.</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-3.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-3.png"/></p>
 <p>Antes de que llegue el reloj, los datos deben estar listos para poder ser muestreados correctamente por el reloj, lo que requiere que la ruta de datos (data path) sea más rápida que la ruta de reloj (clock path), es decir, que el tiempo de llegada de los datos (data arrival time) sea menor que el tiempo requerido de los datos (data required time). Entonces, la expresión que debe cumplir el tiempo de establecimiento es:</p>
 <pre>Tcq + Tcomb + Tsu &lt;= Tclk + Tskew （1）</pre>
 <p>La descripción de cada parámetro de tiempo es la siguiente:</p>
@@ -111,10 +111,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>Diagrama de tiempos del tiempo de establecimiento y del tiempo de retención</h3><p>Un diagrama de tiempos complejo sobre el tiempo de establecimiento y el tiempo de retención se muestra a continuación.</p><p>Entre ellos, la parte verde representa el margen del tiempo de establecimiento, y la parte azul representa el margen del tiempo de retención. El margen de tiempo es, en realidad, la diferencia de tiempo entre los dos lados de la desigualdad (1) o (2) cuando el circuito cumple con las restricciones de temporización.</p>
 <pre>El margen de tiempo de establecimiento es: (tiempo de la ruta del reloj) - (tiempo de la ruta de datos)</pre>
 <p>Esta figura solo facilita la comprensión de la derivación de las restricciones del tiempo de establecimiento y del tiempo de retención. Si esto pudiera causar confusión en la memoria, se recomienda no profundizar (^_^).</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-4.png"/></p><hr/>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-4.png"/></p><hr/>
 <h2>Ejemplos de cálculo</h2><p>Para comprender mejor los conceptos de tiempo de establecimiento y tiempo de retención, y también para facilitar entrevistas o trabajo, aquí se enumeran algunos problemas típicos sobre tiempo de establecimiento y tiempo de retención como referencia.</p>
 <p>Ejemplo 1:</p><p>Considerando el retardo de la red (net delay), los valores de retardo de un circuito (unidad: ns) son los siguientes, y el período de reloj es de 15 ns. Determine si el tiempo de establecimiento y el tiempo de retención de este circuito tienen una violación (violation).</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-5.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-5.png"/></p>
 <p><strong>Solución:</strong></p><p>Aquí se involucran los valores máximo y mínimo del retardo.</p>
 <p>Debido a que se requiere que las restricciones de temporización siempre se cumplan, las ecuaciones (1) (2) se transforman en:</p>
 <pre>max (data path time) &lt;= min (clock path time)
@@ -141,9 +141,9 @@ Thold &lt;= T2min</pre><p>En este ejemplo no se consideran muchos tipos de retar
 <pre>Tcq + Tbuf + Tsu &lt;= Tclk</pre>
 <p>Se obtiene que la frecuencia de operación máxima de este circuito es:</p><pre>1 / (6ns + 1ns + 3ns) = 100Mhz。</pre><p>Este ejemplo es una realimentación del propio flip-flop a sí mismo. Es necesario analizar bien la ruta de datos y la ruta de reloj. A continuación veamos un ejemplo ampliado de este tipo.</p>
 <p>Ejemplo 4:</p><ul><li>(1) ¿Cuáles son el tiempo de establecimiento y el tiempo de retención inherentes del siguiente circuito?</li><li>(2) ¿Cuál es la frecuencia de operación máxima de este circuito?</li></ul>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-7.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-7.png"/></p>
 <p><strong>Solución:</strong></p><p>Este circuito tiene retardos tanto en la ruta de datos como en la ruta de reloj. Para lograr la misma restricción de tiempo de establecimiento y tiempo de retención que la del flip-flop, el diagrama de tiempos de los terminales D y CK del flip-flop, así como del terminal de datos equivalente Data y del terminal de reloj Clock, es el siguiente (me esforcé mucho por dibujarlo de la manera más simple ~_~):</p>
-<p><img decoding="async" src="../wp-content/uploads/2021/05/v-set-hold-time-8.png"/></p>
+<p><img decoding="async" src="https://www.runoob.com/wp-content/uploads/2021/05/v-set-hold-time-8.png"/></p>
 <p>(1) Según la figura, se puede observar:</p>
 <p>El tiempo de establecimiento inherente de este circuito es:<strong>2.1 + 2 - 1.2 = 2.9ns</strong></p>
 <p>El tiempo de retención inherente es:<strong>1.2 + 1.5 - 2.1 = 0.6ns</strong></p>
